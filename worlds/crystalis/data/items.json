@@ -1,0 +1,887 @@
+{
+  "Sword of Wind": {
+    "name": "Sword of Wind",
+    "rom_id": 0,
+    "ap_id_offset": 0,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Sword",
+      "Wind"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Sword of Fire": {
+    "name": "Sword of Fire",
+    "rom_id": 1,
+    "ap_id_offset": 1,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Sword",
+      "Fire"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Sword of Water": {
+    "name": "Sword of Water",
+    "rom_id": 2,
+    "ap_id_offset": 2,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Sword",
+      "Water"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Sword of Thunder": {
+    "name": "Sword of Thunder",
+    "rom_id": 3,
+    "ap_id_offset": 3,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Sword",
+      "Thunder"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Orb of Wind": {
+    "name": "Orb of Wind",
+    "rom_id": 5,
+    "ap_id_offset": 4,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Wind Upgrades",
+      "Wind"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Tornado Bracelet": {
+    "name": "Tornado Bracelet",
+    "rom_id": 6,
+    "ap_id_offset": 5,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Wind Upgrades",
+      "Wind"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Orb of Fire": {
+    "name": "Orb of Fire",
+    "rom_id": 7,
+    "ap_id_offset": 6,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Fire Upgrades",
+      "Fire"
+    ],
+    "category": 3,
+    "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
+  },
+  "Flame Bracelet": {
+    "name": "Flame Bracelet",
+    "rom_id": 8,
+    "ap_id_offset": 7,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Fire Upgrades",
+      "Fire"
+    ],
+    "category": 3,
+    "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
+  },
+  "Orb of Water": {
+    "name": "Orb of Water",
+    "rom_id": 9,
+    "ap_id_offset": 8,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Water Upgrades",
+      "Water"
+    ],
+    "category": 3,
+    "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
+  },
+  "Blizzard Bracelet": {
+    "name": "Blizzard Bracelet",
+    "rom_id": 10,
+    "ap_id_offset": 9,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Water Upgrades",
+      "Water"
+    ],
+    "category": 3,
+    "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
+  },
+  "Orb of Thunder": {
+    "name": "Orb of Thunder",
+    "rom_id": 11,
+    "ap_id_offset": 10,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Thunder Upgrades",
+      "Thunder"
+    ],
+    "category": 3,
+    "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
+  },
+  "Storm Bracelet": {
+    "name": "Storm Bracelet",
+    "rom_id": 12,
+    "ap_id_offset": 11,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Thunder Upgrades",
+      "Thunder"
+    ],
+    "category": 3,
+    "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
+  },
+  "Mirrored Shield": {
+    "name": "Mirrored Shield",
+    "rom_id": 16,
+    "ap_id_offset": 12,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Shield"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Sacred Shield": {
+    "name": "Sacred Shield",
+    "rom_id": 18,
+    "ap_id_offset": 13,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Shield"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Psycho Shield": {
+    "name": "Psycho Shield",
+    "rom_id": 20,
+    "ap_id_offset": 14,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Shield"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Battle Armor": {
+    "name": "Battle Armor",
+    "rom_id": 27,
+    "ap_id_offset": 15,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Armor"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Psycho Armor": {
+    "name": "Psycho Armor",
+    "rom_id": 28,
+    "ap_id_offset": 16,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Armor"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Medical Herb": {
+    "name": "Medical Herb",
+    "rom_id": 29,
+    "ap_id_offset": 17,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 9,
+    "groups": [
+      "Consumable"
+    ],
+    "category": 0,
+    "notes": ""
+  },
+  "Antidote": {
+    "name": "Antidote",
+    "rom_id": 30,
+    "ap_id_offset": 18,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 4,
+    "groups": [
+      "Consumable"
+    ],
+    "category": 0,
+    "notes": ""
+  },
+  "Lysis Plant": {
+    "name": "Lysis Plant",
+    "rom_id": 31,
+    "ap_id_offset": 19,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 3,
+    "groups": [
+      "Consumable"
+    ],
+    "category": 0,
+    "notes": ""
+  },
+  "Fruit of Lime": {
+    "name": "Fruit of Lime",
+    "rom_id": 32,
+    "ap_id_offset": 20,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Consumable"
+    ],
+    "category": 0,
+    "notes": ""
+  },
+  "Fruit of Power": {
+    "name": "Fruit of Power",
+    "rom_id": 33,
+    "ap_id_offset": 21,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 5,
+    "groups": [
+      "Consumable"
+    ],
+    "category": 0,
+    "notes": ""
+  },
+  "Magic Ring": {
+    "name": "Magic Ring",
+    "rom_id": 34,
+    "ap_id_offset": 22,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 9,
+    "groups": [
+      "Consumable"
+    ],
+    "category": 0,
+    "notes": ""
+  },
+  "Fruit of Repun": {
+    "name": "Fruit of Repun",
+    "rom_id": 35,
+    "ap_id_offset": 23,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 2,
+    "groups": [
+      "Consumable"
+    ],
+    "category": 0,
+    "notes": ""
+  },
+  "Warp Boots": {
+    "name": "Warp Boots",
+    "rom_id": 36,
+    "ap_id_offset": 24,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 3,
+    "groups": [
+      "Consumable"
+    ],
+    "category": 0,
+    "notes": ""
+  },
+  "Statue of Onyx": {
+    "name": "Statue of Onyx",
+    "rom_id": 37,
+    "ap_id_offset": 25,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Trade-in",
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Opel Statue": {
+    "name": "Opel Statue",
+    "rom_id": 38,
+    "ap_id_offset": 26,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 3,
+    "groups": [
+      "Consumable"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Insect Flute": {
+    "name": "Insect Flute",
+    "rom_id": 39,
+    "ap_id_offset": 27,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Flute of Lime": {
+    "name": "Flute of Lime",
+    "rom_id": 40,
+    "ap_id_offset": 28,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Hazmat Suit": {
+    "name": "Hazmat Suit",
+    "rom_id": 41,
+    "ap_id_offset": 29,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Accessory"
+    ],
+    "category": 3,
+    "notes": "Downgrade to useful if hazmat not guaranteed"
+  },
+  "Power Ring": {
+    "name": "Power Ring",
+    "rom_id": 42,
+    "ap_id_offset": 30,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Accessory"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Warrior Ring": {
+    "name": "Warrior Ring",
+    "rom_id": 43,
+    "ap_id_offset": 31,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Accessory"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Iron Necklace": {
+    "name": "Iron Necklace",
+    "rom_id": 44,
+    "ap_id_offset": 32,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Accessory"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Deo's Pendant": {
+    "name": "Deo's Pendant",
+    "rom_id": 45,
+    "ap_id_offset": 33,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Accessory"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Rabbit Boots": {
+    "name": "Rabbit Boots",
+    "rom_id": 46,
+    "ap_id_offset": 34,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Accessory"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Speed Boots": {
+    "name": "Speed Boots",
+    "rom_id": 47,
+    "ap_id_offset": 35,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Accessory"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Shield Ring": {
+    "name": "Shield Ring",
+    "rom_id": 48,
+    "ap_id_offset": 36,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Accessory"
+    ],
+    "category": 3,
+    "notes": "Upgrade to progression if barrier not guaranteed"
+  },
+  "Alarm Flute": {
+    "name": "Alarm Flute",
+    "rom_id": 49,
+    "ap_id_offset": 37,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Windmill Key": {
+    "name": "Windmill Key",
+    "rom_id": 50,
+    "ap_id_offset": 38,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Key to Prison": {
+    "name": "Key to Prison",
+    "rom_id": 51,
+    "ap_id_offset": 39,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Key to Stxy": {
+    "name": "Key to Stxy",
+    "rom_id": 52,
+    "ap_id_offset": 40,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Fog Lamp": {
+    "name": "Fog Lamp",
+    "rom_id": 53,
+    "ap_id_offset": 41,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Trade-in",
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Shell Flute": {
+    "name": "Shell Flute",
+    "rom_id": 54,
+    "ap_id_offset": 42,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Eye Glasses": {
+    "name": "Eye Glasses",
+    "rom_id": 55,
+    "ap_id_offset": 43,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Broken Statue": {
+    "name": "Broken Statue",
+    "rom_id": 56,
+    "ap_id_offset": 44,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Glowing Lamp": {
+    "name": "Glowing Lamp",
+    "rom_id": 57,
+    "ap_id_offset": 45,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Statue of Gold": {
+    "name": "Statue of Gold",
+    "rom_id": 58,
+    "ap_id_offset": 46,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Love Pendant": {
+    "name": "Love Pendant",
+    "rom_id": 59,
+    "ap_id_offset": 47,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Trade-in",
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Kirisa Plant": {
+    "name": "Kirisa Plant",
+    "rom_id": 60,
+    "ap_id_offset": 48,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Trade-in",
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Ivory Statue": {
+    "name": "Ivory Statue",
+    "rom_id": 61,
+    "ap_id_offset": 49,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Trade-in",
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Bow of Moon": {
+    "name": "Bow of Moon",
+    "rom_id": 62,
+    "ap_id_offset": 50,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Bow of Sun": {
+    "name": "Bow of Sun",
+    "rom_id": 63,
+    "ap_id_offset": 51,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Bow of Truth": {
+    "name": "Bow of Truth",
+    "rom_id": 64,
+    "ap_id_offset": 52,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Key Item"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Refresh": {
+    "name": "Refresh",
+    "rom_id": 65,
+    "ap_id_offset": 53,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "category": 3,
+    "notes": "Upgrade to progression if Refresh guaranteed or Barrier not guaranteed or Gas mask not guaranteed."
+  },
+  "Paralysis": {
+    "name": "Paralysis",
+    "rom_id": 66,
+    "ap_id_offset": 54,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Telepathy": {
+    "name": "Telepathy",
+    "rom_id": 67,
+    "ap_id_offset": 55,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Teleport": {
+    "name": "Teleport",
+    "rom_id": 68,
+    "ap_id_offset": 56,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Recover": {
+    "name": "Recover",
+    "rom_id": 69,
+    "ap_id_offset": 57,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "category": 2,
+    "notes": ""
+  },
+  "Barrier": {
+    "name": "Barrier",
+    "rom_id": 70,
+    "ap_id_offset": 58,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Change": {
+    "name": "Change",
+    "rom_id": 71,
+    "ap_id_offset": 59,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Flight": {
+    "name": "Flight",
+    "rom_id": 72,
+    "ap_id_offset": 60,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "category": 1,
+    "notes": ""
+  },
+  "Mimic": {
+    "name": "Mimic",
+    "rom_id": 112,
+    "ap_id_offset": 61,
+    "unique": true,
+    "losable": true,
+    "prevent_loss": true,
+    "default_count": 12,
+    "groups": [
+      ""
+    ],
+    "category": 4,
+    "notes": ""
+  }
+}
