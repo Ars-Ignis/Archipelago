@@ -1,0 +1,5861 @@
+{
+  "Amazones": {
+    "name": "Amazones",
+    "wildwarpIds": [
+      27
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Amazones - Exit",
+        "entrance_type": 1,
+        "vanilla_target": "Cordel Plains - River Blocked",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Amazones - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Amazones Item Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Amazones - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Amazones Inn",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Amazones - Armor Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Amazones Armor Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Amazones - Aryllis's House",
+        "entrance_type": 7,
+        "vanilla_target": "Aryllis's House",
+        "pseudologic": "statue_skip || trigger_skip || Change || Paralysis",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Amazones Armor Shop": {
+    "name": "Amazones Armor Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": []
+  },
+  "Amazones Inn": {
+    "name": "Amazones Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": []
+  },
+  "Amazones Item Shop": {
+    "name": "Amazones Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": []
+  },
+  "Angry Sea - Beach House Area": {
+    "name": "Angry Sea - Beach House Area",
+    "wildwarpIds": [
+      96
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - South Water",
+        "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
+        "notes": ""
+      },
+      {
+        "name": "Angry Sea - Beach House",
+        "entrance_type": 13,
+        "vanilla_target": "Beach House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Angry Sea - Cave Area": {
+    "name": "Angry Sea - Cave Area",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - South Water",
+        "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Joel",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Angry Sea - Flooded Cave Land": {
+    "name": "Angry Sea - Flooded Cave Land",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - Flooded Cave Water",
+        "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
+        "notes": ""
+      },
+      {
+        "name": "Angry Sea - Deep Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Evil Spirit Island - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Angry Sea - Flooded Cave Water": {
+    "name": "Angry Sea - Flooded Cave Water",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - South Water",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - Flooded Cave Land",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Angry Sea - North Land": {
+    "name": "Angry Sea - North Land",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - North Water",
+        "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
+        "notes": ""
+      },
+      {
+        "name": "Angry Sea - Up",
+        "entrance_type": 1,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Angry Sea - North Water": {
+    "name": "Angry Sea - North Water",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - South Water",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - North Land",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Angry Sea - South Water": {
+    "name": "Angry Sea - South Water",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Waterway - Water",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - Cave Area",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - Flooded Cave Water",
+        "pseudologic": "(Flight && trigger_skip) || (Shell Flute && can_use_shell_flute)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - North Water",
+        "pseudologic": "Flight || ( (Shell Flute && can_use_shell_flute) && (Golden Statue || ghetto_flight))",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Behind Whirlpool",
+        "rom_id": 326,
+        "ap_id_offset": 59,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": true,
+        "broken": false,
+        "pseudologic": "Golden Statue"
+      }
+    ]
+  },
+  "Aryllis's House": {
+    "name": "Aryllis's House",
+    "wildwarpIds": [
+      212,
+      226
+    ],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Aryllis Basement Chest",
+        "rom_id": 266,
+        "ap_id_offset": 10,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Aryllis",
+        "rom_id": 318,
+        "ap_id_offset": 51,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": true,
+        "broken": false,
+        "pseudologic": "Change && trade_in(Aryllis)"
+      }
+    ]
+  },
+  "Asina's Chambers": {
+    "name": "Asina's Chambers",
+    "wildwarpIds": [
+      225
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Waterway - Across River",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Asina In Back Room",
+        "rom_id": 325,
+        "ap_id_offset": 58,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_reach(Mesia)"
+      }
+    ]
+  },
+  "Beach House": {
+    "name": "Beach House",
+    "wildwarpIds": [
+      97
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Beach House - Exit",
+        "entrance_type": 14,
+        "vanilla_target": "Angry Sea - Beach House Area",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Kensu In Cabin",
+        "rom_id": 359,
+        "ap_id_offset": 83,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman)"
+      }
+    ]
+  },
+  "Bow Passage - Back": {
+    "name": "Bow Passage - Back",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Bow Passage - Front",
+        "pseudologic": "Bow of Sun && Bow of Moon",
+        "notes": ""
+      },
+      {
+        "name": "Bow Passage - Exit",
+        "entrance_type": 9,
+        "vanilla_target": "Crypt - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Bow Passage - Front": {
+    "name": "Bow Passage - Front",
+    "wildwarpIds": [
+      160
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Bow Passage - Entrance",
+        "entrance_type": 5,
+        "vanilla_target": "Desert 2 - Past Crypt Whirlpools",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Bow Passage - Back",
+        "pseudologic": "Bow of Sun && Bow of Moon",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Brokahana's House": {
+    "name": "Brokahana's House",
+    "wildwarpIds": [
+      187
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Brokahana's House - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Goa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Brokahana",
+        "rom_id": 299,
+        "ap_id_offset": 32,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Change && can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder"
+      }
+    ]
+  },
+  "Brynmaer": {
+    "name": "Brynmaer",
+    "wildwarpIds": [
+      24
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Brynmaer - Entrance",
+        "entrance_type": 3,
+        "vanilla_target": "Cordel Plains - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Brynmaer - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Brynmaer Item Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Brynmaer - Armor Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Brynmaer Armor Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Brynmaer - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Brynmaer Inn",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Brynmaer - Pawn Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Brynmaer Pawn Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Brynmaer - Pub",
+        "entrance_type": 7,
+        "vanilla_target": "Brynmaer Pub",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Akahana Statue of Onyx Tradein",
+        "rom_id": 297,
+        "ap_id_offset": 30,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": true,
+        "broken": false,
+        "pseudologic": "trade_in(Akahana)"
+      }
+    ]
+  },
+  "Brynmaer Armor Shop": {
+    "name": "Brynmaer Armor Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Brynmaer Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Brynmaer Inn": {
+    "name": "Brynmaer Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Brynmaer Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Brynmaer Item Shop": {
+    "name": "Brynmaer Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Brynmaer Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Brynmaer Pawn Shop": {
+    "name": "Brynmaer Pawn Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Brynmaer Pawn Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Brynmaer Pub": {
+    "name": "Brynmaer Pub",
+    "wildwarpIds": [
+      198
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Brynmaer Pub - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Clark's Hideout": {
+    "name": "Clark's Hideout",
+    "wildwarpIds": [
+      232,
+      233
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Clark's Hideout - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Zombie Town",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Clark",
+        "rom_id": 311,
+        "ap_id_offset": 44,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_reach(Sabera's Fortress - Upstairs) && can_fight(Sabera 1)"
+      }
+    ]
+  },
+  "Cordel Plains - Main": {
+    "name": "Cordel Plains - Main",
+    "wildwarpIds": [
+      20
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Cordel Plains - North West Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Sealed Cave - Exit",
+        "pseudologic": "Windmill Key && can_reach(Windmill)",
+        "notes": "Will not have this rule in Wa"
+      },
+      {
+        "name": "Cordel Plains - West",
+        "entrance_type": 3,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Cordel Plains - South West",
+        "entrance_type": 3,
+        "vanilla_target": "Mt. Sabre West - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Cordel Plains - River Blocked",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "Cordel Plains - North West",
+        "entrance_type": 1,
+        "vanilla_target": "Tornel's House Exterior",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Cordel Plains - North East",
+        "entrance_type": 1,
+        "vanilla_target": "Mt. Sabre North - Pre-Trigger",
+        "pseudologic": "Teleport || (Flight && rabbit_skip) || (trigger_skip)",
+        "notes": ""
+      },
+      {
+        "name": "Cordel Plains - East",
+        "entrance_type": 4,
+        "vanilla_target": "Swamp - Near Side",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Cordel Plains - South East Cave",
+        "entrance_type": 5,
+        "vanilla_target": "GBC Cave - Main",
+        "pseudologic": "TRUE",
+        "notes": "Only exists 50% of the time if Vm and V!m are both off."
+      }
+    ],
+    "locations": [
+      {
+        "name": "Cordel Grass",
+        "rom_id": 293,
+        "ap_id_offset": 26,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Cordel Plains - River Blocked": {
+    "name": "Cordel Plains - River Blocked",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Cordel Plains - Main",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "Cordel Plains - South",
+        "entrance_type": 2,
+        "vanilla_target": "Amazones",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Crypt - Front": {
+    "name": "Crypt - Front",
+    "wildwarpIds": [
+      161,
+      162
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Crypt - Entrance",
+        "entrance_type": 10,
+        "vanilla_target": "Bow Passage - Back",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Crypt - Middle",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Crypt - Left",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Crypt - Left": {
+    "name": "Crypt - Left",
+    "wildwarpIds": [
+      163
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Crypt - Front",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Crypt Left Pit Mimic",
+        "rom_id": 376,
+        "ap_id_offset": 99,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Crypt - Middle": {
+    "name": "Crypt - Middle",
+    "wildwarpIds": [
+      164,
+      165
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Crypt - Front",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Crypt - Back",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Crypt Right Chest",
+        "rom_id": 365,
+        "ap_id_offset": 88,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      }
+    ]
+  },
+  "Crypt - Back": {
+    "name": "Crypt - Back",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Crypt - Middle",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Tower",
+        "pseudologic": "can_fight(Draygon 2)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Deo Valley": {
+    "name": "Deo Valley",
+    "wildwarpIds": [
+      150
+    ],
+    "notes": "SaharaMeadow",
+    "entrances": [
+      {
+        "name": "Deo Valley - Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Desert Transition Cave 1",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Deo Valley - Down",
+        "entrance_type": 2,
+        "vanilla_target": "Sahara",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Deo",
+        "rom_id": 301,
+        "ap_id_offset": 34,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Change && Telepathy"
+      }
+    ]
+  },
+  "Desert 1": {
+    "name": "Desert 1",
+    "wildwarpIds": [
+      144
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Desert 1 - Up",
+        "entrance_type": 1,
+        "vanilla_target": "Goa Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Desert 1 - Oasis",
+        "entrance_type": 5,
+        "vanilla_target": "Oasis Cave - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Desert 1 - Past Whirlpool",
+        "pseudologic": "Flight",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Desert 1 - Past Whirlpool": {
+    "name": "Desert 1 - Past Whirlpool",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Desert 1",
+        "pseudologic": "Flight",
+        "notes": ""
+      },
+      {
+        "name": "Desert 1 - Whirlpool Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Desert Transition Cave 1",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Desert 2": {
+    "name": "Desert 2",
+    "wildwarpIds": [
+      152
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Desert 2 - Left Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Desert Transition Cave 2",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Desert 2 - Right Cave",
+        "entrance_type": 5,
+        "vanilla_target": "GBC Cave - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Desert 2 - Past Pyramid Whirlpools",
+        "pseudologic": "Flight",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Desert 2 - Past Crypt Whirlpools",
+        "pseudologic": "Flight",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Desert 2 - Past Crypt Whirlpools": {
+    "name": "Desert 2 - Past Crypt Whirlpools",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Desert 2",
+        "pseudologic": "Flight",
+        "notes": ""
+      },
+      {
+        "name": "Desert 2 - Crypt Entrance",
+        "entrance_type": 6,
+        "vanilla_target": "Bow Passage - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Desert 2 - Past Pyramid Whirlpools": {
+    "name": "Desert 2 - Past Pyramid Whirlpools",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Desert 2",
+        "pseudologic": "Flight",
+        "notes": ""
+      },
+      {
+        "name": "Desert 2 - Pyramid Entrance",
+        "entrance_type": 9,
+        "vanilla_target": "Pyramid",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Desert Transition Cave 1": {
+    "name": "Desert Transition Cave 1",
+    "wildwarpIds": [
+      146
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Desert Transition Cave 1 - Entrance",
+        "entrance_type": 6,
+        "vanilla_target": "Desert 1 - Past Whirlpool",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Desert Transition Cave 1 - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Deo Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Desert Transition Cave 2": {
+    "name": "Desert Transition Cave 2",
+    "wildwarpIds": [
+      149
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Desert Transition Cave 2 - Entrance",
+        "entrance_type": 6,
+        "vanilla_target": "Sahara Cave Transition",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Desert Transition Cave 2 - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Desert 2",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Evans' Room": {
+    "name": "Evans' Room",
+    "wildwarpIds": [
+      222
+    ],
+    "notes": "PortoaPalace_Left",
+    "entrances": [
+      {
+        "name": "Evans' Room - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa Palace",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Evil Spirit Island - Across River": {
+    "name": "Evil Spirit Island - Across River",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Evil Spirit Island - Front",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Evil Spirit Island - Upstairs",
+        "pseudologic": "can_break_wall(Evil Spirit Island)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Evil Spirit Island Lower Chest",
+        "rom_id": 290,
+        "ap_id_offset": 23,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Evil Spirit Island)"
+      }
+    ]
+  },
+  "Evil Spirit Island - Front": {
+    "name": "Evil Spirit Island - Front",
+    "wildwarpIds": [
+      105
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Evil Spirit Island - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Angry Sea - Flooded Cave Land",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Evil Spirit Island - Across River",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Evil Spirit Island - Item Stash": {
+    "name": "Evil Spirit Island - Item Stash",
+    "wildwarpIds": [
+      107
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Evil Spirit Island - Upstairs",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Evil Spirit Island River Left Chest",
+        "rom_id": 300,
+        "ap_id_offset": 33,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Water) || Flight"
+      },
+      {
+        "name": "Evil Spirit Island River Right Mimic",
+        "rom_id": 371,
+        "ap_id_offset": 94,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Evil Spirit Island - Upstairs": {
+    "name": "Evil Spirit Island - Upstairs",
+    "wildwarpIds": [
+      106
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Evil Spirit Island - Across River",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Evil Spirit Island - Item Stash",
+        "pseudologic": "can_break_wall(Evil Spirit Island)",
+        "notes": ""
+      },
+      {
+        "name": "Evil Spirit Island - Back Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Zombie Town",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Evil Spirit Island Exit Chest",
+        "rom_id": 348,
+        "ap_id_offset": 72,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Fisherman House": {
+    "name": "Fisherman House",
+    "wildwarpIds": [
+      214
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Fisherman House - Exit",
+        "entrance_type": 14,
+        "vanilla_target": "Fisherman House Area",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Fisherman House Area": {
+    "name": "Fisherman House Area",
+    "wildwarpIds": [
+      81
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Fisherman House Path",
+        "entrance_type": 4,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Fisherman House Entrance",
+        "entrance_type": 13,
+        "vanilla_target": "Fisherman House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - Beach House Area",
+        "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman) && (!vanilla_dolphin || (can_reach(Mesia) && can_reach(Portoa Waterway - Main) && can_reach(Asina's Chambers) && Shell Flute))",
+        "notes": "messy - clean up with events?"
+      }
+    ],
+    "locations": []
+  },
+  "Fog Lamp Cave - Behind Walls": {
+    "name": "Fog Lamp Cave - Behind Walls",
+    "wildwarpIds": [
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Fog Lamp Cave - Front",
+        "pseudologic": "can_break_wall(Fog Lamp Cave)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Fog Lamp Cave Front Chest",
+        "rom_id": 287,
+        "ap_id_offset": 20,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Fog Lamp Cave)"
+      },
+      {
+        "name": "Fog Lamp Cave Back Chest",
+        "rom_id": 309,
+        "ap_id_offset": 42,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Fog Lamp Cave)"
+      },
+      {
+        "name": "Fog Lamp Cave Middle North Mimic",
+        "rom_id": 368,
+        "ap_id_offset": 91,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Fog Lamp Cave)"
+      },
+      {
+        "name": "Fog Lamp Cave Middle Southwest Mimic",
+        "rom_id": 369,
+        "ap_id_offset": 92,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Fog Lamp Cave)"
+      }
+    ]
+  },
+  "Fog Lamp Cave - Front": {
+    "name": "Fog Lamp Cave - Front",
+    "wildwarpIds": [
+      72
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Fog Lamp Cave - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Waterfall Valley - North River Cave",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Fog Lamp Cave - Behind Walls",
+        "pseudologic": "can_break_wall(Fog Lamp Cave)",
+        "notes": "\"Don't need to model each individual room of the place"
+      }
+    ],
+    "locations": []
+  },
+  "Fortune Teller - Back": {
+    "name": "Fortune Teller - Back",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Waterway - Across River",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Fortune Teller - Front": {
+    "name": "Fortune Teller - Front",
+    "wildwarpIds": [
+      216
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Fortune Teller - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "GBC Cave - Main": {
+    "name": "GBC Cave - Main",
+    "wildwarpIds": [
+      11,
+      13,
+      18
+    ],
+    "notes": "Allocated at run time - watch for changes to these",
+    "entrances": [
+      {
+        "name": "GBC Cave Entrance",
+        "entrance_type": 6,
+        "vanilla_target": "Wind Valley",
+        "pseudologic": "TRUE",
+        "notes": "Only exists if Vm and V!m are both off."
+      },
+      {
+        "name": "GBC Cave Free Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Cordel Plains - Main",
+        "pseudologic": "TRUE",
+        "notes": "Only exists if Vm and V!m are both off. Entrance always partially randomized."
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "GBC Cave - Past Block",
+        "pseudologic": "can_break_wall(GBC Cave)",
+        "notes": "Only exists if Vm and V!m are both off."
+      }
+    ],
+    "locations": [
+      {
+        "name": "East Cave Northeast Chest",
+        "rom_id": 345,
+        "ap_id_offset": 70,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "East Cave Northwest Mimic",
+        "rom_id": 380,
+        "ap_id_offset": 103,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "GBC Cave - Past Block": {
+    "name": "GBC Cave - Past Block",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "GBC Cave - Main",
+        "pseudologic": "can_break_wall(GBC Cave)",
+        "notes": "Only exists if Vm and V!m are both off."
+      },
+      {
+        "name": "GBC Cave Blocked Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Lime Valley",
+        "pseudologic": "TRUE",
+        "notes": "Only exists if Vm and V!m are both off. Entrance always partially randomized."
+      }
+    ],
+    "locations": []
+  },
+  "Goa": {
+    "name": "Goa",
+    "wildwarpIds": [
+      142
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Goa - Exit",
+        "entrance_type": 10,
+        "vanilla_target": "Goa Valley",
+        "pseudologic": "TRUE",
+        "notes": "\"Not shuffled on Wh"
+      },
+      {
+        "name": "Goa - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Goa Inn",
+        "pseudologic": "can_reach(Shyron) || statue_skip",
+        "notes": ""
+      },
+      {
+        "name": "Goa - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Goa Item Shop",
+        "pseudologic": "can_reach(Shyron) || statue_skip",
+        "notes": ""
+      },
+      {
+        "name": "Goa - Pub",
+        "entrance_type": 7,
+        "vanilla_target": "Goa Pub",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Goa - Brokahana's House",
+        "entrance_type": 7,
+        "vanilla_target": "Brokahana's House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Goa - Fortress Entrance",
+        "entrance_type": 9,
+        "vanilla_target": "Goa Entrance - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Goa Entrance - Behind Wall": {
+    "name": "Goa Entrance - Behind Wall",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Goa Entrance - Massacre Trigger",
+        "pseudologic": "can_break_wall(Goa Entrance Wall)",
+        "notes": ""
+      },
+      {
+        "name": "Goa Entrance - Stairs",
+        "entrance_type": 15,
+        "vanilla_target": "Kelbesque's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Goa Entrance - Front": {
+    "name": "Goa Entrance - Front",
+    "wildwarpIds": [
+      168
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Goa Entrance - Exit",
+        "entrance_type": 10,
+        "vanilla_target": "Goa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Goa Entrance - Massacre Trigger",
+        "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Goa Entrance - Massacre Trigger": {
+    "name": "Goa Entrance - Massacre Trigger",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Goa Entrance - Front",
+        "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Goa Entrance - Behind Wall",
+        "pseudologic": "can_break_wall(Goa Entrance Wall)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Goa Exit": {
+    "name": "Goa Exit",
+    "wildwarpIds": [
+      183
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Goa Exit - Upstairs",
+        "entrance_type": 15,
+        "vanilla_target": "Karmine's Floor - Back",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Goa Exit - Downstairs",
+        "entrance_type": 10,
+        "vanilla_target": "Oasis Cave - Past Purple Pain",
+        "pseudologic": "TRUE",
+        "notes": "\"Not shuffled on Wh"
+      }
+    ],
+    "locations": []
+  },
+  "Goa Inn": {
+    "name": "Goa Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Goa Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Goa",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Goa Item Shop": {
+    "name": "Goa Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Goa Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Goa",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Goa Pub": {
+    "name": "Goa Pub",
+    "wildwarpIds": [
+      191
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Goa Pub - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Goa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Goa Valley": {
+    "name": "Goa Valley",
+    "wildwarpIds": [
+      120
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Goa Valley - Right",
+        "entrance_type": 4,
+        "vanilla_target": "Guard Checkpoint - North",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Goa Valley - Left",
+        "entrance_type": 3,
+        "vanilla_target": "Mt. Hydra - Lower",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Goa Valley - Down",
+        "entrance_type": 2,
+        "vanilla_target": "Desert 1",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Goa Valley - Palace",
+        "entrance_type": 9,
+        "vanilla_target": "Goa",
+        "pseudologic": "TRUE",
+        "notes": "\"Not shuffled on Wh"
+      },
+      {
+        "name": "Goa Valley - Cave",
+        "entrance_type": 5,
+        "vanilla_target": "GBC Cave - Main",
+        "pseudologic": "TRUE",
+        "notes": "Only exists 50% of the time if Vm and V!m are both off."
+      }
+    ],
+    "locations": []
+  },
+  "Guard Checkpoint - North": {
+    "name": "Guard Checkpoint - North",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Guard Checkpoint - South",
+        "pseudologic": "Change",
+        "notes": ""
+      },
+      {
+        "name": "Checkpoint North Exit",
+        "entrance_type": 3,
+        "vanilla_target": "Goa Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Guard Checkpoint - South": {
+    "name": "Guard Checkpoint - South",
+    "wildwarpIds": [
+      115
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Checkpoint South Exit",
+        "entrance_type": 4,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Guard Checkpoint - North",
+        "pseudologic": "Change",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Initial Cutscene Area": {
+    "name": "Initial Cutscene Area",
+    "wildwarpIds": [
+      1
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Exploding Cave - Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Mezame Shrine",
+        "pseudologic": "TRUE",
+        "notes": "\"\"\"Hey!! There's a guy coming out of the cave!\"\"\""
+      },
+      {
+        "name": "Exploding Cave - Left",
+        "entrance_type": 3,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Joel": {
+    "name": "Joel",
+    "wildwarpIds": [
+      113
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Joel - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Angry Sea - Cave Area",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Joel - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Joel Item Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Joel - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Joel Inn",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Joel - Elder House",
+        "entrance_type": 7,
+        "vanilla_target": "Joel Elder House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Joel - Shed",
+        "entrance_type": 11,
+        "vanilla_target": "Joel Shed",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Joel Elder House": {
+    "name": "Joel Elder House",
+    "wildwarpIds": [
+      227
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Joel Elder House - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Joel",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Joel Inn": {
+    "name": "Joel Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Joel Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Joel",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Joel Item Shop": {
+    "name": "Joel Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Joel Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Joel",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Joel Shed": {
+    "name": "Joel Shed",
+    "wildwarpIds": [
+      228
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Joel Shed - Exit",
+        "entrance_type": 12,
+        "vanilla_target": "Joel",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Joel Shed - Secret Passage",
+        "entrance_type": 5,
+        "vanilla_target": "Lighthouse Tunnel",
+        "pseudologic": "Eyeglasses",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Karmine's Arena": {
+    "name": "Karmine's Arena",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Floor - Pre-Boss Gauntlet",
+        "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Floor - Post Boss",
+        "pseudologic": "can_fight(Karmine)",
+        "notes": "Reverse connection unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Karmine's Floor - Back": {
+    "name": "Karmine's Floor - Back",
+    "wildwarpIds": [
+      181,
+      186
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Floor - Front",
+        "pseudologic": "can_break_wall(Karmine)",
+        "notes": ""
+      },
+      {
+        "name": "Karmine's Floor - Exit",
+        "entrance_type": 15,
+        "vanilla_target": "Goa Exit",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Floor - Pre-Boss Gauntlet",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Slimed Kensu",
+        "rom_id": 328,
+        "ap_id_offset": 61,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "trade_in(Slime Kensu)"
+      },
+      {
+        "name": "Karmine Basement Lower Middle Chest",
+        "rom_id": 344,
+        "ap_id_offset": 69,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      },
+      {
+        "name": "Karmine Basement Lower Left Chest",
+        "rom_id": 366,
+        "ap_id_offset": 89,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      },
+      {
+        "name": "Karmine Basement Upper Middle Mimic",
+        "rom_id": 377,
+        "ap_id_offset": 100,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      },
+      {
+        "name": "Karmine Basement Upper Right Mimic",
+        "rom_id": 378,
+        "ap_id_offset": 101,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      },
+      {
+        "name": "Karmine Basement Lower Right Mimic",
+        "rom_id": 379,
+        "ap_id_offset": 102,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      }
+    ]
+  },
+  "Karmine's Floor - Front": {
+    "name": "Karmine's Floor - Front",
+    "wildwarpIds": [
+      176,
+      177,
+      178,
+      179,
+      180
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Karmine's Floor - Entrance",
+        "entrance_type": 15,
+        "vanilla_target": "Mado's Floor - Back",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Floor - Back",
+        "pseudologic": "can_break_wall(Karmine)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Karmine's Floor - Post Boss": {
+    "name": "Karmine's Floor - Post Boss",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Storm Bracelet Chest",
+        "rom_id": 268,
+        "ap_id_offset": 12,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Karmine",
+        "rom_id": 317,
+        "ap_id_offset": 50,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Karmine's Floor - Pre-Boss Gauntlet": {
+    "name": "Karmine's Floor - Pre-Boss Gauntlet",
+    "wildwarpIds": [
+      182
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Floor - Back",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Arena",
+        "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Kelbesque's Floor - Back": {
+    "name": "Kelbesque's Floor - Back",
+    "wildwarpIds": [
+      170
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Kelbesque's Floor - Front",
+        "pseudologic": "can_fight(Kelbesque 2)",
+        "notes": ""
+      },
+      {
+        "name": "Kelbesque's Floor - Exit",
+        "entrance_type": 15,
+        "vanilla_target": "Sabera's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Kelbesque 2",
+        "rom_id": 294,
+        "ap_id_offset": 27,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_fight(Kelbesque 2)"
+      }
+    ]
+  },
+  "Kelbesque's Floor - Front": {
+    "name": "Kelbesque's Floor - Front",
+    "wildwarpIds": [
+      169
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Kelbesque's Floor - Entrance",
+        "entrance_type": 15,
+        "vanilla_target": "Goa Entrance - Behind Wall",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Kelbesque's Floor - Back",
+        "pseudologic": "can_fight(Kelbesque 2)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Kirisa Plant Cave - Back": {
+    "name": "Kirisa Plant Cave - Back",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Kirisa Plant Cave - Back",
+        "pseudologic": "can_break_wall(Kirisa Plant Cave)",
+        "notes": ""
+      },
+      {
+        "name": "Kirisa Plant Cave - Back Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Kirisa Plant Meadow",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Kirisa Plant Cave - Front": {
+    "name": "Kirisa Plant Cave - Front",
+    "wildwarpIds": [
+      68
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Kirisa Plant Cave - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Waterfall Valley - South River Cave",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Kirisa Plant Cave - Middle",
+        "pseudologic": "can_break_wall(Kirisa Plant Cave)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Kirisa Plant Cave - Middle": {
+    "name": "Kirisa Plant Cave - Middle",
+    "wildwarpIds": [
+      69,
+      70
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Kirisa Plant Cave - Front",
+        "pseudologic": "can_break_wall(Kirisa Plant Cave)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Kirisa Plant Cave - Back",
+        "pseudologic": "can_break_wall(Kirisa Plant Cave)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Kirisa Plant Cave Chest",
+        "rom_id": 351,
+        "ap_id_offset": 75,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Kirisa Plant Cave)"
+      }
+    ]
+  },
+  "Kirisa Plant Meadow": {
+    "name": "Kirisa Plant Meadow",
+    "wildwarpIds": [
+      71
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Kirisa Plant Meadow - Exit",
+        "entrance_type": 5,
+        "vanilla_target": "Kirisa Plant Cave - Back",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Kirisa Meadow",
+        "rom_id": 316,
+        "ap_id_offset": 49,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Leaf": {
+    "name": "Leaf",
+    "wildwarpIds": [
+      2
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Leaf - Right",
+        "entrance_type": 4,
+        "vanilla_target": "Initial Cutscene Area",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Leaf - Up",
+        "entrance_type": 1,
+        "vanilla_target": "Wind Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Leaf - Elder's House",
+        "entrance_type": 7,
+        "vanilla_target": "Leaf Elder's House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Leaf - Zebu Student's House",
+        "entrance_type": 7,
+        "vanilla_target": "Zebu Student's House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Leaf - Armor Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Leaf Armor Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Leaf - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Leaf Item Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Leaf - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Leaf Inn",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Leaf Shed",
+        "entrance_type": 11,
+        "vanilla_target": "Leaf Shed",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Leaf Armor Shop": {
+    "name": "Leaf Armor Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Leaf Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Leaf Elder's House": {
+    "name": "Leaf Elder's House",
+    "wildwarpIds": [
+      192
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Leaf Elder's House - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Leaf Elder",
+        "rom_id": 256,
+        "ap_id_offset": 0,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Leaf Inn": {
+    "name": "Leaf Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Leaf Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Leaf Item Shop": {
+    "name": "Leaf Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Leaf Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Leaf Shed": {
+    "name": "Leaf Shed",
+    "wildwarpIds": [
+      193
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Leaf Shed - Exit",
+        "entrance_type": 12,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Lighthouse": {
+    "name": "Lighthouse",
+    "wildwarpIds": [
+      98
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Lighthouse - Exit",
+        "entrance_type": 14,
+        "vanilla_target": "Lighthouse Area",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Kensu In Lighthouse",
+        "rom_id": 313,
+        "ap_id_offset": 46,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Alarm Flute"
+      }
+    ]
+  },
+  "Lighthouse Area": {
+    "name": "Lighthouse Area",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Lighthouse Area Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Lighthouse Tunnel",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Lighthouse Entrance",
+        "entrance_type": 13,
+        "vanilla_target": "Lighthouse",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Lighthouse Tunnel": {
+    "name": "Lighthouse Tunnel",
+    "wildwarpIds": [
+      112
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Lighthouse Tunnel - Entrance",
+        "entrance_type": 6,
+        "vanilla_target": "Joel Shed",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Lighthouse Tunnel - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Lighthouse Area",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Lime Valley": {
+    "name": "Lime Valley",
+    "wildwarpIds": [
+      66
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Lime Valley - Right",
+        "entrance_type": 4,
+        "vanilla_target": "Waterfall Valley - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Lime Valley - Up",
+        "entrance_type": 1,
+        "vanilla_target": "Rage",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Lime Valley - Cave",
+        "entrance_type": 5,
+        "vanilla_target": "GBC Cave - Main",
+        "pseudologic": "TRUE",
+        "notes": "Only exists 50% of the time if Vm and V!m are both off."
+      }
+    ],
+    "locations": []
+  },
+  "Mado's Floor - Back": {
+    "name": "Mado's Floor - Back",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mado's Floor - Upstairs Right",
+        "pseudologic": "can_fight(Mado 2)",
+        "notes": ""
+      },
+      {
+        "name": "Mado's Floor - Exit",
+        "entrance_type": 15,
+        "vanilla_target": "Karmine's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mado 2",
+        "rom_id": 274,
+        "ap_id_offset": 14,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_fight(Mado 2)"
+      }
+    ]
+  },
+  "Mado's Floor - Front": {
+    "name": "Mado's Floor - Front",
+    "wildwarpIds": [
+      173
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Mado's Floor - Entrance",
+        "entrance_type": 15,
+        "vanilla_target": "Sabera's Floor - Back",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mado's Floor - Upstairs Left",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mado's Floor - Upstairs Right",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Fortress Mado Lower Center North Chest",
+        "rom_id": 355,
+        "ap_id_offset": 79,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      },
+      {
+        "name": "Fortress Mado Lower Southeast Chest",
+        "rom_id": 367,
+        "ap_id_offset": 90,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      }
+    ]
+  },
+  "Mado's Floor - Upstairs Left": {
+    "name": "Mado's Floor - Upstairs Left",
+    "wildwarpIds": [
+      174
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mado's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Fortress Mado Upper North Chest",
+        "rom_id": 352,
+        "ap_id_offset": 76,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Fortress Mado Upper Behind Wall Chest",
+        "rom_id": 363,
+        "ap_id_offset": 86,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Mado)"
+      }
+    ]
+  },
+  "Mado's Floor - Upstairs Right": {
+    "name": "Mado's Floor - Upstairs Right",
+    "wildwarpIds": [
+      175,
+      185
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mado's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mado's Floor - Back",
+        "pseudologic": "can_fight(Mado 2)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Fortress Mado Hellway Chest",
+        "rom_id": 340,
+        "ap_id_offset": 65,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Mesia": {
+    "name": "Mesia",
+    "wildwarpIds": [
+      82
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Mesia - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Rage",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mezame Shrine": {
+    "name": "Mezame Shrine",
+    "wildwarpIds": [
+      0
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Mezame Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Initial Cutscene Area",
+        "pseudologic": "TRUE",
+        "notes": "Starting region."
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Tower",
+        "pseudologic": "can_fight(Draygon 2)",
+        "notes": "Only exists if Rb is on"
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mezame Left Chest",
+        "rom_id": 329,
+        "ap_id_offset": 104,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Mezame Right Chest",
+        "rom_id": 305,
+        "ap_id_offset": 105,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Mt. Hydra - Guarded Palace": {
+    "name": "Mt. Hydra - Guarded Palace",
+    "wildwarpIds": [
+      126,
+      125
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Hydra - Lower",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "Mt. Hydra - Guardpost",
+        "entrance_type": 9,
+        "vanilla_target": "Shyron",
+        "pseudologic": "Change || statue_skip || can_reach(Shyron) || (can_reach(Goa Entrance - Massacre Trigger) && can_reach(Shyron Temple) && Sword of Thunder))",
+        "notes": "\"Need to check trigger skip and Paralysis; entrance only shuffled in Wa"
+      }
+    ],
+    "locations": []
+  },
+  "Mt. Hydra - Lower": {
+    "name": "Mt. Hydra - Lower",
+    "wildwarpIds": [
+      124,
+      127
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Mt. Hydra - Exit",
+        "entrance_type": 4,
+        "vanilla_target": "Goa Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Hydra - Guarded Palace",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Hydra - Upper",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Hydra Right Chest",
+        "rom_id": 288,
+        "ap_id_offset": 21,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Mt. Hydra - Summit": {
+    "name": "Mt. Hydra - Summit",
+    "wildwarpIds": [
+      133
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Hydra - Wide Cave",
+        "pseudologic": "can_break_wall(Mt. Hydra)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Hydra Summit Chest",
+        "rom_id": 319,
+        "ap_id_offset": 52,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight"
+      },
+      {
+        "name": "Mt Hydra Final Cave Mimic",
+        "rom_id": 372,
+        "ap_id_offset": 95,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Mt. Hydra - Upper": {
+    "name": "Mt. Hydra - Upper",
+    "wildwarpIds": [
+      128,
+      129,
+      130,
+      131,
+      134,
+      135
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Hydra - Lower",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Hydra - Wide Cave",
+        "pseudologic": "can_break_wall(Mt. Hydra)",
+        "notes": ""
+      },
+      {
+        "name": "Mt. Hydra - Palace",
+        "entrance_type": 9,
+        "vanilla_target": "Stxy - Front",
+        "pseudologic": "Key to Stxy",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Hydra Far Left Chest",
+        "rom_id": 342,
+        "ap_id_offset": 67,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Mt Hydra Left Right Chest",
+        "rom_id": 357,
+        "ap_id_offset": 81,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Mt. Hydra)"
+      }
+    ]
+  },
+  "Mt. Hydra - Wide Cave": {
+    "name": "Mt. Hydra - Wide Cave",
+    "wildwarpIds": [
+      132
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Hydra - Upper",
+        "pseudologic": "can_break_wall(Mt. Hydra)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Hydra - Summit",
+        "pseudologic": "can_break_wall(Mt. Hydra)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mt. Sabre North - Boss": {
+    "name": "Mt. Sabre North - Boss",
+    "wildwarpIds": [
+      51,
+      52
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Upper",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Elder's Cell",
+        "pseudologic": "can_fight(Kelbesque 1) && Prison Key",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Kelbesque 1",
+        "rom_id": 264,
+        "ap_id_offset": 8,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_fight(Kelbesque 1)"
+      }
+    ]
+  },
+  "Mt. Sabre North - Elder's Cell": {
+    "name": "Mt. Sabre North - Elder's Cell",
+    "wildwarpIds": [
+      53
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Boss",
+        "pseudologic": "can_fight(Kelbesque 1)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Final",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Rescue Reward",
+        "pseudologic": "can_reach(Mt. Sabre North - Boss) && can_fight(Kelbesque 1)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mt. Sabre North - Final": {
+    "name": "Mt. Sabre North - Final",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Elder's Cell",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      },
+      {
+        "name": "Mt. Sabre North - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Waterfall Valley - By Prison",
+        "pseudologic": "TRUE",
+        "notes": "Reverse entrance needs Prison Key in Wa"
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Rescue Reward",
+        "pseudologic": "can_reach(Mt. Sabre North - Boss) && can_fight(Kelbesque 1)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mt. Sabre North - Interior": {
+    "name": "Mt. Sabre North - Interior",
+    "wildwarpIds": [
+      45,
+      46
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Upper",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Sabre North Middle Chest",
+        "rom_id": 339,
+        "ap_id_offset": 64,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Mt. Sabre North)"
+      }
+    ]
+  },
+  "Mt. Sabre North - Left Jail Cell": {
+    "name": "Mt. Sabre North - Left Jail Cell",
+    "wildwarpIds": [
+      48
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Upper",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Prison Key",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mt. Sabre North - Main": {
+    "name": "Mt. Sabre North - Main",
+    "wildwarpIds": [
+      56,
+      42,
+      43,
+      41
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Pre-Trigger",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Nadare's",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Upper",
+        "pseudologic": "Flight || can_break_wall(Mt. Sabre North)",
+        "notes": "I'm not putting this into logic with Trigger Skip. You're welcome."
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Interior",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": "Reverse entrance unnecessary - can get from interior to main via upper without breaking any walls."
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Sabre North Under Bridge Chest",
+        "rom_id": 350,
+        "ap_id_offset": 74,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Mt. Sabre North)"
+      }
+    ]
+  },
+  "Mt. Sabre North - Pre-Trigger": {
+    "name": "Mt. Sabre North - Pre-Trigger",
+    "wildwarpIds": [
+      40
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Main",
+        "pseudologic": "rabbit_skip || trigger_skip || (Telepathy && can_reach(Leaf Shed) && can_reach(Leaf Elder House) && can_reach(Zebu's Cave - Back) && can_reach(Zebu Student's House))",
+        "notes": "TODO: investigate if talking to Zebu in Zebu's Cave is also necessary"
+      },
+      {
+        "name": "Mt. Sabre North - Entrance",
+        "entrance_type": 2,
+        "vanilla_target": "Cordel Plains - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mt. Sabre North - Prison Key": {
+    "name": "Mt. Sabre North - Prison Key",
+    "wildwarpIds": [
+      49
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Left Jail Cell",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Sabre North Back of Prison Chest",
+        "rom_id": 307,
+        "ap_id_offset": 40,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Mt. Sabre North - Rescue Reward": {
+    "name": "Mt. Sabre North - Rescue Reward",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Mt Sabre North Summit",
+        "rom_id": 322,
+        "ap_id_offset": 55,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": true,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Mt. Sabre North - Right Jail Cell": {
+    "name": "Mt. Sabre North - Right Jail Cell",
+    "wildwarpIds": [
+      50
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Upper",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Boss",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mt. Sabre North - Upper": {
+    "name": "Mt. Sabre North - Upper",
+    "wildwarpIds": [
+      44,
+      57,
+      47
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Main",
+        "pseudologic": "TRUE",
+        "notes": "Wheeeeee!"
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Interior",
+        "pseudologic": "Flight || Rabbit Boots || Speed Boots || trigger_skip || can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Left Jail Cell",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Boss",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Right Jail Cell",
+        "pseudologic": "Flight || trigger_skip",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mt. Sabre West - Final": {
+    "name": "Mt. Sabre West - Final",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Upper",
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Sabre West Tornel",
+        "rom_id": 324,
+        "ap_id_offset": 57,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "trade_in(Tornel)"
+      },
+      {
+        "name": "Mt Sabre West Near Tornel Chest",
+        "rom_id": 361,
+        "ap_id_offset": 84,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Mt. Sabre West - Interior": {
+    "name": "Mt. Sabre West - Interior",
+    "wildwarpIds": [
+      35
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Main",
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Upper",
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Sabre West Right Chest",
+        "rom_id": 338,
+        "ap_id_offset": 63,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Mt. Sabre West - Ledge Chest": {
+    "name": "Mt. Sabre West - Ledge Chest",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Main",
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mt. Sabre West - Main": {
+    "name": "Mt. Sabre West - Main",
+    "wildwarpIds": [
+      32,
+      34
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Mt. Sabre West - Main Exit",
+        "entrance_type": 3,
+        "vanilla_target": "Cordel Plains - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Mt. Sabre West - Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Zebu's Cave - Back",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Tornado Cave",
+        "pseudologic": "Flight || Rabbit Boots || Speed Boots || trigger_skip",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Upper",
+        "pseudologic": "Flight",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Ledge Chest",
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Interior",
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Sabre West Left Chest",
+        "rom_id": 362,
+        "ap_id_offset": 85,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Mt. Sabre West)"
+      }
+    ]
+  },
+  "Mt. Sabre West - Tornado Cave": {
+    "name": "Mt. Sabre West - Tornado Cave",
+    "wildwarpIds": [
+      39
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mt Sabre West Tornado Bracelet Chest",
+        "rom_id": 262,
+        "ap_id_offset": 6,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Mt. Sabre West)"
+      }
+    ]
+  },
+  "Mt. Sabre West - Upper": {
+    "name": "Mt. Sabre West - Upper",
+    "wildwarpIds": [
+      36,
+      37,
+      38,
+      33
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Interior",
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Final",
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre West - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Nadare's": {
+    "name": "Nadare's",
+    "wildwarpIds": [
+      213
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Nadare's - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Nadare's Inn",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Nadare's - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Nadare's Item Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Nadare's - Back Room",
+        "entrance_type": 7,
+        "vanilla_target": "Nadare's Back Room",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Nadare's Back Room": {
+    "name": "Nadare's Back Room",
+    "wildwarpIds": [
+      213
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Nadare's Back Room - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Nadare's",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Nadare's Inn": {
+    "name": "Nadare's Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Nadare's Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Nadare's",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Nadare's Item Shop": {
+    "name": "Nadare's Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Nadare's Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Nadare's",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Oak": {
+    "name": "Oak",
+    "wildwarpIds": [
+      28
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Oak - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Swamp - Far Side",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Oak - Mom House",
+        "entrance_type": 7,
+        "vanilla_target": "Oak Mom House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Oak - Elder House",
+        "entrance_type": 7,
+        "vanilla_target": "Oak Elder House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Oak - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Oak Item Shop",
+        "pseudologic": "statue_skip || (Telepathy && can_reach(Oak Mom House) && can_reach(Swamp - Interior))",
+        "notes": ""
+      },
+      {
+        "name": "Oak - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Oak Inn",
+        "pseudologic": "statue_skip || (Telepathy && can_reach(Oak Mom House) && can_reach(Swamp - Interior))",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Oak Elder House": {
+    "name": "Oak Elder House",
+    "wildwarpIds": [
+      205
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Oak Elder House - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Oak",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Oak Elder",
+        "rom_id": 257,
+        "ap_id_offset": 1,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Telepathy && can_reach(Swamp - Interior) && ((Insect Flute && can_fight(Giant Insect)) || can_reach(Oak Mom House) && can_reach(Oak))"
+      }
+    ]
+  },
+  "Oak Inn": {
+    "name": "Oak Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Oak Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Oak",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Oak Item Shop": {
+    "name": "Oak Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Oak Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Oak",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Oak Mom House": {
+    "name": "Oak Mom House",
+    "wildwarpIds": [
+      206
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Oak Mom House - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Oak",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Oak Mother",
+        "rom_id": 295,
+        "ap_id_offset": 28,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Telepathy && can_reach(Swamp - Interior) && can_reach(Oak)"
+      }
+    ]
+  },
+  "Oasis Cave - Across the River": {
+    "name": "Oasis Cave - Across the River",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Oasis Cave - Front",
+        "pseudologic": "Flight",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Oasis Cave - Past Purple Pain",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Oasis Cave Entrance Across River Chest",
+        "rom_id": 346,
+        "ap_id_offset": 71,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Oasis Cave - By Deep Entrance": {
+    "name": "Oasis Cave - By Deep Entrance",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Oasis Cave - Front",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "Oasis Cave - Deeper Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Power Ring Basement",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Oasis Cave - Front": {
+    "name": "Oasis Cave - Front",
+    "wildwarpIds": [
+      145
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Oasis Cave - Entrance",
+        "entrance_type": 6,
+        "vanilla_target": "Desert 1",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Oasis Cave - Across the River",
+        "pseudologic": "Flight",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Oasis Cave - By Deep Entrance",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Battle Armor Chest",
+        "rom_id": 283,
+        "ap_id_offset": 16,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight"
+      },
+      {
+        "name": "Oasis Cave Northwest Chest",
+        "rom_id": 303,
+        "ap_id_offset": 36,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Oasis Cave Near Entrance Chest",
+        "rom_id": 356,
+        "ap_id_offset": 80,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Water) || Flight"
+      }
+    ]
+  },
+  "Oasis Cave - Past Purple Pain": {
+    "name": "Oasis Cave - Past Purple Pain",
+    "wildwarpIds": [
+      184
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Oasis Cave - Across the River",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      },
+      {
+        "name": "Oasis Cave - Palace Entrance",
+        "entrance_type": 9,
+        "vanilla_target": "Goa Exit",
+        "pseudologic": "TRUE",
+        "notes": "\"Not shuffled on Wh"
+      }
+    ],
+    "locations": []
+  },
+  "Portoa": {
+    "name": "Portoa",
+    "wildwarpIds": [
+      80
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Portoa - Entrance",
+        "entrance_type": 4,
+        "vanilla_target": "Waterfall Valley - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa - Docks",
+        "entrance_type": 3,
+        "vanilla_target": "Fisherman House Area",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Portoa Item Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Portoa Inn",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa - Armor Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Portoa Armor Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa - Pawn Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Portoa Pawn Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa - Fortune Teller",
+        "entrance_type": 7,
+        "vanilla_target": "Fortune Teller - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa - Palace",
+        "entrance_type": 9,
+        "vanilla_target": "Portoa Palace",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Portoa Armor Shop": {
+    "name": "Portoa Armor Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Portoa Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Portoa Inn": {
+    "name": "Portoa Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Portoa Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Portoa Item Shop": {
+    "name": "Portoa Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Portoa Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Portoa Palace": {
+    "name": "Portoa Palace",
+    "wildwarpIds": [
+      215
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Portoa Palace - Exit",
+        "entrance_type": 10,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa Palace Left House",
+        "entrance_type": 7,
+        "vanilla_target": "Evans' Room",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa Palace Right House",
+        "entrance_type": 7,
+        "vanilla_target": "Servant Chambers",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa Palace Throne Room Secret",
+        "entrance_type": 5,
+        "vanilla_target": "Portoa Waterway - Main",
+        "pseudologic": "Paralysis || statue_skip || can_reach(Mesia) || trigger_skip",
+        "notes": "Double-check the trigger skip path"
+      }
+    ],
+    "locations": [
+      {
+        "name": "Portoa Queen",
+        "rom_id": 296,
+        "ap_id_offset": 29,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_reach(Mesia) || ((can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)) && (trade_in(Rage) || statue_skip || Paralysis || trigger_skip))"
+      }
+    ]
+  },
+  "Portoa Pawn Shop": {
+    "name": "Portoa Pawn Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Portoa Pawn Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Portoa Waterway - Across River": {
+    "name": "Portoa Waterway - Across River",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Waterway - Main",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Fortune Teller - Back",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Asina's Chambers",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Portoa Waterway - Main": {
+    "name": "Portoa Waterway - Main",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Portoa Waterway - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Portoa Palace",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Waterway - Across River",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Waterway - Water",
+        "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
+        "notes": "can_use_shell_flute is complicated; might be worth turning into an event"
+      }
+    ],
+    "locations": [
+      {
+        "name": "Injured Dolphin",
+        "rom_id": 310,
+        "ap_id_offset": 43,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_reach(Mesia) && can_reach(Asina's Chambers) && buy_healing && (Shell Flute || !vanilla_dolphin)"
+      }
+    ]
+  },
+  "Portoa Waterway - Water": {
+    "name": "Portoa Waterway - Water",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Waterway - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Angry Sea - South Water",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Underground Channel Underwater Chest",
+        "rom_id": 315,
+        "ap_id_offset": 48,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": true,
+        "broken": false,
+        "pseudologic": "Shell Flute && activated_shell_flute"
+      }
+    ]
+  },
+  "Power Ring Basement": {
+    "name": "Power Ring Basement",
+    "wildwarpIds": [
+      143
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Power Ring Basement - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Oasis Cave - By Deep Entrance",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Oasis Cave Fortress Basement Chest",
+        "rom_id": 298,
+        "ap_id_offset": 31,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Power Ring Basement)"
+      }
+    ]
+  },
+  "Pyramid": {
+    "name": "Pyramid",
+    "wildwarpIds": [
+      156,
+      157,
+      158,
+      159
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Pyramid - Exit",
+        "entrance_type": 10,
+        "vanilla_target": "Desert 2 - Past Pyramid Whirlpools",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Pyramid - Post-Draygon",
+        "pseudologic": "can_fight(Draygon 1)",
+        "notes": "Just used to group the two rewards from the Draygon fight."
+      }
+    ],
+    "locations": [
+      {
+        "name": "Pyramid Chest",
+        "rom_id": 364,
+        "ap_id_offset": 87,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Pyramid - Post-Draygon": {
+    "name": "Pyramid - Post-Draygon",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Draygon 1",
+        "rom_id": 284,
+        "ap_id_offset": 17,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Azteca In Pyramid",
+        "rom_id": 320,
+        "ap_id_offset": 53,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Rage": {
+    "name": "Rage",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Rage Entrance",
+        "entrance_type": 2,
+        "vanilla_target": "Lime Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Rage Tree",
+        "entrance_type": 5,
+        "vanilla_target": "Mesia",
+        "pseudologic": "(trade_in(Rage) || rage_skip*) && (Flight || can_break_wall(Water))",
+        "notes": "\"Actually forcing Rage skip into logic might be tough? Need to note entrance to Rage in output file"
+      }
+    ],
+    "locations": [
+      {
+        "name": "Rage",
+        "rom_id": 265,
+        "ap_id_offset": 9,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "trade_in(Rage)"
+      }
+    ]
+  },
+  "Sabera's Floor - Across Rivers": {
+    "name": "Sabera's Floor - Across Rivers",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Floor - Front",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Floor - Pre-Boss",
+        "pseudologic": "can_break_wall(Sabera Boss)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Sabera's Floor - Back": {
+    "name": "Sabera's Floor - Back",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Floor - Pre-Boss",
+        "pseudologic": "can_fight(Sabera 2)",
+        "notes": ""
+      },
+      {
+        "name": "Sabera's Floor - Exit",
+        "entrance_type": 15,
+        "vanilla_target": "Mado's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Sabera 2",
+        "rom_id": 291,
+        "ap_id_offset": 24,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_fight(Sabera 2)"
+      }
+    ]
+  },
+  "Sabera's Floor - Front": {
+    "name": "Sabera's Floor - Front",
+    "wildwarpIds": [
+      171
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Sabera's Floor - Entrance",
+        "entrance_type": 15,
+        "vanilla_target": "Kelbesque's Floor - Back",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Floor - Across Rivers",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Fortress Sabera Middle Chest",
+        "rom_id": 349,
+        "ap_id_offset": 73,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Water) || Flight"
+      },
+      {
+        "name": "Fortress Sabera Northwest Chest",
+        "rom_id": 354,
+        "ap_id_offset": 78,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Sabera Item)"
+      },
+      {
+        "name": "Fortress Sabera Southeast Chest",
+        "rom_id": 358,
+        "ap_id_offset": 82,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Water) || Flight"
+      }
+    ]
+  },
+  "Sabera's Floor - Pre-Boss": {
+    "name": "Sabera's Floor - Pre-Boss",
+    "wildwarpIds": [
+      172
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Floor - Across Rivers",
+        "pseudologic": "can_break_wall(Sabera Boss)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Floor - Back",
+        "pseudologic": "can_fight(Sabera 2)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Sabera's Fortress - Front": {
+    "name": "Sabera's Fortress - Front",
+    "wildwarpIds": [
+      108,
+      111
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Sabera's Fortress - Exit",
+        "entrance_type": 10,
+        "vanilla_target": "Zombie Town",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Fortress - Upstairs",
+        "pseudologic": "can_fight(Vampire 2)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Sabera Upstairs Left Chest",
+        "rom_id": 289,
+        "ap_id_offset": 22,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Vampire 2",
+        "rom_id": 353,
+        "ap_id_offset": 77,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_fight(Vampire 2)"
+      }
+    ]
+  },
+  "Sabera's Fortress - Upstairs": {
+    "name": "Sabera's Fortress - Upstairs",
+    "wildwarpIds": [
+      109,
+      110
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Fortress - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Sabera 1",
+        "rom_id": 312,
+        "ap_id_offset": 45,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_fight(Sabera 1)"
+      },
+      {
+        "name": "Sabera Upstairs Right Chest",
+        "rom_id": 341,
+        "ap_id_offset": 66,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      }
+    ]
+  },
+  "Sahara": {
+    "name": "Sahara",
+    "wildwarpIds": [
+      147
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Sahara - Up",
+        "entrance_type": null,
+        "vanilla_target": "Deo Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Sahara - Right",
+        "entrance_type": 4,
+        "vanilla_target": "Sahara Cave Transition",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Sahara - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Sahara Item Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Sahara - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Sahara Inn",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Sahara - Pawn Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Sahara Pawn Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Sahara - Elder House",
+        "entrance_type": 7,
+        "vanilla_target": "Sahara Elder House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Sahara Cave Transition": {
+    "name": "Sahara Cave Transition",
+    "wildwarpIds": [
+      148
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Sahara Cave Transition - Left",
+        "entrance_type": 3,
+        "vanilla_target": "Sahara",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Sahara Cave Transition - Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Desert Transition Cave 2",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Sahara Elder House": {
+    "name": "Sahara Elder House",
+    "wildwarpIds": [
+      250
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Sahara Elder House - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Sahara",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Sahara Inn": {
+    "name": "Sahara Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Sahara Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Sahara",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Sahara Item Shop": {
+    "name": "Sahara Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Sahara Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Sahara",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Sahara Pawn Shop": {
+    "name": "Sahara Pawn Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Sahara Pawn Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Sahara",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Sealed Cave - Back": {
+    "name": "Sealed Cave - Back",
+    "wildwarpIds": [
+      6,
+      10
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sealed Cave - Front",
+        "pseudologic": "can_break_wall(Sealed Cave)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sealed Cave - Exit",
+        "pseudologic": "can_break_wall(Sealed Cave)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Sealed Cave Small Room Back Chest",
+        "rom_id": 285,
+        "ap_id_offset": 18,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Vampire 1",
+        "rom_id": 302,
+        "ap_id_offset": 35,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Sword"
+      }
+    ]
+  },
+  "Sealed Cave - Exit": {
+    "name": "Sealed Cave - Exit",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sealed Cave - Back",
+        "pseudologic": "can_break_wall(Sealed Cave)",
+        "notes": ""
+      },
+      {
+        "name": "Sealed Cave Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Cordel Plains - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Sealed Cave - Front": {
+    "name": "Sealed Cave - Front",
+    "wildwarpIds": [
+      4,
+      5,
+      7,
+      8,
+      9
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Sealed Cave Entrance",
+        "entrance_type": 6,
+        "vanilla_target": "Wind Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sealed Cave - Back",
+        "pseudologic": "can_break_wall(Sealed Cave)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Sealed Cave Ball of Wind Chest",
+        "rom_id": 261,
+        "ap_id_offset": 5,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Sealed Cave Big Room Northeast Chest",
+        "rom_id": 286,
+        "ap_id_offset": 19,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Sealed Cave)"
+      },
+      {
+        "name": "Sealed Cave Small Room Front Chest",
+        "rom_id": 292,
+        "ap_id_offset": 25,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Sealed Cave Big Room Southwest Chest",
+        "rom_id": 336,
+        "ap_id_offset": 62,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Servant Chambers": {
+    "name": "Servant Chambers",
+    "wildwarpIds": [
+      224
+    ],
+    "notes": "PortoaPalace_Right",
+    "entrances": [
+      {
+        "name": "Servant Chambers - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa Palace",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Shyron": {
+    "name": "Shyron",
+    "wildwarpIds": [
+      140
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Shyron - Exit",
+        "entrance_type": 10,
+        "vanilla_target": "Mt. Hydra - Guarded Palace",
+        "pseudologic": "TRUE",
+        "notes": "\"Not shuffled on Wh"
+      },
+      {
+        "name": "Shyron - Palace Entrance",
+        "entrance_type": 9,
+        "vanilla_target": "Shyron Temple",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Shyron - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Shyron Inn",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Shyron - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Shyron Item Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Shyron - Armor Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Shyron Armor Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Shyron - Hospital",
+        "entrance_type": 7,
+        "vanilla_target": "Shyron Hospital",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Shyron - Training Center",
+        "entrance_type": 7,
+        "vanilla_target": "Shyron Training Center",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Shyron Armor Shop": {
+    "name": "Shyron Armor Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Shyron Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Shyron",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Shyron Hospital": {
+    "name": "Shyron Hospital",
+    "wildwarpIds": [
+      244
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Shyron Hospital - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Shyron",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Shyron Inn": {
+    "name": "Shyron Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Shyron Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Shyron",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Shyron Item Shop": {
+    "name": "Shyron Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Shyron Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Shyron",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Shyron Temple": {
+    "name": "Shyron Temple",
+    "wildwarpIds": [
+      242
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Shyron Temple - Exit",
+        "entrance_type": 10,
+        "vanilla_target": "Shyron",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Mado 1",
+        "rom_id": 267,
+        "ap_id_offset": 11,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder"
+      },
+      {
+        "name": "Zebu In Shyron",
+        "rom_id": 308,
+        "ap_id_offset": 41,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Shyron Training Center": {
+    "name": "Shyron Training Center",
+    "wildwarpIds": [
+      243
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Shyron Training Center - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Shyron",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Stxy - Downstairs": {
+    "name": "Stxy - Downstairs",
+    "wildwarpIds": [
+      137
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Stxy - Front",
+        "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Stxy - Upstairs",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Stxy Right Middle Chest",
+        "rom_id": 276,
+        "ap_id_offset": 15,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight"
+      },
+      {
+        "name": "Stxy Left North Mimic",
+        "rom_id": 373,
+        "ap_id_offset": 96,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Stxy Right North Mimic",
+        "rom_id": 374,
+        "ap_id_offset": 97,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight"
+      },
+      {
+        "name": "Stxy Right South Mimic",
+        "rom_id": 375,
+        "ap_id_offset": 98,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight"
+      }
+    ]
+  },
+  "Stxy - Front": {
+    "name": "Stxy - Front",
+    "wildwarpIds": [
+      136
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Stxy - Exit",
+        "entrance_type": 10,
+        "vanilla_target": "Mt. Hydra - Upper",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Stxy - Downstairs",
+        "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Stxy - Upstairs": {
+    "name": "Stxy - Upstairs",
+    "wildwarpIds": [
+      138
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Stxy - Downstairs",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Stxy Left Upper Sword of Thunder Chest",
+        "rom_id": 259,
+        "ap_id_offset": 3,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      },
+      {
+        "name": "Stxy Left Lower Chest",
+        "rom_id": 343,
+        "ap_id_offset": 68,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Swamp - Far Side": {
+    "name": "Swamp - Far Side",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Swamp - Interior",
+        "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
+        "notes": ""
+      },
+      {
+        "name": "Swamp - Exit",
+        "entrance_type": 5,
+        "vanilla_target": "Oak",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Swamp - Interior": {
+    "name": "Swamp - Interior",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Swamp - Near Side",
+        "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Swamp - Far Side",
+        "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Giant Insect",
+        "rom_id": 263,
+        "ap_id_offset": 7,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Insect Flute && (Gas Mask || Hazmat Suit) && can_fight(Giant Insect)"
+      }
+    ]
+  },
+  "Swamp - Near Side": {
+    "name": "Swamp - Near Side",
+    "wildwarpIds": [
+      26
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Swamp - Entrance",
+        "entrance_type": 3,
+        "vanilla_target": "Cordel Plains - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Swamp - Interior",
+        "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Swan": {
+    "name": "Swan",
+    "wildwarpIds": [
+      114
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Swan Entrance",
+        "entrance_type": 2,
+        "vanilla_target": "Angry Sea - North Land",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Swan Exit",
+        "entrance_type": 3,
+        "vanilla_target": "Guard Checkpoint - South",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Swan - Dance Hall",
+        "entrance_type": 7,
+        "vanilla_target": "Swan Dance Hall",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Swan - Pawn Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Swan Pawn Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Swan - Pub",
+        "entrance_type": 7,
+        "vanilla_target": "Swan Pub",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Swan - Armor Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Swan Armor Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Swan - Inn",
+        "entrance_type": 7,
+        "vanilla_target": "Swan Inn",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Swan - Item Shop",
+        "entrance_type": 7,
+        "vanilla_target": "Swan Item Shop",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Swan - Shed",
+        "entrance_type": 11,
+        "vanilla_target": "Swan Shed",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Swan Armor Shop": {
+    "name": "Swan Armor Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Swan Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Swan Dance Hall": {
+    "name": "Swan Dance Hall",
+    "wildwarpIds": [
+      241
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Swan Dance Hall - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Kensu In Swan",
+        "rom_id": 327,
+        "ap_id_offset": 60,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": true,
+        "broken": false,
+        "pseudologic": "Paralysis && can_reach(Swan Shed) && can_reach(Swan Pub) && trade_in(Tag Kensu)"
+      }
+    ]
+  },
+  "Swan Inn": {
+    "name": "Swan Inn",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Swan Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Swan Item Shop": {
+    "name": "Swan Item Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Swan Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Swan Pawn Shop": {
+    "name": "Swan Pawn Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Swan Pawn Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": "Probably unnecessary"
+      }
+    ],
+    "locations": []
+  },
+  "Swan Pub": {
+    "name": "Swan Pub",
+    "wildwarpIds": [
+      239
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Swan Pub - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Swan Shed": {
+    "name": "Swan Shed",
+    "wildwarpIds": [
+      236
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Swan Shed - Exit",
+        "entrance_type": 12,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Tornel's House": {
+    "name": "Tornel's House",
+    "wildwarpIds": [
+      30
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Tornel's House - Exit",
+        "entrance_type": 14,
+        "vanilla_target": "Tornel's House Exterior",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Stom Fight Reward",
+        "rom_id": 323,
+        "ap_id_offset": 56,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "(Sword && !charge_only) || (buy_warp && (can_reach(Leaf) || can_reach(Amazones) || can_reach(Sahara))"
+      }
+    ]
+  },
+  "Tornel's House Exterior": {
+    "name": "Tornel's House Exterior",
+    "wildwarpIds": [
+      25
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Tornel's House Exterior - Exit",
+        "entrance_type": 2,
+        "vanilla_target": "Cordel Plains - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Tornel's House Entrance",
+        "entrance_type": 13,
+        "vanilla_target": "Tornel's House",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Tower": {
+    "name": "Tower",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Mesia In Tower",
+        "rom_id": 260,
+        "ap_id_offset": 4,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Waterfall Cave - After Statues": {
+    "name": "Waterfall Cave - After Statues",
+    "wildwarpIds": [
+      86
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Cave - Before Statues",
+        "pseudologic": "Flute of Lime || statue_skip",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Cave - Back",
+        "pseudologic": "can_break_wall(Waterfall Cave)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Waterfall Cave - Back": {
+    "name": "Waterfall Cave - Back",
+    "wildwarpIds": [
+      87
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Cave - After Statues",
+        "pseudologic": "can_break_wall(Waterfall Cave)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Waterfall Cave Sword of Water Chest",
+        "rom_id": 258,
+        "ap_id_offset": 2,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Waterfall Cave)"
+      },
+      {
+        "name": "Waterfall Cave River Left Chest",
+        "rom_id": 272,
+        "ap_id_offset": 13,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Akahana Flute of Lime Tradein",
+        "rom_id": 304,
+        "ap_id_offset": 37,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Flute of Lime"
+      }
+    ]
+  },
+  "Waterfall Cave - Before Statues": {
+    "name": "Waterfall Cave - Before Statues",
+    "wildwarpIds": [
+      85
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Cave - Front",
+        "pseudologic": "can_break_wall(Waterfall Cave)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Cave - After Statues",
+        "pseudologic": "Flute of Lime || statue_skip",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Waterfall Cave - Front": {
+    "name": "Waterfall Cave - Front",
+    "wildwarpIds": [
+      84
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Waterfall Cave - Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Waterfall Valley - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Cave - Before Statues",
+        "pseudologic": "can_break_wall(Waterfall Cave)",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Waterfall Cave Front Mimic",
+        "rom_id": 370,
+        "ap_id_offset": 93,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_break_wall(Waterfall Cave)"
+      }
+    ]
+  },
+  "Waterfall Valley - By Prison": {
+    "name": "Waterfall Valley - By Prison",
+    "wildwarpIds": [
+      64
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Mt. Sabre North Back Entrance",
+        "entrance_type": 5,
+        "vanilla_target": "Mt. Sabre North - Final",
+        "pseudologic": "Prison Key",
+        "notes": "Remove Prison Key requirement for Wa"
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Valley - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Waterfall Valley - Main": {
+    "name": "Waterfall Valley - Main",
+    "wildwarpIds": [
+      65
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Valley - By Prison",
+        "pseudologic": "Flight || trigger_skip",
+        "notes": ""
+      },
+      {
+        "name": "Waterfall Valley North Bridge",
+        "entrance_type": 3,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Waterfall Valley Cave Behind Waterfall",
+        "entrance_type": 5,
+        "vanilla_target": "Waterfall Cave - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Waterfall Valley South Passage",
+        "entrance_type": 3,
+        "vanilla_target": "Lime Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Valley - North River Cave",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Valley - South River Cave",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Waterfall Valley - North River Cave": {
+    "name": "Waterfall Valley - North River Cave",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Valley - Main",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "Waterfall Valley North River Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Fog Lamp Cave - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Waterfall Valley - South River Cave": {
+    "name": "Waterfall Valley - South River Cave",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Valley - Main",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "Waterfall Valley South River Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Kirisa Plant Cave - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Wind Valley": {
+    "name": "Wind Valley",
+    "wildwarpIds": [
+      3
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Wind Valley - South",
+        "entrance_type": 2,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Wind Valley - East Cave",
+        "entrance_type": 5,
+        "vanilla_target": "GBC Cave - Main",
+        "pseudologic": "TRUE",
+        "notes": "Only exists if Vm and V!m are both off."
+      },
+      {
+        "name": "Wind Valley - East",
+        "entrance_type": 3,
+        "vanilla_target": "Lime Valley",
+        "pseudologic": "TRUE",
+        "notes": "Only exists if V!m is on."
+      },
+      {
+        "name": "Wind Valley - North East Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Windmill Cave",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Wind Valley - North West Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Sealed Cave - Front",
+        "pseudologic": "Windmill Key && can_reach(Windmill)",
+        "notes": "\"If Wa"
+      },
+      {
+        "name": "Wind Valley - West Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Zebu's Cave - Front",
+        "pseudologic": "TRUE",
+        "notes": "Only exists if Vm and V!m are both off."
+      }
+    ],
+    "locations": [
+      {
+        "name": "Zebu At Windmill",
+        "rom_id": 321,
+        "ap_id_offset": 54,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_reach(Windmill) && Windmill Key"
+      }
+    ]
+  },
+  "Windmill": {
+    "name": "Windmill",
+    "wildwarpIds": [
+      15
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Windmill Exit",
+        "entrance_type": 14,
+        "vanilla_target": "Windmill Exterior",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Windmill Cave": {
+    "name": "Windmill Cave",
+    "wildwarpIds": [
+      14
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Windmill Cave Entrance",
+        "entrance_type": 6,
+        "vanilla_target": "Wind Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Windmill Cave Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Windmill Exterior",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Windmill Guard Alarm Flute Tradein",
+        "rom_id": 306,
+        "ap_id_offset": 39,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "can_reach(Leaf Elder House) && can_reach(Zebu Student's House) && can_reach(Zebu's Cave - Front) && Alarm Flute"
+      }
+    ]
+  },
+  "Windmill Exterior": {
+    "name": "Windmill Exterior",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Windmill Exterior - Windmill Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Windmill Cave",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Windmill Entrance",
+        "entrance_type": 13,
+        "vanilla_target": "Windmill",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Zebu Student's House": {
+    "name": "Zebu Student's House",
+    "wildwarpIds": [
+      197
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Zebu Student's House - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": [
+      {
+        "name": "Zebu Student",
+        "rom_id": 305,
+        "ap_id_offset": 38,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Zebu's Cave - Back": {
+    "name": "Zebu's Cave - Back",
+    "wildwarpIds": [
+      17
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Zebu's Cave - Front",
+        "pseudologic": "can_break_wall(Zebu's Cave)",
+        "notes": ""
+      },
+      {
+        "name": "Zebu's Cave Exit",
+        "entrance_type": 6,
+        "vanilla_target": "Mt. Sabre West - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Zebu's Cave - Front": {
+    "name": "Zebu's Cave - Front",
+    "wildwarpIds": [
+      16
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Zebu's Cave Entrance",
+        "entrance_type": 6,
+        "vanilla_target": "Wind Valley",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Zebu's Cave - Back",
+        "pseudologic": "can_break_wall(Zebu's Cave)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Zombie Town": {
+    "name": "Zombie Town",
+    "wildwarpIds": [
+      101
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Zombie Town - Exit",
+        "entrance_type": 5,
+        "vanilla_target": "Evil Spirit Island - Upstairs",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Zombie Town - Clark's Hideout",
+        "entrance_type": 7,
+        "vanilla_target": "Clark's Hideout",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Zombie Town - Palace Entrance",
+        "entrance_type": 9,
+        "vanilla_target": "Sabera's Fortress - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Menu": {
+    "name": "Menu",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Start Game",
+        "entrance_type": 0,
+        "vanilla_target": "Mezame Shrine",
+        "pseudologic": "TRUE",
+        "notes": "The way to start the game."
+      }
+    ],
+    "locations": [
+      {
+        "name": "Repaired Statue",
+        "rom_id": 314,
+        "ap_id_offset": 47,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "broken": false,
+        "pseudologic": "Broken Statue && Glowing Lamp"
+      }
+    ]
+  }
+}
