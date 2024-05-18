@@ -15,21 +15,19 @@ class CrystalisItemCategoryEnum(IntEnum):
     TRAP = 4
 
 def convert_enum_to_item_classification(enum: CrystalisItemCategoryEnum) -> ItemClassification:
-    match enum:
-        case CrystalisItemCategoryEnum.FILLER:
-            return ItemClassification.filler
-        case CrystalisItemCategoryEnum.PROGRESSION:
-            return ItemClassification.progression
-        case CrystalisItemCategoryEnum.USEFUL:
-            return ItemClassification.useful
-        case CrystalisItemCategoryEnum.CONDITONAL:
-            #TODO: figure this out later
-            return ItemClassification.progression
-        case CrystalisItemCategoryEnum.TRAP:
-            return ItemClassification.trap
-        case _:
-            #TODO: proper error handling?
-            return ItemClassification.filler
+    if enum == CrystalisItemCategoryEnum.FILLER:
+        return ItemClassification.filler
+    if enum ==  CrystalisItemCategoryEnum.PROGRESSION:
+        return ItemClassification.progression
+    if enum ==  CrystalisItemCategoryEnum.USEFUL:
+        return ItemClassification.useful
+    if enum ==  CrystalisItemCategoryEnum.CONDITONAL:
+        #TODO: figure this out later
+        return ItemClassification.progression
+    if enum ==  CrystalisItemCategoryEnum.TRAP:
+        return ItemClassification.trap
+    #TODO: proper error handling?
+    return ItemClassification.filler
 
 class CrystalisEntranceTypeEnum(IntEnum):
     STATIC = 0
