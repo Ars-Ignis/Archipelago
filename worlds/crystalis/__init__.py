@@ -3,12 +3,13 @@ import typing
 import settings
 from BaseClasses import Region, Entrance, Item, Tutorial, ItemClassification
 from typing import Dict, List
-from .Items import CrystalisItem, items_data
-from .Locations import CrystalisLocation, aggregate_location_data_from_regions, \
+from .items import CrystalisItem, items_data
+from .locations import CrystalisLocation, aggregate_location_data_from_regions, \
                         create_location_from_location_data
-from .Regions import regions_data
-from .Options import CrystalisOptions
-from .CrystalisTypes import *
+from .regions import regions_data
+from .options import CrystalisOptions
+from .types import *
+from .logic import set_rules
 #from .Rules import set_rules, set_completion_rules
 from worlds.AutoWorld import World, WebWorld
 
@@ -73,6 +74,8 @@ class CrystalisWorld(World):
             region = Region(region_data.name, self.player, self.multiworld)
             local_region_cache[region_data.name] = region
             for location_data in region_data.locations:
+                if "Mezame Shrine" in location_data.name:
+                    continue
                 region.locations.append(create_location_from_location_data(self.player, location_data, region))
         #then make entrances
         for region_data in regions_data.values():
@@ -90,9 +93,14 @@ class CrystalisWorld(World):
 
 
     def create_items(self) -> None:
+        #TODO: proper item fill based on settings
         for item_data in items_data.values():
             for i in range(item_data.default_count):
                 self.multiworld.itempool.append(self.create_item(item_data.name))
         self.multiworld.itempool.append(self.create_item("Medical Herb"))
         self.multiworld.itempool.append(self.create_item("Medical Herb"))
         self.multiworld.itempool.append(self.create_item("Medical Herb"))
+
+
+    def set_rules(self) -> None:
+        set_rules()
