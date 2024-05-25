@@ -2,7 +2,7 @@
 from dataclasses import dataclass
 from BaseClasses import ItemClassification
 from enum import IntEnum
-from typing import List
+from typing import List, Dict
 
 CRYSTALIS_BASE_ID: int = 2241000
 
@@ -11,7 +11,7 @@ class CrystalisItemCategoryEnum(IntEnum):
     FILLER = 0
     PROGRESSION = 1
     USEFUL = 2
-    CONDITONAL = 3
+    CONDITIONAL = 3
     TRAP = 4
 
 def convert_enum_to_item_classification(enum: CrystalisItemCategoryEnum) -> ItemClassification:
@@ -21,7 +21,7 @@ def convert_enum_to_item_classification(enum: CrystalisItemCategoryEnum) -> Item
         return ItemClassification.progression
     if enum ==  CrystalisItemCategoryEnum.USEFUL:
         return ItemClassification.useful
-    if enum ==  CrystalisItemCategoryEnum.CONDITONAL:
+    if enum ==  CrystalisItemCategoryEnum.CONDITIONAL:
         #TODO: figure this out later
         return ItemClassification.progression
     if enum ==  CrystalisItemCategoryEnum.TRAP:
@@ -90,3 +90,11 @@ class CrystalisItemData:
     groups: List[str]
     category: CrystalisItemCategoryEnum
     notes: str
+
+
+@dataclass
+class CrystalisShuffleData:
+    wall_map: Dict[str, str]
+    key_item_names: Dict[str, str]
+    trade_in_map: Dict[str, str]
+    boss_reqs: Dict[str, str]

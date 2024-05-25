@@ -3,7 +3,7 @@ import orjson
 from typing import Dict, List, NamedTuple, Optional, Set, FrozenSet, Tuple, Any, Union
 import pkgutil
 from BaseClasses import Item, ItemClassification
-from .CrystalisTypes import CrystalisItemData
+from .types import CrystalisItemData
 
 
 class ItemData(NamedTuple):
