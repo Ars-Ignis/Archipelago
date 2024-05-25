@@ -1,6 +1,6 @@
 from typing import Dict, List
 from BaseClasses import Location, Region
-from .CrystalisTypes import CrystalisLocationData, CrystalisRegionData, CRYSTALIS_BASE_ID
+from .types import CrystalisLocationData, CrystalisRegionData, CRYSTALIS_BASE_ID
 
 
 class CrystalisLocation(Location):
