@@ -1,7 +1,7 @@
 
 
 from BaseClasses import Region
-from .CrystalisTypes import CrystalisRegionData
+from .types import CrystalisRegionData
 import orjson
 from typing import Dict, List, NamedTuple, Optional, Set, FrozenSet, Tuple, Any, Union
 import pkgutil
