@@ -4,7 +4,7 @@
     "rom_id": 0,
     "ap_id_offset": 0,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -19,7 +19,7 @@
     "rom_id": 1,
     "ap_id_offset": 1,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -34,7 +34,7 @@
     "rom_id": 2,
     "ap_id_offset": 2,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -49,7 +49,7 @@
     "rom_id": 3,
     "ap_id_offset": 3,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -64,7 +64,7 @@
     "rom_id": 5,
     "ap_id_offset": 4,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -79,7 +79,7 @@
     "rom_id": 6,
     "ap_id_offset": 5,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -94,7 +94,7 @@
     "rom_id": 7,
     "ap_id_offset": 6,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -109,7 +109,7 @@
     "rom_id": 8,
     "ap_id_offset": 7,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -124,7 +124,7 @@
     "rom_id": 9,
     "ap_id_offset": 8,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -139,7 +139,7 @@
     "rom_id": 10,
     "ap_id_offset": 9,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -154,7 +154,7 @@
     "rom_id": 11,
     "ap_id_offset": 10,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -169,7 +169,7 @@
     "rom_id": 12,
     "ap_id_offset": 11,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -183,9 +183,9 @@
     "name": "Mirrored Shield",
     "rom_id": 16,
     "ap_id_offset": 12,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
+    "prevent_loss": false,
     "default_count": 1,
     "groups": [
       "Shield"
@@ -197,9 +197,9 @@
     "name": "Sacred Shield",
     "rom_id": 18,
     "ap_id_offset": 13,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
+    "prevent_loss": false,
     "default_count": 1,
     "groups": [
       "Shield"
@@ -253,10 +253,10 @@
     "name": "Medical Herb",
     "rom_id": 29,
     "ap_id_offset": 17,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
-    "default_count": 9,
+    "prevent_loss": false,
+    "default_count": 7,
     "groups": [
       "Consumable"
     ],
@@ -267,9 +267,9 @@
     "name": "Antidote",
     "rom_id": 30,
     "ap_id_offset": 18,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
+    "prevent_loss": false,
     "default_count": 4,
     "groups": [
       "Consumable"
@@ -281,9 +281,9 @@
     "name": "Lysis Plant",
     "rom_id": 31,
     "ap_id_offset": 19,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
+    "prevent_loss": false,
     "default_count": 3,
     "groups": [
       "Consumable"
@@ -295,9 +295,9 @@
     "name": "Fruit of Lime",
     "rom_id": 32,
     "ap_id_offset": 20,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
+    "prevent_loss": false,
     "default_count": 1,
     "groups": [
       "Consumable"
@@ -309,9 +309,9 @@
     "name": "Fruit of Power",
     "rom_id": 33,
     "ap_id_offset": 21,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
+    "prevent_loss": false,
     "default_count": 5,
     "groups": [
       "Consumable"
@@ -323,9 +323,9 @@
     "name": "Magic Ring",
     "rom_id": 34,
     "ap_id_offset": 22,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
+    "prevent_loss": false,
     "default_count": 9,
     "groups": [
       "Consumable"
@@ -337,9 +337,9 @@
     "name": "Fruit of Repun",
     "rom_id": 35,
     "ap_id_offset": 23,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
+    "prevent_loss": false,
     "default_count": 2,
     "groups": [
       "Consumable"
@@ -351,9 +351,9 @@
     "name": "Warp Boots",
     "rom_id": 36,
     "ap_id_offset": 24,
-    "unique": true,
+    "unique": false,
     "losable": true,
-    "prevent_loss": true,
+    "prevent_loss": false,
     "default_count": 3,
     "groups": [
       "Consumable"
@@ -366,12 +366,13 @@
     "rom_id": 37,
     "ap_id_offset": 25,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
       "Trade-in",
-      "Key Item"
+      "Key Item",
+      "Statue"
     ],
     "category": 1,
     "notes": ""
@@ -380,7 +381,7 @@
     "name": "Opel Statue",
     "rom_id": 38,
     "ap_id_offset": 26,
-    "unique": true,
+    "unique": false,
     "losable": true,
     "prevent_loss": true,
     "default_count": 3,
@@ -395,11 +396,12 @@
     "rom_id": 39,
     "ap_id_offset": 27,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Flute"
     ],
     "category": 1,
     "notes": ""
@@ -409,11 +411,12 @@
     "rom_id": 40,
     "ap_id_offset": 28,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Flute"
     ],
     "category": 1,
     "notes": ""
@@ -423,7 +426,7 @@
     "rom_id": 41,
     "ap_id_offset": 29,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -437,7 +440,7 @@
     "rom_id": 42,
     "ap_id_offset": 30,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -451,7 +454,7 @@
     "rom_id": 43,
     "ap_id_offset": 31,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -465,7 +468,7 @@
     "rom_id": 44,
     "ap_id_offset": 32,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -479,7 +482,7 @@
     "rom_id": 45,
     "ap_id_offset": 33,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -493,7 +496,7 @@
     "rom_id": 46,
     "ap_id_offset": 34,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -507,7 +510,7 @@
     "rom_id": 47,
     "ap_id_offset": 35,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -521,7 +524,7 @@
     "rom_id": 48,
     "ap_id_offset": 36,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -535,11 +538,12 @@
     "rom_id": 49,
     "ap_id_offset": 37,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Flute"
     ],
     "category": 1,
     "notes": ""
@@ -549,11 +553,12 @@
     "rom_id": 50,
     "ap_id_offset": 38,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Key"
     ],
     "category": 1,
     "notes": ""
@@ -563,11 +568,12 @@
     "rom_id": 51,
     "ap_id_offset": 39,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Key"
     ],
     "category": 1,
     "notes": ""
@@ -577,11 +583,12 @@
     "rom_id": 52,
     "ap_id_offset": 40,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Key"
     ],
     "category": 1,
     "notes": ""
@@ -591,12 +598,13 @@
     "rom_id": 53,
     "ap_id_offset": 41,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
       "Trade-in",
-      "Key Item"
+      "Key Item",
+      "Lamp"
     ],
     "category": 1,
     "notes": ""
@@ -606,11 +614,12 @@
     "rom_id": 54,
     "ap_id_offset": 42,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Flute"
     ],
     "category": 1,
     "notes": ""
@@ -620,7 +629,7 @@
     "rom_id": 55,
     "ap_id_offset": 43,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -634,11 +643,12 @@
     "rom_id": 56,
     "ap_id_offset": 44,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Statue"
     ],
     "category": 1,
     "notes": ""
@@ -648,11 +658,12 @@
     "rom_id": 57,
     "ap_id_offset": 45,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Lamp"
     ],
     "category": 1,
     "notes": ""
@@ -662,11 +673,12 @@
     "rom_id": 58,
     "ap_id_offset": 46,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Statue"
     ],
     "category": 1,
     "notes": ""
@@ -676,7 +688,7 @@
     "rom_id": 59,
     "ap_id_offset": 47,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -691,7 +703,7 @@
     "rom_id": 60,
     "ap_id_offset": 48,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -706,12 +718,13 @@
     "rom_id": 61,
     "ap_id_offset": 49,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
       "Trade-in",
-      "Key Item"
+      "Key Item",
+      "Statue"
     ],
     "category": 1,
     "notes": ""
@@ -721,11 +734,12 @@
     "rom_id": 62,
     "ap_id_offset": 50,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Bow"
     ],
     "category": 1,
     "notes": ""
@@ -735,11 +749,12 @@
     "rom_id": 63,
     "ap_id_offset": 51,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Bow"
     ],
     "category": 1,
     "notes": ""
@@ -749,11 +764,12 @@
     "rom_id": 64,
     "ap_id_offset": 52,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
-      "Key Item"
+      "Key Item",
+      "Bow"
     ],
     "category": 1,
     "notes": ""
@@ -763,7 +779,7 @@
     "rom_id": 65,
     "ap_id_offset": 53,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -777,7 +793,7 @@
     "rom_id": 66,
     "ap_id_offset": 54,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -791,7 +807,7 @@
     "rom_id": 67,
     "ap_id_offset": 55,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -805,7 +821,7 @@
     "rom_id": 68,
     "ap_id_offset": 56,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -819,7 +835,7 @@
     "rom_id": 69,
     "ap_id_offset": 57,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -833,7 +849,7 @@
     "rom_id": 70,
     "ap_id_offset": 58,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -847,7 +863,7 @@
     "rom_id": 71,
     "ap_id_offset": 59,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -861,7 +877,7 @@
     "rom_id": 72,
     "ap_id_offset": 60,
     "unique": true,
-    "losable": true,
+    "losable": false,
     "prevent_loss": true,
     "default_count": 1,
     "groups": [
@@ -874,10 +890,10 @@
     "name": "Mimic",
     "rom_id": 112,
     "ap_id_offset": 61,
-    "unique": true,
-    "losable": true,
-    "prevent_loss": true,
-    "default_count": 12,
+    "unique": false,
+    "losable": false,
+    "prevent_loss": false,
+    "default_count": 11,
     "groups": [
       ""
     ],
