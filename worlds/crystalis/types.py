@@ -2,7 +2,7 @@
 from dataclasses import dataclass
 from BaseClasses import ItemClassification
 from enum import IntEnum
-from typing import List, Dict
+from typing import List, Dict, Optional
 
 CRYSTALIS_BASE_ID: int = 2241000
 
@@ -56,8 +56,7 @@ class CrystalisLocationData:
     unique: bool
     lossy: bool
     prevent_loss: bool
-    broken: bool
-    pseudologic: str
+    is_chest: bool
 
 
 @dataclass
@@ -65,15 +64,12 @@ class CrystalisEntranceData:
     name: str
     entrance_type: CrystalisEntranceTypeEnum
     vanilla_target: str
-    pseudologic: str
-    notes: str
 
 
 @dataclass
 class CrystalisRegionData:
     name: str
     wildwarpIds: List[int]
-    notes: str
     entrances: List[CrystalisEntranceData]
     locations: List[CrystalisLocationData]
 
@@ -89,7 +85,6 @@ class CrystalisItemData:
     default_count: int
     groups: List[str]
     category: CrystalisItemCategoryEnum
-    notes: str
 
 
 @dataclass
@@ -98,3 +93,6 @@ class CrystalisShuffleData:
     key_item_names: Dict[str, str]
     trade_in_map: Dict[str, str]
     boss_reqs: Dict[str, str]
+    gbc_cave_exits: List[str]
+    thunder_warp: Optional[str]
+    shop_inventories: Dict[str, List[str]]
