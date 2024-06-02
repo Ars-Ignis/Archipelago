@@ -241,7 +241,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": true,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "Golden Statue"
       }
     ]
@@ -253,16 +253,24 @@
       226
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Aryllis's House - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Amazones",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [
       {
         "name": "Aryllis Basement Chest",
         "rom_id": 266,
         "ap_id_offset": 10,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -271,8 +279,8 @@
         "ap_id_offset": 51,
         "unique": true,
         "lossy": true,
-        "prevent_loss": true,
-        "broken": false,
+        "prevent_loss": false,
+        "is_chest": false,
         "pseudologic": "Change && trade_in(Aryllis)"
       }
     ]
@@ -300,7 +308,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "can_reach(Mesia)"
       }
     ]
@@ -328,7 +336,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman)"
       }
     ]
@@ -402,7 +410,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "Change && can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder"
       }
     ]
@@ -464,8 +472,8 @@
         "ap_id_offset": 30,
         "unique": true,
         "lossy": true,
-        "prevent_loss": true,
-        "broken": false,
+        "prevent_loss": false,
+        "is_chest": false,
         "pseudologic": "trade_in(Akahana)"
       }
     ]
@@ -474,60 +482,28 @@
     "name": "Brynmaer Armor Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Brynmaer Armor Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Brynmaer",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Brynmaer Inn": {
     "name": "Brynmaer Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Brynmaer Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Brynmaer",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Brynmaer Item Shop": {
     "name": "Brynmaer Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Brynmaer Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Brynmaer",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Brynmaer Pawn Shop": {
     "name": "Brynmaer Pawn Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Brynmaer Pawn Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Brynmaer",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Brynmaer Pub": {
@@ -571,7 +547,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "can_reach(Sabera's Fortress - Upstairs) && can_fight(Sabera 1)"
       }
     ]
@@ -631,13 +607,6 @@
         "vanilla_target": "Swamp - Near Side",
         "pseudologic": "TRUE",
         "notes": ""
-      },
-      {
-        "name": "Cordel Plains - South East Cave",
-        "entrance_type": 5,
-        "vanilla_target": "GBC Cave - Main",
-        "pseudologic": "TRUE",
-        "notes": "Only exists 50% of the time if Vm and V!m are both off."
       }
     ],
     "locations": [
@@ -646,9 +615,9 @@
         "rom_id": 293,
         "ap_id_offset": 26,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "TRUE"
       }
     ]
@@ -727,10 +696,10 @@
         "name": "Crypt Left Pit Mimic",
         "rom_id": 376,
         "ap_id_offset": 99,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -764,9 +733,9 @@
         "rom_id": 365,
         "ap_id_offset": 88,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
     ]
@@ -823,7 +792,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "Change && Telepathy"
       }
     ]
@@ -892,13 +861,6 @@
         "name": "Desert 2 - Left Cave",
         "entrance_type": 5,
         "vanilla_target": "Desert Transition Cave 2",
-        "pseudologic": "TRUE",
-        "notes": ""
-      },
-      {
-        "name": "Desert 2 - Right Cave",
-        "entrance_type": 5,
-        "vanilla_target": "GBC Cave - Main",
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1054,9 +1016,9 @@
         "rom_id": 290,
         "ap_id_offset": 23,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Evil Spirit Island)"
       }
     ]
@@ -1106,19 +1068,19 @@
         "rom_id": 300,
         "ap_id_offset": 33,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Water) || Flight"
       },
       {
         "name": "Evil Spirit Island River Right Mimic",
         "rom_id": 371,
         "ap_id_offset": 94,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -1158,9 +1120,9 @@
         "rom_id": 348,
         "ap_id_offset": 72,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -1240,9 +1202,9 @@
         "rom_id": 287,
         "ap_id_offset": 20,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Fog Lamp Cave)"
       },
       {
@@ -1250,29 +1212,29 @@
         "rom_id": 309,
         "ap_id_offset": 42,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Fog Lamp Cave)"
       },
       {
         "name": "Fog Lamp Cave Middle North Mimic",
         "rom_id": 368,
         "ap_id_offset": 91,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Fog Lamp Cave)"
       },
       {
         "name": "Fog Lamp Cave Middle Southwest Mimic",
         "rom_id": 369,
         "ap_id_offset": 92,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Fog Lamp Cave)"
       }
     ]
@@ -1350,13 +1312,6 @@
         "notes": "Only exists if Vm and V!m are both off."
       },
       {
-        "name": "GBC Cave Free Exit",
-        "entrance_type": 6,
-        "vanilla_target": "Cordel Plains - Main",
-        "pseudologic": "TRUE",
-        "notes": "Only exists if Vm and V!m are both off. Entrance always partially randomized."
-      },
-      {
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "GBC Cave - Past Block",
@@ -1370,19 +1325,19 @@
         "rom_id": 345,
         "ap_id_offset": 70,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
         "name": "East Cave Northwest Mimic",
         "rom_id": 380,
         "ap_id_offset": 103,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -1398,13 +1353,6 @@
         "vanilla_target": "GBC Cave - Main",
         "pseudologic": "can_break_wall(GBC Cave)",
         "notes": "Only exists if Vm and V!m are both off."
-      },
-      {
-        "name": "GBC Cave Blocked Exit",
-        "entrance_type": 6,
-        "vanilla_target": "Lime Valley",
-        "pseudologic": "TRUE",
-        "notes": "Only exists if Vm and V!m are both off. Entrance always partially randomized."
       }
     ],
     "locations": []
@@ -1557,30 +1505,14 @@
     "name": "Goa Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Goa Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Goa",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Goa Item Shop": {
     "name": "Goa Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Goa Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Goa",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Goa Pub": {
@@ -1634,13 +1566,6 @@
         "vanilla_target": "Goa",
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
-      },
-      {
-        "name": "Goa Valley - Cave",
-        "entrance_type": 5,
-        "vanilla_target": "GBC Cave - Main",
-        "pseudologic": "TRUE",
-        "notes": "Only exists 50% of the time if Vm and V!m are both off."
       }
     ],
     "locations": []
@@ -1781,30 +1706,14 @@
     "name": "Joel Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Joel Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Joel",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Joel Item Shop": {
     "name": "Joel Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Joel Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Joel",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Joel Shed": {
@@ -1891,7 +1800,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "trade_in(Slime Kensu)"
       },
       {
@@ -1899,9 +1808,9 @@
         "rom_id": 344,
         "ap_id_offset": 69,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
@@ -1909,39 +1818,39 @@
         "rom_id": 366,
         "ap_id_offset": 89,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
         "name": "Karmine Basement Upper Middle Mimic",
         "rom_id": 377,
         "ap_id_offset": 100,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
         "name": "Karmine Basement Upper Right Mimic",
         "rom_id": 378,
         "ap_id_offset": 101,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
         "name": "Karmine Basement Lower Right Mimic",
         "rom_id": 379,
         "ap_id_offset": 102,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
     ]
@@ -1985,9 +1894,9 @@
         "rom_id": 268,
         "ap_id_offset": 12,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -1995,9 +1904,9 @@
         "rom_id": 317,
         "ap_id_offset": 50,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -2054,9 +1963,9 @@
         "rom_id": 294,
         "ap_id_offset": 27,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_fight(Kelbesque 2)"
       }
     ]
@@ -2160,9 +2069,9 @@
         "rom_id": 351,
         "ap_id_offset": 75,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)"
       }
     ]
@@ -2188,9 +2097,9 @@
         "rom_id": 316,
         "ap_id_offset": 49,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "TRUE"
       }
     ]
@@ -2265,15 +2174,7 @@
     "name": "Leaf Armor Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Leaf Armor Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Leaf",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Leaf Elder's House": {
@@ -2299,7 +2200,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "TRUE"
       }
     ]
@@ -2308,30 +2209,14 @@
     "name": "Leaf Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Leaf Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Leaf",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Leaf Item Shop": {
     "name": "Leaf Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Leaf Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Leaf",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Leaf Shed": {
@@ -2374,7 +2259,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Alarm Flute"
       }
     ]
@@ -2445,13 +2330,6 @@
         "vanilla_target": "Rage",
         "pseudologic": "TRUE",
         "notes": ""
-      },
-      {
-        "name": "Lime Valley - Cave",
-        "entrance_type": 5,
-        "vanilla_target": "GBC Cave - Main",
-        "pseudologic": "TRUE",
-        "notes": "Only exists 50% of the time if Vm and V!m are both off."
       }
     ],
     "locations": []
@@ -2482,9 +2360,9 @@
         "rom_id": 274,
         "ap_id_offset": 14,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_fight(Mado 2)"
       }
     ]
@@ -2524,9 +2402,9 @@
         "rom_id": 355,
         "ap_id_offset": 79,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
@@ -2534,9 +2412,9 @@
         "rom_id": 367,
         "ap_id_offset": 90,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
     ]
@@ -2562,9 +2440,9 @@
         "rom_id": 352,
         "ap_id_offset": 76,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -2572,9 +2450,9 @@
         "rom_id": 363,
         "ap_id_offset": 86,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Mado)"
       }
     ]
@@ -2608,9 +2486,9 @@
         "rom_id": 340,
         "ap_id_offset": 65,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -2645,13 +2523,6 @@
         "vanilla_target": "Initial Cutscene Area",
         "pseudologic": "TRUE",
         "notes": "Starting region."
-      },
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Tower",
-        "pseudologic": "can_fight(Draygon 2)",
-        "notes": "Only exists if Rb is on"
       }
     ],
     "locations": [
@@ -2660,9 +2531,9 @@
         "rom_id": 329,
         "ap_id_offset": 104,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -2670,9 +2541,9 @@
         "rom_id": 305,
         "ap_id_offset": 105,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -2738,9 +2609,9 @@
         "rom_id": 288,
         "ap_id_offset": 21,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -2766,19 +2637,19 @@
         "rom_id": 319,
         "ap_id_offset": 52,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight"
       },
       {
         "name": "Mt Hydra Final Cave Mimic",
         "rom_id": 372,
         "ap_id_offset": 95,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -2823,9 +2694,9 @@
         "rom_id": 342,
         "ap_id_offset": 67,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -2833,9 +2704,9 @@
         "rom_id": 357,
         "ap_id_offset": 81,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Hydra)"
       }
     ]
@@ -2887,18 +2758,7 @@
         "notes": ""
       }
     ],
-    "locations": [
-      {
-        "name": "Kelbesque 1",
-        "rom_id": 264,
-        "ap_id_offset": 8,
-        "unique": true,
-        "lossy": true,
-        "prevent_loss": false,
-        "broken": false,
-        "pseudologic": "can_fight(Kelbesque 1)"
-      }
-    ]
+    "locations": []
   },
   "Mt. Sabre North - Elder's Cell": {
     "name": "Mt. Sabre North - Elder's Cell",
@@ -2982,9 +2842,9 @@
         "rom_id": 339,
         "ap_id_offset": 64,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Sabre North)"
       }
     ]
@@ -3058,9 +2918,9 @@
         "rom_id": 350,
         "ap_id_offset": 74,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Sabre North)"
       }
     ]
@@ -3110,9 +2970,9 @@
         "rom_id": 307,
         "ap_id_offset": 40,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -3124,13 +2984,23 @@
     "entrances": [],
     "locations": [
       {
+        "name": "Kelbesque 1",
+        "rom_id": 264,
+        "ap_id_offset": 8,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "can_fight(Kelbesque 1)"
+      },
+      {
         "name": "Mt Sabre North Summit",
         "rom_id": 322,
         "ap_id_offset": 55,
         "unique": true,
         "lossy": true,
         "prevent_loss": true,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "TRUE"
       }
     ]
@@ -3227,7 +3097,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "trade_in(Tornel)"
       },
       {
@@ -3235,9 +3105,9 @@
         "rom_id": 361,
         "ap_id_offset": 84,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -3270,9 +3140,9 @@
         "rom_id": 338,
         "ap_id_offset": 63,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -3349,9 +3219,9 @@
         "rom_id": 362,
         "ap_id_offset": 85,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Sabre West)"
       }
     ]
@@ -3377,9 +3247,9 @@
         "rom_id": 262,
         "ap_id_offset": 6,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Sabre West)"
       }
     ]
@@ -3477,30 +3347,14 @@
     "name": "Nadare's Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Nadare's Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Nadare's",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Nadare's Item Shop": {
     "name": "Nadare's Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Nadare's Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Nadare's",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Oak": {
@@ -3571,7 +3425,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "Telepathy && can_reach(Swamp - Interior) && ((Insect Flute && can_fight(Giant Insect)) || can_reach(Oak Mom House) && can_reach(Oak))"
       }
     ]
@@ -3580,30 +3434,14 @@
     "name": "Oak Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Oak Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Oak",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Oak Item Shop": {
     "name": "Oak Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Oak Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Oak",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Oak Mom House": {
@@ -3629,7 +3467,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "Telepathy && can_reach(Swamp - Interior) && can_reach(Oak)"
       }
     ]
@@ -3660,9 +3498,9 @@
         "rom_id": 346,
         "ap_id_offset": 71,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -3724,9 +3562,9 @@
         "rom_id": 283,
         "ap_id_offset": 16,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight"
       },
       {
@@ -3734,9 +3572,9 @@
         "rom_id": 303,
         "ap_id_offset": 36,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -3744,9 +3582,9 @@
         "rom_id": 356,
         "ap_id_offset": 80,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Water) || Flight"
       }
     ]
@@ -3845,45 +3683,21 @@
     "name": "Portoa Armor Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Portoa Armor Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Portoa",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Portoa Inn": {
     "name": "Portoa Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Portoa Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Portoa",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Portoa Item Shop": {
     "name": "Portoa Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Portoa Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Portoa",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Portoa Palace": {
@@ -3930,7 +3744,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "can_reach(Mesia) || ((can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)) && (trade_in(Rage) || statue_skip || Paralysis || trigger_skip))"
       }
     ]
@@ -3939,15 +3753,7 @@
     "name": "Portoa Pawn Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Portoa Pawn Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Portoa",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Portoa Waterway - Across River": {
@@ -4014,7 +3820,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "can_reach(Mesia) && can_reach(Asina's Chambers) && buy_healing && (Shell Flute || !vanilla_dolphin)"
       }
     ]
@@ -4047,7 +3853,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": true,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "Shell Flute && activated_shell_flute"
       }
     ]
@@ -4073,9 +3879,9 @@
         "rom_id": 298,
         "ap_id_offset": 31,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Power Ring Basement)"
       }
     ]
@@ -4111,9 +3917,9 @@
         "rom_id": 364,
         "ap_id_offset": 87,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -4129,9 +3935,9 @@
         "rom_id": 284,
         "ap_id_offset": 17,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -4141,7 +3947,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "TRUE"
       }
     ]
@@ -4172,9 +3978,9 @@
         "rom_id": 265,
         "ap_id_offset": 9,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "trade_in(Rage)"
       }
     ]
@@ -4227,9 +4033,9 @@
         "rom_id": 291,
         "ap_id_offset": 24,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_fight(Sabera 2)"
       }
     ]
@@ -4262,9 +4068,9 @@
         "rom_id": 349,
         "ap_id_offset": 73,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Water) || Flight"
       },
       {
@@ -4272,9 +4078,9 @@
         "rom_id": 354,
         "ap_id_offset": 78,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Sabera Item)"
       },
       {
@@ -4282,9 +4088,9 @@
         "rom_id": 358,
         "ap_id_offset": 82,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Water) || Flight"
       }
     ]
@@ -4342,9 +4148,9 @@
         "rom_id": 289,
         "ap_id_offset": 22,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -4352,9 +4158,9 @@
         "rom_id": 353,
         "ap_id_offset": 77,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_fight(Vampire 2)"
       }
     ]
@@ -4381,9 +4187,9 @@
         "rom_id": 312,
         "ap_id_offset": 45,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_fight(Sabera 1)"
       },
       {
@@ -4391,9 +4197,9 @@
         "rom_id": 341,
         "ap_id_offset": 66,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
     ]
@@ -4495,45 +4301,21 @@
     "name": "Sahara Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Sahara Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Sahara",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Sahara Item Shop": {
     "name": "Sahara Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Sahara Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Sahara",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Sahara Pawn Shop": {
     "name": "Sahara Pawn Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Sahara Pawn Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Sahara",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Sealed Cave - Back": {
@@ -4565,9 +4347,9 @@
         "rom_id": 285,
         "ap_id_offset": 18,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -4575,9 +4357,9 @@
         "rom_id": 302,
         "ap_id_offset": 35,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Sword"
       }
     ]
@@ -4636,9 +4418,9 @@
         "rom_id": 261,
         "ap_id_offset": 5,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -4646,9 +4428,9 @@
         "rom_id": 286,
         "ap_id_offset": 19,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Sealed Cave)"
       },
       {
@@ -4656,9 +4438,9 @@
         "rom_id": 292,
         "ap_id_offset": 25,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -4666,9 +4448,9 @@
         "rom_id": 336,
         "ap_id_offset": 62,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -4753,15 +4535,7 @@
     "name": "Shyron Armor Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Shyron Armor Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Shyron",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Shyron Hospital": {
@@ -4785,30 +4559,14 @@
     "name": "Shyron Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Shyron Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Shyron",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Shyron Item Shop": {
     "name": "Shyron Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Shyron Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Shyron",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Shyron Temple": {
@@ -4832,9 +4590,9 @@
         "rom_id": 267,
         "ap_id_offset": 11,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder"
       },
       {
@@ -4844,7 +4602,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "TRUE"
       }
     ]
@@ -4894,39 +4652,39 @@
         "rom_id": 276,
         "ap_id_offset": 15,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight"
       },
       {
         "name": "Stxy Left North Mimic",
         "rom_id": 373,
         "ap_id_offset": 96,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
         "name": "Stxy Right North Mimic",
         "rom_id": 374,
         "ap_id_offset": 97,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight"
       },
       {
         "name": "Stxy Right South Mimic",
         "rom_id": 375,
         "ap_id_offset": 98,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight"
       }
     ]
@@ -4976,9 +4734,9 @@
         "rom_id": 259,
         "ap_id_offset": 3,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
@@ -4986,9 +4744,9 @@
         "rom_id": 343,
         "ap_id_offset": 68,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -5041,9 +4799,9 @@
         "rom_id": 263,
         "ap_id_offset": 7,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "Insect Flute && (Gas Mask || Hazmat Suit) && can_fight(Giant Insect)"
       }
     ]
@@ -5149,15 +4907,7 @@
     "name": "Swan Armor Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Swan Armor Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Swan",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Swan Dance Hall": {
@@ -5182,8 +4932,8 @@
         "ap_id_offset": 60,
         "unique": true,
         "lossy": true,
-        "prevent_loss": true,
-        "broken": false,
+        "prevent_loss": false,
+        "is_chest": false,
         "pseudologic": "Paralysis && can_reach(Swan Shed) && can_reach(Swan Pub) && trade_in(Tag Kensu)"
       }
     ]
@@ -5192,45 +4942,21 @@
     "name": "Swan Inn",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Swan Inn - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Swan",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Swan Item Shop": {
     "name": "Swan Item Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Swan Item Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Swan",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Swan Pawn Shop": {
     "name": "Swan Pawn Shop",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "Swan Pawn Shop - Exit",
-        "entrance_type": 8,
-        "vanilla_target": "Swan",
-        "pseudologic": "TRUE",
-        "notes": "Probably unnecessary"
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Swan Pub": {
@@ -5290,7 +5016,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "(Sword && !charge_only) || (buy_warp && (can_reach(Leaf) || can_reach(Amazones) || can_reach(Sahara))"
       }
     ]
@@ -5324,18 +5050,7 @@
     "wildwarpIds": [],
     "notes": "",
     "entrances": [],
-    "locations": [
-      {
-        "name": "Mesia In Tower",
-        "rom_id": 260,
-        "ap_id_offset": 4,
-        "unique": true,
-        "lossy": true,
-        "prevent_loss": false,
-        "broken": false,
-        "pseudologic": "TRUE"
-      }
-    ]
+    "locations": []
   },
   "Waterfall Cave - After Statues": {
     "name": "Waterfall Cave - After Statues",
@@ -5382,9 +5097,9 @@
         "rom_id": 258,
         "ap_id_offset": 2,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Waterfall Cave)"
       },
       {
@@ -5392,9 +5107,9 @@
         "rom_id": 272,
         "ap_id_offset": 13,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       },
       {
@@ -5404,7 +5119,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "Flute of Lime"
       }
     ]
@@ -5460,10 +5175,10 @@
         "name": "Waterfall Cave Front Mimic",
         "rom_id": 370,
         "ap_id_offset": 93,
-        "unique": true,
-        "lossy": true,
+        "unique": false,
+        "lossy": false,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": true,
         "pseudologic": "can_break_wall(Waterfall Cave)"
       }
     ]
@@ -5603,20 +5318,6 @@
         "notes": ""
       },
       {
-        "name": "Wind Valley - East Cave",
-        "entrance_type": 5,
-        "vanilla_target": "GBC Cave - Main",
-        "pseudologic": "TRUE",
-        "notes": "Only exists if Vm and V!m are both off."
-      },
-      {
-        "name": "Wind Valley - East",
-        "entrance_type": 3,
-        "vanilla_target": "Lime Valley",
-        "pseudologic": "TRUE",
-        "notes": "Only exists if V!m is on."
-      },
-      {
         "name": "Wind Valley - North East Cave",
         "entrance_type": 5,
         "vanilla_target": "Windmill Cave",
@@ -5635,7 +5336,7 @@
         "entrance_type": 5,
         "vanilla_target": "Zebu's Cave - Front",
         "pseudologic": "TRUE",
-        "notes": "Only exists if Vm and V!m are both off."
+        "notes": ""
       }
     ],
     "locations": [
@@ -5646,7 +5347,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "can_reach(Windmill) && Windmill Key"
       }
     ]
@@ -5698,7 +5399,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "can_reach(Leaf Elder House) && can_reach(Zebu Student's House) && can_reach(Zebu's Cave - Front) && Alarm Flute"
       }
     ]
@@ -5748,7 +5449,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "TRUE"
       }
     ]
@@ -5832,6 +5533,20 @@
     ],
     "locations": []
   },
+  "Buy Healing": {
+    "name": "Buy Healing",
+    "wildwarpIds": [],
+    "notes": "fake region",
+    "entrances": [],
+    "locations": []
+  },
+  "Buy Warp Boots": {
+    "name": "Buy Warp Boots",
+    "wildwarpIds": [],
+    "notes": "fake region",
+    "entrances": [],
+    "locations": []
+  },
   "Menu": {
     "name": "Menu",
     "wildwarpIds": [],
@@ -5853,7 +5568,7 @@
         "unique": true,
         "lossy": true,
         "prevent_loss": false,
-        "broken": false,
+        "is_chest": false,
         "pseudologic": "Broken Statue && Glowing Lamp"
       }
     ]

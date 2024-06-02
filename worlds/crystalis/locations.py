@@ -11,14 +11,6 @@ class CrystalisLocation(Location):
         self.event = code is None
 
 
-def aggregate_location_data_from_regions(regions: Dict[str, CrystalisRegionData]) -> List[CrystalisLocationData]:
-    location_data_list: List[CrystalisLocationData] = []
-    for region_data in regions.values():
-        for location in region_data.locations:
-            location_data_list.append(CrystalisLocationData(**location))
-    return location_data_list
-
-
 def create_location_from_location_data(player: int, location_data: CrystalisLocationData, region: Region) \
         -> CrystalisLocation:
     return CrystalisLocation(player,
