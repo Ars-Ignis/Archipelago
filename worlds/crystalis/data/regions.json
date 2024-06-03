@@ -1194,50 +1194,16 @@
         "vanilla_target": "Fog Lamp Cave - Front",
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
         "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Fog Lamp Cave - Items",
+        "pseudologic": "can_break_wall(Fog Lamp Cave)",
+        "notes": ""
       }
     ],
-    "locations": [
-      {
-        "name": "Fog Lamp Cave Front Chest",
-        "rom_id": 287,
-        "ap_id_offset": 20,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Fog Lamp Cave)"
-      },
-      {
-        "name": "Fog Lamp Cave Back Chest",
-        "rom_id": 309,
-        "ap_id_offset": 42,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Fog Lamp Cave)"
-      },
-      {
-        "name": "Fog Lamp Cave Middle North Mimic",
-        "rom_id": 368,
-        "ap_id_offset": 91,
-        "unique": false,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Fog Lamp Cave)"
-      },
-      {
-        "name": "Fog Lamp Cave Middle Southwest Mimic",
-        "rom_id": 369,
-        "ap_id_offset": 92,
-        "unique": false,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Fog Lamp Cave)"
-      }
-    ]
+    "locations": []
   },
   "Fog Lamp Cave - Front": {
     "name": "Fog Lamp Cave - Front",
@@ -1249,7 +1215,7 @@
       {
         "name": "Fog Lamp Cave - Exit",
         "entrance_type": 6,
-        "vanilla_target": "Waterfall Valley - North River Cave",
+        "vanilla_target": "Waterfall Valley - By North River",
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1262,6 +1228,54 @@
       }
     ],
     "locations": []
+  },
+  "Fog Lamp Cave - Items": {
+    "name": "Fog Lamp Cave - Items",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Fog Lamp Cave Front Chest",
+        "rom_id": 287,
+        "ap_id_offset": 20,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Fog Lamp Cave Back Chest",
+        "rom_id": 309,
+        "ap_id_offset": 42,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Fog Lamp Cave Middle North Mimic",
+        "rom_id": 368,
+        "ap_id_offset": 91,
+        "unique": false,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Fog Lamp Cave Middle Southwest Mimic",
+        "rom_id": 369,
+        "ap_id_offset": 92,
+        "unique": false,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      }
+    ]
   },
   "Fortune Teller - Back": {
     "name": "Fortune Teller - Back",
@@ -2002,7 +2016,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Kirisa Plant Cave - Back",
+        "vanilla_target": "Kirisa Plant Cave - Middle",
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
         "notes": ""
       },
@@ -2026,7 +2040,7 @@
       {
         "name": "Kirisa Plant Cave - Exit",
         "entrance_type": 6,
-        "vanilla_target": "Waterfall Valley - South River Cave",
+        "vanilla_target": "Waterfall Valley - By South River",
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2327,7 +2341,7 @@
       {
         "name": "Lime Valley - Up",
         "entrance_type": 1,
-        "vanilla_target": "Rage",
+        "vanilla_target": "Rage - South",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2503,7 +2517,7 @@
       {
         "name": "Mesia - Exit",
         "entrance_type": 6,
-        "vanilla_target": "Rage",
+        "vanilla_target": "Rage - North",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3063,14 +3077,14 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Boss",
-        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "pseudologic": "Flight || trigger_skip",
         "notes": ""
       },
       {
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Right Jail Cell",
-        "pseudologic": "Flight || trigger_skip",
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
     ],
@@ -3080,15 +3094,7 @@
     "name": "Mt. Sabre West - Final",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Mt. Sabre West - Upper",
-        "pseudologic": "can_break_wall(Mt. Sabre West)",
-        "notes": ""
-      }
-    ],
+    "entrances": [],
     "locations": [
       {
         "name": "Mt Sabre West Tornel",
@@ -3147,21 +3153,6 @@
       }
     ]
   },
-  "Mt. Sabre West - Ledge Chest": {
-    "name": "Mt. Sabre West - Ledge Chest",
-    "wildwarpIds": [],
-    "notes": "",
-    "entrances": [
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Mt. Sabre West - Main",
-        "pseudologic": "can_break_wall(Mt. Sabre West)",
-        "notes": ""
-      }
-    ],
-    "locations": []
-  },
   "Mt. Sabre West - Main": {
     "name": "Mt. Sabre West - Main",
     "wildwarpIds": [
@@ -3196,13 +3187,6 @@
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Upper",
         "pseudologic": "Flight",
-        "notes": ""
-      },
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Mt. Sabre West - Ledge Chest",
-        "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       },
       {
@@ -3952,8 +3936,30 @@
       }
     ]
   },
-  "Rage": {
-    "name": "Rage",
+  "Rage - North": {
+    "name": "Rage - North",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Rage - South",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Rage Tree",
+        "entrance_type": 5,
+        "vanilla_target": "Mesia",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Rage - South": {
+    "name": "Rage - South",
     "wildwarpIds": [],
     "notes": "",
     "entrances": [
@@ -3965,9 +3971,9 @@
         "notes": ""
       },
       {
-        "name": "Rage Tree",
-        "entrance_type": 5,
-        "vanilla_target": "Mesia",
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Rage - North",
         "pseudologic": "(trade_in(Rage) || rage_skip*) && (Flight || can_break_wall(Water))",
         "notes": "\"Actually forcing Rage skip into logic might be tough? Need to note entrance to Rage in output file"
       }
@@ -5191,7 +5197,7 @@
     "notes": "",
     "entrances": [
       {
-        "name": "Mt. Sabre North Back Entrance",
+        "name": "Waterfall Hilltop Cave",
         "entrance_type": 5,
         "vanilla_target": "Mt. Sabre North - Final",
         "pseudologic": "Prison Key",
@@ -5245,22 +5251,22 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Waterfall Valley - North River Cave",
+        "vanilla_target": "Waterfall Valley - By North River",
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Waterfall Valley - South River Cave",
+        "vanilla_target": "Waterfall Valley - By South River",
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
     ],
     "locations": []
   },
-  "Waterfall Valley - North River Cave": {
-    "name": "Waterfall Valley - North River Cave",
+  "Waterfall Valley - By North River": {
+    "name": "Waterfall Valley - By North River",
     "wildwarpIds": [],
     "notes": "",
     "entrances": [
@@ -5281,8 +5287,8 @@
     ],
     "locations": []
   },
-  "Waterfall Valley - South River Cave": {
-    "name": "Waterfall Valley - South River Cave",
+  "Waterfall Valley - By South River": {
+    "name": "Waterfall Valley - By South River",
     "wildwarpIds": [],
     "notes": "",
     "entrances": [
