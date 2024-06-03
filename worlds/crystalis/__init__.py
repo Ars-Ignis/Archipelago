@@ -9,7 +9,7 @@ from .locations import CrystalisLocation, create_location_from_location_data
 from .regions import regions_data
 from .options import CrystalisOptions
 from .types import *
-#from .logic import set_rules
+from .logic import set_rules
 from worlds.AutoWorld import World, WebWorld
 
 
@@ -127,8 +127,7 @@ class CrystalisWorld(World):
         if len(total_inventory) > 0:
             #if we somehow didn't place every item, log a warning
             logging.warning("Filled all shops without placing all stock!")
-        #TODO remove this print statement after satisfied with the results
-        print(shuffled_shops)
+            logging.warning(f"Shop inventories: {str(shuffled_shops)}")
         return shuffled_shops
 
     def generate_early(self) -> None:
@@ -260,6 +259,15 @@ class CrystalisWorld(World):
             wind_valley.connect(lime_valley, "Wind Valley - East")
             lime_valley.connect(wind_valley, "Lime Valley - West")
         #no new entrances needed for the third option
+        #add shop "entrances" to Buy Healing and Buy Warp Boots "regions"
+        buy_healing_region = local_region_cache["Buy Healing"]
+        buy_warp_boots_region = local_region_cache["Buy Warp Boots"]
+        for shop, inventory in self.shuffle_data.shop_inventories.items():
+            shop_region = local_region_cache[shop]
+            if "Medical Herb" in inventory:
+                shop_region.connect(buy_healing_region, "Buy Healing: " + shop)
+            if "Warp Boots" in inventory:
+                shop_region.connect(buy_warp_boots_region, "Buy Warp Boots: " + shop)
         from Utils import visualize_regions
         visualize_regions(self.multiworld.get_region("Menu", self.player), "my_world.puml")
 
@@ -280,3 +288,7 @@ class CrystalisWorld(World):
             #These settings add two locations to Mezame shrine
             self.multiworld.itempool.append(self.create_item("Medical Herb"))
             self.multiworld.itempool.append(self.create_item("Medical Herb"))
+
+
+    def set_rules(self) -> None:
+        set_rules(self.multiworld, self.player, self.options, self.shuffle_data)

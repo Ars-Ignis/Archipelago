@@ -423,6 +423,7 @@ class CrystalisOptions(PerGameCommonOptions):
     statue_glitch: StatueGlitch
     mt_sabre_skip: MtSabreSkip
     statue_gauntlet_skip: StatueGauntletSkip
+    sword_charge_glitch: SwordChargeGlitch
     trigger_skip: TriggerSkip
     rage_skip: RageSkip
     randomize_background_music: RandomizeBackgroundMusic
