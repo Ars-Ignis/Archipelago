@@ -295,7 +295,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Portoa Waterway - Across River",
+        "vanilla_target": "Portoa Waterway - Main",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -983,7 +983,7 @@
       {
         "name": "Evans' Room - Exit",
         "entrance_type": 8,
-        "vanilla_target": "Portoa Palace",
+        "vanilla_target": "Portoa Palace - Foyer",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1281,15 +1281,7 @@
     "name": "Fortune Teller - Back",
     "wildwarpIds": [],
     "notes": "",
-    "entrances": [
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Portoa Waterway - Across River",
-        "pseudologic": "TRUE",
-        "notes": ""
-      }
-    ],
+    "entrances": [],
     "locations": []
   },
   "Fortune Teller - Front": {
@@ -1920,7 +1912,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "TRUE"
       }
     ]
@@ -1979,7 +1971,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "can_fight(Kelbesque 2)"
       }
     ]
@@ -2376,7 +2368,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "can_fight(Mado 2)"
       }
     ]
@@ -2541,9 +2533,9 @@
     ],
     "locations": [
       {
-        "name": "Mezame Left Chest",
-        "rom_id": 329,
-        "ap_id_offset": 104,
+        "name": "Mezame Right Chest",
+        "rom_id": 305,
+        "ap_id_offset": 105,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -2551,9 +2543,9 @@
         "pseudologic": "TRUE"
       },
       {
-        "name": "Mezame Right Chest",
-        "rom_id": 305,
-        "ap_id_offset": 105,
+        "name": "Mezame Left Chest",
+        "rom_id": 329,
+        "ap_id_offset": 104,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -3004,7 +2996,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "can_fight(Kelbesque 1)"
       },
       {
@@ -3656,7 +3648,7 @@
       {
         "name": "Portoa - Palace",
         "entrance_type": 9,
-        "vanilla_target": "Portoa Palace",
+        "vanilla_target": "Portoa Palace - Foyer",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3684,8 +3676,8 @@
     "entrances": [],
     "locations": []
   },
-  "Portoa Palace": {
-    "name": "Portoa Palace",
+  "Portoa Palace - Foyer": {
+    "name": "Portoa Palace - Foyer",
     "wildwarpIds": [
       215
     ],
@@ -3713,11 +3705,35 @@
         "notes": ""
       },
       {
-        "name": "Portoa Palace Throne Room Secret",
-        "entrance_type": 5,
-        "vanilla_target": "Portoa Waterway - Main",
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Palace - Throne Room",
+        "pseudologic": "statue_skip || trigger_skip || can_reach(Mesia) || Paralysis || can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Portoa Palace - Throne Room": {
+    "name": "Portoa Palace - Throne Room",
+    "wildwarpIds": [
+      223
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Palace - Foyer",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Palace - Gift Trigger",
         "pseudologic": "Paralysis || statue_skip || can_reach(Mesia) || trigger_skip",
-        "notes": "Double-check the trigger skip path"
+        "notes": ""
       }
     ],
     "locations": [
@@ -3733,40 +3749,33 @@
       }
     ]
   },
-  "Portoa Pawn Shop": {
-    "name": "Portoa Pawn Shop",
-    "wildwarpIds": [],
-    "notes": "",
-    "entrances": [],
-    "locations": []
-  },
-  "Portoa Waterway - Across River": {
-    "name": "Portoa Waterway - Across River",
+  "Portoa Palace - Gift Trigger": {
+    "name": "Portoa Palace - Gift Trigger",
     "wildwarpIds": [],
     "notes": "",
     "entrances": [
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Portoa Waterway - Main",
-        "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
-      },
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Fortune Teller - Back",
+        "vanilla_target": "Portoa Palace - Throne Room",
         "pseudologic": "TRUE",
         "notes": ""
       },
       {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Asina's Chambers",
+        "name": "Portoa Palace Throne Room Secret",
+        "entrance_type": 5,
+        "vanilla_target": "Portoa Waterway - Main",
         "pseudologic": "TRUE",
         "notes": ""
       }
     ],
+    "locations": []
+  },
+  "Portoa Pawn Shop": {
+    "name": "Portoa Pawn Shop",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
     "locations": []
   },
   "Portoa Waterway - Main": {
@@ -3777,14 +3786,21 @@
       {
         "name": "Portoa Waterway - Exit",
         "entrance_type": 6,
-        "vanilla_target": "Portoa Palace",
+        "vanilla_target": "Portoa Palace - Gift Trigger",
         "pseudologic": "TRUE",
         "notes": ""
       },
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Portoa Waterway - Across River",
+        "vanilla_target": "Asina's Chambers",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Fortune Teller - Back",
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -3792,7 +3808,7 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Portoa Waterway - Water",
-        "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
+        "pseudologic": "Flight || (can_use_shell_flute)",
         "notes": "can_use_shell_flute is complicated; might be worth turning into an event"
       }
     ],
@@ -3921,7 +3937,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "TRUE"
       },
       {
@@ -4041,7 +4057,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "can_fight(Sabera 2)"
       }
     ]
@@ -4166,7 +4182,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "can_fight(Vampire 2)"
       }
     ]
@@ -4195,7 +4211,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "can_fight(Sabera 1)"
       },
       {
@@ -4365,7 +4381,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "Sword"
       }
     ]
@@ -4471,7 +4487,7 @@
       {
         "name": "Servant Chambers - Exit",
         "entrance_type": 8,
-        "vanilla_target": "Portoa Palace",
+        "vanilla_target": "Portoa Palace - Foyer",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4598,7 +4614,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder"
       },
       {
@@ -4807,7 +4823,7 @@
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
-        "is_chest": true,
+        "is_chest": false,
         "pseudologic": "Insect Flute && (Gas Mask || Hazmat Suit) && can_fight(Giant Insect)"
       }
     ]
