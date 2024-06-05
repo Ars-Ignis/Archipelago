@@ -1,6 +1,6 @@
 import logging
 
-from BaseClasses import MultiWorld, CollectionState, Entrance, ItemClassification
+from BaseClasses import MultiWorld, CollectionState, Entrance, ItemClassification, Region
 from .options import CrystalisOptions
 from .types import CrystalisShuffleData
 from .locations import CrystalisLocation
@@ -69,15 +69,10 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
     buy_warp_boots_location.place_locked_item(CrystalisItem("Buy Warp Boots", ItemClassification.progression, None, \
                                                             player))
     buy_warp_boots_region.locations.append(buy_warp_boots_location)
-    menu_region = multiworld.get_region("Menu", player)
-    if not options.vanilla_dolphin:
-        activate_shell_flute_location = CrystalisLocation(player, "Activate Shell Flute", None, menu_region)
-        activate_shell_flute_location.place_locked_item(CrystalisItem("Active Shell Flute", \
-                                                                      ItemClassification.progression, None, player))
-        set_rule(activate_shell_flute_location, lambda state: state.has(shuffle_data.key_item_names["Shell Flute"], \
-                                                                        player))
-        menu_region.locations.append(activate_shell_flute_location)
-        #TODO friggin' vanilla dolphin, blech
+    mesia_region = multiworld.get_region("Mesia", player)
+    mesia_location = CrystalisLocation(player, "Mesia", None, mesia_region)
+    mesia_location.place_locked_item(CrystalisItem("Mesia's Message", ItemClassification.progression, None, player))
+    mesia_region.locations.append(mesia_location)
 
     #Need a sword to be guaranteed to be able to buy things
     #put rules on entrances instead of events because more efficient? Maybe? unsure, should benchmark
@@ -326,7 +321,6 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
         statue_guards = multiworld.get_entrance("Waterfall Cave - Before Statues -> Waterfall Cave - After Statues", \
                                                 player)
         set_rule(statue_guards, lambda state: state.has(shuffle_data.key_item_names["Flute of Lime"], player))
-        set_two_way_logic(statue_guards)
     water_cave_back_wall = multiworld.get_entrance("Waterfall Cave - After Statues -> Waterfall Cave - Back", player)
     water_cave_back_wall.access_rule = can_break_waterfall_cave_walls
     set_two_way_logic(water_cave_back_wall)
@@ -365,3 +359,67 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
         add_rule(rage_river, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player))
     rage_reward = multiworld.get_location("Rage", player)
     set_rule(rage_reward, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player))
+
+    #Portoa Castle
+    teller_front = multiworld.get_region("Fortune Teller - Front", player)
+    teller_back = multiworld.get_region("Fortune Teller - Back", player)
+    gift_trigger = multiworld.get_region("Portoa Palace - Gift Trigger", player)
+    first_guard = multiworld.get_entrance("Portoa Palace - Foyer -> Portoa Palace - Throne Room", player)
+    second_guard = multiworld.get_entrance("Portoa Palace - Throne Room -> Portoa Palace - Gift Trigger", player)
+    queen_gift = multiworld.get_location("Portoa Queen", player)
+    set_rule(queen_gift, lambda state: state.can_reach(teller_front) or state.can_reach(teller_back))
+    add_rule(queen_gift, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player) or
+                                       state.can_reach(gift_trigger), "and")
+    add_rule(queen_gift, lambda state: state.has("Mesia's Message", player), "or")
+    if options.trigger_skip != options.trigger_skip.option_in_logic and \
+       options.statue_glitch != options.trigger_skip.option_in_logic:
+        set_rule(first_guard, lambda state: state.has("Paralysis", player) or
+                                            state.can_reach(teller_front) or
+                                            state.can_reach(teller_back) or
+                                            state.has("Mesia's Message", player))
+        set_rule(second_guard, lambda state: state.has("Paralysis", player) or state.has("Mesia's Message", player))
+        multiworld.register_indirect_condition(teller_front, first_guard)
+        multiworld.register_indirect_condition(teller_back, first_guard)
+
+    #Portoa Waterway
+    def can_cross_ocean(state: CollectionState) -> bool:
+        return state.has("Flight", player) or state.has("Active Shell Flute", player)
+    waterway_top_river = multiworld.get_entrance("Portoa Waterway - Main -> Asina's Chambers", player)
+    waterway_top_river.access_rule = can_cross_rivers
+    waterway_bottom_river = multiworld.get_entrance("Portoa Waterway - Main -> Fortune Teller - Back", player)
+    waterway_bottom_river.access_rule = can_cross_rivers
+    waterway_shore = multiworld.get_entrance("Portoa Waterway - Main -> Portoa Waterway - Water", player)
+    waterway_shore.access_rule = can_cross_ocean
+    asina = multiworld.get_location("Asina In Back Room", player)
+    set_rule(asina, lambda state: state.has("Mesia's Message", player))
+    dolphin = multiworld.get_location("Injured Dolphin", player)
+    set_rule(dolphin, lambda state: state.can_reach(asina) and state.has("Buy Healing", player))
+    underwater_item = multiworld.get_location("Underground Channel Underwater Chest", player)
+    set_rule(underwater_item, lambda state: state.has("Active Shell Flute", player))
+
+    #Fisherman, Beach House, and Shell Flute stuff
+    boat = multiworld.get_entrance("Fisherman House Area -> Angry Sea - Beach House Area", player)
+    set_rule(boat, lambda state: state.has("Boat Access", player))
+    fisherman_house = multiworld.get_region("Fisherman House", player)
+    boat_access_location = CrystalisLocation(player, "Fisherman", None, fisherman_house)
+    boat_access_location.place_locked_item(CrystalisItem("Boat Access", ItemClassification.progression, None, player))
+    set_rule(boat_access_location, lambda state: state.has(shuffle_data.trade_in_map["Fisherman"], player))
+    fisherman_house.locations.append(boat_access_location)
+    region_for_flute_activation: Region
+    shell_flute_rule: Callable[[CollectionState], bool]
+    if not options.vanilla_dolphin:
+        region_for_flute_activation = multiworld.get_region("Menu", player)
+        shell_flute_rule = lambda state: state.has(shuffle_data.key_item_names["Shell Flute"], player)
+        beach_kensu_location = multiworld.get_location("Kensu In Cabin", player)
+        set_rule(beach_kensu_location, lambda state: state.has("Boat Access", player))
+    else:
+        region_for_flute_activation = multiworld.get_region("Beach House", player)
+        shell_flute_rule = lambda state: state.has(shuffle_data.key_item_names["Shell Flute"], player) and \
+                                         state.has("Boat Access", player)
+        add_rule(boat_access_location, lambda state: state.can_reach(dolphin), "and")
+    activate_shell_flute_location = CrystalisLocation(player, "Activate Shell Flute", None, region_for_flute_activation)
+    activate_shell_flute_location.place_locked_item(CrystalisItem("Active Shell Flute", \
+                                                                      ItemClassification.progression, None, player))
+    activate_shell_flute_location.access_rule = shell_flute_rule
+    region_for_flute_activation.locations.append(activate_shell_flute_location)
+
