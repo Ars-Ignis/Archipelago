@@ -264,16 +264,6 @@
     ],
     "locations": [
       {
-        "name": "Aryllis",
-        "rom_id": 318,
-        "ap_id_offset": 51,
-        "unique": true,
-        "lossy": true,
-        "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "Change && trade_in(Aryllis)"
-      },
-      {
         "name": "Aryllis Basement Chest",
         "rom_id": 266,
         "ap_id_offset": 10,
@@ -282,6 +272,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "TRUE"
+      },
+      {
+        "name": "Aryllis",
+        "rom_id": 318,
+        "ap_id_offset": 51,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "is_chest": false,
+        "pseudologic": "Change && trade_in(Aryllis)"
       }
     ]
   },
@@ -523,6 +523,20 @@
     ],
     "locations": []
   },
+  "Buy Healing": {
+    "name": "Buy Healing",
+    "wildwarpIds": [],
+    "notes": "fake region",
+    "entrances": [],
+    "locations": []
+  },
+  "Buy Warp Boots": {
+    "name": "Buy Warp Boots",
+    "wildwarpIds": [],
+    "notes": "fake region",
+    "entrances": [],
+    "locations": []
+  },
   "Clark's Hideout": {
     "name": "Clark's Hideout",
     "wildwarpIds": [
@@ -644,6 +658,28 @@
     ],
     "locations": []
   },
+  "Crypt - Back": {
+    "name": "Crypt - Back",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Crypt - Middle",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Tower",
+        "pseudologic": "can_fight(Draygon 2)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
   "Crypt - Front": {
     "name": "Crypt - Front",
     "wildwarpIds": [
@@ -739,28 +775,6 @@
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
     ]
-  },
-  "Crypt - Back": {
-    "name": "Crypt - Back",
-    "wildwarpIds": [],
-    "notes": "",
-    "entrances": [
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Crypt - Middle",
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
-      },
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Tower",
-        "pseudologic": "can_fight(Draygon 2)",
-        "notes": ""
-      }
-    ],
-    "locations": []
   },
   "Deo Valley": {
     "name": "Deo Valley",
@@ -1236,9 +1250,9 @@
     "entrances": [],
     "locations": [
       {
-        "name": "Fog Lamp Cave Back Chest",
-        "rom_id": 309,
-        "ap_id_offset": 42,
+        "name": "Fog Lamp Cave Front Chest",
+        "rom_id": 287,
+        "ap_id_offset": 20,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -1246,9 +1260,9 @@
         "pseudologic": "TRUE"
       },
       {
-        "name": "Fog Lamp Cave Front Chest",
-        "rom_id": 287,
-        "ap_id_offset": 20,
+        "name": "Fog Lamp Cave Back Chest",
+        "rom_id": 309,
+        "ap_id_offset": 42,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -1746,28 +1760,6 @@
     ],
     "locations": []
   },
-  "Karmine's Arena": {
-    "name": "Karmine's Arena",
-    "wildwarpIds": [],
-    "notes": "",
-    "entrances": [
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Karmine's Floor - Pre-Boss Gauntlet",
-        "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
-        "notes": ""
-      },
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Karmine's Floor - Post Boss",
-        "pseudologic": "can_fight(Karmine)",
-        "notes": "Reverse connection unnecessary"
-      }
-    ],
-    "locations": []
-  },
   "Karmine's Floor - Back": {
     "name": "Karmine's Floor - Back",
     "wildwarpIds": [
@@ -1796,59 +1788,16 @@
         "vanilla_target": "Karmine's Floor - Pre-Boss Gauntlet",
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Floor - Item Stash",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
       }
     ],
     "locations": [
-      {
-        "name": "Karmine Basement Lower Left Chest",
-        "rom_id": 366,
-        "ap_id_offset": 89,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
-      },
-      {
-        "name": "Karmine Basement Lower Middle Chest",
-        "rom_id": 344,
-        "ap_id_offset": 69,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
-      },
-      {
-        "name": "Karmine Basement Lower Right Mimic",
-        "rom_id": 379,
-        "ap_id_offset": 102,
-        "unique": false,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
-      },
-      {
-        "name": "Karmine Basement Upper Middle Mimic",
-        "rom_id": 377,
-        "ap_id_offset": 100,
-        "unique": false,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
-      },
-      {
-        "name": "Karmine Basement Upper Right Mimic",
-        "rom_id": 378,
-        "ap_id_offset": 101,
-        "unique": false,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
-      },
       {
         "name": "Slimed Kensu",
         "rom_id": 328,
@@ -1860,6 +1809,28 @@
         "pseudologic": "trade_in(Slime Kensu)"
       }
     ]
+  },
+  "Karmine's Floor - Boss Arena": {
+    "name": "Karmine's Floor - Boss Arena",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Floor - Pre-Boss Gauntlet",
+        "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Karmine's Floor - Post Boss",
+        "pseudologic": "can_fight(Karmine)",
+        "notes": "Reverse connection unnecessary"
+      }
+    ],
+    "locations": []
   },
   "Karmine's Floor - Front": {
     "name": "Karmine's Floor - Front",
@@ -1889,22 +1860,70 @@
     ],
     "locations": []
   },
+  "Karmine's Floor - Item Stash": {
+    "name": "Karmine's Floor - Item Stash",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Karmine Basement Lower Middle Chest",
+        "rom_id": 344,
+        "ap_id_offset": 69,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Karmine Basement Lower Left Chest",
+        "rom_id": 366,
+        "ap_id_offset": 89,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Karmine Basement Upper Middle Mimic",
+        "rom_id": 377,
+        "ap_id_offset": 100,
+        "unique": false,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Karmine Basement Upper Right Mimic",
+        "rom_id": 378,
+        "ap_id_offset": 101,
+        "unique": false,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Karmine Basement Lower Right Mimic",
+        "rom_id": 379,
+        "ap_id_offset": 102,
+        "unique": false,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
   "Karmine's Floor - Post Boss": {
     "name": "Karmine's Floor - Post Boss",
     "wildwarpIds": [],
     "notes": "",
     "entrances": [],
     "locations": [
-      {
-        "name": "Karmine",
-        "rom_id": 317,
-        "ap_id_offset": 50,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "TRUE"
-      },
       {
         "name": "Storm Bracelet Chest",
         "rom_id": 268,
@@ -1913,6 +1932,16 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Karmine",
+        "rom_id": 317,
+        "ap_id_offset": 50,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": false,
         "pseudologic": "TRUE"
       }
     ]
@@ -1934,7 +1963,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Karmine's Arena",
+        "vanilla_target": "Karmine's Floor - Boss Arena",
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       }
@@ -1951,7 +1980,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Kelbesque's Floor - Front",
+        "vanilla_target": "Kelbesque's Floor - Boss Arena",
         "pseudologic": "can_fight(Kelbesque 2)",
         "notes": ""
       },
@@ -1959,6 +1988,28 @@
         "name": "Kelbesque's Floor - Exit",
         "entrance_type": 15,
         "vanilla_target": "Sabera's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Kelbesque's Floor - Boss Arena": {
+    "name": "Kelbesque's Floor - Boss Arena",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Kelbesque's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Kelbesque's Floor - Back",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1972,7 +2023,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
-        "pseudologic": "can_fight(Kelbesque 2)"
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -1993,7 +2044,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Kelbesque's Floor - Back",
+        "vanilla_target": "Kelbesque's Floor - Boss Arena",
         "pseudologic": "can_fight(Kelbesque 2)",
         "notes": ""
       }
@@ -2348,7 +2399,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Mado's Floor - Upstairs Right",
+        "vanilla_target": "Mado's Floor - Boss Arena",
         "pseudologic": "can_fight(Mado 2)",
         "notes": ""
       },
@@ -2356,6 +2407,28 @@
         "name": "Mado's Floor - Exit",
         "entrance_type": 15,
         "vanilla_target": "Karmine's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Mado's Floor - Boss Arena": {
+    "name": "Mado's Floor - Boss Arena",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mado's Floor - Upstairs Right",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mado's Floor - Back",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2369,7 +2442,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
-        "pseudologic": "can_fight(Mado 2)"
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -2400,8 +2473,22 @@
         "vanilla_target": "Mado's Floor - Upstairs Right",
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mado's Floor - Spike Items",
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "notes": ""
       }
     ],
+    "locations": []
+  },
+  "Mado's Floor - Spike Items": {
+    "name": "Mado's Floor - Spike Items",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
     "locations": [
       {
         "name": "Fortress Mado Lower Center North Chest",
@@ -2411,7 +2498,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+        "pseudologic": "TRUE"
       },
       {
         "name": "Fortress Mado Lower Southeast Chest",
@@ -2421,7 +2508,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -2442,16 +2529,6 @@
     ],
     "locations": [
       {
-        "name": "Fortress Mado Upper Behind Wall Chest",
-        "rom_id": 363,
-        "ap_id_offset": 86,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Mado)"
-      },
-      {
         "name": "Fortress Mado Upper North Chest",
         "rom_id": 352,
         "ap_id_offset": 76,
@@ -2460,6 +2537,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "TRUE"
+      },
+      {
+        "name": "Fortress Mado Upper Behind Wall Chest",
+        "rom_id": 363,
+        "ap_id_offset": 86,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "can_break_wall(Mado)"
       }
     ]
   },
@@ -2481,7 +2568,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Mado's Floor - Back",
+        "vanilla_target": "Mado's Floor - Boss Arena",
         "pseudologic": "can_fight(Mado 2)",
         "notes": ""
       }
@@ -2639,16 +2726,6 @@
     ],
     "locations": [
       {
-        "name": "Mt Hydra Final Cave Mimic",
-        "rom_id": 372,
-        "ap_id_offset": 95,
-        "unique": false,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "TRUE"
-      },
-      {
         "name": "Mt Hydra Summit Chest",
         "rom_id": 319,
         "ap_id_offset": 52,
@@ -2657,6 +2734,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "Flight"
+      },
+      {
+        "name": "Mt Hydra Final Cave Mimic",
+        "rom_id": 372,
+        "ap_id_offset": 95,
+        "unique": false,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -2741,18 +2828,15 @@
     ],
     "locations": []
   },
-  "Mt. Sabre North - Boss": {
-    "name": "Mt. Sabre North - Boss",
-    "wildwarpIds": [
-      51,
-      52
-    ],
+  "Mt. Sabre North - Boss Arena": {
+    "name": "Mt. Sabre North - Boss Arena",
+    "wildwarpIds": [],
     "notes": "",
     "entrances": [
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Mt. Sabre North - Upper",
+        "vanilla_target": "Mt. Sabre North - Pre-Boss",
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2760,11 +2844,22 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Elder's Cell",
-        "pseudologic": "can_fight(Kelbesque 1) && Prison Key",
+        "pseudologic": "Prison Key",
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [
+      {
+        "name": "Kelbesque 1",
+        "rom_id": 264,
+        "ap_id_offset": 8,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": false,
+        "pseudologic": "TRUE"
+      }
+    ]
   },
   "Mt. Sabre North - Elder's Cell": {
     "name": "Mt. Sabre North - Elder's Cell",
@@ -2776,7 +2871,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Mt. Sabre North - Boss",
+        "vanilla_target": "Mt. Sabre North - Boss Arena",
         "pseudologic": "can_fight(Kelbesque 1)",
         "notes": ""
       },
@@ -2931,6 +3026,31 @@
       }
     ]
   },
+  "Mt. Sabre North - Pre-Boss": {
+    "name": "Mt. Sabre North - Pre-Boss",
+    "wildwarpIds": [
+      51,
+      52
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Upper",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Mt. Sabre North - Boss Arena",
+        "pseudologic": "can_fight(Kelbesque 1)",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
   "Mt. Sabre North - Pre-Trigger": {
     "name": "Mt. Sabre North - Pre-Trigger",
     "wildwarpIds": [
@@ -2990,16 +3110,6 @@
     "entrances": [],
     "locations": [
       {
-        "name": "Kelbesque 1",
-        "rom_id": 264,
-        "ap_id_offset": 8,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "can_fight(Kelbesque 1)"
-      },
-      {
         "name": "Mt Sabre North Summit",
         "rom_id": 322,
         "ap_id_offset": 55,
@@ -3028,7 +3138,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Mt. Sabre North - Boss",
+        "vanilla_target": "Mt. Sabre North - Pre-Boss",
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
@@ -3068,7 +3178,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Mt. Sabre North - Boss",
+        "vanilla_target": "Mt. Sabre North - Pre-Boss",
         "pseudologic": "Flight || trigger_skip",
         "notes": ""
       },
@@ -3089,16 +3199,6 @@
     "entrances": [],
     "locations": [
       {
-        "name": "Mt Sabre West Near Tornel Chest",
-        "rom_id": 361,
-        "ap_id_offset": 84,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "TRUE"
-      },
-      {
         "name": "Mt Sabre West Tornel",
         "rom_id": 324,
         "ap_id_offset": 57,
@@ -3107,6 +3207,16 @@
         "prevent_loss": false,
         "is_chest": false,
         "pseudologic": "trade_in(Tornel)"
+      },
+      {
+        "name": "Mt Sabre West Near Tornel Chest",
+        "rom_id": 361,
+        "ap_id_offset": 84,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -3544,16 +3654,6 @@
         "pseudologic": "Flight"
       },
       {
-        "name": "Oasis Cave Near Entrance Chest",
-        "rom_id": 356,
-        "ap_id_offset": 80,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Water) || Flight"
-      },
-      {
         "name": "Oasis Cave Northwest Chest",
         "rom_id": 303,
         "ap_id_offset": 36,
@@ -3562,6 +3662,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "TRUE"
+      },
+      {
+        "name": "Oasis Cave Near Entrance Chest",
+        "rom_id": 356,
+        "ap_id_offset": 80,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "can_break_wall(Water) || Flight"
       }
     ]
   },
@@ -3714,6 +3824,28 @@
     ],
     "locations": []
   },
+  "Portoa Palace - Gift Trigger": {
+    "name": "Portoa Palace - Gift Trigger",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Portoa Palace - Throne Room",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "Portoa Palace Throne Room Secret",
+        "entrance_type": 5,
+        "vanilla_target": "Portoa Waterway - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
   "Portoa Palace - Throne Room": {
     "name": "Portoa Palace - Throne Room",
     "wildwarpIds": [
@@ -3748,28 +3880,6 @@
         "pseudologic": "can_reach(Mesia) || ((can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)) && (trade_in(Rage) || statue_skip || Paralysis || trigger_skip))"
       }
     ]
-  },
-  "Portoa Palace - Gift Trigger": {
-    "name": "Portoa Palace - Gift Trigger",
-    "wildwarpIds": [],
-    "notes": "",
-    "entrances": [
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Portoa Palace - Throne Room",
-        "pseudologic": "TRUE",
-        "notes": ""
-      },
-      {
-        "name": "Portoa Palace Throne Room Secret",
-        "entrance_type": 5,
-        "vanilla_target": "Portoa Waterway - Main",
-        "pseudologic": "TRUE",
-        "notes": ""
-      }
-    ],
-    "locations": []
   },
   "Portoa Pawn Shop": {
     "name": "Portoa Pawn Shop",
@@ -3931,21 +4041,21 @@
     "entrances": [],
     "locations": [
       {
-        "name": "Azteca In Pyramid",
-        "rom_id": 320,
-        "ap_id_offset": 53,
-        "unique": true,
-        "lossy": true,
-        "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "TRUE"
-      },
-      {
         "name": "Draygon 1",
         "rom_id": 284,
         "ap_id_offset": 17,
         "unique": true,
         "lossy": false,
+        "prevent_loss": false,
+        "is_chest": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Azteca In Pyramid",
+        "rom_id": 320,
+        "ap_id_offset": 53,
+        "unique": true,
+        "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
         "pseudologic": "TRUE"
@@ -4037,7 +4147,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Sabera's Floor - Pre-Boss",
+        "vanilla_target": "Sabera's Floor - Boss Arena",
         "pseudologic": "can_fight(Sabera 2)",
         "notes": ""
       },
@@ -4045,6 +4155,28 @@
         "name": "Sabera's Floor - Exit",
         "entrance_type": 15,
         "vanilla_target": "Mado's Floor - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Sabera's Floor - Boss Arena": {
+    "name": "Sabera's Floor - Boss Arena",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Floor - Pre-Boss",
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Floor - Back",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4058,7 +4190,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
-        "pseudologic": "can_fight(Sabera 2)"
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -4082,19 +4214,16 @@
         "vanilla_target": "Sabera's Floor - Across Rivers",
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Floor - River Items",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
       }
     ],
     "locations": [
-      {
-        "name": "Fortress Sabera Middle Chest",
-        "rom_id": 349,
-        "ap_id_offset": 73,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Water) || Flight"
-      },
       {
         "name": "Fortress Sabera Northwest Chest",
         "rom_id": 354,
@@ -4104,16 +4233,6 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "can_break_wall(Sabera Item)"
-      },
-      {
-        "name": "Fortress Sabera Southeast Chest",
-        "rom_id": 358,
-        "ap_id_offset": 82,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Water) || Flight"
       }
     ]
   },
@@ -4134,12 +4253,40 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Sabera's Floor - Back",
+        "vanilla_target": "Sabera's Floor - Boss Arena",
         "pseudologic": "can_fight(Sabera 2)",
         "notes": ""
       }
     ],
     "locations": []
+  },
+  "Sabera's Floor - River Items": {
+    "name": "Sabera's Floor - River Items",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Fortress Sabera Middle Chest",
+        "rom_id": 349,
+        "ap_id_offset": 73,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Fortress Sabera Southeast Chest",
+        "rom_id": 358,
+        "ap_id_offset": 82,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      }
+    ]
   },
   "Sabera's Fortress - Front": {
     "name": "Sabera's Fortress - Front",
@@ -4456,9 +4603,9 @@
         "pseudologic": "can_break_wall(Sealed Cave)"
       },
       {
-        "name": "Sealed Cave Big Room Southwest Chest",
-        "rom_id": 336,
-        "ap_id_offset": 62,
+        "name": "Sealed Cave Small Room Front Chest",
+        "rom_id": 292,
+        "ap_id_offset": 25,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -4466,9 +4613,9 @@
         "pseudologic": "TRUE"
       },
       {
-        "name": "Sealed Cave Small Room Front Chest",
-        "rom_id": 292,
-        "ap_id_offset": 25,
+        "name": "Sealed Cave Big Room Southwest Chest",
+        "rom_id": 336,
+        "ap_id_offset": 62,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -4767,16 +4914,6 @@
     ],
     "locations": [
       {
-        "name": "Stxy Left Lower Chest",
-        "rom_id": 343,
-        "ap_id_offset": 68,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "TRUE"
-      },
-      {
         "name": "Stxy Left Upper Sword of Thunder Chest",
         "rom_id": 259,
         "ap_id_offset": 3,
@@ -4785,6 +4922,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+      },
+      {
+        "name": "Stxy Left Lower Chest",
+        "rom_id": 343,
+        "ap_id_offset": 68,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -5130,14 +5277,14 @@
     ],
     "locations": [
       {
-        "name": "Akahana Flute of Lime Tradein",
-        "rom_id": 304,
-        "ap_id_offset": 37,
+        "name": "Waterfall Cave Sword of Water Chest",
+        "rom_id": 258,
+        "ap_id_offset": 2,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "Flute of Lime"
+        "is_chest": true,
+        "pseudologic": "can_break_wall(Waterfall Cave)"
       },
       {
         "name": "Waterfall Cave River Left Chest",
@@ -5150,14 +5297,14 @@
         "pseudologic": "TRUE"
       },
       {
-        "name": "Waterfall Cave Sword of Water Chest",
-        "rom_id": 258,
-        "ap_id_offset": 2,
+        "name": "Akahana Flute of Lime Tradein",
+        "rom_id": 304,
+        "ap_id_offset": 37,
         "unique": true,
-        "lossy": false,
+        "lossy": true,
         "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Waterfall Cave)"
+        "is_chest": false,
+        "pseudologic": "Flute of Lime"
       }
     ]
   },
@@ -5220,6 +5367,28 @@
       }
     ]
   },
+  "Waterfall Valley - By North River": {
+    "name": "Waterfall Valley - By North River",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Valley - Main",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "Waterfall Valley North River Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Fog Lamp Cave - Front",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
   "Waterfall Valley - By Prison": {
     "name": "Waterfall Valley - By Prison",
     "wildwarpIds": [
@@ -5238,6 +5407,28 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Valley - Main",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
+    "locations": []
+  },
+  "Waterfall Valley - By South River": {
+    "name": "Waterfall Valley - By South River",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Waterfall Valley - Main",
+        "pseudologic": "Flight || can_break_wall(Water)",
+        "notes": ""
+      },
+      {
+        "name": "Waterfall Valley South River Cave",
+        "entrance_type": 5,
+        "vanilla_target": "Kirisa Plant Cave - Front",
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5291,50 +5482,6 @@
         "entrance_type": 0,
         "vanilla_target": "Waterfall Valley - By South River",
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
-      }
-    ],
-    "locations": []
-  },
-  "Waterfall Valley - By North River": {
-    "name": "Waterfall Valley - By North River",
-    "wildwarpIds": [],
-    "notes": "",
-    "entrances": [
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Waterfall Valley - Main",
-        "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
-      },
-      {
-        "name": "Waterfall Valley North River Cave",
-        "entrance_type": 5,
-        "vanilla_target": "Fog Lamp Cave - Front",
-        "pseudologic": "TRUE",
-        "notes": ""
-      }
-    ],
-    "locations": []
-  },
-  "Waterfall Valley - By South River": {
-    "name": "Waterfall Valley - By South River",
-    "wildwarpIds": [],
-    "notes": "",
-    "entrances": [
-      {
-        "name": "",
-        "entrance_type": 0,
-        "vanilla_target": "Waterfall Valley - Main",
-        "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
-      },
-      {
-        "name": "Waterfall Valley South River Cave",
-        "entrance_type": 5,
-        "vanilla_target": "Kirisa Plant Cave - Front",
-        "pseudologic": "TRUE",
         "notes": ""
       }
     ],
@@ -5568,20 +5715,6 @@
         "notes": ""
       }
     ],
-    "locations": []
-  },
-  "Buy Healing": {
-    "name": "Buy Healing",
-    "wildwarpIds": [],
-    "notes": "fake region",
-    "entrances": [],
-    "locations": []
-  },
-  "Buy Warp Boots": {
-    "name": "Buy Warp Boots",
-    "wildwarpIds": [],
-    "notes": "fake region",
-    "entrances": [],
     "locations": []
   },
   "Menu": {
