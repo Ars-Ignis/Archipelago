@@ -5,7 +5,7 @@ from .options import CrystalisOptions
 from .types import CrystalisShuffleData
 from .locations import CrystalisLocation
 from .items import CrystalisItem
-from typing import Callable, List
+from typing import Callable, List, Optional
 from worlds.generic.Rules import set_rule, add_rule
 
 def has_level_1_sword(state: CollectionState, player: int, element: str) -> bool:
@@ -44,7 +44,7 @@ def set_two_way_logic(forward_entrance: Entrance) -> None:
     logging.warning(f"Could not find reverse entrance for {forward_entrance.name}")
 
 
-def formulate_tetrarch_fight_logic(player: int, element: str, options: CrystalisOptions) -> \
+def get_tetrarch_fight_logic(player: int, element: str, options: CrystalisOptions, level: Optional[int] = None) -> \
     Callable[[CollectionState], bool]:
     logic: Callable[[CollectionState], bool]
     if options.tink_mode:
@@ -54,9 +54,15 @@ def formulate_tetrarch_fight_logic(player: int, element: str, options: Crystalis
     if not options.battle_magic_not_guaranteed:
         old_logic = logic
         if options.sword_charge_glitch == options.sword_charge_glitch.option_in_logic or options.tink_mode:
-            logic = lambda state: old_logic(state) and has_any_level_3_sword(state, player)
+            if level is not None and level == 2:
+                logic = lambda state: old_logic(state) and has_any_level_2_sword(state, player)
+            else:
+                logic = lambda state: old_logic(state) and has_any_level_3_sword(state, player)
         else:
-            logic = lambda state: old_logic(state) and has_level_3_sword(state, player, element)
+            if level is not None and level == 2:
+                logic = lambda state: old_logic(state) and has_level_2_sword(state, player, element)
+            else:
+                logic = lambda state: old_logic(state) and has_level_3_sword(state, player, element)
     if options.guarantee_refresh:
         old_logic = logic
         logic = lambda state: old_logic(state) and state.has("Refresh", player)
@@ -274,7 +280,7 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
                                                   or state.has("Flight", player) \
                                                   or state.has("Rabbit Boots", player) \
                                                   or state.has("Speed Boots", player))
-        sabre_n_up_to_boss = multiworld.get_entrance("Mt. Sabre North - Upper -> Mt. Sabre North - Boss", player)
+        sabre_n_up_to_boss = multiworld.get_entrance("Mt. Sabre North - Upper -> Mt. Sabre North - Pre-Boss", player)
         set_rule(sabre_n_up_to_boss, lambda state: state.has("Flight", player))
     sabre_n_left_jail_door = multiworld.get_entrance("Mt. Sabre North - Upper -> Mt. Sabre North - Left Jail Cell",
                                                      player)
@@ -288,26 +294,28 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
                                                      player)
     sabre_n_right_jail_door.access_rule = can_break_sabre_north_wall
     set_two_way_logic(sabre_n_right_jail_door)
-    sabre_n_right_jail_back = multiworld.get_entrance("Mt. Sabre North - Right Jail Cell -> Mt. Sabre North - Boss",
+    sabre_n_right_jail_back = multiworld.get_entrance("Mt. Sabre North - Right Jail Cell -> Mt. Sabre North - Pre-Boss",
                                                      player)
     sabre_n_right_jail_back.access_rule = can_break_sabre_north_wall
-    sabre_n_gate = multiworld.get_entrance("Mt. Sabre North - Boss -> Mt. Sabre North - Elder's Cell", player)
-    sabre_n_reverse_gate = multiworld.get_entrance("Mt. Sabre North - Elder's Cell -> Mt. Sabre North - Boss", player)
-    kelbesque_1_logic = formulate_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Kelbesque 1"], options)
+
+    kelbesque_1_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Kelbesque 1"], options)
+    sabre_n_boss = multiworld.get_entrance("Mt. Sabre North - Pre-Boss -> Mt. Sabre North - Boss Arena", player)
+    sabre_n_boss.access_rule = kelbesque_1_logic
+    sabre_n_gate = multiworld.get_entrance("Mt. Sabre North - Boss Arena -> Mt. Sabre North - Elder's Cell", player)
+    set_rule(sabre_n_gate, lambda state: state.has(shuffle_data.key_item_names["Key to Prison"], player))
+    sabre_n_reverse_gate = multiworld.get_entrance("Mt. Sabre North - Elder's Cell -> Mt. Sabre North - Boss Arena",
+                                                   player)
     sabre_n_reverse_gate.access_rule = kelbesque_1_logic
-    sabre_n_gate.access_rule = kelbesque_1_logic
-    add_rule(sabre_n_gate, lambda state: state.has(shuffle_data.key_item_names["Key to Prison"], player), "and")
     sabre_n_final_wall = multiworld.get_entrance("Mt. Sabre North - Elder's Cell -> Mt. Sabre North - Final", player)
     sabre_n_final_wall.access_rule = can_break_sabre_north_wall
     set_two_way_logic(sabre_n_final_wall)
     sabre_n_elder_trigger = multiworld.get_entrance("Mt. Sabre North - Elder's Cell -> Mt. Sabre North - Rescue Reward",
                                                     player)
-    sabre_n_boss_reg = multiworld.get_region("Mt. Sabre North - Boss", player)
-    set_rule(sabre_n_elder_trigger, lambda state: kelbesque_1_logic(state) and
-                                                  sabre_n_boss_reg.can_reach(state))
+    sabre_n_boss_reg = multiworld.get_region("Mt. Sabre North - Boss Arena", player)
+    sabre_n_elder_trigger.access_rule = sabre_n_boss_reg.can_reach
     multiworld.register_indirect_condition(sabre_n_boss_reg, sabre_n_elder_trigger)
     sabre_n_back_trigger = multiworld.get_entrance("Mt. Sabre North - Final -> Mt. Sabre North - Rescue Reward", player)
-    sabre_n_back_trigger.access_rule = sabre_n_elder_trigger.access_rule
+    sabre_n_back_trigger.access_rule = sabre_n_boss_reg.can_reach
     multiworld.register_indirect_condition(sabre_n_boss_reg, sabre_n_back_trigger)
 
     #Mt. Sabre North Locations
@@ -514,7 +522,7 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
     sabera_spike_chest = multiworld.get_location("Sabera Upstairs Right Chest", player)
     sabera_spike_chest.access_rule = can_cross_pain
     sabera_1_reward = multiworld.get_location("Sabera 1", player)
-    sabera_1_reward.access_rule = formulate_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Sabera 1"], options)
+    sabera_1_reward.access_rule = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Sabera 1"], options)
     clark = multiworld.get_location("Clark", player)
     set_rule(clark, lambda state: sabera_1_reward.can_reach(state))
 
@@ -561,7 +569,7 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
 
     #Shyron
     mado_1_reward = multiworld.get_location("Mado 1", player)
-    mado_1_fight_logic = formulate_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Mado 1"], options)
+    mado_1_fight_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Mado 1"], options)
     set_rule(mado_1_reward, lambda state: state.has("Sword of Thunder", player) and
                                           massacre_trigger.can_reach(state) and
                                           mado_1_fight_logic(state))
@@ -601,3 +609,69 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
         multiworld.register_indirect_condition(shyron_region, goa_item_ent)
     brokahana = multiworld.get_location("Brokahana", player)
     set_rule(brokahana, lambda state: state.has("Change", player) and mado_1_reward.can_reach(state))
+
+    #Goa Fortress - Entrance
+    goa_entrance_shooter_n = multiworld.get_entrance("Goa Entrance - Front -> Goa Entrance - Massacre Trigger", player)
+    goa_entrance_shooter_n.access_rule = can_cross_shooters_north
+    goa_entrance_shooter_s = multiworld.get_entrance("Goa Entrance - Massacre Trigger -> Goa Entrance - Front", player)
+    goa_entrance_shooter_s.access_rule = can_cross_shooters_south
+    goa_entrance_wall = multiworld.get_entrance("Goa Entrance - Massacre Trigger -> Goa Entrance - Behind Wall", player)
+    set_rule(goa_entrance_wall, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Goa Entrance"]))
+    set_two_way_logic(goa_entrance_wall)
+
+    #Goa Fortress - Kelbesque's Floor
+    kelbesque_2_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Kelbesque 2"], options)
+    kelbesque_2_forward = multiworld.get_entrance("Kelbesque's Floor - Front -> Kelbesque's Floor - Boss Arena", player)
+    kelbesque_2_forward.access_rule = kelbesque_2_logic
+    kelbesque_2_backward = multiworld.get_entrance("Kelbesque's Floor - Back -> Kelbesque's Floor - Boss Arena", player)
+    kelbesque_2_backward.access_rule = kelbesque_2_logic
+
+    #Goa Fortress - Sabera's Floor
+    sabera_river = multiworld.get_entrance("Sabera's Floor - Front -> Sabera's Floor - Across Rivers", player)
+    sabera_river.access_rule = can_cross_rivers
+    set_two_way_logic(sabera_river)
+    sabera_river_items = multiworld.get_entrance("Sabera's Floor - Front -> Sabera's Floor - River Items", player)
+    sabera_river_items.access_rule = can_cross_rivers
+    sabera_boss_wall = multiworld.get_entrance("Sabera's Floor - Across Rivers -> Sabera's Floor - Pre-Boss", player)
+    set_rule(sabera_boss_wall, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Sabera Boss"]))
+    set_two_way_logic(sabera_boss_wall)
+    sabera_2_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Sabera 2"], options)
+    sabera_2_forward = multiworld.get_entrance("Sabera's Floor - Pre-Boss -> Sabera's Floor - Boss Arena", player)
+    sabera_2_forward.access_rule = sabera_2_logic
+    sabera_2_backward = multiworld.get_entrance("Sabera's Floor - Back -> Sabera's Floor - Boss Arena", player)
+    sabera_2_backward.access_rule = sabera_2_logic
+    sabera_wall_item = multiworld.get_location("Fortress Sabera Northwest Chest", player)
+    set_rule(sabera_wall_item, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Sabera Item"]))
+
+    #Goa Fortress - Mado's Floor
+    mado_spike_items = multiworld.get_entrance("Mado's Floor - Front -> Mado's Floor - Spike Items", player)
+    mado_spike_items.access_rule = can_cross_pain
+    mado_left = multiworld.get_entrance("Mado's Floor - Front -> Mado's Floor - Upstairs Left", player)
+    mado_left.access_rule = can_cross_pain
+    mado_right = multiworld.get_entrance("Mado's Floor - Front -> Mado's Floor - Upstairs Right", player)
+    mado_right.access_rule = can_cross_pain
+    mado_2_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Mado 2"], options)
+    mado_2_forward = multiworld.get_entrance("Mado's Floor - Upstairs Right -> Mado's Floor - Boss Arena", player)
+    mado_2_forward.access_rule = mado_2_logic
+    mado_2_backward = multiworld.get_entrance("Mado's Floor - Back -> Mado's Floor - Boss Arena", player)
+    mado_2_backward.access_rule = mado_2_logic
+    mado_wall_item = multiworld.get_location("Fortress Mado Upper Behind Wall Chest", player)
+    set_rule(mado_wall_item, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Mado"]))
+
+    #Goa Fortress - Karmine's Floor
+    karmine_wall = multiworld.get_entrance("Karmine's Floor - Front -> Karmine's Floor - Back", player)
+    set_rule(karmine_wall, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Karmine"]))
+    set_two_way_logic(karmine_wall)
+    karmine_spikes = multiworld.get_entrance("Karmine's Floor - Back -> Karmine's Floor - Item Stash", player)
+    karmine_spikes.access_rule = can_cross_pain
+    karmine_boss_door = multiworld.get_entrance("Karmine's Floor - Back -> Karmine's Floor - Pre-Boss Gauntlet", player)
+    karmine_boss_door.access_rule = can_cross_pain
+    set_two_way_logic(karmine_boss_door)
+    karmine_gauntlet = multiworld.get_entrance("Karmine's Floor - Pre-Boss Gauntlet -> Karmine's Floor - Boss Arena",
+                                               player)
+    karmine_gauntlet.access_rule = can_cross_shooters_north
+    karmine_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Karmine"], options, level=2)
+    karmine_fight = multiworld.get_entrance("Karmine's Floor - Boss Arena -> Karmine's Floor - Post Boss", player)
+    karmine_fight.access_rule = karmine_logic
+    slime_kensu = multiworld.get_location("Slimed Kensu", player)
+    set_rule(slime_kensu, lambda state: state.has(shuffle_data.trade_in_map["Slime Kensu"], player))
