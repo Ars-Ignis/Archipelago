@@ -222,7 +222,7 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - Flooded Cave Water",
-        "pseudologic": "(Flight && trigger_skip) || (Shell Flute && can_use_shell_flute)",
+        "pseudologic": "trigger_skip || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
       {
@@ -242,7 +242,7 @@
         "lossy": true,
         "prevent_loss": true,
         "is_chest": false,
-        "pseudologic": "Golden Statue"
+        "pseudologic": "Statue of Gold"
       }
     ]
   },
@@ -264,16 +264,6 @@
     ],
     "locations": [
       {
-        "name": "Aryllis Basement Chest",
-        "rom_id": 266,
-        "ap_id_offset": 10,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "TRUE"
-      },
-      {
         "name": "Aryllis",
         "rom_id": 318,
         "ap_id_offset": 51,
@@ -282,6 +272,16 @@
         "prevent_loss": false,
         "is_chest": false,
         "pseudologic": "Change && trade_in(Aryllis)"
+      },
+      {
+        "name": "Aryllis Basement Chest",
+        "rom_id": 266,
+        "ap_id_offset": 10,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -1236,9 +1236,9 @@
     "entrances": [],
     "locations": [
       {
-        "name": "Fog Lamp Cave Front Chest",
-        "rom_id": 287,
-        "ap_id_offset": 20,
+        "name": "Fog Lamp Cave Back Chest",
+        "rom_id": 309,
+        "ap_id_offset": 42,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -1246,9 +1246,9 @@
         "pseudologic": "TRUE"
       },
       {
-        "name": "Fog Lamp Cave Back Chest",
-        "rom_id": 309,
-        "ap_id_offset": 42,
+        "name": "Fog Lamp Cave Front Chest",
+        "rom_id": 287,
+        "ap_id_offset": 20,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -1800,14 +1800,14 @@
     ],
     "locations": [
       {
-        "name": "Slimed Kensu",
-        "rom_id": 328,
-        "ap_id_offset": 61,
+        "name": "Karmine Basement Lower Left Chest",
+        "rom_id": 366,
+        "ap_id_offset": 89,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "trade_in(Slime Kensu)"
+        "is_chest": true,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
         "name": "Karmine Basement Lower Middle Chest",
@@ -1820,10 +1820,10 @@
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
-        "name": "Karmine Basement Lower Left Chest",
-        "rom_id": 366,
-        "ap_id_offset": 89,
-        "unique": true,
+        "name": "Karmine Basement Lower Right Mimic",
+        "rom_id": 379,
+        "ap_id_offset": 102,
+        "unique": false,
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
@@ -1850,14 +1850,14 @@
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
-        "name": "Karmine Basement Lower Right Mimic",
-        "rom_id": 379,
-        "ap_id_offset": 102,
-        "unique": false,
-        "lossy": false,
+        "name": "Slimed Kensu",
+        "rom_id": 328,
+        "ap_id_offset": 61,
+        "unique": true,
+        "lossy": true,
         "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+        "is_chest": false,
+        "pseudologic": "trade_in(Slime Kensu)"
       }
     ]
   },
@@ -1896,16 +1896,6 @@
     "entrances": [],
     "locations": [
       {
-        "name": "Storm Bracelet Chest",
-        "rom_id": 268,
-        "ap_id_offset": 12,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "TRUE"
-      },
-      {
         "name": "Karmine",
         "rom_id": 317,
         "ap_id_offset": 50,
@@ -1913,6 +1903,16 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Storm Bracelet Chest",
+        "rom_id": 268,
+        "ap_id_offset": 12,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
         "pseudologic": "TRUE"
       }
     ]
@@ -2442,16 +2442,6 @@
     ],
     "locations": [
       {
-        "name": "Fortress Mado Upper North Chest",
-        "rom_id": 352,
-        "ap_id_offset": 76,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "TRUE"
-      },
-      {
         "name": "Fortress Mado Upper Behind Wall Chest",
         "rom_id": 363,
         "ap_id_offset": 86,
@@ -2460,6 +2450,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "can_break_wall(Mado)"
+      },
+      {
+        "name": "Fortress Mado Upper North Chest",
+        "rom_id": 352,
+        "ap_id_offset": 76,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -2533,9 +2533,9 @@
     ],
     "locations": [
       {
-        "name": "Mezame Right Chest",
-        "rom_id": 305,
-        "ap_id_offset": 105,
+        "name": "Mezame Left Chest",
+        "rom_id": 329,
+        "ap_id_offset": 104,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -2543,9 +2543,9 @@
         "pseudologic": "TRUE"
       },
       {
-        "name": "Mezame Left Chest",
-        "rom_id": 329,
-        "ap_id_offset": 104,
+        "name": "Mezame Right Chest",
+        "rom_id": 305,
+        "ap_id_offset": 105,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -2639,16 +2639,6 @@
     ],
     "locations": [
       {
-        "name": "Mt Hydra Summit Chest",
-        "rom_id": 319,
-        "ap_id_offset": 52,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight"
-      },
-      {
         "name": "Mt Hydra Final Cave Mimic",
         "rom_id": 372,
         "ap_id_offset": 95,
@@ -2657,6 +2647,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "TRUE"
+      },
+      {
+        "name": "Mt Hydra Summit Chest",
+        "rom_id": 319,
+        "ap_id_offset": 52,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "Flight"
       }
     ]
   },
@@ -3089,16 +3089,6 @@
     "entrances": [],
     "locations": [
       {
-        "name": "Mt Sabre West Tornel",
-        "rom_id": 324,
-        "ap_id_offset": 57,
-        "unique": true,
-        "lossy": true,
-        "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "trade_in(Tornel)"
-      },
-      {
         "name": "Mt Sabre West Near Tornel Chest",
         "rom_id": 361,
         "ap_id_offset": 84,
@@ -3107,6 +3097,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "TRUE"
+      },
+      {
+        "name": "Mt Sabre West Tornel",
+        "rom_id": 324,
+        "ap_id_offset": 57,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "is_chest": false,
+        "pseudologic": "trade_in(Tornel)"
       }
     ]
   },
@@ -3544,16 +3544,6 @@
         "pseudologic": "Flight"
       },
       {
-        "name": "Oasis Cave Northwest Chest",
-        "rom_id": 303,
-        "ap_id_offset": 36,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "TRUE"
-      },
-      {
         "name": "Oasis Cave Near Entrance Chest",
         "rom_id": 356,
         "ap_id_offset": 80,
@@ -3562,6 +3552,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "can_break_wall(Water) || Flight"
+      },
+      {
+        "name": "Oasis Cave Northwest Chest",
+        "rom_id": 303,
+        "ap_id_offset": 36,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
       }
     ]
   },
@@ -3931,21 +3931,21 @@
     "entrances": [],
     "locations": [
       {
-        "name": "Draygon 1",
-        "rom_id": 284,
-        "ap_id_offset": 17,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "TRUE"
-      },
-      {
         "name": "Azteca In Pyramid",
         "rom_id": 320,
         "ap_id_offset": 53,
         "unique": true,
         "lossy": true,
+        "prevent_loss": false,
+        "is_chest": false,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Draygon 1",
+        "rom_id": 284,
+        "ap_id_offset": 17,
+        "unique": true,
+        "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
         "pseudologic": "TRUE"
@@ -4456,9 +4456,9 @@
         "pseudologic": "can_break_wall(Sealed Cave)"
       },
       {
-        "name": "Sealed Cave Small Room Front Chest",
-        "rom_id": 292,
-        "ap_id_offset": 25,
+        "name": "Sealed Cave Big Room Southwest Chest",
+        "rom_id": 336,
+        "ap_id_offset": 62,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -4466,9 +4466,9 @@
         "pseudologic": "TRUE"
       },
       {
-        "name": "Sealed Cave Big Room Southwest Chest",
-        "rom_id": 336,
-        "ap_id_offset": 62,
+        "name": "Sealed Cave Small Room Front Chest",
+        "rom_id": 292,
+        "ap_id_offset": 25,
         "unique": true,
         "lossy": false,
         "prevent_loss": false,
@@ -4666,19 +4666,16 @@
         "vanilla_target": "Stxy - Upstairs",
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Stxy - Right",
+        "pseudologic": "Flight",
+        "notes": ""
       }
     ],
     "locations": [
-      {
-        "name": "Stxy Right Middle Chest",
-        "rom_id": 276,
-        "ap_id_offset": 15,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight"
-      },
       {
         "name": "Stxy Left North Mimic",
         "rom_id": 373,
@@ -4688,26 +4685,6 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "TRUE"
-      },
-      {
-        "name": "Stxy Right North Mimic",
-        "rom_id": 374,
-        "ap_id_offset": 97,
-        "unique": false,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight"
-      },
-      {
-        "name": "Stxy Right South Mimic",
-        "rom_id": 375,
-        "ap_id_offset": 98,
-        "unique": false,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight"
       }
     ]
   },
@@ -4735,6 +4712,44 @@
     ],
     "locations": []
   },
+  "Stxy - Right": {
+    "name": "Stxy - Right",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Stxy Right Middle Chest",
+        "rom_id": 276,
+        "ap_id_offset": 15,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Stxy Right North Mimic",
+        "rom_id": 374,
+        "ap_id_offset": 97,
+        "unique": false,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      },
+      {
+        "name": "Stxy Right South Mimic",
+        "rom_id": 375,
+        "ap_id_offset": 98,
+        "unique": false,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
   "Stxy - Upstairs": {
     "name": "Stxy - Upstairs",
     "wildwarpIds": [
@@ -4752,16 +4767,6 @@
     ],
     "locations": [
       {
-        "name": "Stxy Left Upper Sword of Thunder Chest",
-        "rom_id": 259,
-        "ap_id_offset": 3,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
-      },
-      {
         "name": "Stxy Left Lower Chest",
         "rom_id": 343,
         "ap_id_offset": 68,
@@ -4770,6 +4775,16 @@
         "prevent_loss": false,
         "is_chest": true,
         "pseudologic": "TRUE"
+      },
+      {
+        "name": "Stxy Left Upper Sword of Thunder Chest",
+        "rom_id": 259,
+        "ap_id_offset": 3,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
     ]
   },
@@ -5115,14 +5130,14 @@
     ],
     "locations": [
       {
-        "name": "Waterfall Cave Sword of Water Chest",
-        "rom_id": 258,
-        "ap_id_offset": 2,
+        "name": "Akahana Flute of Lime Tradein",
+        "rom_id": 304,
+        "ap_id_offset": 37,
         "unique": true,
-        "lossy": false,
+        "lossy": true,
         "prevent_loss": false,
-        "is_chest": true,
-        "pseudologic": "can_break_wall(Waterfall Cave)"
+        "is_chest": false,
+        "pseudologic": "Flute of Lime"
       },
       {
         "name": "Waterfall Cave River Left Chest",
@@ -5135,14 +5150,14 @@
         "pseudologic": "TRUE"
       },
       {
-        "name": "Akahana Flute of Lime Tradein",
-        "rom_id": 304,
-        "ap_id_offset": 37,
+        "name": "Waterfall Cave Sword of Water Chest",
+        "rom_id": 258,
+        "ap_id_offset": 2,
         "unique": true,
-        "lossy": true,
+        "lossy": false,
         "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "Flute of Lime"
+        "is_chest": true,
+        "pseudologic": "can_break_wall(Waterfall Cave)"
       }
     ]
   },

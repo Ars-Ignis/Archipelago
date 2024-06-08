@@ -97,6 +97,9 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
     #Need a sword to be guaranteed to be able to buy things
     #put rules on entrances instead of events because more efficient? Maybe? unsure, should benchmark
     for shop, inventory in shuffle_data.shop_inventories.items():
+        if shop == "Shyron Item Shop":
+            #Shyron shop becomes unavailable after the massacre, so don't rely on it for logic
+            continue
         if "Medical Herb" in inventory:
             buy_healing_entrance = multiworld.get_entrance("Buy Healing: " + shop, player)
             set_rule(buy_healing_entrance, lambda state: state.has_group("Sword", player, 1))
@@ -460,6 +463,10 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
         add_rule(seafalls, lambda state: state.has("Rabbit Boots", player), "or")
     whirlpool_location = multiworld.get_location("Behind Whirlpool", player)
     set_rule(whirlpool_location, lambda state: state.has(shuffle_data.key_item_names["Statue of Gold"], player))
+    #I guess Glowing Lamp + Broken Statue should go here
+    repaired_statue = multiworld.get_location("Repaired Statue", player)
+    set_rule(repaired_statue, lambda state: state.has(shuffle_data.key_item_names["Broken Statue"], player) and
+                                            state.has(shuffle_data.key_item_names["Glowing Lamp"], player))
 
     #Joel/Lighthouse
     shed_secret = multiworld.get_entrance("Joel Shed - Secret Passage", player)
@@ -514,8 +521,83 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
     #Swan/Swan Gate
     swan_gate = multiworld.get_entrance("Guard Checkpoint - South -> Guard Checkpoint - North", player)
     set_rule(swan_gate, lambda state: state.has("Change", player))
+    set_two_way_logic(swan_gate)
     tag_kensu = multiworld.get_location("Kensu In Swan", player)
     set_rule(tag_kensu, lambda state: state.has("Paralysis", player) and
                                       state.has(shuffle_data.trade_in_map["Tag Kensu"], player) and
                                       state.can_reach_region("Swan Shed", player) and
                                       state.can_reach_region("Swan Pub", player))
+
+    #Mt. Hydra
+    def can_break_hydra_walls(state: CollectionState) -> bool:
+        return can_break_wall(state, player, shuffle_data.wall_map["Mt. Hydra"])
+    hydra_lower_river = multiworld.get_entrance("Mt. Hydra - Lower -> Mt. Hydra - Guarded Palace", player)
+    hydra_lower_river.access_rule = can_cross_rivers
+    set_two_way_logic(hydra_lower_river)
+    shyron_region = multiworld.get_region("Shyron", player)
+    massacre_trigger = multiworld.get_region("Goa Entrance - Massacre Trigger", player)
+    if options.statue_glitch != options.statue_glitch.option_in_logic:
+        shyron_temple = multiworld.get_region("Shyron Temple", player)
+        hydra_guardpost = multiworld.get_entrance("Mt. Hydra - Guardpost", player)
+        set_rule(hydra_guardpost, lambda state: state.has("Change", player) or shyron_region.can_reach(state) or
+                                                (state.has("Sword of Thunder", player) and
+                                                 shyron_temple.can_reach(state) and
+                                                 massacre_trigger.can_reach(state)))
+    hydra_upper_river = multiworld.get_entrance("Mt. Hydra - Lower -> Mt. Hydra - Upper", player)
+    hydra_upper_river.access_rule = can_cross_rivers
+    set_two_way_logic(hydra_upper_river)
+    hydra_first_wall = multiworld.get_entrance("Mt. Hydra - Upper -> Mt. Hydra - Wide Cave", player)
+    hydra_first_wall.access_rule = can_break_hydra_walls
+    set_two_way_logic(hydra_first_wall)
+    hydra_second_wall = multiworld.get_entrance("Mt. Hydra - Wide Cave -> Mt. Hydra - Summit", player)
+    hydra_second_wall.access_rule = can_break_hydra_walls
+    set_two_way_logic(hydra_second_wall)
+    hydra_palace = multiworld.get_entrance("Mt. Hydra - Palace", player)
+    set_rule(hydra_palace, lambda state: state.has(shuffle_data.key_item_names["Key to Stxy"], player))
+    hydra_ledge = multiworld.get_location("Mt Hydra Left Right Chest", player)
+    hydra_ledge.access_rule = can_break_hydra_walls
+    hydra_summit = multiworld.get_location("Mt Hydra Summit Chest", player)
+    set_rule(hydra_summit, lambda state: state.has("Flight", player))
+
+    #Shyron
+    mado_1_reward = multiworld.get_location("Mado 1", player)
+    mado_1_fight_logic = formulate_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Mado 1"], options)
+    set_rule(mado_1_reward, lambda state: state.has("Sword of Thunder", player) and
+                                          massacre_trigger.can_reach(state) and
+                                          mado_1_fight_logic(state))
+
+    #Stxy
+    can_cross_shooters_south = lambda state: state.has("Barrier", player)
+    if options.barrier_not_guaranteed:
+        old_func = can_cross_shooters_south
+        can_cross_shooters_south = lambda state: can_cross_shooters_south(state) or \
+                                                 (state.has_group("Sword", player, 1) and
+                                                 (state.has("Shield Ring", player) or
+                                                  state.has("Buy Healing", player) or
+                                                  state.has("Refresh", player)))
+    can_cross_shooters_north = can_cross_shooters_south
+    if options.statue_gauntlet_skip:
+        can_cross_shooters_north = lambda state: state.has("Flight", player) or can_cross_shooters_south(state)
+    stxy_gauntlet = multiworld.get_entrance("Stxy - Front -> Stxy - Downstairs", player)
+    stxy_gauntlet.access_rule = can_cross_shooters_north
+    stxy_reverse = multiworld.get_entrance("Stxy - Downstairs -> Stxy - Front", player)
+    stxy_reverse.access_rule = can_cross_shooters_south
+    stxy_right_river = multiworld.get_entrance("Stxy - Downstairs -> Stxy - Right", player)
+    set_rule(stxy_right_river, lambda state: state.has("Flight", player))
+    #no two-way logic - can't get to Stxy - Right any other way
+    stxy_left_river = multiworld.get_entrance("Stxy - Downstairs -> Stxy - Upstairs", player)
+    stxy_left_river.access_rule = can_cross_rivers
+    #no two-way logic - can drop from hole above to reach downstairs
+    stxy_spike_chest = multiworld.get_location("Stxy Left Upper Sword of Thunder Chest", player)
+    stxy_spike_chest.access_rule = can_cross_pain
+
+    #Goa Town
+    if options.statue_glitch != options.statue_glitch.option_in_logic:
+        goa_inn_ent = multiworld.get_entrance("Goa - Inn", player)
+        goa_item_ent = multiworld.get_entrance("Goa - Item Shop", player)
+        goa_inn_ent.access_rule = shyron_region.can_reach
+        goa_item_ent.access_rule = shyron_region.can_reach
+        multiworld.register_indirect_condition(shyron_region, goa_inn_ent)
+        multiworld.register_indirect_condition(shyron_region, goa_item_ent)
+    brokahana = multiworld.get_location("Brokahana", player)
+    set_rule(brokahana, lambda state: state.has("Change", player) and mado_1_reward.can_reach(state))
