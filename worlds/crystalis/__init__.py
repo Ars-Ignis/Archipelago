@@ -263,6 +263,9 @@ class CrystalisWorld(World):
         buy_healing_region = local_region_cache["Buy Healing"]
         buy_warp_boots_region = local_region_cache["Buy Warp Boots"]
         for shop, inventory in self.shuffle_data.shop_inventories.items():
+            if shop == "Shyron Item Shop":
+                #Shyron shop becomes unavailable after the massacre, so don't rely on it for logic
+                continue
             shop_region = local_region_cache[shop]
             if "Medical Herb" in inventory:
                 shop_region.connect(buy_healing_region, "Buy Healing: " + shop)
