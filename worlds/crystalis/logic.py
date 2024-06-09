@@ -113,6 +113,51 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
             buy_warp_boots_entrance = multiworld.get_entrance("Buy Warp Boots: " + shop, player)
             set_rule(buy_warp_boots_entrance, lambda state: state.has_group("Sword", player, 1))
 
+    #Story Mode Events
+    if options.story_mode:
+        #getting to these regions means you've beaten the boss
+        kelby_1_region = multiworld.get_region("Mt. Sabre North - Boss Arena", player)
+        kelby_1_victory = CrystalisLocation(player, "Kelbesque 1 Defeated", None, kelby_1_region)
+        kelby_1_flag = CrystalisItem("Kelbesque 1 Defeated", ItemClassification.progression, None, player)
+        kelby_1_victory.place_locked_item(kelby_1_flag)
+        kelby_1_region.locations.append(kelby_1_victory)
+        sabera_1_region = multiworld.get_region("Sabera's Fortress - Post-Boss", player)
+        sabera_1_victory = CrystalisLocation(player, "Sabera 1 Defeated", None, sabera_1_region)
+        sabera_1_flag = CrystalisItem("Sabera 1 Defeated", ItemClassification.progression, None, player)
+        sabera_1_victory.place_locked_item(sabera_1_flag)
+        sabera_1_region.locations.append(sabera_1_victory)
+        mado_1_region = multiworld.get_region("Shyron Temple - Post-Boss", player)
+        mado_1_victory = CrystalisLocation(player, "Mado 1 Defeated", None, mado_1_region)
+        mado_1_flag = CrystalisItem("Mado 1 Defeated", ItemClassification.progression, None, player)
+        mado_1_victory.place_locked_item(mado_1_flag)
+        mado_1_region.locations.append(mado_1_victory)
+        kelby_2_region = multiworld.get_region("Kelbesque's Floor - Boss Arena", player)
+        kelby_2_victory = CrystalisLocation(player, "Kelbesque 2 Defeated", None, kelby_2_region)
+        kelby_2_flag = CrystalisItem("Kelbesque 2 Defeated", ItemClassification.progression, None, player)
+        kelby_2_victory.place_locked_item(kelby_2_flag)
+        kelby_2_region.locations.append(kelby_2_victory)
+        sabera_2_region = multiworld.get_region("Sabera's Floor - Boss Arena", player)
+        sabera_2_victory = CrystalisLocation(player, "Sabera 2 Defeated", None, sabera_2_region)
+        sabera_2_flag = CrystalisItem("Sabera 2 Defeated", ItemClassification.progression, None, player)
+        sabera_2_victory.place_locked_item(sabera_2_flag)
+        sabera_2_region.locations.append(sabera_2_victory)
+        mado_2_region = multiworld.get_region("Mado's Floor - Boss Arena", player)
+        mado_2_victory = CrystalisLocation(player, "Mado 2 Defeated", None, mado_2_region)
+        mado_2_flag = CrystalisItem("Mado 2 Defeated", ItemClassification.progression, None, player)
+        mado_2_victory.place_locked_item(mado_2_flag)
+        mado_2_region.locations.append(mado_2_victory)
+        karmine_region = multiworld.get_region("Karmine's Floor - Post-Boss", player)
+        karmine_victory = CrystalisLocation(player, "Karmine Defeated", None, karmine_region)
+        karmine_flag = CrystalisItem("Karmine Defeated", ItemClassification.progression, None, player)
+        karmine_victory.place_locked_item(karmine_flag)
+        karmine_region.locations.append(karmine_victory)
+        draygon_1_region = multiworld.get_region("Pyramid - Post-Draygon", player)
+        draygon_1_victory = CrystalisLocation(player, "Draygon 1 Defeated", None, draygon_1_region)
+        draygon_1_flag = CrystalisItem("Draygon 1 Defeated", ItemClassification.progression, None, player)
+        draygon_1_victory.place_locked_item(draygon_1_flag)
+        draygon_1_region.locations.append(draygon_1_victory)
+
+
     #Leaf/Wind Valley/Windmill Cave
     windmill_region = multiworld.get_region("Windmill", player)
     wind_valley_nw_cave = multiworld.get_entrance("Wind Valley - North West Cave", player)
@@ -385,7 +430,7 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
     rage_river = multiworld.get_entrance("Rage - South -> Rage - North", player)
     rage_river.access_rule = can_cross_rivers
     if options.rage_skip != options.rage_skip.option_in_logic:
-        add_rule(rage_river, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player))
+        add_rule(rage_river, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player), "and")
     rage_reward = multiworld.get_location("Rage", player)
     set_rule(rage_reward, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player))
 
@@ -521,10 +566,11 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
     vamp_2_reward.access_rule = vamp_2_logic
     sabera_spike_chest = multiworld.get_location("Sabera Upstairs Right Chest", player)
     sabera_spike_chest.access_rule = can_cross_pain
-    sabera_1_reward = multiworld.get_location("Sabera 1", player)
-    sabera_1_reward.access_rule = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Sabera 1"], options)
+    sabera_1_fight = multiworld.get_entrance("Sabera's Fortress - Upstairs -> Sabera's Fortress - Post-Boss", player)
+    sabera_1_fight.access_rule = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Sabera 1"], options)
+    sabera_1_post_boss = multiworld.get_region("Sabera's Fortress - Post-Boss", player)
     clark = multiworld.get_location("Clark", player)
-    set_rule(clark, lambda state: sabera_1_reward.can_reach(state))
+    clark.access_rule = sabera_1_post_boss.can_reach
 
     #Swan/Swan Gate
     swan_gate = multiworld.get_entrance("Guard Checkpoint - South -> Guard Checkpoint - North", player)
@@ -568,9 +614,9 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
     set_rule(hydra_summit, lambda state: state.has("Flight", player))
 
     #Shyron
-    mado_1_reward = multiworld.get_location("Mado 1", player)
+    mado_1_fight = multiworld.get_entrance("Shyron Temple -> Shyron Temple - Post-Boss", player)
     mado_1_fight_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Mado 1"], options)
-    set_rule(mado_1_reward, lambda state: state.has("Sword of Thunder", player) and
+    set_rule(mado_1_fight, lambda state: state.has("Sword of Thunder", player) and
                                           massacre_trigger.can_reach(state) and
                                           mado_1_fight_logic(state))
 
@@ -578,7 +624,7 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
     can_cross_shooters_south = lambda state: state.has("Barrier", player)
     if options.barrier_not_guaranteed:
         old_func = can_cross_shooters_south
-        can_cross_shooters_south = lambda state: can_cross_shooters_south(state) or \
+        can_cross_shooters_south = lambda state: old_func(state) or \
                                                  (state.has_group("Sword", player, 1) and
                                                  (state.has("Shield Ring", player) or
                                                   state.has("Buy Healing", player) or
@@ -608,7 +654,8 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
         multiworld.register_indirect_condition(shyron_region, goa_inn_ent)
         multiworld.register_indirect_condition(shyron_region, goa_item_ent)
     brokahana = multiworld.get_location("Brokahana", player)
-    set_rule(brokahana, lambda state: state.has("Change", player) and mado_1_reward.can_reach(state))
+    mado_1_region = multiworld.get_region("Shyron Temple - Post-Boss", player)
+    set_rule(brokahana, lambda state: state.has("Change", player) and mado_1_region.can_reach(state))
 
     #Goa Fortress - Entrance
     goa_entrance_shooter_n = multiworld.get_entrance("Goa Entrance - Front -> Goa Entrance - Massacre Trigger", player)
@@ -671,7 +718,80 @@ def set_rules(multiworld: MultiWorld, player: int, options: CrystalisOptions, sh
                                                player)
     karmine_gauntlet.access_rule = can_cross_shooters_north
     karmine_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Karmine"], options, level=2)
-    karmine_fight = multiworld.get_entrance("Karmine's Floor - Boss Arena -> Karmine's Floor - Post Boss", player)
+    karmine_fight = multiworld.get_entrance("Karmine's Floor - Boss Arena -> Karmine's Floor - Post-Boss", player)
     karmine_fight.access_rule = karmine_logic
     slime_kensu = multiworld.get_location("Slimed Kensu", player)
     set_rule(slime_kensu, lambda state: state.has(shuffle_data.trade_in_map["Slime Kensu"], player))
+
+    #Oasis Cave/Power Ring Basement
+    oasis_river = multiworld.get_entrance("Oasis Cave - Front -> Oasis Cave - Across the River", player)
+    set_rule(oasis_river, lambda state: state.has("Flight", player))
+    set_two_way_logic(oasis_river)
+    purple_pain = multiworld.get_entrance("Oasis Cave - Across the River -> Oasis Cave - Past Purple Pain", player)
+    purple_pain.access_rule = can_cross_pain
+    set_two_way_logic(purple_pain)
+    oasis_river_maze = multiworld.get_entrance("Oasis Cave - Front -> Oasis Cave - By Deep Entrance", player)
+    oasis_river_maze.access_rule = can_cross_rivers
+    set_two_way_logic(oasis_river_maze)
+    power_ring_loc = multiworld.get_location("Oasis Cave Fortress Basement Chest", player)
+    set_rule(power_ring_loc, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Power Ring Basement"]))
+    battle_armor_loc = multiworld.get_location("Battle Armor Chest", player)
+    set_rule(battle_armor_loc, lambda state: state.has("Flight", player))
+    oasis_river_maze_loc = multiworld.get_location("Oasis Cave Near Entrance Chest", player)
+    oasis_river_maze_loc.access_rule = can_cross_rivers
+
+    #Desert 1/2, Deo Valley
+    desert_1_whirlpool = multiworld.get_entrance("Desert 1 -> Desert 1 - Past Whirlpool", player)
+    set_rule(desert_1_whirlpool, lambda state: state.has("Flight", player))
+    set_two_way_logic(desert_1_whirlpool)
+    pyramid_whirlpool = multiworld.get_entrance("Desert 2 -> Desert 2 - Past Pyramid Whirlpools", player)
+    set_rule(pyramid_whirlpool, lambda state: state.has("Flight", player))
+    set_two_way_logic(pyramid_whirlpool)
+    crypt_whirlpool = multiworld.get_entrance("Desert 2 -> Desert 2 - Past Crypt Whirlpools", player)
+    set_rule(crypt_whirlpool, lambda state: state.has("Flight", player))
+    set_two_way_logic(crypt_whirlpool)
+    deo = multiworld.get_location("Deo", player)
+    set_rule(deo, lambda state: state.has("Change", player) and state.has("Telepathy", player))
+
+    #Pyramid
+    draygon_1_fight = multiworld.get_entrance("Pyramid -> Pyramid - Post-Draygon", player)
+    if options.battle_magic_not_guaranteed:
+        set_rule(draygon_1_fight, lambda state: state.has_group("Sword", player, 1))
+    else:
+        set_rule(draygon_1_fight, lambda state: has_any_level_2_sword(state, player))
+    if options.guarantee_refresh:
+        add_rule(draygon_1_fight, lambda state: state.has("Refresh", player), "and")
+
+    #Bow Passage/Crypt
+    bow_statues = multiworld.get_entrance("Bow Passage - Front -> Bow Passage - Back", player)
+    set_rule(bow_statues, lambda state: state.has(shuffle_data.key_item_names["Bow of Sun"], player) and
+                                        state.has(shuffle_data.key_item_names["Bow of Moon"], player))
+    set_two_way_logic(bow_statues)
+    crypt_spike_pit_a = multiworld.get_entrance("Crypt - Front -> Crypt - Middle", player)
+    crypt_spike_pit_a.access_rule = can_cross_pain
+    set_two_way_logic(crypt_spike_pit_a)
+    crypt_spike_pit_b = multiworld.get_entrance("Crypt - Front -> Crypt - Left", player)
+    crypt_spike_pit_b.access_rule = can_cross_pain
+    set_two_way_logic(crypt_spike_pit_b)
+    crypt_spike_pit_c = multiworld.get_entrance("Crypt - Middle -> Crypt - Back", player)
+    crypt_spike_pit_c.access_rule = can_cross_pain
+    set_two_way_logic(crypt_spike_pit_c)
+    crypt_right_chest = multiworld.get_location("Crypt Right Chest", player)
+    crypt_right_chest.access_rule = can_cross_pain
+
+    #Draygon 2 Logic
+    draygon_2_fight = multiworld.get_entrance("Crypt - Pre-Draygon -> Tower", player)
+    if options.battle_magic_not_guaranteed:
+        set_rule(draygon_2_fight, lambda state: state.has_group("Sword", player, 1))
+    else:
+        set_rule(draygon_2_fight, lambda state: has_any_level_3_sword(state, player))
+    if not options.no_bow_mode:
+        add_rule(draygon_2_fight, lambda state: state.has(shuffle_data.key_item_names["Bow of Truth"], player), "and")
+    if options.guarantee_refresh:
+        add_rule(draygon_2_fight, lambda state: state.has("Refresh", player), "and")
+    if options.story_mode:
+        spawn_reqs: List[str] = ["Sword of Wind", "Sword of Fire", "Sword of Water", "Sword of Thunder",
+                                 "Kelbesque 1 Defeated", "Sabera 1 Defeated", "Mado 1 Defeated",
+                                 "Kelbesque 2 Defeated", "Sabera 2 Defeated", "Mado 2 Defeated",
+                                 "Karmine Defeated", "Draygon 1 Defeated"]
+        add_rule(draygon_2_fight, lambda state: state.has_all(spawn_reqs, player), "and")
