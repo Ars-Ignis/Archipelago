@@ -673,9 +673,9 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Tower",
-        "pseudologic": "can_fight(Draygon 2)",
-        "notes": ""
+        "vanilla_target": "Crypt - Pre-Draygon",
+        "pseudologic": "TRUE",
+        "notes": "Very explicitly no reverse entrance"
       }
     ],
     "locations": []
@@ -775,6 +775,21 @@
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
     ]
+  },
+  "Crypt - Pre-Draygon": {
+    "name": "Crypt - Pre-Draygon",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Tower",
+        "pseudologic": "can_fight(Draygon 2)",
+        "notes": ""
+      }
+    ],
+    "locations": []
   },
   "Deo Valley": {
     "name": "Deo Valley",
@@ -1825,7 +1840,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Karmine's Floor - Post Boss",
+        "vanilla_target": "Karmine's Floor - Post-Boss",
         "pseudologic": "can_fight(Karmine)",
         "notes": "Reverse connection unnecessary"
       }
@@ -1918,8 +1933,8 @@
       }
     ]
   },
-  "Karmine's Floor - Post Boss": {
-    "name": "Karmine's Floor - Post Boss",
+  "Karmine's Floor - Post-Boss": {
+    "name": "Karmine's Floor - Post-Boss",
     "wildwarpIds": [],
     "notes": "",
     "entrances": [],
@@ -4334,6 +4349,24 @@
       }
     ]
   },
+  "Sabera's Fortress - Post-Boss": {
+    "name": "Sabera's Fortress - Post-Boss",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
+    "locations": [
+      {
+        "name": "Sabera 1",
+        "rom_id": 312,
+        "ap_id_offset": 45,
+        "unique": true,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
   "Sabera's Fortress - Upstairs": {
     "name": "Sabera's Fortress - Upstairs",
     "wildwarpIds": [
@@ -4348,19 +4381,16 @@
         "vanilla_target": "Sabera's Fortress - Front",
         "pseudologic": "TRUE",
         "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Sabera's Fortress - Post-Boss",
+        "pseudologic": "can_fight(Sabera 1)",
+        "notes": ""
       }
     ],
     "locations": [
-      {
-        "name": "Sabera 1",
-        "rom_id": 312,
-        "ap_id_offset": 45,
-        "unique": true,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "can_fight(Sabera 1)"
-      },
       {
         "name": "Sabera Upstairs Right Chest",
         "rom_id": 341,
@@ -4751,8 +4781,33 @@
         "vanilla_target": "Shyron",
         "pseudologic": "TRUE",
         "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Shyron Temple - Post-Boss",
+        "pseudologic": "can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder",
+        "notes": ""
       }
     ],
+    "locations": [
+      {
+        "name": "Zebu In Shyron",
+        "rom_id": 308,
+        "ap_id_offset": 41,
+        "unique": true,
+        "lossy": true,
+        "prevent_loss": false,
+        "is_chest": false,
+        "pseudologic": "TRUE"
+      }
+    ]
+  },
+  "Shyron Temple - Post-Boss": {
+    "name": "Shyron Temple - Post-Boss",
+    "wildwarpIds": [],
+    "notes": "",
+    "entrances": [],
     "locations": [
       {
         "name": "Mado 1",
@@ -4760,16 +4815,6 @@
         "ap_id_offset": 11,
         "unique": true,
         "lossy": false,
-        "prevent_loss": false,
-        "is_chest": false,
-        "pseudologic": "can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder"
-      },
-      {
-        "name": "Zebu In Shyron",
-        "rom_id": 308,
-        "ap_id_offset": 41,
-        "unique": true,
-        "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
         "pseudologic": "TRUE"
