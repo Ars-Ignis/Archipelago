@@ -35,6 +35,7 @@ class CrystalisWorld(World):
     settings: typing.ClassVar[CrystalisSettings]
     topology_present = True
     shuffle_data: CrystalisShuffleData
+    set_rules = set_rules
 
     locations_data: List[CrystalisLocationData] = []
     location_name_to_id = {}
@@ -159,7 +160,7 @@ class CrystalisWorld(World):
         trade_in_map: Dict[str, str] = dict(zip(trade_in_targets, trade_in_items))
         if self.options.randomize_tradeins:
             trade_in_map["Tornel"] = self.random.choice(elements)
-            trade_in_map["Rage"] = "Sword of" + self.random.choice(elements)
+            trade_in_map["Rage"] = "Sword of " + self.random.choice(elements)
         else:
             trade_in_map["Tornel"] = "Wind"
             trade_in_map["Rage"] = "Sword of Water"
@@ -204,6 +205,7 @@ class CrystalisWorld(World):
 
     def create_regions(self) -> None:
         #first make regions and locations
+        #need to cache while still creating regions before appending them to the multiworld
         local_region_cache = {}
         for region_data in regions_data.values():
             if self.options.vanilla_maps != self.options.vanilla_maps.option_GBC_cave and \
@@ -271,6 +273,11 @@ class CrystalisWorld(World):
                 shop_region.connect(buy_healing_region, "Buy Healing: " + shop)
             if "Warp Boots" in inventory:
                 shop_region.connect(buy_warp_boots_region, "Buy Warp Boots: " + shop)
+        #add Thunder Warp entrance
+        if self.shuffle_data.thunder_warp is not None:
+            menu_region = local_region_cache["Menu"]
+            thunder_warp_region = local_region_cache[self.shuffle_data.thunder_warp]
+            menu_region.connect(thunder_warp_region, "Thunder Warp")
         from Utils import visualize_regions
         visualize_regions(self.multiworld.get_region("Menu", self.player), "my_world.puml")
 
@@ -293,5 +300,3 @@ class CrystalisWorld(World):
             self.multiworld.itempool.append(self.create_item("Medical Herb"))
 
 
-    def set_rules(self) -> None:
-        set_rules(self.multiworld, self.player, self.options, self.shuffle_data)
