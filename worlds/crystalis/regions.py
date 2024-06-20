@@ -15,4 +15,5 @@ regions_data_json = load_region_data_from_json()
 regions_data: Dict[str, CrystalisRegionData] = {}
 #convert to actual type
 for key, value in regions_data_json.items():
-    regions_data[key] = CrystalisRegionData(value["name"], value["wildwarpIds"], value["entrances"], value["locations"])
+    regions_data[key] = CrystalisRegionData(value["name"], value["wildwarpIds"], value["entrances"], value["locations"],
+                                            value["ban_wildwarp"])
