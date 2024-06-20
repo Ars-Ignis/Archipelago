@@ -7,15 +7,17 @@ from typing import Dict, List
 from .items import CrystalisItem, items_data
 from .locations import CrystalisLocation, create_location_from_location_data
 from .regions import regions_data
-from .options import CrystalisOptions
+from .options import CrystalisOptions, crystalis_option_groups
 from .types import *
 from .logic import set_rules
 from worlds.AutoWorld import World, WebWorld
+from .output import generate_output
 
 
 class CrystalisWeb(WebWorld):
-    pass
-    # TODO: add tutorial
+    game = "Crystalis"
+    option_groups = crystalis_option_groups
+    #TODO: Add tutorial
 
 
 class CrystalisSettings(settings.Group):
@@ -29,13 +31,15 @@ class CrystalisWorld(World):
     """
 
 
-    game: str = "Crystalis"
+    game = "Crystalis"
     options_dataclass = CrystalisOptions
     options: CrystalisOptions
     settings: typing.ClassVar[CrystalisSettings]
     topology_present = True
     shuffle_data: CrystalisShuffleData
     set_rules = set_rules
+    generate_output = generate_output
+    web = CrystalisWeb()
 
     locations_data: List[CrystalisLocationData] = []
     location_name_to_id = {}
@@ -43,21 +47,22 @@ class CrystalisWorld(World):
     for region_data in regions_data.values():
         region_locations_data: List[CrystalisLocationData] = []
         for location_data in region_data.locations:
-            new_loc = CrystalisLocationData(location_data["name"], location_data["rom_id"], \
-                                            location_data["ap_id_offset"], location_data["unique"], \
-                                            location_data["lossy"], location_data["prevent_loss"], \
+            new_loc = CrystalisLocationData(location_data["name"], location_data["rom_id"],
+                                            location_data["ap_id_offset"], location_data["unique"],
+                                            location_data["lossy"], location_data["prevent_loss"],
                                             location_data["is_chest"])
             region_locations_data.append(new_loc)
             locations_data.append(new_loc)
         region_data.locations = region_locations_data
         new_entrance_data: List[CrystalisEntranceData] = []
         for entrance_data in region_data.entrances:
-            new_ent = CrystalisEntranceData(entrance_data["name"], entrance_data["entrance_type"], \
+            new_ent = CrystalisEntranceData(entrance_data["name"], entrance_data["entrance_type"],
                                             entrance_data["vanilla_target"])
             new_entrance_data.append(new_ent)
         region_data.entrances = new_entrance_data
-        for id in region_data.wildwarpIds:
-            wild_warp_id_to_region[id] = region_data.name
+        if not region_data.ban_wildwarp:
+            for id in region_data.wildwarpIds:
+                wild_warp_id_to_region[id] = region_data.name
     for location in locations_data:
         location_name_to_id[location.name] = location.ap_id_offset + CRYSTALIS_BASE_ID
     item_name_to_id = {}
@@ -88,7 +93,6 @@ class CrystalisWorld(World):
                     total_inventory[stock] = total_inventory[stock] + 1
                 else:
                     total_inventory[stock] = 1
-        print(f"Total Inventory: {total_inventory}")
         #while we have inventory to put into shops
         while len(total_inventory) > 0 and len(unfilled_shops) > 0:
             filled_a_shop: bool = False
@@ -133,10 +137,11 @@ class CrystalisWorld(World):
 
     def generate_early(self) -> None:
         #walls first
-        wall_names: List[str] = ["Zebu's Cave", "GBC Cave", "Sealed Cave", "Mt. Sabre West", "Mt. Sabre North",
+        wall_names: List[str] = ["Zebu Cave", "East Cave", "Sealed Cave", "Mt Sabre West", "Mt Sabre North",
                                  "Waterfall Cave", "Fog Lamp Cave", "Kirisa Plant Cave", "Evil Spirit Island",
-                                 "Mt. Hydra", "Goa Entrance", "Power Ring Basement", "Sabera Item", "Sabera Boss",
-                                 "Mado", "Karmine"]
+                                 "Mt Hydra", "Goa Fortress - Entrance", "Goa Fortress Basement",
+                                 "Goa Fortress - Sabera Item", "Goa Fortress - Sabera Boss", "Goa Fortress - Mado 2",
+                                 "Goa Fortress - Karmine 5"]
         elements = ["Wind", "Fire", "Water", "Thunder"]
         wall_weaknesses: List[str]
         if self.options.randomize_wall_elements:
@@ -144,7 +149,7 @@ class CrystalisWorld(World):
         else:
             wall_weaknesses = ["Wind", "Wind", "Wind", "Fire", "Fire", "Fire", "Wind", "Wind", "Wind", "Wind",
                                "Thunder", "Thunder", "Thunder", "Thunder", "Thunder", "Thunder"]
-        wall_map: Dict[str, List[str]] = dict(zip(wall_names, wall_weaknesses))
+        wall_map: Dict[str, str] = dict(zip(wall_names, wall_weaknesses))
         #then key item names
         #TODO randomize these based on settings
         key_item_names: Dict[str, str] = {}
@@ -152,7 +157,7 @@ class CrystalisWorld(World):
             if "Key Item" in item.groups:
                 key_item_names[item.name] = item.name
         #then trade-ins
-        trade_in_targets = ["Akahana", "Aryllis", "Fisherman", "Tag Kensu", "Slime Kensu"]
+        trade_in_targets = ["Akahana", "Aryllis", "Fisherman", "Kensu", "Slimed Kensu"]
         trade_in_items = [key_item_names["Statue of Onyx"], key_item_names["Kirisa Plant"], key_item_names["Fog Lamp"],
                           key_item_names["Love Pendant"], key_item_names["Ivory Statue"]]
         if self.options.randomize_tradeins:
@@ -181,7 +186,7 @@ class CrystalisWorld(World):
         if self.options.thunder_warp == self.options.thunder_warp.option_vanilla:
             thunder_warp = "Shyron"
         elif self.options.thunder_warp == self.options.thunder_warp.option_shuffled:
-            towns = ["Leaf", "Brynmaer", "Oak", "Nadare's", "Portoa", "Amazones", "Joel", "Zombie Town", "Swan", \
+            towns = ["Leaf", "Brynmaer", "Oak", "Nadare's", "Portoa", "Amazones", "Joel", "Zombie Town", "Swan",
                      "Shyron", "Goa", "Sahara"]
             thunder_warp = self.random.choice(towns)
         shop_inventories = {}
@@ -198,7 +203,7 @@ class CrystalisWorld(World):
         shop_inventories["Sahara Item Shop"] = ["Antidote", "Magic Ring", "Fruit of Repun", "Warp Boots"]
         if not self.options.vanilla_shops:
             shop_inventories = self.randomize_shop_inventories(shop_inventories)
-        self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits, \
+        self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
                                                  thunder_warp, shop_inventories)
 
 

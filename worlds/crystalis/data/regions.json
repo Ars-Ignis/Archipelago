@@ -42,28 +42,38 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Amazones Armor Shop": {
     "name": "Amazones Armor Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      211
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Amazones Inn": {
     "name": "Amazones Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      209
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Amazones Item Shop": {
     "name": "Amazones Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      210
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Angry Sea - Beach House Area": {
     "name": "Angry Sea - Beach House Area",
@@ -87,7 +97,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Angry Sea - Cave Area": {
     "name": "Angry Sea - Cave Area",
@@ -109,7 +120,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Angry Sea - Flooded Cave Land": {
     "name": "Angry Sea - Flooded Cave Land",
@@ -131,11 +143,14 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Angry Sea - Flooded Cave Water": {
     "name": "Angry Sea - Flooded Cave Water",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      104
+    ],
     "notes": "",
     "entrances": [
       {
@@ -153,7 +168,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Angry Sea - North Land": {
     "name": "Angry Sea - North Land",
@@ -175,7 +191,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Angry Sea - North Water": {
     "name": "Angry Sea - North Water",
@@ -197,7 +214,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Angry Sea - South Water": {
     "name": "Angry Sea - South Water",
@@ -244,7 +262,8 @@
         "is_chest": false,
         "pseudologic": "Statue of Gold"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Aryllis's House": {
     "name": "Aryllis's House",
@@ -283,7 +302,8 @@
         "is_chest": false,
         "pseudologic": "Change && trade_in(Aryllis)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Asina's Chambers": {
     "name": "Asina's Chambers",
@@ -311,7 +331,8 @@
         "is_chest": false,
         "pseudologic": "can_reach(Mesia)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Beach House": {
     "name": "Beach House",
@@ -339,7 +360,8 @@
         "is_chest": true,
         "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Bow Passage - Back": {
     "name": "Bow Passage - Back",
@@ -361,7 +383,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Bow Passage - Front": {
     "name": "Bow Passage - Front",
@@ -385,7 +408,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Brokahana's House": {
     "name": "Brokahana's House",
@@ -413,7 +437,8 @@
         "is_chest": false,
         "pseudologic": "Change && can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Brynmaer": {
     "name": "Brynmaer",
@@ -476,35 +501,48 @@
         "is_chest": false,
         "pseudologic": "trade_in(Akahana)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Brynmaer Armor Shop": {
     "name": "Brynmaer Armor Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      201
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Brynmaer Inn": {
     "name": "Brynmaer Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      200
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Brynmaer Item Shop": {
     "name": "Brynmaer Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      203
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Brynmaer Pawn Shop": {
     "name": "Brynmaer Pawn Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      199
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Brynmaer Pub": {
     "name": "Brynmaer Pub",
@@ -521,21 +559,24 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Buy Healing": {
     "name": "Buy Healing",
     "wildwarpIds": [],
     "notes": "fake region",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Buy Warp Boots": {
     "name": "Buy Warp Boots",
     "wildwarpIds": [],
     "notes": "fake region",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Clark's Hideout": {
     "name": "Clark's Hideout",
@@ -564,7 +605,8 @@
         "is_chest": false,
         "pseudologic": "can_reach(Sabera's Fortress - Upstairs) && can_fight(Sabera 1)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Cordel Plains - Main": {
     "name": "Cordel Plains - Main",
@@ -634,7 +676,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Cordel Plains - River Blocked": {
     "name": "Cordel Plains - River Blocked",
@@ -656,7 +699,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Crypt - Back": {
     "name": "Crypt - Back",
@@ -678,7 +722,8 @@
         "notes": "Very explicitly no reverse entrance"
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Crypt - Front": {
     "name": "Crypt - Front",
@@ -710,7 +755,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Crypt - Left": {
     "name": "Crypt - Left",
@@ -738,7 +784,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Crypt - Middle": {
     "name": "Crypt - Middle",
@@ -774,11 +821,14 @@
         "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Crypt - Pre-Draygon": {
     "name": "Crypt - Pre-Draygon",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      166
+    ],
     "notes": "",
     "entrances": [
       {
@@ -789,7 +839,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Deo Valley": {
     "name": "Deo Valley",
@@ -824,7 +875,8 @@
         "is_chest": false,
         "pseudologic": "Change && Telepathy"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Desert 1": {
     "name": "Desert 1",
@@ -855,7 +907,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Desert 1 - Past Whirlpool": {
     "name": "Desert 1 - Past Whirlpool",
@@ -877,7 +930,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Desert 2": {
     "name": "Desert 2",
@@ -908,7 +962,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Desert 2 - Past Crypt Whirlpools": {
     "name": "Desert 2 - Past Crypt Whirlpools",
@@ -930,7 +985,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Desert 2 - Past Pyramid Whirlpools": {
     "name": "Desert 2 - Past Pyramid Whirlpools",
@@ -952,7 +1008,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Desert Transition Cave 1": {
     "name": "Desert Transition Cave 1",
@@ -976,7 +1033,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Desert Transition Cave 2": {
     "name": "Desert Transition Cave 2",
@@ -1000,7 +1058,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Evans' Room": {
     "name": "Evans' Room",
@@ -1017,7 +1076,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Evil Spirit Island - Across River": {
     "name": "Evil Spirit Island - Across River",
@@ -1050,7 +1110,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Evil Spirit Island)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Evil Spirit Island - Front": {
     "name": "Evil Spirit Island - Front",
@@ -1074,7 +1135,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Evil Spirit Island - Item Stash": {
     "name": "Evil Spirit Island - Item Stash",
@@ -1112,7 +1174,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Evil Spirit Island - Upstairs": {
     "name": "Evil Spirit Island - Upstairs",
@@ -1154,7 +1217,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Fisherman House": {
     "name": "Fisherman House",
@@ -1171,7 +1235,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Fisherman House Area": {
     "name": "Fisherman House Area",
@@ -1202,7 +1267,8 @@
         "notes": "messy - clean up with events?"
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Fog Lamp Cave - Behind Walls": {
     "name": "Fog Lamp Cave - Behind Walls",
@@ -1232,7 +1298,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Fog Lamp Cave - Front": {
     "name": "Fog Lamp Cave - Front",
@@ -1256,7 +1323,8 @@
         "notes": "\"Don't need to model each individual room of the place"
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Fog Lamp Cave - Items": {
     "name": "Fog Lamp Cave - Items",
@@ -1304,14 +1372,16 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Fortune Teller - Back": {
     "name": "Fortune Teller - Back",
     "wildwarpIds": [],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Fortune Teller - Front": {
     "name": "Fortune Teller - Front",
@@ -1328,7 +1398,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "GBC Cave - Main": {
     "name": "GBC Cave - Main",
@@ -1375,7 +1446,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "GBC Cave - Past Block": {
     "name": "GBC Cave - Past Block",
@@ -1390,7 +1462,8 @@
         "notes": "Only exists if Vm and V!m are both off."
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Goa": {
     "name": "Goa",
@@ -1442,7 +1515,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Goa Entrance - Behind Wall": {
     "name": "Goa Entrance - Behind Wall",
@@ -1464,7 +1538,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Goa Entrance - Front": {
     "name": "Goa Entrance - Front",
@@ -1488,7 +1563,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Goa Entrance - Massacre Trigger": {
     "name": "Goa Entrance - Massacre Trigger",
@@ -1510,7 +1586,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Goa Exit": {
     "name": "Goa Exit",
@@ -1534,21 +1611,28 @@
         "notes": "\"Not shuffled on Wh"
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Goa Inn": {
     "name": "Goa Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      188
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Goa Item Shop": {
     "name": "Goa Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      190
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Goa Pub": {
     "name": "Goa Pub",
@@ -1565,7 +1649,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Goa Valley": {
     "name": "Goa Valley",
@@ -1603,7 +1688,8 @@
         "notes": "\"Not shuffled on Wh"
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Guard Checkpoint - North": {
     "name": "Guard Checkpoint - North",
@@ -1625,7 +1711,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Guard Checkpoint - South": {
     "name": "Guard Checkpoint - South",
@@ -1649,7 +1736,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Initial Cutscene Area": {
     "name": "Initial Cutscene Area",
@@ -1673,7 +1761,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Joel": {
     "name": "Joel",
@@ -1718,7 +1807,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Joel Elder House": {
     "name": "Joel Elder House",
@@ -1735,21 +1825,28 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Joel Inn": {
     "name": "Joel Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      231
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Joel Item Shop": {
     "name": "Joel Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      229
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Joel Shed": {
     "name": "Joel Shed",
@@ -1773,7 +1870,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Karmine's Floor - Back": {
     "name": "Karmine's Floor - Back",
@@ -1823,7 +1921,8 @@
         "is_chest": false,
         "pseudologic": "trade_in(Slime Kensu)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Karmine's Floor - Boss Arena": {
     "name": "Karmine's Floor - Boss Arena",
@@ -1845,7 +1944,8 @@
         "notes": "Reverse connection unnecessary"
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Karmine's Floor - Front": {
     "name": "Karmine's Floor - Front",
@@ -1873,7 +1973,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Karmine's Floor - Item Stash": {
     "name": "Karmine's Floor - Item Stash",
@@ -1931,7 +2032,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Karmine's Floor - Post-Boss": {
     "name": "Karmine's Floor - Post-Boss",
@@ -1959,7 +2061,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Karmine's Floor - Pre-Boss Gauntlet": {
     "name": "Karmine's Floor - Pre-Boss Gauntlet",
@@ -1983,7 +2086,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Kelbesque's Floor - Back": {
     "name": "Kelbesque's Floor - Back",
@@ -2007,7 +2111,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Kelbesque's Floor - Boss Arena": {
     "name": "Kelbesque's Floor - Boss Arena",
@@ -2040,7 +2145,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Kelbesque's Floor - Front": {
     "name": "Kelbesque's Floor - Front",
@@ -2064,7 +2170,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Kirisa Plant Cave - Back": {
     "name": "Kirisa Plant Cave - Back",
@@ -2086,7 +2193,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Kirisa Plant Cave - Front": {
     "name": "Kirisa Plant Cave - Front",
@@ -2110,7 +2218,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Kirisa Plant Cave - Middle": {
     "name": "Kirisa Plant Cave - Middle",
@@ -2146,7 +2255,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Kirisa Plant Meadow": {
     "name": "Kirisa Plant Meadow",
@@ -2174,7 +2284,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Leaf": {
     "name": "Leaf",
@@ -2240,14 +2351,18 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Leaf Armor Shop": {
     "name": "Leaf Armor Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      196
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Leaf Elder's House": {
     "name": "Leaf Elder's House",
@@ -2275,21 +2390,28 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Leaf Inn": {
     "name": "Leaf Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      194
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Leaf Item Shop": {
     "name": "Leaf Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      195
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Leaf Shed": {
     "name": "Leaf Shed",
@@ -2306,7 +2428,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Lighthouse": {
     "name": "Lighthouse",
@@ -2334,7 +2457,8 @@
         "is_chest": true,
         "pseudologic": "Alarm Flute"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Lighthouse Area": {
     "name": "Lighthouse Area",
@@ -2356,7 +2480,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Lighthouse Tunnel": {
     "name": "Lighthouse Tunnel",
@@ -2380,7 +2505,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Lime Valley": {
     "name": "Lime Valley",
@@ -2404,7 +2530,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mado's Floor - Back": {
     "name": "Mado's Floor - Back",
@@ -2426,7 +2553,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mado's Floor - Boss Arena": {
     "name": "Mado's Floor - Boss Arena",
@@ -2459,7 +2587,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mado's Floor - Front": {
     "name": "Mado's Floor - Front",
@@ -2497,7 +2626,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mado's Floor - Spike Items": {
     "name": "Mado's Floor - Spike Items",
@@ -2525,7 +2655,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mado's Floor - Upstairs Left": {
     "name": "Mado's Floor - Upstairs Left",
@@ -2563,7 +2694,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Mado)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mado's Floor - Upstairs Right": {
     "name": "Mado's Floor - Upstairs Right",
@@ -2599,7 +2731,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mesia": {
     "name": "Mesia",
@@ -2616,7 +2749,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Mezame Shrine": {
     "name": "Mezame Shrine",
@@ -2654,7 +2788,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": true
   },
   "Mt. Hydra - Guarded Palace": {
     "name": "Mt. Hydra - Guarded Palace",
@@ -2679,7 +2814,8 @@
         "notes": "\"Need to check trigger skip and Paralysis; entrance only shuffled in Wa"
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mt. Hydra - Lower": {
     "name": "Mt. Hydra - Lower",
@@ -2722,7 +2858,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Hydra - Summit": {
     "name": "Mt. Hydra - Summit",
@@ -2760,7 +2897,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Hydra - Upper": {
     "name": "Mt. Hydra - Upper",
@@ -2817,7 +2955,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Hydra)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Hydra - Wide Cave": {
     "name": "Mt. Hydra - Wide Cave",
@@ -2841,7 +2980,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Boss Arena": {
     "name": "Mt. Sabre North - Boss Arena",
@@ -2874,7 +3014,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Elder's Cell": {
     "name": "Mt. Sabre North - Elder's Cell",
@@ -2905,7 +3046,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Final": {
     "name": "Mt. Sabre North - Final",
@@ -2934,7 +3076,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Interior": {
     "name": "Mt. Sabre North - Interior",
@@ -2963,7 +3106,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Sabre North)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Left Jail Cell": {
     "name": "Mt. Sabre North - Left Jail Cell",
@@ -2987,7 +3131,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Main": {
     "name": "Mt. Sabre North - Main",
@@ -3039,7 +3184,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Sabre North)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Pre-Boss": {
     "name": "Mt. Sabre North - Pre-Boss",
@@ -3064,7 +3210,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Pre-Trigger": {
     "name": "Mt. Sabre North - Pre-Trigger",
@@ -3088,7 +3235,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Prison Key": {
     "name": "Mt. Sabre North - Prison Key",
@@ -3116,7 +3264,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Rescue Reward": {
     "name": "Mt. Sabre North - Rescue Reward",
@@ -3134,7 +3283,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Right Jail Cell": {
     "name": "Mt. Sabre North - Right Jail Cell",
@@ -3158,7 +3308,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mt. Sabre North - Upper": {
     "name": "Mt. Sabre North - Upper",
@@ -3205,7 +3356,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Mt. Sabre West - Final": {
     "name": "Mt. Sabre West - Final",
@@ -3233,7 +3385,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Sabre West - Interior": {
     "name": "Mt. Sabre West - Interior",
@@ -3268,7 +3421,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Sabre West - Main": {
     "name": "Mt. Sabre West - Main",
@@ -3325,7 +3479,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Sabre West)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Sabre West - Tornado Cave": {
     "name": "Mt. Sabre West - Tornado Cave",
@@ -3353,7 +3508,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Mt. Sabre West)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Mt. Sabre West - Upper": {
     "name": "Mt. Sabre West - Upper",
@@ -3387,7 +3543,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Nadare's": {
     "name": "Nadare's",
@@ -3425,7 +3582,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Nadare's Back Room": {
     "name": "Nadare's Back Room",
@@ -3442,21 +3600,28 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Nadare's Inn": {
     "name": "Nadare's Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      60
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Nadare's Item Shop": {
     "name": "Nadare's Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      61
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Oak": {
     "name": "Oak",
@@ -3501,7 +3666,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Oak Elder House": {
     "name": "Oak Elder House",
@@ -3529,21 +3695,28 @@
         "is_chest": false,
         "pseudologic": "Telepathy && can_reach(Swamp - Interior) && ((Insect Flute && can_fight(Giant Insect)) || can_reach(Oak Mom House) && can_reach(Oak))"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Oak Inn": {
     "name": "Oak Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      208
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Oak Item Shop": {
     "name": "Oak Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      207
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Oak Mom House": {
     "name": "Oak Mom House",
@@ -3571,7 +3744,8 @@
         "is_chest": false,
         "pseudologic": "Telepathy && can_reach(Swamp - Interior) && can_reach(Oak)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Oasis Cave - Across the River": {
     "name": "Oasis Cave - Across the River",
@@ -3604,7 +3778,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Oasis Cave - By Deep Entrance": {
     "name": "Oasis Cave - By Deep Entrance",
@@ -3626,7 +3801,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Oasis Cave - Front": {
     "name": "Oasis Cave - Front",
@@ -3688,7 +3864,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Water) || Flight"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Oasis Cave - Past Purple Pain": {
     "name": "Oasis Cave - Past Purple Pain",
@@ -3712,7 +3889,8 @@
         "notes": "\"Not shuffled on Wh"
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Portoa": {
     "name": "Portoa",
@@ -3778,28 +3956,38 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Portoa Armor Shop": {
     "name": "Portoa Armor Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      218
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Portoa Inn": {
     "name": "Portoa Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      220
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Portoa Item Shop": {
     "name": "Portoa Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      221
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Portoa Palace - Foyer": {
     "name": "Portoa Palace - Foyer",
@@ -3837,7 +4025,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Portoa Palace - Gift Trigger": {
     "name": "Portoa Palace - Gift Trigger",
@@ -3859,7 +4048,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Portoa Palace - Throne Room": {
     "name": "Portoa Palace - Throne Room",
@@ -3894,14 +4084,18 @@
         "is_chest": false,
         "pseudologic": "can_reach(Mesia) || ((can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)) && (trade_in(Rage) || statue_skip || Paralysis || trigger_skip))"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Portoa Pawn Shop": {
     "name": "Portoa Pawn Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      217
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Portoa Waterway - Main": {
     "name": "Portoa Waterway - Main",
@@ -3948,11 +4142,14 @@
         "is_chest": false,
         "pseudologic": "can_reach(Mesia) && can_reach(Asina's Chambers) && buy_healing && (Shell Flute || !vanilla_dolphin)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Portoa Waterway - Water": {
     "name": "Portoa Waterway - Water",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      100
+    ],
     "notes": "",
     "entrances": [
       {
@@ -3981,7 +4178,8 @@
         "is_chest": false,
         "pseudologic": "Shell Flute && activated_shell_flute"
       }
-    ]
+    ],
+    "ban_wildwarp": true
   },
   "Power Ring Basement": {
     "name": "Power Ring Basement",
@@ -4009,7 +4207,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Power Ring Basement)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Pyramid": {
     "name": "Pyramid",
@@ -4047,7 +4246,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Pyramid - Post-Draygon": {
     "name": "Pyramid - Post-Draygon",
@@ -4075,7 +4275,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Rage - North": {
     "name": "Rage - North",
@@ -4097,11 +4298,14 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Rage - South": {
     "name": "Rage - South",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      67
+    ],
     "notes": "",
     "entrances": [
       {
@@ -4130,7 +4334,8 @@
         "is_chest": false,
         "pseudologic": "trade_in(Rage)"
       }
-    ]
+    ],
+    "ban_wildwarp": true
   },
   "Sabera's Floor - Across Rivers": {
     "name": "Sabera's Floor - Across Rivers",
@@ -4152,7 +4357,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Sabera's Floor - Back": {
     "name": "Sabera's Floor - Back",
@@ -4174,7 +4380,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Sabera's Floor - Boss Arena": {
     "name": "Sabera's Floor - Boss Arena",
@@ -4207,7 +4414,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Sabera's Floor - Front": {
     "name": "Sabera's Floor - Front",
@@ -4249,7 +4457,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Sabera Item)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Sabera's Floor - Pre-Boss": {
     "name": "Sabera's Floor - Pre-Boss",
@@ -4273,7 +4482,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Sabera's Floor - River Items": {
     "name": "Sabera's Floor - River Items",
@@ -4301,7 +4511,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Sabera's Fortress - Front": {
     "name": "Sabera's Fortress - Front",
@@ -4347,7 +4558,8 @@
         "is_chest": false,
         "pseudologic": "can_fight(Vampire 2)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Sabera's Fortress - Post-Boss": {
     "name": "Sabera's Fortress - Post-Boss",
@@ -4365,7 +4577,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Sabera's Fortress - Upstairs": {
     "name": "Sabera's Fortress - Upstairs",
@@ -4401,7 +4614,8 @@
         "is_chest": true,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Sahara": {
     "name": "Sahara",
@@ -4453,7 +4667,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Sahara Cave Transition": {
     "name": "Sahara Cave Transition",
@@ -4477,7 +4692,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Sahara Elder House": {
     "name": "Sahara Elder House",
@@ -4494,28 +4710,38 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Sahara Inn": {
     "name": "Sahara Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      248
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Sahara Item Shop": {
     "name": "Sahara Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      249
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Sahara Pawn Shop": {
     "name": "Sahara Pawn Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      251
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Sealed Cave - Back": {
     "name": "Sealed Cave - Back",
@@ -4561,7 +4787,8 @@
         "is_chest": false,
         "pseudologic": "Sword"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Sealed Cave - Exit": {
     "name": "Sealed Cave - Exit",
@@ -4583,7 +4810,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Sealed Cave - Front": {
     "name": "Sealed Cave - Front",
@@ -4652,7 +4880,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Servant Chambers": {
     "name": "Servant Chambers",
@@ -4669,7 +4898,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Shyron": {
     "name": "Shyron",
@@ -4728,14 +4958,18 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Shyron Armor Shop": {
     "name": "Shyron Armor Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      245
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Shyron Hospital": {
     "name": "Shyron Hospital",
@@ -4752,21 +4986,28 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Shyron Inn": {
     "name": "Shyron Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      247
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Shyron Item Shop": {
     "name": "Shyron Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      246
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Shyron Temple": {
     "name": "Shyron Temple",
@@ -4801,7 +5042,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Shyron Temple - Post-Boss": {
     "name": "Shyron Temple - Post-Boss",
@@ -4819,7 +5061,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Shyron Training Center": {
     "name": "Shyron Training Center",
@@ -4836,7 +5079,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Stxy - Downstairs": {
     "name": "Stxy - Downstairs",
@@ -4878,7 +5122,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Stxy - Front": {
     "name": "Stxy - Front",
@@ -4902,7 +5147,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Stxy - Right": {
     "name": "Stxy - Right",
@@ -4940,7 +5186,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Stxy - Upstairs": {
     "name": "Stxy - Upstairs",
@@ -4978,7 +5225,8 @@
         "is_chest": true,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Swamp - Far Side": {
     "name": "Swamp - Far Side",
@@ -5000,7 +5248,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Swamp - Interior": {
     "name": "Swamp - Interior",
@@ -5033,7 +5282,8 @@
         "is_chest": false,
         "pseudologic": "Insect Flute && (Gas Mask || Hazmat Suit) && can_fight(Giant Insect)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Swamp - Near Side": {
     "name": "Swamp - Near Side",
@@ -5057,7 +5307,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Swan": {
     "name": "Swan",
@@ -5130,14 +5381,18 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Swan Armor Shop": {
     "name": "Swan Armor Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      238
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Swan Dance Hall": {
     "name": "Swan Dance Hall",
@@ -5165,28 +5420,38 @@
         "is_chest": false,
         "pseudologic": "Paralysis && can_reach(Swan Shed) && can_reach(Swan Pub) && trade_in(Tag Kensu)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Swan Inn": {
     "name": "Swan Inn",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      237
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Swan Item Shop": {
     "name": "Swan Item Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      235
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Swan Pawn Shop": {
     "name": "Swan Pawn Shop",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      240
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Swan Pub": {
     "name": "Swan Pub",
@@ -5203,7 +5468,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Swan Shed": {
     "name": "Swan Shed",
@@ -5220,7 +5486,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Tornel's House": {
     "name": "Tornel's House",
@@ -5248,7 +5515,8 @@
         "is_chest": false,
         "pseudologic": "(Sword && !charge_only) || (buy_warp && (can_reach(Leaf) || can_reach(Amazones) || can_reach(Sahara))"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Tornel's House Exterior": {
     "name": "Tornel's House Exterior",
@@ -5272,14 +5540,25 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Tower": {
     "name": "Tower",
-    "wildwarpIds": [],
+    "wildwarpIds": [
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
     "notes": "",
     "entrances": [],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": true
   },
   "Waterfall Cave - After Statues": {
     "name": "Waterfall Cave - After Statues",
@@ -5303,7 +5582,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Waterfall Cave - Back": {
     "name": "Waterfall Cave - Back",
@@ -5351,7 +5631,8 @@
         "is_chest": false,
         "pseudologic": "Flute of Lime"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Waterfall Cave - Before Statues": {
     "name": "Waterfall Cave - Before Statues",
@@ -5375,7 +5656,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Waterfall Cave - Front": {
     "name": "Waterfall Cave - Front",
@@ -5410,7 +5692,8 @@
         "is_chest": true,
         "pseudologic": "can_break_wall(Waterfall Cave)"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Waterfall Valley - By North River": {
     "name": "Waterfall Valley - By North River",
@@ -5432,7 +5715,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Waterfall Valley - By Prison": {
     "name": "Waterfall Valley - By Prison",
@@ -5456,7 +5740,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Waterfall Valley - By South River": {
     "name": "Waterfall Valley - By South River",
@@ -5478,7 +5763,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Waterfall Valley - Main": {
     "name": "Waterfall Valley - Main",
@@ -5530,7 +5816,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Wind Valley": {
     "name": "Wind Valley",
@@ -5579,7 +5866,8 @@
         "is_chest": false,
         "pseudologic": "can_reach(Windmill) && Windmill Key"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Windmill": {
     "name": "Windmill",
@@ -5596,7 +5884,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Windmill Cave": {
     "name": "Windmill Cave",
@@ -5631,7 +5920,8 @@
         "is_chest": false,
         "pseudologic": "can_reach(Leaf Elder House) && can_reach(Zebu Student's House) && can_reach(Zebu's Cave - Front) && Alarm Flute"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Windmill Exterior": {
     "name": "Windmill Exterior",
@@ -5653,7 +5943,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Zebu Student's House": {
     "name": "Zebu Student's House",
@@ -5681,7 +5972,8 @@
         "is_chest": false,
         "pseudologic": "TRUE"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   },
   "Zebu's Cave - Back": {
     "name": "Zebu's Cave - Back",
@@ -5705,7 +5997,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Zebu's Cave - Front": {
     "name": "Zebu's Cave - Front",
@@ -5729,7 +6022,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Zombie Town": {
     "name": "Zombie Town",
@@ -5760,7 +6054,8 @@
         "notes": ""
       }
     ],
-    "locations": []
+    "locations": [],
+    "ban_wildwarp": false
   },
   "Menu": {
     "name": "Menu",
@@ -5786,6 +6081,7 @@
         "is_chest": false,
         "pseudologic": "Broken Statue && Glowing Lamp"
       }
-    ]
+    ],
+    "ban_wildwarp": false
   }
 }
