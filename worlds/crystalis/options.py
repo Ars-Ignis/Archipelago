@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from Options import Choice, Toggle, PerGameCommonOptions
+from Options import Choice, Toggle, PerGameCommonOptions, OptionGroup
 
 
 # World Options
@@ -10,9 +10,21 @@ class RandomizeMaps(Toggle):
     display_name = "Randomize maps (Wm)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "W", "m"
+        return "", ""
+
+
 class ShuffleAreas(Toggle):
     """Shuffles some or all area connections."""
     display_name = "Shuffle areas (Wa)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "W", "a"
+        return "", ""
 
 
 class ShuffleHouseEntrances(Toggle):
@@ -22,6 +34,12 @@ class ShuffleHouseEntrances(Toggle):
     display_name = "Shuffle house entrances (Wh)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "W", "h"
+        return "", ""
+
+
 class RandomizeTradeInItems(Toggle):
     """Items expected by various NPCs will be shuffled: specifically, Statue of Onyx, Kirisa Plant, Love Pendant, Ivory
     Statue, and Fog Lamp. Rage will expect a random sword, and Tornel will expect a random bracelet.
@@ -29,23 +47,47 @@ class RandomizeTradeInItems(Toggle):
     display_name = "Randomize trade-in items (Wt)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "W", "t"
+        return "", ""
+
+
 class UnidentifiedKeyItems(Toggle):
     """Item names will be generic and effects will be shuffled. This includes keys, flutes, lamps, and statues."""
     display_name = "Unidentified key items (Wu)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "W", "u"
+        return "", ""
+
+
 class RandomizeWallElements(Toggle):
     """Walls will require a randomized element to break. Normal rock and ice walls will indicate the required element by
-     the color (light grey or yellow for wind, blue for fire, bright orange ("embers") for water, or dark grey ("steel")
-      for thunder. The element to break these walls is the same throughout an area. Iron walls require a one-off random
-      element, with no visual cue, and two walls in the same area may have different requirements.
-      """
+    the color (light grey or yellow for wind, blue for fire, bright orange ("embers") for water, or dark grey ("steel")
+    for thunder. The element to break these walls is the same throughout an area. Iron walls require a one-off random
+    element, with no visual cue, and two walls in the same area may have different requirements.
+    """
     display_name = "Randomize elements to break walls (We)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "W", "e"
+        return "", ""
 
 
 class ShuffleGoa(Toggle):
     """The four areas of Goa fortress will appear in a random order."""
     display_name = "Shuffle Goa fortress floors (Wg)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "W", "g"
+        return "", ""
 
 
 class RandomizeSpriteColors(Toggle):
@@ -55,9 +97,21 @@ class RandomizeSpriteColors(Toggle):
     display_name = "Randomize sprite colors (Ws)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "W", "s"
+        return "", ""
+
+
 class RandomizeWildWarp(Toggle):
     """Wild warp will go to Mezame Shrine and 15 other random locations. These locations will be considered in-logic."""
     display_name = "Randomize wild warp (Ww)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "W", "w"
+        return "", ""
 
 
 # Routing Options
@@ -66,6 +120,11 @@ class StoryMode(Toggle):
     display_name = "Story Mode (Rs)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "R", "s"
+        return "", ""
+
 class NoBowMode(Toggle):
     """No items are required to finish the game. An exit is added from Mezame shrine directly to the Draygon 2 fight
     (and the normal entrance is removed). Draygon 2 spawns automatically with no Bow of Truth.
@@ -73,21 +132,41 @@ class NoBowMode(Toggle):
     display_name = "No Bow mode (Rb)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "R", "b"
+        return "", ""
+
+
 class OrbsNotRequired(Toggle):
     """If true, walls can be broken and bridges formed with level 1 shots."""
     display_name = "Orbs not required to break walls (Ro)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "R", "o"
+        return "", ""
+
+
 class ThunderWarp(Choice):
     """Determines where the player is warped to when receiving the Sword of Thunder.
+    Shuffled: The Sword of Thunder will warp you to a random town.
     None: The Sword of Thunder won't warp you. (Rt)
     Vanilla: The Sword of Thunder will warp you to Shyron. (R!t)
-    Shuffled: The Sword of Thunder will warp you to a random town.
     """
     display_name = "Sword of Thunder warp"
-    option_none = 0
-    option_vanilla = 1
-    option_shuffled = 2
+    option_shuffled = 0
+    option_none = 1
+    option_vanilla = 2
+
+
+    def flag_name(self) -> (str, str):
+        if self == self.option_none:
+            return "R", "t"
+        elif self == self.option_vanilla:
+            return "R", "!t"
+        return "", ""
 
 
 class VanillaDolphin(Toggle):
@@ -101,6 +180,12 @@ class VanillaDolphin(Toggle):
     display_name = "Vanilla Dolphin interactions (Rd)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "R", "d"
+        return "", ""
+
+
 # Glitch Options
 class FakeFlight(Choice):
     """Fake flight allows using Dolphin and Rabbit Boots to fly up the waterfalls in the Angry Sea (without calming the
@@ -110,6 +195,12 @@ class FakeFlight(Choice):
     display_name = "Fake flight (Gf)"
     option_out_of_logic = 0
     option_in_logic = 1
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "G", "f"
+        return "", ""
 
 
 class StatueGlitch(Choice):
@@ -123,6 +214,14 @@ class StatueGlitch(Choice):
     option_in_logic = 2
 
 
+    def flag_name(self) -> (str, str):
+        if self == self.option_in_logic:
+            return "G", "s"
+        elif self == self.option_out_of_logic:
+            return "G", "!s"
+        return "", ""
+
+
 class MtSabreSkip(Choice):
     """Entering Mt Sabre North normally requires (1) having Teleport, and (2) talking to the rabbit in Leaf after the
     abduction (via Telepathy). Both of these requirements can be skipped: first by flying over the river in Cordel plain
@@ -134,6 +233,14 @@ class MtSabreSkip(Choice):
     option_in_logic = 2
 
 
+    def flag_name(self) -> (str, str):
+        if self == self.option_in_logic:
+            return "G", "n"
+        elif self == self.option_out_of_logic:
+            return "G", "!n"
+        return "", ""
+
+
 class StatueGauntletSkip(Choice):
     """The shooting statues in front of Goa and Stxy normally require Barrier to pass safely. With this flag, Flight can
     also be used by flying around the edge of the statue.
@@ -142,6 +249,14 @@ class StatueGauntletSkip(Choice):
     option_disabled = 0
     option_out_of_logic = 1
     option_in_logic = 2
+
+
+    def flag_name(self) -> (str, str):
+        if self == self.option_in_logic:
+            return "G", "g"
+        elif self == self.option_out_of_logic:
+            return "G", "!g"
+        return "", ""
 
 
 class SwordChargeGlitch(Choice):
@@ -155,6 +270,14 @@ class SwordChargeGlitch(Choice):
     option_in_logic = 2
 
 
+    def flag_name(self) -> (str, str):
+        if self == self.option_in_logic:
+            return "G", "c"
+        elif self == self.option_out_of_logic:
+            return "G", "!c"
+        return "", ""
+
+
 class TriggerSkip(Choice):
     """A wide variety of triggers and exit squares can be skipped by using an invalid item every frame while walking.
     This allows bypassing both Mt Sabre North entrance triggers, the Evil Spirit Island entrance trigger, triggers for
@@ -164,6 +287,14 @@ class TriggerSkip(Choice):
     option_disabled = 0
     option_out_of_logic = 1
     option_in_logic = 2
+
+
+    def flag_name(self) -> (str, str):
+        if self == self.option_in_logic:
+            return "G", "t"
+        elif self == self.option_out_of_logic:
+            return "G", "!t"
+        return "", ""
 
 
 class RageSkip(Choice):
@@ -177,6 +308,14 @@ class RageSkip(Choice):
     option_in_logic = 2
 
 
+    def flag_name(self) -> (str, str):
+        if self == self.option_in_logic:
+            return "G", "r"
+        elif self == self.option_out_of_logic:
+            return "G", "!r"
+        return "", ""
+
+
 # Aesthetic Options
 class RandomizeBackgroundMusic(Choice):
     """Randomizes or disables the background music."""
@@ -185,15 +324,35 @@ class RandomizeBackgroundMusic(Choice):
     option_shuffle = 1
     option_disable = 2
 
+
+    def flag_name(self) -> (str, str):
+        if self == self.option_shuffle:
+            return "A", "!m"
+        elif self == self.option_disable:
+            return "A", "s"
+        return "", ""
+
 class RandomizeMapColors(Toggle):
     """Randomizes the palettes of the background tiles."""
     display_name = "Randomize map colors (Ac)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "A", "c"
+        return "", ""
 
 
 # Monster Options
 class RandomizeMonsterWeaknesses(Toggle):
     """Monster and boss elemental weaknesses are shuffled."""
     display_name = "Randomize monster weaknesses (Me)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "M", "e"
+        return "", ""
 
 
 class OopsAllMimics(Toggle):
@@ -203,15 +362,33 @@ class OopsAllMimics(Toggle):
     display_name = "Replace all chests with mimics (Mg)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "M", "g"
+        return "", ""
+
+
 class ShuffleTowerRobots(Toggle):
     """Tower robots will be shuffled into the normal pool."""
     display_name = "Shuffle tower robots (Mt)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "M", "t"
+        return "", ""
 
 
 # Easy Mode Options
 class DontShuffleMimics(Toggle):
     """Mimics will be in their vanilla locations."""
     display_name = "Don't shuffle mimics (Et)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "E", "t"
+        return "", ""
 
 
 class KeepUniqueItemsAndConsumablesSeparate(Toggle):
@@ -225,11 +402,23 @@ class KeepUniqueItemsAndConsumablesSeparate(Toggle):
     display_name = "Keep unique items and consumables separate (Eu)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "E", "u"
+        return "", ""
+
+
 class DecreaseEnemyDamage(Toggle):
     """Enemy attack power will be significantly decreased in the early game (by a factor of 3). The gap will narrow in
     the mid-game and eventually phase out at scaling level 40.
     """
     display_name = "Decrease enemy damage (Ed)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "E", "d"
+        return "", ""
 
 
 class GuaranteeStartingSword(Toggle):
@@ -239,9 +428,21 @@ class GuaranteeStartingSword(Toggle):
     display_name = "Guarantee starting sword (Es)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "E", "s"
+        return "", ""
+
+
 class GuaranteeRefresh(Toggle):
     """Guarantees the Refresh spell will be available before fighting Tetrarchs."""
     display_name = "Guarantee refresh (Er)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "E", "r"
+        return "", ""
 
 
 class ExperienceScalesFaster(Toggle):
@@ -249,11 +450,23 @@ class ExperienceScalesFaster(Toggle):
     display_name = "Experience scales faster (Ex)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "E", "x"
+        return "", ""
+
+
 class NoCommunityJokes(Toggle):
     """Skip community jokes, such as funny/misspelled item, monster, or character names. This will make it easier to
     look up information in guides/FAQs if necessary.
     """
     display_name = "No community jokes (Ec)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "E", "c"
+        return "", ""
 
 
 # No Guarantees Options
@@ -264,11 +477,23 @@ class BattleMagicNotGuaranteed(Toggle):
     display_name = "Battle magic not guaranteed (Nw)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "N", "w"
+        return "", ""
+
+
 class TinkMode(Toggle):
     """Enables "tink strats", where wrong-element swords will still do a single damage per hit. Player may be required
     to fight monsters (including bosses) with tinks.
     """
     display_name = "Matching sword not guaranteed (\"Tink Mode\") (Ns)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "N", "s"
+        return "", ""
 
 
 class BarrierNotGuaranteed(Toggle):
@@ -278,11 +503,23 @@ class BarrierNotGuaranteed(Toggle):
     display_name = "Barrier not guaranteed (Nb)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "N", "b"
+        return "", ""
+
+
 class GasMaskNotGuaranteed(Toggle):
     """The logic will not guarantee gas mask before needing to enter the swamp, nor will leather boots (or hazmat suit)
     be guaranteed to cross long stretches of spikes. Gas mask is still guaranteed to kill the insect.
     """
     display_name = "Gas mask not guaranteed (Ng)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "N", "g"
+        return "", ""
 
 
 # Hard Mode Options
@@ -293,9 +530,21 @@ class DontBuffConsumables(Toggle):
     display_name = "Don't buff medical herb or fruit of power (Hm)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "H", "m"
+        return "", ""
+
+
 class MaxScalingInTower(Toggle):
     """Enemies in the tower spawn at max scaling level."""
     display_name = "Max scaling level in tower (Ht)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "H", "t"
+        return "", ""
 
 
 class ExperienceScalesSlower(Toggle):
@@ -303,9 +552,21 @@ class ExperienceScalesSlower(Toggle):
     display_name = "Experience scales slower (Hx)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "H", "x"
+        return "", ""
+
+
 class ChargeShotsOnly(Toggle):
     """Stabbing is completely ineffective. Only charged shots work."""
     display_name = "Charge shots only (Hc)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "H", "c"
+        return "", ""
 
 
 class Blackout(Toggle):
@@ -313,18 +574,36 @@ class Blackout(Toggle):
     display_name = "Blackout (Hz)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "H", "z"
+        return "", ""
+
+
 class Permadeath(Toggle):
     """Hardcore mode: checkpoints and saves are removed."""
     display_name = "Permadeath (Hh)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "H", "h"
+        return "", ""
+
+
 # Vanilla Options
 class DontBuffDyna(Toggle):
-    """By default, we makes the Dyna fight a bit more of a challenge. Side pods will fire significantly more. The safe
+    """By default, we make the Dyna fight a bit more of a challenge. Side pods will fire significantly more. The safe
     spot has been removed. The revenge beams pass through barrier. Side pods can now be killed. This flag prevents that
     change.
     """
     display_name = "Don't buff Dyna (Vd)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "V", "d"
+        return "", ""
 
 
 class DontBuffBonusItems(Toggle):
@@ -334,6 +613,12 @@ class DontBuffBonusItems(Toggle):
     stationary, so as to prevent wasting tons of magic). Turning this on removes all these changes.
     """
     display_name = "Don't buff bonus items (Vb)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "V", "b"
+        return "", ""
 
 
 class VanillaMaps(Choice):
@@ -354,12 +639,26 @@ class VanillaMaps(Choice):
             return "GBC Cave"
         return super().get_option_name(value)
 
+
+    def flag_name(self) -> (str, str):
+        if self == self.option_lime_passage:
+            return "V", "!m"
+        elif self == self.option_vanilla:
+            return "V", "m"
+        return "", ""
+
 class VanillaShops(Toggle):
     """By default, we disable shop glitch, shuffle shop contents, and tie the prices to the scaling level (item shops
     and inns increase by a factor of 2 every 10 scaling levels, armor shops decrease by a factor of 2 every 12 scaling
     levels). This flag prevents all of these changes, restoring shops to be completely vanilla.
     """
     display_name = "Vanilla shops (Vs)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "V", "s"
+        return "", ""
 
 
 class VanillaWildWarp(Choice):
@@ -372,11 +671,25 @@ class VanillaWildWarp(Choice):
     option_vanilla = 2
 
 
+    def flag_name(self) -> (str, str):
+        if self == self.option_out_of_logic:
+            return "V", "!w"
+        elif self == self.option_vanilla:
+            return "V", "w"
+        return "", ""
+
+
 class VanillaHUD(Toggle):
     """By default, the blue status bar (HUD) at the bottom of the screen is reorganized a bit, including displaying
     enemies' names and HP. This disables those changes.
     """
     display_name = "Vanilla HUD (Vh)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "V", "h"
+        return "", ""
 
 
 # Quality of Life Options
@@ -387,12 +700,24 @@ class DontAutoEquipUpgrades(Toggle):
     display_name = "Don't automatically equip orbs and bracelets (Qa)"
 
 
+    def flag_name(self) -> (str, str):
+        if self:
+            return "Q", "a"
+        return "", ""
+
+
 class DisableControllerShortcuts(Toggle):
     """By default, we disable second controller input and instead enable some new shortcuts on controller 1: Start+A+B
     for wild warp, and Select+B to quickly change swords. To support this, the action of the start and select buttons is
     changed slightly. This flag disables this change and retains normal behavior.
     """
     display_name = "Disable controller shortcuts (Qc)"
+
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "Q", "c"
+        return "", ""
 
 
 class AudibleWallCues(Toggle):
@@ -403,8 +728,92 @@ class AudibleWallCues(Toggle):
     """
     display_name = "Audible wall cues (Qw)"
 
+
+    def flag_name(self) -> (str, str):
+        if self:
+            return "Q", "w"
+        return "", ""
+
+
+crystalis_option_groups = [
+    OptionGroup('World Options', [
+        RandomizeMaps,
+        ShuffleAreas,
+        ShuffleHouseEntrances,
+        RandomizeTradeInItems,
+        UnidentifiedKeyItems,
+        RandomizeWallElements,
+        ShuffleGoa,
+        RandomizeSpriteColors,
+        RandomizeWildWarp,
+    ]),
+    OptionGroup('Routing Options', [
+        StoryMode,
+        NoBowMode,
+        OrbsNotRequired,
+        ThunderWarp,
+        VanillaDolphin,
+    ]),
+    OptionGroup('Glitch Options', [
+        FakeFlight,
+        StatueGlitch,
+        MtSabreSkip,
+        StatueGauntletSkip,
+        SwordChargeGlitch,
+        TriggerSkip,
+        RageSkip,
+    ]),
+    OptionGroup('Aesthetic Options', [
+        RandomizeBackgroundMusic,
+        RandomizeMapColors,
+    ]),
+    OptionGroup('Monster Options', [
+        RandomizeMonsterWeaknesses,
+        OopsAllMimics,
+        ShuffleTowerRobots,
+    ]),
+    OptionGroup('Easy Mode Options', [
+        DontShuffleMimics,
+        KeepUniqueItemsAndConsumablesSeparate,
+        DecreaseEnemyDamage,
+        GuaranteeStartingSword,
+        GuaranteeRefresh,
+        ExperienceScalesFaster,
+        NoCommunityJokes,
+    ]),
+    OptionGroup('No Guarantees Options', [
+        BattleMagicNotGuaranteed,
+        TinkMode,
+        BarrierNotGuaranteed,
+        GasMaskNotGuaranteed,
+    ]),
+    OptionGroup('Hard Mode Options', [
+        DontBuffConsumables,
+        MaxScalingInTower,
+        ExperienceScalesSlower,
+        ChargeShotsOnly,
+        Blackout,
+        Permadeath,
+    ]),
+    OptionGroup('Vanilla Options', [
+        DontBuffDyna,
+        DontBuffBonusItems,
+        VanillaMaps,
+        VanillaShops,
+        VanillaWildWarp,
+        VanillaHUD,
+    ]),
+    OptionGroup('Quality of Life Options', [
+        DontAutoEquipUpgrades,
+        DisableControllerShortcuts,
+        AudibleWallCues,
+    ]),
+]
+
+
 @dataclass
 class CrystalisOptions(PerGameCommonOptions):
+    #World options
     randomize_maps: RandomizeMaps
     shuffle_areas: ShuffleAreas
     shuffle_houses: ShuffleHouseEntrances
@@ -414,11 +823,13 @@ class CrystalisOptions(PerGameCommonOptions):
     shuffle_goa: ShuffleGoa
     randomize_sprite_colors: RandomizeSpriteColors
     randomize_wild_warp: RandomizeWildWarp
+    #Routing options
     story_mode: StoryMode
     no_bow_mode: NoBowMode
     orbs_not_required: OrbsNotRequired
     thunder_warp: ThunderWarp
     vanilla_dolphin: VanillaDolphin
+    #Glitch options
     fake_flight: FakeFlight
     statue_glitch: StatueGlitch
     mt_sabre_skip: MtSabreSkip
@@ -426,11 +837,14 @@ class CrystalisOptions(PerGameCommonOptions):
     sword_charge_glitch: SwordChargeGlitch
     trigger_skip: TriggerSkip
     rage_skip: RageSkip
+    #Aesthetic options
     randomize_background_music: RandomizeBackgroundMusic
     randomize_map_colors: RandomizeMapColors
+    #Monster options
     randomize_monster_weaknesses: RandomizeMonsterWeaknesses
     oops_all_mimics: OopsAllMimics
     shuffle_tower_robots: ShuffleTowerRobots
+    #Easy mode options
     dont_shuffle_mimics: DontShuffleMimics
     keep_unique_items_and_consumables_separate: KeepUniqueItemsAndConsumablesSeparate
     decrease_enemy_damage: DecreaseEnemyDamage
@@ -438,22 +852,26 @@ class CrystalisOptions(PerGameCommonOptions):
     guarantee_refresh: GuaranteeRefresh
     experience_scales_faster: ExperienceScalesFaster
     no_community_jokes: NoCommunityJokes
+    #No guarantees options
     battle_magic_not_guaranteed: BattleMagicNotGuaranteed
     tink_mode: TinkMode
     barrier_not_guaranteed: BarrierNotGuaranteed
     gas_mask_not_guaranteed: GasMaskNotGuaranteed
+    #Hard mode options
     dont_buff_consumables: DontBuffConsumables
     max_scaling_in_tower: MaxScalingInTower
     experience_scales_slower: ExperienceScalesSlower
     charge_shots_only: ChargeShotsOnly
     blackout: Blackout
     permadeath: Permadeath
+    #Vanilla options
     dont_buff_dyna: DontBuffDyna
     dont_buff_bonus_items: DontBuffBonusItems
     vanilla_maps: VanillaMaps
     vanilla_shops: VanillaShops
     vanilla_wild_warp: VanillaWildWarp
     vanilla_hud: VanillaHUD
+    #Quality of Life options
     dont_auto_equip_upgrades: DontAutoEquipUpgrades
     disable_controller_shortcuts: DisableControllerShortcuts
     audible_wall_cues: AudibleWallCues

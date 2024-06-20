@@ -46,27 +46,31 @@ def set_two_way_logic(forward_entrance: Entrance) -> None:
 
 def get_tetrarch_fight_logic(player: int, element: str, options: CrystalisOptions, level: Optional[int] = None) -> \
     Callable[[CollectionState], bool]:
-    logic: Callable[[CollectionState], bool]
+    element_logic: Callable[[CollectionState], bool]
     if options.tink_mode:
-        logic = lambda state: state.has_group("Sword", player, 1)
+        element_logic = lambda state: state.has_group("Sword", player, 1)
     else:
-        logic = lambda state: state.has("Sword of " + element, player)
+        element_logic = lambda state: state.has("Sword of " + element, player)
+    battle_magic_logic: Callable[[CollectionState], bool]
     if not options.battle_magic_not_guaranteed:
-        old_logic = logic
         if options.sword_charge_glitch == options.sword_charge_glitch.option_in_logic or options.tink_mode:
             if level is not None and level == 2:
-                logic = lambda state: old_logic(state) and has_any_level_2_sword(state, player)
+                battle_magic_logic = lambda state: has_any_level_2_sword(state, player)
             else:
-                logic = lambda state: old_logic(state) and has_any_level_3_sword(state, player)
+                battle_magic_logic = lambda state: has_any_level_3_sword(state, player)
         else:
             if level is not None and level == 2:
-                logic = lambda state: old_logic(state) and has_level_2_sword(state, player, element)
+                battle_magic_logic = lambda state: has_level_2_sword(state, player, element)
             else:
-                logic = lambda state: old_logic(state) and has_level_3_sword(state, player, element)
+                battle_magic_logic = lambda state: has_level_3_sword(state, player, element)
+    else:
+        battle_magic_logic = lambda state: True
+    refresh_logic: Callable[[CollectionState], bool]
     if options.guarantee_refresh:
-        old_logic = logic
-        logic = lambda state: old_logic(state) and state.has("Refresh", player)
-    return logic
+        refresh_logic = lambda state: state.has("Refresh", player)
+    else:
+        refresh_logic = lambda state: True
+    return lambda state: element_logic(state) and battle_magic_logic(state) and refresh_logic(state)
 
 
 
@@ -80,8 +84,8 @@ def set_rules(self) -> None:
         can_break_wall = has_level_1_sword
     else:
         if options.sword_charge_glitch == options.sword_charge_glitch.option_in_logic:
-            can_break_wall = lambda state, player, elem: has_any_level_2_sword(state, player) and \
-                                                         state.has("Sword of " + elem, player)
+            can_break_wall = lambda state, plyr, elem: has_any_level_2_sword(state, plyr) and \
+                                                         state.has("Sword of " + elem, plyr)
         else:
             can_break_wall = has_level_2_sword
 
@@ -100,7 +104,7 @@ def set_rules(self) -> None:
     buy_healing_region.locations.append(buy_healing_location)
     buy_warp_boots_region = self.get_region("Buy Warp Boots")
     buy_warp_boots_location = CrystalisLocation(player, "Buy Warp Boots", None, buy_warp_boots_region)
-    buy_warp_boots_location.place_locked_item(CrystalisItem("Buy Warp Boots", ItemClassification.progression, None, \
+    buy_warp_boots_location.place_locked_item(CrystalisItem("Buy Warp Boots", ItemClassification.progression, None,
                                                             player))
     buy_warp_boots_region.locations.append(buy_warp_boots_location)
     mesia_region = self.get_region("Mesia")
@@ -189,12 +193,12 @@ def set_rules(self) -> None:
     #GBC Cave
     if options.vanilla_maps == options.vanilla_maps.option_GBC_cave:
         gbc_wall_entrance = self.get_entrance("GBC Cave - Main -> GBC Cave - Past Block")
-        set_rule(gbc_wall_entrance, lambda state: can_break_wall(state, player, shuffle_data.wall_map["GBC Cave"]))
+        set_rule(gbc_wall_entrance, lambda state: can_break_wall(state, player, shuffle_data.wall_map["East Cave"]))
         set_two_way_logic(gbc_wall_entrance)
 
     #Zebu's Cave
     zebus_wall_entrance = self.get_entrance("Zebu's Cave - Front -> Zebu's Cave - Back")
-    set_rule(zebus_wall_entrance, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Zebu's Cave"]))
+    set_rule(zebus_wall_entrance, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Zebu Cave"]))
     set_two_way_logic(zebus_wall_entrance)
 
     #Sealed Cave
@@ -246,7 +250,7 @@ def set_rules(self) -> None:
 
     #Mt. Sabre West
     def can_break_sabre_west_wall(state: CollectionState) -> bool:
-        return can_break_wall(state, player, shuffle_data.wall_map["Mt. Sabre West"])
+        return can_break_wall(state, player, shuffle_data.wall_map["Mt Sabre West"])
     if not options.trigger_skip == options.trigger_skip.option_in_logic:
         sabre_w_small_slope = self.get_entrance("Mt. Sabre West - Main -> Mt. Sabre West - Tornado Cave")
         set_rule(sabre_w_small_slope, lambda state: state.has("Flight", player) or state.has("Rabbit Boots", player) or \
@@ -274,7 +278,7 @@ def set_rules(self) -> None:
     set_rule(swamp_pass_1, lambda state: state.has("Hazmat Suit", player) or state.has("Gas Mask", player))
     if options.gas_mask_not_guaranteed:
         add_rule(swamp_pass_1, lambda state: state.has("Buy Healing", player) or \
-                                             (state.has("Refresh", player) and state.has_group("Sword", player, 1)), \
+                                             (state.has("Refresh", player) and state.has_group("Sword", player, 1)),
                  "or")
     swamp_pass_2 = self.get_entrance("Swamp - Far Side -> Swamp - Interior")
     swamp_pass_2.access_rule = swamp_pass_1.access_rule
@@ -302,16 +306,16 @@ def set_rules(self) -> None:
         insect_weapons = ["Sword of " + x for x in elements]
     else:
         insect_weapons = ["Sword of " + x for x in elements if x != shuffle_data.boss_reqs["Giant Insect"]]
-    set_rule(insect_reward, lambda state: state.has(shuffle_data.key_item_names["Insect Flute"], player) and \
-                                          (state.has("Gas Mask", player) or state.has("Hazmat Suit", player)) and \
+    set_rule(insect_reward, lambda state: state.has(shuffle_data.key_item_names["Insect Flute"], player) and
+                                          (state.has("Gas Mask", player) or state.has("Hazmat Suit", player)) and
                                           state.has_any(insect_weapons, player))
     oak_elder_reward = self.get_location("Oak Elder")
-    set_rule(oak_elder_reward, lambda state: state.has("Telepathy", player) and (state.can_reach(insect_reward) or \
+    set_rule(oak_elder_reward, lambda state: state.has("Telepathy", player) and (state.can_reach(insect_reward) or
                                                                                  state.can_reach(oak_mom_reward)))
 
     #Mt. Sabre North entrances
     def can_break_sabre_north_wall(state: CollectionState) -> bool:
-        return can_break_wall(state, player, shuffle_data.wall_map["Mt. Sabre North"])
+        return can_break_wall(state, player, shuffle_data.wall_map["Mt Sabre North"])
     if options.trigger_skip != options.trigger_skip.option_in_logic and \
        options.mt_sabre_skip != options.mt_sabre_skip.option_in_logic:
         rabbit_trigger = self.get_entrance("Mt. Sabre North - Pre-Trigger -> Mt. Sabre North - Main")
@@ -499,7 +503,7 @@ def set_rules(self) -> None:
                                          state.has("Boat Access", player)
         add_rule(boat_access_location, lambda state: dolphin.can_reach(state), "and")
     activate_shell_flute_location = CrystalisLocation(player, "Activate Shell Flute", None, region_for_flute_activation)
-    activate_shell_flute_location.place_locked_item(CrystalisItem("Active Shell Flute", \
+    activate_shell_flute_location.place_locked_item(CrystalisItem("Active Shell Flute",
                                                                       ItemClassification.progression, None, player))
     activate_shell_flute_location.access_rule = shell_flute_rule
     region_for_flute_activation.locations.append(activate_shell_flute_location)
@@ -585,13 +589,13 @@ def set_rules(self) -> None:
     set_two_way_logic(swan_gate)
     tag_kensu = self.get_location("Kensu In Swan")
     set_rule(tag_kensu, lambda state: state.has("Paralysis", player) and
-                                      state.has(shuffle_data.trade_in_map["Tag Kensu"], player) and
+                                      state.has(shuffle_data.trade_in_map["Kensu"], player) and
                                       state.can_reach_region("Swan Shed", player) and
                                       state.can_reach_region("Swan Pub", player))
 
     #Mt. Hydra
     def can_break_hydra_walls(state: CollectionState) -> bool:
-        return can_break_wall(state, player, shuffle_data.wall_map["Mt. Hydra"])
+        return can_break_wall(state, player, shuffle_data.wall_map["Mt Hydra"])
     hydra_lower_river = self.get_entrance("Mt. Hydra - Lower -> Mt. Hydra - Guarded Palace")
     hydra_lower_river.access_rule = can_cross_rivers
     set_two_way_logic(hydra_lower_river)
@@ -628,14 +632,16 @@ def set_rules(self) -> None:
                                           mado_1_fight_logic(state))
 
     #Stxy
-    can_cross_shooters_south = lambda state: state.has("Barrier", player)
+    barrier_logic = lambda state: state.has("Barrier", player)
+    can_cross_shooters_south: Callable[[CollectionState], bool]
     if options.barrier_not_guaranteed:
-        old_func = can_cross_shooters_south
-        can_cross_shooters_south = lambda state: old_func(state) or \
+        can_cross_shooters_south = lambda state: barrier_logic(state) or \
                                                  (state.has_group("Sword", player, 1) and
                                                  (state.has("Shield Ring", player) or
                                                   state.has("Buy Healing", player) or
                                                   state.has("Refresh", player)))
+    else:
+        can_cross_shooters_south = barrier_logic
     can_cross_shooters_north = can_cross_shooters_south
     if options.statue_gauntlet_skip:
         can_cross_shooters_north = lambda state: state.has("Flight", player) or can_cross_shooters_south(state)
@@ -670,7 +676,8 @@ def set_rules(self) -> None:
     goa_entrance_shooter_s = self.get_entrance("Goa Entrance - Massacre Trigger -> Goa Entrance - Front")
     goa_entrance_shooter_s.access_rule = can_cross_shooters_south
     goa_entrance_wall = self.get_entrance("Goa Entrance - Massacre Trigger -> Goa Entrance - Behind Wall")
-    set_rule(goa_entrance_wall, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Goa Entrance"]))
+    set_rule(goa_entrance_wall, lambda state: can_break_wall(state, player,
+                                                             shuffle_data.wall_map["Goa Fortress - Entrance"]))
     set_two_way_logic(goa_entrance_wall)
 
     #Goa Fortress - Kelbesque's Floor
@@ -687,7 +694,8 @@ def set_rules(self) -> None:
     sabera_river_items = self.get_entrance("Sabera's Floor - Front -> Sabera's Floor - River Items")
     sabera_river_items.access_rule = can_cross_rivers
     sabera_boss_wall = self.get_entrance("Sabera's Floor - Across Rivers -> Sabera's Floor - Pre-Boss")
-    set_rule(sabera_boss_wall, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Sabera Boss"]))
+    set_rule(sabera_boss_wall, lambda state: can_break_wall(state, player,
+                                                            shuffle_data.wall_map["Goa Fortress - Sabera Boss"]))
     set_two_way_logic(sabera_boss_wall)
     sabera_2_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Sabera 2"], options)
     sabera_2_forward = self.get_entrance("Sabera's Floor - Pre-Boss -> Sabera's Floor - Boss Arena")
@@ -695,7 +703,8 @@ def set_rules(self) -> None:
     sabera_2_backward = self.get_entrance("Sabera's Floor - Back -> Sabera's Floor - Boss Arena")
     sabera_2_backward.access_rule = sabera_2_logic
     sabera_wall_item = self.get_location("Fortress Sabera Northwest Chest")
-    set_rule(sabera_wall_item, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Sabera Item"]))
+    set_rule(sabera_wall_item, lambda state: can_break_wall(state, player,
+                                                            shuffle_data.wall_map["Goa Fortress - Sabera Item"]))
 
     #Goa Fortress - Mado's Floor
     mado_spike_items = self.get_entrance("Mado's Floor - Front -> Mado's Floor - Spike Items")
@@ -709,13 +718,13 @@ def set_rules(self) -> None:
     mado_2_forward.access_rule = mado_2_logic
     mado_2_backward = self.get_entrance("Mado's Floor - Back -> Mado's Floor - Boss Arena")
     mado_2_backward.access_rule = mado_2_logic
-    mado_wall_item = self.get_location("Fortress Mado Upper Behind Wall Chest")
-    set_rule(mado_wall_item, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Mado"]))
+    mado_wal_item = self.get_location("Fortress Mado Upper Behind Wall Chest")
+    set_rule(mado_wal_item, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Goa Fortress - Mado 2"]))
 
     #Goa Fortress - Karmine's Floor
-    karmine_wall = self.get_entrance("Karmine's Floor - Front -> Karmine's Floor - Back")
-    set_rule(karmine_wall, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Karmine"]))
-    set_two_way_logic(karmine_wall)
+    karm_wall = self.get_entrance("Karmine's Floor - Front -> Karmine's Floor - Back")
+    set_rule(karm_wall, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Goa Fortress - Karmine 5"]))
+    set_two_way_logic(karm_wall)
     karmine_spikes = self.get_entrance("Karmine's Floor - Back -> Karmine's Floor - Item Stash")
     karmine_spikes.access_rule = can_cross_pain
     karmine_boss_door = self.get_entrance("Karmine's Floor - Back -> Karmine's Floor - Pre-Boss Gauntlet")
@@ -727,7 +736,7 @@ def set_rules(self) -> None:
     karmine_fight = self.get_entrance("Karmine's Floor - Boss Arena -> Karmine's Floor - Post-Boss")
     karmine_fight.access_rule = karmine_logic
     slime_kensu = self.get_location("Slimed Kensu")
-    set_rule(slime_kensu, lambda state: state.has(shuffle_data.trade_in_map["Slime Kensu"], player))
+    set_rule(slime_kensu, lambda state: state.has(shuffle_data.trade_in_map["Slimed Kensu"], player))
 
     #Oasis Cave/Power Ring Basement
     oasis_river = self.get_entrance("Oasis Cave - Front -> Oasis Cave - Across the River")
@@ -739,8 +748,8 @@ def set_rules(self) -> None:
     oasis_river_maze = self.get_entrance("Oasis Cave - Front -> Oasis Cave - By Deep Entrance")
     oasis_river_maze.access_rule = can_cross_rivers
     set_two_way_logic(oasis_river_maze)
-    power_ring_loc = self.get_location("Oasis Cave Fortress Basement Chest")
-    set_rule(power_ring_loc, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Power Ring Basement"]))
+    basement = self.get_location("Oasis Cave Fortress Basement Chest")
+    set_rule(basement, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Goa Fortress Basement"]))
     battle_armor_loc = self.get_location("Battle Armor Chest")
     set_rule(battle_armor_loc, lambda state: state.has("Flight", player))
     oasis_river_maze_loc = self.get_location("Oasis Cave Near Entrance Chest")
