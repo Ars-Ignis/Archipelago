@@ -1,10 +1,30 @@
-
+import logging
 from dataclasses import dataclass
 from BaseClasses import ItemClassification
 from enum import IntEnum
 from typing import List, Dict, Optional
 
 CRYSTALIS_BASE_ID: int = 2241000
+
+
+class CrystalisElementEnum(IntEnum):
+    WIND = 0
+    FIRE = 1
+    WATER = 2
+    THUNDER = 3
+
+
+def convert_text_to_elem_enum(text: str):
+    if text == "Wind":
+        return CrystalisElementEnum.WIND
+    if text == "Fire":
+        return CrystalisElementEnum.FIRE
+    if text == "Water":
+        return CrystalisElementEnum.WATER
+    if text == "Thunder":
+        return CrystalisElementEnum.THUNDER
+    logging.warning("Unregonized element: " + text)
+    return CrystalisElementEnum.WIND
 
 
 class CrystalisItemCategoryEnum(IntEnum):
@@ -72,6 +92,7 @@ class CrystalisRegionData:
     wildwarpIds: List[int]
     entrances: List[CrystalisEntranceData]
     locations: List[CrystalisLocationData]
+    ban_wildwarp: bool
 
 
 @dataclass
