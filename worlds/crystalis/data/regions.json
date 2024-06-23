@@ -254,7 +254,7 @@
     "locations": [
       {
         "name": "Behind Whirlpool",
-        "rom_id": 326,
+        "rom_id": 70,
         "ap_id_offset": 59,
         "unique": true,
         "lossy": true,
@@ -284,7 +284,7 @@
     "locations": [
       {
         "name": "Aryllis Basement Chest",
-        "rom_id": 266,
+        "rom_id": 10,
         "ap_id_offset": 10,
         "unique": true,
         "lossy": false,
@@ -294,7 +294,7 @@
       },
       {
         "name": "Aryllis",
-        "rom_id": 318,
+        "rom_id": 62,
         "ap_id_offset": 51,
         "unique": true,
         "lossy": true,
@@ -323,7 +323,7 @@
     "locations": [
       {
         "name": "Asina In Back Room",
-        "rom_id": 325,
+        "rom_id": 69,
         "ap_id_offset": 58,
         "unique": true,
         "lossy": true,
@@ -352,7 +352,7 @@
     "locations": [
       {
         "name": "Kensu In Cabin",
-        "rom_id": 359,
+        "rom_id": 103,
         "ap_id_offset": 83,
         "unique": true,
         "lossy": true,
@@ -429,7 +429,7 @@
     "locations": [
       {
         "name": "Brokahana",
-        "rom_id": 299,
+        "rom_id": 43,
         "ap_id_offset": 32,
         "unique": true,
         "lossy": true,
@@ -493,7 +493,7 @@
     "locations": [
       {
         "name": "Akahana Statue of Onyx Tradein",
-        "rom_id": 297,
+        "rom_id": 41,
         "ap_id_offset": 30,
         "unique": true,
         "lossy": true,
@@ -597,7 +597,7 @@
     "locations": [
       {
         "name": "Clark",
-        "rom_id": 311,
+        "rom_id": 55,
         "ap_id_offset": 44,
         "unique": true,
         "lossy": true,
@@ -668,7 +668,7 @@
     "locations": [
       {
         "name": "Cordel Grass",
-        "rom_id": 293,
+        "rom_id": 37,
         "ap_id_offset": 26,
         "unique": true,
         "lossy": false,
@@ -776,7 +776,7 @@
     "locations": [
       {
         "name": "Crypt Left Pit Mimic",
-        "rom_id": 376,
+        "rom_id": 120,
         "ap_id_offset": 99,
         "unique": false,
         "lossy": false,
@@ -813,7 +813,7 @@
     "locations": [
       {
         "name": "Crypt Right Chest",
-        "rom_id": 365,
+        "rom_id": 109,
         "ap_id_offset": 88,
         "unique": true,
         "lossy": false,
@@ -867,7 +867,7 @@
     "locations": [
       {
         "name": "Deo",
-        "rom_id": 301,
+        "rom_id": 45,
         "ap_id_offset": 34,
         "unique": true,
         "lossy": true,
@@ -1102,7 +1102,7 @@
     "locations": [
       {
         "name": "Evil Spirit Island Lower Chest",
-        "rom_id": 290,
+        "rom_id": 34,
         "ap_id_offset": 23,
         "unique": true,
         "lossy": false,
@@ -1156,7 +1156,7 @@
     "locations": [
       {
         "name": "Evil Spirit Island River Left Chest",
-        "rom_id": 300,
+        "rom_id": 44,
         "ap_id_offset": 33,
         "unique": true,
         "lossy": false,
@@ -1166,7 +1166,7 @@
       },
       {
         "name": "Evil Spirit Island River Right Mimic",
-        "rom_id": 371,
+        "rom_id": 115,
         "ap_id_offset": 94,
         "unique": false,
         "lossy": false,
@@ -1209,7 +1209,7 @@
     "locations": [
       {
         "name": "Evil Spirit Island Exit Chest",
-        "rom_id": 348,
+        "rom_id": 92,
         "ap_id_offset": 72,
         "unique": true,
         "lossy": false,
@@ -1334,7 +1334,7 @@
     "locations": [
       {
         "name": "Fog Lamp Cave Front Chest",
-        "rom_id": 287,
+        "rom_id": 31,
         "ap_id_offset": 20,
         "unique": true,
         "lossy": false,
@@ -1344,7 +1344,7 @@
       },
       {
         "name": "Fog Lamp Cave Back Chest",
-        "rom_id": 309,
+        "rom_id": 53,
         "ap_id_offset": 42,
         "unique": true,
         "lossy": false,
@@ -1354,7 +1354,7 @@
       },
       {
         "name": "Fog Lamp Cave Middle North Mimic",
-        "rom_id": 368,
+        "rom_id": 112,
         "ap_id_offset": 91,
         "unique": false,
         "lossy": false,
@@ -1364,7 +1364,7 @@
       },
       {
         "name": "Fog Lamp Cave Middle Southwest Mimic",
-        "rom_id": 369,
+        "rom_id": 113,
         "ap_id_offset": 92,
         "unique": false,
         "lossy": false,
@@ -1428,7 +1428,7 @@
     "locations": [
       {
         "name": "East Cave Northeast Chest",
-        "rom_id": 345,
+        "rom_id": 89,
         "ap_id_offset": 70,
         "unique": true,
         "lossy": false,
@@ -1438,7 +1438,7 @@
       },
       {
         "name": "East Cave Northwest Mimic",
-        "rom_id": 380,
+        "rom_id": 124,
         "ap_id_offset": 103,
         "unique": false,
         "lossy": false,
@@ -1913,7 +1913,7 @@
     "locations": [
       {
         "name": "Slimed Kensu",
-        "rom_id": 328,
+        "rom_id": 72,
         "ap_id_offset": 61,
         "unique": true,
         "lossy": true,
@@ -1984,7 +1984,7 @@
     "locations": [
       {
         "name": "Karmine Basement Lower Middle Chest",
-        "rom_id": 344,
+        "rom_id": 88,
         "ap_id_offset": 69,
         "unique": true,
         "lossy": false,
@@ -1994,7 +1994,7 @@
       },
       {
         "name": "Karmine Basement Lower Left Chest",
-        "rom_id": 366,
+        "rom_id": 110,
         "ap_id_offset": 89,
         "unique": true,
         "lossy": false,
@@ -2004,7 +2004,7 @@
       },
       {
         "name": "Karmine Basement Upper Middle Mimic",
-        "rom_id": 377,
+        "rom_id": 121,
         "ap_id_offset": 100,
         "unique": false,
         "lossy": false,
@@ -2014,7 +2014,7 @@
       },
       {
         "name": "Karmine Basement Upper Right Mimic",
-        "rom_id": 378,
+        "rom_id": 122,
         "ap_id_offset": 101,
         "unique": false,
         "lossy": false,
@@ -2024,7 +2024,7 @@
       },
       {
         "name": "Karmine Basement Lower Right Mimic",
-        "rom_id": 379,
+        "rom_id": 123,
         "ap_id_offset": 102,
         "unique": false,
         "lossy": false,
@@ -2043,7 +2043,7 @@
     "locations": [
       {
         "name": "Storm Bracelet Chest",
-        "rom_id": 268,
+        "rom_id": 12,
         "ap_id_offset": 12,
         "unique": true,
         "lossy": false,
@@ -2053,7 +2053,7 @@
       },
       {
         "name": "Karmine",
-        "rom_id": 317,
+        "rom_id": 61,
         "ap_id_offset": 50,
         "unique": true,
         "lossy": false,
@@ -2137,7 +2137,7 @@
     "locations": [
       {
         "name": "Kelbesque 2",
-        "rom_id": 294,
+        "rom_id": 38,
         "ap_id_offset": 27,
         "unique": true,
         "lossy": false,
@@ -2247,7 +2247,7 @@
     "locations": [
       {
         "name": "Kirisa Plant Cave Chest",
-        "rom_id": 351,
+        "rom_id": 95,
         "ap_id_offset": 75,
         "unique": true,
         "lossy": false,
@@ -2276,7 +2276,7 @@
     "locations": [
       {
         "name": "Kirisa Meadow",
-        "rom_id": 316,
+        "rom_id": 60,
         "ap_id_offset": 49,
         "unique": true,
         "lossy": false,
@@ -2382,7 +2382,7 @@
     "locations": [
       {
         "name": "Leaf Elder",
-        "rom_id": 256,
+        "rom_id": 0,
         "ap_id_offset": 0,
         "unique": true,
         "lossy": true,
@@ -2449,7 +2449,7 @@
     "locations": [
       {
         "name": "Kensu In Lighthouse",
-        "rom_id": 313,
+        "rom_id": 57,
         "ap_id_offset": 46,
         "unique": true,
         "lossy": true,
@@ -2579,7 +2579,7 @@
     "locations": [
       {
         "name": "Mado 2",
-        "rom_id": 274,
+        "rom_id": 18,
         "ap_id_offset": 14,
         "unique": true,
         "lossy": false,
@@ -2637,7 +2637,7 @@
     "locations": [
       {
         "name": "Fortress Mado Lower Center North Chest",
-        "rom_id": 355,
+        "rom_id": 99,
         "ap_id_offset": 79,
         "unique": true,
         "lossy": false,
@@ -2647,7 +2647,7 @@
       },
       {
         "name": "Fortress Mado Lower Southeast Chest",
-        "rom_id": 367,
+        "rom_id": 111,
         "ap_id_offset": 90,
         "unique": true,
         "lossy": false,
@@ -2676,7 +2676,7 @@
     "locations": [
       {
         "name": "Fortress Mado Upper North Chest",
-        "rom_id": 352,
+        "rom_id": 96,
         "ap_id_offset": 76,
         "unique": true,
         "lossy": false,
@@ -2686,7 +2686,7 @@
       },
       {
         "name": "Fortress Mado Upper Behind Wall Chest",
-        "rom_id": 363,
+        "rom_id": 107,
         "ap_id_offset": 86,
         "unique": true,
         "lossy": false,
@@ -2723,7 +2723,7 @@
     "locations": [
       {
         "name": "Fortress Mado Hellway Chest",
-        "rom_id": 340,
+        "rom_id": 84,
         "ap_id_offset": 65,
         "unique": true,
         "lossy": false,
@@ -2770,7 +2770,7 @@
     "locations": [
       {
         "name": "Mezame Left Chest",
-        "rom_id": 329,
+        "rom_id": 73,
         "ap_id_offset": 104,
         "unique": true,
         "lossy": false,
@@ -2780,7 +2780,7 @@
       },
       {
         "name": "Mezame Right Chest",
-        "rom_id": 305,
+        "rom_id": 49,
         "ap_id_offset": 105,
         "unique": true,
         "lossy": false,
@@ -2850,7 +2850,7 @@
     "locations": [
       {
         "name": "Mt Hydra Right Chest",
-        "rom_id": 288,
+        "rom_id": 32,
         "ap_id_offset": 21,
         "unique": true,
         "lossy": false,
@@ -2879,7 +2879,7 @@
     "locations": [
       {
         "name": "Mt Hydra Summit Chest",
-        "rom_id": 319,
+        "rom_id": 63,
         "ap_id_offset": 52,
         "unique": true,
         "lossy": false,
@@ -2889,7 +2889,7 @@
       },
       {
         "name": "Mt Hydra Final Cave Mimic",
-        "rom_id": 372,
+        "rom_id": 116,
         "ap_id_offset": 95,
         "unique": false,
         "lossy": false,
@@ -2937,7 +2937,7 @@
     "locations": [
       {
         "name": "Mt Hydra Far Left Chest",
-        "rom_id": 342,
+        "rom_id": 86,
         "ap_id_offset": 67,
         "unique": true,
         "lossy": false,
@@ -2947,7 +2947,7 @@
       },
       {
         "name": "Mt Hydra Left Right Chest",
-        "rom_id": 357,
+        "rom_id": 101,
         "ap_id_offset": 81,
         "unique": true,
         "lossy": false,
@@ -3006,7 +3006,7 @@
     "locations": [
       {
         "name": "Kelbesque 1",
-        "rom_id": 264,
+        "rom_id": 8,
         "ap_id_offset": 8,
         "unique": true,
         "lossy": false,
@@ -3098,7 +3098,7 @@
     "locations": [
       {
         "name": "Mt Sabre North Middle Chest",
-        "rom_id": 339,
+        "rom_id": 83,
         "ap_id_offset": 64,
         "unique": true,
         "lossy": false,
@@ -3176,7 +3176,7 @@
     "locations": [
       {
         "name": "Mt Sabre North Under Bridge Chest",
-        "rom_id": 350,
+        "rom_id": 94,
         "ap_id_offset": 74,
         "unique": true,
         "lossy": false,
@@ -3256,7 +3256,7 @@
     "locations": [
       {
         "name": "Mt Sabre North Back of Prison Chest",
-        "rom_id": 307,
+        "rom_id": 51,
         "ap_id_offset": 40,
         "unique": true,
         "lossy": false,
@@ -3275,7 +3275,7 @@
     "locations": [
       {
         "name": "Mt Sabre North Summit",
-        "rom_id": 322,
+        "rom_id": 66,
         "ap_id_offset": 55,
         "unique": true,
         "lossy": true,
@@ -3367,7 +3367,7 @@
     "locations": [
       {
         "name": "Mt Sabre West Tornel",
-        "rom_id": 324,
+        "rom_id": 68,
         "ap_id_offset": 57,
         "unique": true,
         "lossy": true,
@@ -3377,7 +3377,7 @@
       },
       {
         "name": "Mt Sabre West Near Tornel Chest",
-        "rom_id": 361,
+        "rom_id": 105,
         "ap_id_offset": 84,
         "unique": true,
         "lossy": false,
@@ -3413,7 +3413,7 @@
     "locations": [
       {
         "name": "Mt Sabre West Right Chest",
-        "rom_id": 338,
+        "rom_id": 82,
         "ap_id_offset": 63,
         "unique": true,
         "lossy": false,
@@ -3471,7 +3471,7 @@
     "locations": [
       {
         "name": "Mt Sabre West Left Chest",
-        "rom_id": 362,
+        "rom_id": 106,
         "ap_id_offset": 85,
         "unique": true,
         "lossy": false,
@@ -3500,7 +3500,7 @@
     "locations": [
       {
         "name": "Mt Sabre West Tornado Bracelet Chest",
-        "rom_id": 262,
+        "rom_id": 6,
         "ap_id_offset": 6,
         "unique": true,
         "lossy": false,
@@ -3687,7 +3687,7 @@
     "locations": [
       {
         "name": "Oak Elder",
-        "rom_id": 257,
+        "rom_id": 1,
         "ap_id_offset": 1,
         "unique": true,
         "lossy": true,
@@ -3736,7 +3736,7 @@
     "locations": [
       {
         "name": "Oak Mother",
-        "rom_id": 295,
+        "rom_id": 39,
         "ap_id_offset": 28,
         "unique": true,
         "lossy": true,
@@ -3770,7 +3770,7 @@
     "locations": [
       {
         "name": "Oasis Cave Entrance Across River Chest",
-        "rom_id": 346,
+        "rom_id": 90,
         "ap_id_offset": 71,
         "unique": true,
         "lossy": false,
@@ -3836,7 +3836,7 @@
     "locations": [
       {
         "name": "Battle Armor Chest",
-        "rom_id": 283,
+        "rom_id": 27,
         "ap_id_offset": 16,
         "unique": true,
         "lossy": false,
@@ -3846,7 +3846,7 @@
       },
       {
         "name": "Oasis Cave Northwest Chest",
-        "rom_id": 303,
+        "rom_id": 47,
         "ap_id_offset": 36,
         "unique": true,
         "lossy": false,
@@ -3856,7 +3856,7 @@
       },
       {
         "name": "Oasis Cave Near Entrance Chest",
-        "rom_id": 356,
+        "rom_id": 100,
         "ap_id_offset": 80,
         "unique": true,
         "lossy": false,
@@ -4076,7 +4076,7 @@
     "locations": [
       {
         "name": "Portoa Queen",
-        "rom_id": 296,
+        "rom_id": 40,
         "ap_id_offset": 29,
         "unique": true,
         "lossy": true,
@@ -4134,7 +4134,7 @@
     "locations": [
       {
         "name": "Injured Dolphin",
-        "rom_id": 310,
+        "rom_id": 54,
         "ap_id_offset": 43,
         "unique": true,
         "lossy": true,
@@ -4170,7 +4170,7 @@
     "locations": [
       {
         "name": "Underground Channel Underwater Chest",
-        "rom_id": 315,
+        "rom_id": 59,
         "ap_id_offset": 48,
         "unique": true,
         "lossy": true,
@@ -4199,7 +4199,7 @@
     "locations": [
       {
         "name": "Oasis Cave Fortress Basement Chest",
-        "rom_id": 298,
+        "rom_id": 42,
         "ap_id_offset": 31,
         "unique": true,
         "lossy": false,
@@ -4238,7 +4238,7 @@
     "locations": [
       {
         "name": "Pyramid Chest",
-        "rom_id": 364,
+        "rom_id": 108,
         "ap_id_offset": 87,
         "unique": true,
         "lossy": false,
@@ -4257,7 +4257,7 @@
     "locations": [
       {
         "name": "Draygon 1",
-        "rom_id": 284,
+        "rom_id": 28,
         "ap_id_offset": 17,
         "unique": true,
         "lossy": false,
@@ -4267,7 +4267,7 @@
       },
       {
         "name": "Azteca In Pyramid",
-        "rom_id": 320,
+        "rom_id": 64,
         "ap_id_offset": 53,
         "unique": true,
         "lossy": true,
@@ -4326,7 +4326,7 @@
     "locations": [
       {
         "name": "Rage",
-        "rom_id": 265,
+        "rom_id": 9,
         "ap_id_offset": 9,
         "unique": true,
         "lossy": false,
@@ -4406,7 +4406,7 @@
     "locations": [
       {
         "name": "Sabera 2",
-        "rom_id": 291,
+        "rom_id": 35,
         "ap_id_offset": 24,
         "unique": true,
         "lossy": false,
@@ -4449,7 +4449,7 @@
     "locations": [
       {
         "name": "Fortress Sabera Northwest Chest",
-        "rom_id": 354,
+        "rom_id": 98,
         "ap_id_offset": 78,
         "unique": true,
         "lossy": false,
@@ -4493,7 +4493,7 @@
     "locations": [
       {
         "name": "Fortress Sabera Middle Chest",
-        "rom_id": 349,
+        "rom_id": 93,
         "ap_id_offset": 73,
         "unique": true,
         "lossy": false,
@@ -4503,7 +4503,7 @@
       },
       {
         "name": "Fortress Sabera Southeast Chest",
-        "rom_id": 358,
+        "rom_id": 102,
         "ap_id_offset": 82,
         "unique": true,
         "lossy": false,
@@ -4540,7 +4540,7 @@
     "locations": [
       {
         "name": "Sabera Upstairs Left Chest",
-        "rom_id": 289,
+        "rom_id": 33,
         "ap_id_offset": 22,
         "unique": true,
         "lossy": false,
@@ -4550,7 +4550,7 @@
       },
       {
         "name": "Vampire 2",
-        "rom_id": 353,
+        "rom_id": 97,
         "ap_id_offset": 77,
         "unique": true,
         "lossy": false,
@@ -4569,7 +4569,7 @@
     "locations": [
       {
         "name": "Sabera 1",
-        "rom_id": 312,
+        "rom_id": 56,
         "ap_id_offset": 45,
         "unique": true,
         "lossy": false,
@@ -4606,7 +4606,7 @@
     "locations": [
       {
         "name": "Sabera Upstairs Right Chest",
-        "rom_id": 341,
+        "rom_id": 85,
         "ap_id_offset": 66,
         "unique": true,
         "lossy": false,
@@ -4769,7 +4769,7 @@
     "locations": [
       {
         "name": "Sealed Cave Small Room Back Chest",
-        "rom_id": 285,
+        "rom_id": 29,
         "ap_id_offset": 18,
         "unique": true,
         "lossy": false,
@@ -4779,7 +4779,7 @@
       },
       {
         "name": "Vampire 1",
-        "rom_id": 302,
+        "rom_id": 46,
         "ap_id_offset": 35,
         "unique": true,
         "lossy": false,
@@ -4842,7 +4842,7 @@
     "locations": [
       {
         "name": "Sealed Cave Ball of Wind Chest",
-        "rom_id": 261,
+        "rom_id": 5,
         "ap_id_offset": 5,
         "unique": true,
         "lossy": false,
@@ -4852,7 +4852,7 @@
       },
       {
         "name": "Sealed Cave Big Room Northeast Chest",
-        "rom_id": 286,
+        "rom_id": 30,
         "ap_id_offset": 19,
         "unique": true,
         "lossy": false,
@@ -4862,7 +4862,7 @@
       },
       {
         "name": "Sealed Cave Small Room Front Chest",
-        "rom_id": 292,
+        "rom_id": 36,
         "ap_id_offset": 25,
         "unique": true,
         "lossy": false,
@@ -4872,7 +4872,7 @@
       },
       {
         "name": "Sealed Cave Big Room Southwest Chest",
-        "rom_id": 336,
+        "rom_id": 80,
         "ap_id_offset": 62,
         "unique": true,
         "lossy": false,
@@ -5034,7 +5034,7 @@
     "locations": [
       {
         "name": "Zebu In Shyron",
-        "rom_id": 308,
+        "rom_id": 52,
         "ap_id_offset": 41,
         "unique": true,
         "lossy": true,
@@ -5053,7 +5053,7 @@
     "locations": [
       {
         "name": "Mado 1",
-        "rom_id": 267,
+        "rom_id": 11,
         "ap_id_offset": 11,
         "unique": true,
         "lossy": false,
@@ -5114,7 +5114,7 @@
     "locations": [
       {
         "name": "Stxy Left North Mimic",
-        "rom_id": 373,
+        "rom_id": 117,
         "ap_id_offset": 96,
         "unique": false,
         "lossy": false,
@@ -5158,7 +5158,7 @@
     "locations": [
       {
         "name": "Stxy Right Middle Chest",
-        "rom_id": 276,
+        "rom_id": 20,
         "ap_id_offset": 15,
         "unique": true,
         "lossy": false,
@@ -5168,7 +5168,7 @@
       },
       {
         "name": "Stxy Right North Mimic",
-        "rom_id": 374,
+        "rom_id": 118,
         "ap_id_offset": 97,
         "unique": false,
         "lossy": false,
@@ -5178,7 +5178,7 @@
       },
       {
         "name": "Stxy Right South Mimic",
-        "rom_id": 375,
+        "rom_id": 119,
         "ap_id_offset": 98,
         "unique": false,
         "lossy": false,
@@ -5207,7 +5207,7 @@
     "locations": [
       {
         "name": "Stxy Left Upper Sword of Thunder Chest",
-        "rom_id": 259,
+        "rom_id": 3,
         "ap_id_offset": 3,
         "unique": true,
         "lossy": false,
@@ -5217,7 +5217,7 @@
       },
       {
         "name": "Stxy Left Lower Chest",
-        "rom_id": 343,
+        "rom_id": 87,
         "ap_id_offset": 68,
         "unique": true,
         "lossy": false,
@@ -5274,7 +5274,7 @@
     "locations": [
       {
         "name": "Giant Insect",
-        "rom_id": 263,
+        "rom_id": 7,
         "ap_id_offset": 7,
         "unique": true,
         "lossy": false,
@@ -5412,7 +5412,7 @@
     "locations": [
       {
         "name": "Kensu In Swan",
-        "rom_id": 327,
+        "rom_id": 71,
         "ap_id_offset": 60,
         "unique": true,
         "lossy": true,
@@ -5507,7 +5507,7 @@
     "locations": [
       {
         "name": "Stom Fight Reward",
-        "rom_id": 323,
+        "rom_id": 67,
         "ap_id_offset": 56,
         "unique": true,
         "lossy": true,
@@ -5603,7 +5603,7 @@
     "locations": [
       {
         "name": "Waterfall Cave Sword of Water Chest",
-        "rom_id": 258,
+        "rom_id": 2,
         "ap_id_offset": 2,
         "unique": true,
         "lossy": false,
@@ -5613,7 +5613,7 @@
       },
       {
         "name": "Waterfall Cave River Left Chest",
-        "rom_id": 272,
+        "rom_id": 16,
         "ap_id_offset": 13,
         "unique": true,
         "lossy": false,
@@ -5623,7 +5623,7 @@
       },
       {
         "name": "Akahana Flute of Lime Tradein",
-        "rom_id": 304,
+        "rom_id": 48,
         "ap_id_offset": 37,
         "unique": true,
         "lossy": true,
@@ -5684,7 +5684,7 @@
     "locations": [
       {
         "name": "Waterfall Cave Front Mimic",
-        "rom_id": 370,
+        "rom_id": 114,
         "ap_id_offset": 93,
         "unique": false,
         "lossy": false,
@@ -5858,7 +5858,7 @@
     "locations": [
       {
         "name": "Zebu At Windmill",
-        "rom_id": 321,
+        "rom_id": 65,
         "ap_id_offset": 54,
         "unique": true,
         "lossy": true,
@@ -5912,7 +5912,7 @@
     "locations": [
       {
         "name": "Windmill Guard Alarm Flute Tradein",
-        "rom_id": 306,
+        "rom_id": 50,
         "ap_id_offset": 39,
         "unique": true,
         "lossy": true,
@@ -5964,7 +5964,7 @@
     "locations": [
       {
         "name": "Zebu Student",
-        "rom_id": 305,
+        "rom_id": 49,
         "ap_id_offset": 38,
         "unique": true,
         "lossy": true,
@@ -6073,7 +6073,7 @@
     "locations": [
       {
         "name": "Repaired Statue",
-        "rom_id": 314,
+        "rom_id": 58,
         "ap_id_offset": 47,
         "unique": true,
         "lossy": true,
