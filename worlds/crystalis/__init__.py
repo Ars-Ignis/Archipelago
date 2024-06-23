@@ -10,8 +10,9 @@ from .regions import regions_data
 from .options import CrystalisOptions, crystalis_option_groups
 from .types import *
 from .logic import set_rules
-from worlds.AutoWorld import World, WebWorld
 from .output import generate_output
+from .client import CrystalisClient  # Unused, but required to register with BizHawkClient
+from worlds.AutoWorld import World, WebWorld
 
 
 class CrystalisWeb(WebWorld):
@@ -45,26 +46,11 @@ class CrystalisWorld(World):
     location_name_to_id = {}
     wild_warp_id_to_region: Dict[int, str] = {}
     for region_data in regions_data.values():
-        region_locations_data: List[CrystalisLocationData] = []
         for location_data in region_data.locations:
-            new_loc = CrystalisLocationData(location_data["name"], location_data["rom_id"],
-                                            location_data["ap_id_offset"], location_data["unique"],
-                                            location_data["lossy"], location_data["prevent_loss"],
-                                            location_data["is_chest"])
-            region_locations_data.append(new_loc)
-            locations_data.append(new_loc)
-        region_data.locations = region_locations_data
-        new_entrance_data: List[CrystalisEntranceData] = []
-        for entrance_data in region_data.entrances:
-            new_ent = CrystalisEntranceData(entrance_data["name"], entrance_data["entrance_type"],
-                                            entrance_data["vanilla_target"])
-            new_entrance_data.append(new_ent)
-        region_data.entrances = new_entrance_data
+            location_name_to_id[location_data.name] = location_data.ap_id_offset + CRYSTALIS_BASE_ID
         if not region_data.ban_wildwarp:
             for id in region_data.wildwarpIds:
                 wild_warp_id_to_region[id] = region_data.name
-    for location in locations_data:
-        location_name_to_id[location.name] = location.ap_id_offset + CRYSTALIS_BASE_ID
     item_name_to_id = {}
     item_name_groups = {}
     for item in items_data.values():
@@ -189,18 +175,19 @@ class CrystalisWorld(World):
             towns = ["Leaf", "Brynmaer", "Oak", "Nadare's", "Portoa", "Amazones", "Joel", "Zombie Town", "Swan",
                      "Shyron", "Goa", "Sahara"]
             thunder_warp = self.random.choice(towns)
-        shop_inventories = {}
-        shop_inventories["Leaf Item Shop"] = ["Medical Herb", "Antidote", "Warp Boots"]
-        shop_inventories["Brynmaer Item Shop"] = ["Medical Herb", "Antidote", "Warp Boots"]
-        shop_inventories["Oak Item Shop"] = ["Medical Herb", "Antidote", "Fruit of Power"]
-        shop_inventories["Nadare's Item Shop"] = ["Medical Herb", "Antidote", "Fruit of Power", "Warp Boots"]
-        shop_inventories["Amazones Item Shop"] = ["Warp Boots", "Lysis Plant", "Fruit of Power"]
-        shop_inventories["Portoa Item Shop"] = ["Medical Herb", "Warp Boots", "Lysis Plant", "Fruit of Lime"]
-        shop_inventories["Joel Item Shop"] = ["Medical Herb", "Antidote", "Fruit of Power"]
-        shop_inventories["Swan Item Shop"] = ["Medical Herb", "Antidote", "Fruit of Power", "Warp Boots"]
-        shop_inventories["Goa Item Shop"] = ["Medical Herb", "Antidote", "Lysis Plant", "Warp Boots"]
-        shop_inventories["Shyron Item Shop"] = ["Medical Herb", "Antidote", "Fruit of Lime", "Magic Ring"]
-        shop_inventories["Sahara Item Shop"] = ["Antidote", "Magic Ring", "Fruit of Repun", "Warp Boots"]
+        shop_inventories = {
+            "Leaf Item Shop":     ["Medical Herb", "Antidote", "Warp Boots"],
+            "Brynmaer Item Shop": ["Medical Herb", "Antidote", "Warp Boots"],
+            "Oak Item Shop":      ["Medical Herb", "Antidote", "Fruit of Power"],
+            "Nadare's Item Shop": ["Medical Herb", "Antidote", "Fruit of Power", "Warp Boots"],
+            "Amazones Item Shop": ["Warp Boots", "Lysis Plant", "Fruit of Power"],
+            "Portoa Item Shop":   ["Medical Herb", "Warp Boots", "Lysis Plant", "Fruit of Lime"],
+            "Joel Item Shop":     ["Medical Herb", "Antidote", "Fruit of Power"],
+            "Swan Item Shop":     ["Medical Herb", "Antidote", "Fruit of Power", "Warp Boots"],
+            "Goa Item Shop":      ["Medical Herb", "Antidote", "Lysis Plant", "Warp Boots"],
+            "Shyron Item Shop":   ["Medical Herb", "Antidote", "Fruit of Lime", "Magic Ring"],
+            "Sahara Item Shop":   ["Antidote", "Magic Ring", "Fruit of Repun", "Warp Boots"]
+        }
         if not self.options.vanilla_shops:
             shop_inventories = self.randomize_shop_inventories(shop_inventories)
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
@@ -299,7 +286,7 @@ class CrystalisWorld(World):
             #GBC Cave has two locations in it
             self.multiworld.itempool.append(self.create_item("Medical Herb"))
             self.multiworld.itempool.append(self.create_item("Mimic"))
-        if self.options.shuffle_areas or self.options.shuffle_areas:
+        if self.options.shuffle_areas or self.options.shuffle_houses:
             #These settings add two locations to Mezame shrine
             self.multiworld.itempool.append(self.create_item("Medical Herb"))
             self.multiworld.itempool.append(self.create_item("Medical Herb"))
