@@ -66,11 +66,15 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
             boss_weaknesses[str(boss_id)] = 1 << convert_text_to_elem_enum(weakness).value
         else:
             boss_weaknesses[str(boss_id)] = ~(1 << convert_text_to_elem_enum(weakness).value) & 15
-    possible_gbc_cave_exits: List[str] = ["Cordel Plains - Main", "Lime Valley", "Goa Valley", "Desert 2"]
-    gbc_cave_exits: List[int] = [
-        possible_gbc_cave_exits.index(shuffle_data.gbc_cave_exits[0]),
-        possible_gbc_cave_exits.index(shuffle_data.gbc_cave_exits[1])
-    ]
+    gbc_cave_exits: List[int]
+    if len(shuffle_data.gbc_cave_exits) >= 2:
+        possible_gbc_cave_exits: List[str] = ["Cordel Plains - Main", "Lime Valley", "Goa Valley", "Desert 2"]
+        gbc_cave_exits = [
+            possible_gbc_cave_exits.index(shuffle_data.gbc_cave_exits[0]),
+            possible_gbc_cave_exits.index(shuffle_data.gbc_cave_exits[1])
+        ]
+    else:
+        gbc_cave_exits = []
     shop_inventories: Dict[str, List[int]] = {}
     for shop, inventory in shuffle_data.shop_inventories.items():
         inv_ids: List[int] = []
