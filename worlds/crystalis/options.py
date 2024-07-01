@@ -666,7 +666,7 @@ class VanillaWildWarp(Choice):
     that this will put all wild warp locations in logic unless the flag is set as "Out Of Logic".
     """
     display_name = "Vanilla wild warp (Vw)"
-    option_shuffled = 0
+    option_disabled = 0
     option_out_of_logic = 1
     option_vanilla = 2
 
