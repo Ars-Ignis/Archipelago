@@ -42,6 +42,7 @@ class CrystalisWorld(World):
     generate_output = generate_output
     web = CrystalisWeb()
 
+    #this will get filled out later, while creating regions
     locations_data: List[CrystalisLocationData] = []
     location_name_to_id = {}
     wild_warp_id_to_region: Dict[int, str] = {}
@@ -213,8 +214,9 @@ class CrystalisWorld(World):
                     continue
                 if self.options.vanilla_dolphin and "Kensu In Cabin" in location_data.name:
                     #Kensu in Cabin just activates the flute if vanilla dolphin is on
-                    #TODO: Make an event here for activating the flute
                     continue
+                #now that we know the location exists, add it to the multiworld
+                self.locations_data.append(location_data)
                 region.locations.append(create_location_from_location_data(self.player, location_data, region))
         #then make entrances
         for region_data in regions_data.values():
@@ -234,8 +236,8 @@ class CrystalisWorld(World):
             #technically the normal path to Tower should be removed, but it should be redundant in all cases
             #famous last words lmao
             mezame_shrine = local_region_cache["Mezame Shrine"]
-            tower = local_region_cache["Tower"]
-            mezame_shrine.connect(tower, "Tower Shortcut")
+            pre_draygon = local_region_cache["Crypt - Pre-Draygon"]
+            mezame_shrine.connect(pre_draygon, "Draygon 2 Shortcut")
         if self.options.vanilla_maps == self.options.vanilla_maps.option_GBC_cave:
             wind_valley = local_region_cache["Wind Valley"]
             gbc_main = local_region_cache["GBC Cave - Main"]
@@ -292,3 +294,5 @@ class CrystalisWorld(World):
             self.multiworld.itempool.append(self.create_item("Medical Herb"))
 
 
+    def get_filler_item_name(self) -> str:
+        return "Medical Herb"
