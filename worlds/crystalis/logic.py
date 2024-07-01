@@ -2,7 +2,7 @@ import logging
 
 from BaseClasses import MultiWorld, CollectionState, Entrance, ItemClassification, Region
 from .options import CrystalisOptions
-from .types import CrystalisShuffleData
+from .types import CrystalisShuffleData, CrystalisLocationData
 from .locations import CrystalisLocation
 from .items import CrystalisItem
 from typing import Callable, List, Optional
@@ -810,3 +810,11 @@ def set_rules(self) -> None:
                                  "Kelbesque 2 Defeated", "Sabera 2 Defeated", "Mado 2 Defeated",
                                  "Karmine Defeated", "Draygon 1 Defeated"]
         add_rule(draygon_2_fight, lambda state: state.has_all(spawn_reqs, player), "and")
+
+    #misc. Logic
+    if options.oops_all_mimics:
+        for location_data in self.locations_data:
+            #technically bosses have is_chest == False, but since you need a sword to fight the boss anyway, it's
+            #redundant
+            if location_data.is_chest:
+                add_rule(self.get_location(location_data.name), lambda state: state.has_group("Sword", player, 1))
