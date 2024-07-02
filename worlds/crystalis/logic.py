@@ -1,10 +1,8 @@
 import logging
 
-from BaseClasses import MultiWorld, CollectionState, Entrance, ItemClassification, Region
+from BaseClasses import MultiWorld, CollectionState, Entrance, Region
 from .options import CrystalisOptions
-from .types import CrystalisShuffleData, CrystalisLocationData
-from .locations import CrystalisLocation
-from .items import CrystalisItem
+from .types import CrystalisShuffleData
 from typing import Callable, List, Optional
 from worlds.generic.Rules import set_rule, add_rule
 
@@ -92,26 +90,6 @@ def set_rules(self) -> None:
     def can_cross_rivers(state: CollectionState) -> bool:
         return state.has("Flight", player) or can_break_wall(state, player, "Water")
 
-    #make some events
-    tower_region = self.get_region("Tower")
-    dyna_defeated_location = CrystalisLocation(player, "Dyna Defeated", None, tower_region)
-    dyna_defeated_location.place_locked_item(CrystalisItem("Victory!", ItemClassification.progression, None, player))
-    tower_region.locations.append(dyna_defeated_location)
-    multiworld.completion_condition[player] = lambda state: state.has("Victory!", player)
-    buy_healing_region = self.get_region("Buy Healing")
-    buy_healing_location = CrystalisLocation(player, "Buy Healing", None, buy_healing_region)
-    buy_healing_location.place_locked_item(CrystalisItem("Buy Healing", ItemClassification.progression, None, player))
-    buy_healing_region.locations.append(buy_healing_location)
-    buy_warp_boots_region = self.get_region("Buy Warp Boots")
-    buy_warp_boots_location = CrystalisLocation(player, "Buy Warp Boots", None, buy_warp_boots_region)
-    buy_warp_boots_location.place_locked_item(CrystalisItem("Buy Warp Boots", ItemClassification.progression, None,
-                                                            player))
-    buy_warp_boots_region.locations.append(buy_warp_boots_location)
-    mesia_region = self.get_region("Mesia")
-    mesia_location = CrystalisLocation(player, "Mesia", None, mesia_region)
-    mesia_location.place_locked_item(CrystalisItem("Mesia's Message", ItemClassification.progression, None, player))
-    mesia_region.locations.append(mesia_location)
-
     #Need a sword to be guaranteed to be able to buy things
     #put rules on entrances instead of events because more efficient? Maybe? unsure, should benchmark
     for shop, inventory in shuffle_data.shop_inventories.items():
@@ -124,50 +102,6 @@ def set_rules(self) -> None:
         if "Warp Boots" in inventory:
             buy_warp_boots_entrance = self.get_entrance("Buy Warp Boots: " + shop)
             set_rule(buy_warp_boots_entrance, lambda state: state.has_group("Sword", player, 1))
-
-    #Story Mode Events
-    if options.story_mode:
-        #getting to these regions means you've beaten the boss
-        kelby_1_region = self.get_region("Mt. Sabre North - Boss Arena")
-        kelby_1_victory = CrystalisLocation(player, "Kelbesque 1 Defeated", None, kelby_1_region)
-        kelby_1_flag = CrystalisItem("Kelbesque 1 Defeated", ItemClassification.progression, None, player)
-        kelby_1_victory.place_locked_item(kelby_1_flag)
-        kelby_1_region.locations.append(kelby_1_victory)
-        sabera_1_region = self.get_region("Sabera's Fortress - Post-Boss")
-        sabera_1_victory = CrystalisLocation(player, "Sabera 1 Defeated", None, sabera_1_region)
-        sabera_1_flag = CrystalisItem("Sabera 1 Defeated", ItemClassification.progression, None, player)
-        sabera_1_victory.place_locked_item(sabera_1_flag)
-        sabera_1_region.locations.append(sabera_1_victory)
-        mado_1_region = self.get_region("Shyron Temple - Post-Boss")
-        mado_1_victory = CrystalisLocation(player, "Mado 1 Defeated", None, mado_1_region)
-        mado_1_flag = CrystalisItem("Mado 1 Defeated", ItemClassification.progression, None, player)
-        mado_1_victory.place_locked_item(mado_1_flag)
-        mado_1_region.locations.append(mado_1_victory)
-        kelby_2_region = self.get_region("Kelbesque's Floor - Boss Arena")
-        kelby_2_victory = CrystalisLocation(player, "Kelbesque 2 Defeated", None, kelby_2_region)
-        kelby_2_flag = CrystalisItem("Kelbesque 2 Defeated", ItemClassification.progression, None, player)
-        kelby_2_victory.place_locked_item(kelby_2_flag)
-        kelby_2_region.locations.append(kelby_2_victory)
-        sabera_2_region = self.get_region("Sabera's Floor - Boss Arena")
-        sabera_2_victory = CrystalisLocation(player, "Sabera 2 Defeated", None, sabera_2_region)
-        sabera_2_flag = CrystalisItem("Sabera 2 Defeated", ItemClassification.progression, None, player)
-        sabera_2_victory.place_locked_item(sabera_2_flag)
-        sabera_2_region.locations.append(sabera_2_victory)
-        mado_2_region = self.get_region("Mado's Floor - Boss Arena")
-        mado_2_victory = CrystalisLocation(player, "Mado 2 Defeated", None, mado_2_region)
-        mado_2_flag = CrystalisItem("Mado 2 Defeated", ItemClassification.progression, None, player)
-        mado_2_victory.place_locked_item(mado_2_flag)
-        mado_2_region.locations.append(mado_2_victory)
-        karmine_region = self.get_region("Karmine's Floor - Post-Boss")
-        karmine_victory = CrystalisLocation(player, "Karmine Defeated", None, karmine_region)
-        karmine_flag = CrystalisItem("Karmine Defeated", ItemClassification.progression, None, player)
-        karmine_victory.place_locked_item(karmine_flag)
-        karmine_region.locations.append(karmine_victory)
-        draygon_1_region = self.get_region("Pyramid - Post-Draygon")
-        draygon_1_victory = CrystalisLocation(player, "Draygon 1 Defeated", None, draygon_1_region)
-        draygon_1_flag = CrystalisItem("Draygon 1 Defeated", ItemClassification.progression, None, player)
-        draygon_1_victory.place_locked_item(draygon_1_flag)
-        draygon_1_region.locations.append(draygon_1_victory)
 
     #Thunder Warp
     if shuffle_data.thunder_warp is not None:
@@ -485,28 +419,20 @@ def set_rules(self) -> None:
     #Fisherman, Beach House, and Shell Flute stuff
     boat = self.get_entrance("Fisherman House Area -> Angry Sea - Beach House Area")
     set_rule(boat, lambda state: state.has("Boat Access", player))
-    fisherman_house = self.get_region("Fisherman House")
-    boat_access_location = CrystalisLocation(player, "Fisherman", None, fisherman_house)
-    boat_access_location.place_locked_item(CrystalisItem("Boat Access", ItemClassification.progression, None, player))
+    boat_access_location = self.get_location("Fisherman")
     set_rule(boat_access_location, lambda state: state.has(shuffle_data.trade_in_map["Fisherman"], player))
-    fisherman_house.locations.append(boat_access_location)
     region_for_flute_activation: Region
     shell_flute_rule: Callable[[CollectionState], bool]
     if not options.vanilla_dolphin:
-        region_for_flute_activation = self.get_region("Menu")
         shell_flute_rule = lambda state: state.has(shuffle_data.key_item_names["Shell Flute"], player)
         beach_kensu_location = self.get_location("Kensu In Cabin")
         set_rule(beach_kensu_location, lambda state: state.has("Boat Access", player))
     else:
-        region_for_flute_activation = self.get_region("Beach House")
         shell_flute_rule = lambda state: state.has(shuffle_data.key_item_names["Shell Flute"], player) and \
                                          state.has("Boat Access", player)
         add_rule(boat_access_location, lambda state: dolphin.can_reach(state), "and")
-    activate_shell_flute_location = CrystalisLocation(player, "Activate Shell Flute", None, region_for_flute_activation)
-    activate_shell_flute_location.place_locked_item(CrystalisItem("Active Shell Flute",
-                                                                      ItemClassification.progression, None, player))
+    activate_shell_flute_location = self.get_location("Activate Shell Flute")
     activate_shell_flute_location.access_rule = shell_flute_rule
-    region_for_flute_activation.locations.append(activate_shell_flute_location)
 
     #Angry Sea
     beach_house_shore = self.get_entrance("Angry Sea - Beach House Area -> Angry Sea - South Water")

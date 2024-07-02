@@ -2,11 +2,10 @@ import logging
 import typing
 
 import settings
-from BaseClasses import Region, Entrance, Item, Tutorial, ItemClassification
-from typing import Dict, List
+from BaseClasses import Item, Tutorial
 from .items import CrystalisItem, items_data
 from .locations import CrystalisLocation, create_location_from_location_data
-from .regions import regions_data
+from .regions import regions_data, create_regions
 from .options import CrystalisOptions, crystalis_option_groups
 from .types import *
 from .logic import set_rules
@@ -18,7 +17,19 @@ from worlds.AutoWorld import World, WebWorld
 class CrystalisWeb(WebWorld):
     game = "Crystalis"
     option_groups = crystalis_option_groups
-    #TODO: Add tutorial
+
+    tutorials = [
+
+        Tutorial(
+            "Multiworld Setup Guide",
+            "A guide to setting up Crystalis Randomizer in Archipelago.",
+            "English",
+            "setup_en.md",
+            "setup/en",
+            ["CodeGorilla"]
+        )
+    ]
+    #TODO: Add better tutorial
 
 
 class CrystalisSettings(settings.Group):
@@ -39,6 +50,7 @@ class CrystalisWorld(World):
     topology_present = True
     shuffle_data: CrystalisShuffleData
     set_rules = set_rules
+    create_regions = create_regions
     generate_output = generate_output
     web = CrystalisWeb()
 
@@ -193,87 +205,6 @@ class CrystalisWorld(World):
             shop_inventories = self.randomize_shop_inventories(shop_inventories)
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
                                                  thunder_warp, shop_inventories)
-
-
-
-    def create_regions(self) -> None:
-        #first make regions and locations
-        #need to cache while still creating regions before appending them to the multiworld
-        local_region_cache = {}
-        for region_data in regions_data.values():
-            if self.options.vanilla_maps != self.options.vanilla_maps.option_GBC_cave and \
-                "GBC" in region_data.name:
-                #don't add GBC cave regions, locations, and entrances
-                continue
-            region = Region(region_data.name, self.player, self.multiworld)
-            local_region_cache[region_data.name] = region
-            for location_data in region_data.locations:
-                if not self.options.shuffle_areas and not self.options.shuffle_houses and \
-                        "Mezame" in location_data.name:
-                    #Mezame Shrine chests only exist if areas or houses are shuffled, to grow sphere 1
-                    continue
-                if self.options.vanilla_dolphin and "Kensu In Cabin" in location_data.name:
-                    #Kensu in Cabin just activates the flute if vanilla dolphin is on
-                    continue
-                #now that we know the location exists, add it to the multiworld
-                self.locations_data.append(location_data)
-                region.locations.append(create_location_from_location_data(self.player, location_data, region))
-        #then make entrances
-        for region_data in regions_data.values():
-            if region_data.name in local_region_cache.keys():
-                region = local_region_cache[region_data.name]
-                for entrance_data in region_data.entrances:
-                    if entrance_data.vanilla_target in local_region_cache:
-                        connecting_region = local_region_cache[entrance_data.vanilla_target]
-                        if entrance_data.entrance_type == CrystalisEntranceTypeEnum.STATIC:
-                            region.connect(connecting_region)
-                        else:
-                            region.connect(connecting_region, entrance_data.name)
-                self.multiworld.regions.append(region)
-        #add conditional entrances
-        if self.options.no_bow_mode:
-            #tower shortcut for Rb
-            #technically the normal path to Tower should be removed, but it should be redundant in all cases
-            #famous last words lmao
-            mezame_shrine = local_region_cache["Mezame Shrine"]
-            pre_draygon = local_region_cache["Crypt - Pre-Draygon"]
-            mezame_shrine.connect(pre_draygon, "Draygon 2 Shortcut")
-        if self.options.vanilla_maps == self.options.vanilla_maps.option_GBC_cave:
-            wind_valley = local_region_cache["Wind Valley"]
-            gbc_main = local_region_cache["GBC Cave - Main"]
-            gbc_blocked = local_region_cache["GBC Cave - Past Block"]
-            free_region = local_region_cache[self.shuffle_data.gbc_cave_exits[0]]
-            blocked_region = local_region_cache[self.shuffle_data.gbc_cave_exits[1]]
-            wind_valley.connect(gbc_main, "Wind Valley - East Cave") #reverse connection already exists in data
-            gbc_main.connect(free_region, "GBC Cave - Free Exit")
-            gbc_blocked.connect(blocked_region, "GBC Cave - Blocked Exit")
-            free_region.connect(gbc_main, self.shuffle_data.gbc_cave_exits[0] + " - Added Cave")
-            blocked_region.connect(gbc_blocked, self.shuffle_data.gbc_cave_exits[1] + " - Added Cave")
-        elif self.options.vanilla_maps == self.options.vanilla_maps.option_lime_passage:
-            wind_valley = local_region_cache["Wind Valley"]
-            lime_valley = local_region_cache["Lime Valley"]
-            wind_valley.connect(lime_valley, "Wind Valley - East")
-            lime_valley.connect(wind_valley, "Lime Valley - West")
-        #no new entrances needed for the third option
-        #add shop "entrances" to Buy Healing and Buy Warp Boots "regions"
-        buy_healing_region = local_region_cache["Buy Healing"]
-        buy_warp_boots_region = local_region_cache["Buy Warp Boots"]
-        for shop, inventory in self.shuffle_data.shop_inventories.items():
-            if shop == "Shyron Item Shop":
-                #Shyron shop becomes unavailable after the massacre, so don't rely on it for logic
-                continue
-            shop_region = local_region_cache[shop]
-            if "Medical Herb" in inventory:
-                shop_region.connect(buy_healing_region, "Buy Healing: " + shop)
-            if "Warp Boots" in inventory:
-                shop_region.connect(buy_warp_boots_region, "Buy Warp Boots: " + shop)
-        #add Thunder Warp entrance
-        if self.shuffle_data.thunder_warp is not None:
-            menu_region = local_region_cache["Menu"]
-            thunder_warp_region = local_region_cache[self.shuffle_data.thunder_warp]
-            menu_region.connect(thunder_warp_region, "Thunder Warp")
-        from Utils import visualize_regions
-        visualize_regions(self.multiworld.get_region("Menu", self.player), "my_world.puml")
 
 
     def create_items(self) -> None:
