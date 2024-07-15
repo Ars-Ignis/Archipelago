@@ -1,9 +1,10 @@
 import logging
-import typing
+from typing import Dict, List, Mapping, Any, ClassVar
+from dataclasses import asdict
 
 import settings
 from BaseClasses import Item, Tutorial
-from .items import CrystalisItem, items_data
+from .items import CrystalisItem, items_data, unidentify_items
 from .locations import CrystalisLocation, create_location_from_location_data
 from .regions import regions_data, create_regions
 from .options import CrystalisOptions, crystalis_option_groups
@@ -46,12 +47,13 @@ class CrystalisWorld(World):
     game = "Crystalis"
     options_dataclass = CrystalisOptions
     options: CrystalisOptions
-    settings: typing.ClassVar[CrystalisSettings]
+    settings: ClassVar[CrystalisSettings]
     topology_present = True
     shuffle_data: CrystalisShuffleData
     set_rules = set_rules
     create_regions = create_regions
     generate_output = generate_output
+    unidentify_items = unidentify_items
     web = CrystalisWeb()
 
     #this will get filled out later, while creating regions
@@ -150,15 +152,11 @@ class CrystalisWorld(World):
                                "Thunder", "Thunder", "Thunder", "Thunder", "Thunder", "Thunder"]
         wall_map: Dict[str, str] = dict(zip(wall_names, wall_weaknesses))
         #then key item names
-        #TODO randomize these based on settings
-        key_item_names: Dict[str, str] = {}
-        for item in items_data.values():
-            if "Key Item" in item.groups:
-                key_item_names[item.name] = item.name
+        key_item_names: Dict[str, str] = unidentify_items(self)
         #then trade-ins
         trade_in_targets = ["Akahana", "Aryllis", "Fisherman", "Kensu", "Slimed Kensu"]
-        trade_in_items = [key_item_names["Statue of Onyx"], key_item_names["Kirisa Plant"], key_item_names["Fog Lamp"],
-                          key_item_names["Love Pendant"], key_item_names["Ivory Statue"]]
+        trade_in_items = [key_item_names["Statue of Onyx"], "Kirisa Plant", key_item_names["Fog Lamp"],
+                          "Love Pendant", key_item_names["Ivory Statue"]]
         if self.options.randomize_tradeins:
             self.random.shuffle(trade_in_items)
         trade_in_map: Dict[str, str] = dict(zip(trade_in_targets, trade_in_items))
@@ -210,8 +208,11 @@ class CrystalisWorld(World):
     def create_items(self) -> None:
         #TODO: proper item fill based on settings
         for item_data in items_data.values():
-            for i in range(item_data.default_count):
-                self.multiworld.itempool.append(self.create_item(item_data.name))
+            if item_data.name in self.shuffle_data.key_item_names.keys():
+                self.multiworld.itempool.append(self.create_item(self.shuffle_data.key_item_names[item_data.name]))
+            else:
+                for i in range(item_data.default_count):
+                    self.multiworld.itempool.append(self.create_item(item_data.name))
         if not self.options.vanilla_dolphin:
             #Kensu at the beach house is now a check so add an item to the pool
             self.multiworld.itempool.append(self.create_item("Medical Herb"))
@@ -227,3 +228,23 @@ class CrystalisWorld(World):
 
     def get_filler_item_name(self) -> str:
         return "Medical Herb"
+
+
+    def fill_slot_data(self) -> Mapping[str, Any]:
+        #get logic relevant options for tracker purposes
+        slot_data: Dict[str, Any] = self.options.as_dict("randomize_maps", "shuffle_areas", "shuffle_houses",
+                                                         "randomize_tradeins", "unidentified_key_items", "shuffle_goa",
+                                                         "randomize_wild_warp", "story_mode", "no_bow_mode",
+                                                         "orbs_not_required", "thunder_warp", "vanilla_dolphin",
+                                                         "fake_flight", "statue_glitch", "mt_sabre_skip",
+                                                         "statue_gauntlet_skip", "sword_charge_glitch", "trigger_skip",
+                                                         "rage_skip", "randomize_monster_weaknesses", "oops_all_mimics",
+                                                         "dont_shuffle_mimics",
+                                                         "keep_unique_items_and_consumables_separate",
+                                                         "guarantee_refresh", "battle_magic_not_guaranteed",
+                                                         "tink_mode", "barrier_not_guaranteed",
+                                                         "gas_mask_not_guaranteed", "charge_shots_only",
+                                                         "dont_buff_bonus_items", "vanilla_maps", "vanilla_wild_warp")
+        #get shuffle data for tracker purposes, UT regen, and ids for unidentified items
+        slot_data["shuffle_data"] = asdict(self.shuffle_data)
+        return slot_data
