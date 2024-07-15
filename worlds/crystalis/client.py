@@ -3,7 +3,7 @@ from NetUtils import ClientStatus, NetworkItem
 
 import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
-from .items import items_data_by_id
+from .items import items_data_by_id, items_data
 from .regions import regions_data
 from .types import CRYSTALIS_BASE_ID
 
@@ -25,6 +25,8 @@ class CrystalisClient(BizHawkClient):
     expected_start: List[bytes] = [bytes([0xd9, 0xd9, 0xd9, 0xd9, 0xd9, 0xd9, 0xd9, 0xd9])]
     #TODO: Consider a better method for identifying valid Crystalis ROMs
     id_to_addr: Dict[int, Tuple[int, int]] = {}
+    unidentified_item_rom_ids: Dict[int, int] = {}
+
 
     def __init__(self):
         super().__init__()
@@ -49,11 +51,22 @@ class CrystalisClient(BizHawkClient):
 
         ctx.game = self.game
         ctx.items_handling = 0b111
+        ctx.want_slot_data = True
         return True
 
 
+    def on_package(self, ctx: "BizHawkClientContext", cmd: str, args: dict) -> None:
+        if cmd == "Connected":
+            #slot_data should be set now
+            key_item_names: Dict[str, str] = ctx.slot_data["shuffle_data"]["key_item_names"]
+            for original_name, new_name in key_item_names.items():
+                #want to map the new item's AP ID to the original item's in-game ID.
+                self.unidentified_item_rom_ids[items_data[new_name].ap_id_offset + CRYSTALIS_BASE_ID] = \
+                    items_data[original_name].rom_id
+
+
     async def game_watcher(self, ctx: "BizHawkClientContext") -> None:
-        from CommonClient import logger
+
         try:
             read_value = await bizhawk.read(ctx.bizhawk_ctx, [(LOCATION_FLAGS_ADDR, 16, "System Bus"),
                                                               (RECEIVED_INDEX_ADDR, 2, "System Bus"),
@@ -86,8 +99,12 @@ class CrystalisClient(BizHawkClient):
                                                items_data_by_id[item.item].groups != ["Consumable"]]
                             if nonconsumable_index < len(non_consumables):
                                 item_to_write: NetworkItem = non_consumables[nonconsumable_index]
-                                item_id: int = items_data_by_id[item_to_write.item].rom_id
-                                success: bool = await bizhawk.guarded_write(ctx.bizhawk_ctx,
+                                item_id: int
+                                if item_to_write.item in self.unidentified_item_rom_ids.keys():
+                                    item_id = self.unidentified_item_rom_ids[item_to_write.item]
+                                else:
+                                    item_id = items_data_by_id[item_to_write.item].rom_id
+                                await bizhawk.guarded_write(ctx.bizhawk_ctx,
                                                         [(RECEIVED_INDEX_ADDR, [nonconsumable_index + 1], "System Bus"),
                                                          (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus")],
                                                         [(GAME_MODE_ADDR, [1], "System Bus")])
@@ -97,7 +114,7 @@ class CrystalisClient(BizHawkClient):
                                 if consumable_index < len(consumables):
                                     item_to_write: NetworkItem = consumables[consumable_index]
                                     item_id: int = items_data_by_id[item_to_write.item].rom_id
-                                    success: bool = await bizhawk.guarded_write(ctx.bizhawk_ctx,
+                                    bool = await bizhawk.guarded_write(ctx.bizhawk_ctx,
                                                        [(RECEIVED_INDEX_ADDR + 1, [consumable_index + 1], "System Bus"),
                                                         (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus")],
                                                        [(GAME_MODE_ADDR, [1], "System Bus"),
