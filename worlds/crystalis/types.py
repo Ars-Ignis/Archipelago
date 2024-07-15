@@ -103,6 +103,7 @@ class CrystalisItemData:
     unique: bool
     losable: bool
     prevent_loss: bool
+    community: bool
     default_count: int
     groups: List[str]
     category: CrystalisItemCategoryEnum
