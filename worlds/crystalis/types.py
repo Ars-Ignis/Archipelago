@@ -118,3 +118,4 @@ class CrystalisShuffleData:
     gbc_cave_exits: List[str]
     thunder_warp: Optional[str]
     shop_inventories: Dict[str, List[str]]
+    wildwarps: List[int]

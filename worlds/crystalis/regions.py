@@ -5,7 +5,7 @@ from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntrance
 from .locations import CrystalisLocation, create_location_from_location_data
 from .items import CrystalisItem
 import orjson
-from typing import Dict, List
+from typing import Dict, List, Set
 import pkgutil
 
 
@@ -105,10 +105,21 @@ for key, value in regions_data_json.items():
             if "Warp Boots" in inventory:
                 shop_region.connect(buy_warp_boots_region, "Buy Warp Boots: " + shop)
         #add Thunder Warp entrance
+        menu_region = local_region_cache["Menu"]
         if self.shuffle_data.thunder_warp is not None:
-            menu_region = local_region_cache["Menu"]
             thunder_warp_region = local_region_cache[self.shuffle_data.thunder_warp]
             menu_region.connect(thunder_warp_region, "Thunder Warp")
+
+        #add wild warp entrances
+        warp_names: Set[str] = set()
+        for warp in self.shuffle_data.wildwarps:
+            if warp == 0: continue #no need for an entrance to Mezame
+            warp_name = self.wild_warp_id_to_region[warp]
+            if warp_name not in warp_names:
+                warp_region = local_region_cache[warp_name]
+                menu_region.connect(warp_region, "Wild Warp to " + warp_name)
+                #avoid making redundant entrances
+                warp_names.add(warp_name)
 
         #make some events
         player = self.player
