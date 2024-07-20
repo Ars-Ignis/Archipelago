@@ -12,11 +12,12 @@ if TYPE_CHECKING:
 
 LOCATION_FLAGS_ADDR = 0x64A0
 ITEM_FLAGS_ADDR = 0x64C0
-RECEIVED_INDEX_ADDR = 0x657E
+RECEIVED_INDEX_ADDR = 0x657D
 SCREEN_MODE_ADDR = 0x0051
 END_OF_CONSUMABLE_INV_ADDR = 0x6447
 GET_ITEM_FLAG_ADDR = 0x6250
-GAME_MODE_ADDR = 0x40
+MAIN_LOOP_MODE_ADDR = 0x40
+GAME_MODE_ADDR = 0x41
 
 
 class CrystalisClient(BizHawkClient):
@@ -66,17 +67,17 @@ class CrystalisClient(BizHawkClient):
 
 
     async def game_watcher(self, ctx: "BizHawkClientContext") -> None:
-
         try:
             read_value = await bizhawk.read(ctx.bizhawk_ctx, [(LOCATION_FLAGS_ADDR, 16, "System Bus"),
                                                               (ITEM_FLAGS_ADDR, 16, "System Bus"),
                                                               (RECEIVED_INDEX_ADDR, 2, "System Bus"),
                                                               (GET_ITEM_FLAG_ADDR, 1, "System Bus"),
-                                                              (GAME_MODE_ADDR, 1, "System Bus")])
+                                                              (GAME_MODE_ADDR, 1, "System Bus"),
+                                                              (MAIN_LOOP_MODE_ADDR, 1, "System Bus")])
             if read_value is not None:
-                game_mode = read_value[4]
-                if game_mode[0] == 1: #GAME_MODE_NORMAL
-
+                game_mode = read_value[4][0]
+                main_loop_mode = read_value[5][0]
+                if main_loop_mode == 1: #MAIN_LOOP_GAME
                     location_flags = read_value[0]
                     locations_to_send: List[int] = []
                     for location_id in ctx.missing_locations:
@@ -116,7 +117,7 @@ class CrystalisClient(BizHawkClient):
                                                         [(RECEIVED_INDEX_ADDR, [nonconsumable_index + 1], "System Bus"),
                                                          (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
                                                          (ITEM_FLAGS_ADDR + byte, [item_flag_byte], "System Bus")],
-                                                        [(GAME_MODE_ADDR, [1], "System Bus")])
+                                                        [(MAIN_LOOP_MODE_ADDR, [1], "System Bus")])
                             else:
                                 consumables = [item for item in ctx.items_received if
                                                items_data_by_id[item.item].groups == ["Consumable"]]
@@ -130,13 +131,13 @@ class CrystalisClient(BizHawkClient):
                                                        [(RECEIVED_INDEX_ADDR + 1, [consumable_index + 1], "System Bus"),
                                                         (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
                                                         (ITEM_FLAGS_ADDR + byte, [item_flag_byte], "System Bus")],
-                                                       [(GAME_MODE_ADDR, [1], "System Bus"),
-                                                        (END_OF_CONSUMABLE_INV_ADDR, [0xFF], "System Bus")])
-                elif game_mode == 0x1e and not ctx.finished_game: #GAME_MODE_DYNA_DEFEATED
-                    await ctx.send_msgs([{
-                        "cmd": "StatusUpdate",
-                        "status": ClientStatus.CLIENT_GOAL
-                    }])
+                                                       [(END_OF_CONSUMABLE_INV_ADDR, [0xFF], "System Bus"),
+                                                        (MAIN_LOOP_MODE_ADDR, [1], "System Bus")])
+                    if game_mode == 0x1e and not ctx.finished_game: #GAME_MODE_DYNA_DEFEATED
+                        await ctx.send_msgs([{
+                            "cmd": "StatusUpdate",
+                            "status": ClientStatus.CLIENT_GOAL
+                        }])
         except bizhawk.RequestFailedError:
             # Exit handler and return to main loop to reconnect.
             pass
