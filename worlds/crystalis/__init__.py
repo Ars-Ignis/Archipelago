@@ -4,7 +4,7 @@ from dataclasses import asdict
 
 import settings
 from BaseClasses import Item, Tutorial
-from .items import CrystalisItem, items_data, unidentify_items
+from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
 from .locations import CrystalisLocation, create_location_from_location_data
 from .regions import regions_data, create_regions
 from .options import CrystalisOptions, crystalis_option_groups
@@ -54,6 +54,8 @@ class CrystalisWorld(World):
     create_regions = create_regions
     generate_output = generate_output
     unidentify_items = unidentify_items
+    create_item = create_item
+    create_items = create_items
     web = CrystalisWeb()
 
     #this will get filled out later, while creating regions
@@ -75,11 +77,6 @@ class CrystalisWorld(World):
                 item_name_groups[group].add(item.name)
             else:
                 item_name_groups[group] = {item.name}
-
-
-    def create_item(self, name: str) -> "Item":
-        item_data: CrystalisItemData = items_data[name]
-        return CrystalisItem(name, convert_enum_to_item_classification(item_data.category), item_data.ap_id_offset + CRYSTALIS_BASE_ID, self.player)
 
 
     def randomize_shop_inventories(self, starting_inventories: Dict[str, List[str]]) -> Dict[str, List[str]]:
@@ -212,27 +209,6 @@ class CrystalisWorld(World):
         wildwarps.append(0) #always have a warp for Mezame Shrine at the end
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
                                                  thunder_warp, shop_inventories, wildwarps)
-
-
-    def create_items(self) -> None:
-        #TODO: proper item fill based on settings
-        for item_data in items_data.values():
-            if item_data.name in self.shuffle_data.key_item_names.keys():
-                self.multiworld.itempool.append(self.create_item(self.shuffle_data.key_item_names[item_data.name]))
-            else:
-                for i in range(item_data.default_count):
-                    self.multiworld.itempool.append(self.create_item(item_data.name))
-        if not self.options.vanilla_dolphin:
-            #Kensu at the beach house is now a check so add an item to the pool
-            self.multiworld.itempool.append(self.create_item("Medical Herb"))
-        if self.options.vanilla_maps == self.options.vanilla_maps.option_GBC_cave:
-            #GBC Cave has two locations in it
-            self.multiworld.itempool.append(self.create_item("Medical Herb"))
-            self.multiworld.itempool.append(self.create_item("Mimic"))
-        if self.options.shuffle_areas or self.options.shuffle_houses:
-            #These settings add two locations to Mezame shrine
-            self.multiworld.itempool.append(self.create_item("Medical Herb"))
-            self.multiworld.itempool.append(self.create_item("Medical Herb"))
 
 
     def get_filler_item_name(self) -> str:
