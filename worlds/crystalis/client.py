@@ -18,6 +18,7 @@ END_OF_CONSUMABLE_INV_ADDR = 0x6447
 GET_ITEM_FLAG_ADDR = 0x6250
 MAIN_LOOP_MODE_ADDR = 0x40
 GAME_MODE_ADDR = 0x41
+CRYSTALIS_ITEM_ID = 0x04
 
 
 class CrystalisClient(BizHawkClient):
@@ -84,6 +85,7 @@ class CrystalisClient(BizHawkClient):
                         byte, bit = self.loc_id_to_addr[location_id]
                         if location_flags[byte] & (1 << bit) != 0:
                             locations_to_send.append(location_id)
+                            ctx.locations_checked.add(location_id)
 
                     if len(locations_to_send) > 0:
                         await ctx.send_msgs([{
@@ -91,11 +93,18 @@ class CrystalisClient(BizHawkClient):
                                 "locations": list(locations_to_send)
                             }])
 
+                    get_item_flag: bool = read_value[3][0] != 0
                     item_flags: bytes = read_value[1]
+                    received_crystalis: bool = item_flags[0] & 16 != 0
+                    if not get_item_flag and not received_crystalis and location_flags[0] & 16 != 0:
+                        success: bool = await bizhawk.guarded_write(ctx.bizhawk_ctx,
+                                                        [(GET_ITEM_FLAG_ADDR, [1, CRYSTALIS_ITEM_ID], "System Bus")],
+                                                        [(MAIN_LOOP_MODE_ADDR, [1], "System Bus")])
+                        if success:
+                            self.received_crystalis = True
                     received_indices: bytes = read_value[2]
                     nonconsumable_index: int = received_indices[0]
                     consumable_index: int = received_indices[1]
-                    get_item_flag: bool = read_value[3][0] != 0
                     if not get_item_flag:
                         if nonconsumable_index + consumable_index < len(ctx.items_received):
                             non_consumables = [item for item in ctx.items_received if
