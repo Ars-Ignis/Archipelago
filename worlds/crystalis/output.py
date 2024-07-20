@@ -96,7 +96,8 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
         "boss_weaknesses": boss_weaknesses,
         "gbc_cave_exits": gbc_cave_exits,
         "shop_inventories": shop_inventories,
-        "thunder_warp": thunder_warp
+        "thunder_warp": thunder_warp,
+        "wildwarps": shuffle_data.wildwarps
     }
     return output
 
