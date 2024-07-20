@@ -201,8 +201,17 @@ class CrystalisWorld(World):
         }
         if not self.options.vanilla_shops:
             shop_inventories = self.randomize_shop_inventories(shop_inventories)
+        #wildwarps
+        wildwarps: List[int] = []
+        if self.options.vanilla_wild_warp:
+            #this technically has some tweaks over true vanilla - no Leaf warp (to leave room for a Mezame warp)
+            #and replace Portoa Waterway with ESI's entrance (because Portoa Waterway's spawn is pointless).
+            wildwarps = [0x03, 0x04, 0x14, 0x1a, 0x20, 0x40, 0x42, 0x60, 0x69, 0x72, 0x78, 0x7c, 0x90, 0xa8, 0x98]
+        elif self.options.randomize_wild_warp:
+            wildwarps = self.random.sample(self.wild_warp_id_to_region.keys(), k=15)
+        wildwarps.append(0) #always have a warp for Mezame Shrine at the end
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
-                                                 thunder_warp, shop_inventories)
+                                                 thunder_warp, shop_inventories, wildwarps)
 
 
     def create_items(self) -> None:
