@@ -2,7 +2,7 @@ import orjson
 from typing import Dict, List, Optional
 import pkgutil
 from BaseClasses import Item, ItemClassification
-from .types import CrystalisItemData, CRYSTALIS_BASE_ID
+from .types import CrystalisItemData, CRYSTALIS_BASE_ID, convert_enum_to_item_classification
 
 
 basic_key_names: List[str] = []
@@ -99,5 +99,47 @@ def unidentify_items(self) -> Dict[str, str]:
         bow_choices = self.random.sample(all_bow_names, k=len(bows))
     all_choices: List[str] = key_choices + flute_choices + lamp_choices + statue_choices + bow_choices
     return dict(zip(all_key_items, all_choices))
+
+
+def create_item(self, name: str) -> "Item":
+    item_data: CrystalisItemData = items_data[name]
+    return CrystalisItem(name, convert_enum_to_item_classification(item_data.category), item_data.ap_id_offset +
+                         CRYSTALIS_BASE_ID, self.player)
+
+
+def create_items(self) -> None:
+    swords: List[CrystalisItem] = []
+    for item_data in items_data.values():
+        if item_data.name in self.shuffle_data.key_item_names.keys():
+            self.multiworld.itempool.append(self.create_item(self.shuffle_data.key_item_names[item_data.name]))
+        elif "Sword" in item_data.groups:
+            swords.append(self.create_item(item_data.name))
+        else:
+            for i in range(item_data.default_count):
+                self.multiworld.itempool.append(self.create_item(item_data.name))
+    if self.options.guarantee_starting_sword:
+        fixed_sword = self.random.choice(swords)
+        swords.remove(fixed_sword)
+        #technically stand-alone doesn't do this... but I think it fits the spirit of the flag
+        if self.options.shuffle_areas or self.options.shuffle_houses:
+            mezame_left_location = self.get_location("Mezame Left Chest")
+            mezame_left_location.place_locked_item(fixed_sword)
+        else:
+            leaf_elder_location = self.get_location("Leaf Elder")
+            leaf_elder_location.place_locked_item(fixed_sword)
+    #put the three or four swords in the itempool
+    for sword in swords:
+        self.multiworld.itempool.append(sword)
+    if not self.options.vanilla_dolphin:
+        #Kensu at the beach house is now a check so add an item to the pool
+        self.multiworld.itempool.append(self.create_item("Medical Herb"))
+    if self.options.vanilla_maps == self.options.vanilla_maps.option_GBC_cave:
+        #GBC Cave has two locations in it
+        self.multiworld.itempool.append(self.create_item("Medical Herb"))
+        self.multiworld.itempool.append(self.create_item("Mimic"))
+    if self.options.shuffle_areas or self.options.shuffle_houses:
+        #These settings add two locations to Mezame shrine
+        self.multiworld.itempool.append(self.create_item("Medical Herb"))
+        self.multiworld.itempool.append(self.create_item("Medical Herb"))
 
 
