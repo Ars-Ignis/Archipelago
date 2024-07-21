@@ -33,8 +33,8 @@ class CrystalisWeb(WebWorld):
     #TODO: Add better tutorial
 
 
-class CrystalisSettings(settings.Group):
-    pass
+#class CrystalisSettings(settings.Group):
+    #pass
     # TODO: I don't think any settings will be needed here, but confirm
 
 
@@ -47,7 +47,7 @@ class CrystalisWorld(World):
     game = "Crystalis"
     options_dataclass = CrystalisOptions
     options: CrystalisOptions
-    settings: ClassVar[CrystalisSettings]
+    #settings: ClassVar[CrystalisSettings]
     topology_present = True
     shuffle_data: CrystalisShuffleData
     set_rules = set_rules
@@ -134,6 +134,51 @@ class CrystalisWorld(World):
         return shuffled_shops
 
     def generate_early(self) -> None:
+
+        if hasattr(self.multiworld, "re_gen_passthrough"):
+            if "Crystalis" in self.multiworld.re_gen_passthrough:
+                passthrough = self.multiworld.re_gen_passthrough["Crystalis"]
+                self.options.randomize_maps.value = passthrough["randomize_maps"]
+                self.options.shuffle_areas.value = passthrough["shuffle_areas"]
+                self.options.shuffle_houses.value = passthrough["shuffle_houses"]
+                self.options.randomize_tradeins.value = passthrough["randomize_tradeins"]
+                self.options.unidentified_key_items.value = passthrough["unidentified_key_items"]
+                self.options.shuffle_goa.value = passthrough["shuffle_goa"]
+                self.options.randomize_wild_warp.value = passthrough["randomize_wild_warp"]
+                self.options.story_mode.value = passthrough["story_mode"]
+                self.options.no_bow_mode.value = passthrough["no_bow_mode"]
+                self.options.orbs_not_required.value = passthrough["orbs_not_required"]
+                self.options.thunder_warp.value = passthrough["thunder_warp"]
+                self.options.vanilla_dolphin.value = passthrough["vanilla_dolphin"]
+                self.options.fake_flight.value = passthrough["fake_flight"]
+                self.options.statue_glitch.value = passthrough["statue_glitch"]
+                self.options.mt_sabre_skip.value = passthrough["mt_sabre_skip"]
+                self.options.statue_gauntlet_skip.value = passthrough["statue_gauntlet_skip"]
+                self.options.sword_charge_glitch.value = passthrough["sword_charge_glitch"]
+                self.options.trigger_skip.value = passthrough["trigger_skip"]
+                self.options.rage_skip.value = passthrough["rage_skip"]
+                self.options.randomize_monster_weaknesses.value = passthrough["randomize_monster_weaknesses"]
+                self.options.oops_all_mimics.value = passthrough["oops_all_mimics"]
+                self.options.dont_shuffle_mimics.value = passthrough["dont_shuffle_mimics"]
+                self.options.keep_unique_items_and_consumables_separate.value = \
+                    passthrough["keep_unique_items_and_consumables_separate"]
+                self.options.guarantee_refresh.value = passthrough["guarantee_refresh"]
+                self.options.battle_magic_not_guaranteed.value = passthrough["battle_magic_not_guaranteed"]
+                self.options.tink_mode.value = passthrough["tink_mode"]
+                self.options.barrier_not_guaranteed.value = passthrough["barrier_not_guaranteed"]
+                self.options.gas_mask_not_guaranteed.value = passthrough["gas_mask_not_guaranteed"]
+                self.options.charge_shots_only.value = passthrough["charge_shots_only"]
+                self.options.dont_buff_bonus_items.value = passthrough["dont_buff_bonus_items"]
+                self.options.vanilla_maps.value = passthrough["vanilla_maps"]
+                self.options.vanilla_wild_warp.value = passthrough["vanilla_wild_warp"]
+                shuffle_dict: Dict[str, Any] = passthrough["shuffle_data"]
+                self.shuffle_data = CrystalisShuffleData(shuffle_dict["wall_map"], shuffle_dict["key_item_names"],
+                                                         shuffle_dict["trade_in_map"], shuffle_dict["boss_reqs"],
+                                                         shuffle_dict["gbc_cave_exits"], shuffle_dict["thunder_warp"],
+                                                         shuffle_dict["shop_inventories"], shuffle_dict["wildwarps"])
+                return #bail early, we don't need the rest of this lmao
+
+
         #walls first
         wall_names: List[str] = ["Zebu Cave", "East Cave", "Sealed Cave", "Mt Sabre West", "Mt Sabre North",
                                  "Waterfall Cave", "Fog Lamp Cave", "Kirisa Plant Cave", "Evil Spirit Island",
@@ -205,7 +250,7 @@ class CrystalisWorld(World):
             #and replace Portoa Waterway with ESI's entrance (because Portoa Waterway's spawn is pointless).
             wildwarps = [0x03, 0x04, 0x14, 0x1a, 0x20, 0x40, 0x42, 0x60, 0x69, 0x72, 0x78, 0x7c, 0x90, 0xa8, 0x98]
         elif self.options.randomize_wild_warp:
-            wildwarps = self.random.sample(self.wild_warp_id_to_region.keys(), k=15)
+            wildwarps = self.random.sample(list(self.wild_warp_id_to_region.keys()), k=15)
         wildwarps.append(0) #always have a warp for Mezame Shrine at the end
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
                                                  thunder_warp, shop_inventories, wildwarps)
@@ -232,4 +277,9 @@ class CrystalisWorld(World):
                                                          "dont_buff_bonus_items", "vanilla_maps", "vanilla_wild_warp")
         #get shuffle data for tracker purposes, UT regen, and ids for unidentified items
         slot_data["shuffle_data"] = asdict(self.shuffle_data)
+        return slot_data
+
+    @staticmethod
+    def interpret_slot_data(slot_data: Dict[str, Any]) -> Dict[str, Any]:
+        # returning slot_data so it regens, giving it back in multiworld.re_gen_passthrough
         return slot_data
