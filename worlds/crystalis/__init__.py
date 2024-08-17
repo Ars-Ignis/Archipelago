@@ -6,7 +6,7 @@ import settings
 from BaseClasses import Item, Tutorial
 from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
 from .locations import CrystalisLocation, create_location_from_location_data
-from .regions import regions_data, create_regions
+from .regions import regions_data, create_regions, shuffle_goa
 from .options import CrystalisOptions, crystalis_option_groups
 from .types import *
 from .logic import set_rules
@@ -54,6 +54,7 @@ class CrystalisWorld(World):
     create_regions = create_regions
     generate_output = generate_output
     unidentify_items = unidentify_items
+    shuffle_goa = shuffle_goa
     create_item = create_item
     create_items = create_items
     web = CrystalisWeb()
@@ -175,7 +176,8 @@ class CrystalisWorld(World):
                 self.shuffle_data = CrystalisShuffleData(shuffle_dict["wall_map"], shuffle_dict["key_item_names"],
                                                          shuffle_dict["trade_in_map"], shuffle_dict["boss_reqs"],
                                                          shuffle_dict["gbc_cave_exits"], shuffle_dict["thunder_warp"],
-                                                         shuffle_dict["shop_inventories"], shuffle_dict["wildwarps"])
+                                                         shuffle_dict["shop_inventories"], shuffle_dict["wildwarps"],
+                                                         shuffle_dict["goa_connection_map"])
                 return #bail early, we don't need the rest of this lmao
 
 
@@ -194,7 +196,7 @@ class CrystalisWorld(World):
                                "Thunder", "Thunder", "Thunder", "Thunder", "Thunder", "Thunder"]
         wall_map: Dict[str, str] = dict(zip(wall_names, wall_weaknesses))
         #then key item names
-        key_item_names: Dict[str, str] = unidentify_items(self)
+        key_item_names: Dict[str, str] = self.unidentify_items()
         #then trade-ins
         trade_in_targets = ["Akahana", "Aryllis", "Fisherman", "Kensu", "Slimed Kensu"]
         trade_in_items = [key_item_names["Statue of Onyx"], "Kirisa Plant", key_item_names["Fog Lamp"],
@@ -221,7 +223,7 @@ class CrystalisWorld(World):
         if self.options.vanilla_maps == self.options.vanilla_maps.option_GBC_cave:
             possible_gbc_cave_exits = ["Cordel Plains - Main", "Lime Valley", "Goa Valley", "Desert 2"]
             gbc_cave_exits = self.random.sample(possible_gbc_cave_exits, k=2)
-        thunder_warp: Optional[str] = None
+        thunder_warp: str = ""
         if self.options.thunder_warp == self.options.thunder_warp.option_vanilla:
             thunder_warp = "Shyron"
         elif self.options.thunder_warp == self.options.thunder_warp.option_shuffled:
@@ -252,8 +254,25 @@ class CrystalisWorld(World):
         elif self.options.randomize_wild_warp:
             wildwarps = self.random.sample(list(self.wild_warp_id_to_region.keys()), k=15)
         wildwarps.append(0) #always have a warp for Mezame Shrine at the end
+        #shuffle goa if necessary
+        goa_connection_map: Dict[str, str]
+        if self.options.shuffle_goa:
+            goa_connection_map = self.shuffle_goa()
+        else:
+            goa_connection_map = {
+                "Goa Entrance - Stairs": "Kelbesque's Floor - Front",
+                "Kelbesque's Floor - Entrance": "Goa Entrance - Behind Wall",
+                "Kelbesque's Floor - Exit": "Sabera's Floor - Front",
+                "Sabera's Floor - Entrance": "Kelbesque's Floor - Back",
+                "Sabera's Floor - Exit": "Mado's Floor - Front",
+                "Mado's Floor - Entrance": "Sabera's Floor - Back",
+                "Mado's Floor - Exit": "Karmine's Floor - Front",
+                "Karmine's Floor - Entrance": "Mado's Floor - Back",
+                "Karmine's Floor - Exit": "Goa Exit",
+                "Goa Exit - Upstairs": "Karmine's Floor - Back"
+            }
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
-                                                 thunder_warp, shop_inventories, wildwarps)
+                                                 thunder_warp, shop_inventories, wildwarps, goa_connection_map)
 
 
     def get_filler_item_name(self) -> str:

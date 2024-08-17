@@ -5,7 +5,7 @@ from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntrance
 from .locations import CrystalisLocation, create_location_from_location_data
 from .items import CrystalisItem
 import orjson
-from typing import Dict, List, Set
+from typing import Dict, List, Set, NamedTuple
 import pkgutil
 
 
@@ -61,10 +61,17 @@ for key, value in regions_data_json.items():
                 region = local_region_cache[region_data.name]
                 for entrance_data in region_data.entrances:
                     if entrance_data.vanilla_target in local_region_cache:
-                        connecting_region = local_region_cache[entrance_data.vanilla_target]
                         if entrance_data.entrance_type == CrystalisEntranceTypeEnum.STATIC:
+                            connecting_region = local_region_cache[entrance_data.vanilla_target]
                             region.connect(connecting_region)
+                        elif entrance_data.entrance_type == CrystalisEntranceTypeEnum.GOA_TRANSITION and \
+                             self.options.shuffle_goa:
+                            #connect according to the shuffle
+                            connecting_region_name = self.shuffle_data.goa_connection_map[entrance_data.name]
+                            connecting_region = local_region_cache[connecting_region_name]
+                            region.connect(connecting_region, entrance_data.name)
                         else:
+                            connecting_region = local_region_cache[entrance_data.vanilla_target]
                             region.connect(connecting_region, entrance_data.name)
                 self.multiworld.regions.append(region)
         #add conditional entrances
@@ -106,7 +113,7 @@ for key, value in regions_data_json.items():
                 shop_region.connect(buy_warp_boots_region, "Buy Warp Boots: " + shop)
         #add Thunder Warp entrance
         menu_region = local_region_cache["Menu"]
-        if self.shuffle_data.thunder_warp is not None:
+        if self.shuffle_data.thunder_warp != "":
             thunder_warp_region = local_region_cache[self.shuffle_data.thunder_warp]
             menu_region.connect(thunder_warp_region, "Thunder Warp")
 
@@ -206,3 +213,46 @@ for key, value in regions_data_json.items():
         from Utils import visualize_regions
         visualize_regions(self.multiworld.get_region("Menu", player), "my_world.puml")
 
+    def shuffle_goa(self) -> Dict[str, str]:
+        #not every Goa Transition can point to every other Goa transition, so we have this complicated algorithm
+        class GoaEntranceData(NamedTuple):
+            entrance_name: str
+            region_name: str
+            is_up: bool
+            can_flip: bool
+
+        floor_indicies: List[int] = [0, 1, 2, 3]
+        self.random.shuffle(floor_indicies)
+
+        original_entrances: List[GoaEntranceData] = [
+            GoaEntranceData("Kelbesque's Floor - Entrance", "Kelbesque's Floor - Front", False, False),
+            GoaEntranceData("Sabera's Floor - Entrance", "Sabera's Floor - Front", False, True),
+            GoaEntranceData("Mado's Floor - Entrance", "Mado's Floor - Front", False, False),
+            GoaEntranceData("Karmine's Floor - Entrance", "Karmine's Floor - Front", False, True)
+        ]
+        original_exits: List[GoaEntranceData] = [
+            GoaEntranceData("Kelbesque's Floor - Exit", "Kelbesque's Floor - Back", True, True),
+            GoaEntranceData("Sabera's Floor - Exit", "Sabera's Floor - Back", True, True),
+            GoaEntranceData("Mado's Floor - Exit", "Mado's Floor - Back", True, True),
+            GoaEntranceData("Karmine's Floor - Exit", "Karmine's Floor - Back", False, True)
+        ]
+        shuffled_entrances: List[GoaEntranceData] = []
+        shuffled_exits: List[GoaEntranceData] = [GoaEntranceData("Goa Entrance - Stairs", "Goa Entrance - Behind Wall", True, False)]
+        previous_exit: GoaEntranceData = shuffled_exits[0]
+        for floor in floor_indicies:
+            is_flexible: bool = previous_exit.is_up or original_entrances[floor].can_flip or previous_exit.can_flip
+            should_flip: bool = True if not is_flexible else self.random.choice([True, False])
+            current_entrance: GoaEntranceData = original_exits[floor] if should_flip else original_entrances[floor]
+            shuffled_entrances.append(current_entrance)
+            previous_exit = original_entrances[floor] if should_flip else original_exits[floor]
+            shuffled_exits.append(previous_exit)
+        shuffled_entrances.append(GoaEntranceData("Goa Exit - Upstairs", "Goa Exit", True, False))
+        connection_map: Dict[str, str] = {}
+        for transition_index in range(5):
+            upward_entrance_name: str = shuffled_exits[transition_index].entrance_name
+            downward_entrance_name: str = shuffled_entrances[transition_index].entrance_name
+            upper_floor_region_name: str = shuffled_entrances[transition_index].region_name
+            lower_floor_region_name: str = shuffled_exits[transition_index].region_name
+            connection_map[upward_entrance_name] = upper_floor_region_name
+            connection_map[downward_entrance_name] = lower_floor_region_name
+        return connection_map

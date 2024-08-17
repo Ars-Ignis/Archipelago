@@ -2,7 +2,7 @@ import logging
 from dataclasses import dataclass
 from BaseClasses import ItemClassification
 from enum import IntEnum
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
 
 CRYSTALIS_BASE_ID: int = 2241000
 
@@ -116,6 +116,7 @@ class CrystalisShuffleData:
     trade_in_map: Dict[str, str]
     boss_reqs: Dict[str, str]
     gbc_cave_exits: List[str]
-    thunder_warp: Optional[str]
+    thunder_warp: str
     shop_inventories: Dict[str, List[str]]
     wildwarps: List[int]
+    goa_connection_map: Dict[str, str]
