@@ -1,7 +1,7 @@
 import os
 import orjson
 import zipfile
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Tuple
 from worlds.Files import APPatch
 from .items import items_data
 from .options import CrystalisOptions
@@ -86,6 +86,27 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
         thunder_warp = regions_data[shuffle_data.thunder_warp].wildwarpIds[0]
     else:
         thunder_warp = -1
+    goa_floors: List[Tuple[int, bool]] = []
+    previous_exit: str = "Goa Entrance - Stairs"
+    for i in range(4):
+        current_floor_entrance_region_name = shuffle_data.goa_connection_map[previous_exit]
+        current_floor_name = current_floor_entrance_region_name.split('\'')[0]
+        current_floor_index: int
+        if current_floor_name == "Kelbesque":
+            current_floor_index = 0
+        elif current_floor_name == "Sabera":
+            current_floor_index = 1
+        elif current_floor_name == "Mado":
+            current_floor_index = 2
+        elif current_floor_name == "Karmine":
+            current_floor_index = 3
+        else:
+            raise KeyError(f"Unrecognized Goa floor in Goa connection map: {current_floor_name}")
+        is_flipped: bool = False
+        if current_floor_entrance_region_name.endswith("Back"):
+            is_flipped = True
+        goa_floors.append((current_floor_index, is_flipped))
+        previous_exit = f"{current_floor_name}'s Floor - " + ("Entrance" if is_flipped else "Exit")
 
     output: Dict[str, Any] = {
         "wall_map": wall_map,
@@ -97,7 +118,8 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
         "gbc_cave_exits": gbc_cave_exits,
         "shop_inventories": shop_inventories,
         "thunder_warp": thunder_warp,
-        "wildwarps": shuffle_data.wildwarps
+        "wildwarps": shuffle_data.wildwarps,
+        "goa_floors": goa_floors
     }
     return output
 

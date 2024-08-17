@@ -104,7 +104,7 @@ def set_rules(self) -> None:
             set_rule(buy_warp_boots_entrance, lambda state: state.has_group("Sword", player, 1))
 
     #Thunder Warp
-    if shuffle_data.thunder_warp is not None:
+    if shuffle_data.thunder_warp != "":
         thunder_warp = self.get_entrance("Thunder Warp")
         set_rule(thunder_warp, lambda state: state.has("Sword of Thunder", player) and
                                              (state.has("Buy Warp Boots", player) or
