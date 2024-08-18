@@ -274,7 +274,7 @@
     "losable": true,
     "prevent_loss": false,
     "community": false,
-    "default_count": 7,
+    "default_count": 6,
     "groups": [
       "Consumable"
     ],
@@ -462,7 +462,7 @@
     "groups": [
       "Accessory"
     ],
-    "category": 3,
+    "category": 1,
     "notes": ""
   },
   "Power Ring": {
@@ -955,7 +955,7 @@
     "losable": false,
     "prevent_loss": false,
     "community": false,
-    "default_count": 11,
+    "default_count": 12,
     "groups": [
       ""
     ],
