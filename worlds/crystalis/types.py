@@ -42,11 +42,11 @@ def convert_enum_to_item_classification(enum: CrystalisItemCategoryEnum) -> Item
     if enum ==  CrystalisItemCategoryEnum.USEFUL:
         return ItemClassification.useful
     if enum ==  CrystalisItemCategoryEnum.CONDITIONAL:
-        #TODO: figure this out later
+        logging.warning("Unhandled conditional progression item in Crystalis. Defaulting to progression.")
         return ItemClassification.progression
     if enum ==  CrystalisItemCategoryEnum.TRAP:
         return ItemClassification.trap
-    #TODO: proper error handling?
+    raise ValueError(f"Crystalis: Unrecognized value in convert_enum_to_item_classification: {enum}")
     return ItemClassification.filler
 
 class CrystalisEntranceTypeEnum(IntEnum):

@@ -136,6 +136,16 @@ class CrystalisWorld(World):
 
     def generate_early(self) -> None:
 
+        if self.options.randomize_maps:
+            logging.warning("Wm (Randomize maps) not implemented yet. Turning this option off.")
+            self.options.randomize_maps.value = self.options.randomize_maps.option_false
+        if self.options.shuffle_areas:
+            logging.warning("Wa (Shuffle areas) not implemented yet. Turning this option off.")
+            self.options.shuffle_areas.value = self.options.shuffle_areas.option_false
+        if self.options.shuffle_houses:
+            logging.warning("Wh (Shuffle houses) not implemented yet. Turning this option off.")
+            self.options.shuffle_houses.value = self.options.shuffle_houses.option_false
+
         if hasattr(self.multiworld, "re_gen_passthrough"):
             if "Crystalis" in self.multiworld.re_gen_passthrough:
                 passthrough = self.multiworld.re_gen_passthrough["Crystalis"]
