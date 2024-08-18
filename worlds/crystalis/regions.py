@@ -54,7 +54,10 @@ for key, value in regions_data_json.items():
                     continue
                 #now that we know the location exists, add it to the multiworld
                 self.locations_data.append(location_data)
-                region.locations.append(create_location_from_location_data(self.player, location_data, region))
+                location: CrystalisLocation = create_location_from_location_data(self.player, location_data, region)
+                region.locations.append(location)
+                if self.options.dont_shuffle_mimics and "Mimic" in location_data.name:
+                    location.place_locked_item(self.create_item("Mimic"))
         #then make entrances
         for region_data in regions_data.values():
             if region_data.name in local_region_cache.keys():
