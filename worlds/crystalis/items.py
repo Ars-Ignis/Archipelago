@@ -1,8 +1,10 @@
+import logging
+
 import orjson
 from typing import Dict, List, Optional
 import pkgutil
 from BaseClasses import Item, ItemClassification
-from .types import CrystalisItemData, CRYSTALIS_BASE_ID, convert_enum_to_item_classification
+from .types import CrystalisItemData, CRYSTALIS_BASE_ID, convert_enum_to_item_classification, CrystalisItemCategoryEnum
 
 
 basic_key_names: List[str] = []
@@ -103,20 +105,38 @@ def unidentify_items(self) -> Dict[str, str]:
 
 def create_item(self, name: str) -> "Item":
     item_data: CrystalisItemData = items_data[name]
-    return CrystalisItem(name, convert_enum_to_item_classification(item_data.category), item_data.ap_id_offset +
+    actual_category: CrystalisItemCategoryEnum = item_data.category
+    if actual_category == CrystalisItemCategoryEnum.CONDITIONAL:
+        if "Upgrades" in item_data.groups[0]:
+            actual_category = CrystalisItemCategoryEnum.USEFUL if self.options.orbs_not_required and \
+                                                                  self.options.battle_magic_not_guaranteed and \
+                                                                  not self.options.randomize_tradeins \
+                                                                  else CrystalisItemCategoryEnum.PROGRESSION
+        elif item_data.name == "Shield Ring":
+            actual_category = CrystalisItemCategoryEnum.USEFUL if not self.options.barrier_not_guaranteed \
+                                                                  else CrystalisItemCategoryEnum.PROGRESSION
+        elif item_data.name == "Refresh":
+            actual_category = CrystalisItemCategoryEnum.USEFUL if not self.options.barrier_not_guaranteed and \
+                                                                  not self.options.gas_mask_not_guaranteed and \
+                                                                  not self.options.guarantee_refresh \
+                                                                  else CrystalisItemCategoryEnum.PROGRESSION
+    return CrystalisItem(name, convert_enum_to_item_classification(actual_category), item_data.ap_id_offset +
                          CRYSTALIS_BASE_ID, self.player)
 
 
 def create_items(self) -> None:
+    items_created: int = 0
     swords: List[CrystalisItem] = []
     for item_data in items_data.values():
         if item_data.name in self.shuffle_data.key_item_names.keys():
             self.multiworld.itempool.append(self.create_item(self.shuffle_data.key_item_names[item_data.name]))
+            items_created += 1
         elif "Sword" in item_data.groups:
             swords.append(self.create_item(item_data.name))
-        else:
+        elif not self.options.dont_shuffle_mimics or item_data.name != "Mimic":
             for i in range(item_data.default_count):
                 self.multiworld.itempool.append(self.create_item(item_data.name))
+                items_created += 1
     if self.options.guarantee_starting_sword:
         fixed_sword = self.random.choice(swords)
         swords.remove(fixed_sword)
@@ -130,16 +150,16 @@ def create_items(self) -> None:
     #put the three or four swords in the itempool
     for sword in swords:
         self.multiworld.itempool.append(sword)
-    if not self.options.vanilla_dolphin:
-        #Kensu at the beach house is now a check so add an item to the pool
-        self.multiworld.itempool.append(self.create_item("Medical Herb"))
-    if self.options.vanilla_maps == self.options.vanilla_maps.option_GBC_cave:
-        #GBC Cave has two locations in it
-        self.multiworld.itempool.append(self.create_item("Medical Herb"))
-        self.multiworld.itempool.append(self.create_item("Mimic"))
-    if self.options.shuffle_areas or self.options.shuffle_houses:
-        #These settings add two locations to Mezame shrine
-        self.multiworld.itempool.append(self.create_item("Medical Herb"))
-        self.multiworld.itempool.append(self.create_item("Medical Herb"))
+        items_created += 1
+    locations_count = len([location for location in self.multiworld.get_locations(self.player)
+                               if location.address is not None and location.item is None])
+
+    if items_created < locations_count:
+        logging.debug(f"Crystalis: Fewer items ({items_created}) than empty locations ({locations_count}).")
+        logging.debug(f"Crystalis: creating {locations_count - items_created} extra Medical Herbs.")
+        for i in range(locations_count - items_created):
+            self.multiworld.itempool.append(self.create_item("Medical Herb"))
+    elif locations_count < items_created:
+        raise Exception(f" Too many items ({items_created}) for the number of available locations ({locations_count}).")
 
 
