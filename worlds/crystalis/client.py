@@ -1,5 +1,6 @@
-from typing import TYPE_CHECKING, List, Dict, Tuple, Optional
+from typing import TYPE_CHECKING, List, Dict, Tuple
 from NetUtils import ClientStatus, NetworkItem
+from Utils import async_start
 
 import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
@@ -19,6 +20,7 @@ GET_ITEM_FLAG_ADDR = 0x6250
 MAIN_LOOP_MODE_ADDR = 0x40
 GAME_MODE_ADDR = 0x41
 CRYSTALIS_ITEM_ID = 0x04
+CURRENT_LOCATION_ADDR = 0x6c
 
 
 class CrystalisClient(BizHawkClient):
@@ -29,6 +31,7 @@ class CrystalisClient(BizHawkClient):
     #TODO: Consider a better method for identifying valid Crystalis ROMs
     loc_id_to_addr: Dict[int, Tuple[int, int]] = {}
     unidentified_item_rom_ids: Dict[int, int] = {}
+    current_location: int = 0
 
 
     def __init__(self):
@@ -74,7 +77,8 @@ class CrystalisClient(BizHawkClient):
                                                               (RECEIVED_INDEX_ADDR, 2, "System Bus"),
                                                               (GET_ITEM_FLAG_ADDR, 1, "System Bus"),
                                                               (GAME_MODE_ADDR, 1, "System Bus"),
-                                                              (MAIN_LOOP_MODE_ADDR, 1, "System Bus")])
+                                                              (MAIN_LOOP_MODE_ADDR, 1, "System Bus"),
+                                                              (CURRENT_LOCATION_ADDR, 1, "System Bus")])
             if read_value is not None:
                 game_mode = read_value[4][0]
                 main_loop_mode = read_value[5][0]
@@ -92,6 +96,7 @@ class CrystalisClient(BizHawkClient):
                                 "cmd": "LocationChecks",
                                 "locations": list(locations_to_send)
                             }])
+                        return #Bail now to keep this loop short
 
                     get_item_flag: bool = read_value[3][0] != 0
                     item_flags: bytes = read_value[1]
@@ -105,7 +110,19 @@ class CrystalisClient(BizHawkClient):
                     received_indices: bytes = read_value[2]
                     nonconsumable_index: int = received_indices[0]
                     consumable_index: int = received_indices[1]
-                    if not get_item_flag:
+                    new_location: int = read_value[6][0]
+                    if new_location != self.current_location:
+                        self.current_location = new_location
+                        async_start(ctx.send_msgs([{
+                                    "cmd": "Set",
+                                    "key": f"current_location_{ctx.slot}",
+                                    "default": 0,
+                                    "want_reply": False,
+                                    "operations": [{"operation": "replace", "value": new_location}]
+                                }]), name="send current_location")
+                    #if we're not already processing an item and we're not in Mezame Shrine...
+                    #Prevent receiving items in Mezame Shrine to make reloading saves for asyncs a bit smoother.
+                    if not get_item_flag and self.current_location != 0:
                         if nonconsumable_index + consumable_index < len(ctx.items_received):
                             non_consumables = [item for item in ctx.items_received if
                                                items_data_by_id[item.item].groups != ["Consumable"]]
