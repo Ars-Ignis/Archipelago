@@ -262,7 +262,7 @@ class CrystalisWorld(World):
             #and replace Portoa Waterway with ESI's entrance (because Portoa Waterway's spawn is pointless).
             wildwarps = [0x03, 0x04, 0x14, 0x1a, 0x20, 0x40, 0x42, 0x60, 0x69, 0x72, 0x78, 0x7c, 0x90, 0xa8, 0x98]
         elif self.options.randomize_wild_warp:
-            valid_wildwarps: List[int] = self.wild_warp_id_to_region.keys()
+            valid_wildwarps: List[int] = list(self.wild_warp_id_to_region.keys())
             if self.options.vanilla_maps != self.options.vanilla_maps.option_GBC_cave:
                 for id in regions_data["GBC Cave - Main"].wildwarpIds:
                     valid_wildwarps.remove(id)
