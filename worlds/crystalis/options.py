@@ -4,8 +4,8 @@ from Options import Choice, Toggle, PerGameCommonOptions, OptionGroup
 
 # World Options
 class RandomizeMaps(Toggle):
-    """Individual maps are randomized. For now this is only a subset of possible maps. A randomized map will have all
-    the same features (exits, chests, NPCs, etc) except things are moved around.
+    """NOT IMPLEMENTED YET: Individual maps are randomized. For now this is only a subset of possible maps. A randomized
+    map will have all the same features (exits, chests, NPCs, etc) except things are moved around.
     """
     display_name = "Randomize maps (Wm)"
 
@@ -17,7 +17,7 @@ class RandomizeMaps(Toggle):
 
 
 class ShuffleAreas(Toggle):
-    """Shuffles some or all area connections."""
+    """NOT IMPLEMENTED YET: Shuffles some or all area connections."""
     display_name = "Shuffle areas (Wa)"
 
 
@@ -28,8 +28,8 @@ class ShuffleAreas(Toggle):
 
 
 class ShuffleHouseEntrances(Toggle):
-    """Shuffles all the house entrances, as well as a handful of other things, like the palace/fortress-type entrances
-    at the top of several towns, and standalone houses.
+    """NOT IMPLEMENTED YET: Shuffles all the house entrances, as well as a handful of other things, like the
+    palace/fortress-type entrances at the top of several towns, and standalone houses.
     """
     display_name = "Shuffle house entrances (Wh)"
 
@@ -91,9 +91,7 @@ class ShuffleGoa(Toggle):
 
 
 class RandomizeSpriteColors(Toggle):
-    """Monsters and NPCs will have different colors. This is not an optional flag because it affects what monsters can
-    be grouped together.
-    """
+    """Monsters and NPCs will have different colors."""
     display_name = "Randomize sprite colors (Ws)"
 
 
@@ -396,8 +394,8 @@ class KeepUniqueItemsAndConsumablesSeparate(Toggle):
     unique items (specifically, anything that cannot be sold) will only be found in either (a) checks that held unique
     items in vanilla, or (b) boss drops. Chests containing consumables in vanilla may be safely ignored, but chests
     containing unique items in vanilla may still end up with non-unique items because of bosses like Vampire 2 that drop
-    consumables. If mimics are shuffled, they will only be in consumable locations.  These locations will not be tracked
-    by the multiworld, so that they don't contribute to hint points.
+    consumables. If mimics are shuffled, they will only be in consumable locations. These locations are tracked by the
+    multiworld, so they will still count against your hint points, but they will only contain your filler.
     """
     display_name = "Keep unique items and consumables separate (Eu)"
 
@@ -497,8 +495,9 @@ class TinkMode(Toggle):
 
 
 class BarrierNotGuaranteed(Toggle):
-    """Normally, the logic will guarantee Barrier (or else refresh and shield ring) before entering Stxy, the Fortress,
-    or fighting Karmine. This disables that check.
+    """Normally, the logic will guarantee Barrier before entering Stxy, the Fortress, or fighting Karmine. This puts
+    those locations in logic with any sword (to farm money) and one of Shield Ring, Refresh, or a place to buy Medical
+    Herbs.
     """
     display_name = "Barrier not guaranteed (Nb)"
 
