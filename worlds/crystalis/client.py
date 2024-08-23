@@ -14,13 +14,13 @@ if TYPE_CHECKING:
 LOCATION_FLAGS_ADDR = 0x64A0
 ITEM_FLAGS_ADDR = 0x64C0
 RECEIVED_INDEX_ADDR = 0x657D
-SCREEN_MODE_ADDR = 0x0051
 END_OF_CONSUMABLE_INV_ADDR = 0x6447
 GET_ITEM_FLAG_ADDR = 0x6250
 MAIN_LOOP_MODE_ADDR = 0x40
 GAME_MODE_ADDR = 0x41
 CRYSTALIS_ITEM_ID = 0x04
 CURRENT_LOCATION_ADDR = 0x6c
+SCREEN_LOCK_ADDR = 0x07d7
 
 
 class CrystalisClient(BizHawkClient):
@@ -143,7 +143,8 @@ class CrystalisClient(BizHawkClient):
                                                         [(RECEIVED_INDEX_ADDR, [nonconsumable_index + 1], "System Bus"),
                                                          (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
                                                          (ITEM_FLAGS_ADDR + byte, [item_flag_byte], "System Bus")],
-                                                        [(MAIN_LOOP_MODE_ADDR, [1], "System Bus")])
+                                                        [(MAIN_LOOP_MODE_ADDR, [1], "System Bus"),
+                                                         (SCREEN_LOCK_ADDR, [0], "System Bus")])
                             else:
                                 consumables = [item for item in ctx.items_received if
                                                items_data_by_id[item.item].groups == ["Consumable"]]
@@ -158,7 +159,8 @@ class CrystalisClient(BizHawkClient):
                                                         (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
                                                         (ITEM_FLAGS_ADDR + byte, [item_flag_byte], "System Bus")],
                                                        [(END_OF_CONSUMABLE_INV_ADDR, [0xFF], "System Bus"),
-                                                        (MAIN_LOOP_MODE_ADDR, [1], "System Bus")])
+                                                        (MAIN_LOOP_MODE_ADDR, [1], "System Bus"),
+                                                        (SCREEN_LOCK_ADDR, [0], "System Bus")])
                     if game_mode == 0x1e and not ctx.finished_game: #GAME_MODE_DYNA_DEFEATED
                         await ctx.send_msgs([{
                             "cmd": "StatusUpdate",
