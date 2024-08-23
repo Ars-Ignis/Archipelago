@@ -19,16 +19,17 @@ GET_ITEM_FLAG_ADDR = 0x6250
 MAIN_LOOP_MODE_ADDR = 0x40
 GAME_MODE_ADDR = 0x41
 CRYSTALIS_ITEM_ID = 0x04
-CURRENT_LOCATION_ADDR = 0x6c
-SCREEN_LOCK_ADDR = 0x07d7
+CURRENT_LOCATION_ADDR = 0x6C
+SCREEN_LOCK_ADDR = 0x07D7
+AP_ROM_LABEL_ADDR = 0x25715
+EXPECTED_START: List[bytes] = [bytes([0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9])]
+AP_ROM_LABEL: List[bytes] = [bytes([0x41, 0x52, 0x43, 0x48, 0x49, 0x50, 0x45, 0x4C, 0x41, 0x47, 0x4F])]
 
 
 class CrystalisClient(BizHawkClient):
     game = "Crystalis"
     system = "NES"
     #intentionally not defining patch_suffix because Archipelago will not be responsible for patching the game
-    expected_start: List[bytes] = [bytes([0xd9, 0xd9, 0xd9, 0xd9, 0xd9, 0xd9, 0xd9, 0xd9])]
-    #TODO: Consider a better method for identifying valid Crystalis ROMs
     loc_id_to_addr: Dict[int, Tuple[int, int]] = {}
     unidentified_item_rom_ids: Dict[int, int] = {}
     current_location: int = 0
@@ -47,9 +48,15 @@ class CrystalisClient(BizHawkClient):
         from CommonClient import logger
         try:
             rom_start: List[bytes] = (await bizhawk.read(ctx.bizhawk_ctx, [(0x0, 8, "PRG ROM")]))
-            if rom_start != self.expected_start:
-                logger.info("Expected: " + str(self.expected_start))
-                logger.info("Found: " + str(rom_start))
+            if rom_start != EXPECTED_START:
+                logger.debug("Expected: " + str(EXPECTED_START))
+                logger.debug("Found: " + str(rom_start))
+                return False
+            ap_label: List[bytes] = \
+                (await bizhawk.read(ctx.bizhawk_ctx, [(AP_ROM_LABEL_ADDR, len(AP_ROM_LABEL[0]), "PRG ROM")]))
+            if ap_label != AP_ROM_LABEL:
+                logger.debug("Expected: " + str(AP_ROM_LABEL))
+                logger.debug("Found: " + str(ap_label))
                 return False
         except bizhawk.RequestFailedError:
             return False
