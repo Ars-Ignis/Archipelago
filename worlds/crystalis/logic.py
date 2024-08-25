@@ -741,9 +741,22 @@ def set_rules(self) -> None:
     def item_for_self(item) -> bool:
         return item.player == self.player
     for location_data in self.locations_data:
+        if self.options.vanilla_dolphin and location_data.name == "Kensu In Cabin":
+            #Kensu doesn't drop an item with vanilla dolphin on
+            continue
+        if self.options.vanilla_maps.value != self.options.vanilla_maps.option_GBC_cave and \
+            "East Cave" in location_data.name:
+            #East/GBC Cave doesn't exist unless the options say it does
+            continue
+        if not (self.options.shuffle_houses or self.options.shuffle_areas) and "Mezame" in location_data.name:
+            #Mezame Shrine only has items if houses or areas are shuffled
+            continue
+        if (self.options.shuffle_houses or self.options.shuffle_areas) and location_data.name == "Zebu Student":
+            #Zebu's student doesn't grant an item if houses are shuffled
+            continue
         #technically bosses have is_chest == False, but since you need a sword to fight the boss anyway, it's redundant
         if options.oops_all_mimics and location_data.is_chest:
-            add_rule(self.get_location(location_data.name), lambda state: state.has_group("Sword", player, 1))
+            add_rule(self.get_location(location_data.name), lambda state: state.has_group("Sword", player, 1), "and")
         if options.keep_unique_items_and_consumables_separate and not location_data.unique:
             non_unique_location = self.get_location(location_data.name)
             if non_unique_location.item is None:
