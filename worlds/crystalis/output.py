@@ -82,7 +82,7 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
             inv_ids.append(items_data[stock].rom_id)
         shop_inventories[str(regions_data[shop].wildwarpIds[0])] = inv_ids
     thunder_warp: int
-    if shuffle_data.thunder_warp is not None:
+    if shuffle_data.thunder_warp != '':
         thunder_warp = regions_data[shuffle_data.thunder_warp].wildwarpIds[0]
     else:
         thunder_warp = -1
