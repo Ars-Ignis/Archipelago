@@ -49,7 +49,10 @@ for key, value in regions_data_json.items():
                         "Mezame" in location_data.name:
                     #Mezame Shrine chests only exist if areas or houses are shuffled, to grow sphere 1
                     continue
-                if self.options.vanilla_dolphin and "Kensu In Cabin" in location_data.name:
+                if (self.options.shuffle_houses or self.options.shuffle_areas) and location_data.name == "Zebu Student":
+                    #Zebu's student doesn't grant an item if houses are shuffled
+                    continue
+                if self.options.vanilla_dolphin and "Kensu In Cabin" == location_data.name:
                     #Kensu in Cabin just activates the flute if vanilla dolphin is on
                     continue
                 #now that we know the location exists, add it to the multiworld
