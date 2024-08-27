@@ -37,6 +37,7 @@ for key, value in regions_data_json.items():
         #first make regions and locations
         #need to cache while still creating regions before appending them to the multiworld
         local_region_cache = {}
+        self.locations_data = []
         for region_data in regions_data.values():
             if self.options.vanilla_maps != self.options.vanilla_maps.option_GBC_cave and \
                 "GBC" in region_data.name:
