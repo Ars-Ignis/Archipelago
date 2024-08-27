@@ -30,24 +30,19 @@ class CrystalisWeb(WebWorld):
             ["CodeGorilla"]
         )
     ]
-    #TODO: Add better tutorial
-
-
-#class CrystalisSettings(settings.Group):
-    #pass
-    # TODO: I don't think any settings will be needed here, but confirm
 
 
 class CrystalisWorld(World):
     """
-    TODO: Add Crystalis doc string.
+    October 1st, 1997: The END Day. Long after a savage war engulfs and destroys the world, Simea wakes from cryostasis
+    to find himself in a strange, post-apocalyptic world. Explore the land and fight against the Goa Empire in this
+    1990 NES action role-playing game.
     """
 
 
     game = "Crystalis"
     options_dataclass = CrystalisOptions
     options: CrystalisOptions
-    #settings: ClassVar[CrystalisSettings]
     topology_present = True
     shuffle_data: CrystalisShuffleData
     set_rules = set_rules
