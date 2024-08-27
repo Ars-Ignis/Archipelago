@@ -60,7 +60,7 @@ class CrystalisWorld(World):
     web = CrystalisWeb()
 
     #this will get filled out later, while creating regions
-    locations_data: List[CrystalisLocationData] = []
+    locations_data: List[CrystalisLocationData]
     location_name_to_id = {}
     wild_warp_id_to_region: Dict[int, str] = {}
     for region_data in regions_data.values():
