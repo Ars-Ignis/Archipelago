@@ -15,6 +15,10 @@ from .client import CrystalisClient  # Unused, but required to register with Biz
 from worlds.AutoWorld import World, WebWorld
 
 
+WARP_MINIMUM = 4
+WARP_MAXIMUM = 15
+
+
 class CrystalisWeb(WebWorld):
     game = "Crystalis"
     option_groups = crystalis_option_groups
@@ -261,7 +265,8 @@ class CrystalisWorld(World):
             if self.options.vanilla_maps != self.options.vanilla_maps.option_GBC_cave:
                 for id in regions_data["GBC Cave - Main"].wildwarpIds:
                     valid_wildwarps.remove(id)
-            wildwarps = self.random.sample(list(valid_wildwarps), k=15)
+            warp_count = self.random.randint(WARP_MINIMUM, WARP_MAXIMUM)
+            wildwarps = self.random.sample(list(valid_wildwarps), k=warp_count)
         wildwarps.append(0) #always have a warp for Mezame Shrine at the end
         #shuffle goa if necessary
         goa_connection_map: Dict[str, str]
