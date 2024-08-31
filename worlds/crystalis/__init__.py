@@ -10,7 +10,7 @@ from .regions import regions_data, create_regions, shuffle_goa
 from .options import CrystalisOptions, crystalis_option_groups
 from .types import *
 from .logic import set_rules
-from .output import generate_output
+from .output import generate_output, write_spoiler_header
 from .client import CrystalisClient  # Unused, but required to register with BizHawkClient
 from worlds.AutoWorld import World, WebWorld
 
@@ -56,6 +56,7 @@ class CrystalisWorld(World):
     shuffle_goa = shuffle_goa
     create_item = create_item
     create_items = create_items
+    write_spoiler_header = write_spoiler_header
     web = CrystalisWeb()
 
     #this will get filled out later, while creating regions
