@@ -1,7 +1,7 @@
 import os
 import orjson
 import zipfile
-from typing import Dict, List, Any, Tuple
+from typing import Dict, List, Any, Tuple, TextIO
 from worlds.Files import APPatch
 from .items import items_data
 from .options import CrystalisOptions
@@ -139,6 +139,73 @@ def generate_output(self, output_directory: str) -> None:
         json_output = orjson.dumps(output_dict, option=orjson.OPT_INDENT_2)
         zf.writestr("patch_data.json", json_output)
         ap_crys.write_contents(zf)
+
+
+def write_spoiler_header(self, spoiler_handle: TextIO) -> None:
+    if self.options.randomize_wall_elements:
+        spoiler_handle.write("\nWall Elements:\n")
+        for area, element in self.shuffle_data.wall_map.items():
+            spoiler_handle.write(f"{area}: {element}\n")
+    if self.options.unidentified_key_items:
+        spoiler_handle.write("\nKey Item Names:\n")
+        for key_item, name in self.shuffle_data.key_item_names.items():
+            spoiler_handle.write(f"{key_item}: {name}\n")
+    if self.options.randomize_tradeins:
+        spoiler_handle.write("\nTrade-Ins:\n")
+        for trader, trade_in in self.shuffle_data.trade_in_map.items():
+            spoiler_handle.write(f"{trader}: {trade_in}\n")
+    if self.options.randomize_monster_weaknesses:
+        spoiler_handle.write("\nBoss Weaknesses:\n")
+        for boss, weakness in self.shuffle_data.boss_reqs.items():
+            if boss == "Giant Insect" or boss == "Vampire 2":
+                spoiler_handle.write(f"{boss}: Not {weakness}\n")
+            else:
+                spoiler_handle.write(f"{boss}: {weakness}\n")
+    if self.options.vanilla_maps.value == self.options.vanilla_maps.option_GBC_cave:
+        spoiler_handle.write(f"\nGBC Cave Exits: {self.shuffle_data.gbc_cave_exits[0]}, "
+                             f"{self.shuffle_data.gbc_cave_exits[1]}\n")
+    if self.options.thunder_warp.value == self.options.thunder_warp.option_shuffled:
+        spoiler_handle.write(f"\nSword of Thunder Warp: {self.shuffle_data.thunder_warp}\n")
+    if not self.options.vanilla_shops:
+        spoiler_handle.write("\nShop Inventories:\n")
+        for town, inventory in self.shuffle_data.shop_inventories.items():
+            spoiler_handle.write(f"{town}: ")
+            first = True
+            for item in inventory:
+                if not first:
+                    spoiler_handle.write(", ")
+                first = False
+                spoiler_handle.write(item)
+            spoiler_handle.write("\n")
+    if self.options.randomize_wild_warp:
+        spoiler_handle.write("\nWild Warps: ")
+        first = True
+        for warp in self.shuffle_data.wildwarps:
+            if not first:
+                spoiler_handle.write(", ")
+            first = False
+            if warp == 0:
+                spoiler_handle.write("Mezame Shrine")
+            else:
+                spoiler_handle.write(self.wild_warp_id_to_region[warp])
+        spoiler_handle.write("\n")
+    if self.options.shuffle_goa:
+        spoiler_handle.write("\nGoa Order: ")
+        previous_exit: str = "Goa Entrance - Stairs"
+        first = True
+        for i in range(4):
+            if not first:
+                spoiler_handle.write(", ")
+            first = False
+            current_floor_entrance_region_name = self.shuffle_data.goa_connection_map[previous_exit]
+            current_floor_name = current_floor_entrance_region_name.split('\'')[0]
+            spoiler_handle.write(current_floor_name)
+            if current_floor_entrance_region_name.endswith("Back"):
+                spoiler_handle.write(" Flipped")
+                previous_exit = f"{current_floor_name}'s Floor - Entrance"
+            else:
+                previous_exit = f"{current_floor_name}'s Floor - Exit"
+        spoiler_handle.write("\n")
 
 
 class CrystalisFile(APPatch):
