@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from Options import Choice, Toggle, PerGameCommonOptions, OptionGroup
+from Options import Choice, Toggle, PerGameCommonOptions, OptionGroup, StartInventoryPool
 
 
 # World Options
@@ -874,3 +874,5 @@ class CrystalisOptions(PerGameCommonOptions):
     dont_auto_equip_upgrades: DontAutoEquipUpgrades
     disable_controller_shortcuts: DisableControllerShortcuts
     audible_wall_cues: AudibleWallCues
+    #Misc Archipelago Only options
+    start_inventory_from_pool: StartInventoryPool
