@@ -3,8 +3,10 @@ import logging
 import orjson
 from typing import Dict, List, Optional
 import pkgutil
-from BaseClasses import Item, ItemClassification
+from BaseClasses import Item, ItemClassification, LocationProgressType
 from .types import CrystalisItemData, CRYSTALIS_BASE_ID, convert_enum_to_item_classification, CrystalisItemCategoryEnum
+from .locations import CrystalisLocation
+from Fill import fast_fill
 
 
 basic_key_names: List[str] = []
@@ -26,7 +28,7 @@ def load_item_data_from_json() -> Dict[str, CrystalisItemData]:
 items_data_json = load_item_data_from_json()
 items_data: Dict[str, CrystalisItemData] = {}
 items_data_by_id: Dict[int, CrystalisItemData] = {}
-#convert to actual type
+# convert to actual type
 for key, value in items_data_json.items():
     item_data = CrystalisItemData(value["name"], value["rom_id"], value["ap_id_offset"], value["unique"],
                                   value["losable"], value["prevent_loss"], value["community"], value["default_count"],
@@ -125,6 +127,7 @@ def create_item(self, name: str) -> "Item":
 
 
 def create_items(self) -> None:
+    non_unique_items = []
     items_created: int = 0
     swords: List[CrystalisItem] = []
     for item_data in items_data.values():
@@ -134,20 +137,25 @@ def create_items(self) -> None:
         elif "Sword" in item_data.groups:
             swords.append(self.create_item(item_data.name))
         elif not self.options.dont_shuffle_mimics or item_data.name != "Mimic":
-            for i in range(item_data.default_count):
-                self.multiworld.itempool.append(self.create_item(item_data.name))
-                items_created += 1
+            if self.options.keep_unique_items_and_consumables_separate and not item_data.unique:
+                for i in range(item_data.default_count):
+                    non_unique_items.append(self.create_item(item_data.name))
+                    items_created += 1
+            else:
+                for i in range(item_data.default_count):
+                    self.multiworld.itempool.append(self.create_item(item_data.name))
+                    items_created += 1
     if self.options.guarantee_starting_sword:
         fixed_sword = self.random.choice(swords)
         swords.remove(fixed_sword)
-        #technically stand-alone doesn't do this... but I think it fits the spirit of the flag
+        # technically stand-alone doesn't do this... but I think it fits the spirit of the flag
         if self.options.shuffle_areas or self.options.shuffle_houses:
             mezame_left_location = self.get_location("Mezame Left Chest")
             mezame_left_location.place_locked_item(fixed_sword)
         else:
             leaf_elder_location = self.get_location("Leaf Elder")
             leaf_elder_location.place_locked_item(fixed_sword)
-    #put the three or four swords in the itempool
+    # put the three or four swords in the itempool
     for sword in swords:
         self.multiworld.itempool.append(sword)
         items_created += 1
@@ -157,9 +165,33 @@ def create_items(self) -> None:
     if items_created < locations_count:
         logging.debug(f"Crystalis: Fewer items ({items_created}) than empty locations ({locations_count}).")
         logging.debug(f"Crystalis: creating {locations_count - items_created} extra Medical Herbs.")
-        for i in range(locations_count - items_created):
-            self.multiworld.itempool.append(self.create_item("Medical Herb"))
+        if self.options.keep_unique_items_and_consumables_separate:
+            for i in range(locations_count - items_created):
+                non_unique_items.append(self.create_item("Medical Herb"))
+        else:
+            for i in range(locations_count - items_created):
+                self.multiworld.itempool.append(self.create_item("Medical Herb"))
     elif locations_count < items_created:
         raise Exception(f" Too many items ({items_created}) for the number of available locations ({locations_count}).")
 
+    if self.options.keep_unique_items_and_consumables_separate:
+        # fill non-unique locations with non-unique items
+        non_unique_locations: List[CrystalisLocation] = []
+        for location_data in self.locations_data:
+            if not location_data.unique and (not self.options.dont_shuffle_mimics or "Mimic" not in location_data.name):
+                non_unique_locations.append(self.get_location(location_data.name))
 
+        self.random.shuffle(non_unique_items)
+        # Dear Core Maintainers: if you are looking at this code in the future because you're trying to kill fast_fill,
+        # don't let this stop you; just ping @Ars-Ignis on GitHub or @CodeGorilla on Discord and I'll replace this
+        remaining_items, remaining_locations = fast_fill(self.multiworld, non_unique_items, non_unique_locations)
+        if len(remaining_locations) > 0:
+            logging.warning("More non-unique locations than items; excluding remaining locations")
+            logging.warning("Please report this to the Crystalis world maintainer, CodeGorilla")
+            for remaining_location in remaining_locations:
+                remaining_location.progress_type = LocationProgressType.EXCLUDED
+        if len(remaining_items) > 0:
+            logging.debug("More non-unique items than locations. This is expected. Adding the rest to the item pool.")
+            self.multiworld.itempool += remaining_items
+            for non_unique_location in non_unique_locations:
+                non_unique_location.locked = True

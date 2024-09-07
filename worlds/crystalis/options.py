@@ -395,7 +395,7 @@ class KeepUniqueItemsAndConsumablesSeparate(Toggle):
     items in vanilla, or (b) boss drops. Chests containing consumables in vanilla may be safely ignored, but chests
     containing unique items in vanilla may still end up with non-unique items because of bosses like Vampire 2 that drop
     consumables. If mimics are shuffled, they will only be in consumable locations. These locations are tracked by the
-    multiworld, so they will still count against your hint points, but they will only contain your filler.
+    multiworld, so they will still count against your hint points, but they will only contain your non-unique items.
     """
     display_name = "Keep unique items and consumables separate (Eu)"
 
