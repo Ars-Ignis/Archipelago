@@ -9,7 +9,8 @@ from .regions import regions_data
 from .types import CrystalisRegionData, CrystalisShuffleData, CrystalisElementEnum, convert_text_to_elem_enum
 
 
-boss_ids: Dict[str, int] = {
+DEBUG: bool = False
+BOSS_IDS: Dict[str, int] = {
     "Giant Insect": 0x5e,
     "Vampire 2": 0xa5,
     "Kelbesque 1": 0x68,
@@ -61,7 +62,7 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
     rage_trade: int = items_data[shuffle_data.trade_in_map["Rage"]].rom_id
     boss_weaknesses: Dict[str, int] = {}
     for boss, weakness in shuffle_data.boss_reqs.items():
-        boss_id = boss_ids[boss]
+        boss_id = BOSS_IDS[boss]
         if boss == "Giant Insect" or boss == "Vampire 2":
             boss_weaknesses[str(boss_id)] = 1 << convert_text_to_elem_enum(weakness).value
         else:
@@ -125,6 +126,22 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
 
 
 def generate_output(self, output_directory: str) -> None:
+    if DEBUG:
+        # turn this into a test when it's time to write tests
+        if self.options.keep_unique_items_and_consumables_separate:
+            for location_data in self.locations_data:
+                if not location_data.unique:
+                    non_unique_location = self.get_location(location_data.name)
+                    item = non_unique_location.item
+                    if item.player != self.player:
+                        raise RuntimeError(f"Non-unique location has another player's item: Location: "
+                                           f"{non_unique_location.name} Item: {item.name} Player: {item.player}")
+                    else:
+                        item_data = items_data[item.name]
+                        if item_data.unique:
+                            raise RuntimeError(f"Non-unique location has unique item: Location: "
+                                               f"{non_unique_location.name} Item: {item.name}")
+
     flag_string: str = generate_flag_string(self.options)
     #need to convert shuffle_data to the format it will be consumed in
     converted_data = convert_shuffle_data(self.shuffle_data)

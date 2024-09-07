@@ -1,6 +1,6 @@
 import logging
 
-from BaseClasses import MultiWorld, CollectionState, Entrance, Region, LocationProgressType
+from BaseClasses import MultiWorld, CollectionState, Entrance, Region
 from .options import CrystalisOptions
 from .types import CrystalisShuffleData
 from typing import Callable, List, Optional
@@ -738,14 +738,7 @@ def set_rules(self) -> None:
         add_rule(draygon_2_fight, lambda state: state.has_all(spawn_reqs, player), "and")
 
     #misc. Logic
-    def item_for_self(item) -> bool:
-        return item.player == self.player
     for location_data in self.locations_data:
         #technically bosses have is_chest == False, but since you need a sword to fight the boss anyway, it's redundant
         if options.oops_all_mimics and location_data.is_chest:
             add_rule(self.get_location(location_data.name), lambda state: state.has_group("Sword", player, 1), "and")
-        if options.keep_unique_items_and_consumables_separate and not location_data.unique:
-            non_unique_location = self.get_location(location_data.name)
-            if non_unique_location.item is None:
-                non_unique_location.progress_type = LocationProgressType.EXCLUDED
-                non_unique_location.item_rule = item_for_self
