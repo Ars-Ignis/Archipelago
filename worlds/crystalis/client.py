@@ -24,6 +24,9 @@ SCREEN_LOCK_ADDR = 0x07D7
 AP_ROM_LABEL_ADDR = 0x25715
 EXPECTED_START: List[bytes] = [bytes([0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9])]
 AP_ROM_LABEL: List[bytes] = [bytes([0x41, 0x52, 0x43, 0x48, 0x49, 0x50, 0x45, 0x4C, 0x41, 0x47, 0x4F])]
+ASINA_LOCATION_ID: int = CRYSTALIS_BASE_ID + 57
+WHIRLPOOL_LOCATION_ID: int = CRYSTALIS_BASE_ID + 58
+ITERATIONS_TO_MATCH: int = 1
 
 
 class CrystalisClient(BizHawkClient):
@@ -33,7 +36,9 @@ class CrystalisClient(BizHawkClient):
     loc_id_to_addr: Dict[int, Tuple[int, int]] = {}
     unidentified_item_rom_ids: Dict[int, int] = {}
     current_location: int = 0
-
+    asina_hint_collected: bool = False
+    iterations_matched: int = 0
+    prev_location_flags: bytes = bytes(0)
 
     def __init__(self):
         super().__init__()
@@ -75,6 +80,12 @@ class CrystalisClient(BizHawkClient):
                 #want to map the new item's AP ID to the original item's in-game ID.
                 self.unidentified_item_rom_ids[items_data[new_name].ap_id_offset + CRYSTALIS_BASE_ID] = \
                     items_data[original_name].rom_id
+            async_start(ctx.send_msgs([{"cmd": "Get",
+                                  "keys": [f"asina_hint_collected_{ctx.slot}"]}]))
+        elif cmd == "Retrieved":
+            if f"asina_hint_collected_{ctx.slot}" in args["keys"]:
+                self.asina_hint_collected = args["keys"][f"asina_hint_collected_{ctx.slot}"]
+
 
 
     async def game_watcher(self, ctx: "BizHawkClientContext") -> None:
@@ -91,19 +102,43 @@ class CrystalisClient(BizHawkClient):
                 main_loop_mode = read_value[5][0]
                 if main_loop_mode == 1: #MAIN_LOOP_GAME
                     location_flags = read_value[0]
-                    locations_to_send: List[int] = []
-                    for location_id in ctx.missing_locations:
-                        byte, bit = self.loc_id_to_addr[location_id]
-                        if location_flags[byte] & (1 << bit) != 0:
-                            locations_to_send.append(location_id)
-                            ctx.locations_checked.add(location_id)
+                    if location_flags == self.prev_location_flags:
+                        if self.iterations_matched >= ITERATIONS_TO_MATCH:
+                            locations_to_send: List[int] = []
+                            for location_id in ctx.missing_locations:
+                                byte, bit = self.loc_id_to_addr[location_id]
+                                if location_flags[byte] & (1 << bit):
+                                    locations_to_send.append(location_id)
+                                    ctx.locations_checked.add(location_id)
 
-                    if len(locations_to_send) > 0:
-                        await ctx.send_msgs([{
-                                "cmd": "LocationChecks",
-                                "locations": list(locations_to_send)
-                            }])
-                        return #Bail now to keep this loop short
+                            if len(locations_to_send) > 0:
+                                await ctx.send_msgs([{
+                                        "cmd": "LocationChecks",
+                                        "locations": list(locations_to_send)
+                                    }])
+                                return #Bail now to keep this loop short
+
+                            if not self.asina_hint_collected:
+                                byte, bit = self.loc_id_to_addr[ASINA_LOCATION_ID]
+                                if location_flags[byte] & (1 << bit):
+                                    self.asina_hint_collected = True
+                                    await ctx.send_msgs([{
+                                        "cmd": "LocationScouts",
+                                        "locations": [WHIRLPOOL_LOCATION_ID],
+                                        "create_as_hint": 2
+                                    },
+                                    {
+                                        "cmd": "Set",
+                                        "key": f"asina_hint_collected_{ctx.slot}",
+                                        "default": True,
+                                        "want_reply": False,
+                                        "operations": [{"operation": "replace", "value": True}]
+                                }])
+                        else:
+                            self.iterations_matched += 1
+                    else:
+                        self.iterations_matched = 0
+                        self.prev_location_flags = location_flags
 
                     get_item_flag: bool = read_value[3][0] != 0
                     item_flags: bytes = read_value[1]
