@@ -49,7 +49,7 @@
 /worlds/crystalis/ @Ars_Ignis
 
 # Dark Souls III
-/worlds/dark_souls_3/ @Marechal-L
+/worlds/dark_souls_3/ @Marechal-L @nex3
 
 # Donkey Kong Country 3
 /worlds/dkc3/ @PoryGone
@@ -121,8 +121,8 @@
 # Noita
 /worlds/noita/ @ScipioWright @heinermann
 
-# Ocarina of Time
-/worlds/oot/ @espeon65536
+# Old School Runescape
+/worlds/osrs @digiholic
 
 # Old School Runescape
 /worlds/osrs @digiholic
@@ -232,6 +232,9 @@
 
 # Links Awakening DX
 # /worlds/ladx/
+
+# Ocarina of Time
+# /worlds/oot/
 
 ## Disabled Unmaintained Worlds
 
