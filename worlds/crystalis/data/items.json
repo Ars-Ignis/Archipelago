@@ -12,6 +12,7 @@
       "Sword",
       "Wind"
     ],
+    "palette": 0,
     "category": 1,
     "notes": ""
   },
@@ -28,6 +29,7 @@
       "Sword",
       "Fire"
     ],
+    "palette": 1,
     "category": 1,
     "notes": ""
   },
@@ -44,6 +46,7 @@
       "Sword",
       "Water"
     ],
+    "palette": 2,
     "category": 1,
     "notes": ""
   },
@@ -60,6 +63,7 @@
       "Sword",
       "Thunder"
     ],
+    "palette": 3,
     "category": 1,
     "notes": ""
   },
@@ -76,6 +80,7 @@
       "Wind Upgrades",
       "Wind"
     ],
+    "palette": 0,
     "category": 1,
     "notes": ""
   },
@@ -92,6 +97,7 @@
       "Wind Upgrades",
       "Wind"
     ],
+    "palette": 0,
     "category": 1,
     "notes": ""
   },
@@ -108,6 +114,7 @@
       "Fire Upgrades",
       "Fire"
     ],
+    "palette": 1,
     "category": 3,
     "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
   },
@@ -124,6 +131,7 @@
       "Fire Upgrades",
       "Fire"
     ],
+    "palette": 1,
     "category": 3,
     "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
   },
@@ -140,6 +148,7 @@
       "Water Upgrades",
       "Water"
     ],
+    "palette": 2,
     "category": 3,
     "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
   },
@@ -156,6 +165,7 @@
       "Water Upgrades",
       "Water"
     ],
+    "palette": 2,
     "category": 3,
     "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
   },
@@ -172,6 +182,7 @@
       "Thunder Upgrades",
       "Thunder"
     ],
+    "palette": 3,
     "category": 3,
     "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
   },
@@ -188,6 +199,7 @@
       "Thunder Upgrades",
       "Thunder"
     ],
+    "palette": 3,
     "category": 3,
     "notes": "Downgrade to Useful if easy walls and hard combat and non-random trade-ins"
   },
@@ -203,6 +215,7 @@
     "groups": [
       "Shield"
     ],
+    "palette": 2,
     "category": 2,
     "notes": ""
   },
@@ -218,6 +231,7 @@
     "groups": [
       "Shield"
     ],
+    "palette": 0,
     "category": 2,
     "notes": ""
   },
@@ -233,6 +247,7 @@
     "groups": [
       "Shield"
     ],
+    "palette": 1,
     "category": 2,
     "notes": ""
   },
@@ -248,6 +263,7 @@
     "groups": [
       "Armor"
     ],
+    "palette": 0,
     "category": 2,
     "notes": ""
   },
@@ -263,6 +279,7 @@
     "groups": [
       "Armor"
     ],
+    "palette": 1,
     "category": 2,
     "notes": ""
   },
@@ -278,6 +295,7 @@
     "groups": [
       "Consumable"
     ],
+    "palette": 4,
     "category": 0,
     "notes": ""
   },
@@ -293,6 +311,7 @@
     "groups": [
       "Consumable"
     ],
+    "palette": 7,
     "category": 0,
     "notes": ""
   },
@@ -308,6 +327,7 @@
     "groups": [
       "Consumable"
     ],
+    "palette": 5,
     "category": 0,
     "notes": ""
   },
@@ -323,6 +343,7 @@
     "groups": [
       "Consumable"
     ],
+    "palette": 4,
     "category": 0,
     "notes": ""
   },
@@ -338,6 +359,7 @@
     "groups": [
       "Consumable"
     ],
+    "palette": 5,
     "category": 0,
     "notes": ""
   },
@@ -353,6 +375,7 @@
     "groups": [
       "Consumable"
     ],
+    "palette": 7,
     "category": 0,
     "notes": ""
   },
@@ -368,6 +391,7 @@
     "groups": [
       "Consumable"
     ],
+    "palette": 6,
     "category": 0,
     "notes": ""
   },
@@ -383,6 +407,7 @@
     "groups": [
       "Consumable"
     ],
+    "palette": 6,
     "category": 0,
     "notes": ""
   },
@@ -400,6 +425,7 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 5,
     "category": 1,
     "notes": ""
   },
@@ -415,6 +441,7 @@
     "groups": [
       "Consumable"
     ],
+    "palette": 4,
     "category": 2,
     "notes": ""
   },
@@ -431,6 +458,7 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 4,
     "category": 1,
     "notes": ""
   },
@@ -447,27 +475,29 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 6,
     "category": 1,
     "notes": ""
   },
-  "Hazmat Suit": {
-    "name": "Hazmat Suit",
+  "Gas Mask": {
+    "name": "Gas Mask",
     "rom_id": 41,
     "ap_id_offset": 29,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
     "community": false,
-    "default_count": 1,
+    "default_count": 0,
     "groups": [
       "Accessory"
     ],
+    "palette": 4,
     "category": 1,
-    "notes": ""
+    "notes": "Only used if Vb is on"
   },
-  "Power Ring": {
-    "name": "Power Ring",
-    "rom_id": 42,
+  "Hazmat Suit": {
+    "name": "Hazmat Suit",
+    "rom_id": 41,
     "ap_id_offset": 30,
     "unique": true,
     "losable": false,
@@ -477,12 +507,13 @@
     "groups": [
       "Accessory"
     ],
-    "category": 2,
-    "notes": ""
+    "palette": 4,
+    "category": 1,
+    "notes": "Only used if Vb is off"
   },
-  "Warrior Ring": {
-    "name": "Warrior Ring",
-    "rom_id": 43,
+  "Power Ring": {
+    "name": "Power Ring",
+    "rom_id": 42,
     "ap_id_offset": 31,
     "unique": true,
     "losable": false,
@@ -492,12 +523,13 @@
     "groups": [
       "Accessory"
     ],
+    "palette": 5,
     "category": 2,
     "notes": ""
   },
-  "Iron Necklace": {
-    "name": "Iron Necklace",
-    "rom_id": 44,
+  "Warrior Ring": {
+    "name": "Warrior Ring",
+    "rom_id": 43,
     "ap_id_offset": 32,
     "unique": true,
     "losable": false,
@@ -507,12 +539,13 @@
     "groups": [
       "Accessory"
     ],
+    "palette": 6,
     "category": 2,
     "notes": ""
   },
-  "Deo's Pendant": {
-    "name": "Deo's Pendant",
-    "rom_id": 45,
+  "Iron Necklace": {
+    "name": "Iron Necklace",
+    "rom_id": 44,
     "ap_id_offset": 33,
     "unique": true,
     "losable": false,
@@ -522,12 +555,13 @@
     "groups": [
       "Accessory"
     ],
+    "palette": 4,
     "category": 2,
     "notes": ""
   },
-  "Rabbit Boots": {
-    "name": "Rabbit Boots",
-    "rom_id": 46,
+  "Deo's Pendant": {
+    "name": "Deo's Pendant",
+    "rom_id": 45,
     "ap_id_offset": 34,
     "unique": true,
     "losable": false,
@@ -537,12 +571,13 @@
     "groups": [
       "Accessory"
     ],
-    "category": 1,
+    "palette": 7,
+    "category": 2,
     "notes": ""
   },
-  "Speed Boots": {
-    "name": "Speed Boots",
-    "rom_id": 47,
+  "Rabbit Boots": {
+    "name": "Rabbit Boots",
+    "rom_id": 46,
     "ap_id_offset": 35,
     "unique": true,
     "losable": false,
@@ -552,13 +587,30 @@
     "groups": [
       "Accessory"
     ],
+    "palette": 5,
     "category": 1,
     "notes": ""
   },
-  "Shield Ring": {
-    "name": "Shield Ring",
-    "rom_id": 48,
+  "Leather Boots": {
+    "name": "Leather Boots",
+    "rom_id": 47,
     "ap_id_offset": 36,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Accessory"
+    ],
+    "palette": 4,
+    "category": 1,
+    "notes": "Only used if Vb is on"
+  },
+  "Speed Boots": {
+    "name": "Speed Boots",
+    "rom_id": 47,
+    "ap_id_offset": 37,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
@@ -567,13 +619,30 @@
     "groups": [
       "Accessory"
     ],
+    "palette": 4,
+    "category": 1,
+    "notes": "Only used if Vb is off"
+  },
+  "Shield Ring": {
+    "name": "Shield Ring",
+    "rom_id": 48,
+    "ap_id_offset": 38,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 1,
+    "groups": [
+      "Accessory"
+    ],
+    "palette": 4,
     "category": 3,
     "notes": "Upgrade to progression if barrier not guaranteed"
   },
   "Alarm Flute": {
     "name": "Alarm Flute",
     "rom_id": 49,
-    "ap_id_offset": 37,
+    "ap_id_offset": 39,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
@@ -583,44 +652,13 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 7,
     "category": 1,
     "notes": ""
   },
   "Windmill Key": {
     "name": "Windmill Key",
     "rom_id": 50,
-    "ap_id_offset": 38,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 1,
-    "groups": [
-      "Key Item",
-      "Key"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Key to Prison": {
-    "name": "Key to Prison",
-    "rom_id": 51,
-    "ap_id_offset": 39,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 1,
-    "groups": [
-      "Key Item",
-      "Key"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Key to Stxy": {
-    "name": "Key to Stxy",
-    "rom_id": 52,
     "ap_id_offset": 40,
     "unique": true,
     "losable": false,
@@ -631,13 +669,48 @@
       "Key Item",
       "Key"
     ],
+    "palette": 5,
+    "category": 1,
+    "notes": ""
+  },
+  "Key to Prison": {
+    "name": "Key to Prison",
+    "rom_id": 51,
+    "ap_id_offset": 41,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 1,
+    "groups": [
+      "Key Item",
+      "Key"
+    ],
+    "palette": 6,
+    "category": 1,
+    "notes": ""
+  },
+  "Key to Stxy": {
+    "name": "Key to Stxy",
+    "rom_id": 52,
+    "ap_id_offset": 42,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 1,
+    "groups": [
+      "Key Item",
+      "Key"
+    ],
+    "palette": 4,
     "category": 1,
     "notes": ""
   },
   "Fog Lamp": {
     "name": "Fog Lamp",
     "rom_id": 53,
-    "ap_id_offset": 41,
+    "ap_id_offset": 43,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
@@ -648,13 +721,14 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 4,
     "category": 1,
     "notes": ""
   },
   "Shell Flute": {
     "name": "Shell Flute",
     "rom_id": 54,
-    "ap_id_offset": 42,
+    "ap_id_offset": 44,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
@@ -664,13 +738,14 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 5,
     "category": 1,
     "notes": ""
   },
   "Eye Glasses": {
     "name": "Eye Glasses",
     "rom_id": 55,
-    "ap_id_offset": 43,
+    "ap_id_offset": 45,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
@@ -679,44 +754,13 @@
     "groups": [
       "Key Item"
     ],
+    "palette": 5,
     "category": 1,
     "notes": ""
   },
   "Broken Statue": {
     "name": "Broken Statue",
     "rom_id": 56,
-    "ap_id_offset": 44,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 1,
-    "groups": [
-      "Key Item",
-      "Statue"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Glowing Lamp": {
-    "name": "Glowing Lamp",
-    "rom_id": 57,
-    "ap_id_offset": 45,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 1,
-    "groups": [
-      "Key Item",
-      "Lamp"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Statue of Gold": {
-    "name": "Statue of Gold",
-    "rom_id": 58,
     "ap_id_offset": 46,
     "unique": true,
     "losable": false,
@@ -727,12 +771,13 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 6,
     "category": 1,
     "notes": ""
   },
-  "Love Pendant": {
-    "name": "Love Pendant",
-    "rom_id": 59,
+  "Glowing Lamp": {
+    "name": "Glowing Lamp",
+    "rom_id": 57,
     "ap_id_offset": 47,
     "unique": true,
     "losable": false,
@@ -740,16 +785,34 @@
     "community": false,
     "default_count": 1,
     "groups": [
-      "Trade-in",
-      "Key Item"
+      "Key Item",
+      "Lamp"
     ],
+    "palette": 7,
     "category": 1,
     "notes": ""
   },
-  "Kirisa Plant": {
-    "name": "Kirisa Plant",
-    "rom_id": 60,
+  "Statue of Gold": {
+    "name": "Statue of Gold",
+    "rom_id": 58,
     "ap_id_offset": 48,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 1,
+    "groups": [
+      "Key Item",
+      "Statue"
+    ],
+    "palette": 6,
+    "category": 1,
+    "notes": ""
+  },
+  "Love Pendant": {
+    "name": "Love Pendant",
+    "rom_id": 59,
+    "ap_id_offset": 49,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
@@ -759,13 +822,31 @@
       "Trade-in",
       "Key Item"
     ],
+    "palette": 5,
+    "category": 1,
+    "notes": ""
+  },
+  "Kirisa Plant": {
+    "name": "Kirisa Plant",
+    "rom_id": 60,
+    "ap_id_offset": 50,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 1,
+    "groups": [
+      "Trade-in",
+      "Key Item"
+    ],
+    "palette": 6,
     "category": 1,
     "notes": ""
   },
   "Ivory Statue": {
     "name": "Ivory Statue",
     "rom_id": 61,
-    "ap_id_offset": 49,
+    "ap_id_offset": 51,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
@@ -776,44 +857,13 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 7,
     "category": 1,
     "notes": ""
   },
   "Bow of Moon": {
     "name": "Bow of Moon",
     "rom_id": 62,
-    "ap_id_offset": 50,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 1,
-    "groups": [
-      "Key Item",
-      "Bow"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Bow of Sun": {
-    "name": "Bow of Sun",
-    "rom_id": 63,
-    "ap_id_offset": 51,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 1,
-    "groups": [
-      "Key Item",
-      "Bow"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Bow of Truth": {
-    "name": "Bow of Truth",
-    "rom_id": 64,
     "ap_id_offset": 52,
     "unique": true,
     "losable": false,
@@ -824,12 +874,13 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 7,
     "category": 1,
     "notes": ""
   },
-  "Refresh": {
-    "name": "Refresh",
-    "rom_id": 65,
+  "Bow of Sun": {
+    "name": "Bow of Sun",
+    "rom_id": 63,
     "ap_id_offset": 53,
     "unique": true,
     "losable": false,
@@ -837,14 +888,16 @@
     "community": false,
     "default_count": 1,
     "groups": [
-      "Magic"
+      "Key Item",
+      "Bow"
     ],
-    "category": 3,
-    "notes": "Upgrade to progression if Refresh guaranteed or Barrier not guaranteed or Gas mask not guaranteed."
+    "palette": 5,
+    "category": 1,
+    "notes": ""
   },
-  "Paralysis": {
-    "name": "Paralysis",
-    "rom_id": 66,
+  "Bow of Truth": {
+    "name": "Bow of Truth",
+    "rom_id": 64,
     "ap_id_offset": 54,
     "unique": true,
     "losable": false,
@@ -852,14 +905,16 @@
     "community": false,
     "default_count": 1,
     "groups": [
-      "Magic"
+      "Key Item",
+      "Bow"
     ],
+    "palette": 6,
     "category": 1,
     "notes": ""
   },
-  "Telepathy": {
-    "name": "Telepathy",
-    "rom_id": 67,
+  "Refresh": {
+    "name": "Refresh",
+    "rom_id": 65,
     "ap_id_offset": 55,
     "unique": true,
     "losable": false,
@@ -869,12 +924,13 @@
     "groups": [
       "Magic"
     ],
-    "category": 1,
-    "notes": ""
+    "palette": 6,
+    "category": 3,
+    "notes": "Upgrade to progression if Refresh guaranteed or Barrier not guaranteed or Gas mask not guaranteed."
   },
-  "Teleport": {
-    "name": "Teleport",
-    "rom_id": 68,
+  "Paralysis": {
+    "name": "Paralysis",
+    "rom_id": 66,
     "ap_id_offset": 56,
     "unique": true,
     "losable": false,
@@ -884,12 +940,13 @@
     "groups": [
       "Magic"
     ],
+    "palette": 5,
     "category": 1,
     "notes": ""
   },
-  "Recover": {
-    "name": "Recover",
-    "rom_id": 69,
+  "Telepathy": {
+    "name": "Telepathy",
+    "rom_id": 67,
     "ap_id_offset": 57,
     "unique": true,
     "losable": false,
@@ -899,12 +956,13 @@
     "groups": [
       "Magic"
     ],
-    "category": 2,
+    "palette": 7,
+    "category": 1,
     "notes": ""
   },
-  "Barrier": {
-    "name": "Barrier",
-    "rom_id": 70,
+  "Teleport": {
+    "name": "Teleport",
+    "rom_id": 68,
     "ap_id_offset": 58,
     "unique": true,
     "losable": false,
@@ -914,12 +972,13 @@
     "groups": [
       "Magic"
     ],
+    "palette": 7,
     "category": 1,
     "notes": ""
   },
-  "Change": {
-    "name": "Change",
-    "rom_id": 71,
+  "Recover": {
+    "name": "Recover",
+    "rom_id": 69,
     "ap_id_offset": 59,
     "unique": true,
     "losable": false,
@@ -929,12 +988,13 @@
     "groups": [
       "Magic"
     ],
-    "category": 1,
+    "palette": 6,
+    "category": 2,
     "notes": ""
   },
-  "Flight": {
-    "name": "Flight",
-    "rom_id": 72,
+  "Barrier": {
+    "name": "Barrier",
+    "rom_id": 70,
     "ap_id_offset": 60,
     "unique": true,
     "losable": false,
@@ -944,13 +1004,46 @@
     "groups": [
       "Magic"
     ],
+    "palette": 6,
+    "category": 1,
+    "notes": ""
+  },
+  "Change": {
+    "name": "Change",
+    "rom_id": 71,
+    "ap_id_offset": 61,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "palette": 5,
+    "category": 1,
+    "notes": ""
+  },
+  "Flight": {
+    "name": "Flight",
+    "rom_id": 72,
+    "ap_id_offset": 62,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 1,
+    "groups": [
+      "Magic"
+    ],
+    "palette": 6,
     "category": 1,
     "notes": ""
   },
   "Mimic": {
     "name": "Mimic",
     "rom_id": 112,
-    "ap_id_offset": 61,
+    "ap_id_offset": 63,
     "unique": false,
     "losable": false,
     "prevent_loss": false,
@@ -959,43 +1052,12 @@
     "groups": [
       ""
     ],
+    "palette": 8,
     "category": 4,
     "notes": ""
   },
   "Random Key": {
     "name": "Random Key",
-    "rom_id": 255,
-    "ap_id_offset": 62,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 0,
-    "groups": [
-      "Key Item",
-      "Key"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Curious Key": {
-    "name": "Curious Key",
-    "rom_id": 255,
-    "ap_id_offset": 63,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 0,
-    "groups": [
-      "Key Item",
-      "Key"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Bronze Key": {
-    "name": "Bronze Key",
     "rom_id": 255,
     "ap_id_offset": 64,
     "unique": true,
@@ -1007,11 +1069,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Silver Key": {
-    "name": "Silver Key",
+  "Curious Key": {
+    "name": "Curious Key",
     "rom_id": 255,
     "ap_id_offset": 65,
     "unique": true,
@@ -1023,11 +1086,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Golden Key": {
-    "name": "Golden Key",
+  "Bronze Key": {
+    "name": "Bronze Key",
     "rom_id": 255,
     "ap_id_offset": 66,
     "unique": true,
@@ -1039,11 +1103,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Ancient Key": {
-    "name": "Ancient Key",
+  "Silver Key": {
+    "name": "Silver Key",
     "rom_id": 255,
     "ap_id_offset": 67,
     "unique": true,
@@ -1055,11 +1120,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Small Key": {
-    "name": "Small Key",
+  "Golden Key": {
+    "name": "Golden Key",
     "rom_id": 255,
     "ap_id_offset": 68,
     "unique": true,
@@ -1071,11 +1137,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Shiny Key": {
-    "name": "Shiny Key",
+  "Ancient Key": {
+    "name": "Ancient Key",
     "rom_id": 255,
     "ap_id_offset": 69,
     "unique": true,
@@ -1087,11 +1154,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Mysterious Key": {
-    "name": "Mysterious Key",
+  "Small Key": {
+    "name": "Small Key",
     "rom_id": 255,
     "ap_id_offset": 70,
     "unique": true,
@@ -1103,11 +1171,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Magic Key": {
-    "name": "Magic Key",
+  "Shiny Key": {
+    "name": "Shiny Key",
     "rom_id": 255,
     "ap_id_offset": 71,
     "unique": true,
@@ -1119,11 +1188,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Backdoor Key": {
-    "name": "Backdoor Key",
+  "Mysterious Key": {
+    "name": "Mysterious Key",
     "rom_id": 255,
     "ap_id_offset": 72,
     "unique": true,
@@ -1135,11 +1205,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Skeleton Key": {
-    "name": "Skeleton Key",
+  "Magic Key": {
+    "name": "Magic Key",
     "rom_id": 255,
     "ap_id_offset": 73,
     "unique": true,
@@ -1151,43 +1222,46 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Unidentified Key": {
-    "name": "Unidentified Key",
+  "Backdoor Key": {
+    "name": "Backdoor Key",
     "rom_id": 255,
     "ap_id_offset": 74,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Piano Key": {
-    "name": "Piano Key",
+  "Skeleton Key": {
+    "name": "Skeleton Key",
     "rom_id": 255,
     "ap_id_offset": 75,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Encryption Key": {
-    "name": "Encryption Key",
+  "Unidentified Key": {
+    "name": "Unidentified Key",
     "rom_id": 255,
     "ap_id_offset": 76,
     "unique": true,
@@ -1199,11 +1273,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Private Key": {
-    "name": "Private Key",
+  "Piano Key": {
+    "name": "Piano Key",
     "rom_id": 255,
     "ap_id_offset": 77,
     "unique": true,
@@ -1215,11 +1290,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Public Key": {
-    "name": "Public Key",
+  "Encryption Key": {
+    "name": "Encryption Key",
     "rom_id": 255,
     "ap_id_offset": 78,
     "unique": true,
@@ -1231,11 +1307,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Secret Key": {
-    "name": "Secret Key",
+  "Private Key": {
+    "name": "Private Key",
     "rom_id": 255,
     "ap_id_offset": 79,
     "unique": true,
@@ -1247,11 +1324,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Cipher Key": {
-    "name": "Cipher Key",
+  "Public Key": {
+    "name": "Public Key",
     "rom_id": 255,
     "ap_id_offset": 80,
     "unique": true,
@@ -1263,11 +1341,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Key Card": {
-    "name": "Key Card",
+  "Secret Key": {
+    "name": "Secret Key",
     "rom_id": 255,
     "ap_id_offset": 81,
     "unique": true,
@@ -1279,11 +1358,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Keyboard": {
-    "name": "Keyboard",
+  "Cipher Key": {
+    "name": "Cipher Key",
     "rom_id": 255,
     "ap_id_offset": 82,
     "unique": true,
@@ -1295,11 +1375,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Any Key": {
-    "name": "Any Key",
+  "Key Card": {
+    "name": "Key Card",
     "rom_id": 255,
     "ap_id_offset": 83,
     "unique": true,
@@ -1311,11 +1392,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Ctrl Key": {
-    "name": "Ctrl Key",
+  "Keyboard": {
+    "name": "Keyboard",
     "rom_id": 255,
     "ap_id_offset": 84,
     "unique": true,
@@ -1327,11 +1409,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Escape Key": {
-    "name": "Escape Key",
+  "Any Key": {
+    "name": "Any Key",
     "rom_id": 255,
     "ap_id_offset": 85,
     "unique": true,
@@ -1343,11 +1426,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Space Bar": {
-    "name": "Space Bar",
+  "Ctrl Key": {
+    "name": "Ctrl Key",
     "rom_id": 255,
     "ap_id_offset": 86,
     "unique": true,
@@ -1359,11 +1443,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Return Key": {
-    "name": "Return Key",
+  "Escape Key": {
+    "name": "Escape Key",
     "rom_id": 255,
     "ap_id_offset": 87,
     "unique": true,
@@ -1375,11 +1460,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Imaginary Key": {
-    "name": "Imaginary Key",
+  "Space Bar": {
+    "name": "Space Bar",
     "rom_id": 255,
     "ap_id_offset": 88,
     "unique": true,
@@ -1391,11 +1477,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Giant Key": {
-    "name": "Giant Key",
+  "Return Key": {
+    "name": "Return Key",
     "rom_id": 255,
     "ap_id_offset": 89,
     "unique": true,
@@ -1407,11 +1494,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Out of Key": {
-    "name": "Out of Key",
+  "Imaginary Key": {
+    "name": "Imaginary Key",
     "rom_id": 255,
     "ap_id_offset": 90,
     "unique": true,
@@ -1423,11 +1511,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Key of C": {
-    "name": "Key of C",
+  "Giant Key": {
+    "name": "Giant Key",
     "rom_id": 255,
     "ap_id_offset": 91,
     "unique": true,
@@ -1439,11 +1528,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Key of G": {
-    "name": "Key of G",
+  "Out of Key": {
+    "name": "Out of Key",
     "rom_id": 255,
     "ap_id_offset": 92,
     "unique": true,
@@ -1455,11 +1545,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Key of B Flat": {
-    "name": "Key of B Flat",
+  "Key of C": {
+    "name": "Key of C",
     "rom_id": 255,
     "ap_id_offset": 93,
     "unique": true,
@@ -1471,11 +1562,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Key of F Sharp": {
-    "name": "Key of F Sharp",
+  "Key of G": {
+    "name": "Key of G",
     "rom_id": 255,
     "ap_id_offset": 94,
     "unique": true,
@@ -1487,11 +1579,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Major Key": {
-    "name": "Major Key",
+  "Key of B Flat": {
+    "name": "Key of B Flat",
     "rom_id": 255,
     "ap_id_offset": 95,
     "unique": true,
@@ -1503,11 +1596,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Minor Key": {
-    "name": "Minor Key",
+  "Key of F Sharp": {
+    "name": "Key of F Sharp",
     "rom_id": 255,
     "ap_id_offset": 96,
     "unique": true,
@@ -1519,11 +1613,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Lockpick": {
-    "name": "Lockpick",
+  "Major Key": {
+    "name": "Major Key",
     "rom_id": 255,
     "ap_id_offset": 97,
     "unique": true,
@@ -1535,11 +1630,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Transponder Key": {
-    "name": "Transponder Key",
+  "Minor Key": {
+    "name": "Minor Key",
     "rom_id": 255,
     "ap_id_offset": 98,
     "unique": true,
@@ -1551,11 +1647,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Sharp Key": {
-    "name": "Sharp Key",
+  "Lockpick": {
+    "name": "Lockpick",
     "rom_id": 255,
     "ap_id_offset": 99,
     "unique": true,
@@ -1567,11 +1664,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Flat Key": {
-    "name": "Flat Key",
+  "Transponder Key": {
+    "name": "Transponder Key",
     "rom_id": 255,
     "ap_id_offset": 100,
     "unique": true,
@@ -1583,11 +1681,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Locke and Key": {
-    "name": "Locke and Key",
+  "Sharp Key": {
+    "name": "Sharp Key",
     "rom_id": 255,
     "ap_id_offset": 101,
     "unique": true,
@@ -1599,11 +1698,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Cookie": {
-    "name": "Cookie",
+  "Flat Key": {
+    "name": "Flat Key",
     "rom_id": 255,
     "ap_id_offset": 102,
     "unique": true,
@@ -1615,11 +1715,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Turkey": {
-    "name": "Turkey",
+  "Locke and Key": {
+    "name": "Locke and Key",
     "rom_id": 255,
     "ap_id_offset": 103,
     "unique": true,
@@ -1631,11 +1732,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Monkey": {
-    "name": "Monkey",
+  "Cookie": {
+    "name": "Cookie",
     "rom_id": 255,
     "ap_id_offset": 104,
     "unique": true,
@@ -1647,11 +1749,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Donkey": {
-    "name": "Donkey",
+  "Turkey": {
+    "name": "Turkey",
     "rom_id": 255,
     "ap_id_offset": 105,
     "unique": true,
@@ -1663,11 +1766,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Car Key": {
-    "name": "Car Key",
+  "Monkey": {
+    "name": "Monkey",
     "rom_id": 255,
     "ap_id_offset": 106,
     "unique": true,
@@ -1679,11 +1783,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Clock Key": {
-    "name": "Clock Key",
+  "Donkey": {
+    "name": "Donkey",
     "rom_id": 255,
     "ap_id_offset": 107,
     "unique": true,
@@ -1695,11 +1800,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Florida Key": {
-    "name": "Florida Key",
+  "Car Key": {
+    "name": "Car Key",
     "rom_id": 255,
     "ap_id_offset": 108,
     "unique": true,
@@ -1711,11 +1817,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Key Lime Pie": {
-    "name": "Key Lime Pie",
+  "Clock Key": {
+    "name": "Clock Key",
     "rom_id": 255,
     "ap_id_offset": 109,
     "unique": true,
@@ -1727,11 +1834,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Keystone": {
-    "name": "Keystone",
+  "Florida Key": {
+    "name": "Florida Key",
     "rom_id": 255,
     "ap_id_offset": 110,
     "unique": true,
@@ -1743,11 +1851,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Answer Key": {
-    "name": "Answer Key",
+  "Key Lime Pie": {
+    "name": "Key Lime Pie",
     "rom_id": 255,
     "ap_id_offset": 111,
     "unique": true,
@@ -1759,11 +1868,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Sticks Key": {
-    "name": "Sticks Key",
+  "Keystone": {
+    "name": "Keystone",
     "rom_id": 255,
     "ap_id_offset": 112,
     "unique": true,
@@ -1775,11 +1885,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Key to my Heart": {
-    "name": "Key to my Heart",
+  "Answer Key": {
+    "name": "Answer Key",
     "rom_id": 255,
     "ap_id_offset": 113,
     "unique": true,
@@ -1791,11 +1902,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Aqui": {
-    "name": "Aqui",
+  "Sticks Key": {
+    "name": "Sticks Key",
     "rom_id": 255,
     "ap_id_offset": 114,
     "unique": true,
@@ -1807,11 +1919,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Map Key": {
-    "name": "Map Key",
+  "Key to my Heart": {
+    "name": "Key to my Heart",
     "rom_id": 255,
     "ap_id_offset": 115,
     "unique": true,
@@ -1823,11 +1936,12 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Key Stone": {
-    "name": "Key Stone",
+  "Aqui": {
+    "name": "Aqui",
     "rom_id": 255,
     "ap_id_offset": 116,
     "unique": true,
@@ -1839,43 +1953,46 @@
       "Key Item",
       "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Accordion": {
-    "name": "Accordion",
+  "Map Key": {
+    "name": "Map Key",
     "rom_id": 255,
     "ap_id_offset": 117,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": false,
+    "community": true,
     "default_count": 0,
     "groups": [
       "Key Item",
-      "Flute"
+      "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bagpipes": {
-    "name": "Bagpipes",
+  "Key Stone": {
+    "name": "Key Stone",
     "rom_id": 255,
     "ap_id_offset": 118,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": false,
+    "community": true,
     "default_count": 0,
     "groups": [
       "Key Item",
-      "Flute"
+      "Key"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bugle": {
-    "name": "Bugle",
+  "Accordion": {
+    "name": "Accordion",
     "rom_id": 255,
     "ap_id_offset": 119,
     "unique": true,
@@ -1887,11 +2004,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Harmonica": {
-    "name": "Harmonica",
+  "Bagpipes": {
+    "name": "Bagpipes",
     "rom_id": 255,
     "ap_id_offset": 120,
     "unique": true,
@@ -1903,11 +2021,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Metal Flute": {
-    "name": "Metal Flute",
+  "Bugle": {
+    "name": "Bugle",
     "rom_id": 255,
     "ap_id_offset": 121,
     "unique": true,
@@ -1919,11 +2038,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Ocarina": {
-    "name": "Ocarina",
+  "Harmonica": {
+    "name": "Harmonica",
     "rom_id": 255,
     "ap_id_offset": 122,
     "unique": true,
@@ -1935,11 +2055,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Pan Pipes": {
-    "name": "Pan Pipes",
+  "Metal Flute": {
+    "name": "Metal Flute",
     "rom_id": 255,
     "ap_id_offset": 123,
     "unique": true,
@@ -1951,11 +2072,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Piccolo": {
-    "name": "Piccolo",
+  "Ocarina": {
+    "name": "Ocarina",
     "rom_id": 255,
     "ap_id_offset": 124,
     "unique": true,
@@ -1967,11 +2089,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Random Flute": {
-    "name": "Random Flute",
+  "Pan Pipes": {
+    "name": "Pan Pipes",
     "rom_id": 255,
     "ap_id_offset": 125,
     "unique": true,
@@ -1983,11 +2106,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Recorder": {
-    "name": "Recorder",
+  "Piccolo": {
+    "name": "Piccolo",
     "rom_id": 255,
     "ap_id_offset": 126,
     "unique": true,
@@ -1999,11 +2123,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Tin Whistle": {
-    "name": "Tin Whistle",
+  "Random Flute": {
+    "name": "Random Flute",
     "rom_id": 255,
     "ap_id_offset": 127,
     "unique": true,
@@ -2015,11 +2140,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Wooden Flute": {
-    "name": "Wooden Flute",
+  "Recorder": {
+    "name": "Recorder",
     "rom_id": 255,
     "ap_id_offset": 128,
     "unique": true,
@@ -2031,43 +2157,46 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bassoon": {
-    "name": "Bassoon",
+  "Tin Whistle": {
+    "name": "Tin Whistle",
     "rom_id": 255,
     "ap_id_offset": 129,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Cello": {
-    "name": "Cello",
+  "Wooden Flute": {
+    "name": "Wooden Flute",
     "rom_id": 255,
     "ap_id_offset": 130,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Clarinet": {
-    "name": "Clarinet",
+  "Bassoon": {
+    "name": "Bassoon",
     "rom_id": 255,
     "ap_id_offset": 131,
     "unique": true,
@@ -2079,11 +2208,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Deku Pipes": {
-    "name": "Deku Pipes",
+  "Cello": {
+    "name": "Cello",
     "rom_id": 255,
     "ap_id_offset": 132,
     "unique": true,
@@ -2095,11 +2225,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Didgeridoo": {
-    "name": "Didgeridoo",
+  "Clarinet": {
+    "name": "Clarinet",
     "rom_id": 255,
     "ap_id_offset": 133,
     "unique": true,
@@ -2111,11 +2242,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Dog Whistle": {
-    "name": "Dog Whistle",
+  "Deku Pipes": {
+    "name": "Deku Pipes",
     "rom_id": 255,
     "ap_id_offset": 134,
     "unique": true,
@@ -2127,11 +2259,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Dragonzord Flute": {
-    "name": "Dragonzord Flute",
+  "Didgeridoo": {
+    "name": "Didgeridoo",
     "rom_id": 255,
     "ap_id_offset": 135,
     "unique": true,
@@ -2143,11 +2276,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Electric Guitar": {
-    "name": "Electric Guitar",
+  "Dog Whistle": {
+    "name": "Dog Whistle",
     "rom_id": 255,
     "ap_id_offset": 136,
     "unique": true,
@@ -2159,11 +2293,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Euphonium": {
-    "name": "Euphonium",
+  "Dragonzord Flute": {
+    "name": "Dragonzord Flute",
     "rom_id": 255,
     "ap_id_offset": 137,
     "unique": true,
@@ -2175,11 +2310,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Fairy Ocarina": {
-    "name": "Fairy Ocarina",
+  "Electric Guitar": {
+    "name": "Electric Guitar",
     "rom_id": 255,
     "ap_id_offset": 138,
     "unique": true,
@@ -2191,11 +2327,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Flute of Power": {
-    "name": "Flute of Power",
+  "Euphonium": {
+    "name": "Euphonium",
     "rom_id": 255,
     "ap_id_offset": 139,
     "unique": true,
@@ -2207,11 +2344,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "French Horn": {
-    "name": "French Horn",
+  "Fairy Ocarina": {
+    "name": "Fairy Ocarina",
     "rom_id": 255,
     "ap_id_offset": 140,
     "unique": true,
@@ -2223,11 +2361,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Guitar": {
-    "name": "Guitar",
+  "Flute of Power": {
+    "name": "Flute of Power",
     "rom_id": 255,
     "ap_id_offset": 141,
     "unique": true,
@@ -2239,11 +2378,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Harp": {
-    "name": "Harp",
+  "French Horn": {
+    "name": "French Horn",
     "rom_id": 255,
     "ap_id_offset": 142,
     "unique": true,
@@ -2255,11 +2395,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Harpsichord": {
-    "name": "Harpsichord",
+  "Guitar": {
+    "name": "Guitar",
     "rom_id": 255,
     "ap_id_offset": 143,
     "unique": true,
@@ -2271,11 +2412,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Horn of Plenty": {
-    "name": "Horn of Plenty",
+  "Harp": {
+    "name": "Harp",
     "rom_id": 255,
     "ap_id_offset": 144,
     "unique": true,
@@ -2287,11 +2429,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Kazoo": {
-    "name": "Kazoo",
+  "Harpsichord": {
+    "name": "Harpsichord",
     "rom_id": 255,
     "ap_id_offset": 145,
     "unique": true,
@@ -2303,11 +2446,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Lute": {
-    "name": "Lute",
+  "Horn of Plenty": {
+    "name": "Horn of Plenty",
     "rom_id": 255,
     "ap_id_offset": 146,
     "unique": true,
@@ -2319,11 +2463,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Magic Whistle": {
-    "name": "Magic Whistle",
+  "Kazoo": {
+    "name": "Kazoo",
     "rom_id": 255,
     "ap_id_offset": 147,
     "unique": true,
@@ -2335,11 +2480,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Marimba": {
-    "name": "Marimba",
+  "Lute": {
+    "name": "Lute",
     "rom_id": 255,
     "ap_id_offset": 148,
     "unique": true,
@@ -2351,11 +2497,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Melodica": {
-    "name": "Melodica",
+  "Magic Whistle": {
+    "name": "Magic Whistle",
     "rom_id": 255,
     "ap_id_offset": 149,
     "unique": true,
@@ -2367,11 +2514,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Moog Synth": {
-    "name": "Moog Synth",
+  "Marimba": {
+    "name": "Marimba",
     "rom_id": 255,
     "ap_id_offset": 150,
     "unique": true,
@@ -2383,11 +2531,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Note Block": {
-    "name": "Note Block",
+  "Melodica": {
+    "name": "Melodica",
     "rom_id": 255,
     "ap_id_offset": 151,
     "unique": true,
@@ -2399,11 +2548,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Oboe": {
-    "name": "Oboe",
+  "Moog Synth": {
+    "name": "Moog Synth",
     "rom_id": 255,
     "ap_id_offset": 152,
     "unique": true,
@@ -2415,11 +2565,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Ocarina of Time": {
-    "name": "Ocarina of Time",
+  "Note Block": {
+    "name": "Note Block",
     "rom_id": 255,
     "ap_id_offset": 153,
     "unique": true,
@@ -2431,11 +2582,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Otamatone": {
-    "name": "Otamatone",
+  "Oboe": {
+    "name": "Oboe",
     "rom_id": 255,
     "ap_id_offset": 154,
     "unique": true,
@@ -2447,11 +2599,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Piano": {
-    "name": "Piano",
+  "Ocarina of Time": {
+    "name": "Ocarina of Time",
     "rom_id": 255,
     "ap_id_offset": 155,
     "unique": true,
@@ -2463,11 +2616,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Pipe Organ": {
-    "name": "Pipe Organ",
+  "Otamatone": {
+    "name": "Otamatone",
     "rom_id": 255,
     "ap_id_offset": 156,
     "unique": true,
@@ -2479,11 +2633,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Saxophone": {
-    "name": "Saxophone",
+  "Piano": {
+    "name": "Piano",
     "rom_id": 255,
     "ap_id_offset": 157,
     "unique": true,
@@ -2495,11 +2650,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Snare Drum": {
-    "name": "Snare Drum",
+  "Pipe Organ": {
+    "name": "Pipe Organ",
     "rom_id": 255,
     "ap_id_offset": 158,
     "unique": true,
@@ -2511,11 +2667,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Sousaphone": {
-    "name": "Sousaphone",
+  "Saxophone": {
+    "name": "Saxophone",
     "rom_id": 255,
     "ap_id_offset": 159,
     "unique": true,
@@ -2527,11 +2684,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Synthesizer": {
-    "name": "Synthesizer",
+  "Snare Drum": {
+    "name": "Snare Drum",
     "rom_id": 255,
     "ap_id_offset": 160,
     "unique": true,
@@ -2543,11 +2701,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Tambourine": {
-    "name": "Tambourine",
+  "Sousaphone": {
+    "name": "Sousaphone",
     "rom_id": 255,
     "ap_id_offset": 161,
     "unique": true,
@@ -2559,11 +2718,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Theramin": {
-    "name": "Theramin",
+  "Synthesizer": {
+    "name": "Synthesizer",
     "rom_id": 255,
     "ap_id_offset": 162,
     "unique": true,
@@ -2575,11 +2735,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Tornelsbane": {
-    "name": "Tornelsbane",
+  "Tambourine": {
+    "name": "Tambourine",
     "rom_id": 255,
     "ap_id_offset": 163,
     "unique": true,
@@ -2591,11 +2752,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Trombone": {
-    "name": "Trombone",
+  "Theramin": {
+    "name": "Theramin",
     "rom_id": 255,
     "ap_id_offset": 164,
     "unique": true,
@@ -2607,11 +2769,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Trumpet": {
-    "name": "Trumpet",
+  "Tornelsbane": {
+    "name": "Tornelsbane",
     "rom_id": 255,
     "ap_id_offset": 165,
     "unique": true,
@@ -2623,11 +2786,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Tuba": {
-    "name": "Tuba",
+  "Trombone": {
+    "name": "Trombone",
     "rom_id": 255,
     "ap_id_offset": 166,
     "unique": true,
@@ -2639,11 +2803,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Viola": {
-    "name": "Viola",
+  "Trumpet": {
+    "name": "Trumpet",
     "rom_id": 255,
     "ap_id_offset": 167,
     "unique": true,
@@ -2655,11 +2820,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Violin": {
-    "name": "Violin",
+  "Tuba": {
+    "name": "Tuba",
     "rom_id": 255,
     "ap_id_offset": 168,
     "unique": true,
@@ -2671,11 +2837,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Vuvuzela": {
-    "name": "Vuvuzela",
+  "Viola": {
+    "name": "Viola",
     "rom_id": 255,
     "ap_id_offset": 169,
     "unique": true,
@@ -2687,11 +2854,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Whoopie Cushion": {
-    "name": "Whoopie Cushion",
+  "Violin": {
+    "name": "Violin",
     "rom_id": 255,
     "ap_id_offset": 170,
     "unique": true,
@@ -2703,11 +2871,12 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Xylophone": {
-    "name": "Xylophone",
+  "Vuvuzela": {
+    "name": "Vuvuzela",
     "rom_id": 255,
     "ap_id_offset": 171,
     "unique": true,
@@ -2719,43 +2888,46 @@
       "Key Item",
       "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Random Lamp": {
-    "name": "Random Lamp",
+  "Whoopie Cushion": {
+    "name": "Whoopie Cushion",
     "rom_id": 255,
     "ap_id_offset": 172,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": false,
+    "community": true,
     "default_count": 0,
     "groups": [
       "Key Item",
-      "Lamp"
+      "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bronze Lamp": {
-    "name": "Bronze Lamp",
+  "Xylophone": {
+    "name": "Xylophone",
     "rom_id": 255,
     "ap_id_offset": 173,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": false,
+    "community": true,
     "default_count": 0,
     "groups": [
       "Key Item",
-      "Lamp"
+      "Flute"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Silver Lamp": {
-    "name": "Silver Lamp",
+  "Random Lamp": {
+    "name": "Random Lamp",
     "rom_id": 255,
     "ap_id_offset": 174,
     "unique": true,
@@ -2767,11 +2939,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Gold Lamp": {
-    "name": "Gold Lamp",
+  "Bronze Lamp": {
+    "name": "Bronze Lamp",
     "rom_id": 255,
     "ap_id_offset": 175,
     "unique": true,
@@ -2783,11 +2956,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Oil Lamp": {
-    "name": "Oil Lamp",
+  "Silver Lamp": {
+    "name": "Silver Lamp",
     "rom_id": 255,
     "ap_id_offset": 176,
     "unique": true,
@@ -2799,11 +2973,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Magic Lamp": {
-    "name": "Magic Lamp",
+  "Gold Lamp": {
+    "name": "Gold Lamp",
     "rom_id": 255,
     "ap_id_offset": 177,
     "unique": true,
@@ -2815,43 +2990,46 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Genie Lamp": {
-    "name": "Genie Lamp",
+  "Oil Lamp": {
+    "name": "Oil Lamp",
     "rom_id": 255,
     "ap_id_offset": 178,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Unidentified Lamp": {
-    "name": "Unidentified Lamp",
+  "Magic Lamp": {
+    "name": "Magic Lamp",
     "rom_id": 255,
     "ap_id_offset": 179,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Dull Lamp": {
-    "name": "Dull Lamp",
+  "Genie Lamp": {
+    "name": "Genie Lamp",
     "rom_id": 255,
     "ap_id_offset": 180,
     "unique": true,
@@ -2863,11 +3041,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Desk Lamp": {
-    "name": "Desk Lamp",
+  "Unidentified Lamp": {
+    "name": "Unidentified Lamp",
     "rom_id": 255,
     "ap_id_offset": 181,
     "unique": true,
@@ -2879,11 +3058,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Shimmering Lamp": {
-    "name": "Shimmering Lamp",
+  "Dull Lamp": {
+    "name": "Dull Lamp",
     "rom_id": 255,
     "ap_id_offset": 182,
     "unique": true,
@@ -2895,11 +3075,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Broken Lamp": {
-    "name": "Broken Lamp",
+  "Desk Lamp": {
+    "name": "Desk Lamp",
     "rom_id": 255,
     "ap_id_offset": 183,
     "unique": true,
@@ -2911,11 +3092,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Brass Lantern": {
-    "name": "Brass Lantern",
+  "Shimmering Lamp": {
+    "name": "Shimmering Lamp",
     "rom_id": 255,
     "ap_id_offset": 184,
     "unique": true,
@@ -2927,11 +3109,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Overhead Lamp": {
-    "name": "Overhead Lamp",
+  "Broken Lamp": {
+    "name": "Broken Lamp",
     "rom_id": 255,
     "ap_id_offset": 185,
     "unique": true,
@@ -2943,11 +3126,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Pedestal Lamp": {
-    "name": "Pedestal Lamp",
+  "Brass Lantern": {
+    "name": "Brass Lantern",
     "rom_id": 255,
     "ap_id_offset": 186,
     "unique": true,
@@ -2959,11 +3143,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Incubation Lamp": {
-    "name": "Incubation Lamp",
+  "Overhead Lamp": {
+    "name": "Overhead Lamp",
     "rom_id": 255,
     "ap_id_offset": 187,
     "unique": true,
@@ -2975,11 +3160,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Halogen Bulb": {
-    "name": "Halogen Bulb",
+  "Pedestal Lamp": {
+    "name": "Pedestal Lamp",
     "rom_id": 255,
     "ap_id_offset": 188,
     "unique": true,
@@ -2991,11 +3177,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Incandescent Bulb": {
-    "name": "Incandescent Bulb",
+  "Incubation Lamp": {
+    "name": "Incubation Lamp",
     "rom_id": 255,
     "ap_id_offset": 189,
     "unique": true,
@@ -3007,11 +3194,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Fluorescent Lamp": {
-    "name": "Fluorescent Lamp",
+  "Halogen Bulb": {
+    "name": "Halogen Bulb",
     "rom_id": 255,
     "ap_id_offset": 190,
     "unique": true,
@@ -3023,11 +3211,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Ultraviolet Lamp": {
-    "name": "Ultraviolet Lamp",
+  "Incandescent Bulb": {
+    "name": "Incandescent Bulb",
     "rom_id": 255,
     "ap_id_offset": 191,
     "unique": true,
@@ -3039,11 +3228,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Heat Lamp": {
-    "name": "Heat Lamp",
+  "Fluorescent Lamp": {
+    "name": "Fluorescent Lamp",
     "rom_id": 255,
     "ap_id_offset": 192,
     "unique": true,
@@ -3055,11 +3245,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Recessed Lighting": {
-    "name": "Recessed Lighting",
+  "Ultraviolet Lamp": {
+    "name": "Ultraviolet Lamp",
     "rom_id": 255,
     "ap_id_offset": 193,
     "unique": true,
@@ -3071,11 +3262,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Laser Pointer": {
-    "name": "Laser Pointer",
+  "Heat Lamp": {
+    "name": "Heat Lamp",
     "rom_id": 255,
     "ap_id_offset": 194,
     "unique": true,
@@ -3087,11 +3279,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Spotlight": {
-    "name": "Spotlight",
+  "Recessed Lighting": {
+    "name": "Recessed Lighting",
     "rom_id": 255,
     "ap_id_offset": 195,
     "unique": true,
@@ -3103,11 +3296,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Streetlight": {
-    "name": "Streetlight",
+  "Laser Pointer": {
+    "name": "Laser Pointer",
     "rom_id": 255,
     "ap_id_offset": 196,
     "unique": true,
@@ -3119,11 +3313,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Flashlight": {
-    "name": "Flashlight",
+  "Spotlight": {
+    "name": "Spotlight",
     "rom_id": 255,
     "ap_id_offset": 197,
     "unique": true,
@@ -3135,11 +3330,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Search Light": {
-    "name": "Search Light",
+  "Streetlight": {
+    "name": "Streetlight",
     "rom_id": 255,
     "ap_id_offset": 198,
     "unique": true,
@@ -3151,11 +3347,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "LED": {
-    "name": "LED",
+  "Flashlight": {
+    "name": "Flashlight",
     "rom_id": 255,
     "ap_id_offset": 199,
     "unique": true,
@@ -3167,11 +3364,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Nightlight": {
-    "name": "Nightlight",
+  "Search Light": {
+    "name": "Search Light",
     "rom_id": 255,
     "ap_id_offset": 200,
     "unique": true,
@@ -3183,11 +3381,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Batsignal": {
-    "name": "Batsignal",
+  "LED": {
+    "name": "LED",
     "rom_id": 255,
     "ap_id_offset": 201,
     "unique": true,
@@ -3199,11 +3398,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Candelabra": {
-    "name": "Candelabra",
+  "Nightlight": {
+    "name": "Nightlight",
     "rom_id": 255,
     "ap_id_offset": 202,
     "unique": true,
@@ -3215,11 +3415,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Chandelier": {
-    "name": "Chandelier",
+  "Batsignal": {
+    "name": "Batsignal",
     "rom_id": 255,
     "ap_id_offset": 203,
     "unique": true,
@@ -3231,11 +3432,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Birthday Candle": {
-    "name": "Birthday Candle",
+  "Candelabra": {
+    "name": "Candelabra",
     "rom_id": 255,
     "ap_id_offset": 204,
     "unique": true,
@@ -3247,11 +3449,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Tallow Candle": {
-    "name": "Tallow Candle",
+  "Chandelier": {
+    "name": "Chandelier",
     "rom_id": 255,
     "ap_id_offset": 205,
     "unique": true,
@@ -3263,11 +3466,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Wax Candle": {
-    "name": "Wax Candle",
+  "Birthday Candle": {
+    "name": "Birthday Candle",
     "rom_id": 255,
     "ap_id_offset": 206,
     "unique": true,
@@ -3279,11 +3483,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Candle": {
-    "name": "Candle",
+  "Tallow Candle": {
+    "name": "Tallow Candle",
     "rom_id": 255,
     "ap_id_offset": 207,
     "unique": true,
@@ -3295,11 +3500,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Red Candle": {
-    "name": "Red Candle",
+  "Wax Candle": {
+    "name": "Wax Candle",
     "rom_id": 255,
     "ap_id_offset": 208,
     "unique": true,
@@ -3311,11 +3517,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Blue Candle": {
-    "name": "Blue Candle",
+  "Candle": {
+    "name": "Candle",
     "rom_id": 255,
     "ap_id_offset": 209,
     "unique": true,
@@ -3327,11 +3534,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Gas Stove": {
-    "name": "Gas Stove",
+  "Red Candle": {
+    "name": "Red Candle",
     "rom_id": 255,
     "ap_id_offset": 210,
     "unique": true,
@@ -3343,11 +3551,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Fireplace": {
-    "name": "Fireplace",
+  "Blue Candle": {
+    "name": "Blue Candle",
     "rom_id": 255,
     "ap_id_offset": 211,
     "unique": true,
@@ -3359,11 +3568,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Campfire": {
-    "name": "Campfire",
+  "Gas Stove": {
+    "name": "Gas Stove",
     "rom_id": 255,
     "ap_id_offset": 212,
     "unique": true,
@@ -3375,11 +3585,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bonfire": {
-    "name": "Bonfire",
+  "Fireplace": {
+    "name": "Fireplace",
     "rom_id": 255,
     "ap_id_offset": 213,
     "unique": true,
@@ -3391,11 +3602,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Tanning Bed": {
-    "name": "Tanning Bed",
+  "Campfire": {
+    "name": "Campfire",
     "rom_id": 255,
     "ap_id_offset": 214,
     "unique": true,
@@ -3407,11 +3619,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bug Zapper": {
-    "name": "Bug Zapper",
+  "Bonfire": {
+    "name": "Bonfire",
     "rom_id": 255,
     "ap_id_offset": 215,
     "unique": true,
@@ -3423,11 +3636,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "CRT": {
-    "name": "CRT",
+  "Tanning Bed": {
+    "name": "Tanning Bed",
     "rom_id": 255,
     "ap_id_offset": 216,
     "unique": true,
@@ -3439,11 +3653,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Disco Ball": {
-    "name": "Disco Ball",
+  "Bug Zapper": {
+    "name": "Bug Zapper",
     "rom_id": 255,
     "ap_id_offset": 217,
     "unique": true,
@@ -3455,11 +3670,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "The Clapper": {
-    "name": "The Clapper",
+  "CRT": {
+    "name": "CRT",
     "rom_id": 255,
     "ap_id_offset": 218,
     "unique": true,
@@ -3471,11 +3687,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Merton": {
-    "name": "Merton",
+  "Disco Ball": {
+    "name": "Disco Ball",
     "rom_id": 255,
     "ap_id_offset": 219,
     "unique": true,
@@ -3487,11 +3704,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Gaddlight": {
-    "name": "Gaddlight",
+  "The Clapper": {
+    "name": "The Clapper",
     "rom_id": 255,
     "ap_id_offset": 220,
     "unique": true,
@@ -3503,11 +3721,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Shroomlight": {
-    "name": "Shroomlight",
+  "Merton": {
+    "name": "Merton",
     "rom_id": 255,
     "ap_id_offset": 221,
     "unique": true,
@@ -3519,11 +3738,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Froglight": {
-    "name": "Froglight",
+  "Gaddlight": {
+    "name": "Gaddlight",
     "rom_id": 255,
     "ap_id_offset": 222,
     "unique": true,
@@ -3535,11 +3755,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Glowstone": {
-    "name": "Glowstone",
+  "Shroomlight": {
+    "name": "Shroomlight",
     "rom_id": 255,
     "ap_id_offset": 223,
     "unique": true,
@@ -3551,11 +3772,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Redstone Lamp": {
-    "name": "Redstone Lamp",
+  "Froglight": {
+    "name": "Froglight",
     "rom_id": 255,
     "ap_id_offset": 224,
     "unique": true,
@@ -3567,11 +3789,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "PrismarineLantern": {
-    "name": "PrismarineLantern",
+  "Glowstone": {
+    "name": "Glowstone",
     "rom_id": 255,
     "ap_id_offset": 225,
     "unique": true,
@@ -3583,11 +3806,12 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Soul Campfire": {
-    "name": "Soul Campfire",
+  "Redstone Lamp": {
+    "name": "Redstone Lamp",
     "rom_id": 255,
     "ap_id_offset": 226,
     "unique": true,
@@ -3599,43 +3823,46 @@
       "Key Item",
       "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Random Statue": {
-    "name": "Random Statue",
+  "PrismarineLantern": {
+    "name": "PrismarineLantern",
     "rom_id": 255,
     "ap_id_offset": 227,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": false,
+    "community": true,
     "default_count": 0,
     "groups": [
       "Key Item",
-      "Statue"
+      "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Rusty Statue": {
-    "name": "Rusty Statue",
+  "Soul Campfire": {
+    "name": "Soul Campfire",
     "rom_id": 255,
     "ap_id_offset": 228,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": false,
+    "community": true,
     "default_count": 0,
     "groups": [
       "Key Item",
-      "Statue"
+      "Lamp"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Forbidden Statue": {
-    "name": "Forbidden Statue",
+  "Random Statue": {
+    "name": "Random Statue",
     "rom_id": 255,
     "ap_id_offset": 229,
     "unique": true,
@@ -3647,13 +3874,48 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
+    "category": 1,
+    "notes": ""
+  },
+  "Rusty Statue": {
+    "name": "Rusty Statue",
+    "rom_id": 255,
+    "ap_id_offset": 230,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Key Item",
+      "Statue"
+    ],
+    "palette": 9,
+    "category": 1,
+    "notes": ""
+  },
+  "Forbidden Statue": {
+    "name": "Forbidden Statue",
+    "rom_id": 255,
+    "ap_id_offset": 231,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Key Item",
+      "Statue"
+    ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
   "Unidentified Idol": {
     "name": "Unidentified Idol",
     "rom_id": 255,
-    "ap_id_offset": 230,
+    "ap_id_offset": 232,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
@@ -3663,13 +3925,14 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
   "Golden Idol": {
     "name": "Golden Idol",
     "rom_id": 255,
-    "ap_id_offset": 231,
+    "ap_id_offset": 233,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
@@ -3679,43 +3942,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
   "Strange Statue": {
     "name": "Strange Statue",
-    "rom_id": 255,
-    "ap_id_offset": 232,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 0,
-    "groups": [
-      "Key Item",
-      "Statue"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Glass Statue": {
-    "name": "Glass Statue",
-    "rom_id": 255,
-    "ap_id_offset": 233,
-    "unique": true,
-    "losable": false,
-    "prevent_loss": true,
-    "community": false,
-    "default_count": 0,
-    "groups": [
-      "Key Item",
-      "Statue"
-    ],
-    "category": 1,
-    "notes": ""
-  },
-  "Copper Statue": {
-    "name": "Copper Statue",
     "rom_id": 255,
     "ap_id_offset": 234,
     "unique": true,
@@ -3727,11 +3959,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "White Statue": {
-    "name": "White Statue",
+  "Glass Statue": {
+    "name": "Glass Statue",
     "rom_id": 255,
     "ap_id_offset": 235,
     "unique": true,
@@ -3743,43 +3976,46 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Invisible Statue": {
-    "name": "Invisible Statue",
+  "Copper Statue": {
+    "name": "Copper Statue",
     "rom_id": 255,
     "ap_id_offset": 236,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Burt Figurine": {
-    "name": "Burt Figurine",
+  "White Statue": {
+    "name": "White Statue",
     "rom_id": 255,
     "ap_id_offset": 237,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Draygon Figurine": {
-    "name": "Draygon Figurine",
+  "Invisible Statue": {
+    "name": "Invisible Statue",
     "rom_id": 255,
     "ap_id_offset": 238,
     "unique": true,
@@ -3791,11 +4027,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Karmine Figurine": {
-    "name": "Karmine Figurine",
+  "Burt Figurine": {
+    "name": "Burt Figurine",
     "rom_id": 255,
     "ap_id_offset": 239,
     "unique": true,
@@ -3807,11 +4044,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Mado Figurine": {
-    "name": "Mado Figurine",
+  "Draygon Figurine": {
+    "name": "Draygon Figurine",
     "rom_id": 255,
     "ap_id_offset": 240,
     "unique": true,
@@ -3823,11 +4061,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Sabera Figurine": {
-    "name": "Sabera Figurine",
+  "Karmine Figurine": {
+    "name": "Karmine Figurine",
     "rom_id": 255,
     "ap_id_offset": 241,
     "unique": true,
@@ -3839,11 +4078,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Kelbesque Figurine": {
-    "name": "Kelbesque Figurine",
+  "Mado Figurine": {
+    "name": "Mado Figurine",
     "rom_id": 255,
     "ap_id_offset": 242,
     "unique": true,
@@ -3855,11 +4095,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Flail Guy Trophy": {
-    "name": "Flail Guy Trophy",
+  "Sabera Figurine": {
+    "name": "Sabera Figurine",
     "rom_id": 255,
     "ap_id_offset": 243,
     "unique": true,
@@ -3871,11 +4112,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Metroid Amiibo": {
-    "name": "Metroid Amiibo",
+  "Kelbesque Figurine": {
+    "name": "Kelbesque Figurine",
     "rom_id": 255,
     "ap_id_offset": 244,
     "unique": true,
@@ -3887,11 +4129,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Model of Dyna": {
-    "name": "Model of Dyna",
+  "Flail Guy Trophy": {
+    "name": "Flail Guy Trophy",
     "rom_id": 255,
     "ap_id_offset": 245,
     "unique": true,
@@ -3903,11 +4146,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Jeff Peters Statue": {
-    "name": "Jeff Peters Statue",
+  "Metroid Amiibo": {
+    "name": "Metroid Amiibo",
     "rom_id": 255,
     "ap_id_offset": 246,
     "unique": true,
@@ -3919,11 +4163,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "M. Toki Statue": {
-    "name": "M. Toki Statue",
+  "Model of Dyna": {
+    "name": "Model of Dyna",
     "rom_id": 255,
     "ap_id_offset": 247,
     "unique": true,
@@ -3935,11 +4180,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Statue of Liberty": {
-    "name": "Statue of Liberty",
+  "Jeff Peters Statue": {
+    "name": "Jeff Peters Statue",
     "rom_id": 255,
     "ap_id_offset": 248,
     "unique": true,
@@ -3951,11 +4197,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Colossus of Rhodes": {
-    "name": "Colossus of Rhodes",
+  "M. Toki Statue": {
+    "name": "M. Toki Statue",
     "rom_id": 255,
     "ap_id_offset": 249,
     "unique": true,
@@ -3967,11 +4214,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Great Sphynx": {
-    "name": "Great Sphynx",
+  "Statue of Liberty": {
+    "name": "Statue of Liberty",
     "rom_id": 255,
     "ap_id_offset": 250,
     "unique": true,
@@ -3983,11 +4231,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Olmec Head": {
-    "name": "Olmec Head",
+  "Colossus of Rhodes": {
+    "name": "Colossus of Rhodes",
     "rom_id": 255,
     "ap_id_offset": 251,
     "unique": true,
@@ -3999,11 +4248,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Shakoki Dogu": {
-    "name": "Shakoki Dogu",
+  "Great Sphynx": {
+    "name": "Great Sphynx",
     "rom_id": 255,
     "ap_id_offset": 252,
     "unique": true,
@@ -4015,11 +4265,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Moai": {
-    "name": "Moai",
+  "Olmec Head": {
+    "name": "Olmec Head",
     "rom_id": 255,
     "ap_id_offset": 253,
     "unique": true,
@@ -4031,11 +4282,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Venus de Milo": {
-    "name": "Venus de Milo",
+  "Shakoki Dogu": {
+    "name": "Shakoki Dogu",
     "rom_id": 255,
     "ap_id_offset": 254,
     "unique": true,
@@ -4047,11 +4299,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "David": {
-    "name": "David",
+  "Moai": {
+    "name": "Moai",
     "rom_id": 255,
     "ap_id_offset": 255,
     "unique": true,
@@ -4063,11 +4316,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "The Thinker": {
-    "name": "The Thinker",
+  "Venus de Milo": {
+    "name": "Venus de Milo",
     "rom_id": 255,
     "ap_id_offset": 256,
     "unique": true,
@@ -4079,11 +4333,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Winged Victory": {
-    "name": "Winged Victory",
+  "David": {
+    "name": "David",
     "rom_id": 255,
     "ap_id_offset": 257,
     "unique": true,
@@ -4095,11 +4350,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Terracotta Statue": {
-    "name": "Terracotta Statue",
+  "The Thinker": {
+    "name": "The Thinker",
     "rom_id": 255,
     "ap_id_offset": 258,
     "unique": true,
@@ -4111,11 +4367,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Gargoyle": {
-    "name": "Gargoyle",
+  "Winged Victory": {
+    "name": "Winged Victory",
     "rom_id": 255,
     "ap_id_offset": 259,
     "unique": true,
@@ -4127,11 +4384,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Mattrick Figurine": {
-    "name": "Mattrick Figurine",
+  "Terracotta Statue": {
+    "name": "Terracotta Statue",
     "rom_id": 255,
     "ap_id_offset": 260,
     "unique": true,
@@ -4143,11 +4401,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Dragondarch Statue": {
-    "name": "Dragondarch Statue",
+  "Gargoyle": {
+    "name": "Gargoyle",
     "rom_id": 255,
     "ap_id_offset": 261,
     "unique": true,
@@ -4159,11 +4418,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Overswarm Statue": {
-    "name": "Overswarm Statue",
+  "Mattrick Figurine": {
+    "name": "Mattrick Figurine",
     "rom_id": 255,
     "ap_id_offset": 262,
     "unique": true,
@@ -4175,11 +4435,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Trueblue83 Statue": {
-    "name": "Trueblue83 Statue",
+  "Dragondarch Statue": {
+    "name": "Dragondarch Statue",
     "rom_id": 255,
     "ap_id_offset": 263,
     "unique": true,
@@ -4191,11 +4452,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "TheAxeMan Idol": {
-    "name": "TheAxeMan Idol",
+  "Overswarm Statue": {
+    "name": "Overswarm Statue",
     "rom_id": 255,
     "ap_id_offset": 264,
     "unique": true,
@@ -4207,11 +4469,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Acmlm Figurine": {
-    "name": "Acmlm Figurine",
+  "Trueblue83 Statue": {
+    "name": "Trueblue83 Statue",
     "rom_id": 255,
     "ap_id_offset": 265,
     "unique": true,
@@ -4223,11 +4486,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Tornel Statue": {
-    "name": "Tornel Statue",
+  "TheAxeMan Idol": {
+    "name": "TheAxeMan Idol",
     "rom_id": 255,
     "ap_id_offset": 266,
     "unique": true,
@@ -4239,11 +4503,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "CodeGorilla Trophy": {
-    "name": "CodeGorilla Trophy",
+  "Acmlm Figurine": {
+    "name": "Acmlm Figurine",
     "rom_id": 255,
     "ap_id_offset": 267,
     "unique": true,
@@ -4255,11 +4520,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "SirArchibald Model": {
-    "name": "SirArchibald Model",
+  "Tornel Statue": {
+    "name": "Tornel Statue",
     "rom_id": 255,
     "ap_id_offset": 268,
     "unique": true,
@@ -4271,11 +4537,12 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "ClaireDiviner Idol": {
-    "name": "ClaireDiviner Idol",
+  "CodeGorilla Trophy": {
+    "name": "CodeGorilla Trophy",
     "rom_id": 255,
     "ap_id_offset": 269,
     "unique": true,
@@ -4287,43 +4554,46 @@
       "Key Item",
       "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Darkness": {
-    "name": "Bow of Darkness",
+  "SirArchibald Model": {
+    "name": "SirArchibald Model",
     "rom_id": 255,
     "ap_id_offset": 270,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": false,
+    "community": true,
     "default_count": 0,
     "groups": [
       "Key Item",
-      "Bow"
+      "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Earth": {
-    "name": "Bow of Earth",
+  "ClaireDiviner Idol": {
+    "name": "ClaireDiviner Idol",
     "rom_id": 255,
     "ap_id_offset": 271,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": false,
+    "community": true,
     "default_count": 0,
     "groups": [
       "Key Item",
-      "Bow"
+      "Statue"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Fire": {
-    "name": "Bow of Fire",
+  "Bow of Darkness": {
+    "name": "Bow of Darkness",
     "rom_id": 255,
     "ap_id_offset": 272,
     "unique": true,
@@ -4335,11 +4605,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Light": {
-    "name": "Bow of Light",
+  "Bow of Earth": {
+    "name": "Bow of Earth",
     "rom_id": 255,
     "ap_id_offset": 273,
     "unique": true,
@@ -4351,11 +4622,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Stars": {
-    "name": "Bow of Stars",
+  "Bow of Fire": {
+    "name": "Bow of Fire",
     "rom_id": 255,
     "ap_id_offset": 274,
     "unique": true,
@@ -4367,11 +4639,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Thunder": {
-    "name": "Bow of Thunder",
+  "Bow of Light": {
+    "name": "Bow of Light",
     "rom_id": 255,
     "ap_id_offset": 275,
     "unique": true,
@@ -4383,11 +4656,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Water": {
-    "name": "Bow of Water",
+  "Bow of Stars": {
+    "name": "Bow of Stars",
     "rom_id": 255,
     "ap_id_offset": 276,
     "unique": true,
@@ -4399,11 +4673,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Wind": {
-    "name": "Bow of Wind",
+  "Bow of Thunder": {
+    "name": "Bow of Thunder",
     "rom_id": 255,
     "ap_id_offset": 277,
     "unique": true,
@@ -4415,11 +4690,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Random Bow": {
-    "name": "Random Bow",
+  "Bow of Water": {
+    "name": "Bow of Water",
     "rom_id": 255,
     "ap_id_offset": 278,
     "unique": true,
@@ -4431,43 +4707,46 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Arbalest": {
-    "name": "Arbalest",
+  "Bow of Wind": {
+    "name": "Bow of Wind",
     "rom_id": 255,
     "ap_id_offset": 279,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Autocrossbow": {
-    "name": "Autocrossbow",
+  "Random Bow": {
+    "name": "Random Bow",
     "rom_id": 255,
     "ap_id_offset": 280,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
-    "community": true,
+    "community": false,
     "default_count": 0,
     "groups": [
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Beau Bridges": {
-    "name": "Beau Bridges",
+  "Arbalest": {
+    "name": "Arbalest",
     "rom_id": 255,
     "ap_id_offset": 281,
     "unique": true,
@@ -4479,11 +4758,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bo Burnham": {
-    "name": "Bo Burnham",
+  "Autocrossbow": {
+    "name": "Autocrossbow",
     "rom_id": 255,
     "ap_id_offset": 282,
     "unique": true,
@@ -4495,11 +4775,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bo Dallas": {
-    "name": "Bo Dallas",
+  "Beau Bridges": {
+    "name": "Beau Bridges",
     "rom_id": 255,
     "ap_id_offset": 283,
     "unique": true,
@@ -4511,11 +4792,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bo Derek": {
-    "name": "Bo Derek",
+  "Bo Burnham": {
+    "name": "Bo Burnham",
     "rom_id": 255,
     "ap_id_offset": 284,
     "unique": true,
@@ -4527,11 +4809,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bo Diddley": {
-    "name": "Bo Diddley",
+  "Bo Dallas": {
+    "name": "Bo Dallas",
     "rom_id": 255,
     "ap_id_offset": 285,
     "unique": true,
@@ -4543,11 +4826,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bo Jackson": {
-    "name": "Bo Jackson",
+  "Bo Derek": {
+    "name": "Bo Derek",
     "rom_id": 255,
     "ap_id_offset": 286,
     "unique": true,
@@ -4559,11 +4843,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bo Schembechler": {
-    "name": "Bo Schembechler",
+  "Bo Diddley": {
+    "name": "Bo Diddley",
     "rom_id": 255,
     "ap_id_offset": 287,
     "unique": true,
@@ -4575,11 +4860,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bodacious": {
-    "name": "Bodacious",
+  "Bo Jackson": {
+    "name": "Bo Jackson",
     "rom_id": 255,
     "ap_id_offset": 288,
     "unique": true,
@@ -4591,11 +4877,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bojangles": {
-    "name": "Bojangles",
+  "Bo Schembechler": {
+    "name": "Bo Schembechler",
     "rom_id": 255,
     "ap_id_offset": 289,
     "unique": true,
@@ -4607,11 +4894,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Botox": {
-    "name": "Botox",
+  "Bodacious": {
+    "name": "Bodacious",
     "rom_id": 255,
     "ap_id_offset": 290,
     "unique": true,
@@ -4623,11 +4911,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow No!": {
-    "name": "Bow No!",
+  "Bojangles": {
+    "name": "Bojangles",
     "rom_id": 255,
     "ap_id_offset": 291,
     "unique": true,
@@ -4639,11 +4928,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow Tie": {
-    "name": "Bow Tie",
+  "Botox": {
+    "name": "Botox",
     "rom_id": 255,
     "ap_id_offset": 292,
     "unique": true,
@@ -4655,11 +4945,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Death": {
-    "name": "Bow of Death",
+  "Bow No!": {
+    "name": "Bow No!",
     "rom_id": 255,
     "ap_id_offset": 293,
     "unique": true,
@@ -4671,11 +4962,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Freedom": {
-    "name": "Bow of Freedom",
+  "Bow Tie": {
+    "name": "Bow Tie",
     "rom_id": 255,
     "ap_id_offset": 294,
     "unique": true,
@@ -4687,11 +4979,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Lies": {
-    "name": "Bow of Lies",
+  "Bow of Death": {
+    "name": "Bow of Death",
     "rom_id": 255,
     "ap_id_offset": 295,
     "unique": true,
@@ -4703,11 +4996,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Bow of Life": {
-    "name": "Bow of Life",
+  "Bow of Freedom": {
+    "name": "Bow of Freedom",
     "rom_id": 255,
     "ap_id_offset": 296,
     "unique": true,
@@ -4719,11 +5013,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Buriza-Do Kyanon": {
-    "name": "Buriza-Do Kyanon",
+  "Bow of Lies": {
+    "name": "Bow of Lies",
     "rom_id": 255,
     "ap_id_offset": 297,
     "unique": true,
@@ -4735,11 +5030,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Compound Bow": {
-    "name": "Compound Bow",
+  "Bow of Life": {
+    "name": "Bow of Life",
     "rom_id": 255,
     "ap_id_offset": 298,
     "unique": true,
@@ -4751,11 +5047,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Crossbow": {
-    "name": "Crossbow",
+  "Buriza-Do Kyanon": {
+    "name": "Buriza-Do Kyanon",
     "rom_id": 255,
     "ap_id_offset": 299,
     "unique": true,
@@ -4767,11 +5064,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Cupid's Bow": {
-    "name": "Cupid's Bow",
+  "Compound Bow": {
+    "name": "Compound Bow",
     "rom_id": 255,
     "ap_id_offset": 300,
     "unique": true,
@@ -4783,11 +5081,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "David Bowie": {
-    "name": "David Bowie",
+  "Crossbow": {
+    "name": "Crossbow",
     "rom_id": 255,
     "ap_id_offset": 301,
     "unique": true,
@@ -4799,11 +5098,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Eaglehorn": {
-    "name": "Eaglehorn",
+  "Cupid's Bow": {
+    "name": "Cupid's Bow",
     "rom_id": 255,
     "ap_id_offset": 302,
     "unique": true,
@@ -4815,11 +5115,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Fire Arrows": {
-    "name": "Fire Arrows",
+  "David Bowie": {
+    "name": "David Bowie",
     "rom_id": 255,
     "ap_id_offset": 303,
     "unique": true,
@@ -4831,11 +5132,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Golden Bow": {
-    "name": "Golden Bow",
+  "Eaglehorn": {
+    "name": "Eaglehorn",
     "rom_id": 255,
     "ap_id_offset": 304,
     "unique": true,
@@ -4847,11 +5149,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Hair Bow": {
-    "name": "Hair Bow",
+  "Fire Arrows": {
+    "name": "Fire Arrows",
     "rom_id": 255,
     "ap_id_offset": 305,
     "unique": true,
@@ -4863,11 +5166,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Ice Arrows": {
-    "name": "Ice Arrows",
+  "Golden Bow": {
+    "name": "Golden Bow",
     "rom_id": 255,
     "ap_id_offset": 306,
     "unique": true,
@@ -4879,11 +5183,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "JBowe": {
-    "name": "JBowe",
+  "Hair Bow": {
+    "name": "Hair Bow",
     "rom_id": 255,
     "ap_id_offset": 307,
     "unique": true,
@@ -4895,11 +5200,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "KLINGSBO": {
-    "name": "KLINGSBO",
+  "Ice Arrows": {
+    "name": "Ice Arrows",
     "rom_id": 255,
     "ap_id_offset": 308,
     "unique": true,
@@ -4911,11 +5217,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "LILLABO": {
-    "name": "LILLABO",
+  "JBowe": {
+    "name": "JBowe",
     "rom_id": 255,
     "ap_id_offset": 309,
     "unique": true,
@@ -4927,11 +5234,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Long Bow": {
-    "name": "Long Bow",
+  "KLINGSBO": {
+    "name": "KLINGSBO",
     "rom_id": 255,
     "ap_id_offset": 310,
     "unique": true,
@@ -4943,11 +5251,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Rainbow": {
-    "name": "Rainbow",
+  "LILLABO": {
+    "name": "LILLABO",
     "rom_id": 255,
     "ap_id_offset": 311,
     "unique": true,
@@ -4959,11 +5268,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Recurve Bow": {
-    "name": "Recurve Bow",
+  "Long Bow": {
+    "name": "Long Bow",
     "rom_id": 255,
     "ap_id_offset": 312,
     "unique": true,
@@ -4975,11 +5285,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "SVALBO": {
-    "name": "SVALBO",
+  "Rainbow": {
+    "name": "Rainbow",
     "rom_id": 255,
     "ap_id_offset": 313,
     "unique": true,
@@ -4991,11 +5302,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Silver Arrows": {
-    "name": "Silver Arrows",
+  "Recurve Bow": {
+    "name": "Recurve Bow",
     "rom_id": 255,
     "ap_id_offset": 314,
     "unique": true,
@@ -5007,11 +5319,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Slingshot": {
-    "name": "Slingshot",
+  "SVALBO": {
+    "name": "SVALBO",
     "rom_id": 255,
     "ap_id_offset": 315,
     "unique": true,
@@ -5023,11 +5336,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Tae Bo": {
-    "name": "Tae Bo",
+  "Silver Arrows": {
+    "name": "Silver Arrows",
     "rom_id": 255,
     "ap_id_offset": 316,
     "unique": true,
@@ -5039,11 +5353,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Unidentified Bow": {
-    "name": "Unidentified Bow",
+  "Slingshot": {
+    "name": "Slingshot",
     "rom_id": 255,
     "ap_id_offset": 317,
     "unique": true,
@@ -5055,11 +5370,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Violin Bow": {
-    "name": "Violin Bow",
+  "Tae Bo": {
+    "name": "Tae Bo",
     "rom_id": 255,
     "ap_id_offset": 318,
     "unique": true,
@@ -5071,11 +5387,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Windforce": {
-    "name": "Windforce",
+  "Unidentified Bow": {
+    "name": "Unidentified Bow",
     "rom_id": 255,
     "ap_id_offset": 319,
     "unique": true,
@@ -5087,11 +5404,12 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   },
-  "Wooden Bow": {
-    "name": "Wooden Bow",
+  "Violin Bow": {
+    "name": "Violin Bow",
     "rom_id": 255,
     "ap_id_offset": 320,
     "unique": true,
@@ -5103,6 +5421,41 @@
       "Key Item",
       "Bow"
     ],
+    "palette": 9,
+    "category": 1,
+    "notes": ""
+  },
+  "Windforce": {
+    "name": "Windforce",
+    "rom_id": 255,
+    "ap_id_offset": 321,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": true,
+    "default_count": 0,
+    "groups": [
+      "Key Item",
+      "Bow"
+    ],
+    "palette": 9,
+    "category": 1,
+    "notes": ""
+  },
+  "Wooden Bow": {
+    "name": "Wooden Bow",
+    "rom_id": 255,
+    "ap_id_offset": 322,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": true,
+    "default_count": 0,
+    "groups": [
+      "Key Item",
+      "Bow"
+    ],
+    "palette": 9,
     "category": 1,
     "notes": ""
   }
