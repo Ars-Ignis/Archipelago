@@ -6,7 +6,7 @@ import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
 from .items import items_data_by_id, items_data
 from .regions import regions_data
-from .types import CRYSTALIS_BASE_ID
+from .types import CRYSTALIS_BASE_ID, CRYSTALIS_APWORLD_VERSION
 
 if TYPE_CHECKING:
     from worlds._bizhawk.context import BizHawkClientContext
@@ -73,18 +73,25 @@ class CrystalisClient(BizHawkClient):
 
 
     def on_package(self, ctx: "BizHawkClientContext", cmd: str, args: dict) -> None:
+        from CommonClient import logger
         if cmd == "Connected":
             #slot_data should be set now
+            if "version" not in ctx.slot_data.keys():
+                logger.warning(f"APWorld version mismatch. Multiworld generated without versioning; "
+                               f"local install using {CRYSTALIS_APWORLD_VERSION}")
+            elif ctx.slot_data["version"] != CRYSTALIS_APWORLD_VERSION:
+                logger.warning(f"APWorld version mismatch. Multiworld generated with {ctx.slot_data['version']}; "
+                               f"local install using {CRYSTALIS_APWORLD_VERSION}")
             key_item_names: Dict[str, str] = ctx.slot_data["shuffle_data"]["key_item_names"]
             for original_name, new_name in key_item_names.items():
                 #want to map the new item's AP ID to the original item's in-game ID.
                 self.unidentified_item_rom_ids[items_data[new_name].ap_id_offset + CRYSTALIS_BASE_ID] = \
                     items_data[original_name].rom_id
             async_start(ctx.send_msgs([{"cmd": "Get",
-                                  "keys": [f"asina_hint_collected_{ctx.slot}"]}]))
+                                  "keys": [f"asina_hint_collected_{ctx.team}_{ctx.slot}"]}]))
         elif cmd == "Retrieved":
-            if f"asina_hint_collected_{ctx.slot}" in args["keys"]:
-                self.asina_hint_collected = args["keys"][f"asina_hint_collected_{ctx.slot}"]
+            if f"asina_hint_collected_{ctx.team}_{ctx.slot}" in args["keys"]:
+                self.asina_hint_collected = args["keys"][f"asina_hint_collected_{ctx.team}_{ctx.slot}"]
 
 
 
@@ -129,7 +136,7 @@ class CrystalisClient(BizHawkClient):
                                     },
                                     {
                                         "cmd": "Set",
-                                        "key": f"asina_hint_collected_{ctx.slot}",
+                                        "key": f"asina_hint_collected_{ctx.team}_{ctx.slot}",
                                         "default": True,
                                         "want_reply": False,
                                         "operations": [{"operation": "replace", "value": True}]
@@ -157,7 +164,7 @@ class CrystalisClient(BizHawkClient):
                         self.current_location = new_location
                         async_start(ctx.send_msgs([{
                                     "cmd": "Set",
-                                    "key": f"current_location_{ctx.slot}",
+                                    "key": f"current_location_{ctx.team}_{ctx.slot}",
                                     "default": 0,
                                     "want_reply": False,
                                     "operations": [{"operation": "replace", "value": new_location}]
