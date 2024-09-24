@@ -160,6 +160,12 @@ class CrystalisWorld(World):
         if hasattr(self.multiworld, "re_gen_passthrough"):
             if "Crystalis" in self.multiworld.re_gen_passthrough:
                 passthrough = self.multiworld.re_gen_passthrough["Crystalis"]
+                if "version" not in passthrough.keys():
+                    logging.warning(f"APWorld version mismatch. Multiworld generated without versioning; "
+                                    f"local install using {CRYSTALIS_APWORLD_VERSION}")
+                elif passthrough["version"] != CRYSTALIS_APWORLD_VERSION:
+                    logging.warning(f"APWorld version mismatch. Multiworld generated with {passthrough['version']}; "
+                                    f"local install using {CRYSTALIS_APWORLD_VERSION}")
                 self.options.randomize_maps.value = passthrough["randomize_maps"]
                 self.options.shuffle_areas.value = passthrough["shuffle_areas"]
                 self.options.shuffle_houses.value = passthrough["shuffle_houses"]
@@ -322,6 +328,7 @@ class CrystalisWorld(World):
                                                          "dont_buff_bonus_items", "vanilla_maps", "vanilla_wild_warp")
         #get shuffle data for tracker purposes, UT regen, and ids for unidentified items
         slot_data["shuffle_data"] = asdict(self.shuffle_data)
+        slot_data["version"] = CRYSTALIS_APWORLD_VERSION
         return slot_data
 
     @staticmethod
