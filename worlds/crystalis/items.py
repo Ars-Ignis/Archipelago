@@ -136,6 +136,12 @@ def create_items(self) -> None:
             items_created += 1
         elif "Sword" in item_data.groups:
             swords.append(self.create_item(item_data.name))
+        elif self.options.dont_buff_bonus_items and item_data.name == "Hazmat Suit":
+            self.multiworld.itempool.append(self.create_item("Gas Mask"))
+            items_created += 1
+        elif self.options.dont_buff_bonus_items and item_data.name == "Speed Boots":
+            self.multiworld.itempool.append(self.create_item("Leather Boots"))
+            items_created += 1
         elif not self.options.dont_shuffle_mimics or item_data.name != "Mimic":
             if self.options.keep_unique_items_and_consumables_separate and not item_data.unique:
                 for i in range(item_data.default_count):
