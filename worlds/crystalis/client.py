@@ -1,6 +1,7 @@
 from typing import TYPE_CHECKING, List, Dict, Tuple
+
 from NetUtils import ClientStatus, NetworkItem
-from Utils import async_start
+from Utils import async_start, VersionException
 
 import worlds._bizhawk as bizhawk
 from worlds._bizhawk.client import BizHawkClient
@@ -77,11 +78,13 @@ class CrystalisClient(BizHawkClient):
         if cmd == "Connected":
             #slot_data should be set now
             if "version" not in ctx.slot_data.keys():
-                logger.warning(f"APWorld version mismatch. Multiworld generated without versioning; "
-                               f"local install using {CRYSTALIS_APWORLD_VERSION}")
+                err_string = f"Crystalis APWorld version mismatch. Multiworld generated without versioning; " \
+                             f"local install using {CRYSTALIS_APWORLD_VERSION}"
+                raise VersionException(err_string)
             elif ctx.slot_data["version"] != CRYSTALIS_APWORLD_VERSION:
-                logger.warning(f"APWorld version mismatch. Multiworld generated with {ctx.slot_data['version']}; "
-                               f"local install using {CRYSTALIS_APWORLD_VERSION}")
+                err_string = f"Crystalis APWorld version mismatch. Multiworld generated with " \
+                             f"{ctx.slot_data['version']}; local install using {CRYSTALIS_APWORLD_VERSION}"
+                raise VersionException(err_string)
             key_item_names: Dict[str, str] = ctx.slot_data["shuffle_data"]["key_item_names"]
             for original_name, new_name in key_item_names.items():
                 #want to map the new item's AP ID to the original item's in-game ID.
