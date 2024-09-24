@@ -34,6 +34,7 @@ class CrystalisItemCategoryEnum(IntEnum):
     CONDITIONAL = 3
     TRAP = 4
 
+
 def convert_enum_to_item_classification(enum: CrystalisItemCategoryEnum) -> ItemClassification:
     if enum == CrystalisItemCategoryEnum.FILLER:
         return ItemClassification.filler
@@ -48,6 +49,43 @@ def convert_enum_to_item_classification(enum: CrystalisItemCategoryEnum) -> Item
         return ItemClassification.trap
     raise ValueError(f"Crystalis: Unrecognized value in convert_enum_to_item_classification: {enum}")
     return ItemClassification.filler
+
+
+class CrystalisItemPaletteEnum(IntEnum):
+    WIND_EQUIP = 0
+    FIRE_EQUIP = 1
+    WATER_EQUIP = 2
+    THUNDER_EQUIP = 3
+    WIND_CONSUMABLE = 4
+    FIRE_CONSUMABLE = 5
+    WATER_CONSUMABLE = 6
+    THUNDER_CONSUMABLE = 7
+    MIMIC = 8
+    RANDOM = 9
+
+
+def convert_enum_to_palette(enum: CrystalisItemPaletteEnum) -> Tuple[int, int]:
+    if enum == CrystalisItemPaletteEnum.WIND_EQUIP:
+        return [0x19,0x03]
+    if enum == CrystalisItemPaletteEnum.FIRE_EQUIP:
+        return [0x27,0x16]
+    if enum == CrystalisItemPaletteEnum.WATER_EQUIP:
+        return [0x2C,0x12]
+    if enum == CrystalisItemPaletteEnum.THUNDER_EQUIP:
+        return [0x37,0x0C]
+    if enum == CrystalisItemPaletteEnum.WIND_CONSUMABLE:
+        return [0x2A,0x03]
+    if enum == CrystalisItemPaletteEnum.FIRE_CONSUMABLE:
+        return [0x27,0x05]
+    if enum == CrystalisItemPaletteEnum.WATER_CONSUMABLE:
+        return [0x2C,0x12]
+    if enum == CrystalisItemPaletteEnum.THUNDER_CONSUMABLE:
+        return [0x28,0x00]
+    if enum == CrystalisItemPaletteEnum.MIMIC:
+        return [0x36,0x14]
+    raise ValueError(f"Crystalis: Unrecognized value in convert_enum_to_palette: {enum}")
+    return [0,0]
+
 
 class CrystalisEntranceTypeEnum(IntEnum):
     STATIC = 0
@@ -106,6 +144,7 @@ class CrystalisItemData:
     community: bool
     default_count: int
     groups: List[str]
+    palette: CrystalisItemPaletteEnum
     category: CrystalisItemCategoryEnum
 
 
