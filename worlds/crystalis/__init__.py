@@ -3,6 +3,7 @@ from typing import Mapping, Any
 from dataclasses import asdict
 
 from BaseClasses import Tutorial, MultiWorld
+from Utils import VersionException
 from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
 from .locations import CrystalisLocation, create_location_from_location_data
 from .regions import regions_data, create_regions, shuffle_goa
@@ -161,11 +162,13 @@ class CrystalisWorld(World):
             if "Crystalis" in self.multiworld.re_gen_passthrough:
                 passthrough = self.multiworld.re_gen_passthrough["Crystalis"]
                 if "version" not in passthrough.keys():
-                    logging.warning(f"APWorld version mismatch. Multiworld generated without versioning; "
-                                    f"local install using {CRYSTALIS_APWORLD_VERSION}")
+                    err_string = f"Crystalis APWorld version mismatch. Multiworld generated without versioning; " \
+                                 f"local install using {CRYSTALIS_APWORLD_VERSION}"
+                    raise VersionException(err_string)
                 elif passthrough["version"] != CRYSTALIS_APWORLD_VERSION:
-                    logging.warning(f"APWorld version mismatch. Multiworld generated with {passthrough['version']}; "
-                                    f"local install using {CRYSTALIS_APWORLD_VERSION}")
+                    err_string = f"Crystalis APWorld version mismatch. Multiworld generated with " \
+                                 f"{passthrough['version']}; local install using {CRYSTALIS_APWORLD_VERSION}"
+                    raise VersionException(err_string)
                 self.options.randomize_maps.value = passthrough["randomize_maps"]
                 self.options.shuffle_areas.value = passthrough["shuffle_areas"]
                 self.options.shuffle_houses.value = passthrough["shuffle_houses"]
