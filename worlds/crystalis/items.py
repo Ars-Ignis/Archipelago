@@ -32,7 +32,7 @@ items_data_by_id: Dict[int, CrystalisItemData] = {}
 for key, value in items_data_json.items():
     item_data = CrystalisItemData(value["name"], value["rom_id"], value["ap_id_offset"], value["unique"],
                                   value["losable"], value["prevent_loss"], value["community"], value["default_count"],
-                                  value["groups"], value["category"])
+                                  value["groups"], value["palette"],  value["category"])
     items_data[key] = item_data
     items_data_by_id[item_data.ap_id_offset + CRYSTALIS_BASE_ID] = item_data
     if item_data.default_count == 0 and "Key Item" in item_data.groups:

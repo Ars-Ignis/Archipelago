@@ -1,9 +1,8 @@
 import logging
-from typing import Dict, List, Mapping, Any, ClassVar
+from typing import Mapping, Any
 from dataclasses import asdict
 
-import settings
-from BaseClasses import Item, Tutorial
+from BaseClasses import Tutorial, MultiWorld
 from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
 from .locations import CrystalisLocation, create_location_from_location_data
 from .regions import regions_data, create_regions, shuffle_goa
@@ -78,6 +77,18 @@ class CrystalisWorld(World):
                 item_name_groups[group].add(item.name)
             else:
                 item_name_groups[group] = {item.name}
+
+
+    @classmethod
+    def stage_generate_early(cls, multiworld: MultiWorld) -> None:
+        if "Mega Man 2" in multiworld.game.values():
+            from worlds.mm2.color import add_color_to_mm2
+            for item in items_data.values():
+                if item.palette == CrystalisItemPaletteEnum.RANDOM:
+                    add_color_to_mm2(item.name, convert_enum_to_palette(multiworld.random.randint(0,8)))
+                else:
+                    add_color_to_mm2(item.name, convert_enum_to_palette(item.palette))
+
 
 
     def randomize_shop_inventories(self, starting_inventories: Dict[str, List[str]]) -> Dict[str, List[str]]:
