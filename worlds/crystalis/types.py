@@ -5,6 +5,7 @@ from enum import IntEnum
 from typing import List, Dict, Optional, Tuple
 
 CRYSTALIS_BASE_ID: int = 2241000
+CRYSTALIS_APWORLD_VERSION = "0.1.0"
 
 
 class CrystalisElementEnum(IntEnum):
