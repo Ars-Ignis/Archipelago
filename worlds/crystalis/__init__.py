@@ -174,6 +174,7 @@ class CrystalisWorld(World):
                 self.options.shuffle_houses.value = passthrough["shuffle_houses"]
                 self.options.randomize_tradeins.value = passthrough["randomize_tradeins"]
                 self.options.unidentified_key_items.value = passthrough["unidentified_key_items"]
+                self.options.randomize_wall_elements = passthrough["randomize_wall_elements"]
                 self.options.shuffle_goa.value = passthrough["shuffle_goa"]
                 self.options.randomize_wild_warp.value = passthrough["randomize_wild_warp"]
                 self.options.story_mode.value = passthrough["story_mode"]
@@ -317,7 +318,8 @@ class CrystalisWorld(World):
     def fill_slot_data(self) -> Mapping[str, Any]:
         #get logic relevant options for tracker purposes
         slot_data: Dict[str, Any] = self.options.as_dict("randomize_maps", "shuffle_areas", "shuffle_houses",
-                                                         "randomize_tradeins", "unidentified_key_items", "shuffle_goa",
+                                                         "randomize_tradeins", "unidentified_key_items",
+                                                         "randomize_wall_elements", "shuffle_goa",
                                                          "randomize_wild_warp", "story_mode", "no_bow_mode",
                                                          "orbs_not_required", "thunder_warp", "vanilla_dolphin",
                                                          "fake_flight", "statue_glitch", "mt_sabre_skip",
