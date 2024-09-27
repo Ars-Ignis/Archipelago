@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from Options import Choice, Toggle, PerGameCommonOptions, OptionGroup, StartInventoryPool
+from Options import Choice, Toggle, PerGameCommonOptions, OptionGroup, StartInventoryPool, Visibility
 
 
 # World Options
@@ -8,7 +8,7 @@ class RandomizeMaps(Toggle):
     map will have all the same features (exits, chests, NPCs, etc) except things are moved around.
     """
     display_name = "Randomize maps (Wm)"
-
+    visibility = Visibility.none
 
     def flag_name(self) -> (str, str):
         if self:
@@ -19,7 +19,7 @@ class RandomizeMaps(Toggle):
 class ShuffleAreas(Toggle):
     """NOT IMPLEMENTED YET: Shuffles some or all area connections."""
     display_name = "Shuffle areas (Wa)"
-
+    visibility = Visibility.none
 
     def flag_name(self) -> (str, str):
         if self:
@@ -32,7 +32,7 @@ class ShuffleHouseEntrances(Toggle):
     palace/fortress-type entrances at the top of several towns, and standalone houses.
     """
     display_name = "Shuffle house entrances (Wh)"
-
+    visibility = Visibility.none
 
     def flag_name(self) -> (str, str):
         if self:
