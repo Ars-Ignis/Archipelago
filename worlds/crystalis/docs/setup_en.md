@@ -52,7 +52,7 @@ When you join a multiworld game, you will be asked to provide your YAML file to 
 the host will provide you with either a link to download your data file, or with a zip file containing everyone's data
 files. Your data file should have a `.apcrys` extension.
 
-Go to the [Crystalis Randomizer Archipelago Page](TODO: PUT URL HERE) and first click the button that says Select 
+Go to the [Crystalis Randomizer Archipelago Page](https://crystalisrandomizer.com/ap/) and first click the button that says Select 
 Crystalis ROM File, and navigate to your Crystalis.nes ROM in the file selection dialog. Then click on the **Archipelago**
 heading that appears, and click on the Select Archipelago Patch File button. Navigate to your .apcrys patch file 
 obtained above in the file selection dialog and select it. A Patch heading should appear, with a Patch button beneath
