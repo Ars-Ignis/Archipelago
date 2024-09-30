@@ -5,6 +5,7 @@ import logging
 from typing import Dict, List, Any, Tuple, TextIO, Iterable, Optional
 from BaseClasses import Location, Item, ItemClassification
 from worlds.Files import APPatch
+from worlds.AutoWorld import World
 from .items import items_data
 from .options import CrystalisOptions
 from .regions import regions_data
@@ -50,7 +51,7 @@ def generate_flag_string(options: CrystalisOptions) -> str:
     return flag_string
 
 
-def generate_statue_hint(world: "CrystailsWorld") -> str:
+def generate_statue_hint(world: World) -> str:
     # To mimic how hint generation works in the stand-alone randomizer,
     # this hint will look through the Kirisa Plant Cave and Fog Lamp Cave
     # locations, report the furthest away progression item if one exists,
