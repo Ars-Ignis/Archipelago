@@ -1,12 +1,14 @@
 import os
 import orjson
 import zipfile
-from typing import Dict, List, Any, Tuple, TextIO
+import logging
+from typing import Dict, List, Any, Tuple, TextIO, Iterable, Optional
+from BaseClasses import Location, Item, ItemClassification
 from worlds.Files import APPatch
 from .items import items_data
 from .options import CrystalisOptions
 from .regions import regions_data
-from .types import CrystalisRegionData, CrystalisShuffleData, CrystalisElementEnum, convert_text_to_elem_enum
+from .types import CrystalisShuffleData, convert_text_to_elem_enum
 
 
 DEBUG: bool = False
@@ -46,6 +48,43 @@ def generate_flag_string(options: CrystalisOptions) -> str:
                 cat_string = cat_string + flag
         flag_string = flag_string + cat_string + (("!" + bang_string) if bang_string != "" else "")
     return flag_string
+
+
+def generate_statue_hint(world: "CrystailsWorld") -> str:
+    # To mimic how hint generation works in the stand-alone randomizer,
+    # this hint will look through the Kirisa Plant Cave and Fog Lamp Cave
+    # locations, report the furthest away progression item if one exists,
+    # otherwise report the furthest away useful item if one exists,
+    # otherwise report nothing.
+    # Gather the locations in question, first
+    fog_lamp_first_location: Location = world.get_location("Fog Lamp Cave Front Chest")
+    fog_lamp_second_location: Location = world.get_location("Fog Lamp Cave Middle North Mimic")
+    fog_lamp_third_location: Location = world.get_location("Fog Lamp Cave Middle Southwest Mimic")
+    fog_lamp_fourth_location: Location = world.get_location("Fog Lamp Cave Back Chest")
+    kirisa_plant_cave_location: Location = world.get_location("Kirisa Plant Cave Chest")
+    kirisa_plant_meadow_location: Location = world.get_location("Kirisa Meadow")
+    # Order them
+    lime_hint_locations: Iterable[Location] = [fog_lamp_fourth_location, kirisa_plant_meadow_location,
+                                               kirisa_plant_cave_location, fog_lamp_third_location,
+                                               fog_lamp_second_location, fog_lamp_first_location]
+    # search for progression
+    for prog_location in lime_hint_locations:
+        item: Optional[Item] = prog_location.item
+        if item is None:
+            logging.warning(f"Empty location during generate_output! {prog_location.name}")
+            continue
+        elif item.classification & ItemClassification.progression:
+            return item.name
+    #if we get here, there was no progression, so search for useful
+    for useful_location in lime_hint_locations:
+        item: Optional[Item] = useful_location.item
+        if item is None:
+            logging.warning(f"Empty location during generate_output! {useful_location.name}")
+            continue
+        elif item.classification & ItemClassification.useful:
+            return item.name
+    #if we get here, it's all junk; return an empty string and let the patcher handle it
+    return ""
 
 
 def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
@@ -145,10 +184,12 @@ def generate_output(self, output_directory: str) -> None:
     flag_string: str = generate_flag_string(self.options)
     #need to convert shuffle_data to the format it will be consumed in
     converted_data = convert_shuffle_data(self.shuffle_data)
+    lime_hint = generate_statue_hint(self)
     output_dict = {
         "seed": self.multiworld.seed_name,
         "flag_string": flag_string,
-        "shuffle_data": converted_data
+        "shuffle_data": converted_data,
+        "lime_hint": lime_hint
     }
     file_path = os.path.join(output_directory, f"{self.multiworld.get_out_file_name_base(self.player)}.apcrys")
     ap_crys = CrystalisFile(file_path, player=self.player, player_name=self.multiworld.player_name[self.player])
