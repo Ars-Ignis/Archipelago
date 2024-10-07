@@ -223,7 +223,7 @@ class CrystalisWorld(World):
         if self.options.randomize_wall_elements:
             wall_weaknesses = [self.random.choice(elements) for i in range(len(wall_names))]
         else:
-            wall_weaknesses = ["Wind", "Wind", "Wind", "Fire", "Fire", "Fire", "Wind", "Wind", "Wind", "Wind",
+            wall_weaknesses = ["Fire", "Wind", "Wind", "Fire", "Fire", "Fire", "Wind", "Wind", "Wind", "Wind",
                                "Thunder", "Thunder", "Thunder", "Thunder", "Thunder", "Thunder"]
         wall_map: Dict[str, str] = dict(zip(wall_names, wall_weaknesses))
         #then key item names
