@@ -125,15 +125,16 @@ for key, value in regions_data_json.items():
             menu_region.connect(thunder_warp_region, "Thunder Warp")
 
         #add wild warp entrances
-        warp_names: Set[str] = set()
-        for warp in self.shuffle_data.wildwarps:
-            if warp == 0: continue #no need for an entrance to Mezame
-            warp_name = self.wild_warp_id_to_region[warp]
-            if warp_name not in warp_names:
-                warp_region = local_region_cache[warp_name]
-                menu_region.connect(warp_region, "Wild Warp to " + warp_name)
-                #avoid making redundant entrances
-                warp_names.add(warp_name)
+        if self.options.vaniila_wild_warp != self.options.vaniila_wild_warp.option_out_of_logic:
+            warp_names: Set[str] = set()
+            for warp in self.shuffle_data.wildwarps:
+                if warp == 0: continue #no need for an entrance to Mezame
+                warp_name = self.wild_warp_id_to_region[warp]
+                if warp_name not in warp_names:
+                    warp_region = local_region_cache[warp_name]
+                    menu_region.connect(warp_region, "Wild Warp to " + warp_name)
+                    #avoid making redundant entrances
+                    warp_names.add(warp_name)
 
         #make some events
         player = self.player
