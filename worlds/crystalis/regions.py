@@ -125,7 +125,7 @@ for key, value in regions_data_json.items():
             menu_region.connect(thunder_warp_region, "Thunder Warp")
 
         #add wild warp entrances
-        if self.options.vaniila_wild_warp != self.options.vaniila_wild_warp.option_out_of_logic:
+        if self.options.vanilla_wild_warp != self.options.vanilla_wild_warp.option_out_of_logic:
             warp_names: Set[str] = set()
             for warp in self.shuffle_data.wildwarps:
                 if warp == 0: continue #no need for an entrance to Mezame
