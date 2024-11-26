@@ -337,7 +337,7 @@ def set_rules(self) -> None:
     water_cave_first_wall = self.get_entrance("Waterfall Cave - Front -> Waterfall Cave - Before Statues")
     water_cave_first_wall.access_rule = can_break_waterfall_cave_walls
     set_two_way_logic(water_cave_first_wall)
-    if not options.statue_glitch:
+    if options.statue_glitch != options.statue_glitch.option_in_logic:
         statue_guards = self.get_entrance("Waterfall Cave - Before Statues -> Waterfall Cave - After Statues")
         set_rule(statue_guards, lambda state: state.has(shuffle_data.key_item_names["Flute of Lime"], player))
     water_cave_back_wall = self.get_entrance("Waterfall Cave - After Statues -> Waterfall Cave - Back")
@@ -569,7 +569,7 @@ def set_rules(self) -> None:
     else:
         can_cross_shooters_south = barrier_logic
     can_cross_shooters_north = can_cross_shooters_south
-    if options.statue_gauntlet_skip:
+    if options.statue_gauntlet_skip == options.statue_gauntlet_skip.option_in_logic:
         can_cross_shooters_north = lambda state: state.has("Flight", player) or can_cross_shooters_south(state)
     stxy_gauntlet = self.get_entrance("Stxy - Front -> Stxy - Downstairs")
     stxy_gauntlet.access_rule = can_cross_shooters_north
