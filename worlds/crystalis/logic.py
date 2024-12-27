@@ -556,6 +556,7 @@ def set_rules(self) -> None:
     set_rule(mado_1_fight, lambda state: state.has("Sword of Thunder", player) and
                                           massacre_trigger.can_reach(state) and
                                           mado_1_fight_logic(state))
+    multiworld.register_indirect_condition(massacre_trigger, mado_1_fight)
 
     #Stxy
     barrier_logic = lambda state: state.has("Barrier", player)
