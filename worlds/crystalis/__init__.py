@@ -1,4 +1,3 @@
-import logging
 from typing import Mapping, Any
 from dataclasses import asdict
 
@@ -6,7 +5,7 @@ from BaseClasses import Tutorial, MultiWorld
 from Utils import VersionException
 from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
 from .locations import CrystalisLocation, create_location_from_location_data
-from .regions import regions_data, create_regions, shuffle_goa
+from .regions import regions_data, create_regions, shuffle_goa, generate_basic
 from .options import CrystalisOptions, crystalis_option_groups
 from .types import *
 from .logic import set_rules
@@ -56,6 +55,7 @@ class CrystalisWorld(World):
     shuffle_goa = shuffle_goa
     create_item = create_item
     create_items = create_items
+    generate_basic = generate_basic
     write_spoiler_header = write_spoiler_header
     web = CrystalisWeb()
 
@@ -148,15 +148,17 @@ class CrystalisWorld(World):
 
     def generate_early(self) -> None:
 
+        try:
+            from entrance_rando import randomize_entrances
+        except ImportError:
+            if self.options.shuffle_areas:
+                self.options.shuffle_areas.value = self.options.shuffle_areas.option_false
+            if self.options.shuffle_houses:
+                self.options.shuffle_houses.value = self.options.shuffle_houses.option_false
+
         if self.options.randomize_maps:
             logging.warning("Wm (Randomize maps) not implemented yet. Turning this option off.")
             self.options.randomize_maps.value = self.options.randomize_maps.option_false
-        if self.options.shuffle_areas:
-            logging.warning("Wa (Shuffle areas) not implemented yet. Turning this option off.")
-            self.options.shuffle_areas.value = self.options.shuffle_areas.option_false
-        if self.options.shuffle_houses:
-            logging.warning("Wh (Shuffle houses) not implemented yet. Turning this option off.")
-            self.options.shuffle_houses.value = self.options.shuffle_houses.option_false
 
         if hasattr(self.multiworld, "re_gen_passthrough"):
             if "Crystalis" in self.multiworld.re_gen_passthrough:
