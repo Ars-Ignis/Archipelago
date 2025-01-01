@@ -51,7 +51,15 @@
       211
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Amazones Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Amazones",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -61,7 +69,15 @@
       209
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Amazones Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Amazones",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -71,7 +87,15 @@
       210
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Amazones Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Amazones",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -91,7 +115,7 @@
       },
       {
         "name": "Angry Sea - Beach House",
-        "entrance_type": 13,
+        "entrance_type": 15,
         "vanilla_target": "Beach House",
         "pseudologic": "TRUE",
         "notes": ""
@@ -113,8 +137,8 @@
         "notes": ""
       },
       {
-        "name": "",
-        "entrance_type": 0,
+        "name": "Angry Sea - Exposed Cave",
+        "entrance_type": 5,
         "vanilla_target": "Joel",
         "pseudologic": "TRUE",
         "notes": ""
@@ -343,7 +367,7 @@
     "entrances": [
       {
         "name": "Beach House - Exit",
-        "entrance_type": 14,
+        "entrance_type": 16,
         "vanilla_target": "Angry Sea - Beach House Area",
         "pseudologic": "TRUE",
         "notes": ""
@@ -377,7 +401,7 @@
       },
       {
         "name": "Bow Passage - Exit",
-        "entrance_type": 9,
+        "entrance_type": 11,
         "vanilla_target": "Crypt - Front",
         "pseudologic": "TRUE",
         "notes": ""
@@ -449,7 +473,7 @@
     "entrances": [
       {
         "name": "Brynmaer - Entrance",
-        "entrance_type": 3,
+        "entrance_type": 4,
         "vanilla_target": "Cordel Plains - Main",
         "pseudologic": "TRUE",
         "notes": ""
@@ -510,7 +534,15 @@
       201
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Brynmaer Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -520,7 +552,15 @@
       200
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Brynmaer Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -530,7 +570,15 @@
       203
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Brynmaer Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -540,7 +588,15 @@
       199
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Brynmaer Pawn Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Brynmaer",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -735,7 +791,7 @@
     "entrances": [
       {
         "name": "Crypt - Entrance",
-        "entrance_type": 10,
+        "entrance_type": 12,
         "vanilla_target": "Bow Passage - Back",
         "pseudologic": "TRUE",
         "notes": ""
@@ -1229,7 +1285,7 @@
     "entrances": [
       {
         "name": "Fisherman House - Exit",
-        "entrance_type": 14,
+        "entrance_type": 16,
         "vanilla_target": "Fisherman House Area",
         "pseudologic": "TRUE",
         "notes": ""
@@ -1254,7 +1310,7 @@
       },
       {
         "name": "Fisherman House Entrance",
-        "entrance_type": 13,
+        "entrance_type": 15,
         "vanilla_target": "Fisherman House",
         "pseudologic": "TRUE",
         "notes": ""
@@ -1474,7 +1530,7 @@
     "entrances": [
       {
         "name": "Goa - Exit",
-        "entrance_type": 10,
+        "entrance_type": 12,
         "vanilla_target": "Goa Valley",
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
@@ -1532,7 +1588,7 @@
       },
       {
         "name": "Goa Entrance - Stairs",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Kelbesque's Floor - Front",
         "pseudologic": "TRUE",
         "notes": ""
@@ -1598,7 +1654,7 @@
     "entrances": [
       {
         "name": "Goa Exit - Upstairs",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Karmine's Floor - Back",
         "pseudologic": "TRUE",
         "notes": ""
@@ -1620,7 +1676,15 @@
       188
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Goa Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Goa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -1630,7 +1694,15 @@
       190
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Goa Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Goa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -1682,7 +1754,7 @@
       },
       {
         "name": "Goa Valley - Palace",
-        "entrance_type": 9,
+        "entrance_type": 11,
         "vanilla_target": "Goa",
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
@@ -1801,7 +1873,7 @@
       },
       {
         "name": "Joel - Shed",
-        "entrance_type": 11,
+        "entrance_type": 13,
         "vanilla_target": "Joel Shed",
         "pseudologic": "TRUE",
         "notes": ""
@@ -1834,7 +1906,15 @@
       231
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Joel Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Joel",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -1844,7 +1924,15 @@
       229
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Joel Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Joel",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -1857,7 +1945,7 @@
     "entrances": [
       {
         "name": "Joel Shed - Exit",
-        "entrance_type": 12,
+        "entrance_type": 14,
         "vanilla_target": "Joel",
         "pseudologic": "TRUE",
         "notes": ""
@@ -1890,7 +1978,7 @@
       },
       {
         "name": "Karmine's Floor - Exit",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Goa Exit",
         "pseudologic": "TRUE",
         "notes": ""
@@ -1960,7 +2048,7 @@
     "entrances": [
       {
         "name": "Karmine's Floor - Entrance",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Mado's Floor - Back",
         "pseudologic": "TRUE",
         "notes": ""
@@ -2105,7 +2193,7 @@
       },
       {
         "name": "Kelbesque's Floor - Exit",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Sabera's Floor - Front",
         "pseudologic": "TRUE",
         "notes": ""
@@ -2157,7 +2245,7 @@
     "entrances": [
       {
         "name": "Kelbesque's Floor - Entrance",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Goa Entrance - Behind Wall",
         "pseudologic": "TRUE",
         "notes": ""
@@ -2345,7 +2433,7 @@
       },
       {
         "name": "Leaf Shed",
-        "entrance_type": 11,
+        "entrance_type": 13,
         "vanilla_target": "Leaf Shed",
         "pseudologic": "TRUE",
         "notes": ""
@@ -2360,7 +2448,15 @@
       196
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Leaf Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -2399,7 +2495,15 @@
       194
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Leaf Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -2409,7 +2513,15 @@
       195
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Leaf Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Leaf",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -2422,7 +2534,7 @@
     "entrances": [
       {
         "name": "Leaf Shed - Exit",
-        "entrance_type": 12,
+        "entrance_type": 14,
         "vanilla_target": "Leaf",
         "pseudologic": "TRUE",
         "notes": ""
@@ -2440,7 +2552,7 @@
     "entrances": [
       {
         "name": "Lighthouse - Exit",
-        "entrance_type": 14,
+        "entrance_type": 16,
         "vanilla_target": "Lighthouse Area",
         "pseudologic": "TRUE",
         "notes": ""
@@ -2474,7 +2586,7 @@
       },
       {
         "name": "Lighthouse Entrance",
-        "entrance_type": 13,
+        "entrance_type": 15,
         "vanilla_target": "Lighthouse",
         "pseudologic": "TRUE",
         "notes": ""
@@ -2547,7 +2659,7 @@
       },
       {
         "name": "Mado's Floor - Exit",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Karmine's Floor - Front",
         "pseudologic": "TRUE",
         "notes": ""
@@ -2599,7 +2711,7 @@
     "entrances": [
       {
         "name": "Mado's Floor - Entrance",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Sabera's Floor - Back",
         "pseudologic": "TRUE",
         "notes": ""
@@ -2808,7 +2920,7 @@
       },
       {
         "name": "Mt. Hydra - Guardpost",
-        "entrance_type": 9,
+        "entrance_type": 11,
         "vanilla_target": "Shyron",
         "pseudologic": "Change || statue_skip || can_reach(Shyron) || (can_reach(Goa Entrance - Massacre Trigger) && can_reach(Shyron Temple) && Sword of Thunder))",
         "notes": "\"Need to check trigger skip and Paralysis; entrance only shuffled in Wa"
@@ -3434,7 +3546,7 @@
     "entrances": [
       {
         "name": "Mt. Sabre West - Main Exit",
-        "entrance_type": 3,
+        "entrance_type": 4,
         "vanilla_target": "Cordel Plains - Main",
         "pseudologic": "TRUE",
         "notes": ""
@@ -3609,7 +3721,15 @@
       60
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Nadare's Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Nadare's",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -3619,7 +3739,15 @@
       61
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Nadare's Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Nadare's",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -3704,7 +3832,15 @@
       208
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Oak Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Oak",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -3714,7 +3850,15 @@
       207
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Oak Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Oak",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -3965,7 +4109,15 @@
       218
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Portoa Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -3975,7 +4127,15 @@
       220
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Portoa Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -3985,7 +4145,15 @@
       221
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Portoa Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -4093,7 +4261,15 @@
       217
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Portoa Pawn Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Portoa",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -4374,7 +4550,7 @@
       },
       {
         "name": "Sabera's Floor - Exit",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Mado's Floor - Front",
         "pseudologic": "TRUE",
         "notes": ""
@@ -4426,7 +4602,7 @@
     "entrances": [
       {
         "name": "Sabera's Floor - Entrance",
-        "entrance_type": 15,
+        "entrance_type": 17,
         "vanilla_target": "Kelbesque's Floor - Back",
         "pseudologic": "TRUE",
         "notes": ""
@@ -4626,7 +4802,7 @@
     "entrances": [
       {
         "name": "Sahara - Up",
-        "entrance_type": null,
+        "entrance_type": 1,
         "vanilla_target": "Deo Valley",
         "pseudologic": "TRUE",
         "notes": ""
@@ -4719,7 +4895,15 @@
       248
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Sahara Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Sahara",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -4729,7 +4913,15 @@
       249
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Sahara Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Sahara",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -4739,7 +4931,15 @@
       251
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Sahara Pawn Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Sahara",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -4910,7 +5110,7 @@
     "entrances": [
       {
         "name": "Shyron - Exit",
-        "entrance_type": 10,
+        "entrance_type": 12,
         "vanilla_target": "Mt. Hydra - Guarded Palace",
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
@@ -4967,7 +5167,15 @@
       245
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Shyron Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Shyron",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -4995,7 +5203,15 @@
       247
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Shyron Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Shyron",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -5005,7 +5221,15 @@
       246
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Shyron Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Shyron",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -5375,7 +5599,7 @@
       },
       {
         "name": "Swan - Shed",
-        "entrance_type": 11,
+        "entrance_type": 13,
         "vanilla_target": "Swan Shed",
         "pseudologic": "TRUE",
         "notes": ""
@@ -5390,7 +5614,15 @@
       238
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Swan Armor Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -5429,7 +5661,15 @@
       237
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Swan Inn - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -5439,7 +5679,15 @@
       235
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Swan Item Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -5449,7 +5697,15 @@
       240
     ],
     "notes": "",
-    "entrances": [],
+    "entrances": [
+      {
+        "name": "Swan Pawn Shop - Exit",
+        "entrance_type": 8,
+        "vanilla_target": "Swan",
+        "pseudologic": "TRUE",
+        "notes": ""
+      }
+    ],
     "locations": [],
     "ban_wildwarp": true
   },
@@ -5480,7 +5736,7 @@
     "entrances": [
       {
         "name": "Swan Shed - Exit",
-        "entrance_type": 12,
+        "entrance_type": 14,
         "vanilla_target": "Swan",
         "pseudologic": "TRUE",
         "notes": ""
@@ -5498,7 +5754,7 @@
     "entrances": [
       {
         "name": "Tornel's House - Exit",
-        "entrance_type": 14,
+        "entrance_type": 16,
         "vanilla_target": "Tornel's House Exterior",
         "pseudologic": "TRUE",
         "notes": ""
@@ -5534,7 +5790,7 @@
       },
       {
         "name": "Tornel's House Entrance",
-        "entrance_type": 13,
+        "entrance_type": 15,
         "vanilla_target": "Tornel's House",
         "pseudologic": "TRUE",
         "notes": ""
@@ -5878,7 +6134,7 @@
     "entrances": [
       {
         "name": "Windmill Exit",
-        "entrance_type": 14,
+        "entrance_type": 16,
         "vanilla_target": "Windmill Exterior",
         "pseudologic": "TRUE",
         "notes": ""
@@ -5937,7 +6193,7 @@
       },
       {
         "name": "Windmill Entrance",
-        "entrance_type": 13,
+        "entrance_type": 15,
         "vanilla_target": "Windmill",
         "pseudologic": "TRUE",
         "notes": ""
