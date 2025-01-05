@@ -8,8 +8,8 @@ from worlds.Files import APPatch
 from worlds.AutoWorld import World
 from .items import items_data
 from .options import CrystalisOptions
-from .regions import regions_data
-from .types import CrystalisShuffleData, convert_text_to_elem_enum
+from .regions import regions_data, entrances_data, HOUSE_SHUFFLE_TYPES, AREA_SHUFFLE_TYPES
+from .types import CrystalisShuffleData, convert_text_to_elem_enum, CrystalisEntranceTypeEnum
 
 
 DEBUG: bool = False
@@ -23,6 +23,19 @@ BOSS_IDS: Dict[str, int] = {
     "Sabera 2": 0x90,
     "Mado 2": 0x93,
     "Karmine": 0x97
+}
+
+
+CONDITIONAL_EXIT_KEYS: Dict[str, str] = {
+    "Cordel Plains - Main - Added Cave": "1555 cave",
+    "Lime Valley - Added Cave": "4210 cave",
+    "Goa Valley - Added Cave": "7811 cave",
+    "Desert 2 - Added Cave": "9853 cave",
+    "Wind Valley - East Cave": "333 cave",
+    "GBC Cave - Free Exit": "b04 stair:down",
+    "GBC Cave - Blocked Exit": "1220 edge:bottom",
+    "Wind Valley - East": "354 edge:right",
+    "Lime Valley - West": "4210 edge:left"
 }
 
 
@@ -88,7 +101,7 @@ def generate_statue_hint(world: World) -> str:
     return ""
 
 
-def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
+def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisOptions) -> Dict[str, Any]:
     wall_map: Dict[str, int] = {}
     for wall, elem in shuffle_data.wall_map.items():
         elem_enum = convert_text_to_elem_enum(elem)
@@ -149,6 +162,42 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
         goa_floors.append((current_floor_index, is_flipped))
         previous_exit = f"{current_floor_name}'s Floor - " + ("Entrance" if is_flipped else "Exit")
 
+    area_connections = {}
+    house_connections = {}
+    for entrance, exit in shuffle_data.er_pairings.items():
+        entrance_type: str
+        entrance_house_key: str
+        exit_house_key: str
+        entrance_exit_key: str
+        exit_exit_key: str
+        if entrance in entrances_data:
+            entrance_type = entrances_data[entrance].entrance_type
+            entrance_house_key = entrances_data[entrance].house_key
+            entrance_exit_key = entrances_data[entrance].exit_key
+        else:
+            # cave entrance vs. cave exit doesn't matter at this point, so lie
+            entrance_type = CrystalisEntranceTypeEnum.CAVE_ENTRANCE
+            entrance_house_key = ""
+            entrance_exit_key = CONDITIONAL_EXIT_KEYS[entrance]
+        if exit in entrances_data:
+            exit_house_key = entrances_data[exit].house_key
+            exit_exit_key = entrances_data[exit].exit_key
+        else:
+            exit_house_key = ""
+            exit_exit_key = CONDITIONAL_EXIT_KEYS[exit]
+        if options.shuffle_houses and entrance_type in HOUSE_SHUFFLE_TYPES:
+            if entrance_type % 2 == 0:
+                # even entrance types are actually exits, so we need to swap
+                entrance_house_key, exit_house_key = exit_house_key, entrance_house_key
+            # entrance_house_key is the outside, exit_house_key is the inside
+            house_connections[entrance_house_key] = exit_house_key
+        elif options.shuffle_areas and entrance_type in AREA_SHUFFLE_TYPES:
+            area_connections[entrance_exit_key] = exit_exit_key
+        else:
+            raise RuntimeError(f"ER Pairing data found in shuffle data without a supported ER type enabled. "
+                               f"Entrance: {entrance} Exit: {exit}")
+
+
     output: Dict[str, Any] = {
         "wall_map": wall_map,
         "key_item_names": key_item_names,
@@ -160,7 +209,9 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData) -> Dict[str, Any]:
         "shop_inventories": shop_inventories,
         "thunder_warp": thunder_warp,
         "wildwarps": shuffle_data.wildwarps,
-        "goa_floors": goa_floors
+        "goa_floors": goa_floors,
+        "house_connections": house_connections,
+        "area_connections": area_connections
     }
     return output
 
@@ -184,7 +235,7 @@ def generate_output(self, output_directory: str) -> None:
 
     flag_string: str = generate_flag_string(self.options)
     #need to convert shuffle_data to the format it will be consumed in
-    converted_data = convert_shuffle_data(self.shuffle_data)
+    converted_data = convert_shuffle_data(self.shuffle_data, self.options)
     lime_hint = generate_statue_hint(self)
     output_dict = {
         "seed": self.multiworld.seed_name,
