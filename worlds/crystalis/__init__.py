@@ -1,7 +1,7 @@
 from typing import Mapping, Any
 from dataclasses import asdict
 
-from BaseClasses import Tutorial, MultiWorld
+from BaseClasses import Tutorial, MultiWorld, Entrance
 from Utils import VersionException
 from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
 from .locations import CrystalisLocation, create_location_from_location_data
@@ -58,6 +58,11 @@ class CrystalisWorld(World):
     generate_basic = generate_basic
     write_spoiler_header = write_spoiler_header
     web = CrystalisWeb()
+    shared_icon_houses: List[Tuple[Entrance, Entrance]]
+    houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
+    tunnel_map: Dict[str, List[str]]
+    cave_entrances: List[Tuple[Entrance, Entrance]]
+    cave_exits: List[Tuple[Entrance, Entrance]]
 
     #this will get filled out later, while creating regions
     locations_data: List[CrystalisLocationData]
@@ -310,7 +315,7 @@ class CrystalisWorld(World):
                 "Goa Exit - Upstairs": "Karmine's Floor - Back"
             }
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
-                                                 thunder_warp, shop_inventories, wildwarps, goa_connection_map)
+                                                 thunder_warp, shop_inventories, wildwarps, goa_connection_map, {})
 
 
     def get_filler_item_name(self) -> str:
