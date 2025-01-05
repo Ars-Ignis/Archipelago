@@ -57,6 +57,7 @@ for key, value in items_data_json.items():
             if not item_data.community:
                 basic_bow_names.append(item_data.name)
 
+
 class CrystalisItem(Item):
     game: str = "Crystalis"
 
@@ -167,7 +168,6 @@ def create_items(self) -> None:
         items_created += 1
     locations_count = len([location for location in self.multiworld.get_locations(self.player)
                                if location.address is not None and location.item is None])
-
     if items_created < locations_count:
         logging.debug(f"Crystalis: Fewer items ({items_created}) than empty locations ({locations_count}).")
         logging.debug(f"Crystalis: creating {locations_count - items_created} extra Medical Herbs.")
@@ -178,14 +178,16 @@ def create_items(self) -> None:
             for i in range(locations_count - items_created):
                 self.multiworld.itempool.append(self.create_item("Medical Herb"))
     elif locations_count < items_created:
-        raise Exception(f" Too many items ({items_created}) for the number of available locations ({locations_count}).")
+        raise Exception(f"Too many items ({items_created}) for the number of available locations ({locations_count}).")
 
     if self.options.keep_unique_items_and_consumables_separate:
         # fill non-unique locations with non-unique items
         non_unique_locations: List[CrystalisLocation] = []
         for location_data in self.locations_data:
             if not location_data.unique and (not self.options.dont_shuffle_mimics or "Mimic" not in location_data.name):
-                non_unique_locations.append(self.get_location(location_data.name))
+                non_unique_location = self.get_location(location_data.name)
+                if non_unique_location.item is None:
+                    non_unique_locations.append(non_unique_location)
 
         self.random.shuffle(non_unique_items)
         # Dear Core Maintainers: if you are looking at this code in the future because you're trying to kill fast_fill,
