@@ -10,6 +10,11 @@
         "name": "Amazones - Exit",
         "entrance_type": 1,
         "vanilla_target": "Cordel Plains - River Blocked",
+        "exit_key": "1b00 edge:top",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -17,6 +22,11 @@
         "name": "Amazones - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Amazones Item Shop",
+        "exit_key": "1b00 door2",
+        "house_key": "Amazones - Item Shop",
+        "related_entrance": "Sahara - Item Shop",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -24,6 +34,11 @@
         "name": "Amazones - Inn",
         "entrance_type": 7,
         "vanilla_target": "Amazones Inn",
+        "exit_key": "1b00 door",
+        "house_key": "Amazones - Inn",
+        "related_entrance": "Sahara - Inn",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -31,6 +46,11 @@
         "name": "Amazones - Armor Shop",
         "entrance_type": 7,
         "vanilla_target": "Amazones Armor Shop",
+        "exit_key": "1b01 door",
+        "house_key": "Amazones - Armor Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -38,6 +58,11 @@
         "name": "Amazones - Aryllis's House",
         "entrance_type": 7,
         "vanilla_target": "Aryllis's House",
+        "exit_key": "1b01 door2",
+        "house_key": "Amazones - Elder",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "statue_skip || trigger_skip || Change || Paralysis",
         "notes": ""
       }
@@ -56,6 +81,11 @@
         "name": "Amazones Armor Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Amazones",
+        "exit_key": "d300 door",
+        "house_key": "Amazones - Armor Shop",
+        "related_entrance": "",
+        "house_type": "Armor",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -74,6 +104,11 @@
         "name": "Amazones Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Amazones",
+        "exit_key": "d100 door",
+        "house_key": "Amazones - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -92,6 +127,11 @@
         "name": "Amazones Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Amazones",
+        "exit_key": "d200 door",
+        "house_key": "Amazones - Item Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -110,6 +150,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - South Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -117,6 +162,11 @@
         "name": "Angry Sea - Beach House",
         "entrance_type": 15,
         "vanilla_target": "Beach House",
+        "exit_key": "6086 door",
+        "house_key": "Boat House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -133,6 +183,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - South Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -140,6 +195,11 @@
         "name": "Angry Sea - Exposed Cave",
         "entrance_type": 5,
         "vanilla_target": "Joel",
+        "exit_key": "6065 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -156,6 +216,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - Flooded Cave Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -163,6 +228,11 @@
         "name": "Angry Sea - Deep Cave",
         "entrance_type": 5,
         "vanilla_target": "Evil Spirit Island - Front",
+        "exit_key": "6802 stair:up",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -181,6 +251,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - South Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -188,6 +263,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - Flooded Cave Land",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -204,6 +284,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - North Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -211,6 +296,11 @@
         "name": "Angry Sea - Up",
         "entrance_type": 1,
         "vanilla_target": "Swan",
+        "exit_key": "6003 edge:top",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -227,6 +317,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - South Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -234,6 +329,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - North Land",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -250,6 +350,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Portoa Waterway - Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -257,6 +362,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - Cave Area",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -264,6 +374,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - Flooded Cave Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "trigger_skip || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -271,6 +386,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - North Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || ( (Shell Flute && can_use_shell_flute) && (Golden Statue || ghetto_flight))",
         "notes": ""
       }
@@ -301,6 +421,11 @@
         "name": "Aryllis's House - Exit",
         "entrance_type": 8,
         "vanilla_target": "Amazones",
+        "exit_key": "d400 edge:bottom",
+        "house_key": "Amazones - Elder",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -340,6 +465,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Portoa Waterway - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -369,6 +499,11 @@
         "name": "Beach House - Exit",
         "entrance_type": 16,
         "vanilla_target": "Angry Sea - Beach House Area",
+        "exit_key": "6100 edge:bottom",
+        "house_key": "Boat House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -396,6 +531,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Bow Passage - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Bow of Sun && Bow of Moon",
         "notes": ""
       },
@@ -403,6 +543,11 @@
         "name": "Bow Passage - Exit",
         "entrance_type": 11,
         "vanilla_target": "Crypt - Front",
+        "exit_key": "a030 crypt",
+        "house_key": "Crypt - Hall 1",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -421,6 +566,11 @@
         "name": "Bow Passage - Entrance",
         "entrance_type": 5,
         "vanilla_target": "Desert 2 - Past Crypt Whirlpools",
+        "exit_key": "a002 stair:up",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -428,6 +578,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Bow Passage - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Bow of Sun && Bow of Moon",
         "notes": ""
       }
@@ -446,6 +601,11 @@
         "name": "Brokahana's House - Exit",
         "entrance_type": 8,
         "vanilla_target": "Goa",
+        "exit_key": "bb00 edge:bottom",
+        "house_key": "Goa - House",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -475,6 +635,11 @@
         "name": "Brynmaer - Entrance",
         "entrance_type": 4,
         "vanilla_target": "Cordel Plains - Main",
+        "exit_key": "1802 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -482,6 +647,11 @@
         "name": "Brynmaer - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Brynmaer Item Shop",
+        "exit_key": "1802 door",
+        "house_key": "Brynmaer - Item Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -489,6 +659,11 @@
         "name": "Brynmaer - Armor Shop",
         "entrance_type": 7,
         "vanilla_target": "Brynmaer Armor Shop",
+        "exit_key": "1801 door",
+        "house_key": "Brynmaer - Armor Shop",
+        "related_entrance": "Swan - Armor Shop",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -496,6 +671,11 @@
         "name": "Brynmaer - Inn",
         "entrance_type": 7,
         "vanilla_target": "Brynmaer Inn",
+        "exit_key": "1801 door2",
+        "house_key": "Brynmaer - Inn",
+        "related_entrance": "Swan - Inn",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -503,6 +683,11 @@
         "name": "Brynmaer - Pawn Shop",
         "entrance_type": 7,
         "vanilla_target": "Brynmaer Pawn Shop",
+        "exit_key": "1800 door2",
+        "house_key": "Brynmaer - Pawn Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -510,6 +695,11 @@
         "name": "Brynmaer - Pub",
         "entrance_type": 7,
         "vanilla_target": "Brynmaer Pub",
+        "exit_key": "1800 door",
+        "house_key": "Brynmaer - Tavern",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -539,6 +729,11 @@
         "name": "Brynmaer Armor Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Brynmaer",
+        "exit_key": "c900 door",
+        "house_key": "Brynmaer - Armor Shop",
+        "related_entrance": "",
+        "house_type": "Armor",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -557,6 +752,11 @@
         "name": "Brynmaer Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Brynmaer",
+        "exit_key": "c800 door",
+        "house_key": "Brynmaer - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -575,6 +775,11 @@
         "name": "Brynmaer Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Brynmaer",
+        "exit_key": "cb00 door",
+        "house_key": "Brynmaer - Item Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -593,6 +798,11 @@
         "name": "Brynmaer Pawn Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Brynmaer",
+        "exit_key": "c700 door",
+        "house_key": "Brynmaer - Pawn Shop",
+        "related_entrance": "",
+        "house_type": "Pawn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -611,6 +821,11 @@
         "name": "Brynmaer Pub - Exit",
         "entrance_type": 8,
         "vanilla_target": "Brynmaer",
+        "exit_key": "c600 edge:bottom",
+        "house_key": "Brynmaer - Tavern",
+        "related_entrance": "",
+        "house_type": "Tavern",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -646,6 +861,11 @@
         "name": "Clark's Hideout - Exit",
         "entrance_type": 8,
         "vanilla_target": "Zombie Town",
+        "exit_key": "e800 edge:bottom",
+        "house_key": "Zombie Town - House",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -675,6 +895,11 @@
         "name": "Cordel Plains - North West Cave",
         "entrance_type": 5,
         "vanilla_target": "Sealed Cave - Exit",
+        "exit_key": "1430 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "Windmill Key && can_reach(Windmill)",
         "notes": "Will not have this rule in Wa"
       },
@@ -682,6 +907,11 @@
         "name": "Cordel Plains - West",
         "entrance_type": 3,
         "vanilla_target": "Brynmaer",
+        "exit_key": "1440 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -689,6 +919,11 @@
         "name": "Cordel Plains - South West",
         "entrance_type": 3,
         "vanilla_target": "Mt. Sabre West - Main",
+        "exit_key": "1470 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -696,6 +931,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Cordel Plains - River Blocked",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -703,6 +943,11 @@
         "name": "Cordel Plains - North West",
         "entrance_type": 1,
         "vanilla_target": "Tornel's House Exterior",
+        "exit_key": "1403 edge:top",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -710,6 +955,11 @@
         "name": "Cordel Plains - North East",
         "entrance_type": 1,
         "vanilla_target": "Mt. Sabre North - Pre-Trigger",
+        "exit_key": "1506 edge:top",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Teleport || (Flight && rabbit_skip) || (trigger_skip)",
         "notes": ""
       },
@@ -717,6 +967,11 @@
         "name": "Cordel Plains - East",
         "entrance_type": 4,
         "vanilla_target": "Swamp - Near Side",
+        "exit_key": "1537 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -744,6 +999,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Cordel Plains - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -751,6 +1011,11 @@
         "name": "Cordel Plains - South",
         "entrance_type": 2,
         "vanilla_target": "Amazones",
+        "exit_key": "1473 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -767,6 +1032,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Crypt - Middle",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -774,6 +1044,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Crypt - Pre-Draygon",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "Very explicitly no reverse entrance"
       }
@@ -793,6 +1068,11 @@
         "name": "Crypt - Entrance",
         "entrance_type": 12,
         "vanilla_target": "Bow Passage - Back",
+        "exit_key": "a141 stair:down",
+        "house_key": "Crypt - Hall 1",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -800,6 +1080,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Crypt - Middle",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -807,6 +1092,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Crypt - Left",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -825,6 +1115,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Crypt - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -855,6 +1150,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Crypt - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -862,6 +1162,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Crypt - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -891,6 +1196,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Tower",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Draygon 2)",
         "notes": ""
       }
@@ -909,6 +1219,11 @@
         "name": "Deo Valley - Cave",
         "entrance_type": 5,
         "vanilla_target": "Desert Transition Cave 1",
+        "exit_key": "9601 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -916,6 +1231,11 @@
         "name": "Deo Valley - Down",
         "entrance_type": 2,
         "vanilla_target": "Sahara",
+        "exit_key": "9611 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -945,6 +1265,11 @@
         "name": "Desert 1 - Up",
         "entrance_type": 1,
         "vanilla_target": "Goa Valley",
+        "exit_key": "9002 edge:top",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -952,6 +1277,11 @@
         "name": "Desert 1 - Oasis",
         "entrance_type": 5,
         "vanilla_target": "Oasis Cave - Front",
+        "exit_key": "9031 stair:up",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -959,6 +1289,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Desert 1 - Past Whirlpool",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       }
@@ -975,6 +1310,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Desert 1",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -982,6 +1322,11 @@
         "name": "Desert 1 - Whirlpool Cave",
         "entrance_type": 5,
         "vanilla_target": "Desert Transition Cave 1",
+        "exit_key": "9033 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1000,6 +1345,11 @@
         "name": "Desert 2 - Left Cave",
         "entrance_type": 5,
         "vanilla_target": "Desert Transition Cave 2",
+        "exit_key": "9841 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1007,6 +1357,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Desert 2 - Past Pyramid Whirlpools",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -1014,6 +1369,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Desert 2 - Past Crypt Whirlpools",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       }
@@ -1030,6 +1390,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Desert 2",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -1037,6 +1402,11 @@
         "name": "Desert 2 - Crypt Entrance",
         "entrance_type": 6,
         "vanilla_target": "Bow Passage - Front",
+        "exit_key": "9812 stair:down",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1053,6 +1423,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Desert 2",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -1060,6 +1435,11 @@
         "name": "Desert 2 - Pyramid Entrance",
         "entrance_type": 9,
         "vanilla_target": "Pyramid",
+        "exit_key": "9842 fortress",
+        "house_key": "Pyramid - Entrance",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1078,6 +1458,11 @@
         "name": "Desert Transition Cave 1 - Entrance",
         "entrance_type": 6,
         "vanilla_target": "Desert 1 - Past Whirlpool",
+        "exit_key": "9200 stair:down",
+        "house_key": "",
+        "related_entrance": "Desert Transition Cave 1 - Exit",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1085,6 +1470,11 @@
         "name": "Desert Transition Cave 1 - Exit",
         "entrance_type": 6,
         "vanilla_target": "Deo Valley",
+        "exit_key": "9222 stair:down",
+        "house_key": "",
+        "related_entrance": "Desert Transition Cave 1 - Entrance",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1103,6 +1493,11 @@
         "name": "Desert Transition Cave 2 - Entrance",
         "entrance_type": 6,
         "vanilla_target": "Sahara Cave Transition",
+        "exit_key": "9520 stair:down",
+        "house_key": "",
+        "related_entrance": "Desert Transition Cave 2 - Exit",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1110,6 +1505,11 @@
         "name": "Desert Transition Cave 2 - Exit",
         "entrance_type": 6,
         "vanilla_target": "Desert 2",
+        "exit_key": "9502 stair:down",
+        "house_key": "",
+        "related_entrance": "Desert Transition Cave 2 - Entrance",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1128,6 +1528,11 @@
         "name": "Evans' Room - Exit",
         "entrance_type": 8,
         "vanilla_target": "Portoa Palace - Foyer",
+        "exit_key": "de00 edge:bottom",
+        "house_key": "Portoa Palace - Left",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1144,6 +1549,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Evil Spirit Island - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -1151,6 +1561,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Evil Spirit Island - Upstairs",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Evil Spirit Island)",
         "notes": ""
       }
@@ -1177,9 +1592,14 @@
     "notes": "",
     "entrances": [
       {
-        "name": "Evil Spirit Island - Exit",
+        "name": "Evil Spirit Island - Entrance",
         "entrance_type": 6,
         "vanilla_target": "Angry Sea - Flooded Cave Land",
+        "exit_key": "6962 stair:down",
+        "house_key": "",
+        "related_entrance": "Evil Spirit Island - Exit",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1187,6 +1607,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Evil Spirit Island - Across River",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -1205,6 +1630,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Evil Spirit Island - Upstairs",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1244,6 +1674,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Evil Spirit Island - Across River",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1251,13 +1686,23 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Evil Spirit Island - Item Stash",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Evil Spirit Island)",
         "notes": ""
       },
       {
-        "name": "Evil Spirit Island - Back Exit",
+        "name": "Evil Spirit Island - Exit",
         "entrance_type": 6,
         "vanilla_target": "Zombie Town",
+        "exit_key": "6a43 stair:down",
+        "house_key": "",
+        "related_entrance": "Evil Spirit Island - Entrance",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1287,6 +1732,11 @@
         "name": "Fisherman House - Exit",
         "entrance_type": 16,
         "vanilla_target": "Fisherman House Area",
+        "exit_key": "d600 edge:bottom",
+        "house_key": "Portoa - Fisherman House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1305,6 +1755,11 @@
         "name": "Fisherman House Path",
         "entrance_type": 4,
         "vanilla_target": "Portoa",
+        "exit_key": "5100 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1312,6 +1767,11 @@
         "name": "Fisherman House Entrance",
         "entrance_type": 15,
         "vanilla_target": "Fisherman House",
+        "exit_key": "5100 door",
+        "house_key": "Portoa - Fisherman House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1319,6 +1779,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - Beach House Area",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman) && (!vanilla_dolphin || (can_reach(Mesia) && can_reach(Portoa Waterway - Main) && can_reach(Asina's Chambers) && Shell Flute))",
         "notes": "messy - clean up with events?"
       }
@@ -1343,6 +1808,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Fog Lamp Cave - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
         "notes": ""
       },
@@ -1350,6 +1820,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Fog Lamp Cave - Items",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
         "notes": ""
       }
@@ -1368,6 +1843,11 @@
         "name": "Fog Lamp Cave - Exit",
         "entrance_type": 6,
         "vanilla_target": "Waterfall Valley - By North River",
+        "exit_key": "4841 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1375,6 +1855,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Fog Lamp Cave - Behind Walls",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
         "notes": "\"Don't need to model each individual room of the place"
       }
@@ -1450,6 +1935,11 @@
         "name": "Fortune Teller - Exit",
         "entrance_type": 8,
         "vanilla_target": "Portoa",
+        "exit_key": "d800 edge:bottom",
+        "house_key": "Portoa - Fortune Teller",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1470,6 +1960,11 @@
         "name": "GBC Cave Entrance",
         "entrance_type": 6,
         "vanilla_target": "Wind Valley",
+        "exit_key": "b40 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "Only exists if Vm and V!m are both off."
       },
@@ -1477,6 +1972,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "GBC Cave - Past Block",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(GBC Cave)",
         "notes": "Only exists if Vm and V!m are both off."
       }
@@ -1514,6 +2014,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "GBC Cave - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(GBC Cave)",
         "notes": "Only exists if Vm and V!m are both off."
       }
@@ -1532,6 +2037,11 @@
         "name": "Goa - Exit",
         "entrance_type": 12,
         "vanilla_target": "Goa Valley",
+        "exit_key": "8e10 edge:bottom",
+        "house_key": "Goa",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       },
@@ -1539,6 +2049,11 @@
         "name": "Goa - Inn",
         "entrance_type": 7,
         "vanilla_target": "Goa Inn",
+        "exit_key": "8e10 door",
+        "house_key": "Goa - Inn",
+        "related_entrance": "Leaf - Inn",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_reach(Shyron) || statue_skip",
         "notes": ""
       },
@@ -1546,6 +2061,11 @@
         "name": "Goa - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Goa Item Shop",
+        "exit_key": "8e11 door",
+        "house_key": "Goa - Tool Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_reach(Shyron) || statue_skip",
         "notes": ""
       },
@@ -1553,6 +2073,11 @@
         "name": "Goa - Pub",
         "entrance_type": 7,
         "vanilla_target": "Goa Pub",
+        "exit_key": "8e00 door",
+        "house_key": "Goa - Tavern",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1560,6 +2085,11 @@
         "name": "Goa - Brokahana's House",
         "entrance_type": 7,
         "vanilla_target": "Brokahana's House",
+        "exit_key": "8e01 door",
+        "house_key": "Goa - House",
+        "related_entrance": "Leaf - Zebu Student's House",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1567,6 +2097,11 @@
         "name": "Goa - Fortress Entrance",
         "entrance_type": 9,
         "vanilla_target": "Goa Entrance - Front",
+        "exit_key": "8e01 edge:top",
+        "house_key": "Goa Fortress - Entrance",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1583,6 +2118,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Goa Entrance - Massacre Trigger",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Goa Entrance Wall)",
         "notes": ""
       },
@@ -1590,6 +2130,11 @@
         "name": "Goa Entrance - Stairs",
         "entrance_type": 17,
         "vanilla_target": "Kelbesque's Floor - Front",
+        "exit_key": "a800 edge:top",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1608,6 +2153,11 @@
         "name": "Goa Entrance - Exit",
         "entrance_type": 10,
         "vanilla_target": "Goa",
+        "exit_key": "a820 stair:down",
+        "house_key": "Goa Fortress - Entrance",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1615,6 +2165,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Goa Entrance - Massacre Trigger",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       }
@@ -1631,6 +2186,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Goa Entrance - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       },
@@ -1638,6 +2198,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Goa Entrance - Behind Wall",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Goa Entrance Wall)",
         "notes": ""
       }
@@ -1656,13 +2221,23 @@
         "name": "Goa Exit - Upstairs",
         "entrance_type": 17,
         "vanilla_target": "Karmine's Floor - Back",
+        "exit_key": "b701 stair:up",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
       {
         "name": "Goa Exit - Downstairs",
-        "entrance_type": 10,
+        "entrance_type": 12,
         "vanilla_target": "Oasis Cave - Past Purple Pain",
+        "exit_key": "b731 stair:down",
+        "house_key": "Goa Fortress - Exit",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       }
@@ -1681,6 +2256,11 @@
         "name": "Goa Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Goa",
+        "exit_key": "bc00 door",
+        "house_key": "Goa - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1699,6 +2279,11 @@
         "name": "Goa Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Goa",
+        "exit_key": "be00 door",
+        "house_key": "Goa - Tool Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1717,6 +2302,11 @@
         "name": "Goa Pub - Exit",
         "entrance_type": 8,
         "vanilla_target": "Goa",
+        "exit_key": "bf00 edge:bottom",
+        "house_key": "Goa - Tavern",
+        "related_entrance": "",
+        "house_type": "Tavern",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1735,6 +2325,11 @@
         "name": "Goa Valley - Right",
         "entrance_type": 4,
         "vanilla_target": "Guard Checkpoint - North",
+        "exit_key": "7834 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1742,6 +2337,11 @@
         "name": "Goa Valley - Left",
         "entrance_type": 3,
         "vanilla_target": "Mt. Hydra - Lower",
+        "exit_key": "7830 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1749,6 +2349,11 @@
         "name": "Goa Valley - Down",
         "entrance_type": 2,
         "vanilla_target": "Desert 1",
+        "exit_key": "7842 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1756,6 +2361,11 @@
         "name": "Goa Valley - Palace",
         "entrance_type": 11,
         "vanilla_target": "Goa",
+        "exit_key": "7813 fortress",
+        "house_key": "Goa",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       }
@@ -1772,6 +2382,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Guard Checkpoint - South",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Change",
         "notes": ""
       },
@@ -1779,6 +2394,11 @@
         "name": "Checkpoint North Exit",
         "entrance_type": 3,
         "vanilla_target": "Goa Valley",
+        "exit_key": "7300 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1797,6 +2417,11 @@
         "name": "Checkpoint South Exit",
         "entrance_type": 4,
         "vanilla_target": "Swan",
+        "exit_key": "7300 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1804,6 +2429,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Guard Checkpoint - North",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Change",
         "notes": ""
       }
@@ -1822,6 +2452,11 @@
         "name": "Exploding Cave - Cave",
         "entrance_type": 5,
         "vanilla_target": "Mezame Shrine",
+        "exit_key": "100 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "\"\"\"Hey!! There's a guy coming out of the cave!\"\"\""
       },
@@ -1829,6 +2464,11 @@
         "name": "Exploding Cave - Left",
         "entrance_type": 3,
         "vanilla_target": "Leaf",
+        "exit_key": "100 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1847,6 +2487,11 @@
         "name": "Joel - Exit",
         "entrance_type": 6,
         "vanilla_target": "Angry Sea - Cave Area",
+        "exit_key": "7110 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1854,6 +2499,11 @@
         "name": "Joel - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Joel Item Shop",
+        "exit_key": "7101 door",
+        "house_key": "Joel - Tool Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1861,13 +2511,23 @@
         "name": "Joel - Inn",
         "entrance_type": 7,
         "vanilla_target": "Joel Inn",
+        "exit_key": "7110 door",
+        "house_key": "Joel - Inn",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
       {
-        "name": "Joel - Elder House",
+        "name": "Joel - Elder's House",
         "entrance_type": 7,
         "vanilla_target": "Joel Elder House",
+        "exit_key": "7100 door2",
+        "house_key": "Joel - Elder House",
+        "related_entrance": "Leaf - Elder's House",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1875,6 +2535,11 @@
         "name": "Joel - Shed",
         "entrance_type": 13,
         "vanilla_target": "Joel Shed",
+        "exit_key": "7100 door",
+        "house_key": "Joel - Shed",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1893,6 +2558,11 @@
         "name": "Joel Elder House - Exit",
         "entrance_type": 8,
         "vanilla_target": "Joel",
+        "exit_key": "e300 edge:bottom",
+        "house_key": "Joel - Elder House",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1911,6 +2581,11 @@
         "name": "Joel Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Joel",
+        "exit_key": "e700 door",
+        "house_key": "Joel - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1929,6 +2604,11 @@
         "name": "Joel Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Joel",
+        "exit_key": "e500 door",
+        "house_key": "Joel - Tool Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1947,6 +2627,11 @@
         "name": "Joel Shed - Exit",
         "entrance_type": 14,
         "vanilla_target": "Joel",
+        "exit_key": "e400 edge:bottom",
+        "house_key": "Joel - Shed",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1954,6 +2639,11 @@
         "name": "Joel Shed - Secret Passage",
         "entrance_type": 5,
         "vanilla_target": "Lighthouse Tunnel",
+        "exit_key": "e400 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Eyeglasses",
         "notes": ""
       }
@@ -1973,6 +2663,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Karmine's Floor - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Karmine)",
         "notes": ""
       },
@@ -1980,6 +2675,11 @@
         "name": "Karmine's Floor - Exit",
         "entrance_type": 17,
         "vanilla_target": "Goa Exit",
+        "exit_key": "ba02 stair:down",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1987,6 +2687,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Karmine's Floor - Pre-Boss Gauntlet",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -1994,6 +2699,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Karmine's Floor - Item Stash",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -2021,6 +2731,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Karmine's Floor - Pre-Boss Gauntlet",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       },
@@ -2028,6 +2743,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Karmine's Floor - Post-Boss",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Karmine)",
         "notes": "Reverse connection unnecessary"
       }
@@ -2050,6 +2770,11 @@
         "name": "Karmine's Floor - Entrance",
         "entrance_type": 17,
         "vanilla_target": "Mado's Floor - Back",
+        "exit_key": "b030 stair:down",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2057,6 +2782,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Karmine's Floor - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Karmine)",
         "notes": ""
       }
@@ -2163,6 +2893,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Karmine's Floor - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -2170,6 +2905,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Karmine's Floor - Boss Arena",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       }
@@ -2188,6 +2928,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Kelbesque's Floor - Boss Arena",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Kelbesque 2)",
         "notes": ""
       },
@@ -2195,6 +2940,11 @@
         "name": "Kelbesque's Floor - Exit",
         "entrance_type": 17,
         "vanilla_target": "Sabera's Floor - Front",
+        "exit_key": "aa00 stair:up",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2211,6 +2961,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Kelbesque's Floor - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2218,6 +2973,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Kelbesque's Floor - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2247,6 +3007,11 @@
         "name": "Kelbesque's Floor - Entrance",
         "entrance_type": 17,
         "vanilla_target": "Goa Entrance - Behind Wall",
+        "exit_key": "a983 stair:down",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2254,6 +3019,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Kelbesque's Floor - Boss Arena",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Kelbesque 2)",
         "notes": ""
       }
@@ -2270,13 +3040,23 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Kirisa Plant Cave - Middle",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
         "notes": ""
       },
       {
-        "name": "Kirisa Plant Cave - Back Exit",
+        "name": "Kirisa Plant Cave - Exit",
         "entrance_type": 6,
         "vanilla_target": "Kirisa Plant Meadow",
+        "exit_key": "4632 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Kirisa Plant Cave - Entrance",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2292,9 +3072,14 @@
     "notes": "",
     "entrances": [
       {
-        "name": "Kirisa Plant Cave - Exit",
+        "name": "Kirisa Plant Cave - Entrance",
         "entrance_type": 6,
         "vanilla_target": "Waterfall Valley - By South River",
+        "exit_key": "4431 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Kirisa Plant Cave - Exit",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2302,6 +3087,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Kirisa Plant Cave - Middle",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
         "notes": ""
       }
@@ -2321,6 +3111,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Kirisa Plant Cave - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
         "notes": ""
       },
@@ -2328,6 +3123,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Kirisa Plant Cave - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
         "notes": ""
       }
@@ -2357,6 +3157,11 @@
         "name": "Kirisa Plant Meadow - Exit",
         "entrance_type": 5,
         "vanilla_target": "Kirisa Plant Cave - Back",
+        "exit_key": "4710 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2386,6 +3191,11 @@
         "name": "Leaf - Right",
         "entrance_type": 4,
         "vanilla_target": "Initial Cutscene Area",
+        "exit_key": "211 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2393,6 +3203,11 @@
         "name": "Leaf - Up",
         "entrance_type": 1,
         "vanilla_target": "Wind Valley",
+        "exit_key": "201 edge:top",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2400,6 +3215,11 @@
         "name": "Leaf - Elder's House",
         "entrance_type": 7,
         "vanilla_target": "Leaf Elder's House",
+        "exit_key": "200 door2",
+        "house_key": "Leaf - Elder House",
+        "related_entrance": "Joel - Elder's House",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2407,6 +3227,11 @@
         "name": "Leaf - Zebu Student's House",
         "entrance_type": 7,
         "vanilla_target": "Zebu Student's House",
+        "exit_key": "201 door",
+        "house_key": "Leaf - Student House",
+        "related_entrance": "Goa - Brokahana's House",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2414,6 +3239,11 @@
         "name": "Leaf - Armor Shop",
         "entrance_type": 7,
         "vanilla_target": "Leaf Armor Shop",
+        "exit_key": "210 door2",
+        "house_key": "Leaf - Armor Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2421,6 +3251,11 @@
         "name": "Leaf - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Leaf Item Shop",
+        "exit_key": "210 door",
+        "house_key": "Leaf - Tool Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2428,6 +3263,11 @@
         "name": "Leaf - Inn",
         "entrance_type": 7,
         "vanilla_target": "Leaf Inn",
+        "exit_key": "211 door",
+        "house_key": "Leaf - Inn",
+        "related_entrance": "Goa - Inn",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2435,6 +3275,11 @@
         "name": "Leaf Shed",
         "entrance_type": 13,
         "vanilla_target": "Leaf Shed",
+        "exit_key": "200 door",
+        "house_key": "Leaf - Rabbit Hut",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2453,6 +3298,11 @@
         "name": "Leaf Armor Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Leaf",
+        "exit_key": "c400 door",
+        "house_key": "Leaf - Armor Shop",
+        "related_entrance": "",
+        "house_type": "Armor",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2471,6 +3321,11 @@
         "name": "Leaf Elder's House - Exit",
         "entrance_type": 8,
         "vanilla_target": "Leaf",
+        "exit_key": "c000 edge:bottom",
+        "house_key": "Leaf - Elder House",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2500,6 +3355,11 @@
         "name": "Leaf Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Leaf",
+        "exit_key": "c200 door",
+        "house_key": "Leaf - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2518,6 +3378,11 @@
         "name": "Leaf Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Leaf",
+        "exit_key": "c300 door",
+        "house_key": "Leaf - Tool Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2536,6 +3401,11 @@
         "name": "Leaf Shed - Exit",
         "entrance_type": 14,
         "vanilla_target": "Leaf",
+        "exit_key": "c100 edge:bottom",
+        "house_key": "Leaf - Rabbit Hut",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2554,6 +3424,11 @@
         "name": "Lighthouse - Exit",
         "entrance_type": 16,
         "vanilla_target": "Lighthouse Area",
+        "exit_key": "6200 edge:bottom",
+        "house_key": "Joel Lighthouse",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2581,6 +3456,11 @@
         "name": "Lighthouse Area Cave",
         "entrance_type": 5,
         "vanilla_target": "Lighthouse Tunnel",
+        "exit_key": "6064 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2588,6 +3468,11 @@
         "name": "Lighthouse Entrance",
         "entrance_type": 15,
         "vanilla_target": "Lighthouse",
+        "exit_key": "6064 door",
+        "house_key": "Joel Lighthouse",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2606,6 +3491,11 @@
         "name": "Lighthouse Tunnel - Entrance",
         "entrance_type": 6,
         "vanilla_target": "Joel Shed",
+        "exit_key": "7001 stair:down",
+        "house_key": "",
+        "related_entrance": "Lighthouse Tunnel - Exit",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2613,6 +3503,11 @@
         "name": "Lighthouse Tunnel - Exit",
         "entrance_type": 6,
         "vanilla_target": "Lighthouse Area",
+        "exit_key": "7010 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Lighthouse Tunnel - Entrance",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2631,6 +3526,11 @@
         "name": "Lime Valley - Right",
         "entrance_type": 4,
         "vanilla_target": "Waterfall Valley - Main",
+        "exit_key": "4212 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2638,6 +3538,11 @@
         "name": "Lime Valley - Up",
         "entrance_type": 1,
         "vanilla_target": "Rage - South",
+        "exit_key": "4201 edge:top",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2654,6 +3559,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mado's Floor - Boss Arena",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Mado 2)",
         "notes": ""
       },
@@ -2661,6 +3571,11 @@
         "name": "Mado's Floor - Exit",
         "entrance_type": 17,
         "vanilla_target": "Karmine's Floor - Front",
+        "exit_key": "b900 stair:up",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2677,6 +3592,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mado's Floor - Upstairs Right",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2684,6 +3604,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mado's Floor - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2713,6 +3638,11 @@
         "name": "Mado's Floor - Entrance",
         "entrance_type": 17,
         "vanilla_target": "Sabera's Floor - Back",
+        "exit_key": "ad72 stair:down",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2720,6 +3650,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mado's Floor - Upstairs Left",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -2727,6 +3662,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mado's Floor - Upstairs Right",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -2734,6 +3674,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mado's Floor - Spike Items",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -2781,6 +3726,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mado's Floor - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2821,6 +3771,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mado's Floor - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2828,6 +3783,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mado's Floor - Boss Arena",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Mado 2)",
         "notes": ""
       }
@@ -2857,6 +3817,11 @@
         "name": "Mesia - Exit",
         "entrance_type": 6,
         "vanilla_target": "Rage - North",
+        "exit_key": "5200 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2875,6 +3840,11 @@
         "name": "Mezame Exit",
         "entrance_type": 6,
         "vanilla_target": "Initial Cutscene Area",
+        "exit_key": "0 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "Starting region."
       }
@@ -2915,6 +3885,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Hydra - Lower",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -2922,6 +3897,11 @@
         "name": "Mt. Hydra - Guardpost",
         "entrance_type": 11,
         "vanilla_target": "Shyron",
+        "exit_key": "7e00 gate",
+        "house_key": "Shyron",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Change || statue_skip || can_reach(Shyron) || (can_reach(Goa Entrance - Massacre Trigger) && can_reach(Shyron Temple) && Sword of Thunder))",
         "notes": "\"Need to check trigger skip and Paralysis; entrance only shuffled in Wa"
       }
@@ -2941,6 +3921,11 @@
         "name": "Mt. Hydra - Exit",
         "entrance_type": 4,
         "vanilla_target": "Goa Valley",
+        "exit_key": "7c75 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2948,6 +3933,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Hydra - Guarded Palace",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -2955,6 +3945,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Hydra - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -2984,6 +3979,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Hydra - Wide Cave",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Hydra)",
         "notes": ""
       }
@@ -3028,6 +4028,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Hydra - Lower",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -3035,6 +4040,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Hydra - Wide Cave",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Hydra)",
         "notes": ""
       },
@@ -3042,6 +4052,11 @@
         "name": "Mt. Hydra - Palace",
         "entrance_type": 9,
         "vanilla_target": "Stxy - Front",
+        "exit_key": "7c10 gate",
+        "house_key": "Styx 1",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Key to Stxy",
         "notes": ""
       }
@@ -3081,6 +4096,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Hydra - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Hydra)",
         "notes": ""
       },
@@ -3088,6 +4108,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Hydra - Summit",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Hydra)",
         "notes": ""
       }
@@ -3104,6 +4129,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Pre-Boss",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3111,6 +4141,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Elder's Cell",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Prison Key",
         "notes": ""
       }
@@ -3140,6 +4175,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Boss Arena",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Kelbesque 1)",
         "notes": ""
       },
@@ -3147,6 +4187,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Final",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -3154,6 +4199,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Rescue Reward",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_reach(Mt. Sabre North - Boss) && can_fight(Kelbesque 1)",
         "notes": ""
       }
@@ -3170,6 +4220,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Elder's Cell",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -3177,6 +4232,11 @@
         "name": "Mt. Sabre North - Exit",
         "entrance_type": 6,
         "vanilla_target": "Waterfall Valley - By Prison",
+        "exit_key": "3522 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "Reverse entrance needs Prison Key in Wa"
       },
@@ -3184,6 +4244,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Rescue Reward",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_reach(Mt. Sabre North - Boss) && can_fight(Kelbesque 1)",
         "notes": ""
       }
@@ -3203,6 +4268,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3232,6 +4302,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -3239,6 +4314,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Prison Key",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
@@ -3260,6 +4340,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Pre-Trigger",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3267,6 +4352,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Nadare's",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3274,6 +4364,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Mt. Sabre North)",
         "notes": "I'm not putting this into logic with Trigger Skip. You're welcome."
       },
@@ -3281,6 +4376,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Interior",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": "Reverse entrance unnecessary - can get from interior to main via upper without breaking any walls."
       }
@@ -3311,6 +4411,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3318,6 +4423,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Boss Arena",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Kelbesque 1)",
         "notes": ""
       }
@@ -3336,6 +4446,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "rabbit_skip || trigger_skip || (Telepathy && can_reach(Leaf Shed) && can_reach(Leaf Elder House) && can_reach(Zebu's Cave - Back) && can_reach(Zebu Student's House))",
         "notes": "TODO: investigate if talking to Zebu in Zebu's Cave is also necessary"
       },
@@ -3343,6 +4458,11 @@
         "name": "Mt. Sabre North - Entrance",
         "entrance_type": 2,
         "vanilla_target": "Cordel Plains - Main",
+        "exit_key": "2877 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3361,6 +4481,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Left Jail Cell",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
@@ -3409,6 +4534,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -3416,6 +4546,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Pre-Boss",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
@@ -3436,6 +4571,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "Wheeeeee!"
       },
@@ -3443,6 +4583,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Interior",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Rabbit Boots || Speed Boots || trigger_skip || can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -3450,6 +4595,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Left Jail Cell",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -3457,6 +4607,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Pre-Boss",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || trigger_skip",
         "notes": ""
       },
@@ -3464,6 +4619,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Right Jail Cell",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
@@ -3511,6 +4671,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       },
@@ -3518,6 +4683,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       }
@@ -3548,6 +4718,11 @@
         "name": "Mt. Sabre West - Main Exit",
         "entrance_type": 4,
         "vanilla_target": "Cordel Plains - Main",
+        "exit_key": "2045 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3555,6 +4730,11 @@
         "name": "Mt. Sabre West - Cave",
         "entrance_type": 5,
         "vanilla_target": "Zebu's Cave - Back",
+        "exit_key": "2035 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3562,6 +4742,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Tornado Cave",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Rabbit Boots || Speed Boots || trigger_skip",
         "notes": ""
       },
@@ -3569,6 +4754,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -3576,6 +4766,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Interior",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       }
@@ -3605,6 +4800,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3637,6 +4837,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Interior",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       },
@@ -3644,6 +4849,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Final",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       },
@@ -3651,6 +4861,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre West - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3669,6 +4884,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Mt. Sabre North - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3676,6 +4896,11 @@
         "name": "Nadare's - Inn",
         "entrance_type": 7,
         "vanilla_target": "Nadare's Inn",
+        "exit_key": "d500 door",
+        "house_key": "Nadare - Inn",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3683,6 +4908,11 @@
         "name": "Nadare's - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Nadare's Item Shop",
+        "exit_key": "d500 door2",
+        "house_key": "Nadare - Tool Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3690,6 +4920,11 @@
         "name": "Nadare's - Back Room",
         "entrance_type": 7,
         "vanilla_target": "Nadare's Back Room",
+        "exit_key": "d500 door3",
+        "house_key": "Nadare - Back Room",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3708,6 +4943,11 @@
         "name": "Nadare's Back Room - Exit",
         "entrance_type": 8,
         "vanilla_target": "Nadare's",
+        "exit_key": "3e00 edge:bottom",
+        "house_key": "Nadare - Back Room",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3726,6 +4966,11 @@
         "name": "Nadare's Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Nadare's",
+        "exit_key": "3c00 door",
+        "house_key": "Nadare - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3744,6 +4989,11 @@
         "name": "Nadare's Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Nadare's",
+        "exit_key": "3d00 door",
+        "house_key": "Nadare - Tool Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3762,6 +5012,11 @@
         "name": "Oak - Exit",
         "entrance_type": 6,
         "vanilla_target": "Swamp - Far Side",
+        "exit_key": "1c11 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3769,6 +5024,11 @@
         "name": "Oak - Mom House",
         "entrance_type": 7,
         "vanilla_target": "Oak Mom House",
+        "exit_key": "1c10 door",
+        "house_key": "Oak - Mother House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3776,6 +5036,11 @@
         "name": "Oak - Elder House",
         "entrance_type": 7,
         "vanilla_target": "Oak Elder House",
+        "exit_key": "1c01 door",
+        "house_key": "Oak - Elder House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3783,6 +5048,11 @@
         "name": "Oak - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Oak Item Shop",
+        "exit_key": "1c00 door",
+        "house_key": "Oak - Tool Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "statue_skip || (Telepathy && can_reach(Oak Mom House) && can_reach(Swamp - Interior))",
         "notes": ""
       },
@@ -3790,6 +5060,11 @@
         "name": "Oak - Inn",
         "entrance_type": 7,
         "vanilla_target": "Oak Inn",
+        "exit_key": "1c11 door",
+        "house_key": "Oak - Inn",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "statue_skip || (Telepathy && can_reach(Oak Mom House) && can_reach(Swamp - Interior))",
         "notes": ""
       }
@@ -3808,6 +5083,11 @@
         "name": "Oak Elder House - Exit",
         "entrance_type": 8,
         "vanilla_target": "Oak",
+        "exit_key": "cd00 edge:bottom",
+        "house_key": "Oak - Elder House",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3837,6 +5117,11 @@
         "name": "Oak Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Oak",
+        "exit_key": "d000 door",
+        "house_key": "Oak - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3855,6 +5140,11 @@
         "name": "Oak Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Oak",
+        "exit_key": "cf00 door",
+        "house_key": "Oak - Tool Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3873,6 +5163,11 @@
         "name": "Oak Mom House - Exit",
         "entrance_type": 8,
         "vanilla_target": "Oak",
+        "exit_key": "ce00 edge:bottom",
+        "house_key": "Oak - Mother House",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3900,6 +5195,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Oasis Cave - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -3907,6 +5207,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Oasis Cave - Past Purple Pain",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -3934,6 +5239,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Oasis Cave - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -3941,6 +5251,11 @@
         "name": "Oasis Cave - Deeper Cave",
         "entrance_type": 5,
         "vanilla_target": "Power Ring Basement",
+        "exit_key": "9164 stair:up",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3959,6 +5274,11 @@
         "name": "Oasis Cave - Entrance",
         "entrance_type": 6,
         "vanilla_target": "Desert 1",
+        "exit_key": "b891 stair:down",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3966,6 +5286,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Oasis Cave - Across the River",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -3973,6 +5298,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Oasis Cave - By Deep Entrance",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -4022,13 +5352,23 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Oasis Cave - Across the River",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
       {
         "name": "Oasis Cave - Palace Entrance",
-        "entrance_type": 9,
+        "entrance_type": 11,
         "vanilla_target": "Goa Exit",
+        "exit_key": "b803 stair:up",
+        "house_key": "Goa Fortress - Exit",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       }
@@ -4047,6 +5387,11 @@
         "name": "Portoa - Entrance",
         "entrance_type": 4,
         "vanilla_target": "Waterfall Valley - Main",
+        "exit_key": "5011 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4054,6 +5399,11 @@
         "name": "Portoa - Docks",
         "entrance_type": 3,
         "vanilla_target": "Fisherman House Area",
+        "exit_key": "5010 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4061,6 +5411,11 @@
         "name": "Portoa - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Portoa Item Shop",
+        "exit_key": "5011 door",
+        "house_key": "Portoa - Tool Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4068,6 +5423,11 @@
         "name": "Portoa - Inn",
         "entrance_type": 7,
         "vanilla_target": "Portoa Inn",
+        "exit_key": "5011 door2",
+        "house_key": "Portoa - Inn",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4075,6 +5435,11 @@
         "name": "Portoa - Armor Shop",
         "entrance_type": 7,
         "vanilla_target": "Portoa Armor Shop",
+        "exit_key": "5010 door",
+        "house_key": "Portoa - Armor Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4082,6 +5447,11 @@
         "name": "Portoa - Pawn Shop",
         "entrance_type": 7,
         "vanilla_target": "Portoa Pawn Shop",
+        "exit_key": "5001 door2",
+        "house_key": "Portoa - Pawn Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4089,6 +5459,11 @@
         "name": "Portoa - Fortune Teller",
         "entrance_type": 7,
         "vanilla_target": "Fortune Teller - Front",
+        "exit_key": "5001 door",
+        "house_key": "Portoa - Fortune Teller",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4096,6 +5471,11 @@
         "name": "Portoa - Palace",
         "entrance_type": 9,
         "vanilla_target": "Portoa Palace - Foyer",
+        "exit_key": "5000 fortress",
+        "house_key": "Portoa - Palace Entrance",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4114,6 +5494,11 @@
         "name": "Portoa Armor Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Portoa",
+        "exit_key": "da00 door",
+        "house_key": "Portoa - Armor Shop",
+        "related_entrance": "",
+        "house_type": "Armor",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4132,6 +5517,11 @@
         "name": "Portoa Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Portoa",
+        "exit_key": "dc00 door",
+        "house_key": "Portoa - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4150,6 +5540,11 @@
         "name": "Portoa Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Portoa",
+        "exit_key": "dd00 door",
+        "house_key": "Portoa - Tool Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4168,6 +5563,11 @@
         "name": "Portoa Palace - Exit",
         "entrance_type": 10,
         "vanilla_target": "Portoa",
+        "exit_key": "d700 edge:bottom",
+        "house_key": "Portoa - Palace Entrance",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4175,6 +5575,11 @@
         "name": "Portoa Palace Left House",
         "entrance_type": 7,
         "vanilla_target": "Evans' Room",
+        "exit_key": "d700 door2",
+        "house_key": "Portoa Palace - Left",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4182,6 +5587,11 @@
         "name": "Portoa Palace Right House",
         "entrance_type": 7,
         "vanilla_target": "Servant Chambers",
+        "exit_key": "d700 door3",
+        "house_key": "Portoa Palace - Right",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4189,6 +5599,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Portoa Palace - Throne Room",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "statue_skip || trigger_skip || can_reach(Mesia) || Paralysis || can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)",
         "notes": ""
       }
@@ -4205,6 +5620,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Portoa Palace - Throne Room",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4212,6 +5632,11 @@
         "name": "Portoa Palace Throne Room Secret",
         "entrance_type": 5,
         "vanilla_target": "Portoa Waterway - Main",
+        "exit_key": "df00 door",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4230,6 +5655,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Portoa Palace - Foyer",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4237,6 +5667,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Portoa Palace - Gift Trigger",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Paralysis || statue_skip || can_reach(Mesia) || trigger_skip",
         "notes": ""
       }
@@ -4266,6 +5701,11 @@
         "name": "Portoa Pawn Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Portoa",
+        "exit_key": "d900 door",
+        "house_key": "Portoa - Pawn Shop",
+        "related_entrance": "",
+        "house_type": "Pawn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4282,6 +5722,11 @@
         "name": "Portoa Waterway - Exit",
         "entrance_type": 6,
         "vanilla_target": "Portoa Palace - Gift Trigger",
+        "exit_key": "6421 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Portoa Waterway - To Ocean",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4289,6 +5734,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Asina's Chambers",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -4296,6 +5746,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Fortune Teller - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -4303,6 +5758,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Portoa Waterway - Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || (can_use_shell_flute)",
         "notes": "can_use_shell_flute is complicated; might be worth turning into an event"
       }
@@ -4332,13 +5792,23 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Portoa Waterway - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
       {
-        "name": "",
+        "name": "Portoa Waterway - To Ocean",
         "entrance_type": 0,
         "vanilla_target": "Angry Sea - South Water",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4368,6 +5838,11 @@
         "name": "Power Ring Basement - Exit",
         "entrance_type": 6,
         "vanilla_target": "Oasis Cave - By Deep Entrance",
+        "exit_key": "8f20 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4400,6 +5875,11 @@
         "name": "Pyramid - Exit",
         "entrance_type": 10,
         "vanilla_target": "Desert 2 - Past Pyramid Whirlpools",
+        "exit_key": "9c10 stair:down",
+        "house_key": "Pyramid - Entrance",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4407,6 +5887,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Pyramid - Post-Draygon",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Draygon 1)",
         "notes": "Just used to group the two rewards from the Draygon fight."
       }
@@ -4463,6 +5948,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Rage - South",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4470,6 +5960,11 @@
         "name": "Rage Tree",
         "entrance_type": 5,
         "vanilla_target": "Mesia",
+        "exit_key": "4300 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4488,6 +5983,11 @@
         "name": "Rage Entrance",
         "entrance_type": 2,
         "vanilla_target": "Lime Valley",
+        "exit_key": "4300 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4495,6 +5995,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Rage - North",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "(trade_in(Rage) || rage_skip*) && (Flight || can_break_wall(Water))",
         "notes": "\"Actually forcing Rage skip into logic might be tough? Need to note entrance to Rage in output file"
       }
@@ -4522,6 +6027,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Floor - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -4529,6 +6039,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Floor - Pre-Boss",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Sabera Boss)",
         "notes": ""
       }
@@ -4545,6 +6060,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Floor - Boss Arena",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Sabera 2)",
         "notes": ""
       },
@@ -4552,6 +6072,11 @@
         "name": "Sabera's Floor - Exit",
         "entrance_type": 17,
         "vanilla_target": "Mado's Floor - Front",
+        "exit_key": "ac00 stair:up",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4568,6 +6093,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Floor - Pre-Boss",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4575,6 +6105,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Floor - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4604,6 +6139,11 @@
         "name": "Sabera's Floor - Entrance",
         "entrance_type": 17,
         "vanilla_target": "Kelbesque's Floor - Back",
+        "exit_key": "ab81 stair:down",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4611,6 +6151,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Floor - Across Rivers",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -4618,6 +6163,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Floor - River Items",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -4647,6 +6197,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Floor - Across Rivers",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Sabera Boss)",
         "notes": ""
       },
@@ -4654,6 +6209,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Floor - Boss Arena",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Sabera 2)",
         "notes": ""
       }
@@ -4702,6 +6262,11 @@
         "name": "Sabera's Fortress - Exit",
         "entrance_type": 10,
         "vanilla_target": "Zombie Town",
+        "exit_key": "6c62 stair:down",
+        "house_key": "Sabera Palace 1",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4709,6 +6274,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Fortress - Upstairs",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Vampire 2)",
         "notes": ""
       }
@@ -4768,6 +6338,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Fortress - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4775,6 +6350,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sabera's Fortress - Post-Boss",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Sabera 1)",
         "notes": ""
       }
@@ -4804,6 +6384,11 @@
         "name": "Sahara - Up",
         "entrance_type": 1,
         "vanilla_target": "Deo Valley",
+        "exit_key": "9300 edge:top",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4811,6 +6396,11 @@
         "name": "Sahara - Right",
         "entrance_type": 4,
         "vanilla_target": "Sahara Cave Transition",
+        "exit_key": "9301 edge:right",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4818,6 +6408,11 @@
         "name": "Sahara - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Sahara Item Shop",
+        "exit_key": "9300 door2",
+        "house_key": "Sahara - Tool Shop",
+        "related_entrance": "Amazones - Item Shop",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4825,6 +6420,11 @@
         "name": "Sahara - Inn",
         "entrance_type": 7,
         "vanilla_target": "Sahara Inn",
+        "exit_key": "9300 door",
+        "house_key": "Sahara - Inn",
+        "related_entrance": "Amazones - Inn",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4832,6 +6432,11 @@
         "name": "Sahara - Pawn Shop",
         "entrance_type": 7,
         "vanilla_target": "Sahara Pawn Shop",
+        "exit_key": "9301 door2",
+        "house_key": "Sahara - Pawn Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4839,6 +6444,11 @@
         "name": "Sahara - Elder House",
         "entrance_type": 7,
         "vanilla_target": "Sahara Elder House",
+        "exit_key": "9301 door",
+        "house_key": "Sahara - Elder House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4857,6 +6467,11 @@
         "name": "Sahara Cave Transition - Left",
         "entrance_type": 3,
         "vanilla_target": "Sahara",
+        "exit_key": "9400 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4864,6 +6479,11 @@
         "name": "Sahara Cave Transition - Cave",
         "entrance_type": 5,
         "vanilla_target": "Desert Transition Cave 2",
+        "exit_key": "9400 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4882,6 +6502,11 @@
         "name": "Sahara Elder House - Exit",
         "entrance_type": 8,
         "vanilla_target": "Sahara",
+        "exit_key": "fa00 edge:bottom",
+        "house_key": "Sahara - Elder House",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4900,6 +6525,11 @@
         "name": "Sahara Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Sahara",
+        "exit_key": "f800 door",
+        "house_key": "Sahara - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4918,6 +6548,11 @@
         "name": "Sahara Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Sahara",
+        "exit_key": "f900 door",
+        "house_key": "Sahara - Tool Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4936,6 +6571,11 @@
         "name": "Sahara Pawn Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Sahara",
+        "exit_key": "fb00 door",
+        "house_key": "Sahara - Pawn Shop",
+        "related_entrance": "",
+        "house_type": "Pawn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4955,6 +6595,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sealed Cave - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Sealed Cave)",
         "notes": ""
       },
@@ -4962,6 +6607,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sealed Cave - Exit",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Sealed Cave)",
         "notes": ""
       }
@@ -4999,6 +6649,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sealed Cave - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Sealed Cave)",
         "notes": ""
       },
@@ -5006,6 +6661,11 @@
         "name": "Sealed Cave Exit",
         "entrance_type": 6,
         "vanilla_target": "Cordel Plains - Main",
+        "exit_key": "c21 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Sealed Cave Entrance",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5028,6 +6688,11 @@
         "name": "Sealed Cave Entrance",
         "entrance_type": 6,
         "vanilla_target": "Wind Valley",
+        "exit_key": "420 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Sealed Cave Exit",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5035,6 +6700,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Sealed Cave - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Sealed Cave)",
         "notes": ""
       }
@@ -5094,6 +6764,11 @@
         "name": "Servant Chambers - Exit",
         "entrance_type": 8,
         "vanilla_target": "Portoa Palace - Foyer",
+        "exit_key": "e000 edge:bottom",
+        "house_key": "Portoa Palace - Right",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5112,6 +6787,11 @@
         "name": "Shyron - Exit",
         "entrance_type": 12,
         "vanilla_target": "Mt. Hydra - Guarded Palace",
+        "exit_key": "8c20 edge:bottom",
+        "house_key": "Shyron",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       },
@@ -5119,6 +6799,11 @@
         "name": "Shyron - Palace Entrance",
         "entrance_type": 9,
         "vanilla_target": "Shyron Temple",
+        "exit_key": "8c00 fortress",
+        "house_key": "Shyron - Temple",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5126,6 +6811,11 @@
         "name": "Shyron - Inn",
         "entrance_type": 7,
         "vanilla_target": "Shyron Inn",
+        "exit_key": "8c20 door3",
+        "house_key": "Shyron - Inn",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5133,6 +6823,11 @@
         "name": "Shyron - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Shyron Item Shop",
+        "exit_key": "8c20 door2",
+        "house_key": "Shyron - Tool Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5140,6 +6835,11 @@
         "name": "Shyron - Armor Shop",
         "entrance_type": 7,
         "vanilla_target": "Shyron Armor Shop",
+        "exit_key": "8c20 door",
+        "house_key": "Shyron - Armor Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5147,6 +6847,11 @@
         "name": "Shyron - Hospital",
         "entrance_type": 7,
         "vanilla_target": "Shyron Hospital",
+        "exit_key": "8c10 door2",
+        "house_key": "Shyron - Hospital",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5154,6 +6859,11 @@
         "name": "Shyron - Training Center",
         "entrance_type": 7,
         "vanilla_target": "Shyron Training Center",
+        "exit_key": "8c10 door",
+        "house_key": "Shyron - Training Hall",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5172,6 +6882,11 @@
         "name": "Shyron Armor Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Shyron",
+        "exit_key": "f500 door",
+        "house_key": "Shyron - Armor Shop",
+        "related_entrance": "",
+        "house_type": "Armor",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5190,6 +6905,11 @@
         "name": "Shyron Hospital - Exit",
         "entrance_type": 8,
         "vanilla_target": "Shyron",
+        "exit_key": "f400 edge:bottom",
+        "house_key": "Shyron - Hospital",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5208,6 +6928,11 @@
         "name": "Shyron Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Shyron",
+        "exit_key": "f700 door",
+        "house_key": "Shyron - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5226,6 +6951,11 @@
         "name": "Shyron Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Shyron",
+        "exit_key": "f600 door",
+        "house_key": "Shyron - Tool Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5244,6 +6974,11 @@
         "name": "Shyron Temple - Exit",
         "entrance_type": 10,
         "vanilla_target": "Shyron",
+        "exit_key": "f200 edge:bottom",
+        "house_key": "Shyron - Temple",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5251,6 +6986,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Shyron Temple - Post-Boss",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder",
         "notes": ""
       }
@@ -5299,6 +7039,11 @@
         "name": "Shyron Training Center - Exit",
         "entrance_type": 8,
         "vanilla_target": "Shyron",
+        "exit_key": "f300 edge:bottom",
+        "house_key": "Shyron - Training Hall",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5317,6 +7062,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Stxy - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       },
@@ -5324,6 +7074,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Stxy - Upstairs",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -5331,6 +7086,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Stxy - Right",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight",
         "notes": ""
       }
@@ -5360,6 +7120,11 @@
         "name": "Stxy - Exit",
         "entrance_type": 10,
         "vanilla_target": "Mt. Hydra - Upper",
+        "exit_key": "8842 stair:down",
+        "house_key": "Styx 1",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5367,6 +7132,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Stxy - Downstairs",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       }
@@ -5424,6 +7194,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Stxy - Downstairs",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5461,6 +7236,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Swamp - Interior",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
         "notes": ""
       },
@@ -5468,6 +7248,11 @@
         "name": "Swamp - Exit",
         "entrance_type": 5,
         "vanilla_target": "Oak",
+        "exit_key": "1a02 swamp",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5484,6 +7269,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Swamp - Near Side",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
         "notes": ""
       },
@@ -5491,6 +7281,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Swamp - Far Side",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
         "notes": ""
       }
@@ -5520,6 +7315,11 @@
         "name": "Swamp - Entrance",
         "entrance_type": 3,
         "vanilla_target": "Cordel Plains - Main",
+        "exit_key": "1a30 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5527,6 +7327,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Swamp - Interior",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
         "notes": ""
       }
@@ -5545,6 +7350,11 @@
         "name": "Swan Entrance",
         "entrance_type": 2,
         "vanilla_target": "Angry Sea - North Land",
+        "exit_key": "7202 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5552,6 +7362,11 @@
         "name": "Swan Exit",
         "entrance_type": 3,
         "vanilla_target": "Guard Checkpoint - South",
+        "exit_key": "7200 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5559,6 +7374,11 @@
         "name": "Swan - Dance Hall",
         "entrance_type": 7,
         "vanilla_target": "Swan Dance Hall",
+        "exit_key": "7202 door3",
+        "house_key": "Swan - Dance Hall",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5566,6 +7386,11 @@
         "name": "Swan - Pawn Shop",
         "entrance_type": 7,
         "vanilla_target": "Swan Pawn Shop",
+        "exit_key": "7202 door2",
+        "house_key": "Swan - Pawn Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5573,6 +7398,11 @@
         "name": "Swan - Pub",
         "entrance_type": 7,
         "vanilla_target": "Swan Pub",
+        "exit_key": "7202 door",
+        "house_key": "Swan - Tavern",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5580,6 +7410,11 @@
         "name": "Swan - Armor Shop",
         "entrance_type": 7,
         "vanilla_target": "Swan Armor Shop",
+        "exit_key": "7201 door",
+        "house_key": "Swan - Armor Shop",
+        "related_entrance": "Brynmaer - Armor Shop",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5587,6 +7422,11 @@
         "name": "Swan - Inn",
         "entrance_type": 7,
         "vanilla_target": "Swan Inn",
+        "exit_key": "7201 door2",
+        "house_key": "Swan - Inn",
+        "related_entrance": "Brynmaer - Inn",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5594,6 +7434,11 @@
         "name": "Swan - Item Shop",
         "entrance_type": 7,
         "vanilla_target": "Swan Item Shop",
+        "exit_key": "7200 door",
+        "house_key": "Swan - Tool Shop",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5601,6 +7446,11 @@
         "name": "Swan - Shed",
         "entrance_type": 13,
         "vanilla_target": "Swan Shed",
+        "exit_key": "7200 door2",
+        "house_key": "Swan - Stom Hut",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5619,6 +7469,11 @@
         "name": "Swan Armor Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Swan",
+        "exit_key": "ee00 door",
+        "house_key": "Swan - Armor Shop",
+        "related_entrance": "",
+        "house_type": "Armor",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5637,6 +7492,11 @@
         "name": "Swan Dance Hall - Exit",
         "entrance_type": 8,
         "vanilla_target": "Swan",
+        "exit_key": "f100 edge:bottom",
+        "house_key": "Swan - Dance Hall",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5666,6 +7526,11 @@
         "name": "Swan Inn - Exit",
         "entrance_type": 8,
         "vanilla_target": "Swan",
+        "exit_key": "ed00 door",
+        "house_key": "Swan - Inn",
+        "related_entrance": "",
+        "house_type": "Inn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5684,6 +7549,11 @@
         "name": "Swan Item Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Swan",
+        "exit_key": "eb00 door",
+        "house_key": "Swan - Tool Shop",
+        "related_entrance": "",
+        "house_type": "Item",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5702,6 +7572,11 @@
         "name": "Swan Pawn Shop - Exit",
         "entrance_type": 8,
         "vanilla_target": "Swan",
+        "exit_key": "f000 door",
+        "house_key": "Swan - Pawn Shop",
+        "related_entrance": "",
+        "house_type": "Pawn",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5720,6 +7595,11 @@
         "name": "Swan Pub - Exit",
         "entrance_type": 8,
         "vanilla_target": "Swan",
+        "exit_key": "ef00 edge:bottom",
+        "house_key": "Swan - Tavern",
+        "related_entrance": "",
+        "house_type": "Tavern",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5738,6 +7618,11 @@
         "name": "Swan Shed - Exit",
         "entrance_type": 14,
         "vanilla_target": "Swan",
+        "exit_key": "ec00 edge:bottom",
+        "house_key": "Swan - Stom Hut",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5756,6 +7641,11 @@
         "name": "Tornel's House - Exit",
         "entrance_type": 16,
         "vanilla_target": "Tornel's House Exterior",
+        "exit_key": "1e00 edge:bottom",
+        "house_key": "Stom House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5785,6 +7675,11 @@
         "name": "Tornel's House Exterior - Exit",
         "entrance_type": 2,
         "vanilla_target": "Cordel Plains - Main",
+        "exit_key": "1900 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5792,6 +7687,11 @@
         "name": "Tornel's House Entrance",
         "entrance_type": 15,
         "vanilla_target": "Tornel's House",
+        "exit_key": "1900 door",
+        "house_key": "Stom House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5827,6 +7727,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Cave - Before Statues",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flute of Lime || statue_skip",
         "notes": ""
       },
@@ -5834,6 +7739,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Cave - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Waterfall Cave)",
         "notes": ""
       }
@@ -5852,6 +7762,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Cave - After Statues",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Waterfall Cave)",
         "notes": ""
       }
@@ -5901,6 +7816,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Cave - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Waterfall Cave)",
         "notes": ""
       },
@@ -5908,6 +7828,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Cave - After Statues",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flute of Lime || statue_skip",
         "notes": ""
       }
@@ -5926,6 +7851,11 @@
         "name": "Waterfall Cave - Exit",
         "entrance_type": 6,
         "vanilla_target": "Waterfall Valley - Main",
+        "exit_key": "5453 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5933,6 +7863,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Cave - Before Statues",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Waterfall Cave)",
         "notes": ""
       }
@@ -5960,6 +7895,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Valley - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -5967,6 +7907,11 @@
         "name": "Waterfall Valley North River Cave",
         "entrance_type": 5,
         "vanilla_target": "Fog Lamp Cave - Front",
+        "exit_key": "4014 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5985,6 +7930,11 @@
         "name": "Waterfall Hilltop Cave",
         "entrance_type": 5,
         "vanilla_target": "Mt. Sabre North - Final",
+        "exit_key": "4000 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "Prison Key",
         "notes": "Remove Prison Key requirement for Wa"
       },
@@ -5992,6 +7942,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Valley - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6008,6 +7963,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Valley - Main",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -6015,6 +7975,11 @@
         "name": "Waterfall Valley South River Cave",
         "entrance_type": 5,
         "vanilla_target": "Kirisa Plant Cave - Front",
+        "exit_key": "4174 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6033,6 +7998,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Valley - By Prison",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || trigger_skip",
         "notes": ""
       },
@@ -6040,6 +8010,11 @@
         "name": "Waterfall Valley North Bridge",
         "entrance_type": 3,
         "vanilla_target": "Portoa",
+        "exit_key": "4020 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6047,6 +8022,11 @@
         "name": "Waterfall Valley Cave Behind Waterfall",
         "entrance_type": 5,
         "vanilla_target": "Waterfall Cave - Front",
+        "exit_key": "4003 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6054,6 +8034,11 @@
         "name": "Waterfall Valley South Passage",
         "entrance_type": 3,
         "vanilla_target": "Lime Valley",
+        "exit_key": "4180 edge:left",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6061,6 +8046,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Valley - By North River",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -6068,6 +8058,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Waterfall Valley - By South River",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -6086,6 +8081,11 @@
         "name": "Wind Valley - South",
         "entrance_type": 2,
         "vanilla_target": "Leaf",
+        "exit_key": "363 edge:bottom",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6093,6 +8093,11 @@
         "name": "Wind Valley - North East Cave",
         "entrance_type": 5,
         "vanilla_target": "Windmill Cave",
+        "exit_key": "302 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6100,6 +8105,11 @@
         "name": "Wind Valley - North West Cave",
         "entrance_type": 5,
         "vanilla_target": "Sealed Cave - Front",
+        "exit_key": "311 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "Windmill Key && can_reach(Windmill)",
         "notes": "\"If Wa"
       },
@@ -6107,6 +8117,11 @@
         "name": "Wind Valley - West Cave",
         "entrance_type": 5,
         "vanilla_target": "Zebu's Cave - Front",
+        "exit_key": "330 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6136,6 +8151,11 @@
         "name": "Windmill Exit",
         "entrance_type": 16,
         "vanilla_target": "Windmill Exterior",
+        "exit_key": "f00 edge:bottom",
+        "house_key": "Windmill",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6154,6 +8174,11 @@
         "name": "Windmill Cave Entrance",
         "entrance_type": 6,
         "vanilla_target": "Wind Valley",
+        "exit_key": "e32 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Windmill Cave Exit",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6161,6 +8186,11 @@
         "name": "Windmill Cave Exit",
         "entrance_type": 6,
         "vanilla_target": "Windmill Exterior",
+        "exit_key": "e30 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Windmill Cave Entrance",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6188,6 +8218,11 @@
         "name": "Windmill Exterior - Windmill Cave",
         "entrance_type": 5,
         "vanilla_target": "Windmill Cave",
+        "exit_key": "311 door",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6195,6 +8230,11 @@
         "name": "Windmill Entrance",
         "entrance_type": 15,
         "vanilla_target": "Windmill",
+        "exit_key": "311 windmill",
+        "house_key": "Windmill",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6213,6 +8253,11 @@
         "name": "Zebu Student's House - Exit",
         "entrance_type": 8,
         "vanilla_target": "Leaf",
+        "exit_key": "c500 edge:bottom",
+        "house_key": "Leaf - Student House",
+        "related_entrance": "",
+        "house_type": "House",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6242,6 +8287,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Zebu's Cave - Front",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Zebu's Cave)",
         "notes": ""
       },
@@ -6249,6 +8299,11 @@
         "name": "Zebu's Cave Exit",
         "entrance_type": 6,
         "vanilla_target": "Mt. Sabre West - Main",
+        "exit_key": "1131 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Zebu's Cave Entrance",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6267,6 +8322,11 @@
         "name": "Zebu's Cave Entrance",
         "entrance_type": 6,
         "vanilla_target": "Wind Valley",
+        "exit_key": "1033 edge:bottom",
+        "house_key": "",
+        "related_entrance": "Zebu's Cave Exit",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6274,6 +8334,11 @@
         "name": "",
         "entrance_type": 0,
         "vanilla_target": "Zebu's Cave - Back",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "can_break_wall(Zebu's Cave)",
         "notes": ""
       }
@@ -6292,6 +8357,11 @@
         "name": "Zombie Town - Exit",
         "entrance_type": 5,
         "vanilla_target": "Evil Spirit Island - Upstairs",
+        "exit_key": "6520 cave",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": true,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6299,6 +8369,11 @@
         "name": "Zombie Town - Clark's Hideout",
         "entrance_type": 7,
         "vanilla_target": "Clark's Hideout",
+        "exit_key": "6520 door",
+        "house_key": "Zombie Town - House",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6306,6 +8381,11 @@
         "name": "Zombie Town - Palace Entrance",
         "entrance_type": 9,
         "vanilla_target": "Sabera's Fortress - Front",
+        "exit_key": "6500 fortress",
+        "house_key": "Sabera Palace 1",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6322,6 +8402,11 @@
         "name": "Start Game",
         "entrance_type": 0,
         "vanilla_target": "Mezame Shrine",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrance": "",
+        "house_type": "",
+        "can_lock": false,
         "pseudologic": "TRUE",
         "notes": "The way to start the game."
       }
