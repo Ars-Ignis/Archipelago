@@ -185,7 +185,11 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
         else:
             exit_house_key = ""
             exit_exit_key = CONDITIONAL_EXIT_KEYS[exit]
-        if options.shuffle_houses and entrance_type in HOUSE_SHUFFLE_TYPES:
+        # if we're shuffling houses, then the palace area entrances/exits should be handled by this code
+        if options.shuffle_houses and (
+                entrance_type in HOUSE_SHUFFLE_TYPES or
+                entrance_type == CrystalisEntranceTypeEnum.PALACE_AREA_ENTRANCE or
+                entrance_type == CrystalisEntranceTypeEnum.PALACE_AREA_EXIT):
             if entrance_type % 2 == 0:
                 # even entrance types are actually exits, so we need to swap
                 entrance_house_key, exit_house_key = exit_house_key, entrance_house_key

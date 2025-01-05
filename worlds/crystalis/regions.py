@@ -582,8 +582,10 @@ def generate_basic(self):
                     self.multiworld.register_indirect_condition(windmill_reg, entrance_to_lock)
     # now that all the prep is done, let GER handle the rest
     if self.options.shuffle_areas or self.options.shuffle_houses:
-        # from Utils import visualize_regions
-        # visualize_regions(self.multiworld.get_region("Wind Valley", self.player), f"World {self.player}.puml",
-        #                   show_entrance_names=True, show_other_regions=False)
         er_state = randomize_entrances(self, True, SHUFFLE_GROUPING)
         self.shuffle_data.er_pairings |= er_state.pairings
+        # if self.player == 1:
+        #     from Utils import visualize_regions
+        #     visualize_regions(self.multiworld.get_region("Menu", self.player), f"World {self.player}.puml",
+        #                       show_entrance_names=False, show_other_regions=True)
+        #     logging.info(self.shuffle_data.er_pairings)
