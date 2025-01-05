@@ -125,6 +125,11 @@ class CrystalisEntranceData:
     name: str
     entrance_type: CrystalisEntranceTypeEnum
     vanilla_target: str
+    exit_key: str
+    house_key: str
+    related_entrance: str
+    house_type: str
+    can_lock: bool
 
 
 @dataclass
@@ -162,3 +167,4 @@ class CrystalisShuffleData:
     shop_inventories: Dict[str, List[str]]
     wildwarps: List[int]
     goa_connection_map: Dict[str, str]
+    er_pairings: Dict[str, str]
