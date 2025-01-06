@@ -430,7 +430,8 @@ def set_rules(self) -> None:
     else:
         shell_flute_rule = lambda state: state.has(shuffle_data.key_item_names["Shell Flute"], player) and \
                                          state.has("Boat Access", player)
-        add_rule(boat_access_location, lambda state: dolphin.can_reach(state), "and")
+        add_rule(boat_access_location, lambda state: state.has(shuffle_data.key_item_names["Shell Flute"], player) and
+                                                     dolphin.can_reach(state), "and")
     activate_shell_flute_location = self.get_location("Activate Shell Flute")
     activate_shell_flute_location.access_rule = shell_flute_rule
 
