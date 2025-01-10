@@ -1,11 +1,12 @@
-from typing import Mapping, Any
+from typing import Mapping, Any, Set
 from dataclasses import asdict
 
 from BaseClasses import Tutorial, MultiWorld, Entrance
 from Utils import VersionException
 from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
 from .locations import CrystalisLocation, create_location_from_location_data
-from .regions import regions_data, create_regions, shuffle_goa, generate_basic
+from .regions import regions_data, create_regions, shuffle_goa, generate_basic, entrances_data, HOUSE_SHUFFLE_TYPES, \
+    AREA_SHUFFLE_TYPES
 from .options import CrystalisOptions, crystalis_option_groups
 from .types import *
 from .logic import set_rules
@@ -156,10 +157,15 @@ class CrystalisWorld(World):
         try:
             from entrance_rando import randomize_entrances
         except ImportError:
+            logging.warning("Generic Entrance Randomizer not found in core code; please run this apworld against a "
+                            "version of Archipelago greater than 0.5.1 to support shuffle_houses and shuffle_areas. "
+                            "These options will be turned off.")
             if self.options.shuffle_areas:
                 self.options.shuffle_areas.value = self.options.shuffle_areas.option_false
             if self.options.shuffle_houses:
                 self.options.shuffle_houses.value = self.options.shuffle_houses.option_false
+            if self.options.plando_connections:
+                self.options.plando_connections.value.clear()
 
         if self.options.randomize_maps:
             logging.warning("Wm (Randomize maps) not implemented yet. Turning this option off.")
@@ -215,7 +221,7 @@ class CrystalisWorld(World):
                                                          shuffle_dict["trade_in_map"], shuffle_dict["boss_reqs"],
                                                          shuffle_dict["gbc_cave_exits"], shuffle_dict["thunder_warp"],
                                                          shuffle_dict["shop_inventories"], shuffle_dict["wildwarps"],
-                                                         shuffle_dict["goa_connection_map"])
+                                                         shuffle_dict["goa_connection_map"], shuffle_dict["er_pairings"])
                 return #bail early, we don't need the rest of this lmao
 
 
@@ -314,8 +320,29 @@ class CrystalisWorld(World):
                 "Karmine's Floor - Exit": "Goa Exit",
                 "Goa Exit - Upstairs": "Karmine's Floor - Back"
             }
+        er_pairings: Dict[str, str] = {}
+        if self.options.plando_connections:
+            allowed_entrance_types: Set[CrystalisEntranceTypeEnum] = set()
+            if self.options.shuffle_areas:
+                allowed_entrance_types.update(set(AREA_SHUFFLE_TYPES))
+            if self.options.shuffle_houses:
+                allowed_entrance_types.update(set(HOUSE_SHUFFLE_TYPES))
+            for pair in self.options.plando_connections:
+                if pair.entrance in er_pairings and er_pairings[pair.entrance] != pair.exit:
+                    raise ValueError(f"Entrance {pair.entrance} is being mapped to multiple exits. First: "
+                                     f"{er_pairings[pair.entrance]} Second: {pair.exit}")
+                if pair.exit in er_pairings and er_pairings[pair.exit] != pair.entrance:
+                    raise ValueError(f"Entrance {pair.exit} is being mapped to multiple exits. First: "
+                                     f"{er_pairings[pair.exit]} Second: {pair.entrance}")
+                if entrances_data[pair.entrance].entrance_type not in allowed_entrance_types:
+                    raise ValueError(f"Entrance {pair.entrance} is not being shuffled on these settings.")
+                if entrances_data[pair.exit].entrance_type not in allowed_entrance_types:
+                    raise ValueError(f"Entrance {pair.exit} is not being shuffled on these settings.")
+                er_pairings[pair.entrance] = pair.exit
+                er_pairings[pair.exit] = pair.entrance
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
-                                                 thunder_warp, shop_inventories, wildwarps, goa_connection_map, {})
+                                                 thunder_warp, shop_inventories, wildwarps, goa_connection_map,
+                                                 er_pairings)
 
 
     def get_filler_item_name(self) -> str:
