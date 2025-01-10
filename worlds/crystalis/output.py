@@ -26,19 +26,6 @@ BOSS_IDS: Dict[str, int] = {
 }
 
 
-CONDITIONAL_EXIT_KEYS: Dict[str, str] = {
-    "Cordel Plains - Main - Added Cave": "1555 cave",
-    "Lime Valley - Added Cave": "4210 cave",
-    "Goa Valley - Added Cave": "7811 cave",
-    "Desert 2 - Added Cave": "9853 cave",
-    "Wind Valley - East Cave": "333 cave",
-    "GBC Cave - Free Exit": "b04 stair:down",
-    "GBC Cave - Blocked Exit": "1220 edge:bottom",
-    "Wind Valley - East": "354 edge:right",
-    "Lime Valley - West": "4210 edge:left"
-}
-
-
 def generate_flag_string(options: CrystalisOptions) -> str:
     flag_dict: Dict[str, List[str]] = {}
     #this feels cursed? maybe I'm just not used to langauges with good reflection lmao
@@ -165,26 +152,11 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
     area_connections = {}
     house_connections = {}
     for entrance, exit in shuffle_data.er_pairings.items():
-        entrance_type: str
-        entrance_house_key: str
-        exit_house_key: str
-        entrance_exit_key: str
-        exit_exit_key: str
-        if entrance in entrances_data:
-            entrance_type = entrances_data[entrance].entrance_type
-            entrance_house_key = entrances_data[entrance].house_key
-            entrance_exit_key = entrances_data[entrance].exit_key
-        else:
-            # cave entrance vs. cave exit doesn't matter at this point, so lie
-            entrance_type = CrystalisEntranceTypeEnum.CAVE_ENTRANCE
-            entrance_house_key = ""
-            entrance_exit_key = CONDITIONAL_EXIT_KEYS[entrance]
-        if exit in entrances_data:
-            exit_house_key = entrances_data[exit].house_key
-            exit_exit_key = entrances_data[exit].exit_key
-        else:
-            exit_house_key = ""
-            exit_exit_key = CONDITIONAL_EXIT_KEYS[exit]
+        entrance_type: CrystalisEntranceTypeEnum = entrances_data[entrance].entrance_type
+        entrance_house_key: str = entrances_data[entrance].house_key
+        exit_house_key: str = entrances_data[exit].house_key
+        entrance_exit_key: str = entrances_data[entrance].exit_key
+        exit_exit_key: str = entrances_data[exit].exit_key
         # if we're shuffling houses, then the palace area entrances/exits should be handled by this code
         if options.shuffle_houses and (
                 entrance_type in HOUSE_SHUFFLE_TYPES or
