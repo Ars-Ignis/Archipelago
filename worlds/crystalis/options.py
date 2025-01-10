@@ -1,6 +1,7 @@
 from dataclasses import dataclass
-from Options import Choice, Toggle, PerGameCommonOptions, OptionGroup, StartInventoryPool, Visibility
-
+from Options import Choice, Toggle, PerGameCommonOptions, OptionGroup, StartInventoryPool, Visibility, PlandoConnections
+from .regions import entrances_data, GBC_CAVE_NAMES, SHUFFLE_GROUPING
+from .types import CrystalisEntranceTypeEnum
 
 # World Options
 class RandomizeMaps(Toggle):
@@ -668,6 +669,7 @@ class VanillaWildWarp(Choice):
     option_disabled = 0
     option_out_of_logic = 1
     option_vanilla = 2
+    alias_enabled = option_vanilla
 
 
     def flag_name(self) -> (str, str):
@@ -732,6 +734,25 @@ class AudibleWallCues(Toggle):
         if self:
             return "Q", "w"
         return "", ""
+
+
+class CrystalisPlandoConnections(PlandoConnections):
+    """
+    Generic connection plando. Format is:
+    - entrance: "Entrance Name"
+      exit: "Exit Name"
+      percentage: 100
+    Percentage is an integer from 0 to 100 which determines whether that connection will be made. Defaults to 100 if omitted.
+    Note: direction is ignored and assumed to always be "both", as uncoupled ER is not supported for Crystalis.
+    """
+    entrances = {*(name for name, data in entrances_data.items() if "->" not in name and
+                   data.entrance_type != CrystalisEntranceTypeEnum.GOA_TRANSITION)}
+    exits = {*(name for name, data in entrances_data.items() if "->" not in name and
+               data.entrance_type != CrystalisEntranceTypeEnum.GOA_TRANSITION)}
+
+    @classmethod
+    def can_connect(cls, entrance: str, exit: str) -> bool:
+        return entrances_data[entrance].entrance_type in SHUFFLE_GROUPING[entrances_data[exit].entrance_type]
 
 
 crystalis_option_groups = [
@@ -807,6 +828,9 @@ crystalis_option_groups = [
         DisableControllerShortcuts,
         AudibleWallCues,
     ]),
+    OptionGroup('Plando', [
+        CrystalisPlandoConnections
+    ])
 ]
 
 
@@ -876,3 +900,4 @@ class CrystalisOptions(PerGameCommonOptions):
     audible_wall_cues: AudibleWallCues
     #Misc Archipelago Only options
     start_inventory_from_pool: StartInventoryPool
+    plando_connections: CrystalisPlandoConnections

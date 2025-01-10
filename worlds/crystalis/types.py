@@ -123,11 +123,12 @@ class CrystalisLocationData:
 @dataclass
 class CrystalisEntranceData:
     name: str
+    parent_region: str
     entrance_type: CrystalisEntranceTypeEnum
     vanilla_target: str
     exit_key: str
     house_key: str
-    related_entrance: str
+    related_entrances: List[str]
     house_type: str
     can_lock: bool
 
