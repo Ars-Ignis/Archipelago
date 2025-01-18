@@ -364,7 +364,8 @@ class CrystalisWorld(World):
                                                          "guarantee_refresh", "battle_magic_not_guaranteed",
                                                          "tink_mode", "barrier_not_guaranteed",
                                                          "gas_mask_not_guaranteed", "charge_shots_only",
-                                                         "dont_buff_bonus_items", "vanilla_maps", "vanilla_wild_warp")
+                                                         "dont_buff_bonus_items", "vanilla_maps", "vanilla_wild_warp",
+                                                         "death_link")
         #get shuffle data for tracker purposes, UT regen, and ids for unidentified items
         slot_data["shuffle_data"] = asdict(self.shuffle_data)
         slot_data["version"] = CRYSTALIS_APWORLD_VERSION
