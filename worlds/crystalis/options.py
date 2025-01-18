@@ -1,5 +1,6 @@
 from dataclasses import dataclass
-from Options import Choice, Toggle, PerGameCommonOptions, OptionGroup, StartInventoryPool, Visibility, PlandoConnections
+from Options import Choice, Toggle, PerGameCommonOptions, DeathLink, DeathLinkMixin, OptionGroup, StartInventoryPool, \
+    Visibility, PlandoConnections
 from .regions import entrances_data, GBC_CAVE_NAMES, SHUFFLE_GROUPING
 from .types import CrystalisEntranceTypeEnum
 
@@ -814,6 +815,7 @@ crystalis_option_groups = [
         ChargeShotsOnly,
         Blackout,
         Permadeath,
+        DeathLink,
     ]),
     OptionGroup('Vanilla Options', [
         DontBuffDyna,
@@ -835,7 +837,7 @@ crystalis_option_groups = [
 
 
 @dataclass
-class CrystalisOptions(PerGameCommonOptions):
+class CrystalisOptions(PerGameCommonOptions, DeathLinkMixin):
     #World options
     randomize_maps: RandomizeMaps
     shuffle_areas: ShuffleAreas
