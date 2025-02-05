@@ -376,6 +376,9 @@ def set_rules(self) -> None:
     rage_river.access_rule = can_cross_rivers
     if options.rage_skip != options.rage_skip.option_in_logic:
         add_rule(rage_river, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player), "and")
+    # need the reverse entrance because you only get the free push across if you don't have Rage's sword
+    rage_river_reverse = self.get_entrance("Rage - North -> Rage - South")
+    rage_river_reverse.access_rule = can_cross_rivers
     rage_reward = self.get_location("Rage")
     set_rule(rage_reward, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player))
 
