@@ -765,6 +765,7 @@ class CrystalisPlandoConnections(PlandoConnections):
     Percentage is an integer from 0 to 100 which determines whether that connection will be made. Defaults to 100 if omitted.
     Note: direction is ignored and assumed to always be "both", as uncoupled ER is not supported for Crystalis.
     """
+    visibility = Visibility.template & Visibility.spoiler
     entrances = {*(name for name, data in entrances_data.items() if "->" not in name and
                    data.entrance_type != CrystalisEntranceTypeEnum.GOA_TRANSITION)}
     exits = {*(name for name, data in entrances_data.items() if "->" not in name and
@@ -780,6 +781,7 @@ class PlandoBossWeaknesses(OptionDict):
      this element corresponds to what element the boss is immune to, while for the Tetrarchs, this element corresponds
      to the element the boss is weak to. If a boss is not specified in the list, then its weakness is chosen randomly,
      as it normally would be. This option only does anything when randomize_monster_weaknesses is set to true."""
+    visibility = Visibility.template & Visibility.spoiler
     valid_keys = frozenset(BOSS_NAMES)
     display_name = "Boss Weakness Plando"
     schema = Schema({
@@ -794,6 +796,7 @@ class PlandoWallElements(OptionDict):
     then its weakness is chosen randomly, as it normally would be. This option only does anything when
     randomize_wall_elements is set to true. Generate a spoiler log with randomize_wall_elements on for a list of valid
     wall names, or see WALL_NAMES in types.py in the GitHub repository."""
+    visibility = Visibility.template & Visibility.spoiler
     valid_keys = frozenset(WALL_NAMES)
     display_name = "Wall Element Plando"
     schema = Schema({
@@ -810,6 +813,7 @@ class PlandoTradeIns(OptionDict):
     Plant, and Ivory Statue. Does nothing if randomize_tradeins is false."""
     def validate(data: dict[str, str]) -> bool:
         return len(data) == len(set(data.values()))
+    visibility = Visibility.template & Visibility.spoiler
     schema = Schema(And({
         Optional(name): And(str, lambda item_name: item_name in frozenset([item_data.name for item_data in
                                                                            items_data.values() if item_data.default_count > 0
@@ -831,6 +835,7 @@ class PlandoKeyItemNames(OptionDict):
     to false."""
     def validate(data: dict[str, str]) -> bool:
         return len(data) == len(set(data.values()))
+    visibility = Visibility.template & Visibility.spoiler
 
     schema = Schema(And({
         Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset([item_data.name for item_data in
@@ -882,6 +887,7 @@ class PlandoShopInventories(OptionDict):
     items you specify. Other shops will be shuffled among themselves. At least one non-Shyron shop must sell Medical
     Herbs, and at least one non-Shyron shop must sell Warp Boots."""
 
+    visibility = Visibility.template & Visibility.spoiler
     schema = Schema({
         Optional(shop_name): And(list[str], validate_shop_inventory) for shop_name in SHOP_INVENTORIES.keys()
     }, error="Invalid shop inventory in option shop_inventory_plando.")
@@ -894,6 +900,7 @@ class PlandoWildWarp(OptionList):
     as usual. Only does something if randomize_wild_warp is true and vanilla_wild_warp is disabled. For a full list of
     screen names, look at worlds/crystalis/types.py for SCREEN_NAMES_TO_IDS."""
     valid_keys = frozenset(SCREEN_NAMES_TO_IDS.keys()) | {"Any"}
+    visibility = Visibility.template & Visibility.spoiler
 
 
 crystalis_option_groups = [
