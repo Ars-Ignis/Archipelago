@@ -5,13 +5,12 @@ from BaseClasses import Tutorial, MultiWorld, Entrance
 from Options import OptionError
 from Utils import VersionException, tuplize_version
 from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
-from .locations import CrystalisLocation, create_location_from_location_data
 from .regions import regions_data, create_regions, shuffle_goa, connect_entrances, entrances_data, HOUSE_SHUFFLE_TYPES, \
     AREA_SHUFFLE_TYPES
 from .options import CrystalisOptions, crystalis_option_groups
 from .types import *
 from .logic import set_rules
-from .output import generate_output, write_spoiler_header
+from .output import generate_output, write_spoiler_header, extend_hint_information
 from .client import CrystalisClient  # Unused, but required to register with BizHawkClient
 from worlds.AutoWorld import World, WebWorld
 
@@ -58,12 +57,15 @@ class CrystalisWorld(World):
     create_items = create_items
     connect_entrances = connect_entrances
     write_spoiler_header = write_spoiler_header
+    extend_hint_information = extend_hint_information
     web = CrystalisWeb()
     shared_icon_houses: List[Tuple[Entrance, Entrance]]
     houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
     tunnel_map: Dict[str, List[str]]
     cave_entrances: List[Tuple[Entrance, Entrance]]
     cave_exits: List[Tuple[Entrance, Entrance]]
+    goa_lower_floors: Set[str]
+    goa_upper_floors: Set[str]
 
     # this will get filled out later, while creating regions
     locations_data: List[CrystalisLocationData]
@@ -242,6 +244,9 @@ class CrystalisWorld(World):
                                                          shuffle_dict["gbc_cave_exits"], shuffle_dict["thunder_warp"],
                                                          shuffle_dict["shop_inventories"], shuffle_dict["wildwarps"],
                                                          shuffle_dict["goa_connection_map"], shuffle_dict["er_pairings"])
+                # goa upper floors vs. goa lower floors doesn't matter for UT, so use default values
+                self.goa_lower_floors = set(["Kelbesque", "Sabera"])
+                self.goa_upper_floors = set(["Mado", "Karmine"])
                 return # bail early, we don't need the rest of this lmao
 
         # walls first
@@ -360,13 +365,15 @@ class CrystalisWorld(World):
                 "Karmine's Floor - Exit": "Goa Exit",
                 "Goa Exit - Upstairs": "Karmine's Floor - Back"
             }
+            self.goa_lower_floors = set(["Kelbesque", "Sabera"])
+            self.goa_upper_floors = set(["Mado", "Karmine"])
         er_pairings: Dict[str, str] = {}
         if self.options.plando_connections:
             allowed_entrance_types: Set[CrystalisEntranceTypeEnum] = set()
             if self.options.shuffle_areas:
-                allowed_entrance_types.update(set(AREA_SHUFFLE_TYPES))
+                allowed_entrance_types.update(AREA_SHUFFLE_TYPES)
             if self.options.shuffle_houses:
-                allowed_entrance_types.update(set(HOUSE_SHUFFLE_TYPES))
+                allowed_entrance_types.update(HOUSE_SHUFFLE_TYPES)
             for pair in self.options.plando_connections:
                 if pair.entrance in er_pairings and er_pairings[pair.entrance] != pair.exit:
                     raise ValueError(f"Entrance {pair.entrance} is being mapped to multiple exits. First: "
