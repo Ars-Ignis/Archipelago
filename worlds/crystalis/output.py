@@ -2,8 +2,8 @@ import os
 import orjson
 import zipfile
 import logging
-from typing import Dict, List, Any, Tuple, TextIO, Iterable, Optional
-from BaseClasses import Location, Item, ItemClassification
+from typing import Dict, List, Any, Tuple, TextIO, Iterable, Optional, Set
+from BaseClasses import Location, Item, ItemClassification, Entrance, Region
 from worlds.Files import APPatch
 from worlds.AutoWorld import World
 from .items import items_data
@@ -300,6 +300,35 @@ def write_spoiler_header(self, spoiler_handle: TextIO) -> None:
             else:
                 previous_exit = f"{current_floor_name}'s Floor - Exit"
         spoiler_handle.write("\n")
+
+
+def extend_hint_information(self, hint_data: Dict[int, Dict[int, str]]):
+    shuffled_entrance_types: Set[CrystalisEntranceTypeEnum] = set()
+    player_hint_data: Dict[int, str] = {}
+    connected_region_cache: Dict[str, str] = {}
+    if self.options.shuffle_areas:
+        shuffled_entrance_types.update(AREA_SHUFFLE_TYPES)
+    if self.options.shuffle_houses:
+        shuffled_entrance_types.update(HOUSE_SHUFFLE_TYPES)
+    if shuffled_entrance_types:
+        real_locations = [location for location in self.get_locations() if location.address is not None]
+        for location in real_locations:
+            entrance_hint: str = location.entrance_hint
+            extended_text: str = ""
+            if entrance_hint:
+                if entrance_hint in connected_region_cache:
+                    extended_text = connected_region_cache[entrance_hint]
+                else:
+                    hinted_entrance: Entrance = self.get_entrance(entrance_hint)
+                    if hinted_entrance.randomization_group in shuffled_entrance_types:
+                        connected_region: Region = hinted_entrance.connected_region
+                        for reverse_entrance in connected_region.exits:
+                            if reverse_entrance.connected_region == hinted_entrance.parent_region:
+                                extended_text = reverse_entrance.name
+                                connected_region_cache[entrance_hint] = reverse_entrance.name
+                                break
+            player_hint_data[location.address] = extended_text
+    hint_data[self.player] = player_hint_data
 
 
 class CrystalisFile(APPatch):

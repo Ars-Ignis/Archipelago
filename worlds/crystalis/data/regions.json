@@ -408,6 +408,7 @@
         "lossy": true,
         "prevent_loss": true,
         "is_chest": false,
+        "entrance_hint": "",
         "pseudologic": "Statue of Gold"
       }
     ],
@@ -443,6 +444,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Aryllis's House - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -453,6 +455,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Aryllis's House - Exit",
         "pseudologic": "Change && trade_in(Aryllis)"
       }
     ],
@@ -487,6 +490,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Portoa Waterway - Exit",
         "pseudologic": "can_reach(Mesia)"
       }
     ],
@@ -521,6 +525,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Beach House - Exit",
         "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman)"
       }
     ],
@@ -623,6 +628,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Brokahana's House - Exit",
         "pseudologic": "Change && can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder"
       }
     ],
@@ -721,6 +727,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Brynmaer - Entrance",
         "pseudologic": "trade_in(Akahana)"
       }
     ],
@@ -887,6 +894,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Clark's Hideout - Exit",
         "pseudologic": "can_reach(Sabera's Fortress - Upstairs) && can_fight(Sabera 1)"
       }
     ],
@@ -1005,6 +1013,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "",
         "pseudologic": "TRUE"
       }
     ],
@@ -1153,6 +1162,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Crypt - Entrance",
         "pseudologic": "TRUE"
       }
     ],
@@ -1200,6 +1210,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Crypt - Entrance",
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
     ],
@@ -1269,6 +1280,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Deo Valley - Down",
         "pseudologic": "Change && Telepathy"
       }
     ],
@@ -1619,6 +1631,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Evil Spirit Island - Entrance",
         "pseudologic": "can_break_wall(Evil Spirit Island)"
       }
     ],
@@ -1690,6 +1703,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Evil Spirit Island - Exit",
         "pseudologic": "can_break_wall(Water) || Flight"
       },
       {
@@ -1700,6 +1714,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Evil Spirit Island - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -1760,6 +1775,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Evil Spirit Island - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -1925,6 +1941,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Fog Lamp Cave - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -1935,6 +1952,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Fog Lamp Cave - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -1945,6 +1963,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Fog Lamp Cave - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -1955,6 +1974,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Fog Lamp Cave - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -2052,6 +2072,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "GBC Cave Entrance",
         "pseudologic": "TRUE"
       },
       {
@@ -2062,6 +2083,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "GBC Cave Entrance",
         "pseudologic": "TRUE"
       }
     ],
@@ -2812,6 +2834,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "trade_in(Slime Kensu)"
       }
     ],
@@ -2903,6 +2926,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       },
       {
@@ -2913,6 +2937,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       },
       {
@@ -2923,6 +2948,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       },
       {
@@ -2933,6 +2959,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       },
       {
@@ -2943,6 +2970,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       }
     ],
@@ -2962,6 +2990,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       },
       {
@@ -2972,6 +3001,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       }
     ],
@@ -3086,6 +3116,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Goa Entrance - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -3240,6 +3271,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Kirisa Plant Cave - Entrance",
         "pseudologic": "can_break_wall(Kirisa Plant Cave)"
       }
     ],
@@ -3274,6 +3306,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Kirisa Plant Meadow - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -3444,6 +3477,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Leaf Elder's House - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -3547,6 +3581,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Lighthouse - Exit",
         "pseudologic": "Alarm Flute"
       }
     ],
@@ -3755,6 +3790,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       }
     ],
@@ -3833,6 +3869,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       },
       {
@@ -3843,6 +3880,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       }
     ],
@@ -3877,6 +3915,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       },
       {
@@ -3887,6 +3926,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "can_break_wall(Mado)"
       }
     ],
@@ -3934,6 +3974,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Exit - Downstairs",
         "pseudologic": "TRUE"
       }
     ],
@@ -3991,6 +4032,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "",
         "pseudologic": "TRUE"
       },
       {
@@ -4001,6 +4043,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "",
         "pseudologic": "TRUE"
       }
     ],
@@ -4096,6 +4139,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Hydra - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -4130,6 +4174,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Hydra - Exit",
         "pseudologic": "Flight"
       },
       {
@@ -4140,6 +4185,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Hydra - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -4203,6 +4249,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Hydra - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -4213,6 +4260,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Hydra - Exit",
         "pseudologic": "can_break_wall(Mt. Hydra)"
       }
     ],
@@ -4292,6 +4340,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Mt. Sabre North - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -4419,6 +4468,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Sabre North - Entrance",
         "pseudologic": "can_break_wall(Mt. Sabre North)"
       }
     ],
@@ -4527,6 +4577,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Sabre North - Entrance",
         "pseudologic": "can_break_wall(Mt. Sabre North)"
       }
     ],
@@ -4632,6 +4683,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Sabre North - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -4651,6 +4703,7 @@
         "lossy": true,
         "prevent_loss": true,
         "is_chest": false,
+        "entrance_hint": "Mt. Sabre North - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -4778,6 +4831,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Mt. Sabre West - Main Exit",
         "pseudologic": "trade_in(Tornel)"
       },
       {
@@ -4788,6 +4842,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Sabre West - Main Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -4834,6 +4889,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Sabre West - Main Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -4917,6 +4973,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Sabre West - Main Exit",
         "pseudologic": "can_break_wall(Mt. Sabre West)"
       }
     ],
@@ -4951,6 +5008,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Mt. Sabre West - Main Exit",
         "pseudologic": "can_break_wall(Mt. Sabre West)"
       }
     ],
@@ -5234,6 +5292,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Oak Elder House - Exit",
         "pseudologic": "Telepathy && can_reach(Swamp - Interior) && ((Insect Flute && can_fight(Giant Insect)) || can_reach(Oak Mom House) && can_reach(Oak))"
       }
     ],
@@ -5314,6 +5373,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Oak Mom House - Exit",
         "pseudologic": "Telepathy && can_reach(Swamp - Interior) && can_reach(Oak)"
       }
     ],
@@ -5358,6 +5418,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Oasis Cave - Entrance",
         "pseudologic": "TRUE"
       }
     ],
@@ -5449,6 +5510,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Oasis Cave - Entrance",
         "pseudologic": "Flight"
       },
       {
@@ -5459,6 +5521,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Oasis Cave - Entrance",
         "pseudologic": "TRUE"
       },
       {
@@ -5469,6 +5532,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Oasis Cave - Entrance",
         "pseudologic": "can_break_wall(Water) || Flight"
       }
     ],
@@ -5818,6 +5882,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Portoa Palace - Exit",
         "pseudologic": "can_reach(Mesia) || ((can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)) && (trade_in(Rage) || statue_skip || Paralysis || trigger_skip))"
       }
     ],
@@ -5911,6 +5976,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Portoa Waterway - Exit",
         "pseudologic": "can_reach(Mesia) && can_reach(Asina's Chambers) && buy_healing && (Shell Flute || !vanilla_dolphin)"
       }
     ],
@@ -5957,6 +6023,7 @@
         "lossy": true,
         "prevent_loss": true,
         "is_chest": false,
+        "entrance_hint": "Portoa Waterway - Exit",
         "pseudologic": "Shell Flute && activated_shell_flute"
       }
     ],
@@ -5991,6 +6058,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Power Ring Basement - Exit",
         "pseudologic": "can_break_wall(Power Ring Basement)"
       }
     ],
@@ -6040,6 +6108,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Pyramid - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -6059,6 +6128,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Pyramid - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -6069,6 +6139,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Pyramid - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -6148,6 +6219,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Rage Entrance",
         "pseudologic": "trade_in(Rage)"
       }
     ],
@@ -6258,6 +6330,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Goa Entrance - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -6316,6 +6389,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Entrance - Exit",
         "pseudologic": "can_break_wall(Sabera Item)"
       }
     ],
@@ -6370,6 +6444,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Entrance - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -6380,6 +6455,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Goa Entrance - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -6427,6 +6503,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Sabera's Fortress - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -6437,6 +6514,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Sabera's Fortress - Exit",
         "pseudologic": "can_fight(Vampire 2)"
       }
     ],
@@ -6456,6 +6534,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Sabera's Fortress - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -6503,6 +6582,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Sabera's Fortress - Exit",
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       }
     ],
@@ -6764,6 +6844,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Sealed Cave Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -6774,6 +6855,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Sealed Cave Exit",
         "pseudologic": "Sword"
       }
     ],
@@ -6861,6 +6943,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Sealed Cave Entrance",
         "pseudologic": "TRUE"
       },
       {
@@ -6871,6 +6954,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Sealed Cave Entrance",
         "pseudologic": "can_break_wall(Sealed Cave)"
       },
       {
@@ -6881,6 +6965,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Sealed Cave Entrance",
         "pseudologic": "TRUE"
       },
       {
@@ -6891,6 +6976,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Sealed Cave Entrance",
         "pseudologic": "TRUE"
       }
     ],
@@ -7147,6 +7233,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Shyron Temple - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -7166,6 +7253,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Shyron Temple - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -7247,6 +7335,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Stxy - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -7301,6 +7390,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Stxy - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -7311,6 +7401,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Stxy - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -7321,6 +7412,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Stxy - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -7355,6 +7447,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Stxy - Exit",
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
       },
       {
@@ -7365,6 +7458,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Stxy - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -7442,6 +7536,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Swamp - Entrance",
         "pseudologic": "Insect Flute && (Gas Mask || Hazmat Suit) && can_fight(Giant Insect)"
       }
     ],
@@ -7657,6 +7752,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Swan Dance Hall - Exit",
         "pseudologic": "Paralysis && can_reach(Swan Shed) && can_reach(Swan Pub) && trade_in(Tag Kensu)"
       }
     ],
@@ -7806,6 +7902,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Tornel's House - Exit",
         "pseudologic": "(Sword && !charge_only) || (buy_warp && (can_reach(Leaf) || can_reach(Amazones) || can_reach(Sahara))"
       }
     ],
@@ -7927,6 +8024,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Waterfall Cave - Exit",
         "pseudologic": "can_break_wall(Waterfall Cave)"
       },
       {
@@ -7937,6 +8035,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Waterfall Cave - Exit",
         "pseudologic": "TRUE"
       },
       {
@@ -7947,6 +8046,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Waterfall Cave - Exit",
         "pseudologic": "Flute of Lime"
       }
     ],
@@ -8028,6 +8128,7 @@
         "lossy": false,
         "prevent_loss": false,
         "is_chest": true,
+        "entrance_hint": "Waterfall Cave - Exit",
         "pseudologic": "can_break_wall(Waterfall Cave)"
       }
     ],
@@ -8306,6 +8407,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Windmill Exit",
         "pseudologic": "can_reach(Windmill) && Windmill Key"
       }
     ],
@@ -8379,6 +8481,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Windmill Cave Entrance",
         "pseudologic": "can_reach(Leaf Elder House) && can_reach(Zebu Student's House) && can_reach(Zebu's Cave - Front) && Alarm Flute"
       }
     ],
@@ -8446,6 +8549,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "Zebu Student's House - Exit",
         "pseudologic": "TRUE"
       }
     ],
@@ -8599,6 +8703,7 @@
         "lossy": true,
         "prevent_loss": false,
         "is_chest": false,
+        "entrance_hint": "",
         "pseudologic": "Broken Statue && Glowing Lamp"
       }
     ],

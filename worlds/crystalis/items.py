@@ -4,8 +4,8 @@ import orjson
 from typing import Dict, List, Optional
 import pkgutil
 from BaseClasses import Item, ItemClassification, LocationProgressType
-from .types import CrystalisItemData, CRYSTALIS_BASE_ID, convert_enum_to_item_classification, CrystalisItemCategoryEnum
-from .locations import CrystalisLocation
+from .types import CrystalisItemData, CRYSTALIS_BASE_ID, convert_enum_to_item_classification, CrystalisItemCategoryEnum, \
+    CrystalisLocation
 from Fill import fast_fill
 
 

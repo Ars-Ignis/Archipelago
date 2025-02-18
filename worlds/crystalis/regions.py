@@ -1,7 +1,7 @@
 import logging
 from BaseClasses import Region, ItemClassification, EntranceType, Entrance
-from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntranceData, CrystalisEntranceTypeEnum
-from .locations import CrystalisLocation, create_location_from_location_data
+from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntranceData, CrystalisEntranceTypeEnum, \
+    CRYSTALIS_BASE_ID, CrystalisLocation
 from .items import CrystalisItem
 import orjson
 from typing import Dict, List, Set, NamedTuple, Tuple
@@ -16,24 +16,26 @@ except ImportError:
                     "be turned off.")
 
 
-HOUSE_SHUFFLE_TYPES = [CrystalisEntranceTypeEnum.HOUSE_ENTRANCE,
-                       CrystalisEntranceTypeEnum.HOUSE_EXIT,
-                       CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE,
-                       CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT,
-                       CrystalisEntranceTypeEnum.SHED_ENTRANCE,
-                       CrystalisEntranceTypeEnum.SHED_EXIT,
-                       CrystalisEntranceTypeEnum.EXT_ENTRANCE,
-                       CrystalisEntranceTypeEnum.EXT_EXIT]
-AREA_SHUFFLE_TYPES =  [CrystalisEntranceTypeEnum.OW_UP,
-                       CrystalisEntranceTypeEnum.OW_DOWN,
-                       CrystalisEntranceTypeEnum.OW_LEFT,
-                       CrystalisEntranceTypeEnum.OW_RIGHT,
-                       CrystalisEntranceTypeEnum.CAVE_ENTRANCE,
-                       CrystalisEntranceTypeEnum.CAVE_EXIT,
-                       CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE,
-                       CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT,
-                       CrystalisEntranceTypeEnum.PALACE_AREA_ENTRANCE,
-                       CrystalisEntranceTypeEnum.PALACE_AREA_EXIT]
+HOUSE_SHUFFLE_TYPES = frozenset([CrystalisEntranceTypeEnum.HOUSE_ENTRANCE,
+                                 CrystalisEntranceTypeEnum.HOUSE_EXIT,
+                                 CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE,
+                                 CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT,
+                                 CrystalisEntranceTypeEnum.SHED_ENTRANCE,
+                                 CrystalisEntranceTypeEnum.SHED_EXIT,
+                                 CrystalisEntranceTypeEnum.EXT_ENTRANCE,
+                                 CrystalisEntranceTypeEnum.EXT_EXIT])
+
+AREA_SHUFFLE_TYPES = frozenset([CrystalisEntranceTypeEnum.OW_UP,
+                                CrystalisEntranceTypeEnum.OW_DOWN,
+                                CrystalisEntranceTypeEnum.OW_LEFT,
+                                CrystalisEntranceTypeEnum.OW_RIGHT,
+                                CrystalisEntranceTypeEnum.CAVE_ENTRANCE,
+                                CrystalisEntranceTypeEnum.CAVE_EXIT,
+                                CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE,
+                                CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT,
+                                CrystalisEntranceTypeEnum.PALACE_AREA_ENTRANCE,
+                                CrystalisEntranceTypeEnum.PALACE_AREA_EXIT])
+
 SHUFFLE_GROUPING = {
     CrystalisEntranceTypeEnum.OW_UP: [CrystalisEntranceTypeEnum.OW_DOWN],
     CrystalisEntranceTypeEnum.OW_DOWN: [CrystalisEntranceTypeEnum.OW_UP],
@@ -56,6 +58,7 @@ SHUFFLE_GROUPING = {
     CrystalisEntranceTypeEnum.PALACE_AREA_EXIT: [CrystalisEntranceTypeEnum.PALACE_AREA_ENTRANCE,
                                                  CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE]
 }
+
 GBC_CAVE_NAMES = [
     "Cordel Plains - Main - Added Cave",
     "Lime Valley - Added Cave",
@@ -72,6 +75,7 @@ LIME_PASSAGE_NAMES = [
     "Lime Valley - West"
 ]
 
+
 def load_region_data_from_json() -> Dict[str, CrystalisRegionData]:
     return orjson.loads(pkgutil.get_data(__name__, "data/regions.json").decode("utf-8-sig"))
 
@@ -79,14 +83,14 @@ def load_region_data_from_json() -> Dict[str, CrystalisRegionData]:
 regions_data_json = load_region_data_from_json()
 regions_data: Dict[str, CrystalisRegionData] = {}
 entrances_data: Dict[str, CrystalisEntranceData] = {}
-#convert to actual type
+# convert to actual type
 for key, value in regions_data_json.items():
     region_locations_data: List[CrystalisLocationData] = []
     for location_data in value["locations"]:
         new_loc = CrystalisLocationData(location_data["name"], location_data["rom_id"],
                                         location_data["ap_id_offset"], location_data["unique"],
                                         location_data["lossy"], location_data["prevent_loss"],
-                                        location_data["is_chest"])
+                                        location_data["is_chest"], location_data["entrance_hint"])
         region_locations_data.append(new_loc)
     new_entrance_data: List[CrystalisEntranceData] = []
     for entrance_data in value["entrances"]:
@@ -104,16 +108,20 @@ for key, value in regions_data_json.items():
 
 
 def create_regions(self) -> None:
-    #first make regions and locations
-    #need to cache while still creating regions before appending them to the multiworld
+    # first make regions and locations
+    # need to cache while still creating regions before appending them to the multiworld
     local_region_cache = {}
     self.locations_data = []
+    self.goa_locations_by_floor = {"Kelbsque": [], "Sabera": [], "Mado": [], "Karmine": []}
     for region_data in regions_data.values():
         if self.options.vanilla_maps != self.options.vanilla_maps.option_GBC_cave and "GBC" in region_data.name:
             # don't add GBC cave regions, locations, and entrances
             continue
         region = Region(region_data.name, self.player, self.multiworld)
         local_region_cache[region_data.name] = region
+        goa_floor_name: str = ""
+        if "'s Floor" in region.name:
+            goa_floor_name = region.name.partition("'")[0]
         for location_data in region_data.locations:
             if not self.options.shuffle_areas and not self.options.shuffle_houses and "Mezame" in location_data.name:
                 # Mezame Shrine chests only exist if areas or houses are shuffled, to grow sphere 1
@@ -126,7 +134,18 @@ def create_regions(self) -> None:
                 continue
             # now that we know the location exists, add it to the multiworld
             self.locations_data.append(location_data)
-            location: CrystalisLocation = create_location_from_location_data(self.player, location_data, region)
+            entrance_hint: str = location_data.entrance_hint
+            if goa_floor_name:
+                if goa_floor_name in self.goa_lower_floors:
+                    entrance_hint = "Goa Entrance - Exit"
+                elif goa_floor_name in self.goa_upper_floors:
+                    entrance_hint = "Goa Exit - Downstairs"
+                else:
+                    logging.warning(f"Crystalis: Location \"{location_data.name}\" has associated Goa Floor "
+                                    f"\"{goa_floor_name} that isn't in Goa lower floors or Goa upper floors.")
+            location: CrystalisLocation = CrystalisLocation(self.player, location_data.name,
+                                                            location_data.ap_id_offset + CRYSTALIS_BASE_ID, region,
+                                                            entrance_hint)
             region.locations.append(location)
             if self.options.dont_shuffle_mimics and "Mimic" in location_data.name:
                 location.place_locked_item(self.create_item("Mimic"))
@@ -211,11 +230,11 @@ def create_regions(self) -> None:
                 else:
                     region.connect(target_region, entrance_data.name)
             self.multiworld.regions.append(region)
-    #add conditional entrances
+    # add conditional entrances
     if self.options.no_bow_mode:
-        #tower shortcut for Rb
-        #technically the normal path to Tower should be removed, but it should be redundant in all cases
-        #famous last words lmao
+        # tower shortcut for Rb
+        # technically the normal path to Tower should be removed, but it should be redundant in all cases
+        # famous last words lmao
         mezame_shrine = local_region_cache["Mezame Shrine"]
         pre_draygon = local_region_cache["Crypt - Pre-Draygon"]
         mezame_shrine.connect(pre_draygon, "Draygon 2 Shortcut")
@@ -246,7 +265,7 @@ def create_regions(self) -> None:
             if warp_name not in warp_names:
                 warp_region = local_region_cache[warp_name]
                 menu_region.connect(warp_region, "Wild Warp to " + warp_name)
-                #avoid making redundant entrances
+                # avoid making redundant entrances
                 warp_names.add(warp_name)
 
     # make some events
@@ -287,7 +306,7 @@ def create_regions(self) -> None:
                                                                 ItemClassification.progression, None, player))
     region_for_flute_activation.locations.append(activate_shell_flute_location)
 
-        # Story Mode Events
+    # Story Mode Events
     if self.options.story_mode:
         # getting to these regions means you've beaten the boss
         kelby_1_region = self.get_region("Mt. Sabre North - Boss Arena")
@@ -331,8 +350,9 @@ def create_regions(self) -> None:
         draygon_1_victory.place_locked_item(draygon_1_flag)
         draygon_1_region.locations.append(draygon_1_victory)
 
+
 def shuffle_goa(self) -> Dict[str, str]:
-    #not every Goa Transition can point to every other Goa transition, so we have this complicated algorithm
+    # not every Goa Transition can point to every other Goa transition, so we have this complicated algorithm
     class GoaEntranceData(NamedTuple):
         entrance_name: str
         region_name: str
@@ -341,7 +361,6 @@ def shuffle_goa(self) -> Dict[str, str]:
 
     floor_indicies: List[int] = [0, 1, 2, 3]
     self.random.shuffle(floor_indicies)
-
     original_entrances: List[GoaEntranceData] = [
         GoaEntranceData("Kelbesque's Floor - Entrance", "Kelbesque's Floor - Front", False, False),
         GoaEntranceData("Sabera's Floor - Entrance", "Sabera's Floor - Front", False, True),
@@ -354,6 +373,10 @@ def shuffle_goa(self) -> Dict[str, str]:
         GoaEntranceData("Mado's Floor - Exit", "Mado's Floor - Back", True, True),
         GoaEntranceData("Karmine's Floor - Exit", "Karmine's Floor - Back", False, True)
     ]
+    self.goa_lower_floors = set([original_entrances[floor_indicies[0]].entrance_name.partition("'")[0],
+                                 original_entrances[floor_indicies[1]].entrance_name.partition("'")[0]])
+    self.goa_upper_floors = set([original_entrances[floor_indicies[2]].entrance_name.partition("'")[0],
+                                 original_entrances[floor_indicies[3]].entrance_name.partition("'")[0]])
     shuffled_entrances: List[GoaEntranceData] = []
     shuffled_exits: List[GoaEntranceData] = [GoaEntranceData("Goa Entrance - Stairs", "Goa Entrance - Behind Wall",
                                                              True, False)]

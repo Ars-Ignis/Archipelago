@@ -1,9 +1,9 @@
 import logging
 from dataclasses import dataclass
-from BaseClasses import ItemClassification
+from BaseClasses import ItemClassification, Location
 from Utils import Version
 from enum import IntEnum
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Tuple
 
 CRYSTALIS_BASE_ID: int = 2241000
 CRYSTALIS_APWORLD_VERSION: Version = Version(2, 0, 0)
@@ -301,6 +301,7 @@ class CrystalisLocationData:
     lossy: bool
     prevent_loss: bool
     is_chest: bool
+    entrance_hint: str
 
 
 @dataclass
@@ -352,3 +353,12 @@ class CrystalisShuffleData:
     wildwarps: List[int]
     goa_connection_map: Dict[str, str]
     er_pairings: Dict[str, str]
+
+
+class CrystalisLocation(Location):
+    game: str = "Crystalis"
+    entrance_hint: str
+
+    def __init__(self, player: int, name="", code=None, parent=None, entrance_hint="") -> None:
+        super(CrystalisLocation, self).__init__(player, name, code, parent)
+        self.entrance_hint = entrance_hint
