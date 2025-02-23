@@ -155,14 +155,18 @@ def create_item(self, name: str) -> "Item":
                                                                   self.options.battle_magic_not_guaranteed and \
                                                                   not self.options.randomize_tradeins \
                                                                   else CrystalisItemCategoryEnum.PROGRESSION
-        elif item_data.name == "Shield Ring":
+        elif name == "Shield Ring":
             actual_category = CrystalisItemCategoryEnum.USEFUL if not self.options.barrier_not_guaranteed \
                                                                   else CrystalisItemCategoryEnum.PROGRESSION
-        elif item_data.name == "Refresh":
+        elif name == "Refresh":
             actual_category = CrystalisItemCategoryEnum.USEFUL if not self.options.barrier_not_guaranteed and \
                                                                   not self.options.gas_mask_not_guaranteed and \
                                                                   not self.options.guarantee_refresh \
                                                                   else CrystalisItemCategoryEnum.PROGRESSION
+        elif name == "Sword of Thunder":
+            actual_category = CrystalisItemCategoryEnum.PROGUSEFUL \
+                if self.options.thunder_warp.value == self.options.thunder_warp.option_none \
+                else CrystalisItemCategoryEnum.PROGUSEFULTRAP
     return CrystalisItem(name, convert_enum_to_item_classification(actual_category), item_data.ap_id_offset +
                          CRYSTALIS_BASE_ID, self.player)
 
