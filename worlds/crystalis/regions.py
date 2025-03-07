@@ -1,7 +1,7 @@
 import logging
 from BaseClasses import Region, ItemClassification, EntranceType, Entrance
 from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntranceData, CrystalisEntranceTypeEnum, \
-    CRYSTALIS_BASE_ID, CrystalisLocation
+    CRYSTALIS_BASE_ID, CrystalisLocation, ENTRANCE_COLORINGS
 from .items import CrystalisItem
 import orjson
 from typing import Dict, List, Set, NamedTuple, Tuple
@@ -9,7 +9,7 @@ import pkgutil
 from worlds.generic.Rules import set_rule
 
 try:
-    from entrance_rando import randomize_entrances, EntranceRandomizationError
+    from entrance_rando import randomize_entrances, EntranceRandomizationError, disconnect_entrance_for_randomization
 except ImportError:
     logging.warning("Generic Entrance Randomizer not found in core code; please run this apworld against a version of"
                     "Archipelago greater than 0.5.1 to support shuffle_houses and shuffle_areas. These options will"
@@ -617,10 +617,30 @@ def connect_entrances(self):
                     self.multiworld.register_indirect_condition(windmill_reg, entrance_to_lock)
     # now that all the prep is done, let GER handle the rest
     if self.options.shuffle_areas or self.options.shuffle_houses:
-        er_state = randomize_entrances(self, True, SHUFFLE_GROUPING)
-        self.shuffle_data.er_pairings |= er_state.pairings
-        # if self.player == 1:
-        #     from Utils import visualize_regions
-        #     visualize_regions(self.multiworld.get_region("Menu", self.player), f"World {self.player}.puml",
-        #                       show_entrance_names=False, show_other_regions=True)
-        #     logging.info(self.shuffle_data.er_pairings)
+        MAX_ATTEMPTS: int = 10
+        available_shuffle_types: Set[CrystalisEntranceTypeEnum] = set()
+        if self.options.shuffle_areas:
+            available_shuffle_types |= AREA_SHUFFLE_TYPES
+        if self.options.shuffle_houses:
+            available_shuffle_types |= HOUSE_SHUFFLE_TYPES
+        for i in range(MAX_ATTEMPTS):
+            try:
+                er_state = randomize_entrances(self, True, SHUFFLE_GROUPING)
+                self.shuffle_data.er_pairings |= er_state.pairings
+                break
+            except EntranceRandomizationError as error:
+                # from Utils import visualize_regions
+                # visualize_regions(self.multiworld.get_region("Menu", self.player), f"Attempt {i+1}.puml",
+                # show_entrance_names=False, show_other_regions=True, entrance_highlighting=ENTRANCE_COLORINGS,
+                # detail_other_regions=True)
+                if i >= MAX_ATTEMPTS - 1:
+                    raise EntranceRandomizationError(f"Crystalis: failed GER after {MAX_ATTEMPTS} attempts. Final error"
+                                                     f" here: \n\n{error}")
+                # need to disconnect all entrances that are supposed to be shuffled
+                for region in self.get_regions():
+                    for _exit in region.get_exits():
+                        if (_exit.randomization_group in available_shuffle_types
+                                and _exit.parent_region
+                                and _exit.connected_region
+                                and _exit.name not in self.shuffle_data.er_pairings):
+                            disconnect_entrance_for_randomization(_exit, _exit.randomization_group)

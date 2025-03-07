@@ -358,6 +358,28 @@ class CrystalisShuffleData:
     er_pairings: Dict[str, str]
 
 
+ENTRANCE_COLORINGS: Dict[int, int] = {
+    CrystalisEntranceTypeEnum.STATIC: 0x000000,
+    CrystalisEntranceTypeEnum.OW_UP: 0x00FFFF,
+    CrystalisEntranceTypeEnum.OW_DOWN: 0x00AAAA,
+    CrystalisEntranceTypeEnum.OW_LEFT: 0xFF00FF,
+    CrystalisEntranceTypeEnum.OW_RIGHT: 0xAA00AA,
+    CrystalisEntranceTypeEnum.CAVE_ENTRANCE: 0xFF0000,
+    CrystalisEntranceTypeEnum.CAVE_EXIT: 0xAA0000,
+    CrystalisEntranceTypeEnum.HOUSE_ENTRANCE: 0x00FF00,
+    CrystalisEntranceTypeEnum.HOUSE_EXIT: 0x00AA00,
+    CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE: 0x0000FF,
+    CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT: 0x0000AA,
+    CrystalisEntranceTypeEnum.PALACE_AREA_ENTRANCE: 0x0000FF,
+    CrystalisEntranceTypeEnum.PALACE_AREA_EXIT: 0x0000AA,
+    CrystalisEntranceTypeEnum.SHED_ENTRANCE: 0xFFFF00,
+    CrystalisEntranceTypeEnum.SHED_EXIT: 0xAAAA00,
+    CrystalisEntranceTypeEnum.EXT_ENTRANCE: 0xF0F0F0,
+    CrystalisEntranceTypeEnum.EXT_EXIT: 0xA0A0A0,
+    CrystalisEntranceTypeEnum.GOA_TRANSITION: 0x000000
+}
+
+
 class CrystalisLocation(Location):
     game: str = "Crystalis"
     entrance_hint: str
