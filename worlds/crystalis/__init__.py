@@ -4,19 +4,15 @@ from dataclasses import asdict
 from BaseClasses import Tutorial, MultiWorld, Entrance
 from Options import OptionError
 from Utils import VersionException, tuplize_version
-from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
-from .regions import regions_data, create_regions, shuffle_goa, connect_entrances, entrances_data, HOUSE_SHUFFLE_TYPES, \
-    AREA_SHUFFLE_TYPES
-from .options import CrystalisOptions, crystalis_option_groups
+from .constants import *
 from .types import *
+from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
+from .regions import regions_data, create_regions, shuffle_goa, connect_entrances, entrances_data
+from .options import CrystalisOptions, crystalis_option_groups
 from .logic import set_rules
 from .output import generate_output, write_spoiler_header, extend_hint_information
 from .client import CrystalisClient  # Unused, but required to register with BizHawkClient
 from worlds.AutoWorld import World, WebWorld
-
-
-WARP_MINIMUM = 4
-WARP_MAXIMUM = 15
 
 
 class CrystalisWeb(WebWorld):
@@ -87,14 +83,14 @@ class CrystalisWorld(World):
             else:
                 item_name_groups[group] = {item.name}
 
-
     @classmethod
     def stage_generate_early(cls, multiworld: MultiWorld) -> None:
         if "Mega Man 2" in multiworld.game.values():
             from worlds.mm2.color import add_color_to_mm2
             for item in items_data.values():
                 if item.palette == CrystalisItemPaletteEnum.RANDOM:
-                    add_color_to_mm2(item.name, convert_enum_to_palette(multiworld.random.randint(0,8)))
+                    add_color_to_mm2(item.name,
+                                     convert_enum_to_palette(CrystalisItemPaletteEnum(multiworld.random.randint(0, 8))))
                 else:
                     add_color_to_mm2(item.name, convert_enum_to_palette(item.palette))
 
@@ -245,9 +241,9 @@ class CrystalisWorld(World):
                                                          shuffle_dict["shop_inventories"], shuffle_dict["wildwarps"],
                                                          shuffle_dict["goa_connection_map"], shuffle_dict["er_pairings"])
                 # goa upper floors vs. goa lower floors doesn't matter for UT, so use default values
-                self.goa_lower_floors = set(["Kelbesque", "Sabera"])
-                self.goa_upper_floors = set(["Mado", "Karmine"])
-                return # bail early, we don't need the rest of this lmao
+                self.goa_lower_floors = {"Kelbesque", "Sabera"}
+                self.goa_upper_floors = {"Mado", "Karmine"}
+                return  # bail early, we don't need the rest of this lmao
 
         # walls first
         wall_weaknesses: List[str] = []
@@ -326,8 +322,8 @@ class CrystalisWorld(World):
             valid_wildwarps: List[int] = list(self.wild_warp_id_to_region.keys())
             warp_count: int = 0
             if self.options.vanilla_maps != self.options.vanilla_maps.option_GBC_cave:
-                for id in regions_data["GBC Cave - Main"].wildwarpIds:
-                    valid_wildwarps.remove(id)
+                for wildwarp_id in regions_data["GBC Cave - Main"].wildwarpIds:
+                    valid_wildwarps.remove(wildwarp_id)
             if self.options.wild_warp_plando.value:
                 if len(self.options.wild_warp_plando.value) > WARP_MAXIMUM:
                     raise OptionError(f"Crystalis - too many warp locations in wild_warp_plando for player "
@@ -347,7 +343,7 @@ class CrystalisWorld(World):
                 warp_count = self.random.randint(WARP_MINIMUM, WARP_MAXIMUM)
             if warp_count:
                 wildwarps.extend(self.random.sample(list(valid_wildwarps), k=warp_count))
-        wildwarps.append(0) # always have a warp for Mezame Shrine at the end
+        wildwarps.append(0)  # always have a warp for Mezame Shrine at the end
         # shuffle goa if necessary
         goa_connection_map: Dict[str, str]
         if self.options.shuffle_goa:
@@ -365,8 +361,8 @@ class CrystalisWorld(World):
                 "Karmine's Floor - Exit": "Goa Exit",
                 "Goa Exit - Upstairs": "Karmine's Floor - Back"
             }
-            self.goa_lower_floors = set(["Kelbesque", "Sabera"])
-            self.goa_upper_floors = set(["Mado", "Karmine"])
+            self.goa_lower_floors = {"Kelbesque", "Sabera"}
+            self.goa_upper_floors = {"Mado", "Karmine"}
         er_pairings: Dict[str, str] = {}
         if self.options.plando_connections:
             allowed_entrance_types: Set[CrystalisEntranceTypeEnum] = set()

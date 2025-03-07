@@ -1,40 +1,16 @@
-from typing import TYPE_CHECKING, List, Dict, Tuple
 from time import time
-
-from NetUtils import ClientStatus, NetworkItem
-from Utils import async_start, VersionException, Version, tuplize_version
+from typing import TYPE_CHECKING
 
 import worlds._bizhawk as bizhawk
+from NetUtils import ClientStatus, NetworkItem
+from Utils import async_start, VersionException, tuplize_version
 from worlds._bizhawk.client import BizHawkClient
+from .constants import *
 from .items import items_data_by_id, items_data
 from .regions import regions_data
-from .types import CRYSTALIS_BASE_ID, CRYSTALIS_APWORLD_VERSION
 
 if TYPE_CHECKING:
     from worlds._bizhawk.context import BizHawkClientContext, BizHawkClientCommandProcessor
-
-LOCATION_FLAGS_ADDR = 0x64A0
-ITEM_FLAGS_ADDR = 0x64C0
-RECEIVED_INDEX_ADDR = 0x657D
-START_OF_CONSUMABLE_INV_ADDR = 0x6440
-END_OF_CONSUMABLE_INV_ADDR = 0x6447
-GET_ITEM_FLAG_ADDR = 0x657B
-MAIN_LOOP_MODE_ADDR = 0x40
-GAME_MODE_ADDR = 0x41
-CRYSTALIS_ITEM_ID = 0x04
-CURRENT_LOCATION_ADDR = 0x6C
-HP_ADDR = 0x3C1
-SCREEN_LOCK_ADDR = 0x07D7
-AP_ROM_LABEL_ADDR = 0x25715
-EXPECTED_START: List[bytes] = [bytes([0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9])]
-AP_ROM_LABEL: List[bytes] = [bytes([0x41, 0x52, 0x43, 0x48, 0x49, 0x50, 0x45, 0x4C, 0x41, 0x47, 0x4F])]
-ASINA_LOCATION_ID: int = CRYSTALIS_BASE_ID + 57
-WHIRLPOOL_LOCATION_ID: int = CRYSTALIS_BASE_ID + 58
-ITERATIONS_TO_MATCH: int = 1
-GAME_MODE_DEATH: int = 3
-GAME_MODE_NORMAL: int = 8
-GAME_MODE_DYNA_DEFEATED: int = 0x1E
-MAIN_LOOP_GAME: int = 1
 
 
 def cmd_deathlink(self: "BizHawkClientCommandProcessor") -> None:
@@ -52,8 +28,6 @@ def cmd_deathlink(self: "BizHawkClientCommandProcessor") -> None:
             logger.info("Death Link is now enabled.")
 
 
-
-
 class CrystalisClient(BizHawkClient):
     game = "Crystalis"
     system = "NES"
@@ -67,6 +41,8 @@ class CrystalisClient(BizHawkClient):
     pending_death_link: bool = False
     is_dying: bool = False
     last_death_link: float = time()
+    asina_location_id: int = -1
+    whirlpool_location_id: int = -1
 
     def __init__(self):
         super().__init__()
@@ -75,6 +51,10 @@ class CrystalisClient(BizHawkClient):
                 byte: int = location.rom_id // 8
                 bit: int = location.rom_id % 8
                 self.loc_id_to_addr[location.ap_id_offset + CRYSTALIS_BASE_ID] = (byte, bit)
+                if location.name == ASINA_LOCATION_NAME:
+                    self.asina_location_id = location.ap_id_offset + CRYSTALIS_BASE_ID
+                elif location.name == WHIRLPOOL_LOCATION_ID:
+                    self.whirlpool_location_id = location.ap_id_offset + CRYSTALIS_BASE_ID
 
     async def validate_rom(self, ctx: "BizHawkClientContext") -> bool:
         from CommonClient import logger
@@ -119,7 +99,7 @@ class CrystalisClient(BizHawkClient):
                 self.unidentified_item_rom_ids[items_data[new_name].ap_id_offset + CRYSTALIS_BASE_ID] = \
                     items_data[original_name].rom_id
             async_start(ctx.send_msgs([{"cmd": "Get",
-                                  "keys": [f"asina_hint_collected_{ctx.team}_{ctx.slot}"]}]))
+                                        "keys": [f"asina_hint_collected_{ctx.team}_{ctx.slot}"]}]))
             if "death_link" in ctx.slot_data.keys():
                 async_start(ctx.update_death_link(ctx.slot_data["death_link"]))
             else:
@@ -154,9 +134,9 @@ class CrystalisClient(BizHawkClient):
                         self.pending_death_link = False
                     elif self.pending_death_link:
                         await bizhawk.guarded_write(ctx.bizhawk_ctx,
-                                                       [(HP_ADDR, [0], "System Bus")],
-                                                       [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus")])
-                        return # might as well bail now
+                                                    [(HP_ADDR, [0], "System Bus")],
+                                                    [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus")])
+                        return  # might as well bail now
                     location_flags = read_value[0]
                     if location_flags == self.prev_location_flags:
                         if self.iterations_matched >= ITERATIONS_TO_MATCH:
@@ -169,27 +149,27 @@ class CrystalisClient(BizHawkClient):
 
                             if locations_to_send:
                                 await ctx.send_msgs([{
-                                        "cmd": "LocationChecks",
-                                        "locations": list(locations_to_send)
-                                    }])
-                                return # Bail now to keep this loop short
+                                    "cmd": "LocationChecks",
+                                    "locations": list(locations_to_send)
+                                }])
+                                return  # Bail now to keep this loop short
 
                             if not self.asina_hint_collected:
-                                byte, bit = self.loc_id_to_addr[ASINA_LOCATION_ID]
+                                byte, bit = self.loc_id_to_addr[self.asina_location_id]
                                 if location_flags[byte] & (1 << bit):
                                     self.asina_hint_collected = True
                                     await ctx.send_msgs([{
                                         "cmd": "LocationScouts",
-                                        "locations": [WHIRLPOOL_LOCATION_ID],
+                                        "locations": [self.whirlpool_location_id],
                                         "create_as_hint": 2
                                     },
-                                    {
-                                        "cmd": "Set",
-                                        "key": f"asina_hint_collected_{ctx.team}_{ctx.slot}",
-                                        "default": True,
-                                        "want_reply": False,
-                                        "operations": [{"operation": "replace", "value": True}]
-                                }])
+                                        {
+                                            "cmd": "Set",
+                                            "key": f"asina_hint_collected_{ctx.team}_{ctx.slot}",
+                                            "default": True,
+                                            "want_reply": False,
+                                            "operations": [{"operation": "replace", "value": True}]
+                                        }])
                         else:
                             self.iterations_matched += 1
                     else:
@@ -200,11 +180,9 @@ class CrystalisClient(BizHawkClient):
                     item_flags: bytes = read_value[1]
                     received_crystalis: bool = item_flags[0] & 16 != 0
                     if not get_item_flag and not received_crystalis and location_flags[0] & 16 != 0:
-                        success: bool = await bizhawk.guarded_write(ctx.bizhawk_ctx,
-                                                        [(GET_ITEM_FLAG_ADDR, [1, CRYSTALIS_ITEM_ID], "System Bus")],
-                                                        [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus")])
-                        if success:
-                            self.received_crystalis = True
+                        await bizhawk.guarded_write(ctx.bizhawk_ctx,
+                                                    [(GET_ITEM_FLAG_ADDR, [1, CRYSTALIS_SWORD_ITEM_ID], "System Bus")],
+                                                    [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus")])
                     received_indices: bytes = read_value[2]
                     nonconsumable_index: int = received_indices[0]
                     consumable_index: int = received_indices[1]
@@ -212,12 +190,12 @@ class CrystalisClient(BizHawkClient):
                     if new_location != self.current_location:
                         self.current_location = new_location
                         async_start(ctx.send_msgs([{
-                                    "cmd": "Set",
-                                    "key": f"current_location_{ctx.team}_{ctx.slot}",
-                                    "default": 0,
-                                    "want_reply": False,
-                                    "operations": [{"operation": "replace", "value": new_location}]
-                                }]), name="send current_location")
+                            "cmd": "Set",
+                            "key": f"current_location_{ctx.team}_{ctx.slot}",
+                            "default": 0,
+                            "want_reply": False,
+                            "operations": [{"operation": "replace", "value": new_location}]
+                        }]), name="send current_location")
                     # if we're not already processing an item and we're not in Mezame Shrine...
                     # Prevent receiving items in Mezame Shrine to make reloading saves for asyncs a bit smoother.
                     if not get_item_flag and self.current_location != 0:
@@ -238,11 +216,12 @@ class CrystalisClient(BizHawkClient):
                                     else item_flags[byte] & (0xFF ^ (1 << bit))
 
                                 await bizhawk.guarded_write(ctx.bizhawk_ctx,
-                                                        [(RECEIVED_INDEX_ADDR, [nonconsumable_index + 1], "System Bus"),
-                                                         (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
-                                                         (ITEM_FLAGS_ADDR + byte, [item_flag_byte], "System Bus")],
-                                                        [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus"),
-                                                         (SCREEN_LOCK_ADDR, [0], "System Bus")])
+                                                            [(RECEIVED_INDEX_ADDR, [nonconsumable_index + 1],
+                                                              "System Bus"),
+                                                             (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
+                                                             (ITEM_FLAGS_ADDR + byte, [item_flag_byte], "System Bus")],
+                                                            [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus"),
+                                                             (SCREEN_LOCK_ADDR, [0], "System Bus")])
                             else:
                                 consumables = [item for item in ctx.items_received if
                                                items_data_by_id[item.item].groups == ["Consumable"]]
@@ -253,12 +232,14 @@ class CrystalisClient(BizHawkClient):
                                     bit: int = item_id % 8
                                     item_flag_byte: byte = item_flags[byte] & (0xFF ^ (1 << bit))
                                     await bizhawk.guarded_write(ctx.bizhawk_ctx,
-                                                       [(RECEIVED_INDEX_ADDR + 1, [consumable_index + 1], "System Bus"),
-                                                        (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
-                                                        (ITEM_FLAGS_ADDR + byte, [item_flag_byte], "System Bus")],
-                                                       [(END_OF_CONSUMABLE_INV_ADDR, [0xFF], "System Bus"),
-                                                        (MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus"),
-                                                        (SCREEN_LOCK_ADDR, [0], "System Bus")])
+                                                                [(RECEIVED_INDEX_ADDR + 1, [consumable_index + 1],
+                                                                  "System Bus"),
+                                                                 (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
+                                                                 (ITEM_FLAGS_ADDR + byte, [item_flag_byte],
+                                                                  "System Bus")],
+                                                                [(END_OF_CONSUMABLE_INV_ADDR, [0xFF], "System Bus"),
+                                                                 (MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus"),
+                                                                 (SCREEN_LOCK_ADDR, [0], "System Bus")])
                 elif game_mode == GAME_MODE_DYNA_DEFEATED and not ctx.finished_game:
                     await ctx.send_msgs([{
                         "cmd": "StatusUpdate",
@@ -276,5 +257,3 @@ class CrystalisClient(BizHawkClient):
         except bizhawk.RequestFailedError:
             # Exit handler and return to main loop to reconnect.
             pass
-
-

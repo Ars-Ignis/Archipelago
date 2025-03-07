@@ -1,10 +1,9 @@
-import logging
-
 import orjson
-from typing import Dict, List, Optional
+from typing import Optional
 import pkgutil
-from BaseClasses import Item, ItemClassification, LocationProgressType
-from .types import CrystalisItemData, CRYSTALIS_BASE_ID, convert_enum_to_item_classification, CrystalisItemCategoryEnum, \
+from BaseClasses import Item, LocationProgressType
+from .constants import *
+from .types import CrystalisItemData, convert_enum_to_item_classification, CrystalisItemCategoryEnum, \
     CrystalisLocation
 from Fill import fast_fill
 
@@ -65,7 +64,7 @@ class CrystalisItem(Item):
         super(CrystalisItem, self).__init__(name, classification, code, player)
 
 
-def unidentify_items(self) -> Dict[str, str]:
+def unidentify_items(self: "CrystalisWorld") -> Dict[str, str]:
     keys: List[str] = []
     flutes: List[str] = []
     lamps: List[str] = []
@@ -211,7 +210,7 @@ def create_items(self) -> None:
         self.multiworld.itempool.append(sword)
         items_created += 1
     locations_count = len([location for location in self.multiworld.get_locations(self.player)
-                               if location.address is not None and location.item is None])
+                           if location.address is not None and location.item is None])
     if items_created < locations_count:
         logging.debug(f"Crystalis: Fewer items ({items_created}) than empty locations ({locations_count}).")
         logging.debug(f"Crystalis: creating {locations_count - items_created} extra Medical Herbs.")
