@@ -1,12 +1,12 @@
-from dataclasses import dataclass
 from Options import Choice, Toggle, PerGameCommonOptions, DeathLink, DeathLinkMixin, OptionGroup, StartInventoryPool, \
     Visibility, PlandoConnections, OptionDict, OptionList
-from .regions import entrances_data, SHUFFLE_GROUPING
-from .types import CrystalisEntranceTypeEnum, ELEMENTS, BOSS_NAMES, WALL_NAMES, TRADE_IN_NPCS, SHOP_INVENTORIES, \
-    CrystalisItemCategoryEnum, SCREEN_NAMES_TO_IDS
+from .constants import *
+from .regions import entrances_data
+from .types import CrystalisEntranceTypeEnum, CrystalisItemCategoryEnum
 from .items import items_data
 from schema import And, Schema, Optional
 from typing import List
+
 
 # World Options
 class RandomizeMaps(Toggle):
@@ -50,7 +50,6 @@ class RandomizeTradeInItems(Toggle):
     """
     display_name = "Randomize trade-in items (Wt)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "W", "t"
@@ -60,7 +59,6 @@ class RandomizeTradeInItems(Toggle):
 class UnidentifiedKeyItems(Toggle):
     """Item names will be generic and effects will be shuffled. This includes keys, flutes, lamps, and statues."""
     display_name = "Unidentified key items (Wu)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -76,7 +74,6 @@ class RandomizeWallElements(Toggle):
     """
     display_name = "Randomize elements to break walls (We)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "W", "e"
@@ -86,7 +83,6 @@ class RandomizeWallElements(Toggle):
 class ShuffleGoa(Toggle):
     """The four areas of Goa fortress will appear in a random order."""
     display_name = "Shuffle Goa fortress floors (Wg)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -98,7 +94,6 @@ class RandomizeSpriteColors(Toggle):
     """Monsters and NPCs will have different colors."""
     display_name = "Randomize sprite colors (Ws)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "W", "s"
@@ -108,7 +103,6 @@ class RandomizeSpriteColors(Toggle):
 class RandomizeWildWarp(Toggle):
     """Wild warp will go to Mezame Shrine and 15 other random locations. These locations will be considered in-logic."""
     display_name = "Randomize wild warp (Ww)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -121,18 +115,17 @@ class StoryMode(Toggle):
     """Draygon 2 won't spawn unless you have all four swords and have defeated all major bosses of the tetrarchy."""
     display_name = "Story Mode (Rs)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "R", "s"
         return "", ""
+
 
 class NoBowMode(Toggle):
     """No items are required to finish the game. An exit is added from Mezame shrine directly to the Draygon 2 fight
     (and the normal entrance is removed). Draygon 2 spawns automatically with no Bow of Truth.
     """
     display_name = "No Bow mode (Rb)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -143,7 +136,6 @@ class NoBowMode(Toggle):
 class OrbsNotRequired(Toggle):
     """If true, walls can be broken and bridges formed with level 1 shots."""
     display_name = "Orbs not required to break walls (Ro)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -198,7 +190,6 @@ class VanillaDolphin(Toggle):
     """
     display_name = "Vanilla Dolphin interactions (Rd)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "R", "d"
@@ -215,7 +206,6 @@ class FakeFlight(Choice):
     option_out_of_logic = 0
     option_in_logic = 1
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "G", "f"
@@ -231,7 +221,6 @@ class StatueGlitch(Choice):
     option_disabled = 0
     option_out_of_logic = 1
     option_in_logic = 2
-
 
     def flag_name(self) -> (str, str):
         if self == self.option_in_logic:
@@ -251,7 +240,6 @@ class MtSabreSkip(Choice):
     option_out_of_logic = 1
     option_in_logic = 2
 
-
     def flag_name(self) -> (str, str):
         if self == self.option_in_logic:
             return "G", "n"
@@ -268,7 +256,6 @@ class StatueGauntletSkip(Choice):
     option_disabled = 0
     option_out_of_logic = 1
     option_in_logic = 2
-
 
     def flag_name(self) -> (str, str):
         if self == self.option_in_logic:
@@ -288,7 +275,6 @@ class SwordChargeGlitch(Choice):
     option_out_of_logic = 1
     option_in_logic = 2
 
-
     def flag_name(self) -> (str, str):
         if self == self.option_in_logic:
             return "G", "c"
@@ -306,7 +292,6 @@ class TriggerSkip(Choice):
     option_disabled = 0
     option_out_of_logic = 1
     option_in_logic = 2
-
 
     def flag_name(self) -> (str, str):
         if self == self.option_in_logic:
@@ -326,7 +311,6 @@ class RageSkip(Choice):
     option_out_of_logic = 1
     option_in_logic = 2
 
-
     def flag_name(self) -> (str, str):
         if self == self.option_in_logic:
             return "G", "r"
@@ -343,7 +327,6 @@ class RandomizeBackgroundMusic(Choice):
     option_shuffle = 1
     option_disable = 2
 
-
     def flag_name(self) -> (str, str):
         if self == self.option_shuffle:
             return "A", "!m"
@@ -351,10 +334,10 @@ class RandomizeBackgroundMusic(Choice):
             return "A", "s"
         return "", ""
 
+
 class RandomizeMapColors(Toggle):
     """Randomizes the palettes of the background tiles."""
     display_name = "Randomize map colors (Ac)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -366,7 +349,6 @@ class RandomizeMapColors(Toggle):
 class RandomizeMonsterWeaknesses(Toggle):
     """Monster and boss elemental weaknesses are shuffled."""
     display_name = "Randomize monster weaknesses (Me)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -380,7 +362,6 @@ class OopsAllMimics(Toggle):
     """
     display_name = "Replace all chests with mimics (Mg)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "M", "g"
@@ -390,7 +371,6 @@ class OopsAllMimics(Toggle):
 class ShuffleTowerRobots(Toggle):
     """Tower robots will be shuffled into the normal pool."""
     display_name = "Shuffle tower robots (Mt)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -402,7 +382,6 @@ class ShuffleTowerRobots(Toggle):
 class DontShuffleMimics(Toggle):
     """Mimics will be in their vanilla locations."""
     display_name = "Don't shuffle mimics (Et)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -420,7 +399,6 @@ class KeepUniqueItemsAndConsumablesSeparate(Toggle):
     """
     display_name = "Keep unique items and consumables separate (Eu)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "E", "u"
@@ -432,7 +410,6 @@ class DecreaseEnemyDamage(Toggle):
     the mid-game and eventually phase out at scaling level 40.
     """
     display_name = "Decrease enemy damage (Ed)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -446,7 +423,6 @@ class GuaranteeStartingSword(Toggle):
     """
     display_name = "Guarantee starting sword (Es)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "E", "s"
@@ -457,7 +433,6 @@ class GuaranteeRefresh(Toggle):
     """Guarantees the Refresh spell will be available before fighting Tetrarchs."""
     display_name = "Guarantee refresh (Er)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "E", "r"
@@ -467,7 +442,6 @@ class GuaranteeRefresh(Toggle):
 class ExperienceScalesFaster(Toggle):
     """Less grinding will be required to "keep up" with the game difficulty."""
     display_name = "Experience scales faster (Ex)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -480,7 +454,6 @@ class NoCommunityJokes(Toggle):
     look up information in guides/FAQs if necessary.
     """
     display_name = "No community jokes (Ec)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -495,7 +468,6 @@ class BattleMagicNotGuaranteed(Toggle):
     """
     display_name = "Battle magic not guaranteed (Nw)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "N", "w"
@@ -507,7 +479,6 @@ class TinkMode(Toggle):
     to fight monsters (including bosses) with tinks.
     """
     display_name = "Matching sword not guaranteed (\"Tink Mode\") (Ns)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -522,7 +493,6 @@ class BarrierNotGuaranteed(Toggle):
     """
     display_name = "Barrier not guaranteed (Nb)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "N", "b"
@@ -534,7 +504,6 @@ class GasMaskNotGuaranteed(Toggle):
     be guaranteed to cross long stretches of spikes. Gas mask is still guaranteed to kill the insect.
     """
     display_name = "Gas mask not guaranteed (Ng)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -549,7 +518,6 @@ class DontBuffConsumables(Toggle):
     """
     display_name = "Don't buff medical herb or fruit of power (Hm)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "H", "m"
@@ -559,7 +527,6 @@ class DontBuffConsumables(Toggle):
 class MaxScalingInTower(Toggle):
     """Enemies in the tower spawn at max scaling level."""
     display_name = "Max scaling level in tower (Ht)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -571,7 +538,6 @@ class ExperienceScalesSlower(Toggle):
     """More grinding will be required to "keep up" with the difficulty."""
     display_name = "Experience scales slower (Hx)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "H", "x"
@@ -581,7 +547,6 @@ class ExperienceScalesSlower(Toggle):
 class ChargeShotsOnly(Toggle):
     """Stabbing is completely ineffective. Only charged shots work."""
     display_name = "Charge shots only (Hc)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -593,7 +558,6 @@ class Blackout(Toggle):
     """All caves and fortresses are permanently dark."""
     display_name = "Blackout (Hz)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "H", "z"
@@ -603,7 +567,6 @@ class Blackout(Toggle):
 class Permadeath(Toggle):
     """Hardcore mode: checkpoints and saves are removed."""
     display_name = "Permadeath (Hh)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -619,7 +582,6 @@ class DontBuffDyna(Toggle):
     """
     display_name = "Don't buff Dyna (Vd)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "V", "d"
@@ -633,7 +595,6 @@ class DontBuffBonusItems(Toggle):
     stationary, so as to prevent wasting tons of magic). Turning this on removes all these changes.
     """
     display_name = "Don't buff bonus items (Vb)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -659,7 +620,6 @@ class VanillaMaps(Choice):
             return "GBC Cave"
         return super().get_option_name(value)
 
-
     def flag_name(self) -> (str, str):
         if self == self.option_lime_passage:
             return "V", "!m"
@@ -667,13 +627,13 @@ class VanillaMaps(Choice):
             return "V", "m"
         return "", ""
 
+
 class VanillaShops(Toggle):
     """By default, we disable shop glitch, shuffle shop contents, and tie the prices to the scaling level (item shops
     and inns increase by a factor of 2 every 10 scaling levels, armor shops decrease by a factor of 2 every 12 scaling
     levels). This flag prevents all of these changes, restoring shops to be completely vanilla.
     """
     display_name = "Vanilla shops (Vs)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -691,7 +651,6 @@ class VanillaWildWarp(Choice):
     option_vanilla = 2
     alias_enabled = option_vanilla
 
-
     def flag_name(self) -> (str, str):
         if self == self.option_out_of_logic:
             return "V", "!w"
@@ -706,7 +665,6 @@ class VanillaHUD(Toggle):
     """
     display_name = "Vanilla HUD (Vh)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "V", "h"
@@ -719,7 +677,6 @@ class DontAutoEquipUpgrades(Toggle):
     changing swords.
     """
     display_name = "Don't automatically equip orbs and bracelets (Qa)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -734,7 +691,6 @@ class DisableControllerShortcuts(Toggle):
     """
     display_name = "Disable controller shortcuts (Qc)"
 
-
     def flag_name(self) -> (str, str):
         if self:
             return "Q", "c"
@@ -748,7 +704,6 @@ class AudibleWallCues(Toggle):
     since there is no visual cue for them, either.
     """
     display_name = "Audible wall cues (Qw)"
-
 
     def flag_name(self) -> (str, str):
         if self:
@@ -772,8 +727,8 @@ class CrystalisPlandoConnections(PlandoConnections):
                data.entrance_type != CrystalisEntranceTypeEnum.GOA_TRANSITION)}
 
     @classmethod
-    def can_connect(cls, entrance: str, exit: str) -> bool:
-        return entrances_data[entrance].entrance_type in SHUFFLE_GROUPING[entrances_data[exit].entrance_type]
+    def can_connect(cls, entrance: str, _exit: str) -> bool:
+        return entrances_data[entrance].entrance_type in SHUFFLE_GROUPING[entrances_data[_exit].entrance_type]
 
 
 class PlandoBossWeaknesses(OptionDict):
@@ -787,8 +742,8 @@ class PlandoBossWeaknesses(OptionDict):
     schema = Schema({
         Optional(name): And(str, lambda elem: elem.capitalize() in ELEMENTS,
                             error="Invalid element in boss_weakness_plando")
-            for name in BOSS_NAMES
-        })
+        for name in BOSS_NAMES
+    })
 
 
 class PlandoWallElements(OptionDict):
@@ -802,8 +757,8 @@ class PlandoWallElements(OptionDict):
     schema = Schema({
         Optional(name): And(str, lambda elem: elem.capitalize() in ELEMENTS,
                             error="Invalid element in wall_element_plando")
-            for name in WALL_NAMES
-        })
+        for name in WALL_NAMES
+    })
 
 
 class PlandoTradeIns(OptionDict):
@@ -811,63 +766,81 @@ class PlandoTradeIns(OptionDict):
     normal from among the non-plandoed options. Format is \"NPC Name\": \"Trade-in Name\". Valid NPC names are Akahana,
     Aryllis, Fisherman, Kensu, and Slimed Kensu. Valid item names are Statue of Onyx, Fog Lamp, Love Pendant, Kirisa
     Plant, and Ivory Statue. Does nothing if randomize_tradeins is false."""
+
+    @staticmethod
     def validate(data: dict[str, str]) -> bool:
         return len(data) == len(set(data.values()))
+
     visibility = Visibility.template & Visibility.spoiler
     schema = Schema(And({
-        Optional(name): And(str, lambda item_name: item_name in frozenset([item_data.name for item_data in
-                                                                           items_data.values() if item_data.default_count > 0
-                                                                           and "Trade-in" in item_data.groups]),
-                            error="Invalid trade-in item in trade_in_plando")
-        for name in TRADE_IN_NPCS
-    } | {
-        Optional("Tornel"): And(str, lambda elem: elem.capitalize() in ELEMENTS,
-                            error="Invalid element for Tornel in trade_in_plando"),
-        Optional("Rage"): And(str, lambda sword: sword.startswith("Sword of ") and
-                                                 sword.removeprefix("Sword of ").capitalize() in ELEMENTS,
-                            error="Invalid sword for Rage in trade_in_plando")
-    }, And(validate, error="Duplicate Trade-In item found; each trade-in item can only be used once.")))
+                            Optional(name): And(str, lambda item_name: item_name in frozenset(
+                                [item_data.name for item_data in
+                                 items_data.values() if item_data.default_count > 0
+                                 and "Trade-in" in item_data.groups]),
+                                                error="Invalid trade-in item in trade_in_plando")
+                            for name in TRADE_IN_NPCS
+                        } | {
+                            Optional("Tornel"): And(str, lambda elem: elem.capitalize() in ELEMENTS,
+                                                    error="Invalid element for Tornel in trade_in_plando"),
+                            Optional("Rage"): And(str, lambda sword: sword.startswith("Sword of ") and
+                                                  sword.removeprefix("Sword of ").capitalize() in ELEMENTS,
+                                                  error="Invalid sword for Rage in trade_in_plando")
+                        }, validate), error="Duplicate Trade-In item found; each trade-in item can only be used once.")
 
 
 class PlandoKeyItemNames(OptionDict):
     """Allows defining names of unidentified key items, within the limits of the datapackage. Format is \"Original
     Name\": \"New Name\". Works on Bows, Keys, Lamps, Statues, and Flutes. Does nothing if unidentified_key_items is set
     to false."""
+
+    @staticmethod
     def validate(data: dict[str, str]) -> bool:
         return len(data) == len(set(data.values()))
+
     visibility = Visibility.template & Visibility.spoiler
 
     schema = Schema(And({
-        Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset([item_data.name for item_data in
-                                                                                          items_data.values() if
-                                                                                          "Bow" in item_data.groups]),
-                            error="Invalid key item name in key_item_name_plando")
-        for orig_item_data in items_data.values() if "Bow" in orig_item_data.groups and orig_item_data.default_count > 0
-    } | {
-        Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset([item_data.name for item_data in
-                                                                                          items_data.values() if
-                                                                                          "Key" in item_data.groups]),
-                            error="Invalid key item name in key_item_name_plando")
-        for orig_item_data in items_data.values() if "Key" in orig_item_data.groups and orig_item_data.default_count > 0
-    } | {
-        Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset([item_data.name for item_data in
-                                                                                          items_data.values() if
-                                                                                          "Lamp" in item_data.groups]),
-                            error="Invalid key item name in key_item_name_plando")
-        for orig_item_data in items_data.values() if "Lamp" in orig_item_data.groups and orig_item_data.default_count > 0
-    } | {
-        Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset([item_data.name for item_data in
-                                                                                          items_data.values() if
-                                                                                          "Statue" in item_data.groups]),
-                            error="Invalid key item name in key_item_name_plando")
-        for orig_item_data in items_data.values() if "Statue" in orig_item_data.groups and orig_item_data.default_count > 0
-    } | {
-        Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset([item_data.name for item_data in
-                                                                                          items_data.values() if
-                                                                                          "Flute" in item_data.groups]),
-                            error="Invalid key item name in key_item_name_plando")
-        for orig_item_data in items_data.values() if "Flute" in orig_item_data.groups and orig_item_data.default_count > 0
-    }, And(validate, error="Duplicate key item name found; each key item name can only be used once.")))
+                            Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset(
+                                [item_data.name for item_data in
+                                 items_data.values() if
+                                 "Bow" in item_data.groups]),
+                                                               error="Invalid key item name in key_item_name_plando")
+                            for orig_item_data in items_data.values() if
+                            "Bow" in orig_item_data.groups and orig_item_data.default_count > 0
+                        } | {
+                            Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset(
+                                [item_data.name for item_data in
+                                 items_data.values() if
+                                 "Key" in item_data.groups]),
+                                                               error="Invalid key item name in key_item_name_plando")
+                            for orig_item_data in items_data.values() if
+                            "Key" in orig_item_data.groups and orig_item_data.default_count > 0
+                        } | {
+                            Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset(
+                                [item_data.name for item_data in
+                                 items_data.values() if
+                                 "Lamp" in item_data.groups]),
+                                                               error="Invalid key item name in key_item_name_plando")
+                            for orig_item_data in items_data.values() if
+                            "Lamp" in orig_item_data.groups and orig_item_data.default_count > 0
+                        } | {
+                            Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset(
+                                [item_data.name for item_data in
+                                 items_data.values() if
+                                 "Statue" in item_data.groups]),
+                                                               error="Invalid key item name in key_item_name_plando")
+                            for orig_item_data in items_data.values() if
+                            "Statue" in orig_item_data.groups and orig_item_data.default_count > 0
+                        } | {
+                            Optional(orig_item_data.name): And(str, lambda item_name: item_name in frozenset(
+                                [item_data.name for item_data in
+                                 items_data.values() if
+                                 "Flute" in item_data.groups]),
+                                                               error="Invalid key item name in key_item_name_plando")
+                            for orig_item_data in items_data.values() if
+                            "Flute" in orig_item_data.groups and orig_item_data.default_count > 0
+                        }, validate),
+                    error="Duplicate key item name found; each key item name can only be used once.")
 
 
 # helper function for validation of PlandoShopInventories
@@ -991,7 +964,7 @@ crystalis_option_groups = [
 
 @dataclass
 class CrystalisOptions(PerGameCommonOptions, DeathLinkMixin):
-    #World options
+    # World options
     randomize_maps: RandomizeMaps
     shuffle_areas: ShuffleAreas
     shuffle_houses: ShuffleHouseEntrances
@@ -1001,13 +974,13 @@ class CrystalisOptions(PerGameCommonOptions, DeathLinkMixin):
     shuffle_goa: ShuffleGoa
     randomize_sprite_colors: RandomizeSpriteColors
     randomize_wild_warp: RandomizeWildWarp
-    #Routing options
+    # Routing options
     story_mode: StoryMode
     no_bow_mode: NoBowMode
     orbs_not_required: OrbsNotRequired
     thunder_warp: ThunderWarp
     vanilla_dolphin: VanillaDolphin
-    #Glitch options
+    # Glitch options
     fake_flight: FakeFlight
     statue_glitch: StatueGlitch
     mt_sabre_skip: MtSabreSkip
@@ -1015,14 +988,14 @@ class CrystalisOptions(PerGameCommonOptions, DeathLinkMixin):
     sword_charge_glitch: SwordChargeGlitch
     trigger_skip: TriggerSkip
     rage_skip: RageSkip
-    #Aesthetic options
+    # Aesthetic options
     randomize_background_music: RandomizeBackgroundMusic
     randomize_map_colors: RandomizeMapColors
-    #Monster options
+    # Monster options
     randomize_monster_weaknesses: RandomizeMonsterWeaknesses
     oops_all_mimics: OopsAllMimics
     shuffle_tower_robots: ShuffleTowerRobots
-    #Easy mode options
+    # Easy mode options
     dont_shuffle_mimics: DontShuffleMimics
     keep_unique_items_and_consumables_separate: KeepUniqueItemsAndConsumablesSeparate
     decrease_enemy_damage: DecreaseEnemyDamage
@@ -1030,30 +1003,30 @@ class CrystalisOptions(PerGameCommonOptions, DeathLinkMixin):
     guarantee_refresh: GuaranteeRefresh
     experience_scales_faster: ExperienceScalesFaster
     no_community_jokes: NoCommunityJokes
-    #No guarantees options
+    # No guarantees options
     battle_magic_not_guaranteed: BattleMagicNotGuaranteed
     tink_mode: TinkMode
     barrier_not_guaranteed: BarrierNotGuaranteed
     gas_mask_not_guaranteed: GasMaskNotGuaranteed
-    #Hard mode options
+    # Hard mode options
     dont_buff_consumables: DontBuffConsumables
     max_scaling_in_tower: MaxScalingInTower
     experience_scales_slower: ExperienceScalesSlower
     charge_shots_only: ChargeShotsOnly
     blackout: Blackout
     permadeath: Permadeath
-    #Vanilla options
+    # Vanilla options
     dont_buff_dyna: DontBuffDyna
     dont_buff_bonus_items: DontBuffBonusItems
     vanilla_maps: VanillaMaps
     vanilla_shops: VanillaShops
     vanilla_wild_warp: VanillaWildWarp
     vanilla_hud: VanillaHUD
-    #Quality of Life options
+    # Quality of Life options
     dont_auto_equip_upgrades: DontAutoEquipUpgrades
     disable_controller_shortcuts: DisableControllerShortcuts
     audible_wall_cues: AudibleWallCues
-    #Misc Archipelago Only options
+    # Misc Archipelago Only options
     start_inventory_from_pool: StartInventoryPool
     plando_connections: CrystalisPlandoConnections
     boss_weakness_plando: PlandoBossWeaknesses

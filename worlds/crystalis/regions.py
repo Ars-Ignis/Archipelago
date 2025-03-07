@@ -1,12 +1,12 @@
-import logging
-from BaseClasses import Region, ItemClassification, EntranceType, Entrance
+from BaseClasses import Region, EntranceType, Entrance
+from .constants import *
 from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntranceData, CrystalisEntranceTypeEnum, \
-    CRYSTALIS_BASE_ID, CrystalisLocation, ENTRANCE_COLORINGS
+    CrystalisLocation
 from .items import CrystalisItem
 import orjson
 from typing import Dict, List, Set, NamedTuple, Tuple
 import pkgutil
-from worlds.generic.Rules import set_rule
+from worlds.generic.Rules import add_rule
 
 try:
     from entrance_rando import randomize_entrances, EntranceRandomizationError, disconnect_entrance_for_randomization
@@ -14,66 +14,6 @@ except ImportError:
     logging.warning("Generic Entrance Randomizer not found in core code; please run this apworld against a version of"
                     "Archipelago greater than 0.5.1 to support shuffle_houses and shuffle_areas. These options will"
                     "be turned off.")
-
-
-HOUSE_SHUFFLE_TYPES = frozenset([CrystalisEntranceTypeEnum.HOUSE_ENTRANCE,
-                                 CrystalisEntranceTypeEnum.HOUSE_EXIT,
-                                 CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE,
-                                 CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT,
-                                 CrystalisEntranceTypeEnum.SHED_ENTRANCE,
-                                 CrystalisEntranceTypeEnum.SHED_EXIT,
-                                 CrystalisEntranceTypeEnum.EXT_ENTRANCE,
-                                 CrystalisEntranceTypeEnum.EXT_EXIT])
-
-AREA_SHUFFLE_TYPES = frozenset([CrystalisEntranceTypeEnum.OW_UP,
-                                CrystalisEntranceTypeEnum.OW_DOWN,
-                                CrystalisEntranceTypeEnum.OW_LEFT,
-                                CrystalisEntranceTypeEnum.OW_RIGHT,
-                                CrystalisEntranceTypeEnum.CAVE_ENTRANCE,
-                                CrystalisEntranceTypeEnum.CAVE_EXIT,
-                                CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE,
-                                CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT,
-                                CrystalisEntranceTypeEnum.PALACE_AREA_ENTRANCE,
-                                CrystalisEntranceTypeEnum.PALACE_AREA_EXIT])
-
-SHUFFLE_GROUPING = {
-    CrystalisEntranceTypeEnum.OW_UP: [CrystalisEntranceTypeEnum.OW_DOWN],
-    CrystalisEntranceTypeEnum.OW_DOWN: [CrystalisEntranceTypeEnum.OW_UP],
-    CrystalisEntranceTypeEnum.OW_LEFT: [CrystalisEntranceTypeEnum.OW_RIGHT],
-    CrystalisEntranceTypeEnum.OW_RIGHT: [CrystalisEntranceTypeEnum.OW_LEFT],
-    CrystalisEntranceTypeEnum.CAVE_ENTRANCE: [CrystalisEntranceTypeEnum.CAVE_EXIT],
-    CrystalisEntranceTypeEnum.CAVE_EXIT: [CrystalisEntranceTypeEnum.CAVE_ENTRANCE],
-    CrystalisEntranceTypeEnum.HOUSE_ENTRANCE: [CrystalisEntranceTypeEnum.HOUSE_EXIT],
-    CrystalisEntranceTypeEnum.HOUSE_EXIT: [CrystalisEntranceTypeEnum.HOUSE_ENTRANCE],
-    CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE: [CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT,
-                                                CrystalisEntranceTypeEnum.PALACE_AREA_EXIT],
-    CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT: [CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE,
-                                            CrystalisEntranceTypeEnum.PALACE_AREA_ENTRANCE],
-    CrystalisEntranceTypeEnum.SHED_ENTRANCE: [CrystalisEntranceTypeEnum.SHED_EXIT],
-    CrystalisEntranceTypeEnum.SHED_EXIT: [CrystalisEntranceTypeEnum.SHED_ENTRANCE],
-    CrystalisEntranceTypeEnum.EXT_ENTRANCE: [CrystalisEntranceTypeEnum.EXT_EXIT],
-    CrystalisEntranceTypeEnum.EXT_EXIT: [CrystalisEntranceTypeEnum.EXT_ENTRANCE],
-    CrystalisEntranceTypeEnum.PALACE_AREA_ENTRANCE: [CrystalisEntranceTypeEnum.PALACE_AREA_EXIT,
-                                                     CrystalisEntranceTypeEnum.PALACE_HOUSE_EXIT],
-    CrystalisEntranceTypeEnum.PALACE_AREA_EXIT: [CrystalisEntranceTypeEnum.PALACE_AREA_ENTRANCE,
-                                                 CrystalisEntranceTypeEnum.PALACE_HOUSE_ENTRANCE]
-}
-
-GBC_CAVE_NAMES = [
-    "Cordel Plains - Main - Added Cave",
-    "Lime Valley - Added Cave",
-    "Goa Valley - Added Cave",
-    "Desert 2 - Added Cave",
-    "Wind Valley - East Cave",
-    "GBC Cave - Free Exit",
-    "GBC Cave - Blocked Exit",
-    "GBC Cave Entrance"
-]
-
-LIME_PASSAGE_NAMES = [
-    "Wind Valley - East",
-    "Lime Valley - West"
-]
 
 
 def load_region_data_from_json() -> Dict[str, CrystalisRegionData]:
@@ -112,7 +52,6 @@ def create_regions(self) -> None:
     # need to cache while still creating regions before appending them to the multiworld
     local_region_cache = {}
     self.locations_data = []
-    self.goa_locations_by_floor = {"Kelbsque": [], "Sabera": [], "Mado": [], "Karmine": []}
     for region_data in regions_data.values():
         if self.options.vanilla_maps != self.options.vanilla_maps.option_GBC_cave and "GBC" in region_data.name:
             # don't add GBC cave regions, locations, and entrances
@@ -206,27 +145,27 @@ def create_regions(self) -> None:
                 elif (self.options.shuffle_houses and entrance_data.entrance_type in HOUSE_SHUFFLE_TYPES) or \
                      (self.options.shuffle_areas and entrance_data.entrance_type in AREA_SHUFFLE_TYPES):
                     # leave this disconnected for future use, and track some miscellaneous data about the entrance
-                    exit = region.create_exit(entrance_data.name)
-                    exit.randomization_group = entrance_data.entrance_type
-                    exit.randomization_type = EntranceType.TWO_WAY
+                    _exit = region.create_exit(entrance_data.name)
+                    _exit.randomization_group = entrance_data.entrance_type
+                    _exit.randomization_type = EntranceType.TWO_WAY
                     er_target = region.create_er_target(entrance_data.name)
                     er_target.randomization_group = entrance_data.entrance_type
                     er_target.randomization_type = EntranceType.TWO_WAY
                     # track the entrance for later if necessary
                     if entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_ENTRANCE:
-                        self.cave_entrances.append([exit, er_target])
+                        self.cave_entrances.append([_exit, er_target])
                     if entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_EXIT:
-                        self.cave_exits.append([exit, er_target])
+                        self.cave_exits.append([_exit, er_target])
                     if entrance_data.related_entrances:
                         if entrance_data.entrance_type == CrystalisEntranceTypeEnum.HOUSE_ENTRANCE:
-                            self.shared_icon_houses.append([exit, er_target])
+                            self.shared_icon_houses.append([_exit, er_target])
                         elif entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_EXIT:
                             self.tunnel_map[entrance_data.name] = entrance_data.related_entrances
                     if entrance_data.house_type != "":
                         if entrance_data.house_type in self.houses_by_type:
-                            self.houses_by_type[entrance_data.house_type].append([exit, er_target])
+                            self.houses_by_type[entrance_data.house_type].append([_exit, er_target])
                         else:
-                            self.houses_by_type[entrance_data.house_type] = [[exit, er_target]]
+                            self.houses_by_type[entrance_data.house_type] = [[_exit, er_target]]
                 else:
                     region.connect(target_region, entrance_data.name)
             self.multiworld.regions.append(region)
@@ -260,7 +199,8 @@ def create_regions(self) -> None:
     if self.options.vanilla_wild_warp != self.options.vanilla_wild_warp.option_out_of_logic:
         warp_names: Set[str] = set()
         for warp in self.shuffle_data.wildwarps:
-            if warp == 0: continue # no need for an entrance to Mezame
+            if warp == 0:
+                continue  # no need for an entrance to Mezame
             warp_name = self.wild_warp_id_to_region[warp]
             if warp_name not in warp_names:
                 warp_region = local_region_cache[warp_name]
@@ -303,7 +243,7 @@ def create_regions(self) -> None:
     activate_shell_flute_location = CrystalisLocation(player, "Activate Shell Flute", None,
                                                       region_for_flute_activation)
     activate_shell_flute_location.place_locked_item(CrystalisItem("Active Shell Flute",
-                                                                ItemClassification.progression, None, player))
+                                                                  ItemClassification.progression, None, player))
     region_for_flute_activation.locations.append(activate_shell_flute_location)
 
     # Story Mode Events
@@ -351,7 +291,7 @@ def create_regions(self) -> None:
         draygon_1_region.locations.append(draygon_1_victory)
 
 
-def shuffle_goa(self) -> Dict[str, str]:
+def shuffle_goa(self: "CrystalisWorld") -> Dict[str, str]:
     # not every Goa Transition can point to every other Goa transition, so we have this complicated algorithm
     class GoaEntranceData(NamedTuple):
         entrance_name: str
@@ -373,10 +313,10 @@ def shuffle_goa(self) -> Dict[str, str]:
         GoaEntranceData("Mado's Floor - Exit", "Mado's Floor - Back", True, True),
         GoaEntranceData("Karmine's Floor - Exit", "Karmine's Floor - Back", False, True)
     ]
-    self.goa_lower_floors = set([original_entrances[floor_indicies[0]].entrance_name.partition("'")[0],
-                                 original_entrances[floor_indicies[1]].entrance_name.partition("'")[0]])
-    self.goa_upper_floors = set([original_entrances[floor_indicies[2]].entrance_name.partition("'")[0],
-                                 original_entrances[floor_indicies[3]].entrance_name.partition("'")[0]])
+    self.goa_lower_floors = {original_entrances[floor_indicies[0]].entrance_name.partition("'")[0],
+                             original_entrances[floor_indicies[1]].entrance_name.partition("'")[0]}
+    self.goa_upper_floors = {original_entrances[floor_indicies[2]].entrance_name.partition("'")[0],
+                             original_entrances[floor_indicies[3]].entrance_name.partition("'")[0]}
     shuffled_entrances: List[GoaEntranceData] = []
     shuffled_exits: List[GoaEntranceData] = [GoaEntranceData("Goa Entrance - Stairs", "Goa Entrance - Behind Wall",
                                                              True, False)]
@@ -415,15 +355,15 @@ def connect_entrances(self):
             # four cases to handle:
             if outside_exit.connected_region is None and paired_outside_exit.connected_region is None:
                 # a) neither entrance is connected
-                icon_type = self.random.choice([type for type in self.houses_by_type.keys()
-                                                if len(self.houses_by_type[type]) >= 2])
+                icon_type = self.random.choice([house_type for house_type in self.houses_by_type.keys()
+                                                if len(self.houses_by_type[house_type]) >= 2])
                 for paired_outside_er_target in paired_outside_region.entrances:
                     if paired_outside_er_target.name == paired_outside_name:
                         break
                 else:
                     raise EntranceRandomizationError(f"Couldn't find ER target for entrance {paired_outside_name}")
-                unconnected_entrances = [[outside_exit, outside_er_target],
-                                         [paired_outside_exit, paired_outside_er_target]]
+                unconnected_entrances = [(outside_exit, outside_er_target),
+                                         (paired_outside_exit, paired_outside_er_target)]
             elif outside_exit.connected_region is not None and paired_outside_exit.connected_region is None:
                 # b) the exit in the list is connected, but not its partner
                 inside_region = outside_exit.connected_region
@@ -439,7 +379,7 @@ def connect_entrances(self):
                 else:
                     raise EntranceRandomizationError(f"Couldn't find ER target for entrance {paired_outside_name}")
                 icon_type = entrances_data[inside_exit.name].house_type
-                unconnected_entrances = [[paired_outside_exit, paired_outside_er_target]]
+                unconnected_entrances = [(paired_outside_exit, paired_outside_er_target)]
             elif outside_exit.connected_region is None and paired_outside_exit.connected_region is not None:
                 # c) the exit in the list isn't connected, but its partner is
                 paired_inside_region = paired_outside_exit.connected_region
@@ -450,7 +390,7 @@ def connect_entrances(self):
                     raise EntranceRandomizationError(f"Couldn't find reverse entrance for {paired_outside_exit.name} in "
                                                      f"region {paired_inside_region.name}")
                 icon_type = entrances_data[paired_inside_exit.name].house_type
-                unconnected_entrances = [[outside_exit, outside_er_target]]
+                unconnected_entrances = [(outside_exit, outside_er_target)]
             else:
                 # d) both entrances are already connected
                 # technically, we could do nothing here, but I'm going to validate and error if the icons don't match
@@ -461,6 +401,7 @@ def connect_entrances(self):
                 else:
                     raise EntranceRandomizationError(f"Couldn't find reverse entrance for {outside_exit.name} in region "
                                                      f"{inside_region.name}")
+                icon_type = entrances_data[inside_exit.name].house_type
                 paired_inside_region = paired_outside_exit.connected_region
                 for paired_inside_exit in paired_inside_region.exits:
                     if paired_inside_exit.connected_region == paired_outside_exit.parent_region:
@@ -473,17 +414,17 @@ def connect_entrances(self):
                                      f"inside types: {entrances_data[inside_exit.name].house_type} and "
                                      f"{entrances_data[paired_inside_exit.name].house_type}")
             # we know what entrances need to be connected, and we've selected a house type, so get to connecting
-            for exit, er_target in unconnected_entrances:
+            for _exit, er_target in unconnected_entrances:
                 inside_exit, inside_er_target = self.random.choice(self.houses_by_type[icon_type])
-                exit_region = exit.parent_region
+                exit_region = _exit.parent_region
                 exit_region.entrances.remove(er_target)
                 inside_region = inside_exit.parent_region
                 inside_region.entrances.remove(inside_er_target)
-                exit.connect(inside_region)
+                _exit.connect(inside_region)
                 inside_exit.connect(exit_region)
                 self.houses_by_type[icon_type].remove([inside_exit, inside_er_target])
-                self.shuffle_data.er_pairings[exit.name] = inside_exit.name
-                self.shuffle_data.er_pairings[inside_exit.name] = exit.name
+                self.shuffle_data.er_pairings[_exit.name] = inside_exit.name
+                self.shuffle_data.er_pairings[inside_exit.name] = _exit.name
 
     if self.options.shuffle_areas:
         # need to pre-emptively handle Mt. Sabre North's Prison Exit and Wind Valley's North West Cave Entrance
@@ -522,7 +463,7 @@ def connect_entrances(self):
         # see if we need to add logic
         if entrances_data[cave_outside_exit.name].can_lock:
             # add logic for Key to Prison
-            set_rule(cave_outside_exit, lambda state: state.has(self.shuffle_data.key_item_names["Key to Prison"],
+            add_rule(cave_outside_exit, lambda state: state.has(self.shuffle_data.key_item_names["Key to Prison"],
                                                                 self.player))
         # now do Wind Valley
         windmill_locked_cave_exit = self.get_entrance("Wind Valley - North West Cave")
@@ -612,18 +553,17 @@ def connect_entrances(self):
                 if entrances_data[entrance_to_lock.name].can_lock:
                     # lock it up
                     windmill_reg = self.get_region("Windmill")
-                    set_rule(entrance_to_lock, lambda state: state.has(self.shuffle_data.key_item_names["Windmill Key"],
+                    add_rule(entrance_to_lock, lambda state: state.has(self.shuffle_data.key_item_names["Windmill Key"],
                                                                        self.player) and windmill_reg.can_reach(state))
                     self.multiworld.register_indirect_condition(windmill_reg, entrance_to_lock)
     # now that all the prep is done, let GER handle the rest
     if self.options.shuffle_areas or self.options.shuffle_houses:
-        MAX_ATTEMPTS: int = 10
         available_shuffle_types: Set[CrystalisEntranceTypeEnum] = set()
         if self.options.shuffle_areas:
             available_shuffle_types |= AREA_SHUFFLE_TYPES
         if self.options.shuffle_houses:
             available_shuffle_types |= HOUSE_SHUFFLE_TYPES
-        for i in range(MAX_ATTEMPTS):
+        for i in range(CRYSTALIS_MAX_GER_ATTEMPTS):
             try:
                 er_state = randomize_entrances(self, True, SHUFFLE_GROUPING)
                 self.shuffle_data.er_pairings |= er_state.pairings
@@ -633,9 +573,9 @@ def connect_entrances(self):
                 # visualize_regions(self.multiworld.get_region("Menu", self.player), f"Attempt {i+1}.puml",
                 # show_entrance_names=False, show_other_regions=True, entrance_highlighting=ENTRANCE_COLORINGS,
                 # detail_other_regions=True)
-                if i >= MAX_ATTEMPTS - 1:
-                    raise EntranceRandomizationError(f"Crystalis: failed GER after {MAX_ATTEMPTS} attempts. Final error"
-                                                     f" here: \n\n{error}")
+                if i >= CRYSTALIS_MAX_GER_ATTEMPTS - 1:
+                    raise EntranceRandomizationError(f"Crystalis: failed GER after {CRYSTALIS_MAX_GER_ATTEMPTS} "
+                                                     f"attempts. Final error here: \n\n{error}")
                 # need to disconnect all entrances that are supposed to be shuffled
                 for region in self.get_regions():
                     for _exit in region.get_exits():
