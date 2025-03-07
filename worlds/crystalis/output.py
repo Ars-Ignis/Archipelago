@@ -1,34 +1,22 @@
 import os
-import orjson
 import zipfile
-import logging
-from typing import Dict, List, Any, Tuple, TextIO, Iterable, Optional, Set
-from BaseClasses import Location, Item, ItemClassification, Entrance, Region
-from worlds.Files import APPatch
+from typing import Any, TextIO, Iterable, Optional, Set
+
+import orjson
+
+from BaseClasses import Item, Entrance, Region
 from worlds.AutoWorld import World
+from worlds.Files import APPatch
+from .constants import *
 from .items import items_data
 from .options import CrystalisOptions
-from .regions import regions_data, entrances_data, HOUSE_SHUFFLE_TYPES, AREA_SHUFFLE_TYPES
-from .types import CrystalisShuffleData, convert_text_to_elem_int, CrystalisEntranceTypeEnum
-
-
-DEBUG: bool = False
-BOSS_IDS: Dict[str, int] = {
-    "Giant Insect": 0x5e,
-    "Vampire 2": 0xa5,
-    "Kelbesque 1": 0x68,
-    "Sabera 1": 0x7d,
-    "Mado 1": 0x88,
-    "Kelbesque 2": 0x8b,
-    "Sabera 2": 0x90,
-    "Mado 2": 0x93,
-    "Karmine": 0x97
-}
+from .regions import regions_data, entrances_data
+from .types import CrystalisShuffleData, CrystalisEntranceTypeEnum
 
 
 def generate_flag_string(options: CrystalisOptions) -> str:
     flag_dict: Dict[str, List[str]] = {}
-    #this feels cursed? maybe I'm just not used to langauges with good reflection lmao
+    # this feels cursed? maybe I'm just not used to languages with good reflection lmao
     for attr in dir(options):
         option = getattr(options, attr)
         if hasattr(option, "flag_name"):
@@ -100,21 +88,21 @@ def generate_statue_hint(world: World) -> str:
 def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisOptions) -> Dict[str, Any]:
     wall_map: Dict[str, int] = {}
     for wall, elem in shuffle_data.wall_map.items():
-        wall_map[wall] = convert_text_to_elem_int(elem)
+        wall_map[wall] = ELEMENTS.index(elem)
     key_item_names: Dict[str, str] = shuffle_data.key_item_names
     trade_in_map: Dict[str, str] = {}
     for recipient, trade in shuffle_data.trade_in_map.items():
         if recipient != "Rage" and recipient != "Tornel":
             trade_in_map[trade] = recipient
-    tornel_trade: int = convert_text_to_elem_int(shuffle_data.trade_in_map["Tornel"]) * 2 + 6
+    tornel_trade: int = ELEMENTS.index(shuffle_data.trade_in_map["Tornel"]) * 2 + 6
     rage_trade: int = items_data[shuffle_data.trade_in_map["Rage"]].rom_id
     boss_weaknesses: Dict[str, int] = {}
     for boss, weakness in shuffle_data.boss_reqs.items():
         boss_id = BOSS_IDS[boss]
         if boss == "Giant Insect" or boss == "Vampire 2":
-            boss_weaknesses[str(boss_id)] = 1 << convert_text_to_elem_int(weakness)
+            boss_weaknesses[str(boss_id)] = 1 << ELEMENTS.index(weakness)
         else:
-            boss_weaknesses[str(boss_id)] = ~(1 << convert_text_to_elem_int(weakness)) & 15
+            boss_weaknesses[str(boss_id)] = ~(1 << ELEMENTS.index(weakness)) & 15
     gbc_cave_exits: List[int]
     if len(shuffle_data.gbc_cave_exits) >= 2:
         possible_gbc_cave_exits: List[str] = ["Cordel Plains - Main", "Lime Valley", "Goa Valley", "Desert 2"]
@@ -159,12 +147,12 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
 
     area_connections = {}
     house_connections = {}
-    for entrance, exit in shuffle_data.er_pairings.items():
+    for entrance, _exit in shuffle_data.er_pairings.items():
         entrance_type: CrystalisEntranceTypeEnum = entrances_data[entrance].entrance_type
         entrance_house_key: str = entrances_data[entrance].house_key
-        exit_house_key: str = entrances_data[exit].house_key
+        exit_house_key: str = entrances_data[_exit].house_key
         entrance_exit_key: str = entrances_data[entrance].exit_key
-        exit_exit_key: str = entrances_data[exit].exit_key
+        exit_exit_key: str = entrances_data[_exit].exit_key
         # if we're shuffling houses, then the palace area entrances/exits should be handled by this code
         if options.shuffle_houses and (
                 entrance_type in HOUSE_SHUFFLE_TYPES or
@@ -180,7 +168,6 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
         else:
             raise RuntimeError(f"ER Pairing data found in shuffle data without a supported ER type enabled. "
                                f"Entrance: {entrance} Exit: {exit}")
-
 
     output: Dict[str, Any] = {
         "wall_map": wall_map,
@@ -201,7 +188,7 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
 
 
 def generate_output(self, output_directory: str) -> None:
-    if DEBUG:
+    if CRYSTALIS_DEBUG:
         # turn this into a test when it's time to write tests
         if self.options.keep_unique_items_and_consumables_separate:
             for location_data in self.locations_data:
@@ -218,7 +205,7 @@ def generate_output(self, output_directory: str) -> None:
                                                f"{non_unique_location.name} Item: {item.name}")
 
     flag_string: str = generate_flag_string(self.options)
-    #need to convert shuffle_data to the format it will be consumed in
+    # need to convert shuffle_data to the format it will be consumed in
     converted_data = convert_shuffle_data(self.shuffle_data, self.options)
     lime_hint = generate_statue_hint(self)
     output_dict = {
@@ -333,7 +320,6 @@ def extend_hint_information(self, hint_data: Dict[int, Dict[int, str]]):
 
 class CrystalisFile(APPatch):
     game = "Crystalis"
-
 
     def get_manifest(self):
         manifest = super().get_manifest()
