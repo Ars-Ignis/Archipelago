@@ -31,7 +31,7 @@ def cmd_deathlink(self: "BizHawkClientCommandProcessor") -> None:
 class CrystalisClient(BizHawkClient):
     game = "Crystalis"
     system = "NES"
-    # intentionally not defining patch_suffix because Archipelago will not be responsible for patching the game
+    patch_suffix = ".apcrys"
     loc_id_to_addr: Dict[int, Tuple[int, int]] = {}
     unidentified_item_rom_ids: Dict[int, int] = {}
     current_location: int = 0
