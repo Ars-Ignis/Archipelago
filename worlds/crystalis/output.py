@@ -6,7 +6,7 @@ import orjson
 
 from BaseClasses import Item, Entrance, Region
 from worlds.AutoWorld import World
-from worlds.Files import APPatch
+from worlds.Files import APAutoPatchInterface
 from .constants import *
 from .items import items_data
 from .options import CrystalisOptions
@@ -318,10 +318,25 @@ def extend_hint_information(self, hint_data: Dict[int, Dict[int, str]]):
     hint_data[self.player] = player_hint_data
 
 
-class CrystalisFile(APPatch):
+class CrystalisFile(APAutoPatchInterface):
     game = "Crystalis"
+    patch_file_ending = ".apcrys"
+    result_file_ending = ".nes"
 
     def get_manifest(self):
         manifest = super().get_manifest()
         manifest["patch_file_ending"] = ".apcrys"
         return manifest
+
+    @classmethod
+    def patch(self, target: str) -> None:
+        # 'patch' for this game is a misnomer, because patching is done on the Crystalis Randomizer AP website
+        # However, for ease of use on the user's end, I want to attempt to load the patched ROM if they've already
+        # patched it, and provide a helpful error message if they haven't yet, directing them to the website.
+
+        # target string is the expected .nes name; look to see if it exists next to the patch file
+        if not os.path.exists(target):
+            raise FileNotFoundError(f"Unable to find patched ROM at path {target}. Please visit "
+                                    f"https://crystalisrandomizer.com/ap with your patch file to patch the ROM, then "
+                                    f"place it next to the patch file and try again.")
+
