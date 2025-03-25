@@ -3,6 +3,7 @@ from .constants import *
 from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntranceData, CrystalisEntranceTypeEnum, \
     CrystalisLocation
 from .items import CrystalisItem
+from .utils import visualize_regions
 import orjson
 from typing import Dict, List, Set, NamedTuple, Tuple
 import pkgutil
@@ -584,3 +585,5 @@ def connect_entrances(self):
                                 and _exit.connected_region
                                 and _exit.name not in self.shuffle_data.er_pairings):
                             disconnect_entrance_for_randomization(_exit, _exit.randomization_group)
+    if CRYSTALIS_DEBUG:
+        visualize_regions(self, "Crystalis Visualized.puml")
