@@ -1,4 +1,9 @@
 from BaseClasses import CollectionState
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from .__init__ import CrystalisWorld
+
 
 ITEMS_TO_TEST: list[str] = [
     "Sword of Wind",
