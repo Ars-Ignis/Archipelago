@@ -172,9 +172,9 @@ class CrystalisWorld(World):
         try:
             from entrance_rando import randomize_entrances
         except ImportError:
-            logging.warning("Generic Entrance Randomizer not found in core code; please run this apworld against a "
-                            "version of Archipelago greater than 0.5.1 to support shuffle_houses and shuffle_areas. "
-                            "These options will be turned off.")
+            logging.warning("Crystalis: Generic Entrance Randomizer not found in core code; please run this apworld "
+                            "against a version of Archipelago greater than 0.5.1 to support shuffle_houses and "
+                            "shuffle_areas. These options will be turned off.")
             if self.options.shuffle_areas:
                 self.options.shuffle_areas.value = self.options.shuffle_areas.option_false
             if self.options.shuffle_houses:
