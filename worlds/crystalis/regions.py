@@ -586,5 +586,7 @@ def connect_entrances(self):
                                 and _exit.connected_region
                                 and _exit.name not in self.shuffle_data.er_pairings):
                             disconnect_entrance_for_randomization(_exit, _exit.randomization_group)
+        for entrance, _exit in sorted(self.shuffle_data.er_pairings.items()):
+            self.multiworld.spoiler.set_entrance(entrance, _exit, "both", self.player)
     if CRYSTALIS_DEBUG:
         visualize_regions(self, "Crystalis Visualized.puml")
