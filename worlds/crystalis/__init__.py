@@ -62,6 +62,7 @@ class CrystalisWorld(World):
     cave_exits: List[Tuple[Entrance, Entrance]]
     goa_lower_floors: Set[str]
     goa_upper_floors: Set[str]
+    ut_can_gen_without_yaml: bool = True
 
     # this will get filled out later, while creating regions
     locations_data: List[CrystalisLocationData]
