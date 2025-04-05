@@ -77,6 +77,7 @@ class CrystalisClient(BizHawkClient):
         ctx.items_handling = 0b111
         ctx.want_slot_data = True
         ctx.command_processor.commands["deathlink"] = cmd_deathlink
+        logger.info(f"Crystalis APWorld Version {CRYSTALIS_APWORLD_VERSION.as_simple_string()}")
         return True
 
     def on_package(self, ctx: "BizHawkClientContext", cmd: str, args: dict) -> None:
