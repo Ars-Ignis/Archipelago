@@ -1,4 +1,5 @@
 from BaseClasses import Region, Entrance
+from Options import OptionError
 from .constants import *
 from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntranceData, CrystalisEntranceTypeEnum, \
     CrystalisLocation
@@ -132,12 +133,17 @@ def create_regions(self) -> None:
                     # handle plando connections first; the following has already been validated:
                     # a) no entrance connects to multiple destinations
                     # b) the entrances are being shuffled on these settings
-                    # c) the entrance and exit are allowed to be connected
+                    # c) the entrance and exit are of compatible types
                     # Therefore, just get to connecting!
                     connecting_entrance_data = entrances_data[self.shuffle_data.er_pairings[entrance_data.name]]
                     connecting_region = local_region_cache[connecting_entrance_data.parent_region]
                     region.connect(connecting_region, entrance_data.name)
                     # The reverse entrance will be handled later/has already been handled
+                    if entrance_data.related_entrances:
+                        if entrance_data.entrance_type == CrystalisEntranceTypeEnum.HOUSE_ENTRANCE:
+                            self.shared_icon_houses.append([_exit, er_target])
+                        elif entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_EXIT:
+                            self.tunnel_map[entrance_data.name] = entrance_data.related_entrances
                 elif entrance_data.entrance_type == CrystalisEntranceTypeEnum.GOA_TRANSITION and \
                         self.options.shuffle_goa:
                     # connect according to the goa_shuffle results
@@ -154,7 +160,8 @@ def create_regions(self) -> None:
                     er_target.randomization_group = entrance_data.entrance_type
                     er_target.randomization_type = EntranceType.TWO_WAY
                     # track the entrance for later if necessary
-                    if entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_ENTRANCE:
+                    if (entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_ENTRANCE
+                            and entrance_data.name != "Portoa Palace Throne Room Secret"):
                         self.cave_entrances.append([_exit, er_target])
                     if entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_EXIT:
                         self.cave_exits.append([_exit, er_target])
@@ -363,7 +370,8 @@ def connect_entrances(self):
                     if paired_outside_er_target.name == paired_outside_name:
                         break
                 else:
-                    raise EntranceRandomizationError(f"Couldn't find ER target for entrance {paired_outside_name}")
+                    raise EntranceRandomizationError(f"Crystalis: Couldn't find ER target for entrance "
+                                                     f"{paired_outside_name}")
                 unconnected_entrances = [(outside_exit, outside_er_target),
                                          (paired_outside_exit, paired_outside_er_target)]
             elif outside_exit.connected_region is not None and paired_outside_exit.connected_region is None:
@@ -373,13 +381,14 @@ def connect_entrances(self):
                     if inside_exit.connected_region == outside_exit.parent_region:
                         break
                 else:
-                    raise EntranceRandomizationError(f"Couldn't find reverse entrance for {outside_exit.name} in region "
-                                                     f"{inside_region.name}")
+                    raise EntranceRandomizationError(f"Crystalis: Couldn't find reverse entrance for "
+                                                     f"{outside_exit.name} in region {inside_region.name}")
                 for paired_outside_er_target in paired_outside_region.entrances:
                     if paired_outside_er_target.name == paired_outside_name:
                         break
                 else:
-                    raise EntranceRandomizationError(f"Couldn't find ER target for entrance {paired_outside_name}")
+                    raise EntranceRandomizationError(f"Crystalis: Couldn't find ER target for entrance "
+                                                     f"{paired_outside_name}")
                 icon_type = entrances_data[inside_exit.name].house_type
                 unconnected_entrances = [(paired_outside_exit, paired_outside_er_target)]
             elif outside_exit.connected_region is None and paired_outside_exit.connected_region is not None:
@@ -389,8 +398,9 @@ def connect_entrances(self):
                     if paired_inside_exit.connected_region == paired_outside_exit.parent_region:
                         break
                 else:
-                    raise EntranceRandomizationError(f"Couldn't find reverse entrance for {paired_outside_exit.name} in "
-                                                     f"region {paired_inside_region.name}")
+                    raise EntranceRandomizationError(f"Crystalis: Couldn't find reverse entrance for "
+                                                     f"{paired_outside_exit.name} in region "
+                                                     f"{paired_inside_region.name}")
                 icon_type = entrances_data[paired_inside_exit.name].house_type
                 unconnected_entrances = [(outside_exit, outside_er_target)]
             else:
@@ -412,8 +422,8 @@ def connect_entrances(self):
                     raise EntranceRandomizationError(f"Couldn't find reverse entrance for {paired_outside_exit.name} in "
                                                      f"region {paired_inside_region.name}")
                 if entrances_data[paired_inside_exit.name].house_type != entrances_data[inside_exit.name].house_type:
-                    raise ValueError(f"Paired houses {outside_exit.name} and {paired_outside_exit.name} have different "
-                                     f"inside types: {entrances_data[inside_exit.name].house_type} and "
+                    raise ValueError(f"Crystalis: Paired houses {outside_exit.name} and {paired_outside_exit.name} have"
+                                     f" different inside types: {entrances_data[inside_exit.name].house_type} and "
                                      f"{entrances_data[paired_inside_exit.name].house_type}")
             # we know what entrances need to be connected, and we've selected a house type, so get to connecting
             for _exit, er_target in unconnected_entrances:
@@ -440,7 +450,8 @@ def connect_entrances(self):
                 if sabre_north_prison_er_target.name == "Mt. Sabre North - Exit":
                     break
             else:
-                raise EntranceRandomizationError("Couldn't find ER target for entrance Mt. Sabre North - Exit")
+                raise EntranceRandomizationError("Crystalis: Couldn't find ER target for entrance Mt. Sabre North - "
+                                                 "Exit")
             # pick a random cave entrance
             cave_outside_exit, cave_outside_er_target = self.random.choice(self.cave_entrances)
             cave_outside_region = cave_outside_exit.parent_region
@@ -458,10 +469,14 @@ def connect_entrances(self):
         else:
             for cave_outside_exit in sabre_north_prison_exit.connected_region.exits:
                 if cave_outside_exit.connected_region == sabre_north_prison_exit.parent_region:
+                    if cave_outside_exit.name == "Portoa Palace Throne Room Secret":
+                        # this should only happen if a user plando'd it
+                        raise OptionError(f"Crystalis: Cannot connect Mt. Sabre North - Exit to Portoa Palace Throne "
+                                          f"Room Secret. Please check plando_connections and change this connection.")
                     break
             else:
-                raise EntranceRandomizationError(f"Couldn't find reverse entrance for Mt. Sabre North - Exit in region "
-                                                 f"{sabre_north_prison_exit.connected_region.name}")
+                raise EntranceRandomizationError(f"Crystalis: Couldn't find reverse entrance for Mt. Sabre North - Exit"
+                                                 f" in region {sabre_north_prison_exit.connected_region.name}")
         # see if we need to add logic
         if entrances_data[cave_outside_exit.name].can_lock:
             # add logic for Key to Prison
@@ -477,7 +492,8 @@ def connect_entrances(self):
                 if windmill_locked_cave_er_target.name == "Wind Valley - North West Cave":
                     break
             else:
-                raise EntranceRandomizationError("Couldn't find ER target for entrance Wind Valley - North West Cave")
+                raise EntranceRandomizationError("Crystalis: Couldn't find ER target for entrance Wind Valley - North "
+                                                 "West Cave")
             # remove this from the list of cave entrances so we don't get tripped up later
             self.cave_entrances.remove([windmill_locked_cave_exit, windmill_locked_cave_er_target])
             if not self.options.shuffle_houses:
@@ -489,8 +505,8 @@ def connect_entrances(self):
                         if windmill_exterior_er_target.name == "Windmill Exterior - Windmill Cave":
                             break
                     else:
-                        raise EntranceRandomizationError("Couldn't find ER target for entrance Windmill Exterior - "
-                                                         "Windmill Cave")
+                        raise EntranceRandomizationError("Crystalis: Couldn't find ER target for entrance Windmill "
+                                                         "Exterior - Windmill Cave")
                     self.cave_entrances.remove([windmill_exterior_cave_exit, windmill_exterior_er_target])
             # pick a random cave exit to connect it to
             cave_inside_exit, cave_inside_er_target = self.random.choice(self.cave_exits)
@@ -509,8 +525,9 @@ def connect_entrances(self):
                 if reverse_entrance.connected_region == wind_valley_region:
                     break
             else:
-                raise EntranceRandomizationError("Couldn't find reverse entrance for Wind Valley - North West Cave in"
-                                                 f" region {windmill_locked_cave_exit.connected_region.name}")
+                raise EntranceRandomizationError("Crystalis: Couldn't find reverse entrance for Wind Valley - North "
+                                                 "West Cave in region "
+                                                 f"{windmill_locked_cave_exit.connected_region.name}")
             windmill_locked_cave_reverse_name = reverse_entrance.name
         # now the complicated stuff: check to see if this is a tunnel
         if windmill_locked_cave_reverse_name in self.tunnel_map:
@@ -525,7 +542,7 @@ def connect_entrances(self):
                         if opposite_tunnel_er_target.name == opposite_tunnel_exit.name:
                             break
                     else:
-                        raise EntranceRandomizationError(f"Couldn't find ER target for entrance "
+                        raise EntranceRandomizationError(f"Crystalis: Couldn't find ER target for entrance "
                                                          f"{opposite_tunnel_exit.name}")
                     # find a random cave entrance to connect this to
                     opposite_outside_exit, opposite_outside_er_target = self.random.choice(self.cave_entrances)
@@ -546,9 +563,15 @@ def connect_entrances(self):
                     # the other end of this tunnel is already connected, so just find the entrance to lock
                     for entrance_to_lock in opposite_tunnel_exit.connected_region.exits:
                         if entrance_to_lock.connected_region == opposite_tunnel_region:
+                            if entrance_to_lock.name == "Portoa Palace Throne Room Secret":
+                                # this should only happen if a user plando'd this connection
+                                raise OptionError(f"Crystalis: Cannot connect {opposite_tunnel_exit.name} to Portoa "
+                                                  f"Palace Throne Room Secret because the other end of the tunnel is "
+                                                  f"connected to Wind Valley - North West Cave. Please check "
+                                                  f"plando_connections and change this connection.")
                             break
                     else:
-                        raise EntranceRandomizationError("Couldn't find reverse entrance for "
+                        raise EntranceRandomizationError("Crystalis: Couldn't find reverse entrance for "
                                                          f"{opposite_tunnel_exit.name} in region "
                                                          f"{opposite_tunnel_exit.connected_region.name}")
                 # check to see if the entrance can be locked

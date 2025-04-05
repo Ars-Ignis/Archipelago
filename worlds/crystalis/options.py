@@ -741,7 +741,7 @@ class PlandoBossWeaknesses(OptionDict):
     display_name = "Boss Weakness Plando"
     schema = Schema({
         Optional(name): And(str, lambda elem: elem.capitalize() in ELEMENTS,
-                            error="Invalid element in boss_weakness_plando")
+                            error="Crystalis: Invalid element in boss_weakness_plando")
         for name in BOSS_NAMES
     })
 
@@ -756,7 +756,7 @@ class PlandoWallElements(OptionDict):
     display_name = "Wall Element Plando"
     schema = Schema({
         Optional(name): And(str, lambda elem: elem.capitalize() in ELEMENTS,
-                            error="Invalid element in wall_element_plando")
+                            error="Crystalis: Invalid element in wall_element_plando")
         for name in WALL_NAMES
     })
 
@@ -777,15 +777,16 @@ class PlandoTradeIns(OptionDict):
                                 [item_data.name for item_data in
                                  items_data.values() if item_data.default_count > 0
                                  and "Trade-in" in item_data.groups]),
-                                                error="Invalid trade-in item in trade_in_plando")
+                                                error="Crystalis: Invalid trade-in item in trade_in_plando")
                             for name in TRADE_IN_NPCS
                         } | {
                             Optional("Tornel"): And(str, lambda elem: elem.capitalize() in ELEMENTS,
-                                                    error="Invalid element for Tornel in trade_in_plando"),
+                                                    error="Crystalis: Invalid element for Tornel in trade_in_plando"),
                             Optional("Rage"): And(str, lambda sword: sword.startswith("Sword of ") and
                                                   sword.removeprefix("Sword of ").capitalize() in ELEMENTS,
-                                                  error="Invalid sword for Rage in trade_in_plando")
-                        }, validate), error="Duplicate Trade-In item found; each trade-in item can only be used once.")
+                                                  error="Crystalis: Invalid sword for Rage in trade_in_plando")
+                        }, validate), error="Crystalis: Duplicate Trade-In item found; each trade-in item can only be "
+                                            "used once.")
 
 
 class PlandoKeyItemNames(OptionDict):
@@ -804,7 +805,8 @@ class PlandoKeyItemNames(OptionDict):
                                 [item_data.name for item_data in
                                  items_data.values() if
                                  "Bow" in item_data.groups]),
-                                                               error="Invalid key item name in key_item_name_plando")
+                                                               error="Crystalis: Invalid key item name in "
+                                                                     "key_item_name_plando")
                             for orig_item_data in items_data.values() if
                             "Bow" in orig_item_data.groups and orig_item_data.default_count > 0
                         } | {
@@ -812,7 +814,8 @@ class PlandoKeyItemNames(OptionDict):
                                 [item_data.name for item_data in
                                  items_data.values() if
                                  "Key" in item_data.groups]),
-                                                               error="Invalid key item name in key_item_name_plando")
+                                                               error="Crystalis: Invalid key item name in "
+                                                                     "key_item_name_plando")
                             for orig_item_data in items_data.values() if
                             "Key" in orig_item_data.groups and orig_item_data.default_count > 0
                         } | {
@@ -820,7 +823,8 @@ class PlandoKeyItemNames(OptionDict):
                                 [item_data.name for item_data in
                                  items_data.values() if
                                  "Lamp" in item_data.groups]),
-                                                               error="Invalid key item name in key_item_name_plando")
+                                                               error="Crystalis: Invalid key item name in "
+                                                                     "key_item_name_plando")
                             for orig_item_data in items_data.values() if
                             "Lamp" in orig_item_data.groups and orig_item_data.default_count > 0
                         } | {
@@ -828,7 +832,8 @@ class PlandoKeyItemNames(OptionDict):
                                 [item_data.name for item_data in
                                  items_data.values() if
                                  "Statue" in item_data.groups]),
-                                                               error="Invalid key item name in key_item_name_plando")
+                                                               error="Crystalis: Invalid key item name in "
+                                                                     "key_item_name_plando")
                             for orig_item_data in items_data.values() if
                             "Statue" in orig_item_data.groups and orig_item_data.default_count > 0
                         } | {
@@ -836,11 +841,12 @@ class PlandoKeyItemNames(OptionDict):
                                 [item_data.name for item_data in
                                  items_data.values() if
                                  "Flute" in item_data.groups]),
-                                                               error="Invalid key item name in key_item_name_plando")
+                                                               error="Crystalis: Invalid key item name in "
+                                                                     "key_item_name_plando")
                             for orig_item_data in items_data.values() if
                             "Flute" in orig_item_data.groups and orig_item_data.default_count > 0
                         }, validate),
-                    error="Duplicate key item name found; each key item name can only be used once.")
+                    error="Crystalis: Duplicate key item name found; each key item name can only be used once.")
 
 
 # helper function for validation of PlandoShopInventories
@@ -863,7 +869,7 @@ class PlandoShopInventories(OptionDict):
     visibility = Visibility.template | Visibility.spoiler
     schema = Schema({
         Optional(shop_name): And(list[str], validate_shop_inventory) for shop_name in SHOP_INVENTORIES.keys()
-    }, error="Invalid shop inventory in option shop_inventory_plando.")
+    }, error="Crystalis: Invalid shop inventory in option shop_inventory_plando.")
 
 
 class PlandoWildWarp(OptionList):
