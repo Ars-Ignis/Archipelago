@@ -138,7 +138,7 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
         elif current_floor_name == "Karmine":
             current_floor_index = 3
         else:
-            raise KeyError(f"Unrecognized Goa floor in Goa connection map: {current_floor_name}")
+            raise KeyError(f"Crystalis: Unrecognized Goa floor in Goa connection map: {current_floor_name}")
         is_flipped: bool = False
         if current_floor_entrance_region_name.endswith("Back"):
             is_flipped = True
@@ -166,7 +166,7 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
         elif options.shuffle_areas and entrance_type in AREA_SHUFFLE_TYPES:
             area_connections[entrance_exit_key] = exit_exit_key
         else:
-            raise RuntimeError(f"ER Pairing data found in shuffle data without a supported ER type enabled. "
+            raise RuntimeError(f"Crystalis: ER Pairing data found in shuffle data without a supported ER type enabled. "
                                f"Entrance: {entrance} Exit: {exit}")
 
     output: Dict[str, Any] = {
@@ -196,12 +196,12 @@ def generate_output(self, output_directory: str) -> None:
                     non_unique_location = self.get_location(location_data.name)
                     item = non_unique_location.item
                     if item.player != self.player:
-                        raise RuntimeError(f"Non-unique location has another player's item: Location: "
+                        raise RuntimeError(f"Crystalis: Non-unique location has another player's item: Location: "
                                            f"{non_unique_location.name} Item: {item.name} Player: {item.player}")
                     else:
                         item_data = items_data[item.name]
                         if item_data.unique:
-                            raise RuntimeError(f"Non-unique location has unique item: Location: "
+                            raise RuntimeError(f"Crystalis: Non-unique location has unique item: Location: "
                                                f"{non_unique_location.name} Item: {item.name}")
 
     flag_string: str = generate_flag_string(self.options)
@@ -336,7 +336,7 @@ class CrystalisFile(APAutoPatchInterface):
 
         # target string is the expected .nes name; look to see if it exists next to the patch file
         if not os.path.exists(target):
-            raise FileNotFoundError(f"Unable to find patched ROM at path {target}. Please visit "
+            raise FileNotFoundError(f"Crystalis: Unable to find patched ROM at path {target}. Please visit "
                                     f"https://crystalisrandomizer.com/ap with your patch file to patch the ROM, then "
                                     f"place it next to the patch file and try again.")
 

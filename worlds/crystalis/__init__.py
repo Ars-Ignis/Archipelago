@@ -163,7 +163,7 @@ class CrystalisWorld(World):
             if found_buyable_herbs and found_buyable_boots:
                 break
         else:
-            raise ValueError("Crystalis: unable to reliably buy either Warp Boots or Medical Herbs for player "
+            raise OptionError("Crystalis: unable to reliably buy either Warp Boots or Medical Herbs for player "
                              f"{self.player_name}. This will only happen with shop_inventory_plando, so revise that "
                              f"option.")
         return shuffled_shops
@@ -327,7 +327,7 @@ class CrystalisWorld(World):
                     valid_wildwarps.remove(wildwarp_id)
             if self.options.wild_warp_plando.value:
                 if len(self.options.wild_warp_plando.value) > WARP_MAXIMUM:
-                    raise OptionError(f"Crystalis - too many warp locations in wild_warp_plando for player "
+                    raise OptionError(f"Crystalis: too many warp locations in wild_warp_plando for player "
                                       f"{self.player_name}")
                 for screen_name in self.options.wild_warp_plando.value:
                     if screen_name == "Any":
@@ -338,7 +338,7 @@ class CrystalisWorld(World):
                             valid_wildwarps.remove(warp_id)
                             wildwarps.append(warp_id)
                         else:
-                            raise OptionError(f"Crystalis - invalid screen name in wild_warp_plando for player "
+                            raise OptionError(f"Crystalis: invalid screen name in wild_warp_plando for player "
                                               f"{self.player_name}: {screen_name}")
             else:
                 warp_count = self.random.randint(WARP_MINIMUM, WARP_MAXIMUM)
@@ -373,15 +373,15 @@ class CrystalisWorld(World):
                 allowed_entrance_types.update(HOUSE_SHUFFLE_TYPES)
             for pair in self.options.plando_connections:
                 if pair.entrance in er_pairings and er_pairings[pair.entrance] != pair.exit:
-                    raise ValueError(f"Entrance {pair.entrance} is being mapped to multiple exits. First: "
-                                     f"{er_pairings[pair.entrance]} Second: {pair.exit}")
+                    raise OptionError(f"Crystalis: Entrance {pair.entrance} is being mapped to multiple exits. First: "
+                                      f"{er_pairings[pair.entrance]} Second: {pair.exit}")
                 if pair.exit in er_pairings and er_pairings[pair.exit] != pair.entrance:
-                    raise ValueError(f"Entrance {pair.exit} is being mapped to multiple exits. First: "
-                                     f"{er_pairings[pair.exit]} Second: {pair.entrance}")
+                    raise OptionError(f"Crystalis: Entrance {pair.exit} is being mapped to multiple exits. First: "
+                                      f"{er_pairings[pair.exit]} Second: {pair.entrance}")
                 if entrances_data[pair.entrance].entrance_type not in allowed_entrance_types:
-                    raise ValueError(f"Entrance {pair.entrance} is not being shuffled on these settings.")
+                    raise OptionError(f"Crystalis: Entrance {pair.entrance} is not being shuffled on these settings.")
                 if entrances_data[pair.exit].entrance_type not in allowed_entrance_types:
-                    raise ValueError(f"Entrance {pair.exit} is not being shuffled on these settings.")
+                    raise OptionError(f"Crystalis: Entrance {pair.exit} is not being shuffled on these settings.")
                 er_pairings[pair.entrance] = pair.exit
                 er_pairings[pair.exit] = pair.entrance
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
