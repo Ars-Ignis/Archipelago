@@ -55,7 +55,7 @@ class CrystalisWorld(World):
     write_spoiler_header = write_spoiler_header
     extend_hint_information = extend_hint_information
     web = CrystalisWeb()
-    shared_icon_houses: List[Tuple[Entrance, Entrance]]
+    shared_icon_houses: List[Entrance]
     houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
     tunnel_map: Dict[str, List[str]]
     cave_entrances: List[Tuple[Entrance, Entrance]]

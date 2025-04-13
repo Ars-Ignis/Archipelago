@@ -137,11 +137,11 @@ def create_regions(self) -> None:
                     # Therefore, just get to connecting!
                     connecting_entrance_data = entrances_data[self.shuffle_data.er_pairings[entrance_data.name]]
                     connecting_region = local_region_cache[connecting_entrance_data.parent_region]
-                    region.connect(connecting_region, entrance_data.name)
+                    plandoed_exit: Entrance = region.connect(connecting_region, entrance_data.name)
                     # The reverse entrance will be handled later/has already been handled
                     if entrance_data.related_entrances:
                         if entrance_data.entrance_type == CrystalisEntranceTypeEnum.HOUSE_ENTRANCE:
-                            self.shared_icon_houses.append([_exit, er_target])
+                            self.shared_icon_houses.append(plandoed_exit)
                         elif entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_EXIT:
                             self.tunnel_map[entrance_data.name] = entrance_data.related_entrances
                 elif entrance_data.entrance_type == CrystalisEntranceTypeEnum.GOA_TRANSITION and \
@@ -153,28 +153,28 @@ def create_regions(self) -> None:
                 elif (self.options.shuffle_houses and entrance_data.entrance_type in HOUSE_SHUFFLE_TYPES) or \
                      (self.options.shuffle_areas and entrance_data.entrance_type in AREA_SHUFFLE_TYPES):
                     # leave this disconnected for future use, and track some miscellaneous data about the entrance
-                    _exit = region.create_exit(entrance_data.name)
-                    _exit.randomization_group = entrance_data.entrance_type
-                    _exit.randomization_type = EntranceType.TWO_WAY
+                    disconnected_exit = region.create_exit(entrance_data.name)
+                    disconnected_exit.randomization_group = entrance_data.entrance_type
+                    disconnected_exit.randomization_type = EntranceType.TWO_WAY
                     er_target = region.create_er_target(entrance_data.name)
                     er_target.randomization_group = entrance_data.entrance_type
                     er_target.randomization_type = EntranceType.TWO_WAY
                     # track the entrance for later if necessary
                     if (entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_ENTRANCE
                             and entrance_data.name != "Portoa Palace Throne Room Secret"):
-                        self.cave_entrances.append([_exit, er_target])
+                        self.cave_entrances.append([disconnected_exit, er_target])
                     if entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_EXIT:
-                        self.cave_exits.append([_exit, er_target])
+                        self.cave_exits.append([disconnected_exit, er_target])
                     if entrance_data.related_entrances:
                         if entrance_data.entrance_type == CrystalisEntranceTypeEnum.HOUSE_ENTRANCE:
-                            self.shared_icon_houses.append([_exit, er_target])
+                            self.shared_icon_houses.append(disconnected_exit)
                         elif entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_EXIT:
                             self.tunnel_map[entrance_data.name] = entrance_data.related_entrances
                     if entrance_data.house_type != "":
                         if entrance_data.house_type in self.houses_by_type:
-                            self.houses_by_type[entrance_data.house_type].append([_exit, er_target])
+                            self.houses_by_type[entrance_data.house_type].append([disconnected_exit, er_target])
                         else:
-                            self.houses_by_type[entrance_data.house_type] = [[_exit, er_target]]
+                            self.houses_by_type[entrance_data.house_type] = [[disconnected_exit, er_target]]
                 else:
                     region.connect(target_region, entrance_data.name)
             self.multiworld.regions.append(region)
@@ -353,9 +353,11 @@ def connect_entrances(self):
     if self.options.shuffle_houses:
         # a couple of house entrances share icons with each other, so manually shuffle those to make sure the entrances
         # that share an icon lead to the same place
-        for outside_exit, outside_er_target in self.shared_icon_houses:
+        for outside_exit in self.shared_icon_houses:
             # look for the paired entrance, first
-            outside_entrance_data = entrances_data[outside_exit.name]
+            outside_region = outside_exit.parent_region
+            outside_name = outside_exit.name
+            outside_entrance_data = entrances_data[outside_name]
             paired_outside_name = outside_entrance_data.related_entrances[0]
             paired_outside_exit = self.get_entrance(paired_outside_name)
             paired_outside_region = paired_outside_exit.parent_region
@@ -366,6 +368,12 @@ def connect_entrances(self):
                 # a) neither entrance is connected
                 icon_type = self.random.choice([house_type for house_type in self.houses_by_type.keys()
                                                 if len(self.houses_by_type[house_type]) >= 2])
+                for outside_er_target in outside_region.entrances:
+                    if outside_er_target.name == outside_name:
+                        break
+                else:
+                    raise EntranceRandomizationError(f"Crystalis: Couldn't find ER target for entrance "
+                                                     f"{outside_name}")
                 for paired_outside_er_target in paired_outside_region.entrances:
                     if paired_outside_er_target.name == paired_outside_name:
                         break
@@ -401,6 +409,12 @@ def connect_entrances(self):
                     raise EntranceRandomizationError(f"Crystalis: Couldn't find reverse entrance for "
                                                      f"{paired_outside_exit.name} in region "
                                                      f"{paired_inside_region.name}")
+                for outside_er_target in outside_region.entrances:
+                    if outside_er_target.name == outside_name:
+                        break
+                else:
+                    raise EntranceRandomizationError(f"Crystalis: Couldn't find ER target for entrance "
+                                                     f"{outside_name}")
                 icon_type = entrances_data[paired_inside_exit.name].house_type
                 unconnected_entrances = [(outside_exit, outside_er_target)]
             else:
