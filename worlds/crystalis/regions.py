@@ -608,10 +608,7 @@ def connect_entrances(self):
                 self.shuffle_data.er_pairings |= er_state.pairings
                 break
             except EntranceRandomizationError as error:
-                # from Utils import visualize_regions
-                # visualize_regions(self.multiworld.get_region("Menu", self.player), f"Attempt {i+1}.puml",
-                # show_entrance_names=False, show_other_regions=True, entrance_highlighting=ENTRANCE_COLORINGS,
-                # detail_other_regions=True)
+                # visualize_regions(self, f"Attempt {i+1}.puml")
                 if i >= CRYSTALIS_MAX_GER_ATTEMPTS - 1:
                     raise EntranceRandomizationError(f"Crystalis: failed GER after {CRYSTALIS_MAX_GER_ATTEMPTS} "
                                                      f"attempts. Final error here: \n\n{error}")
