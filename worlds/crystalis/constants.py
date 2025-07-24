@@ -7,7 +7,7 @@ from .types import *
 
 CRYSTALIS_DEBUG: bool = False
 CRYSTALIS_BASE_ID: int = 2241000
-CRYSTALIS_APWORLD_VERSION: Version = Version(2, 0, 2)
+CRYSTALIS_APWORLD_VERSION: Version = Version(2, 0, 3)
 
 
 ########################################################

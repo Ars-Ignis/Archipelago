@@ -161,7 +161,8 @@ def create_regions(self) -> None:
                     er_target.randomization_type = EntranceType.TWO_WAY
                     # track the entrance for later if necessary
                     if (entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_ENTRANCE
-                            and entrance_data.name != "Portoa Palace Throne Room Secret"):
+                            and entrance_data.name != "Portoa Palace Throne Room Secret"
+                            and entrance_data.name != "Bow Passage - Entrance"):
                         self.cave_entrances.append([disconnected_exit, er_target])
                     if entrance_data.entrance_type == CrystalisEntranceTypeEnum.CAVE_EXIT:
                         self.cave_exits.append([disconnected_exit, er_target])
@@ -487,6 +488,10 @@ def connect_entrances(self):
                         # this should only happen if a user plando'd it
                         raise OptionError(f"Crystalis: Cannot connect Mt. Sabre North - Exit to Portoa Palace Throne "
                                           f"Room Secret. Please check plando_connections and change this connection.")
+                    elif cave_outside_exit.name == "Bow Passage - Entrance":
+                        # this should only happen if a user plando'd it
+                        raise OptionError(f"Crystalis: Cannot connect Mt. Sabre North - Exit to Bow Passage - Entrance."
+                                          f" Please check plando_connections and change this connection.")
                     break
             else:
                 raise EntranceRandomizationError(f"Crystalis: Couldn't find reverse entrance for Mt. Sabre North - Exit"
