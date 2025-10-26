@@ -1,5 +1,6 @@
-from BaseClasses import Region, Entrance
+from BaseClasses import Region, Entrance, EntranceType
 from Options import OptionError
+from entrance_rando import randomize_entrances, EntranceRandomizationError, disconnect_entrance_for_randomization
 from .constants import *
 from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntranceData, CrystalisEntranceTypeEnum, \
     CrystalisLocation
@@ -9,14 +10,6 @@ import orjson
 from typing import Dict, List, Set, NamedTuple, Tuple
 import pkgutil
 from worlds.generic.Rules import add_rule
-
-try:
-    from entrance_rando import randomize_entrances, EntranceRandomizationError, disconnect_entrance_for_randomization
-    from BaseClasses import EntranceType
-except ImportError:
-    logging.warning("Crystalis: Generic Entrance Randomizer not found in core code; please run this apworld against a "
-                    "version of Archipelago greater than 0.5.1 to support shuffle_houses and shuffle_areas. These "
-                    "options will be turned off.")
 
 
 def load_region_data_from_json() -> Dict[str, CrystalisRegionData]:

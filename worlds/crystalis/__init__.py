@@ -170,19 +170,6 @@ class CrystalisWorld(World):
 
     def generate_early(self) -> None:
 
-        try:
-            from entrance_rando import randomize_entrances
-        except ImportError:
-            logging.warning("Crystalis: Generic Entrance Randomizer not found in core code; please run this apworld "
-                            "against a version of Archipelago greater than 0.5.1 to support shuffle_houses and "
-                            "shuffle_areas. These options will be turned off.")
-            if self.options.shuffle_areas:
-                self.options.shuffle_areas.value = self.options.shuffle_areas.option_false
-            if self.options.shuffle_houses:
-                self.options.shuffle_houses.value = self.options.shuffle_houses.option_false
-            if self.options.plando_connections:
-                self.options.plando_connections.value.clear()
-
         if self.options.randomize_maps:
             logging.warning("Wm (Randomize maps) not implemented yet. Turning this option off.")
             self.options.randomize_maps.value = self.options.randomize_maps.option_false
