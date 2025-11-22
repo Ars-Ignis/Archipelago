@@ -353,6 +353,18 @@
       {
         "name": "",
         "entrance_type": 0,
+        "vanilla_target": "Angry Sea - Beach House Area",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrances": [],
+        "house_type": "",
+        "can_lock": false,
+        "pseudologic": "TRUE",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
         "vanilla_target": "Portoa Waterway - Water",
         "exit_key": "",
         "house_key": "",
