@@ -29,9 +29,9 @@ def convert_enum_to_item_classification(enum: CrystalisItemCategoryEnum) -> Item
     if enum == CrystalisItemCategoryEnum.TRAP:
         return ItemClassification.trap
     if enum == CrystalisItemCategoryEnum.PROGUSEFUL:
-        return ItemClassification.progression | ItemClassification.progression
+        return ItemClassification.progression | ItemClassification.useful
     if enum == CrystalisItemCategoryEnum.PROGUSEFULTRAP:
-        return ItemClassification.progression | ItemClassification.progression | ItemClassification.trap
+        return ItemClassification.progression | ItemClassification.useful | ItemClassification.trap
     raise ValueError(f"Crystalis: Unrecognized value in convert_enum_to_item_classification: {enum}")
     return ItemClassification.filler
 
