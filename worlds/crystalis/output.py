@@ -147,6 +147,8 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
 
     area_connections = {}
     house_connections = {}
+    should_adjust_lime_valley_keys: bool = options.vanilla_maps == options.vanilla_maps.option_GBC_cave and\
+                                           "Lime Valley" in shuffle_data.gbc_cave_exits
     for entrance, _exit in shuffle_data.er_pairings.items():
         entrance_type: CrystalisEntranceTypeEnum = entrances_data[entrance].entrance_type
         entrance_house_key: str = entrances_data[entrance].house_key
@@ -165,6 +167,17 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
             house_connections[entrance_house_key] = exit_house_key
         elif options.shuffle_areas and entrance_type in AREA_SHUFFLE_TYPES:
             area_connections[entrance_exit_key] = exit_exit_key
+            if should_adjust_lime_valley_keys:
+                if entrance == "Lime Valley - Up":
+                    area_connections["4202 edge:top"] = exit_exit_key
+                    del area_connections[entrance_exit_key]
+                elif entrance == "Lime Valley - Right":
+                    area_connections["4213 edge:right"] = exit_exit_key
+                    del area_connections[entrance_exit_key]
+                elif _exit == "Lime Valley - Up":
+                    area_connections[entrance_exit_key] = "4202 edge:top"
+                elif _exit == "Lime Valley - Right":
+                    area_connections[entrance_exit_key] = "4213 edge:right"
         else:
             raise RuntimeError(f"Crystalis: ER Pairing data found in shuffle data without a supported ER type enabled. "
                                f"Entrance: {entrance} Exit: {exit}")
