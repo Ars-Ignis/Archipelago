@@ -7,7 +7,8 @@ from Utils import VersionException, tuplize_version
 from .constants import *
 from .types import *
 from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
-from .regions import regions_data, create_regions, shuffle_goa, connect_entrances, entrances_data
+from .regions import regions_data, create_regions, shuffle_goa, connect_entrances, entrances_data, \
+    reconnect_found_entrances
 from .options import CrystalisOptions, crystalis_option_groups
 from .logic import set_rules
 from .output import generate_output, write_spoiler_header, extend_hint_information
@@ -39,10 +40,11 @@ class CrystalisWorld(World):
     1990 NES action role-playing game.
     """
 
+    # Class variables
     game = "Crystalis"
     options_dataclass = CrystalisOptions
     options: CrystalisOptions
-    topology_present = True
+    topology_present: bool = True
     shuffle_data: CrystalisShuffleData
     set_rules = set_rules
     create_regions = create_regions
@@ -55,6 +57,11 @@ class CrystalisWorld(World):
     write_spoiler_header = write_spoiler_header
     extend_hint_information = extend_hint_information
     web = CrystalisWeb()
+    # Universal Tracker specific class variables
+    ut_can_gen_without_yaml: bool = True
+    reconnect_found_entrances = reconnect_found_entrances
+
+    # member variables
     shared_icon_houses: List[Entrance]
     houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
     tunnel_map: Dict[str, List[str]]
@@ -62,7 +69,11 @@ class CrystalisWorld(World):
     cave_exits: List[Tuple[Entrance, Entrance]]
     goa_lower_floors: Set[str]
     goa_upper_floors: Set[str]
-    ut_can_gen_without_yaml: bool = True
+    # Universal Tracker specific member variables
+    using_ut: bool
+    in_game_id_to_entrance_name: Dict[int, str]
+    found_entrances: Set[int]
+    found_towns: Set[int]
 
     # this will get filled out later, while creating regions
     locations_data: List[CrystalisLocationData]
@@ -176,6 +187,7 @@ class CrystalisWorld(World):
 
         if hasattr(self.multiworld, "re_gen_passthrough"):
             if "Crystalis" in self.multiworld.re_gen_passthrough:
+                self.using_ut = True
                 passthrough = self.multiworld.re_gen_passthrough["Crystalis"]
                 if "version" not in passthrough:
                     err_string = f"Crystalis APWorld version mismatch. Multiworld generated without versioning; " \
@@ -232,6 +244,8 @@ class CrystalisWorld(World):
                 self.goa_lower_floors = {"Kelbesque", "Sabera"}
                 self.goa_upper_floors = {"Mado", "Karmine"}
                 return  # bail early, we don't need the rest of this lmao
+
+        self.using_ut = False
 
         # walls first
         wall_weaknesses: List[str] = []
@@ -291,10 +305,8 @@ class CrystalisWorld(World):
             possible_gbc_cave_exits = ["Cordel Plains - Main", "Lime Valley", "Goa Valley", "Desert 2"]
             gbc_cave_exits = self.random.sample(possible_gbc_cave_exits, k=2)
         thunder_warp: str = ""
-        towns = ["Leaf", "Brynmaer", "Oak", "Nadare's", "Portoa", "Amazones", "Joel", "Zombie Town", "Swan", "Shyron",
-                 "Goa", "Sahara"]
         if self.options.thunder_warp == self.options.thunder_warp.option_shuffled:
-            thunder_warp = self.random.choice(towns)
+            thunder_warp = self.random.choice(TOWNS)
         elif self.options.thunder_warp != self.options.thunder_warp.option_none:
             thunder_warp = self.options.thunder_warp.get_option_name(self.options.thunder_warp.value)
         shop_inventories: Dict[str, List[str]] = SHOP_INVENTORIES.copy()

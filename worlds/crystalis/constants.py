@@ -13,7 +13,8 @@ def load_world_version_from_json() -> Version:
 #   Overall Constants                                  #
 ########################################################
 
-CRYSTALIS_DEBUG: bool = False
+
+CRYSTALIS_DEBUG: bool = True if __debug__ else False
 CRYSTALIS_BASE_ID: int = 2241000
 CRYSTALIS_APWORLD_VERSION: Version = load_world_version_from_json() # used in client because world_version isn't available
 
@@ -350,6 +351,36 @@ LIME_PASSAGE_NAMES = [
 CRYSTALIS_MAX_GER_ATTEMPTS: int = 10
 WARP_MINIMUM = 4
 WARP_MAXIMUM = 15
+
+TOWNS_WITH_IDS: dict[int, str] = {
+    0x0200: "Leaf",
+    0x1800: "Brynmaer",
+    0x1c00: "Oak",
+    0xd500: "Nadare's",
+    0x5000: "Portoa",
+    0x1b00: "Amazones",
+    0x7100: "Joel",
+    0x6500: "Zombie Town",
+    0x7200: "Swan",
+    0x8c00: "Shyron",
+    0x8e00: "Goa",
+    0x9300: "Sahara"
+}
+
+TOWNS: list[str] = [
+    "Leaf",
+    "Brynmaer",
+    "Oak",
+    "Nadare's",
+    "Portoa",
+    "Amazones",
+    "Joel",
+    "Zombie Town",
+    "Swan",
+    "Shyron",
+    "Goa",
+    "Sahara"
+]
 
 ########################################################
 #   Client Constants                                   #

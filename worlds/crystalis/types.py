@@ -116,6 +116,7 @@ class CrystalisEntranceData:
     related_entrances: List[str]
     house_type: str
     can_lock: bool
+    in_game_id: int
 
 
 @dataclass

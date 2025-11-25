@@ -1,5 +1,5 @@
 from time import time
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Set
 
 import worlds._bizhawk as bizhawk
 from NetUtils import ClientStatus, NetworkItem
@@ -43,6 +43,8 @@ class CrystalisClient(BizHawkClient):
     last_death_link: float = time()
     asina_location_id: int = -1
     whirlpool_location_id: int = -1
+    used_entrances: Set[int] = set()
+    last_entrance: int = -1
 
     def __init__(self):
         super().__init__()
@@ -100,7 +102,8 @@ class CrystalisClient(BizHawkClient):
                 self.unidentified_item_rom_ids[items_data[new_name].ap_id_offset + CRYSTALIS_BASE_ID] = \
                     items_data[original_name].rom_id
             async_start(ctx.send_msgs([{"cmd": "Get",
-                                        "keys": [f"asina_hint_collected_{ctx.team}_{ctx.slot}"]}]))
+                                        "keys": [f"asina_hint_collected_{ctx.team}_{ctx.slot}",
+                                                 f"Slot_{ctx.slot}_found_entrances"]}]))
             if "death_link" in ctx.slot_data.keys():
                 async_start(ctx.update_death_link(ctx.slot_data["death_link"]))
             else:
@@ -108,6 +111,10 @@ class CrystalisClient(BizHawkClient):
         elif cmd == "Retrieved":
             if f"asina_hint_collected_{ctx.team}_{ctx.slot}" in args["keys"]:
                 self.asina_hint_collected = args["keys"][f"asina_hint_collected_{ctx.team}_{ctx.slot}"]
+            if f"Slot_{ctx.slot}_found_entrances" in args["keys"]:
+                print(args["keys"][f"Slot_{ctx.slot}_found_entrances"])
+                if args["keys"][f"Slot_{ctx.slot}_found_entrances"]:
+                    self.used_entrances = set(args["keys"][f"Slot_{ctx.slot}_found_entrances"])
         elif cmd == "Bounced":
             tags = args.get("tags", [])
             # we can skip checking "DeathLink" in ctx.tags, as otherwise we wouldn't have been sent this
@@ -123,7 +130,7 @@ class CrystalisClient(BizHawkClient):
                                                               (GET_ITEM_FLAG_ADDR, 1, "System Bus"),
                                                               (GAME_MODE_ADDR, 1, "System Bus"),
                                                               (MAIN_LOOP_MODE_ADDR, 1, "System Bus"),
-                                                              (CURRENT_LOCATION_ADDR, 1, "System Bus"),
+                                                              (CURRENT_LOCATION_ADDR, 2, "System Bus"),
                                                               (START_OF_CONSUMABLE_INV_ADDR, 8, "System Bus")])
             if read_value is not None:
                 game_mode = read_value[4][0]
@@ -197,6 +204,18 @@ class CrystalisClient(BizHawkClient):
                             "want_reply": False,
                             "operations": [{"operation": "replace", "value": new_location}]
                         }]), name="send current_location")
+                    new_entrance: int = (new_location << 8) + read_value[6][1]
+                    if new_entrance != self.last_entrance:
+                        self.last_entrance = new_entrance
+                        if new_entrance not in self.used_entrances:
+                            self.used_entrances.add(new_entrance)
+                            async_start(ctx.send_msgs([{
+                                "cmd": "Set",
+                                "key": f"Slot_{ctx.slot}_found_entrances",
+                                "default": 0,
+                                "want_reply": False,
+                                "operations": [{"operation": "replace", "value": self.used_entrances}]
+                            }]), name="send used_entrances")
                     # if we're not already processing an item and we're not in Mezame Shrine...
                     # Prevent receiving items in Mezame Shrine to make reloading saves for asyncs a bit smoother.
                     if not get_item_flag and self.current_location != 0:

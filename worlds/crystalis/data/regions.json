@@ -15,6 +15,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6912,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -29,6 +30,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6914,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -43,6 +45,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6913,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -55,6 +58,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6915,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -67,6 +71,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6916,
         "pseudologic": "statue_skip || trigger_skip || Change || Paralysis",
         "notes": ""
       }
@@ -90,6 +95,7 @@
         "related_entrances": [],
         "house_type": "Armor",
         "can_lock": false,
+        "in_game_id": 54016,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -113,6 +119,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 53504,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -136,6 +143,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 53760,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -159,6 +167,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -171,6 +180,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 24583,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -192,6 +202,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -204,6 +215,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 24581,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -225,6 +237,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -237,6 +250,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 26625,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -260,6 +274,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -272,6 +287,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -293,6 +309,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -305,6 +322,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 24577,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -326,6 +344,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -338,6 +357,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -359,6 +379,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -371,6 +392,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -383,6 +405,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -395,6 +418,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "trigger_skip || (Shell Flute && can_use_shell_flute)",
         "notes": ""
       },
@@ -407,6 +431,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || ( (Shell Flute && can_use_shell_flute) && (Golden Statue || ghetto_flight))",
         "notes": ""
       }
@@ -443,6 +468,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 54272,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -489,6 +515,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -524,6 +551,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 24832,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -557,6 +585,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Bow of Sun && Bow of Moon",
         "notes": ""
       },
@@ -569,6 +598,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 40961,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -592,6 +622,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 40960,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -604,6 +635,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Bow of Sun && Bow of Moon",
         "notes": ""
       }
@@ -627,6 +659,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 47872,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -662,6 +695,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6144,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -674,6 +708,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6149,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -688,6 +723,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6147,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -702,6 +738,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6148,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -714,6 +751,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6146,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -726,6 +764,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6145,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -761,6 +800,7 @@
         "related_entrances": [],
         "house_type": "Armor",
         "can_lock": false,
+        "in_game_id": 51456,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -784,6 +824,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 51200,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -807,6 +848,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 51968,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -830,6 +872,7 @@
         "related_entrances": [],
         "house_type": "Pawn",
         "can_lock": false,
+        "in_game_id": 50944,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -853,6 +896,7 @@
         "related_entrances": [],
         "house_type": "Tavern",
         "can_lock": false,
+        "in_game_id": 50688,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -893,6 +937,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 59392,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -928,6 +973,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 5120,
         "pseudologic": "Windmill Key && can_reach(Windmill)",
         "notes": "Will not have this rule in Wa"
       },
@@ -940,6 +986,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 5124,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -952,6 +999,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 5125,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -964,6 +1012,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -976,6 +1025,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 5121,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -988,6 +1038,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 5378,
         "pseudologic": "Teleport || (Flight && rabbit_skip) || (trigger_skip)",
         "notes": ""
       },
@@ -1000,6 +1051,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 5379,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1012,6 +1064,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 5376,
         "pseudologic": "TRUE",
         "notes": "\"Only exists if Vm and V!m are both off"
       }
@@ -1045,6 +1098,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -1057,6 +1111,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 5126,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1078,6 +1133,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -1090,6 +1146,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": "Very explicitly no reverse entrance"
       }
@@ -1114,6 +1171,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 41216,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1126,6 +1184,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -1138,6 +1197,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -1161,6 +1221,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -1197,6 +1258,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -1209,6 +1271,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -1244,6 +1307,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Draygon 2)",
         "notes": ""
       }
@@ -1267,6 +1331,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 38400,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1279,6 +1344,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 38401,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1314,6 +1380,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36864,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1326,6 +1393,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36865,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1338,6 +1406,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       }
@@ -1359,6 +1428,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -1371,6 +1441,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36866,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1394,6 +1465,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 38912,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1406,6 +1478,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -1418,6 +1491,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -1430,6 +1504,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 38915,
         "pseudologic": "TRUE",
         "notes": "\"Only exists if Vm and V!m are both off"
       }
@@ -1451,6 +1526,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -1463,6 +1539,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 38913,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1484,6 +1561,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -1496,6 +1574,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 38914,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1521,6 +1600,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37376,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1535,6 +1615,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37377,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1560,6 +1641,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 38144,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1574,6 +1656,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 38145,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1597,6 +1680,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 56832,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1618,6 +1702,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -1630,6 +1715,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Evil Spirit Island)",
         "notes": ""
       }
@@ -1667,6 +1753,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 26880,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1679,6 +1766,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -1702,6 +1790,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1748,6 +1837,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1760,6 +1850,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Evil Spirit Island)",
         "notes": ""
       },
@@ -1774,6 +1865,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 27138,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1809,6 +1901,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 54784,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -1832,6 +1925,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20736,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1844,6 +1938,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20737,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1856,6 +1951,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman) && (!vanilla_dolphin || (can_reach(Mesia) && can_reach(Portoa Waterway - Main) && can_reach(Asina's Chambers) && Shell Flute))",
         "notes": "messy - clean up with events?"
       }
@@ -1885,6 +1981,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
         "notes": ""
       },
@@ -1897,6 +1994,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
         "notes": ""
       }
@@ -1920,6 +2018,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 18432,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -1932,6 +2031,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
         "notes": "\"Don't need to model each individual room of the place"
       }
@@ -2016,6 +2116,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 55296,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2044,6 +2145,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 2817,
         "pseudologic": "TRUE",
         "notes": "Only exists if Vm and V!m are both off."
       },
@@ -2056,6 +2158,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(GBC Cave)",
         "notes": "Only exists if Vm and V!m are both off."
       },
@@ -2071,6 +2174,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 2816,
         "pseudologic": "TRUE",
         "notes": "Only exists if Vm and V!m are both off."
       }
@@ -2115,6 +2219,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(GBC Cave)",
         "notes": "Only exists if Vm and V!m are both off."
       },
@@ -2130,6 +2235,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 4609,
         "pseudologic": "TRUE",
         "notes": "Only exists if Vm and V!m are both off."
       }
@@ -2153,6 +2259,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36352,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       },
@@ -2167,6 +2274,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36356,
         "pseudologic": "can_reach(Shyron) || statue_skip",
         "notes": ""
       },
@@ -2179,6 +2287,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36357,
         "pseudologic": "can_reach(Shyron) || statue_skip",
         "notes": ""
       },
@@ -2191,6 +2300,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36353,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2205,6 +2315,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36354,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2217,6 +2328,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36355,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2238,6 +2350,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Goa Entrance Wall)",
         "notes": ""
       },
@@ -2250,6 +2363,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 43009,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2273,6 +2387,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 43008,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2285,6 +2400,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       }
@@ -2306,6 +2422,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       },
@@ -2318,6 +2435,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Goa Entrance Wall)",
         "notes": ""
       }
@@ -2341,6 +2459,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 46848,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2353,6 +2472,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 46855,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       }
@@ -2376,6 +2496,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 48128,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2399,6 +2520,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 48640,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2422,6 +2544,7 @@
         "related_entrances": [],
         "house_type": "Tavern",
         "can_lock": false,
+        "in_game_id": 48896,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2445,6 +2568,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 30720,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2457,6 +2581,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 30722,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2469,6 +2594,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 30723,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2481,6 +2607,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 30721,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       },
@@ -2493,6 +2620,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 30975,
         "pseudologic": "TRUE",
         "notes": "\"Only exists if Vm and V!m are both off"
       }
@@ -2514,6 +2642,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Change",
         "notes": ""
       },
@@ -2526,6 +2655,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29441,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2549,6 +2679,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29440,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2561,6 +2692,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Change",
         "notes": ""
       }
@@ -2584,6 +2716,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 256,
         "pseudologic": "TRUE",
         "notes": "\"\"\"Hey!! There's a guy coming out of the cave!\"\"\""
       },
@@ -2596,6 +2729,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 257,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2619,6 +2753,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 28928,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2631,6 +2766,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 28931,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2643,6 +2779,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 28932,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2657,6 +2794,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 28930,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2669,6 +2807,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 28929,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2692,6 +2831,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 58112,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2715,6 +2855,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 59136,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2738,6 +2879,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 58624,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -2761,6 +2903,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 58368,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2773,6 +2916,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 58369,
         "pseudologic": "Eyeglasses",
         "notes": ""
       }
@@ -2797,6 +2941,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Karmine)",
         "notes": ""
       },
@@ -2809,6 +2954,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 47616,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2821,6 +2967,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -2833,6 +2980,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -2866,6 +3014,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       },
@@ -2878,6 +3027,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Karmine)",
         "notes": "Reverse connection unnecessary"
       }
@@ -2905,6 +3055,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 45056,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -2917,6 +3068,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Karmine)",
         "notes": ""
       }
@@ -3035,6 +3187,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -3047,6 +3200,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       }
@@ -3070,6 +3224,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Kelbesque 2)",
         "notes": ""
       },
@@ -3082,6 +3237,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 43521,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3103,6 +3259,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3115,6 +3272,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3150,6 +3308,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 43264,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3162,6 +3321,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Kelbesque 2)",
         "notes": ""
       }
@@ -3183,6 +3343,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
         "notes": ""
       },
@@ -3197,6 +3358,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 17921,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3222,6 +3384,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 17408,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3234,6 +3397,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
         "notes": ""
       }
@@ -3258,6 +3422,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
         "notes": ""
       },
@@ -3270,6 +3435,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
         "notes": ""
       }
@@ -3305,6 +3471,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 18176,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3340,6 +3507,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 512,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3352,6 +3520,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 516,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3366,6 +3535,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 514,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3380,6 +3550,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 515,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3392,6 +3563,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 518,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3404,6 +3576,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 517,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3418,6 +3591,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 519,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3430,6 +3604,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 513,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3453,6 +3628,7 @@
         "related_entrances": [],
         "house_type": "Armor",
         "can_lock": false,
+        "in_game_id": 50176,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3476,6 +3652,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 49152,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3511,6 +3688,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 49664,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3534,6 +3712,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 49920,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3557,6 +3736,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 49408,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3580,6 +3760,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 25088,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3613,6 +3794,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 24579,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3625,6 +3807,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 24580,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3650,6 +3833,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 28673,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3664,6 +3848,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 28672,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3687,6 +3872,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 16896,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3699,6 +3885,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 16897,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3711,6 +3898,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 16898,
         "pseudologic": "TRUE",
         "notes": "\"Only exists if Vm and V!m are both off"
       },
@@ -3723,6 +3911,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 17151,
         "pseudologic": "TRUE",
         "notes": "Only exists if V!m is on."
       }
@@ -3744,6 +3933,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Mado 2)",
         "notes": ""
       },
@@ -3756,6 +3946,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 47360,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3777,6 +3968,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3789,6 +3981,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3824,6 +4017,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 44288,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3836,6 +4030,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -3848,6 +4043,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -3860,6 +4056,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -3914,6 +4111,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -3961,6 +4159,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -3973,6 +4172,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Mado 2)",
         "notes": ""
       }
@@ -4008,6 +4208,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20992,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4031,6 +4232,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 0,
         "pseudologic": "TRUE",
         "notes": "Starting region."
       }
@@ -4078,6 +4280,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -4090,6 +4293,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 32257,
         "pseudologic": "Change || statue_skip || can_reach(Shyron) || (can_reach(Goa Entrance - Massacre Trigger) && can_reach(Shyron Temple) && Sword of Thunder))",
         "notes": "\"Need to check trigger skip and Paralysis; entrance only shuffled in Wa"
       }
@@ -4114,6 +4318,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 31744,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4126,6 +4331,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -4138,6 +4344,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -4173,6 +4380,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Hydra)",
         "notes": ""
       }
@@ -4224,6 +4432,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -4236,6 +4445,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Hydra)",
         "notes": ""
       },
@@ -4248,6 +4458,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 31746,
         "pseudologic": "Key to Stxy",
         "notes": ""
       }
@@ -4294,6 +4505,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Hydra)",
         "notes": ""
       },
@@ -4306,6 +4518,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Hydra)",
         "notes": ""
       }
@@ -4327,6 +4540,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4339,6 +4553,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Prison Key",
         "notes": ""
       }
@@ -4374,6 +4589,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Kelbesque 1)",
         "notes": ""
       },
@@ -4386,6 +4602,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -4398,6 +4615,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_reach(Mt. Sabre North - Boss) && can_fight(Kelbesque 1)",
         "notes": ""
       }
@@ -4419,6 +4637,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -4431,6 +4650,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 13569,
         "pseudologic": "TRUE",
         "notes": "Reverse entrance needs Prison Key in Wa"
       },
@@ -4443,6 +4663,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_reach(Mt. Sabre North - Boss) && can_fight(Kelbesque 1)",
         "notes": ""
       }
@@ -4467,6 +4688,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4502,6 +4724,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -4514,6 +4737,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
@@ -4540,6 +4764,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4552,6 +4777,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4564,6 +4790,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Mt. Sabre North)",
         "notes": "I'm not putting this into logic with Trigger Skip. You're welcome."
       },
@@ -4576,6 +4803,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": "Reverse entrance unnecessary - can get from interior to main via upper without breaking any walls."
       }
@@ -4612,6 +4840,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4624,6 +4853,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Kelbesque 1)",
         "notes": ""
       }
@@ -4647,6 +4877,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "rabbit_skip || trigger_skip || (Telepathy && can_reach(Leaf Shed) && can_reach(Leaf Elder House) && can_reach(Zebu's Cave - Back) && can_reach(Zebu Student's House))",
         "notes": "TODO: investigate if talking to Zebu in Zebu's Cave is also necessary"
       },
@@ -4659,6 +4890,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 10240,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -4682,6 +4914,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
@@ -4737,6 +4970,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -4749,6 +4983,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
@@ -4774,6 +5009,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": "Wheeeeee!"
       },
@@ -4786,6 +5022,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Rabbit Boots || Speed Boots || trigger_skip || can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -4798,6 +5035,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       },
@@ -4810,6 +5048,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || trigger_skip",
         "notes": ""
       },
@@ -4822,6 +5061,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
         "notes": ""
       }
@@ -4876,6 +5116,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       },
@@ -4888,6 +5129,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       }
@@ -4924,6 +5166,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 8192,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4936,6 +5179,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 8195,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -4948,6 +5192,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Rabbit Boots || Speed Boots || trigger_skip",
         "notes": ""
       },
@@ -4960,6 +5205,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -4972,6 +5218,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       }
@@ -5007,6 +5254,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5045,6 +5293,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       },
@@ -5057,6 +5306,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
         "notes": ""
       },
@@ -5069,6 +5319,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5092,6 +5343,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5104,6 +5356,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 54529,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5116,6 +5369,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 54530,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5128,6 +5382,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 54531,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5151,6 +5406,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 15872,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5174,6 +5430,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 15360,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5197,6 +5454,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 15616,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5220,6 +5478,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 7168,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5232,6 +5491,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 7171,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5244,6 +5504,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 7170,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5256,6 +5517,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 7169,
         "pseudologic": "statue_skip || (Telepathy && can_reach(Oak Mom House) && can_reach(Swamp - Interior))",
         "notes": ""
       },
@@ -5268,6 +5530,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 7172,
         "pseudologic": "statue_skip || (Telepathy && can_reach(Oak Mom House) && can_reach(Swamp - Interior))",
         "notes": ""
       }
@@ -5291,6 +5554,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 52480,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5326,6 +5590,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 53248,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5349,6 +5614,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 52992,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5372,6 +5638,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 52736,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5405,6 +5672,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -5417,6 +5685,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       }
@@ -5450,6 +5719,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -5462,6 +5732,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37121,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5485,6 +5756,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 47106,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5497,6 +5769,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       },
@@ -5509,6 +5782,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -5566,6 +5840,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
         "notes": ""
       },
@@ -5578,6 +5853,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 47104,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       }
@@ -5601,6 +5877,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20480,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5613,6 +5890,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20485,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5625,6 +5903,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20486,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5637,6 +5916,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20487,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5649,6 +5929,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20484,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5661,6 +5942,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20483,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5673,6 +5955,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20482,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5685,6 +5968,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 20481,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5708,6 +5992,7 @@
         "related_entrances": [],
         "house_type": "Armor",
         "can_lock": false,
+        "in_game_id": 55808,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5731,6 +6016,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 56320,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5754,6 +6040,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 56576,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5777,6 +6064,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 55040,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5789,6 +6077,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 55042,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5801,6 +6090,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 55043,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5813,6 +6103,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "statue_skip || trigger_skip || can_reach(Mesia) || Paralysis || can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)",
         "notes": ""
       }
@@ -5834,6 +6125,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5846,6 +6138,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 57089,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5869,6 +6162,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5881,6 +6175,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Paralysis || statue_skip || can_reach(Mesia) || trigger_skip",
         "notes": ""
       }
@@ -5916,6 +6211,7 @@
         "related_entrances": [],
         "house_type": "Pawn",
         "can_lock": false,
+        "in_game_id": 55552,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -5939,6 +6235,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 25601,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -5951,6 +6248,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -5963,6 +6261,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -5975,6 +6274,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || (can_use_shell_flute)",
         "notes": "can_use_shell_flute is complicated; might be worth turning into an event"
       }
@@ -6010,6 +6310,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6022,6 +6323,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6057,6 +6359,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 36608,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6095,6 +6398,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 39936,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6107,6 +6411,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Draygon 1)",
         "notes": "Just used to group the two rewards from the Draygon fight."
       }
@@ -6171,6 +6476,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6183,6 +6489,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 17153,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6206,6 +6513,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 17152,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6218,6 +6526,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "(trade_in(Rage) || rage_skip*) && (Flight || can_break_wall(Water))",
         "notes": "\"Actually forcing Rage skip into logic might be tough? Need to note entrance to Rage in output file"
       }
@@ -6251,6 +6560,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -6263,6 +6573,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Sabera Boss)",
         "notes": ""
       }
@@ -6284,6 +6595,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Sabera 2)",
         "notes": ""
       },
@@ -6296,6 +6608,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 44033,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6317,6 +6630,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6329,6 +6643,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6364,6 +6679,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 43776,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6376,6 +6692,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -6388,6 +6705,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -6423,6 +6741,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Sabera Boss)",
         "notes": ""
       },
@@ -6435,6 +6754,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Sabera 2)",
         "notes": ""
       }
@@ -6490,6 +6810,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 27648,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6502,6 +6823,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Vampire 2)",
         "notes": ""
       }
@@ -6569,6 +6891,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6581,6 +6904,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Sabera 1)",
         "notes": ""
       }
@@ -6616,6 +6940,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37632,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6628,6 +6953,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37637,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6642,6 +6968,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37634,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6656,6 +6983,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37633,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6668,6 +6996,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37636,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6680,6 +7009,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37635,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6703,6 +7033,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 37888,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6715,6 +7046,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 37889,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6738,6 +7070,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 64000,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6761,6 +7094,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 63488,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6784,6 +7118,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 63744,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6807,6 +7142,7 @@
         "related_entrances": [],
         "house_type": "Pawn",
         "can_lock": false,
+        "in_game_id": 64256,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6831,6 +7167,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Sealed Cave)",
         "notes": ""
       },
@@ -6843,6 +7180,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Sealed Cave)",
         "notes": ""
       }
@@ -6887,6 +7225,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Sealed Cave)",
         "notes": ""
       },
@@ -6901,6 +7240,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 3073,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -6930,6 +7270,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 1024,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -6942,6 +7283,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Sealed Cave)",
         "notes": ""
       }
@@ -7010,6 +7352,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 57344,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7033,6 +7376,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 35840,
         "pseudologic": "TRUE",
         "notes": "\"Not shuffled on Wh"
       },
@@ -7045,6 +7389,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 35841,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7057,6 +7402,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 35846,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7069,6 +7415,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 35845,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7081,6 +7428,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 35844,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7093,6 +7441,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 35843,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7105,6 +7454,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 35842,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7128,6 +7478,7 @@
         "related_entrances": [],
         "house_type": "Armor",
         "can_lock": false,
+        "in_game_id": 62720,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7151,6 +7502,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 62464,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7174,6 +7526,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 63232,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7197,6 +7550,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 62976,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7220,6 +7574,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 61952,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7232,6 +7587,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder",
         "notes": ""
       }
@@ -7287,6 +7643,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 62208,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7310,6 +7667,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       },
@@ -7322,6 +7680,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -7334,6 +7693,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight",
         "notes": ""
       }
@@ -7369,6 +7729,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 34816,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7381,6 +7742,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
         "notes": ""
       }
@@ -7446,6 +7808,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7490,6 +7853,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
         "notes": ""
       },
@@ -7502,6 +7866,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6657,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7523,6 +7888,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
         "notes": ""
       },
@@ -7535,6 +7901,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
         "notes": ""
       }
@@ -7570,6 +7937,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6656,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7582,6 +7950,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
         "notes": ""
       }
@@ -7605,6 +7974,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29184,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7617,6 +7987,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29187,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7629,6 +8000,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29192,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7641,6 +8013,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29191,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7653,6 +8026,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29190,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7667,6 +8041,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29188,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7681,6 +8056,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29189,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7693,6 +8069,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29185,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7705,6 +8082,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 29186,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7728,6 +8106,7 @@
         "related_entrances": [],
         "house_type": "Armor",
         "can_lock": false,
+        "in_game_id": 60928,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7751,6 +8130,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 61696,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7786,6 +8166,7 @@
         "related_entrances": [],
         "house_type": "Inn",
         "can_lock": false,
+        "in_game_id": 60672,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7809,6 +8190,7 @@
         "related_entrances": [],
         "house_type": "Item",
         "can_lock": false,
+        "in_game_id": 60160,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7832,6 +8214,7 @@
         "related_entrances": [],
         "house_type": "Pawn",
         "can_lock": false,
+        "in_game_id": 61440,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7855,6 +8238,7 @@
         "related_entrances": [],
         "house_type": "Tavern",
         "can_lock": false,
+        "in_game_id": 61184,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7878,6 +8262,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 60416,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7901,6 +8286,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 7680,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7936,6 +8322,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6400,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -7948,6 +8335,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 6401,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -7988,6 +8376,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flute of Lime || statue_skip",
         "notes": ""
       },
@@ -8000,6 +8389,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Waterfall Cave)",
         "notes": ""
       }
@@ -8023,6 +8413,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Waterfall Cave)",
         "notes": ""
       }
@@ -8080,6 +8471,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Waterfall Cave)",
         "notes": ""
       },
@@ -8092,6 +8484,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flute of Lime || statue_skip",
         "notes": ""
       }
@@ -8115,6 +8508,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 21504,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8127,6 +8521,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Waterfall Cave)",
         "notes": ""
       }
@@ -8160,6 +8555,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -8172,6 +8568,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 16386,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -8195,6 +8592,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 16384,
         "pseudologic": "Prison Key",
         "notes": "Remove Prison Key requirement for Wa"
       },
@@ -8207,6 +8605,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -8228,6 +8627,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -8240,6 +8640,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 16641,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -8263,6 +8664,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || trigger_skip",
         "notes": ""
       },
@@ -8275,6 +8677,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 16387,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8287,6 +8690,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 16385,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8299,6 +8703,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 16640,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8311,6 +8716,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       },
@@ -8323,6 +8729,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
         "notes": ""
       }
@@ -8346,6 +8753,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 768,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8358,6 +8766,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 769,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8370,6 +8779,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 770,
         "pseudologic": "Windmill Key && can_reach(Windmill)",
         "notes": "\"If Wa"
       },
@@ -8382,6 +8792,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 773,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8394,6 +8805,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 774,
         "pseudologic": "TRUE",
         "notes": "Only exists if Vm and V!m are both off."
       },
@@ -8406,6 +8818,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 1023,
         "pseudologic": "TRUE",
         "notes": "Only exists if V!m is on."
       }
@@ -8441,6 +8854,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 3840,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -8466,6 +8880,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 3584,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8480,6 +8895,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 3585,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -8513,6 +8929,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 771,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8525,6 +8942,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 772,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -8548,6 +8966,7 @@
         "related_entrances": [],
         "house_type": "House",
         "can_lock": false,
+        "in_game_id": 50432,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -8583,6 +9002,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Zebu's Cave)",
         "notes": ""
       },
@@ -8597,6 +9017,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 4353,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -8622,6 +9043,7 @@
         ],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 4096,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8634,6 +9056,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "can_break_wall(Zebu's Cave)",
         "notes": ""
       }
@@ -8657,6 +9080,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": true,
+        "in_game_id": 25856,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8669,6 +9093,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 25858,
         "pseudologic": "TRUE",
         "notes": ""
       },
@@ -8681,6 +9106,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": 25857,
         "pseudologic": "TRUE",
         "notes": ""
       }
@@ -8702,6 +9128,7 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
+        "in_game_id": -1,
         "pseudologic": "TRUE",
         "notes": "The way to start the game."
       }
