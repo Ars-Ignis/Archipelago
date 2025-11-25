@@ -1,5 +1,13 @@
-from Utils import Version
+from Utils import Version, tuplize_version
+import orjson
+import pkgutil
 from .types import *
+
+
+def load_world_version_from_json() -> Version:
+    manifest: dict[str, any] = orjson.loads(pkgutil.get_data(__name__, "archipelago.json").decode("utf-8-sig"))
+    version_string: str = manifest["world_version"]
+    return tuplize_version(version_string)
 
 ########################################################
 #   Overall Constants                                  #
@@ -7,7 +15,7 @@ from .types import *
 
 CRYSTALIS_DEBUG: bool = False
 CRYSTALIS_BASE_ID: int = 2241000
-CRYSTALIS_APWORLD_VERSION: Version = Version(2, 0, 3)
+CRYSTALIS_APWORLD_VERSION: Version = load_world_version_from_json() # used in client because world_version isn't available
 
 
 ########################################################
