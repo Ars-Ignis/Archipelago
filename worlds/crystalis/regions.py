@@ -595,7 +595,8 @@ def connect_entrances(self):
                                                                        self.player) and windmill_reg.can_reach(state))
                     self.multiworld.register_indirect_condition(windmill_reg, entrance_to_lock)
     # if we're deferring entrances, we should now disconnect all the shuffled ones and bail
-    if self.using_ut and self.multiworld.enforce_deferred_connections in ("on", "default"):
+    # temporarily disabled until the website patcher is updated
+    if False: #self.using_ut and self.multiworld.enforce_deferred_connections in ("on", "default"):
         # set up the variables to connect entrances later
         self.found_entrances_datastorage_key = "Slot_{player}_found_entrances"
         self.found_entrances = set()
@@ -669,7 +670,8 @@ def connect_entrances(self):
 
 
 def reconnect_found_entrances(self, key: str, value: Any) -> None:
-    if value is None or key is None:
+    # temporarily disabled until the website patcher is updated
+    if value is None or key is None or self.multiworld.enforce_deferred_connections in ("on", "off", "default"):
         return
     for in_game_id in value:
         if in_game_id not in self.found_entrances:
