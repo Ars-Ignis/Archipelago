@@ -61,7 +61,7 @@ def generate_statue_hint(world: World) -> str:
     for proguseful_location in lime_hint_locations:
         item: Optional[Item] = proguseful_location.item
         if item is None:
-            logging.warning(f"Empty location during generate_output! {proguseful_location.name}")
+            logging.warning(f"Crystalis: Empty location during generate_output! {proguseful_location.name}")
             continue
         elif item.classification & ItemClassification.progression and item.classification & ItemClassification.useful:
             return item.name
@@ -69,7 +69,7 @@ def generate_statue_hint(world: World) -> str:
     for prog_location in lime_hint_locations:
         item: Optional[Item] = prog_location.item
         if item is None:
-            logging.warning(f"Empty location during generate_output! {prog_location.name}")
+            logging.warning(f"Crystalis: Empty location during generate_output! {prog_location.name}")
             continue
         elif item.classification & ItemClassification.progression:
             return item.name
@@ -77,7 +77,7 @@ def generate_statue_hint(world: World) -> str:
     for useful_location in lime_hint_locations:
         item: Optional[Item] = useful_location.item
         if item is None:
-            logging.warning(f"Empty location during generate_output! {useful_location.name}")
+            logging.warning(f"Crystalis: Empty location during generate_output! {useful_location.name}")
             continue
         elif item.classification & ItemClassification.useful:
             return item.name
