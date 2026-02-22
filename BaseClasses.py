@@ -1861,6 +1861,22 @@ class Spoiler:
                 display_name = getattr(option_obj, "display_name", option_key)
                 outfile.write(f"{display_name + ':':33}{res.current_option_name}\n")
 
+        def write_item_classification(classification: int) -> str:
+            classification_string: str = ""
+            if classification & ItemClassification.deprioritized:
+                classification_string += ", Deprioritized"
+            if classification & ItemClassification.skip_balancing:
+                classification_string += ", Skip Balancing"
+            if classification & ItemClassification.progression:
+                classification_string += ", Progression"
+            if classification & ItemClassification.useful:
+                classification_string += ", Useful"
+            if classification & ItemClassification.trap:
+                classification_string += ", Trap"
+            if classification_string == "":
+                classification_string = ", Filler"
+            return classification_string
+
         with open(filename, 'w', encoding="utf-8-sig") as outfile:
             outfile.write(
                 'Archipelago Version %s  -  Seed: %s\n\n' % (
@@ -1904,11 +1920,15 @@ class Spoiler:
                 outfile.write("\n\nStarting Items:\n\n")
                 outfile.write("\n".join([item for item in precollected_items]))
 
-            locations = [(str(location), str(location.item) if location.item is not None else "Nothing")
+            locations = [(str(location),
+                          str(location.item) if location.item is not None else "Nothing",
+                          write_item_classification(location.item.classification) if location.item is not None else
+                          ", Filler")
                          for location in self.multiworld.get_locations() if location.show_in_spoiler]
             outfile.write('\n\nLocations:\n\n')
             outfile.write('\n'.join(
-                ['%s: %s' % (location, item) for location, item in locations]))
+                ['%s: %s%s' % (location, item, classification_string)
+                 for location, item, classification_string in locations]))
 
             outfile.write('\n\nPlaythrough:\n\n')
             outfile.write('\n'.join(['%s: {\n%s\n}' % (sphere_nr, '\n'.join(
