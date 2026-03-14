@@ -411,8 +411,3 @@ class CrystalisWorld(World):
         slot_data["shuffle_data"] = asdict(self.shuffle_data)
         slot_data["version"] = self.world_version.as_simple_string()
         return slot_data
-
-    @staticmethod
-    def interpret_slot_data(slot_data: Dict[str, Any]) -> Dict[str, Any]:
-        # returning slot_data so it regens, giving it back in multiworld.re_gen_passthrough
-        return slot_data
