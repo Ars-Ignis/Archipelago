@@ -1,0 +1,1875 @@
+[
+	{
+		"name": "Scenario 1 - Complete",
+		"region": "Scenario 1",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 255,
+		"y": 174
+	},
+	{
+		"name": "Scenario 1 - Chest",
+		"region": "Scenario 1",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 2 - Complete",
+		"region": "Scenario 2",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 271,
+		"y": 177
+	},
+	{
+		"name": "Scenario 2 - Chest",
+		"region": "Scenario 2",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 3 - Complete",
+		"region": "Scenario 3",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 73,
+		"y": 179
+	},
+	{
+		"name": "Scenario 3 - Chest",
+		"region": "Scenario 3",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 4 - Complete",
+		"region": "Scenario 4",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 273,
+		"y": 132
+	},
+	{
+		"name": "Scenario 4 - Earth Chest",
+		"region": "Scenario 4",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 4 - Wind Chest",
+		"region": "Scenario 4",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 5 - Complete",
+		"region": "Scenario 5",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 159,
+		"y": 99
+	},
+	{
+		"name": "Scenario 5 - Frost Chest",
+		"region": "Scenario 5",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 5 - Flame Chest",
+		"region": "Scenario 5",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 6 - Complete",
+		"region": "Scenario 6",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 248,
+		"y": 160
+	},
+	{
+		"name": "Scenario 6 - Chest",
+		"region": "Scenario 6",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 7 - Complete",
+		"region": "Scenario 7",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 315,
+		"y": 76
+	},
+	{
+		"name": "Scenario 8 - Complete",
+		"region": "Scenario 8",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 361,
+		"y": 196
+	},
+	{
+		"name": "Scenario 8 - Chest",
+		"region": "Scenario 8",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 9 - Complete",
+		"region": "Scenario 9",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 48,
+		"y": 303
+	},
+	{
+		"name": "Scenario 10 - Complete",
+		"region": "Scenario 10",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 176,
+		"y": 86
+	},
+	{
+		"name": "Scenario 10 - Chest",
+		"region": "Scenario 10",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 11 - Complete",
+		"region": "Scenario 11",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 241,
+		"y": 127
+	},
+	{
+		"name": "Scenario 11 - Chest",
+		"region": "Scenario 11",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 12 - Complete",
+		"region": "Scenario 12",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 261,
+		"y": 137
+	},
+	{
+		"name": "Scenario 12 - Chest",
+		"region": "Scenario 12",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 13 - Complete",
+		"region": "Scenario 13",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 88,
+		"y": 360
+	},
+	{
+		"name": "Scenario 13 - Chest",
+		"region": "Scenario 13",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 14 - Complete",
+		"region": "Scenario 14",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 259,
+		"y": 72
+	},
+	{
+		"name": "Scenario 14 - Chest",
+		"region": "Scenario 14",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 15 - Complete",
+		"region": "Scenario 15",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 285,
+		"y": 60
+	},
+	{
+		"name": "Scenario 16 - Complete",
+		"region": "Scenario 16",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 161,
+		"y": 64
+	},
+	{
+		"name": "Scenario 16 - Chest",
+		"region": "Scenario 16",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 17 - Complete",
+		"region": "Scenario 17",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 442,
+		"y": 277
+	},
+	{
+		"name": "Scenario 17 - Chest",
+		"region": "Scenario 17",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 18 - Complete",
+		"region": "Scenario 18",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 112,
+		"y": 211
+	},
+	{
+		"name": "Scenario 18 - Chest",
+		"region": "Scenario 18",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 19 - Complete",
+		"region": "Scenario 19",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 177,
+		"y": 323
+	},
+	{
+		"name": "Scenario 19 - Chest",
+		"region": "Scenario 19",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 20 - Complete",
+		"region": "Scenario 20",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 326,
+		"y": 192
+	},
+	{
+		"name": "Scenario 20 - Chest",
+		"region": "Scenario 20",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 21 - Complete",
+		"region": "Scenario 21",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 187,
+		"y": 72
+	},
+	{
+		"name": "Scenario 21 - Chest",
+		"region": "Scenario 21",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 22 - Complete",
+		"region": "Scenario 22",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 206,
+		"y": 275
+	},
+	{
+		"name": "Scenario 22 - Chest",
+		"region": "Scenario 22",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 23 - Complete",
+		"region": "Scenario 23",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 179,
+		"y": 198
+	},
+	{
+		"name": "Scenario 23 - Left Chest",
+		"region": "Scenario 23",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 23 - Right Chest",
+		"region": "Scenario 23",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 24 - Complete",
+		"region": "Scenario 24",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 145,
+		"y": 67
+	},
+	{
+		"name": "Scenario 24 - Chest",
+		"region": "Scenario 24",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 25 - Complete",
+		"region": "Scenario 25",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 122,
+		"y": 39
+	},
+	{
+		"name": "Scenario 25 - Chest",
+		"region": "Scenario 25",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 26 - Complete",
+		"region": "Scenario 26",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 179,
+		"y": 235
+	},
+	{
+		"name": "Scenario 26 - Chest",
+		"region": "Scenario 26",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 27 - Complete",
+		"region": "Scenario 27",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 154,
+		"y": 118
+	},
+	{
+		"name": "Scenario 28 - Complete",
+		"region": "Scenario 28",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 101,
+		"y": 123
+	},
+	{
+		"name": "Scenario 28 - Chest",
+		"region": "Scenario 28",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 29 - Complete",
+		"region": "Scenario 29",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 88,
+		"y": 123
+	},
+	{
+		"name": "Scenario 29 - Chest",
+		"region": "Scenario 29",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 30 - Complete",
+		"region": "Scenario 30",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 377,
+		"y": 355
+	},
+	{
+		"name": "Scenario 31 - Complete",
+		"region": "Scenario 31",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 237,
+		"y": 50
+	},
+	{
+		"name": "Scenario 31 - Chest",
+		"region": "Scenario 31",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 32 - Complete",
+		"region": "Scenario 32",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 280,
+		"y": 296
+	},
+	{
+		"name": "Scenario 33 - Complete",
+		"region": "Scenario 33",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 178,
+		"y": 35
+	},
+	{
+		"name": "Scenario 34 - Complete",
+		"region": "Scenario 34",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 95,
+		"y": 24
+	},
+	{
+		"name": "Scenario 34 - Chest",
+		"region": "Scenario 34",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 35 - Complete",
+		"region": "Scenario 35",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 93,
+		"y": 78
+	},
+	{
+		"name": "Scenario 35 - Chest",
+		"region": "Scenario 35",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 36 - Complete",
+		"region": "Scenario 36",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 111,
+		"y": 95
+	},
+	{
+		"name": "Scenario 36 - Chest",
+		"region": "Scenario 36",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 37 - Complete",
+		"region": "Scenario 37",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 452,
+		"y": 176
+	},
+	{
+		"name": "Scenario 37 - Chest",
+		"region": "Scenario 37",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 38 - Complete",
+		"region": "Scenario 38",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 56,
+		"y": 173
+	},
+	{
+		"name": "Scenario 38 - Chest",
+		"region": "Scenario 38",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 39 - Complete",
+		"region": "Scenario 39",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 273,
+		"y": 46
+	},
+	{
+		"name": "Scenario 39 - Chest",
+		"region": "Scenario 39",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 40 - Complete",
+		"region": "Scenario 40",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 302,
+		"y": 150
+	},
+	{
+		"name": "Scenario 40 - Chest",
+		"region": "Scenario 40",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 41 - Complete",
+		"region": "Scenario 41",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 324,
+		"y": 147
+	},
+	{
+		"name": "Scenario 41 - Chest",
+		"region": "Scenario 41",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 42 - Complete",
+		"region": "Scenario 42",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 125,
+		"y": 72
+	},
+	{
+		"name": "Scenario 42 - Left Chest",
+		"region": "Scenario 42",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 42 - Right Chest",
+		"region": "Scenario 42",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 43 - Complete",
+		"region": "Scenario 43",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 95,
+		"y": 111
+	},
+	{
+		"name": "Scenario 43 - Chest",
+		"region": "Scenario 43",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 44 - Complete",
+		"region": "Scenario 44",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 82,
+		"y": 154
+	},
+	{
+		"name": "Scenario 45 - Complete",
+		"region": "Scenario 45",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 224,
+		"y": 321
+	},
+	{
+		"name": "Scenario 45 - Chest",
+		"region": "Scenario 45",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 46 - Complete",
+		"region": "Scenario 46",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 285,
+		"y": 29
+	},
+	{
+		"name": "Scenario 46 - Chest",
+		"region": "Scenario 46",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 47 - Complete",
+		"region": "Scenario 47",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 467,
+		"y": 194
+	},
+	{
+		"name": "Scenario 47 - Left Chest",
+		"region": "Scenario 47",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 47 - Right Chest",
+		"region": "Scenario 47",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 48 - Complete",
+		"region": "Scenario 48",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 34,
+		"y": 123
+	},
+	{
+		"name": "Scenario 48 - Chest",
+		"region": "Scenario 48",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 49 - Complete",
+		"region": "Scenario 49",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 180,
+		"y": 348
+	},
+	{
+		"name": "Scenario 49 - Chest",
+		"region": "Scenario 49",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 50 - Complete",
+		"region": "Scenario 50",
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 290,
+		"y": 137
+	},
+	{
+		"name": "Scenario 51 - Complete",
+		"region": "Scenario 51",
+		"victory": true,
+		"category": ["Main Story Scenarios"],
+		"requires": [],
+		"x": 165,
+		"y": 80
+	},
+	{
+		"name": "Scenario 51 - Chest",
+		"region": "Scenario 51",
+		"category": ["Main Story Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 52 - Complete",
+		"region": "Scenario 52",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": [],
+		"x": 67,
+		"y": 241
+	},
+	{
+		"name": "Scenario 53 - Complete",
+		"region": "Scenario 53",
+		"category": ["Open Field Side Scenarios"],
+		"requires": [],
+		"x": 274,
+		"y": 144
+	},
+	{
+		"name": "Scenario 53 - Chest",
+		"region": "Scenario 53",
+		"category": ["Open Field Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 54 - Complete",
+		"region": "Scenario 54",
+		"category": ["Copperneck Mountains Side Scenarios"],
+		"requires": [],
+		"x": 217,
+		"y": 98
+	},
+	{
+		"name": "Scenario 54 - Chest",
+		"region": "Scenario 54",
+		"category": ["Copperneck Mountains Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 55 - Complete",
+		"region": "Scenario 55",
+		"category": ["Dagger Forest Side Scenarios"],
+		"requires": [],
+		"x": 119,
+		"y": 175
+	},
+	{
+		"name": "Scenario 56 - Complete",
+		"region": "Scenario 56",
+		"category": ["Dagger Forest Side Scenarios"],
+		"requires": [],
+		"x": 108,
+		"y": 181
+	},
+	{
+		"name": "Scenario 56 - Chest",
+		"region": "Scenario 56",
+		"category": ["Dagger Forest Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 57 - Complete",
+		"region": "Scenario 57",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": [],
+		"x": 87,
+		"y": 276
+	},
+	{
+		"name": "Scenario 57 - Front Chest",
+		"region": "Scenario 57",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 57 - Back Chest",
+		"region": "Scenario 57",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 58 - Complete",
+		"region": "Scenario 58",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": [],
+		"x": 188,
+		"y": 309
+	},
+	{
+		"name": "Scenario 59 - Complete",
+		"region": "Scenario 59",
+		"category": ["Dagger Forest Side Scenarios"],
+		"requires": [],
+		"x": 24,
+		"y": 154
+	},
+	{
+		"name": "Scenario 60 - Complete",
+		"region": "Scenario 60",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": [],
+		"x": 205,
+		"y": 103
+	},
+	{
+		"name": "Scenario 61 - Complete",
+		"region": "Scenario 61",
+		"category": ["Lingering Swamp Side Scenarios"],
+		"requires": [],
+		"x": 291,
+		"y": 351
+	},
+	{
+		"name": "Scenario 62 - Complete",
+		"region": "Scenario 62",
+		"category": ["Lingering Swamp Side Scenarios"],
+		"requires": [],
+		"x": 291,
+		"y": 367
+	},
+	{
+		"name": "Scenario 62 - Chest",
+		"region": "Scenario 62",
+		"category": ["Lingering Swamp Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 63 - Complete",
+		"region": "Scenario 63",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": [],
+		"x": 25,
+		"y": 336
+	},
+	{
+		"name": "Scenario 63 - Chest",
+		"region": "Scenario 63",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 64 - Complete",
+		"region": "Scenario 64",
+		"category": ["Misty Sea Side Scenarios"],
+		"requires": [],
+		"x": 419,
+		"y": 269
+	},
+	{
+		"name": "Scenario 64 - Chest",
+		"region": "Scenario 64",
+		"category": ["Misty Sea Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 65 - Complete",
+		"region": "Scenario 65",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": [],
+		"x": 133,
+		"y": 308
+	},
+	{
+		"name": "Scenario 66 - Complete",
+		"region": "Scenario 66",
+		"category": ["Copperneck Mountains Side Scenarios"],
+		"requires": [],
+		"x": 358,
+		"y": 183
+	},
+	{
+		"name": "Scenario 66 - First Chest",
+		"region": "Scenario 66",
+		"category": ["Copperneck Mountains Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 66 - Second Chest",
+		"region": "Scenario 66",
+		"category": ["Copperneck Mountains Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 67 - Complete",
+		"region": "Scenario 67",
+		"category": ["Open Field Side Scenarios"],
+		"requires": [],
+		"x": 48,
+		"y": 267
+	},
+	{
+		"name": "Scenario 67 - Chest",
+		"region": "Scenario 67",
+		"category": ["Open Field Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 68 - Complete",
+		"region": "Scenario 68",
+		"category": ["Lingering Swamp Side Scenarios"],
+		"requires": [],
+		"x": 207,
+		"y": 360
+	},
+	{
+		"name": "Scenario 68 - Chest",
+		"region": "Scenario 68",
+		"category": ["Lingering Swamp Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 69 - Complete",
+		"region": "Scenario 69",
+		"category": ["Open Field Side Scenarios"],
+		"requires": [],
+		"x": 203,
+		"y": 148
+	},
+	{
+		"name": "Scenario 70 - Complete",
+		"region": "Scenario 70",
+		"category": ["Misty Sea Side Scenarios"],
+		"requires": [],
+		"x": 432,
+		"y": 238
+	},
+	{
+		"name": "Scenario 70 - Chest",
+		"region": "Scenario 70",
+		"category": ["Misty Sea Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 71 - Complete",
+		"region": "Open Field",
+		"category": ["Open Field Side Scenarios"],
+		"requires": [],
+		"x": 143,
+		"y": 288
+	},
+	{
+		"name": "Scenario 72 - Complete",
+		"region": "Scenario 72",
+		"category": ["Corpsewood Side Scenarios"],
+		"requires": [],
+		"x": 298,
+		"y": 198
+	},
+	{
+		"name": "Scenario 73 - Complete",
+		"region": "Scenario 73",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": [],
+		"x": 140,
+		"y": 346
+	},
+	{
+		"name": "Scenario 74 - Complete",
+		"region": "Scenario 74",
+		"category": ["Misty Sea Side Scenarios"],
+		"requires": [],
+		"x": 352,
+		"y": 233
+	},
+	{
+		"name": "Scenario 74 - Chest",
+		"region": "Scenario 74",
+		"category": ["Misty Sea Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 75 - Complete",
+		"region": "Scenario 75",
+		"category": ["Corpsewood Side Scenarios"],
+		"requires": [],
+		"x": 318,
+		"y": 178
+	},
+	{
+		"name": "Scenario 75 - Chest",
+		"region": "Scenario 75",
+		"category": ["Corpsewood Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 76 - Complete",
+		"region": "Scenario 76",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": [],
+		"x": 85,
+		"y": 307
+	},
+	{
+		"name": "Scenario 76 - Chest",
+		"region": "Scenario 76",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 77 - Complete",
+		"region": "Scenario 77",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": [],
+		"x": 291,
+		"y": 86
+	},
+	{
+		"name": "Scenario 78 - Complete",
+		"region": "Scenario 78",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": "|Eclipse Class|",
+		"x": 37,
+		"y": 143
+	},
+	{
+		"name": "Scenario 79 - Complete",
+		"region": "Scenario 79",
+		"category": ["Lingering Swamp Side Scenarios"],
+		"requires": [],
+		"x": 311,
+		"y": 268
+	},
+	{
+		"name": "Scenario 79 - Chest",
+		"region": "Scenario 79",
+		"category": ["Lingering Swamp Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 80 - Complete",
+		"region": "Scenario 80",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": "|Three Spears Class|",
+		"x": 22,
+		"y": 280
+	},
+	{
+		"name": "Scenario 81 - Complete",
+		"region": "Scenario 81",
+		"category": ["Dagger Forest Side Scenarios"],
+		"requires": [],
+		"x": 50,
+		"y": 99
+	},
+	{
+		"name": "Scenario 81 - Chest",
+		"region": "Scenario 81",
+		"category": ["Dagger Forest Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 82 - Complete",
+		"region": "Scenario 82",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": [],
+		"x": 154,
+		"y": 334
+	},
+	{
+		"name": "Scenario 82 - Chest",
+		"region": "Scenario 82",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 83 - Complete",
+		"region": "Scenario 83",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": "|Sun Class|",
+		"x": 154,
+		"y": 176
+	},
+	{
+		"name": "Scenario 84 - Complete",
+		"region": "Scenario 84",
+		"category": ["Copperneck Mountains Side Scenarios"],
+		"requires": [],
+		"x": 312,
+		"y": 107
+	},
+	{
+		"name": "Scenario 84 - Chest",
+		"region": "Scenario 84",
+		"category": ["Copperneck Mountains Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 85 - Complete",
+		"region": "Scenario 85",
+		"category": ["Watcher Mountains Side Scenarios"],
+		"requires": "|Sun Class|",
+		"x": 88,
+		"y": 329
+	},
+	{
+		"name": "Scenario 86 - Complete",
+		"region": "Scenario 86",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": [],
+		"x": 180,
+		"y": 277
+	},
+	{
+		"name": "Scenario 87 - Complete",
+		"region": "Scenario 87",
+		"category": ["Open Field Side Scenarios"],
+		"requires": [],
+		"x": 238,
+		"y": 236
+	},
+	{
+		"name": "Scenario 87 - Chest",
+		"region": "Scenario 87",
+		"category": ["Open Field Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 88 - Complete",
+		"region": "Scenario 88",
+		"category": ["Extraplanar Side Scenarios"],
+		"requires": "|Water-Breathing| AND |Circles Class|",
+		"x": 227,
+		"y": 240
+	},
+	{
+		"name": "Scenario 88 - Left Chest",
+		"region": "Scenario 88",
+		"category": ["Extraplanar Side Scenarios"],
+		"requires": "|Water-Breathing| AND |Circles Class|"
+	},
+	{
+		"name": "Scenario 88 - Right Chest",
+		"region": "Scenario 88",
+		"category": ["Extraplanar Side Scenarios"],
+		"requires": "|Water-Breathing| AND |Circles Class|"
+	},
+	{
+		"name": "Scenario 89 - Complete",
+		"region": "Scenario 89",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": "|Eclipse Class|",
+		"x": 292,
+		"y": 187
+	},
+	{
+		"name": "Scenario 89 - Left Chest",
+		"region": "Scenario 89",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": "|Eclipse Class|"
+	},
+	{
+		"name": "Scenario 89 - Middle Chest",
+		"region": "Scenario 89",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": "|Eclipse Class|"
+	},
+	{
+		"name": "Scenario 89 - Right Chest",
+		"region": "Scenario 89",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": "|Eclipse Class|"
+	},
+	{
+		"name": "Scenario 90 - Complete",
+		"region": "Scenario 90",
+		"category": ["Extraplanar Side Scenarios"],
+		"requires": "|Vortex Class|",
+		"x": 176,
+		"y": 260
+	},
+	{
+		"name": "Scenario 90 - Chest",
+		"region": "Scenario 90",
+		"category": ["Extraplanar Side Scenarios"],
+		"requires": "|Vortex Class|"
+	},
+	{
+		"name": "Scenario 91 - Complete",
+		"region": "Scenario 91",
+		"category": ["Dagger Forest Side Scenarios"],
+		"requires": "|Two Minis Class|",
+		"x": 54,
+		"y": 118
+	},
+	{
+		"name": "Scenario 92 - Complete",
+		"region": "Scenario 92",
+		"category": ["Gloomhaven Side Scenarios"],
+		"requires": "|Saw Class|",
+		"x": 73,
+		"y": 164
+	},
+	{
+		"name": "Scenario 93 - Complete",
+		"region": "Scenario 93",
+		"category": ["Misty Sea Side Scenarios"],
+		"requires": [],
+		"x": 427,
+		"y": 354
+	},
+	{
+		"name": "Scenario 93 - Chest",
+		"region": "Scenario 93",
+		"category": ["Misty Sea Side Scenarios"],
+		"requires": []
+	},
+	{
+		"name": "Scenario 94 - Complete",
+		"region": "Scenario 94",
+		"category": ["Corpsewood Side Scenarios"],
+		"requires": [],
+		"x": 295,
+		"y": 165
+	},
+	{
+		"name": "Scenario 95 - Complete",
+		"region": "Scenario 95",
+		"category": ["Corpsewood Side Scenarios"],
+		"requires": [],
+		"x": 316,
+		"y": 164
+	},
+	{
+		"name": "Prosperity 2",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:2|",
+		"x": 91,
+		"y": 396
+	},
+	{
+		"name": "Prosperity 3",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:3|"
+	},
+	{
+		"name": "Prosperity 4",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:4|"
+	},
+	{
+		"name": "Prosperity 5",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:5|"
+	},
+	{
+		"name": "Prosperity 6",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:6|"
+	},
+	{
+		"name": "Prosperity 7",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:7|"
+	},
+	{
+		"name": "Prosperity 8",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:8|"
+	},
+	{
+		"name": "Prosperity 9",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:9|"
+	},
+	{
+		"name": "Reputation +5",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:3|"
+	},
+	{
+		"name": "Reputation +10",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:5|"
+	},
+	{
+		"name": "Reputation +15",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:7|"
+	},
+	{
+		"name": "Reputation +20",
+		"region": "World Map",
+		"category": ["Prosperity and Reputation"],
+		"requires": "|@Region Unlocks:9|"
+	},
+	{
+		"name": "Seeker of Xorn",
+		"region": "Scenario 54",
+		"category": ["Personal Quests"],
+		"requires": [],
+		"x": 217,
+		"y": 108
+	},
+	{
+		"name": "Merchant Class",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:5| AND |Progressive Merchant Stock:1|",
+		"x": 474,
+		"y": 394
+	},
+	{
+		"name": "Greed is Good",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:5|"
+	},
+	{
+		"name": "Finding the Cure",
+		"region": "Scenario 60",
+		"category": ["Personal Quests"],
+		"requires": [],
+		"x": 205,
+		"y": 113
+	},
+	{
+		"name": "A Study of Anatomy",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:3|"
+	},
+	{
+		"name": "Law Bringer",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|Corpsewood Map| OR \n|Misty Sea Chart| OR \n( |Eclipse Class| AND |City Adventuring Permit| ) OR \n( |Sun Class| AND |City Adventuring Permit| ) OR \n( |Two Minis Class| AND |Dagger Forest Map| )\n"
+	},
+	{
+		"name": "Pounds of Flesh",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "( |Corpsewood Map| AND |Dagger Forest Map| AND |City Adventuring Permit| AND |Copperneck Mountains Map| ) OR\n|Watcher Mountains Map| OR\n|Open Field Map| OR\n( |City Adventuring Permit| AND |Brain Class| )"
+	},
+	{
+		"name": "Trophy Hunt",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:6|"
+	},
+	{
+		"name": "Eternal Wanderer",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:6| AND |Corpsewood Map|"
+	},
+	{
+		"name": "Battle Legend",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:4|"
+	},
+	{
+		"name": "Implement of Light",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|Item 113| AND ( |Corpsewood Map| OR |Lingering Swamp Map| OR |Copperneck Mountains Map| OR |Open Field Map| OR |Misty Sea Chart| OR |Watcher Mountains Map| OR ( |City Adventuring Permit| AND |Sun Class| ) OR ( |Dagger Forest Map| AND |Two Minis Class| ) OR ( |Portal Generator| AND |Vortex Class| ) )"
+	},
+	{
+		"name": "Take Back the Trees",
+		"region": "Scenario 56",
+		"category": ["Personal Quests"],
+		"requires": [],
+		"x": 108,
+		"y": 191
+	},
+	{
+		"name": "The Thin Places",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:6|"
+	},
+	{
+		"name": "Aberrant Slayer",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "( |Misty Sea Chart| AND |Watcher Mountains Map| AND |Sun Class| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |Watcher Mountains Map| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |Lingering Swamp Map| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |Copperneck Mountains Map| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |City Adventuring Permit| AND ( |Sun Class| OR |Saw Class| ) ) OR\n( |Portal Generator| AND |Vortex Class| AND |Dagger Forest Map| AND |Lingering Swamp Map| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Dagger Forest Map| AND |Copperneck Mountains Map| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Dagger Forest Map| AND |Circles Class| AND |Water-Breathing| AND |Watcher Mountains Map| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Dagger Forest Map| AND |Circles Class| AND |Water-Breathing| AND |City Adventuring Permit| AND ( |Sun Class| OR |Saw Class| ) ) OR\n( |Portal Generator| AND |Vortex Class| AND |Watcher Mountains Map| AND |Sun Class| AND |Circles Class| AND |Water-Breathing| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Watcher Mountains Map| AND |Sun Class| AND |Lingering Swamp Map| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Watcher Mountains Map| AND |Sun Class| AND |Copperneck Mountains Map| ) OR\n( |Corpsewood Map| AND |Dagger Forest Map| AND |Open Field Map| ) OR\n( |Corpsewood Map| AND |Dagger Forest Map| AND |City Adventuring Permit| AND |Watcher Mountains Map| AND |Copperneck Mountains Map| ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Portal Generator| ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Watcher Mountains Map| AND |Sun Class| )"
+	},
+	{
+		"region": "World Map",
+		"name": "Fearless Stand",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:5|"
+	},
+	{
+		"name": "Piety in All Things",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:5| AND |Temple of the Great Oak|"
+	},
+	{
+		"name": "Vengeance",
+		"region": "Scenario 58",
+		"category": ["Personal Quests"],
+		"requires": [],
+		"x": 188,
+		"y": 319
+	},
+	{
+		"name": "Zealot of the Blood God",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:3|"
+	},
+	{
+		"name": "Goliath Toppler",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|Corpsewood Map| AND\n(\n(|Dagger Forest Map| AND |City Adventuring Permit| AND |Watcher Mountains Map|) OR\n(|Dagger Forest Map| AND |City Adventuring Permit| AND |Lingering Swamp Map|) OR\n(|Dagger Forest Map| AND |Lingering Swamp Map| AND |Watcher Mountains Map|) OR\n(|Dagger Forest Map| AND |City Adventuring Permit| AND |Copperneck Mountains Map| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |City Adventuring Permit| AND |Copperneck Mountains Map| AND |Watcher Mountains Map|) OR\n(|Open Field Map| AND |City Adventuring Permit| AND |Copperneck Mountains Map| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |City Adventuring Permit| AND |A Demon's Errand|) OR\n(|Open Field Map| AND |Portal Generator| AND |City Adventuring Permit| AND |Misty Sea Chart| AND |Water-Breathing| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |City Adventuring Permit| AND |Lingering Swamp Map|) OR\n(|Open Field Map| AND |Portal Generator| AND |Lingering Swamp Map| AND |Copperneck Mountains Map| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |Lingering Swamp Map| AND |Misty Sea Chart| AND |Water-Breathing| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |End of Corruption:3| AND |Copperneck Mountains Map| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |End of Corruption:3| AND |Misty Sea Chart| AND |Water-Breathing| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |Copperneck Mountains Map| AND |Misty Sea Chart| AND |Water-Breathing| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Dagger Forest Map| AND |Portal Generator|) \n)"
+	},
+	{
+		"name": "The Fall of Man",
+		"region": "Scenario 62",
+		"category": ["Personal Quests"],
+		"requires": [],
+		"x": 291,
+		"y": 377
+	},
+	{
+		"name": "Augmented Abilities",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:4| AND |The Power of Enhancement|"
+	},
+	{
+		"name": "Elemental Samples",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|Lingering Swamp Map| AND\n|Dagger Forest Map| AND\n|Watcher Mountains Map| AND\n|Copperneck Mountains Map| AND\n|Misty Sea Chart| AND\n|City Adventuring Permit| AND\n( |Corpsewood Map| OR |Water-Breathing| OR |Eclipse Class| OR |Sun Class| OR |Saw Class| OR |Brain Class| OR |Open Field Map| )"
+	},
+	{
+		"name": "A Helping Hand",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "|@Region Unlocks:3|"
+	},
+	{
+		"name": "The Perfect Poison",
+		"region": "World Map",
+		"category": ["Personal Quests"],
+		"requires": "( |Misty Sea Chart| AND |Open Field Map| AND |Corpsewood Map| AND |@Region Unlocks:4| ) OR\n( |Misty Sea Chart| AND |Open Field Map| AND |Lingering Swamp Map| ) OR\n( |Misty Sea Chart| AND |Open Field Map| AND |Water-Breathing| ) OR\n( |Misty Sea Chart| AND |Open Field Map| AND |Copperneck Mountains Map| ) OR\n( |Misty Sea Chart| AND |Open Field Map| AND |Dagger Forest Map| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |City Adventuring Permit| AND ( |Water-Breathing| OR |Corpsewood Map| ) ) OR\n( |City Adventuring Permit| AND |Brain Class| AND |Open Field Map| ) OR\n( |City Adventuring Permit| AND |Brain Class| AND |Dagger Forest Map| AND |Corpsewood Map| AND |@Region Unlocks:4| ) OR\n( |Portal Generator| AND |Circles Class| AND |Water-Breathing| AND |Open Field Map| ) OR\n( |Portal Generator| AND |Circles Class| AND |Water-Breathing| AND |Dagger Forest Map| AND |City Adventuring Permit| AND ( |Misty Sea Chart| OR |Corpsewood Map| ) )"
+	},
+	{
+		"name": "Jaws of the Lion Scenario 1 - Complete",
+		"region": "JotL Scenario 1",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 50,
+		"y": 97
+	},
+	{
+		"name": "Jaws of the Lion Scenario 2 - Complete",
+		"region": "JotL Scenario 2",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 55,
+		"y": 120
+	},
+	{
+		"name": "Jaws of the Lion Scenario 2 - Chest",
+		"region": "JotL Scenario 2",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 3 - Complete",
+		"region": "JotL Scenario 3",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 243,
+		"y": 202
+	},
+	{
+		"name": "Jaws of the Lion Scenario 3 - Chest",
+		"region": "JotL Scenario 3",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 4 - Complete",
+		"region": "JotL Scenario 4",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 83,
+		"y": 151
+	},
+	{
+		"name": "Jaws of the Lion Scenario 4 - Chest",
+		"region": "JotL Scenario 4",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 5 - Complete",
+		"region": "JotL Scenario 5",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 120,
+		"y": 166
+	},
+	{
+		"name": "Jaws of the Lion Scenario 5 - Chest",
+		"region": "JotL Scenario 5",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 6 - Complete",
+		"region": "JotL Scenario 6",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 186,
+		"y": 118
+	},
+	{
+		"name": "Jaws of the Lion Scenario 7 - Complete",
+		"region": "JotL Scenario 7",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 124,
+		"y": 217
+	},
+	{
+		"name": "Jaws of the Lion Scenario 7 - Chest",
+		"region": "JotL Scenario 7",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 8 - Complete",
+		"region": "JotL Scenario 8",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 230,
+		"y": 181
+	},
+	{
+		"name": "Jaws of the Lion Scenario 8 - Chest",
+		"region": "JotL Scenario 8",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 9 - Complete",
+		"region": "JotL Scenario 9",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 215,
+		"y": 178
+	},
+	{
+		"name": "Jaws of the Lion Scenario 9 - Chest",
+		"region": "JotL Scenario 9",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 10 - Complete",
+		"region": "JotL Scenario 10",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 110,
+		"y": 285
+	},
+	{
+		"name": "Jaws of the Lion Scenario 10 - Chest",
+		"region": "JotL Scenario 10",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 11 - Complete",
+		"region": "JotL Scenario 11",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 106,
+		"y": 199
+	},
+	{
+		"name": "Jaws of the Lion Scenario 12 - Complete",
+		"region": "JotL Scenario 12",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 253,
+		"y": 110
+	},
+	{
+		"name": "Jaws of the Lion Scenario 13 - Complete",
+		"region": "JotL Scenario 13",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 147,
+		"y": 202
+	},
+	{
+		"name": "Jaws of the Lion Scenario 13 - Chest",
+		"region": "JotL Scenario 13",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 14 - Complete",
+		"region": "JotL Scenario 14",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 211,
+		"y": 127
+	},
+	{
+		"name": "Jaws of the Lion Scenario 14 - Chest",
+		"region": "JotL Scenario 14",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 15 - Complete",
+		"region": "JotL Scenario 15",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 178,
+		"y": 156
+	},
+	{
+		"name": "Jaws of the Lion Scenario 16 - Complete",
+		"region": "JotL Scenario 16",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 174,
+		"y": 100
+	},
+	{
+		"name": "Jaws of the Lion Scenario 17 - Complete",
+		"region": "JotL Scenario 17",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 319,
+		"y": 165
+	},
+	{
+		"name": "Jaws of the Lion Scenario 17 - Chest",
+		"region": "JotL Scenario 17",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 18 - Complete",
+		"region": "JotL Scenario 18",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 253,
+		"y": 79
+	},
+	{
+		"name": "Jaws of the Lion Scenario 18 - Top Left Chest",
+		"region": "JotL Scenario 18",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 18 - Bottom Left Chest",
+		"region": "JotL Scenario 18",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 18 - Bottom Middle Chest",
+		"region": "JotL Scenario 18",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 18 - Right Chest",
+		"region": "JotL Scenario 18",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": []
+	},
+	{
+		"name": "Jaws of the Lion Scenario 19 - Complete",
+		"region": "JotL Scenario 19",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": [],
+		"x": 73,
+		"y": 210
+	},
+	{
+		"name": "Jaws of the Lion Scenario 20 - Complete",
+		"region": "JotL Scenario 20",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": "|@JotL Classes:2|",
+		"x": 258,
+		"y": 168
+	},
+	{
+		"name": "Jaws of the Lion Scenario 21 - Complete",
+		"region": "JotL Scenario 21",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": "|@JotL Classes:2|",
+		"x": 416,
+		"y": 186
+	},
+	{
+		"name": "Jaws of the Lion Scenario 21 - Chest",
+		"region": "JotL Scenario 21",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": "|@JotL Classes:2|"
+	},
+	{
+		"name": "Jaws of the Lion Scenario 22 - Complete",
+		"region": "JotL Scenario 22",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": "|@JotL Classes:2| AND |Hook and Chain Class|",
+		"x": 29,
+		"y": 197
+	},
+	{
+		"name": "Jaws of the Lion Scenario 23 - Complete",
+		"region": "JotL Scenario 23",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": "|@JotL Classes:2| AND |Axe Class|",
+		"x": 245,
+		"y": 141
+	},
+	{
+		"name": "Jaws of the Lion Scenario 24 - Complete",
+		"region": "JotL Scenario 24",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": "|@JotL Classes:2| AND |Staff Class|",
+		"x": 149,
+		"y": 62
+	},
+	{
+		"name": "Jaws of the Lion Scenario 25 - Complete",
+		"region": "JotL Scenario 25",
+		"category": ["Jaws of the Lion Scenarios", "JotL"],
+		"requires": "|@JotL Classes:2| AND |Bomb Class|",
+		"x": 361,
+		"y": 156
+	},
+	{
+		"name": "Horns Solo Scenario",
+		"region": "Horns Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Horns Class| AND |@Region Unlocks:5|",
+		"x": 255,
+		"y": 184
+	},
+	{
+		"name": "Kunai Solo Scenario",
+		"region": "Kunai Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Kunai Class| AND |@Region Unlocks:5|",
+		"x": 288,
+		"y": 116
+	},
+	{
+		"name": "Vortex Solo Scenario",
+		"region": "Vortex Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Vortex Class| AND |@Region Unlocks:5|",
+		"x": 168,
+		"y": 137
+	},
+	{
+		"name": "Gear Solo Scenario",
+		"region": "Gear Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Gear Class| AND |@Region Unlocks:5|",
+		"x": 84,
+		"y": 126
+	},
+	{
+		"name": "Shards Solo Scenario",
+		"region": "Shards Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Shards Class| AND |@Region Unlocks:5|",
+		"x": 250,
+		"y": 96
+	},
+	{
+		"name": "Brain Solo Scenario",
+		"region": "Brain Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Brain Class| AND |@Region Unlocks:5|",
+		"x": 115,
+		"y": 148
+	},
+	{
+		"name": "Angry Face Solo Scenario",
+		"region": "Angry Face Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Angry Face Class| AND |@Region Unlocks:5|",
+		"x": 24,
+		"y": 246
+	},
+	{
+		"name": "Circles Solo Scenario",
+		"region": "Circles Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Circles Class| AND |@Region Unlocks:5|",
+		"x": 157,
+		"y": 209
+	},
+	{
+		"name": "Cthulhu Solo Scenario",
+		"region": "Cthulhu Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Cthulhu Class| AND |@Region Unlocks:5|",
+		"x": 207,
+		"y": 125
+	},
+	{
+		"name": "Eclipse Solo Scenario",
+		"region": "Eclipse Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Eclipse Class| AND |@Region Unlocks:5|",
+		"x": 382,
+		"y": 150
+	},
+	{
+		"name": "Lightning Solo Scenario",
+		"region": "Lightning Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Lightning Class| AND |@Region Unlocks:5|",
+		"x": 107,
+		"y": 218
+	},
+	{
+		"name": "Music Note Solo Scenario",
+		"region": "Music Note Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Music Note Class| AND |@Region Unlocks:5|",
+		"x": 342,
+		"y": 149
+	},
+	{
+		"name": "Saw Solo Scenario",
+		"region": "Saw Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Saw Class| AND |@Region Unlocks:5|",
+		"x": 403,
+		"y": 151
+	},
+	{
+		"name": "Sun Solo Scenario",
+		"region": "Sun Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Sun Class| AND |@Region Unlocks:5|",
+		"x": 137,
+		"y": 147
+	},
+	{
+		"name": "Three Spears Solo Scenario",
+		"region": "Three Spears Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Three Spears Class| AND |@Region Unlocks:5|",
+		"x": 202,
+		"y": 171
+	},
+	{
+		"name": "Triangles Solo Scenario",
+		"region": "Triangles Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Triangles Class| AND |@Region Unlocks:5|",
+		"x": 217,
+		"y": 280
+	},
+	{
+		"name": "Two Minis Solo Scenario",
+		"region": "Two Minis Solo Scenario",
+		"category": ["Solo Scenarios", "Solo"],
+		"requires": "|Two Minis Class| AND |@Region Unlocks:5|",
+		"x": 355,
+		"y": 160
+	}
+]

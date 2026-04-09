@@ -1,0 +1,16 @@
+{
+    "JotL": {
+        "yaml_option": ["jaws_dlc_enabled"],
+        "hidden": true
+    },
+    "Solo": {
+        "yaml_option": ["solo_dlc_enabled"],
+        "hidden": true
+    },
+	"Starting Region Unlocks": {
+		"hidden": true
+	},
+	"JotL Classes": {
+		"hidden": true
+	}
+}

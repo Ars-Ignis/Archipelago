@@ -1,0 +1,12 @@
+{
+	"game": "Gloomhaven",
+	"creator": "CodeGorilla",
+	"filler_item_name": "",
+	
+	"starting_items": [
+		{
+			"item_categories": ["Starting Region Unlocks"],
+			"random": 1
+		}
+	]
+}

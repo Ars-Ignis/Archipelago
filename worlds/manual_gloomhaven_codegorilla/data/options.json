@@ -1,0 +1,13 @@
+{
+    "user": {
+        "starting_character_count":{
+            "type": "Range",
+            "description": [
+                "How many character classes to start unlocked."
+            ],
+            "range_start": 2,
+            "default": 4,
+            "range_end": 8
+        }
+    }
+}

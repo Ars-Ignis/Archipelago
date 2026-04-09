@@ -1,0 +1,855 @@
+[
+	{
+		"count":1,
+		"name": "Dagger Forest Map",
+		"category": ["Region Unlocks", "Starting Region Unlocks"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Lingering Swamp Map",
+		"category": ["Region Unlocks", "Starting Region Unlocks"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Watcher Mountains Map",
+		"category": ["Region Unlocks", "Starting Region Unlocks"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Copperneck Mountains Map",
+		"category": ["Region Unlocks", "Starting Region Unlocks"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Misty Sea Chart",
+		"category": ["Region Unlocks", "Starting Region Unlocks"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "City Adventuring Permit",
+		"category": ["Region Unlocks"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Corpsewood Map",
+		"category": ["Region Unlocks", "Starting Region Unlocks"],
+		"progression": true,
+		"early": true
+	},
+	{
+		"count":1,
+		"name": "Portal Generator",
+		"category": ["Region Unlocks"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Open Field Map",
+		"category": ["Region Unlocks", "Starting Region Unlocks"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Two Minis Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Lightning Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Angry Face Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Triangles Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Eclipse Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Cthulhu Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Three Spears Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Saw Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Music Note Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Circles Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Sun Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Horns Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Kunai Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Brain Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Shards Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Vortex Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Gear Class",
+		"category": ["Classes"],
+		"progression": true
+	},
+	{
+		"count": "3",
+		"name": "End of Corruption",
+		"category": ["Achievements"],
+		"progression_skip_balancing": true
+	},
+	{
+		"count":1,
+		"name": "Water-Breathing",
+		"category": ["Achievements"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "The Power of Enhancement",
+		"category": ["Achievements"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "The Voice's Command",
+		"category": ["Achievements"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "The Drake's Command",
+		"category": ["Achievements"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "The Voice's Treasure",
+		"category": ["Achievements"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "The Drake's Treasure",
+		"category": ["Achievements"],
+		"filler": true
+	},
+	{
+		"count":1,
+		"name": "Through the Ruins",
+		"category": ["Achievements"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Dark Bounty",
+		"category": ["Achievements"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "A Demon's Errand",
+		"category": ["Achievements"],
+		"progression": true
+	},
+	{
+		"count": "8",
+		"name": "Progressive Merchant Stock",
+		"category": ["Items"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Temple of the Great Oak",
+		"category": ["Buildings"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Item 071 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 072 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 073 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 074 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 075 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 076 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 077 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 078 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 079 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 080 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 081 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 082 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 083 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 084 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 085 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 086 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 087 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 088 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 089 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 090 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 091 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 092 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 093 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 094 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 095 (Design)",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count": "2",
+		"name": "Item 096",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 097",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 098",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 099",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 100",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 101",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 102",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 103",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 104",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 105",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 106",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count": "2",
+		"name": "Item 107",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 108",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 109",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 110",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 111",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count": "2",
+		"name": "Item 112",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 113",
+		"category": ["Items"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Item 114",
+		"category": ["Items"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Item 115",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count": "2",
+		"name": "Item 116",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count": "2",
+		"name": "Item 117",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count": "2",
+		"name": "Item 118",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 119",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 120",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 121",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 122",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count": "2",
+		"name": "Item 123",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 124",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 125",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 126",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 127",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 128",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 129",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 130",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 131",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 132",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Item 133",
+		"category": ["Items"],
+		"useful": true
+	},
+	{
+		"count": "10",
+		"name": "1 Checkmark",
+		"category": ["Checkmarks"],
+		"filler": true
+	},
+	{
+		"count": "0",
+		"name": "10 Experience",
+		"category": ["Experience"],
+		"filler": true
+	},
+	{
+		"count": "0",
+		"name": "10 Gold",
+		"category": ["Gold"],
+		"filler": true
+	},
+	{
+		"count": "0",
+		"name": "20 Gold",
+		"category": ["Gold"],
+		"filler": true
+	},
+	{
+		"count": "0",
+		"name": "30 Gold",
+		"category": ["Gold"],
+		"filler": true
+	},
+	{
+		"count": "5",
+		"name": "+1 Reputation",
+		"category": ["Reputation"],
+		"useful": true
+	},
+	{
+		"count": "10",
+		"name": "+1 Prosperity",
+		"category": ["Prosperity"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Hook and Chain Class",
+		"category": ["Classes", "JotL Classes", "JotL"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Axe Class",
+		"category": ["Classes", "JotL Classes", "JotL"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Bomb Class",
+		"category": ["Classes", "JotL Classes", "JotL"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "Staff Class",
+		"category": ["Classes", "JotL Classes", "JotL"],
+		"progression": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 19",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 22",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count": "2",
+		"name": "JotL Item 26",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 27",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 28",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 29",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 30",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 31",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 32",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 33",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 34",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 35",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "JotL Item 36",
+		"category": ["Items", "JotL"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Horns Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Kunai Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Vortex Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Gear Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Shards Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Brain Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Angry Face Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Circles Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Cthulhu Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Eclipse Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Lightning Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Music Note Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Saw Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Sun Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Three Spears Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Triangles Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	},
+	{
+		"count":1,
+		"name": "Two Minis Solo Item",
+		"category": ["Solo Items", "Solo"],
+		"useful": true
+	}
+]
