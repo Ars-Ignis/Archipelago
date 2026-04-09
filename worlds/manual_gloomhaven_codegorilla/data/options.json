@@ -1,6 +1,7 @@
 {
     "user": {
-        "starting_character_count":{
+        "starting_character_count": {
+            "display_name": "Starting Character Count",
             "type": "Range",
             "description": [
                 "How many character classes to start unlocked."
@@ -8,6 +9,20 @@
             "range_start": 2,
             "default": 4,
             "range_end": 8
+        },
+        "solo_dlc_enabled": {
+            "display_name": "Enable Solo Scenario DLC",
+            "type": "Toggle",
+            "description": [
+                "If enabled, adds each of the 17 solo scenarios to the location pool, and each of the 17 solo items to the item pool. Solo scenarios logically unlock with their class and five region unlocks (including the region in which the solo scenario is located)"
+            ]
+        },
+        "jaws_dlc_enabled": {
+            "display_name": "Enable Jaws of the Lion DLC",
+            "type": "Toggle",
+            "description": [
+                "If enabled, adds the 25 Jaws of the Lions scenarios to the locations pool, and the four JotL classes and some JotL items to the item pool. Entering any JotL scenario requires 2 of the 4 JotL classes as well as the City Adventuring Permit."
+            ]
         }
     }
 }
