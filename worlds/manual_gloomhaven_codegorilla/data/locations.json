@@ -1686,7 +1686,7 @@
 		"name": "Jaws of the Lion Scenario 20 - Complete",
 		"region": "JotL Scenario 20",
 		"category": ["Jaws of the Lion Scenarios", "JotL"],
-		"requires": "|@JotL Classes:2|",
+		"requires": "|@JotL Classes:3|",
 		"x": 258,
 		"y": 168
 	},
@@ -1694,7 +1694,7 @@
 		"name": "Jaws of the Lion Scenario 21 - Complete",
 		"region": "JotL Scenario 21",
 		"category": ["Jaws of the Lion Scenarios", "JotL"],
-		"requires": "|@JotL Classes:2|",
+		"requires": "|@JotL Classes:3|",
 		"x": 416,
 		"y": 186
 	},
@@ -1702,7 +1702,7 @@
 		"name": "Jaws of the Lion Scenario 21 - Chest",
 		"region": "JotL Scenario 21",
 		"category": ["Jaws of the Lion Scenarios", "JotL"],
-		"requires": "|@JotL Classes:2|"
+		"requires": "|@JotL Classes:3|"
 	},
 	{
 		"name": "Jaws of the Lion Scenario 22 - Complete",

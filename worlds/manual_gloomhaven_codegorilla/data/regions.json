@@ -450,7 +450,7 @@
 	},
 	"JotL Scenario 1": 	{
 		"connects_to": ["JotL Scenario 2"],
-		"requires": "|City Adventuring Permit| AND |@JotL Classes:2|",
+		"requires": "|City Adventuring Permit| AND {OptAll(|@JotL Classes:2|)}",
 		"map": "gloomhaven"
 	},
 	"JotL Scenario 2": 	{
@@ -480,12 +480,12 @@
 	},
 	"JotL Scenario 7": 	{
 		"connects_to": ["JotL Scenario 9"],
-		"requires": [],
+		"requires": "{OptAll(|@JotL Classes:3|)}",
 		"map": "gloomhaven"
 	},
 	"JotL Scenario 8": 	{
 		"connects_to": ["JotL Scenario 9"],
-		"requires": [],
+		"requires": "{OptAll(|@JotL Classes:3|)}",
 		"map": "gloomhaven"
 	},
 	"JotL Scenario 9": 	{
@@ -510,12 +510,12 @@
 	},
 	"JotL Scenario 13": 	{
 		"connects_to": ["JotL Scenario 15"],
-		"requires": [],
+		"requires": "{OptAll(|@JotL Classes:4|)}",
 		"map": "gloomhaven"
 	},
 	"JotL Scenario 14": 	{
 		"connects_to": ["JotL Scenario 15"],
-		"requires": [],
+		"requires": "{OptAll(|@JotL Classes:4|)}",
 		"map": "gloomhaven"
 	},
 	"JotL Scenario 15": 	{
@@ -535,12 +535,12 @@
 	},
 	"JotL Scenario 18": 	{
 		"connects_to": [],
-		"requires": [],
+		"requires": "{OptAll(|@JotL Classes:4|)}",
 		"map": "gloomhaven"
 	},
 	"JotL Scenario 19": 	{
 		"connects_to": [],
-		"requires": [],
+		"requires": "{OptAll(|@JotL Classes:4|)}",
 		"map": "gloomhaven"
 	},
 	"JotL Scenario 20": 	{
