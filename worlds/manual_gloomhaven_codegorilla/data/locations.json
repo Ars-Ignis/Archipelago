@@ -1324,19 +1324,19 @@
 		"name": "Law Bringer",
 		"region": "World Map",
 		"category": ["Personal Quests"],
-		"requires": "|Corpsewood Map| OR \n|Misty Sea Chart| OR \n( |Eclipse Class| AND |City Adventuring Permit| ) OR \n( |Sun Class| AND |City Adventuring Permit| ) OR \n( |Two Minis Class| AND |Dagger Forest Map| )\n"
+		"requires": "|Bandit Guard| OR |Bandit Archer| OR |Cultist|"
 	},
 	{
 		"name": "Pounds of Flesh",
 		"region": "World Map",
 		"category": ["Personal Quests"],
-		"requires": "( |Corpsewood Map| AND |Dagger Forest Map| AND |City Adventuring Permit| AND |Copperneck Mountains Map| ) OR\n|Watcher Mountains Map| OR\n|Open Field Map| OR\n( |City Adventuring Permit| AND |Brain Class| )"
+		"requires": "|Vermling Scout| OR |Vermling Shaman|"
 	},
 	{
 		"name": "Trophy Hunt",
 		"region": "World Map",
 		"category": ["Personal Quests"],
-		"requires": "|@Region Unlocks:6|"
+		"requires": "|@Enemies:20|"
 	},
 	{
 		"name": "Eternal Wanderer",
@@ -1354,7 +1354,7 @@
 		"name": "Implement of Light",
 		"region": "World Map",
 		"category": ["Personal Quests"],
-		"requires": "|Item 113| AND ( |Corpsewood Map| OR |Lingering Swamp Map| OR |Copperneck Mountains Map| OR |Open Field Map| OR |Misty Sea Chart| OR |Watcher Mountains Map| OR ( |City Adventuring Permit| AND |Sun Class| ) OR ( |Dagger Forest Map| AND |Two Minis Class| ) OR ( |Portal Generator| AND |Vortex Class| ) )"
+		"requires": "|Item 113| AND (|Living Bones| OR |Living Spirit| OR |Living Corpse|)"
 	},
 	{
 		"name": "Take Back the Trees",
@@ -1374,7 +1374,7 @@
 		"name": "Aberrant Slayer",
 		"region": "World Map",
 		"category": ["Personal Quests"],
-		"requires": "( |Misty Sea Chart| AND |Watcher Mountains Map| AND |Sun Class| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |Watcher Mountains Map| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |Lingering Swamp Map| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |Copperneck Mountains Map| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |City Adventuring Permit| AND ( |Sun Class| OR |Saw Class| ) ) OR\n( |Portal Generator| AND |Vortex Class| AND |Dagger Forest Map| AND |Lingering Swamp Map| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Dagger Forest Map| AND |Copperneck Mountains Map| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Dagger Forest Map| AND |Circles Class| AND |Water-Breathing| AND |Watcher Mountains Map| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Dagger Forest Map| AND |Circles Class| AND |Water-Breathing| AND |City Adventuring Permit| AND ( |Sun Class| OR |Saw Class| ) ) OR\n( |Portal Generator| AND |Vortex Class| AND |Watcher Mountains Map| AND |Sun Class| AND |Circles Class| AND |Water-Breathing| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Watcher Mountains Map| AND |Sun Class| AND |Lingering Swamp Map| ) OR\n( |Portal Generator| AND |Vortex Class| AND |Watcher Mountains Map| AND |Sun Class| AND |Copperneck Mountains Map| ) OR\n( |Corpsewood Map| AND |Dagger Forest Map| AND |Open Field Map| ) OR\n( |Corpsewood Map| AND |Dagger Forest Map| AND |City Adventuring Permit| AND |Watcher Mountains Map| AND |Copperneck Mountains Map| ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Portal Generator| ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Watcher Mountains Map| AND |Sun Class| )"
+		"requires": "|@Demons:6|"
 	},
 	{
 		"region": "World Map",
@@ -1406,7 +1406,7 @@
 		"name": "Goliath Toppler",
 		"region": "World Map",
 		"category": ["Personal Quests"],
-		"requires": "|Corpsewood Map| AND\n(\n(|Dagger Forest Map| AND |City Adventuring Permit| AND |Watcher Mountains Map|) OR\n(|Dagger Forest Map| AND |City Adventuring Permit| AND |Lingering Swamp Map|) OR\n(|Dagger Forest Map| AND |Lingering Swamp Map| AND |Watcher Mountains Map|) OR\n(|Dagger Forest Map| AND |City Adventuring Permit| AND |Copperneck Mountains Map| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |City Adventuring Permit| AND |Copperneck Mountains Map| AND |Watcher Mountains Map|) OR\n(|Open Field Map| AND |City Adventuring Permit| AND |Copperneck Mountains Map| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |City Adventuring Permit| AND |A Demon's Errand|) OR\n(|Open Field Map| AND |Portal Generator| AND |City Adventuring Permit| AND |Misty Sea Chart| AND |Water-Breathing| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |City Adventuring Permit| AND |Lingering Swamp Map|) OR\n(|Open Field Map| AND |Portal Generator| AND |Lingering Swamp Map| AND |Copperneck Mountains Map| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |Lingering Swamp Map| AND |Misty Sea Chart| AND |Water-Breathing| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |End of Corruption:3| AND |Copperneck Mountains Map| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |End of Corruption:3| AND |Misty Sea Chart| AND |Water-Breathing| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Portal Generator| AND |Copperneck Mountains Map| AND |Misty Sea Chart| AND |Water-Breathing| AND |The Power of Enhancement|) OR\n(|Open Field Map| AND |Dagger Forest Map| AND |Portal Generator|) \n)"
+		"requires": "|@Bosses:4|"
 	},
 	{
 		"name": "The Fall of Man",
@@ -1438,7 +1438,7 @@
 		"name": "The Perfect Poison",
 		"region": "World Map",
 		"category": ["Personal Quests"],
-		"requires": "( |Misty Sea Chart| AND |Open Field Map| AND |Corpsewood Map| AND |@Region Unlocks:4| ) OR\n( |Misty Sea Chart| AND |Open Field Map| AND |Lingering Swamp Map| ) OR\n( |Misty Sea Chart| AND |Open Field Map| AND |Water-Breathing| ) OR\n( |Misty Sea Chart| AND |Open Field Map| AND |Copperneck Mountains Map| ) OR\n( |Misty Sea Chart| AND |Open Field Map| AND |Dagger Forest Map| ) OR\n( |Misty Sea Chart| AND |Dagger Forest Map| AND |City Adventuring Permit| AND ( |Water-Breathing| OR |Corpsewood Map| ) ) OR\n( |City Adventuring Permit| AND |Brain Class| AND |Open Field Map| ) OR\n( |City Adventuring Permit| AND |Brain Class| AND |Dagger Forest Map| AND |Corpsewood Map| AND |@Region Unlocks:4| ) OR\n( |Portal Generator| AND |Circles Class| AND |Water-Breathing| AND |Open Field Map| ) OR\n( |Portal Generator| AND |Circles Class| AND |Water-Breathing| AND |Dagger Forest Map| AND |City Adventuring Permit| AND ( |Misty Sea Chart| OR |Corpsewood Map| ) )"
+		"requires": "|Ooze| AND |Lurker| AND |Spitting Drake|"
 	},
 	{
 		"name": "Jaws of the Lion Scenario 1 - Complete",

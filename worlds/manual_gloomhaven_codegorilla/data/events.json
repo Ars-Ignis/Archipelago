@@ -1,6 +1,358 @@
-{
-	"$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.events.schema.json",
-    "data": [
-    ]
-}
-
+[
+    {
+        "name": "Ancient Artillery",
+        "region": "Ancient Artillery Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Bandit Archer",
+        "region": "Bandit Archer Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Bandit Commander (Boss)",
+        "region": "Bandit Commander (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Bandit Guard",
+        "region": "Bandit Guard Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Black Imp",
+        "region": "Black Imp Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Captain of the Guard A (Boss)",
+        "region": "Captain of the Guard A (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Captain of the Guard B (Boss)",
+        "region": "Captain of the Guard B (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Cave Bear",
+        "region": "Cave Bear Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "City Archer",
+        "region": "City Archer Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "City Guard",
+        "region": "City Guard Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Cultist",
+        "region": "Cultist Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Dark Rider (Boss)",
+        "region": "Dark Rider (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Deep Terror",
+        "region": "Deep Terror Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Earth Demon",
+        "region": "Earth Demon Defeated",
+        "category": [
+            "Enemies",
+            "Demons"
+        ]
+    },
+    {
+        "name": "Elder Drake (Boss)",
+        "region": "Elder Drake (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Flame Demon",
+        "region": "Flame Demon Defeated",
+        "category": [
+            "Enemies",
+            "Demons"
+        ]
+    },
+    {
+        "name": "Forest Imp",
+        "region": "Forest Imp Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Frost Demon",
+        "region": "Frost Demon Defeated",
+        "category": [
+            "Enemies",
+            "Demons"
+        ]
+    },
+    {
+        "name": "Giant Viper",
+        "region": "Giant Viper Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Harrower Infester",
+        "region": "Harrower Infester Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Hound",
+        "region": "Hound Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Inox Archer",
+        "region": "Inox Archer Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Inox Bodyguard (Boss)",
+        "region": "Inox Bodyguard (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Inox Guard",
+        "region": "Inox Guard Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Inox Shaman",
+        "region": "Inox Shaman Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Jekserah A (Boss)",
+        "region": "Jekserah A (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Jekserah B (Boss)",
+        "region": "Jekserah B (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Living Bones",
+        "region": "Living Bones Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Living Corpse",
+        "region": "Living Corpse Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Living Spirit",
+        "region": "Living Spirit Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Lurker",
+        "region": "Lurker Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Merciless Overseer (Boss)",
+        "region": "Merciless Overseer (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Night Demon",
+        "region": "Night Demon Defeated",
+        "category": [
+            "Enemies",
+            "Demons"
+        ]
+    },
+    {
+        "name": "Ooze",
+        "region": "Ooze Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Prime Demon A (Boss)",
+        "region": "Prime Demon A (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Prime Demon B (Boss)",
+        "region": "Prime Demon B (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Rending Drake",
+        "region": "Rending Drake Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Savvas Icestorm",
+        "region": "Savvas Icestorm Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Savvas Lavaflow",
+        "region": "Savvas Lavaflow Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Spitting Drake",
+        "region": "Spitting Drake Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Stone Golem",
+        "region": "Stone Golem Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Sun Demon",
+        "region": "Sun Demon Defeated",
+        "category": [
+            "Enemies",
+            "Demons"
+        ]
+    },
+    {
+        "name": "The Betrayer (Boss)",
+        "region": "The Betrayer (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "The Colorless (Boss)",
+        "region": "The Colorless (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "The Gloom (Boss)",
+        "region": "The Gloom (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "The Sightless Eye (Boss)",
+        "region": "The Sightless Eye (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    },
+    {
+        "name": "Vermling Scout",
+        "region": "Vermling Scout Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Vermling Shaman",
+        "region": "Vermling Shaman Defeated",
+        "category": [
+            "Enemies"
+        ]
+    },
+    {
+        "name": "Wind Demon",
+        "region": "Wind Demon Defeated",
+        "category": [
+            "Enemies",
+            "Demons"
+        ]
+    },
+    {
+        "name": "Winged Horror (Boss)",
+        "region": "Winged Horror (Boss) Defeated",
+        "category": [
+            "Bosses"
+        ]
+    }
+]

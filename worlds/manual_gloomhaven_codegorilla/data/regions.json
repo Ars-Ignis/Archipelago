@@ -1,651 +1,1502 @@
 {
-	"Dagger Forest": 	{
-		"connects_to": ["Scenario 55", "Scenario 81", "Scenario 91", "Lightning Solo Scenario"],
-		"requires": "|Dagger Forest Map|"
-	},
-	"Lingering Swamp": 	{
-		"connects_to": ["Scenario 61", "Scenario 68", "Scenario 79"],
-		"requires": "|Lingering Swamp Map|"
-	},
-	"Watcher Mountains": 	{
-		"connects_to": ["Scenario 63", "Scenario 65", "Scenario 76", "Scenario 80", "Scenario 82", "Scenario 85"],
-		"requires": "|Watcher Mountains Map|"
-	},
-	"Copperneck Mountains": 	{
-		"connects_to": ["Scenario 66", "Scenario 84", "Shards Solo Scenario", "Two Minis Solo Scenario"],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Misty Sea": 	{
-		"connects_to": ["Scenario 64", "Scenario 70", "Scenario 74", "Scenario 93"],
-		"requires": "|Misty Sea Chart|"
-	},
-	"Gloomhaven": 	{
-		"connects_to": ["Scenario 57", "Scenario 78", "Scenario 83", "Scenario 86", "Scenario 89", "Scenario 92", 
-		"JotL Scenario 1", "JotL Scenario 20", "JotL Scenario 21", "JotL Scenario 22", "JotL Scenario 23", 
-		"JotL Scenario 24", "JotL Scenario 25", "Kunai Solo Scenario", "Vortex Solo Scenario", "Gear Solo Scenario", 
-		"Brain Solo Scenario", "Music Note Solo Scenario", "Saw Solo Scenario", "Three Spears Solo Scenario"],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Corpsewood": 	{
-		"connects_to": ["Scenario 1","Scenario 72", "Scenario 75", "Horns Solo Scenario"],
-		"requires": "|Corpsewood Map|"
-	},
-	"Extraplanar": 	{
-		"connects_to": ["Scenario 88", "Scenario 90", "Circles Solo Scenario", "Eclipse Solo Scenario"],
-		"requires": "|Portal Generator|"
-	},
-	"Open Field": 	{
-		"connects_to": ["Scenario 67","Scenario 69", "Scenario 71", "Angry Face Solo Scenario", "Cthulhu Solo Scenario", 
-		"Sun Solo Scenario", "Triangles Solo Scenario"],
-		"requires": "|Open Field Map|"
-	},
-	"World Map": 	{
-		"starting": true,
-		"connects_to": ["Dagger Forest", "Lingering Swamp", "Watcher Mountains", "Copperneck Mountains", "Misty Sea",
-		"Gloomhaven", "Corpsewood", "Extraplanar", "Open Field"],
-		"requires": []
-	},
-	"Scenario 1": 	{
-		"connects_to": ["Scenario 2"],
-		"requires": "|Corpsewood Map|"
-	},
-	"Scenario 2": 	{
-		"connects_to": ["Scenario 3","Scenario 4"],
-		"requires": "|Corpsewood Map|"
-	},
-	"Scenario 3": 	{
-		"connects_to": ["Scenario 8","Scenario 9"],
-		"requires": "|Dagger Forest Map|"
-	},
-	"Scenario 4": 	{
-		"connects_to": ["Scenario 5","Scenario 6"],
-		"requires": "|Open Field Map|"
-	},
-	"Scenario 5": 	{
-		"connects_to": ["Scenario 10","Scenario 14","Scenario 19","Scenario 52"],
-		"requires": "|Open Field Map|"
-	},
-	"Scenario 6": 	{
-		"connects_to": ["Scenario 8","Scenario 52"],
-		"requires": "|Open Field Map|"
-	},
-	"Scenario 7": 	{
-		"connects_to": ["Scenario 20","Scenario 59"],
-		"requires": "|Copperneck Mountains Map| AND |The Power of Enhancement|"
-	},
-	"Scenario 8": 	{
-		"connects_to": ["Scenario 7","Scenario 13","Scenario 14"],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 9": 	{
-		"connects_to": ["Scenario 11","Scenario 12"],
-		"requires": "|Watcher Mountains Map|"
-	},
-	"Scenario 10": 	{
-		"connects_to": ["Scenario 21","Scenario 22"],
-		"requires": "|Portal Generator|"
-	},
-	"Scenario 11": 	{
-		"connects_to": ["Scenario 16","Scenario 18"],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 12": 	{
-		"connects_to": ["Scenario 16","Scenario 18","Scenario 28"],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 13": 	{
-		"connects_to": ["Scenario 15","Scenario 17","Scenario 20"],
-		"requires": "|Watcher Mountains Map|"
-	},
-	"Scenario 14": 	{
-		"connects_to": [],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Scenario 15": 	{
-		"connects_to": [],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Scenario 16": 	{
-		"connects_to": ["Scenario 24","Scenario 25"],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Scenario 17": 	{
-		"connects_to": [],
-		"requires": "|Misty Sea Chart|"
-	},
-	"Scenario 18": 	{
-		"connects_to": ["Scenario 14","Scenario 23","Scenario 26","Scenario 43"],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 19": 	{
-		"connects_to": ["Scenario 27"],
-		"requires": "|Lingering Swamp Map| AND |The Power of Enhancement|"
-	},
-	"Scenario 20": 	{
-		"connects_to": ["Scenario 16","Scenario 18","Scenario 28"],
-		"requires": "|Corpsewood Map|"
-	},
-	"Scenario 21": 	{
-		"connects_to": ["Scenario 94"],
-		"requires": "|Portal Generator|"
-	},
-	"Scenario 22": 	{
-		"connects_to": ["Scenario 31","Scenario 35","Scenario 36"],
-		"requires": "|Open Field Map|"
-	},
-	"Scenario 23": 	{
-		"connects_to": [],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 24": 	{
-		"connects_to": ["Scenario 30","Scenario 32"],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Scenario 25": 	{
-		"connects_to": ["Scenario 33","Scenario 34"],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Scenario 26": 	{
-		"connects_to": ["Scenario 22"],
-		"requires": "|City Adventuring Permit| AND ( |Through the Ruins| OR |Water-Breathing| )",
-		"map": "gloomhaven"
-	},
-	"Scenario 27": 	{
-		"connects_to": [],
-		"requires": "|Portal Generator|"
-	},
-	"Scenario 28": 	{
-		"connects_to": ["Scenario 29"],
-		"requires": "|Dagger Forest Map| AND |Dark Bounty|"
-	},
-	"Scenario 29": 	{
-		"connects_to": [],
-		"requires": "|Dagger Forest Map|"
-	},
-	"Scenario 30": 	{
-		"connects_to": ["Scenario 42"],
-		"requires": "|Misty Sea Chart| AND |The Voice's Command|"
-	},
-	"Scenario 31": 	{
-		"connects_to": ["Scenario 37","Scenario 38","Scenario 39","Scenario 43"],
-		"requires": "|Portal Generator| AND |The Power of Enhancement|",
-		"map": "gloomhaven"
-	},
-	"Scenario 32": 	{
-		"connects_to": ["Scenario 33","Scenario 40"],
-		"requires": "|Lingering Swamp Map| AND |The Voice's Command|"
-	},
-	"Scenario 33": 	{
-		"connects_to": [],
-		"requires": "|Copperneck Mountains Map| AND ( |The Voice's Command| OR |The Drake's Command| )"
-	},
-	"Scenario 34": 	{
-		"connects_to": [],
-		"requires": "|Copperneck Mountains Map| AND |The Drake's Command|"
-	},
-	"Scenario 35": 	{
-		"connects_to": ["Scenario 45"],
-		"requires": "|City Adventuring Permit| AND |A Demon's Errand|",
-		"map": "gloomhaven"
-	},
-	"Scenario 36": 	{
-		"connects_to": ["Scenario 94"],
-		"requires": "|City Adventuring Permit| AND |A Demon's Errand|",
-		"map": "gloomhaven"
-	},
-	"Scenario 37": 	{
-		"connects_to": ["Scenario 47"],
-		"requires": "|Misty Sea Chart| AND |Water-Breathing|"
-	},
-	"Scenario 38": 	{
-		"connects_to": ["Scenario 44","Scenario 48"],
-		"requires": "|Dagger Forest Map|"
-	},
-	"Scenario 39": 	{
-		"connects_to": ["Scenario 46"],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Scenario 40": 	{
-		"connects_to": ["Scenario 41","Scenario 59"],
-		"requires": "|Copperneck Mountains Map| AND |The Voice's Command| AND |The Voice's Treasure|"
-	},
-	"Scenario 41": 	{
-		"connects_to": [],
-		"requires": "|Copperneck Mountains Map| AND |The Voice's Command| AND |The Voice's Treasure|"
-	},
-	"Scenario 42": 	{
-		"connects_to": [],
-		"requires": "|Portal Generator| AND |The Voice's Command|"
-	},
-	"Scenario 43": 	{
-		"connects_to": [],
-		"requires": "|Dagger Forest Map| AND |The Power of Enhancement|"
-	},
-	"Scenario 44": 	{
-		"connects_to": [],
-		"requires": "|Dagger Forest Map|"
-	},
-	"Scenario 45": 	{
-		"connects_to": ["Scenario 49","Scenario 50"],
-		"requires": "|Lingering Swamp Map|"
-	},
-	"Scenario 46": 	{
-		"connects_to": ["Scenario 51"],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Scenario 47": 	{
-		"connects_to": ["Scenario 51"],
-		"requires": "|Misty Sea Chart|"
-	},
-	"Scenario 48": 	{
-		"connects_to": ["Scenario 51","Scenario 59"],
-		"requires": "|Dagger Forest Map|"
-	},
-	"Scenario 49": 	{
-		"connects_to": [],
-		"requires": "|Lingering Swamp Map|"
-	},
-	"Scenario 50": 	{
-		"connects_to": [],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 51": 	{
-		"connects_to": [],
-		"requires": "|End of Corruption:3| AND |Portal Generator|",
-		"map": "gloomhaven"
-	},
-	"Scenario 52": 	{
-		"connects_to": ["Scenario 53"],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 53": 	{
-		"connects_to": ["Scenario 54"],
-		"requires": "|Open Field Map|"
-	},
-	"Scenario 54": 	{
-		"connects_to": [],
-		"requires": "|Copperneck Mountains Map| AND |Item 114|"
-	},
-	"Scenario 55": 	{
-		"connects_to": ["Scenario 56"],
-		"requires": "|Dagger Forest Map| AND ( ( |Open Field Map| AND |Two Minis Class| ) OR \n( |Open Field Map| AND |Corpsewood Map| ) OR \n( |Corpsewood Map| AND |Two Minis Class| ) OR \n( |Corpsewood Map| AND |@Region Unlocks:4| ) OR\n( |Misty Sea Chart| AND |Water-Breathing| AND |Corpsewood Map| ) OR\n( |Misty Sea Chart| AND |Water-Breathing| AND |Two Minis Class| ) )"
-	},
-	"Scenario 56": 	{
-		"connects_to": [],
-		"requires": "|Dagger Forest Map|"
-	},
-	"Scenario 57": 	{
-		"connects_to": ["Scenario 58"],
-		"requires": "|City Adventuring Permit| AND\n( ( |Corpsewood Map| AND |Dagger Forest Map| AND |Watcher Mountains Map| ) OR\n( |Corpsewood Map| AND |Dagger Forest Map| AND |Copperneck Mountains Map| AND |The Power of Enhancement| AND ( |Water-Breathing| OR |Through the Ruins| ) ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Copperneck Mountains Map| AND |The Power of Enhancement| ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Watcher Mountains Map| ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Portal Generator| ) OR\n( |Eclipse Class| AND |Saw Class| AND |Sun Class| ) OR\n( |Eclipse Class| AND |Saw Class| AND |Brain Class| ) OR\n( |Eclipse Class| AND |Saw Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| ) ) ) OR\n( |Eclipse Class| AND |Saw Class| AND |Corpsewood Map| AND |Dagger Forest Map| ) OR\n( |Eclipse Class| AND |Sun Class| AND |Brain Class| ) OR\n( |Eclipse Class| AND |Sun Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| ) ) ) OR\n( |Eclipse Class| AND |Sun Class| AND |Corpsewood Map| AND |Dagger Forest Map| ) OR\n( |Eclipse Class| AND |Brain Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| ) ) ) OR\n( |Eclipse Class| AND |Brain Class| AND |Corpsewood Map| AND |Dagger Forest Map| ) OR\n( |Eclipse Class| AND |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) OR\n( |Eclipse Class| AND |Corpsewood Map| AND |Open Field Map| ) OR\n( |Open Field Map| AND |Corpsewood Map| AND |Saw Class| AND |Sun Class| ) OR\n( |Open Field Map| AND |Corpsewood Map| AND |Saw Class| AND |Brain Class| ) OR\n( |Open Field Map| AND |Corpsewood Map| AND |Sun Class| AND |Brain Class| ) OR\n( |Saw Class| AND |Sun Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) ) OR\n( |Saw Class| AND |Sun Class| AND |Brain Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) ) OR\n( |Saw Class| AND |Sun Class| AND |Brain Class| AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND |Sun Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) ) OR\n( |Saw Class| AND |Sun Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND |Sun Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) ) OR\n( |Saw Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND |Brain Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Sun Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) ) OR\n( |Sun Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Sun Class| AND |Brain Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Sun Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) )",
-		"map": "gloomhaven"
-	},
-	"Scenario 58": 	{
-		"connects_to": [],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 59": 	{
-		"connects_to": ["Scenario 60"],
-		"requires": "|Dagger Forest Map| "
-	},
-	"Scenario 60": 	{
-		"connects_to": [],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 61": 	{
-		"connects_to": ["Scenario 62"],
-		"requires": "|Lingering Swamp Map|"
-	},
-	"Scenario 62": 	{
-		"connects_to": [],
-		"requires": "|Lingering Swamp Map|"
-	},
-	"Scenario 63": 	{
-		"connects_to": [],
-		"requires": "|Watcher Mountains Map|"
-	},
-	"Scenario 64": 	{
-		"connects_to": ["Scenario 59"],
-		"requires": "|Misty Sea Chart| AND |Water-Breathing|"
-	},
-	"Scenario 65": {
-		"connects_to": [],
-		"requires": "|Watcher Mountains Map|"
-	},
-	"Scenario 66": {
-		"connects_to": [],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Scenario 67": 	{
-		"connects_to": ["Scenario 59"],
-		"requires": "|Open Field Map|"
-	},
-	"Scenario 68": 	{
-		"connects_to": [],
-		"requires": "|Lingering Swamp Map|"
-	},
-	"Scenario 69": 	{
-		"connects_to": ["Scenario 59"],
-		"requires": "|Open Field Map|"
-	},
-	"Scenario 70": 	{
-		"connects_to": [],
-		"requires": "|Misty Sea Chart|"
-	},
-	"Scenario 71": 	{
-		"connects_to": [],
-		"requires": "|Open Field Map|"
-	},
-	"Scenario 72": 	{
-		"connects_to": ["Scenario 59","Scenario 73"],
-		"requires": "|Corpsewood Map| AND |@Region Unlocks:4|"
-	},
-	"Scenario 73": 	{
-		"connects_to": ["Scenario 77"],
-		"requires": "|Watcher Mountains Map| AND |@Region Unlocks:6|"
-	},
-	"Scenario 74": 	{
-		"connects_to": [],
-		"requires": "|Misty Sea Chart|"
-	},
-	"Scenario 75": 	{
-		"connects_to": [],
-		"requires": "|Corpsewood Map|"
-	},
-	"Scenario 76": 	{
-		"connects_to": [],
-		"requires": "|Watcher Mountains Map|"
-	},
-	"Scenario 77": 	{
-		"connects_to": [],
-		"requires": "|City Adventuring Permit| AND |@Region Unlocks:7|",
-		"map": "gloomhaven"
-	},
-	"Scenario 78": 	{
-		"connects_to": [],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 79": 	{
-		"connects_to": [],
-		"requires": "|Lingering Swamp Map|"
-	},
-	"Scenario 80": 	{
-		"connects_to": [],
-		"requires": "|Watcher Mountains Map|"
-	},
-	"Scenario 81": 	{
-		"connects_to": [],
-		"requires": "|Dagger Forest Map|"
-	},
-	"Scenario 82": 	{
-		"connects_to": [],
-		"requires": "|Watcher Mountains Map|"
-	},
-	"Scenario 83": 	{
-		"connects_to": [],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 84": 	{
-		"connects_to": [],
-		"requires": "|Copperneck Mountains Map|"
-	},
-	"Scenario 85": 	{
-		"connects_to": [],
-		"requires": "|Watcher Mountains Map|"
-	},
-	"Scenario 86": 	{
-		"connects_to": ["Scenario 87"],
-		"requires": "|City Adventuring Permit| AND |Brain Class|",
-		"map": "gloomhaven"
-	},
-	"Scenario 87": 	{
-		"connects_to": [],
-		"requires": "|Open Field Map|"
-	},
-	"Scenario 88": 	{
-		"connects_to": [],
-		"requires": "|Portal Generator|",
-		"map": "gloomhaven"
-	},
-	"Scenario 89": 	{
-		"connects_to": [],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 90": 	{
-		"connects_to": [],
-		"requires": "|Portal Generator|"
-	},
-	"Scenario 91": 	{
-		"connects_to": [],
-		"requires": "|Dagger Forest Map|"
-	},
-	"Scenario 92": 	{
-		"connects_to": [],
-		"requires": "|City Adventuring Permit|",
-		"map": "gloomhaven"
-	},
-	"Scenario 93": 	{
-		"connects_to": [],
-		"requires": "|Misty Sea Chart|"
-	},
-	"Scenario 94": 	{
-		"connects_to": ["Scenario 95"],
-		"requires": "|Corpsewood Map|"
-	},
-	"Scenario 95": 	{
-		"connects_to": [],
-		"requires": "|Corpsewood Map|"
-	},
-	"JotL Scenario 1": 	{
-		"connects_to": ["JotL Scenario 2"],
-		"requires": "|City Adventuring Permit| AND {OptAll(|@JotL Classes:2|)}",
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 2": 	{
-		"connects_to": ["JotL Scenario 3"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 3": 	{
-		"connects_to": ["JotL Scenario 4"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 4": 	{
-		"connects_to": ["JotL Scenario 5"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 5": 	{
-		"connects_to": ["JotL Scenario 6"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 6": 	{
-		"connects_to": ["JotL Scenario 7","JotL Scenario 8"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 7": 	{
-		"connects_to": ["JotL Scenario 9"],
-		"requires": "{OptAll(|@JotL Classes:3|)}",
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 8": 	{
-		"connects_to": ["JotL Scenario 9"],
-		"requires": "{OptAll(|@JotL Classes:3|)}",
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 9": 	{
-		"connects_to": ["JotL Scenario 10"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 10": 	{
-		"connects_to": ["JotL Scenario 11","JotL Scenario 12"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 11": 	{
-		"connects_to": ["JotL Scenario 13","JotL Scenario 19"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 12": 	{
-		"connects_to": ["JotL Scenario 14","JotL Scenario 18"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 13": 	{
-		"connects_to": ["JotL Scenario 15"],
-		"requires": "{OptAll(|@JotL Classes:4|)}",
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 14": 	{
-		"connects_to": ["JotL Scenario 15"],
-		"requires": "{OptAll(|@JotL Classes:4|)}",
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 15": 	{
-		"connects_to": ["JotL Scenario 16"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 16": 	{
-		"connects_to": ["JotL Scenario 17"],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 17": 	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 18": 	{
-		"connects_to": [],
-		"requires": "{OptAll(|@JotL Classes:4|)}",
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 19": 	{
-		"connects_to": [],
-		"requires": "{OptAll(|@JotL Classes:4|)}",
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 20": 	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 21": 	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 22": 	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 23": 	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 24": 	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"JotL Scenario 25": 	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"Horns Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	},
-	"Kunai Solo Scenario":	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"Vortex Solo Scenario":	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"Gear Solo Scenario":	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"Shards Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	},
-	"Brain Solo Scenario":	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"Angry Face Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	},
-	"Circles Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	},
-	"Cthulhu Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	},
-	"Eclipse Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	},
-	"Lightning Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	},
-	"Music Note Solo Scenario":	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"Saw Solo Scenario":	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"Sun Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	},
-	"Three Spears Solo Scenario":	{
-		"connects_to": [],
-		"requires": [],
-		"map": "gloomhaven"
-	},
-	"Triangles Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	},
-	"Two Minis Solo Scenario":	{
-		"connects_to": [],
-		"requires": []
-	}
+    "Dagger Forest": {
+        "connects_to": [
+            "Scenario 55",
+            "Scenario 59",
+            "Scenario 81",
+            "Scenario 91",
+            "Lightning Solo Scenario"
+        ],
+        "requires": "|Dagger Forest Map|"
+    },
+    "Lingering Swamp": {
+        "connects_to": [
+            "Scenario 61",
+            "Scenario 68",
+            "Scenario 79"
+        ],
+        "requires": "|Lingering Swamp Map|"
+    },
+    "Watcher Mountains": {
+        "connects_to": [
+            "Scenario 63",
+            "Scenario 65",
+            "Scenario 76",
+            "Scenario 80",
+            "Scenario 82",
+            "Scenario 85"
+        ],
+        "requires": "|Watcher Mountains Map|"
+    },
+    "Copperneck Mountains": {
+        "connects_to": [
+            "Scenario 66",
+            "Scenario 84",
+            "Shards Solo Scenario",
+            "Two Minis Solo Scenario"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Misty Sea": {
+        "connects_to": [
+            "Scenario 64",
+            "Scenario 70",
+            "Scenario 74",
+            "Scenario 93"
+        ],
+        "requires": "|Misty Sea Chart|"
+    },
+    "Gloomhaven": {
+        "connects_to": [
+            "Scenario 57",
+            "Scenario 78",
+            "Scenario 83",
+            "Scenario 86",
+            "Scenario 89",
+            "Scenario 92",
+            "JotL Scenario 1",
+            "JotL Scenario 20",
+            "JotL Scenario 21",
+            "JotL Scenario 22",
+            "JotL Scenario 23",
+            "JotL Scenario 24",
+            "JotL Scenario 25",
+            "Kunai Solo Scenario",
+            "Vortex Solo Scenario",
+            "Gear Solo Scenario",
+            "Brain Solo Scenario",
+            "Music Note Solo Scenario",
+            "Saw Solo Scenario",
+            "Three Spears Solo Scenario"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Corpsewood": {
+        "connects_to": [
+            "Scenario 1",
+            "Scenario 72",
+            "Scenario 75",
+            "Horns Solo Scenario"
+        ],
+        "requires": "|Corpsewood Map|"
+    },
+    "Extraplanar": {
+        "connects_to": [
+            "Scenario 88",
+            "Scenario 90",
+            "Circles Solo Scenario",
+            "Eclipse Solo Scenario"
+        ],
+        "requires": "|Portal Generator|"
+    },
+    "Open Field": {
+        "connects_to": [
+            "Scenario 67",
+            "Scenario 69",
+            "Scenario 71",
+            "Angry Face Solo Scenario",
+            "Cthulhu Solo Scenario",
+            "Sun Solo Scenario",
+            "Triangles Solo Scenario"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "World Map": {
+        "starting": true,
+        "connects_to": [
+            "Dagger Forest",
+            "Lingering Swamp",
+            "Watcher Mountains",
+            "Copperneck Mountains",
+            "Misty Sea",
+            "Gloomhaven",
+            "Corpsewood",
+            "Extraplanar",
+            "Open Field"
+        ],
+        "requires": []
+    },
+    "Scenario 1": {
+        "connects_to": [
+            "Scenario 2",
+            "Bandit Guard Defeated",
+            "Bandit Archer Defeated",
+            "Living Bones Defeated"
+        ],
+        "requires": "|Corpsewood Map|"
+    },
+    "Scenario 2": {
+        "connects_to": [
+            "Scenario 3",
+            "Scenario 4",
+            "Bandit Archer Defeated",
+            "Bandit Commander (Boss) Defeated",
+            "Living Bones Defeated",
+            "Living Corpse Defeated"
+        ],
+        "requires": "|Corpsewood Map|"
+    },
+    "Scenario 3": {
+        "connects_to": [
+            "Scenario 8",
+            "Scenario 9",
+            "Inox Guard Defeated",
+            "Inox Archer Defeated",
+            "Inox Shaman Defeated"
+        ],
+        "requires": "|Dagger Forest Map|"
+    },
+    "Scenario 4": {
+        "connects_to": [
+            "Scenario 5",
+            "Scenario 6",
+            "Living Bones Defeated",
+            "Bandit Archer Defeated",
+            "Cultist Defeated",
+            "Earth Demon Defeated",
+            "Wind Demon Defeated"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "Scenario 5": {
+        "connects_to": [
+            "Scenario 10",
+            "Scenario 14",
+            "Scenario 19",
+            "Scenario 52",
+            "Cultist Defeated",
+            "Living Bones Defeated",
+            "Night Demon Defeated",
+            "Flame Demon Defeated",
+            "Frost Demon Defeated"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "Scenario 6": {
+        "connects_to": [
+            "Scenario 8",
+            "Scenario 52",
+            "Living Bones Defeated",
+            "Living Corpse Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "Scenario 7": {
+        "connects_to": [
+            "Scenario 20",
+            "Forest Imp Defeated",
+            "Cave Bear Defeated",
+            "Inox Shaman Defeated",
+            "Earth Demon Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map| AND |The Power of Enhancement|"
+    },
+    "Scenario 8": {
+        "connects_to": [
+            "Scenario 7",
+            "Scenario 13",
+            "Scenario 14",
+            "Living Bones Defeated",
+            "Living Corpse Defeated",
+            "Inox Bodyguard (Boss) Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 9": {
+        "connects_to": [
+            "Scenario 11",
+            "Scenario 12",
+            "Hound Defeated",
+            "Vermling Scout Defeated",
+            "Merciless Overseer (Boss) Defeated"
+        ],
+        "requires": "|Watcher Mountains Map|"
+    },
+    "Scenario 10": {
+        "connects_to": [
+            "Scenario 21",
+            "Scenario 22",
+            "Flame Demon Defeated",
+            "Earth Demon Defeated",
+            "Sun Demon Defeated"
+        ],
+        "requires": "|Portal Generator|"
+    },
+    "Scenario 11": {
+        "connects_to": [
+            "Scenario 16",
+            "Scenario 18",
+            "City Guard Defeated",
+            "City Archer Defeated",
+            "Captain of the Guard A (Boss) Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 12": {
+        "connects_to": [
+            "Scenario 16",
+            "Scenario 18",
+            "Scenario 28",
+            "Living Bones Defeated",
+            "Living Corpse Defeated",
+            "Cultist Defeated",
+            "Jekserah A (Boss) Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 13": {
+        "connects_to": [
+            "Scenario 15",
+            "Scenario 17",
+            "Scenario 20",
+            "Stone Golem Defeated",
+            "Cave Bear Defeated",
+            "Living Spirit Defeated",
+            "Spitting Drake Defeated"
+        ],
+        "requires": "|Watcher Mountains Map|"
+    },
+    "Scenario 14": {
+        "connects_to": [
+            "Hound Defeated",
+            "Living Spirit Defeated",
+            "Frost Demon Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Scenario 15": {
+        "connects_to": [
+            "Stone Golem Defeated",
+            "Savvas Icestorm Defeated",
+            "Frost Demon Defeated",
+            "Wind Demon Defeated",
+            "Harrower Infester Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Scenario 16": {
+        "connects_to": [
+            "Scenario 24",
+            "Scenario 25",
+            "Earth Demon Defeated",
+            "Wind Demon Defeated",
+            "Inox Guard Defeated",
+            "Inox Archer Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Scenario 17": {
+        "connects_to": [
+            "Vermling Scout Defeated",
+            "Vermling Shaman Defeated",
+            "Cave Bear Defeated"
+        ],
+        "requires": "|Misty Sea Chart|"
+    },
+    "Scenario 18": {
+        "connects_to": [
+            "Scenario 14",
+            "Scenario 23",
+            "Scenario 26",
+            "Scenario 43",
+            "Giant Viper Defeated",
+            "Ooze Defeated",
+            "Vermling Scout Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 19": {
+        "connects_to": [
+            "Scenario 27",
+            "Cultist Defeated",
+            "Living Bones Defeated",
+            "Living Spirit Defeated",
+            "Living Corpse Defeated"
+        ],
+        "requires": "|Lingering Swamp Map| AND |The Power of Enhancement|"
+    },
+    "Scenario 20": {
+        "connects_to": [
+            "Scenario 16",
+            "Scenario 18",
+            "Scenario 28",
+            "Cultist Defeated",
+            "Living Bones Defeated",
+            "Night Demon Defeated",
+            "Living Corpse Defeated",
+            "Jekserah B (Boss) Defeated"
+        ],
+        "requires": "|Corpsewood Map|"
+    },
+    "Scenario 21": {
+        "connects_to": [
+            "Scenario 94",
+            "Sun Demon Defeated",
+            "Frost Demon Defeated",
+            "Night Demon Defeated",
+            "Wind Demon Defeated",
+            "Earth Demon Defeated",
+            "Flame Demon Defeated",
+            "Prime Demon A (Boss) Defeated"
+        ],
+        "requires": "|Portal Generator|"
+    },
+    "Scenario 22": {
+        "connects_to": [
+            "Scenario 31",
+            "Scenario 35",
+            "Scenario 36",
+            "Living Bones Defeated",
+            "Cultist Defeated",
+            "Earth Demon Defeated",
+            "Flame Demon Defeated",
+            "Frost Demon Defeated",
+            "Wind Demon Defeated"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "Scenario 23": {
+        "connects_to": [
+            "Stone Golem Defeated",
+            "Ancient Artillery Defeated",
+            "Living Bones Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 24": {
+        "connects_to": [
+            "Scenario 30",
+            "Scenario 32",
+            "Rending Drake Defeated",
+            "Ooze Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Scenario 25": {
+        "connects_to": [
+            "Scenario 33",
+            "Scenario 34",
+            "Hound Defeated",
+            "Rending Drake Defeated",
+            "Spitting Drake Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Scenario 26": {
+        "connects_to": [
+            "Scenario 22",
+            "Living Corpse Defeated",
+            "Ooze Defeated",
+            "Night Demon Defeated",
+            "Black Imp Defeated"
+        ],
+        "requires": "|City Adventuring Permit| AND ( |Through the Ruins| OR |Water-Breathing| )",
+        "map": "gloomhaven"
+    },
+    "Scenario 27": {
+        "connects_to": [
+            "Sun Demon Defeated",
+            "Frost Demon Defeated",
+            "Night Demon Defeated",
+            "Wind Demon Defeated",
+            "Earth Demon Defeated",
+            "Flame Demon Defeated"
+        ],
+        "requires": "|Portal Generator|"
+    },
+    "Scenario 28": {
+        "connects_to": [
+            "Scenario 29",
+            "Living Corpse Defeated",
+            "Cultist Defeated",
+            "Living Bones Defeated",
+            "Night Demon Defeated",
+            "Sun Demon Defeated"
+        ],
+        "requires": "|Dagger Forest Map| AND |Dark Bounty|"
+    },
+    "Scenario 29": {
+        "connects_to": [
+            "Living Bones Defeated",
+            "Living Corpse Defeated",
+            "Living Spirit Defeated",
+            "Black Imp Defeated"
+        ],
+        "requires": "|Dagger Forest Map|"
+    },
+    "Scenario 30": {
+        "connects_to": [
+            "Scenario 42",
+            "Ooze Defeated",
+            "Lurker Defeated",
+            "Deep Terror Defeated"
+        ],
+        "requires": "|Misty Sea Chart| AND |The Voice's Command|"
+    },
+    "Scenario 31": {
+        "connects_to": [
+            "Scenario 37",
+            "Scenario 38",
+            "Scenario 39",
+            "Scenario 43",
+            "Deep Terror Defeated",
+            "Night Demon Defeated",
+            "Black Imp Defeated"
+        ],
+        "requires": "|Portal Generator| AND |The Power of Enhancement|",
+        "map": "gloomhaven"
+    },
+    "Scenario 32": {
+        "connects_to": [
+            "Scenario 33",
+            "Scenario 40",
+            "Harrower Infester Defeated",
+            "Giant Viper Defeated",
+            "Deep Terror Defeated",
+            "Black Imp Defeated"
+        ],
+        "requires": "|Lingering Swamp Map| AND |The Voice's Command|"
+    },
+    "Scenario 33": {
+        "connects_to": [
+            "Savvas Icestorm Defeated",
+            "Savvas Lavaflow Defeated",
+            "Wind Demon Defeated",
+            "Frost Demon Defeated",
+            "Flame Demon Defeated",
+            "Earth Demon Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map| AND ( |The Voice's Command| OR |The Drake's Command| )"
+    },
+    "Scenario 34": {
+        "connects_to": [
+            "Rending Drake Defeated",
+            "Spitting Drake Defeated",
+            "Elder Drake (Boss) Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map| AND |The Drake's Command|"
+    },
+    "Scenario 35": {
+        "connects_to": [
+            "Scenario 45",
+            "City Guard Defeated",
+            "City Archer Defeated",
+            "Captain of the Guard B (Boss) Defeated"
+        ],
+        "requires": "|City Adventuring Permit| AND |A Demon's Errand|",
+        "map": "gloomhaven"
+    },
+    "Scenario 36": {
+        "connects_to": [
+            "Scenario 94",
+            "Flame Demon Defeated",
+            "Frost Demon Defeated",
+            "Earth Demon Defeated",
+            "Wind Demon Defeated",
+            "Prime Demon B (Boss) Defeated"
+        ],
+        "requires": "|City Adventuring Permit| AND |A Demon's Errand|",
+        "map": "gloomhaven"
+    },
+    "Scenario 37": {
+        "connects_to": [
+            "Scenario 47",
+            "Lurker Defeated",
+            "Deep Terror Defeated",
+            "Harrower Infester Defeated"
+        ],
+        "requires": "|Misty Sea Chart| AND |Water-Breathing|"
+    },
+    "Scenario 38": {
+        "connects_to": [
+            "Scenario 44",
+            "Scenario 48",
+            "Inox Guard Defeated",
+            "Inox Archer Defeated",
+            "Inox Shaman Defeated",
+            "Stone Golem Defeated"
+        ],
+        "requires": "|Dagger Forest Map|"
+    },
+    "Scenario 39": {
+        "connects_to": [
+            "Scenario 46",
+            "Cave Bear Defeated",
+            "Frost Demon Defeated",
+            "Spitting Drake Defeated",
+            "Cultist Defeated",
+            "Living Bones Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Scenario 40": {
+        "connects_to": [
+            "Scenario 41",
+            "Living Corpse Defeated",
+            "Cave Bear Defeated",
+            "Flame Demon Defeated",
+            "Stone Golem Defeated",
+            "Forest Imp Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map| AND |The Voice's Command| AND |The Voice's Treasure|"
+    },
+    "Scenario 41": {
+        "connects_to": [
+            "Ancient Artillery Defeated",
+            "Living Corpse Defeated",
+            "Living Spirit Defeated",
+            "Stone Golem Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map| AND |The Voice's Command| AND |The Voice's Treasure|"
+    },
+    "Scenario 42": {
+        "connects_to": [
+            "Night Demon Defeated",
+            "Wind Demon Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|Portal Generator| AND |The Voice's Command|"
+    },
+    "Scenario 43": {
+        "connects_to": [
+            "Flame Demon Defeated",
+            "Spitting Drake Defeated",
+            "Rending Drake Defeated"
+        ],
+        "requires": "|Dagger Forest Map| AND |The Power of Enhancement|"
+    },
+    "Scenario 44": {
+        "connects_to": [
+            "Inox Guard Defeated",
+            "Inox Archer Defeated",
+            "Inox Shaman Defeated",
+            "Hound Defeated"
+        ],
+        "requires": "|Dagger Forest Map|"
+    },
+    "Scenario 45": {
+        "connects_to": [
+            "Scenario 49",
+            "Scenario 50",
+            "City Guard Defeated",
+            "City Archer Defeated",
+            "Hound Defeated"
+        ],
+        "requires": "|Lingering Swamp Map|"
+    },
+    "Scenario 46": {
+        "connects_to": [
+            "Scenario 51",
+            "Night Demon Defeated",
+            "Frost Demon Defeated",
+            "Wind Demon Defeated",
+            "Savvas Icestorm Defeated",
+            "Winged Horror (Boss) Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Scenario 47": {
+        "connects_to": [
+            "Scenario 51",
+            "Lurker Defeated",
+            "Deep Terror Defeated",
+            "Harrower Infester Defeated",
+            "The Sightless Eye (Boss) Defeated"
+        ],
+        "requires": "|Misty Sea Chart|"
+    },
+    "Scenario 48": {
+        "connects_to": [
+            "Scenario 51",
+            "Forest Imp Defeated",
+            "Earth Demon Defeated",
+            "Harrower Infester Defeated",
+            "Dark Rider (Boss) Defeated"
+        ],
+        "requires": "|Dagger Forest Map|"
+    },
+    "Scenario 49": {
+        "connects_to": [
+            "Giant Viper Defeated",
+            "City Archer Defeated",
+            "City Guard Defeated",
+            "Ancient Artillery Defeated"
+        ],
+        "requires": "|Lingering Swamp Map|"
+    },
+    "Scenario 50": {
+        "connects_to": [
+            "Night Demon Defeated",
+            "Sun Demon Defeated",
+            "Earth Demon Defeated",
+            "Wind Demon Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 51": {
+        "connects_to": [
+            "The Gloom (Boss) Defeated"
+        ],
+        "requires": "|End of Corruption:3| AND |Portal Generator|",
+        "map": "gloomhaven"
+    },
+    "Scenario 52": {
+        "connects_to": [
+            "Scenario 53",
+            "Spitting Drake Defeated",
+            "Ooze Defeated",
+            "Vermling Scout Defeated",
+            "Living Corpse Defeated",
+            "Vermling Shaman Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 53": {
+        "connects_to": [
+            "Scenario 54",
+            "Ooze Defeated",
+            "Living Corpse Defeated",
+            "Living Spirit Defeated",
+            "Living Bones Defeated",
+            "Giant Viper Defeated"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "Scenario 54": {
+        "connects_to": [
+            "Cave Bear Defeated",
+            "Living Spirit Defeated",
+            "Frost Demon Defeated",
+            "Harrower Infester Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map| AND |Item 114|"
+    },
+    "Scenario 55": {
+        "connects_to": [
+            "Scenario 56",
+            "Cave Bear Defeated",
+            "Earth Demon Defeated",
+            "Flame Demon Defeated",
+            "Frost Demon Defeated",
+            "Savvas Lavaflow Defeated",
+            "Savvas Icestorm Defeated",
+            "Vermling Scout Defeated",
+            "Vermling Shaman Defeated",
+            "Wind Demon Defeated"
+        ],
+        "requires": "|Dagger Forest Map| AND ( ( |Open Field Map| AND |Two Minis Class| ) OR \n( |Open Field Map| AND |Corpsewood Map| ) OR \n( |Corpsewood Map| AND |Two Minis Class| ) OR \n( |Corpsewood Map| AND |@Region Unlocks:4| ) OR\n( |Misty Sea Chart| AND |Water-Breathing| AND |Corpsewood Map| ) OR\n( |Misty Sea Chart| AND |Water-Breathing| AND |Two Minis Class| ) )"
+    },
+    "Scenario 56": {
+        "connects_to": [
+            "Hound Defeated",
+            "Bandit Archer Defeated",
+            "Rending Drake Defeated",
+            "Bandit Guard Defeated"
+        ],
+        "requires": "|Dagger Forest Map|"
+    },
+    "Scenario 57": {
+        "connects_to": [
+            "Scenario 58",
+            "City Guard Defeated",
+            "City Archer Defeated",
+            "Hound Defeated"
+        ],
+        "requires": "|City Adventuring Permit| AND\n( ( |Corpsewood Map| AND |Dagger Forest Map| AND |Watcher Mountains Map| ) OR\n( |Corpsewood Map| AND |Dagger Forest Map| AND |Copperneck Mountains Map| AND |The Power of Enhancement| AND ( |Water-Breathing| OR |Through the Ruins| ) ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Copperneck Mountains Map| AND |The Power of Enhancement| ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Watcher Mountains Map| ) OR\n( |Corpsewood Map| AND |Open Field Map| AND |Portal Generator| ) OR\n( |Eclipse Class| AND |Saw Class| AND |Sun Class| ) OR\n( |Eclipse Class| AND |Saw Class| AND |Brain Class| ) OR\n( |Eclipse Class| AND |Saw Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| ) ) ) OR\n( |Eclipse Class| AND |Saw Class| AND |Corpsewood Map| AND |Dagger Forest Map| ) OR\n( |Eclipse Class| AND |Sun Class| AND |Brain Class| ) OR\n( |Eclipse Class| AND |Sun Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| ) ) ) OR\n( |Eclipse Class| AND |Sun Class| AND |Corpsewood Map| AND |Dagger Forest Map| ) OR\n( |Eclipse Class| AND |Brain Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| ) ) ) OR\n( |Eclipse Class| AND |Brain Class| AND |Corpsewood Map| AND |Dagger Forest Map| ) OR\n( |Eclipse Class| AND |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) OR\n( |Eclipse Class| AND |Corpsewood Map| AND |Open Field Map| ) OR\n( |Open Field Map| AND |Corpsewood Map| AND |Saw Class| AND |Sun Class| ) OR\n( |Open Field Map| AND |Corpsewood Map| AND |Saw Class| AND |Brain Class| ) OR\n( |Open Field Map| AND |Corpsewood Map| AND |Sun Class| AND |Brain Class| ) OR\n( |Saw Class| AND |Sun Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) ) OR\n( |Saw Class| AND |Sun Class| AND |Brain Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) ) OR\n( |Saw Class| AND |Sun Class| AND |Brain Class| AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND |Sun Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) ) OR\n( |Saw Class| AND |Sun Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND |Sun Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) ) OR\n( |Saw Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND |Brain Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Saw Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Sun Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) ) OR\n( |Sun Class| AND |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Sun Class| AND |Brain Class| AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Sun Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) OR\n( |Brain Class| AND ( |@Region Unlocks:7| AND |Corpsewood Map| AND |Watcher Mountains Map| ) AND ( |Dagger Forest Map| AND ( ( |Misty Sea Chart| AND |Water-Breathing| ) OR |Open Field Map| OR ( |Corpsewood Map| AND |@Region Unlocks:4| ) ) ) AND ( |Corpsewood Map| AND |Dagger Forest Map| ) ) )",
+        "map": "gloomhaven"
+    },
+    "Scenario 58": {
+        "connects_to": [
+            "Earth Demon Defeated",
+            "Harrower Infester Defeated",
+            "Black Imp Defeated",
+            "City Guard Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 59": {
+        "connects_to": [
+            "Scenario 60",
+            "Cave Bear Defeated",
+            "Forest Imp Defeated",
+            "Hound Defeated"
+        ],
+        "requires": "|Dagger Forest Map| AND |Forest Imp|"
+    },
+    "Scenario 60": {
+        "connects_to": [
+            "Ooze Defeated",
+            "Giant Viper Defeated",
+            "Hound Defeated",
+            "Rending Drake Defeated",
+            "Spitting Drake Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 61": {
+        "connects_to": [
+            "Scenario 62",
+            "Ooze Defeated",
+            "Giant Viper Defeated",
+            "Frost Demon Defeated",
+            "Flame Demon Defeated"
+        ],
+        "requires": "|Lingering Swamp Map|"
+    },
+    "Scenario 62": {
+        "connects_to": [
+            "Living Bones Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|Lingering Swamp Map|"
+    },
+    "Scenario 63": {
+        "connects_to": [
+            "Vermling Scout Defeated",
+            "Inox Guard Defeated",
+            "Inox Archer Defeated",
+            "Flame Demon Defeated"
+        ],
+        "requires": "|Watcher Mountains Map|"
+    },
+    "Scenario 64": {
+        "connects_to": [
+            "Ooze Defeated",
+            "Forest Imp Defeated",
+            "Rending Drake Defeated"
+        ],
+        "requires": "|Misty Sea Chart| AND |Water-Breathing|"
+    },
+    "Scenario 65": {
+        "connects_to": [
+            "Vermling Scout Defeated",
+            "Hound Defeated",
+            "Inox Shaman Defeated"
+        ],
+        "requires": "|Watcher Mountains Map|"
+    },
+    "Scenario 66": {
+        "connects_to": [
+            "Ooze Defeated",
+            "Ancient Artillery Defeated",
+            "Living Spirit Defeated",
+            "Stone Golem Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Scenario 67": {
+        "connects_to": [
+            "Forest Imp Defeated",
+            "Cave Bear Defeated",
+            "Stone Golem Defeated"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "Scenario 68": {
+        "connects_to": [
+            "Rending Drake Defeated",
+            "Black Imp Defeated",
+            "Giant Viper Defeated",
+            "Living Corpse Defeated"
+        ],
+        "requires": "|Lingering Swamp Map|"
+    },
+    "Scenario 69": {
+        "connects_to": [
+            "Vermling Scout Defeated",
+            "Vermling Shaman Defeated",
+            "Forest Imp Defeated",
+            "Stone Golem Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "Scenario 70": {
+        "connects_to": [
+            "Night Demon Defeated",
+            "Wind Demon Defeated"
+        ],
+        "requires": "|Misty Sea Chart|"
+    },
+    "Scenario 71": {
+        "connects_to": [
+            "Spitting Drake Defeated",
+            "Wind Demon Defeated",
+            "Sun Demon Defeated"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "Scenario 72": {
+        "connects_to": [
+            "Scenario 73",
+            "Ooze Defeated",
+            "Forest Imp Defeated",
+            "Giant Viper Defeated"
+        ],
+        "requires": "|Corpsewood Map| AND |@Region Unlocks:4|"
+    },
+    "Scenario 73": {
+        "connects_to": [
+            "Scenario 77",
+            "Hound Defeated",
+            "Inox Archer Defeated",
+            "Ancient Artillery Defeated",
+            "Inox Guard Defeated",
+            "Inox Shaman Defeated"
+        ],
+        "requires": "|Watcher Mountains Map| AND |@Region Unlocks:6|"
+    },
+    "Scenario 74": {
+        "connects_to": [
+            "Bandit Guard Defeated",
+            "Bandit Archer Defeated",
+            "Lurker Defeated"
+        ],
+        "requires": "|Misty Sea Chart|"
+    },
+    "Scenario 75": {
+        "connects_to": [
+            "Living Bones Defeated",
+            "Living Spirit Defeated",
+            "Living Corpse Defeated"
+        ],
+        "requires": "|Corpsewood Map|"
+    },
+    "Scenario 76": {
+        "connects_to": [
+            "Giant Viper Defeated",
+            "Living Bones Defeated",
+            "Night Demon Defeated",
+            "Harrower Infester Defeated"
+        ],
+        "requires": "|Watcher Mountains Map|"
+    },
+    "Scenario 77": {
+        "connects_to": [
+            "City Guard Defeated",
+            "City Archer Defeated",
+            "Stone Golem Defeated",
+            "Hound Defeated"
+        ],
+        "requires": "|City Adventuring Permit| AND |@Region Unlocks:7|",
+        "map": "gloomhaven"
+    },
+    "Scenario 78": {
+        "connects_to": [
+            "Bandit Guard Defeated",
+            "Bandit Archer Defeated",
+            "Cultist Defeated",
+            "Living Bones Defeated",
+            "Black Imp Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 79": {
+        "connects_to": [
+            "Stone Golem Defeated",
+            "Giant Viper Defeated",
+            "The Betrayer (Boss) Defeated"
+        ],
+        "requires": "|Lingering Swamp Map|"
+    },
+    "Scenario 80": {
+        "connects_to": [
+            "City Guard Defeated",
+            "City Archer Defeated",
+            "Ancient Artillery Defeated",
+            "Hound Defeated"
+        ],
+        "requires": "|Watcher Mountains Map|"
+    },
+    "Scenario 81": {
+        "connects_to": [
+            "Night Demon Defeated",
+            "Sun Demon Defeated",
+            "Stone Golem Defeated",
+            "Ancient Artillery Defeated",
+            "The Colorless (Boss) Defeated"
+        ],
+        "requires": "|Dagger Forest Map|"
+    },
+    "Scenario 82": {
+        "connects_to": [
+            "Earth Demon Defeated",
+            "Flame Demon Defeated",
+            "Stone Golem Defeated"
+        ],
+        "requires": "|Watcher Mountains Map|"
+    },
+    "Scenario 83": {
+        "connects_to": [
+            "Hound Defeated",
+            "Cultist Defeated",
+            "Living Bones Defeated",
+            "Flame Demon Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 84": {
+        "connects_to": [
+            "Flame Demon Defeated",
+            "Frost Demon Defeated",
+            "Earth Demon Defeated"
+        ],
+        "requires": "|Copperneck Mountains Map|"
+    },
+    "Scenario 85": {
+        "connects_to": [
+            "Hound Defeated",
+            "Black Imp Defeated",
+            "Night Demon Defeated",
+            "Sun Demon Defeated"
+        ],
+        "requires": "|Watcher Mountains Map|"
+    },
+    "Scenario 86": {
+        "connects_to": [
+            "Scenario 87",
+            "Cave Bear Defeated",
+            "Vermling Shaman Defeated",
+            "Vermling Scout Defeated",
+            "Lurker Defeated"
+        ],
+        "requires": "|City Adventuring Permit| AND |Brain Class|",
+        "map": "gloomhaven"
+    },
+    "Scenario 87": {
+        "connects_to": [
+            "Lurker Defeated",
+            "Ooze Defeated",
+            "Deep Terror Defeated",
+            "Black Imp Defeated"
+        ],
+        "requires": "|Open Field Map|"
+    },
+    "Scenario 88": {
+        "connects_to": [
+            "Frost Demon Defeated",
+            "Ooze Defeated",
+            "Lurker Defeated"
+        ],
+        "requires": "|Portal Generator|",
+        "map": "gloomhaven"
+    },
+    "Scenario 89": {
+        "connects_to": [
+            "Bandit Archer Defeated",
+            "Bandit Guard Defeated",
+            "Cultist Defeated",
+            "Giant Viper Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 90": {
+        "connects_to": [
+            "Earth Demon Defeated",
+            "Wind Demon Defeated",
+            "Night Demon Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|Portal Generator|"
+    },
+    "Scenario 91": {
+        "connects_to": [
+            "Bandit Guard Defeated",
+            "Bandit Archer Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|Dagger Forest Map|"
+    },
+    "Scenario 92": {
+        "connects_to": [
+            "Bandit Guard Defeated",
+            "Bandit Archer Defeated",
+            "Inox Guard Defeated",
+            "Savvas Lavaflow Defeated",
+            "Flame Demon Defeated",
+            "Earth Demon Defeated"
+        ],
+        "requires": "|City Adventuring Permit|",
+        "map": "gloomhaven"
+    },
+    "Scenario 93": {
+        "connects_to": [
+            "Lurker Defeated",
+            "Frost Demon Defeated",
+            "Living Spirit Defeated"
+        ],
+        "requires": "|Misty Sea Chart|"
+    },
+    "Scenario 94": {
+        "connects_to": [
+            "Scenario 95",
+            "Hound Defeated",
+            "Vermling Scout Defeated",
+            "Vermling Shaman Defeated",
+            "Cave Bear Defeated"
+        ],
+        "requires": "|Corpsewood Map|"
+    },
+    "Scenario 95": {
+        "connects_to": [
+            "Deep Terror Defeated",
+            "Flame Demon Defeated",
+            "Earth Demon Defeated",
+            "Savvas Lavaflow Defeated"
+        ],
+        "requires": "|Corpsewood Map|"
+    },
+    "JotL Scenario 1": {
+        "connects_to": [
+            "JotL Scenario 2"
+        ],
+        "requires": "|City Adventuring Permit| AND {OptAll(|@JotL Classes:2|)}",
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 2": {
+        "connects_to": [
+            "JotL Scenario 3"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 3": {
+        "connects_to": [
+            "JotL Scenario 4"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 4": {
+        "connects_to": [
+            "JotL Scenario 5"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 5": {
+        "connects_to": [
+            "JotL Scenario 6"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 6": {
+        "connects_to": [
+            "JotL Scenario 7",
+            "JotL Scenario 8"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 7": {
+        "connects_to": [
+            "JotL Scenario 9"
+        ],
+        "requires": "{OptAll(|@JotL Classes:3|)}",
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 8": {
+        "connects_to": [
+            "JotL Scenario 9"
+        ],
+        "requires": "{OptAll(|@JotL Classes:3|)}",
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 9": {
+        "connects_to": [
+            "JotL Scenario 10"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 10": {
+        "connects_to": [
+            "JotL Scenario 11",
+            "JotL Scenario 12"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 11": {
+        "connects_to": [
+            "JotL Scenario 13",
+            "JotL Scenario 19"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 12": {
+        "connects_to": [
+            "JotL Scenario 14",
+            "JotL Scenario 18"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 13": {
+        "connects_to": [
+            "JotL Scenario 15"
+        ],
+        "requires": "{OptAll(|@JotL Classes:4|)}",
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 14": {
+        "connects_to": [
+            "JotL Scenario 15"
+        ],
+        "requires": "{OptAll(|@JotL Classes:4|)}",
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 15": {
+        "connects_to": [
+            "JotL Scenario 16"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 16": {
+        "connects_to": [
+            "JotL Scenario 17"
+        ],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 17": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 18": {
+        "connects_to": [],
+        "requires": "{OptAll(|@JotL Classes:4|)}",
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 19": {
+        "connects_to": [],
+        "requires": "{OptAll(|@JotL Classes:4|)}",
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 20": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 21": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 22": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 23": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 24": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "JotL Scenario 25": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "Horns Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Kunai Solo Scenario": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "Vortex Solo Scenario": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "Gear Solo Scenario": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "Shards Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Brain Solo Scenario": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "Angry Face Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Circles Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Cthulhu Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Eclipse Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Lightning Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Music Note Solo Scenario": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "Saw Solo Scenario": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "Sun Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Three Spears Solo Scenario": {
+        "connects_to": [],
+        "requires": [],
+        "map": "gloomhaven"
+    },
+    "Triangles Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Two Minis Solo Scenario": {
+        "connects_to": [],
+        "requires": []
+    },
+    "Ancient Artillery Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Bandit Archer Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Bandit Commander (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Bandit Guard Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Black Imp Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Captain of the Guard A (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Captain of the Guard B (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Cave Bear Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "City Archer Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "City Guard Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Cultist Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Dark Rider (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Deep Terror Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Earth Demon Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Elder Drake (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Flame Demon Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Forest Imp Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Frost Demon Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Giant Viper Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Harrower Infester Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Hound Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Inox Archer Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Inox Bodyguard (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Inox Guard Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Inox Shaman Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Jekserah A (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Jekserah B (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Living Bones Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Living Corpse Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Living Spirit Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Lurker Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Merciless Overseer (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Night Demon Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Ooze Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Prime Demon A (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Prime Demon B (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Rending Drake Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Savvas Icestorm Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Savvas Lavaflow Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Spitting Drake Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Stone Golem Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Sun Demon Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "The Betrayer (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "The Colorless (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "The Gloom (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "The Sightless Eye (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Vermling Scout Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Vermling Shaman Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Wind Demon Defeated": {
+        "requires": [],
+        "connects_to": []
+    },
+    "Winged Horror (Boss) Defeated": {
+        "requires": [],
+        "connects_to": []
+    }
 }
