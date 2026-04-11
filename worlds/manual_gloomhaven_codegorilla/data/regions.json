@@ -1067,7 +1067,7 @@
         "connects_to": [
             "JotL Scenario 2"
         ],
-        "requires": "|City Adventuring Permit| AND {OptAll(|@JotL Classes:2|)}",
+        "requires": "|City Adventuring Permit| AND (|@JotL Classes:2| OR {YamlDisabled(jaws_dlc_enabled)})",
         "map": "gloomhaven"
     },
     "JotL Scenario 2": {
@@ -1110,14 +1110,14 @@
         "connects_to": [
             "JotL Scenario 9"
         ],
-        "requires": "{OptAll(|@JotL Classes:3|)}",
+        "requires": "(|@JotL Classes:3| OR {YamlDisabled(jaws_dlc_enabled)})",
         "map": "gloomhaven"
     },
     "JotL Scenario 8": {
         "connects_to": [
             "JotL Scenario 9"
         ],
-        "requires": "{OptAll(|@JotL Classes:3|)}",
+        "requires": "(|@JotL Classes:3| OR {YamlDisabled(jaws_dlc_enabled)})",
         "map": "gloomhaven"
     },
     "JotL Scenario 9": {
@@ -1155,14 +1155,14 @@
         "connects_to": [
             "JotL Scenario 15"
         ],
-        "requires": "{OptAll(|@JotL Classes:4|)}",
+        "requires": "(|@JotL Classes:4| OR {YamlDisabled(jaws_dlc_enabled)})",
         "map": "gloomhaven"
     },
     "JotL Scenario 14": {
         "connects_to": [
             "JotL Scenario 15"
         ],
-        "requires": "{OptAll(|@JotL Classes:4|)}",
+        "requires": "(|@JotL Classes:4| OR {YamlDisabled(jaws_dlc_enabled)})",
         "map": "gloomhaven"
     },
     "JotL Scenario 15": {
@@ -1186,12 +1186,12 @@
     },
     "JotL Scenario 18": {
         "connects_to": [],
-        "requires": "{OptAll(|@JotL Classes:4|)}",
+        "requires": "(|@JotL Classes:4| OR {YamlDisabled(jaws_dlc_enabled)})",
         "map": "gloomhaven"
     },
     "JotL Scenario 19": {
         "connects_to": [],
-        "requires": "{OptAll(|@JotL Classes:4|)}",
+        "requires": "(|@JotL Classes:4| OR {YamlDisabled(jaws_dlc_enabled)})",
         "map": "gloomhaven"
     },
     "JotL Scenario 20": {
