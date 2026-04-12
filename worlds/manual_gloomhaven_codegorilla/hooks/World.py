@@ -102,15 +102,19 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
         all_classes = all_classes + jotl_classes
 
     world.random.shuffle(all_classes)
-    starting_class_count = get_option_value(multiworld, player, "Starting Character Count")
+    starting_class_count = get_option_value(multiworld, player, "starting_character_count")
     starting_classes = all_classes[0:starting_class_count]
 
+    items_to_remove: list[Item] = []
     for item in item_pool:
         if not is_option_enabled(multiworld, player, "solo_dlc_enabled") and item.name in solo_progression_only_classes:
             item.classification = ItemClassification.useful
         if item.name in starting_classes:
             multiworld.push_precollected(item)
-            item_pool.remove(item)
+            items_to_remove.append(item)
+
+    for item in items_to_remove:
+        item_pool.remove(item)
 
     return item_pool
 
