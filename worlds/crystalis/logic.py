@@ -3,9 +3,11 @@ import logging
 from BaseClasses import MultiWorld, CollectionState, Entrance, Region
 from .options import CrystalisOptions
 from .types import CrystalisShuffleData
-from typing import Callable, List, Optional
+from typing import Callable, List, Optional, TYPE_CHECKING
 from worlds.generic.Rules import set_rule, add_rule
 
+if TYPE_CHECKING:
+    from . import CrystalisWorld
 
 def has_level_1_sword(state: CollectionState, player: int, element: str) -> bool:
     return state.has("Sword of " + element, player)
@@ -43,36 +45,36 @@ def set_two_way_logic(forward_entrance: Entrance) -> None:
     logging.warning(f"Could not find reverse entrance for {forward_entrance.name}")
 
 
-def get_tetrarch_fight_logic(player: int, element: str, options: CrystalisOptions, level: Optional[int] = None) -> \
+def get_tetrarch_fight_logic(self: "CrystalisWorld", element: str, level: Optional[int] = None) -> \
         Callable[[CollectionState], bool]:
     element_logic: Callable[[CollectionState], bool]
-    if options.tink_mode:
-        element_logic = lambda state: state.has_group("Sword", player, 1)
+    if self.options.tink_mode:
+        element_logic = lambda state: state.has_group("Sword", self.player, 1)
     else:
-        element_logic = lambda state: state.has("Sword of " + element, player)
+        element_logic = lambda state: state.has("Sword of " + element, self.player)
     battle_magic_logic: Callable[[CollectionState], bool]
-    if not options.battle_magic_not_guaranteed:
-        if options.sword_charge_glitch == options.sword_charge_glitch.option_in_logic or options.tink_mode:
+    if not self.options.battle_magic_not_guaranteed:
+        if self.options.sword_charge_glitch == self.options.sword_charge_glitch.option_in_logic or self.options.tink_mode:
             if level is not None and level == 2:
-                battle_magic_logic = lambda state: has_any_level_2_sword(state, player)
+                battle_magic_logic = lambda state: has_any_level_2_sword(state, self.player) or state.has(self.glitches_item_name, self.player)
             else:
-                battle_magic_logic = lambda state: has_any_level_3_sword(state, player)
+                battle_magic_logic = lambda state: has_any_level_3_sword(state, self.player) or state.has(self.glitches_item_name, self.player)
         else:
             if level is not None and level == 2:
-                battle_magic_logic = lambda state: has_level_2_sword(state, player, element)
+                battle_magic_logic = lambda state: has_level_2_sword(state, self.player, element) or state.has(self.glitches_item_name, self.player)
             else:
-                battle_magic_logic = lambda state: has_level_3_sword(state, player, element)
+                battle_magic_logic = lambda state: has_level_3_sword(state, self.player, element) or state.has(self.glitches_item_name, self.player)
     else:
         battle_magic_logic = lambda state: True
     refresh_logic: Callable[[CollectionState], bool]
-    if options.guarantee_refresh:
-        refresh_logic = lambda state: state.has("Refresh", player)
+    if self.options.guarantee_refresh:
+        refresh_logic = lambda state: state.has("Refresh", self.player) or state.has(self.glitches_item_name, self.player)
     else:
         refresh_logic = lambda state: True
     return lambda state: element_logic(state) and battle_magic_logic(state) and refresh_logic(state)
 
 
-def set_rules(self) -> None:
+def set_rules(self: "CrystalisWorld") -> None:
     options: CrystalisOptions = self.options
     player: int = self.player
     shuffle_data: CrystalisShuffleData = self.shuffle_data
@@ -84,6 +86,11 @@ def set_rules(self) -> None:
         if options.sword_charge_glitch == options.sword_charge_glitch.option_in_logic:
             can_break_wall = lambda state, plyr, elem: has_any_level_2_sword(state, plyr) and \
                                                        state.has("Sword of " + elem, plyr)
+        elif options.sword_charge_glitch == options.sword_charge_glitch.option_out_of_logic:
+            can_break_wall = lambda state, plyr, elem: ((has_any_level_2_sword(state, plyr) and
+                                                        state.has("Sword of " + elem, plyr) and
+                                                        state.has(self.glitches_item_name, self.player)) or
+                                                        has_level_2_sword(state, plyr, elem))
         else:
             can_break_wall = has_level_2_sword
 
@@ -160,13 +167,28 @@ def set_rules(self) -> None:
     cordel_river.access_rule = can_cross_rivers
     set_two_way_logic(cordel_river)
     if not options.trigger_skip == options.trigger_skip.option_in_logic:
+        # need teleport to get to the Sabre North entrance if trigger skip is out of logic
         cordel_ne_ow = self.get_entrance("Cordel Plains - North East")
         set_rule(cordel_ne_ow, lambda state: state.has("Teleport", player))
         if options.mt_sabre_skip == options.mt_sabre_skip.option_in_logic:
+            # can alternatively fly over the river if sabre north skip is enabled
             add_rule(cordel_ne_ow, lambda state: state.has("Flight", player), "or")
+        elif options.mt_sabre_skip == options.mt_sabre_skip.option_out_of_logic:
+            add_rule(cordel_ne_ow, lambda state: state.has("Flight", player) and
+                                                 state.has(self.glitches_item_name, player), "or")
+
+        aryllis_house_ent = self.get_entrance("Amazones - Aryllis's House")
         if not options.statue_glitch == options.statue_glitch.option_in_logic:
-            aryllis_house_ent = self.get_entrance("Amazones - Aryllis's House")
+            # need Change or Paralysis to get past the guard if statue glitch is out of logic
             set_rule(aryllis_house_ent, lambda state: state.has("Change", player) or state.has("Paralysis", player))
+            if options.statue_glitch == options.statue_glitch.option_out_of_logic:
+                add_rule(aryllis_house_ent, lambda state: state.has(self.glitches_item_name, player), "or")
+
+        # glitch logic in case trigger skip is out of logic but not disabled
+        if options.trigger_skip == options.trigger_skip.option_out_of_logic:
+            add_rule(cordel_ne_ow, lambda state: state.has(self.glitches_item_name, player), "or")
+            add_rule(aryllis_house_ent, lambda state: state.has(self.glitches_item_name, player), "or")
+
     akahana_trade_loc = self.get_location("Akahana Statue of Onyx Tradein")
     akahana_trade_item = shuffle_data.trade_in_map["Akahana"]
     set_rule(akahana_trade_loc, lambda state: state.has(akahana_trade_item, player))
@@ -191,6 +213,8 @@ def set_rules(self) -> None:
         sabre_w_small_slope = self.get_entrance("Mt. Sabre West - Main -> Mt. Sabre West - Tornado Cave")
         set_rule(sabre_w_small_slope, lambda state: state.has("Flight", player) or state.has("Rabbit Boots", player) or
                                                     state.has("Speed Boots", player))
+        if options.trigger_skip == options.trigger_skip.option_out_of_logic:
+            add_rule(sabre_w_small_slope, lambda state: state.has(self.glitches_item_name, player), "or")
     sabre_w_big_slope = self.get_entrance("Mt. Sabre West - Main -> Mt. Sabre West - Upper")
     set_rule(sabre_w_big_slope, lambda state: state.has("Flight", player))
     sabre_w_right_wall_1 = self.get_entrance("Mt. Sabre West - Main -> Mt. Sabre West - Interior")
@@ -216,6 +240,11 @@ def set_rules(self) -> None:
         add_rule(swamp_pass_1, lambda state: state.has("Buy Healing", player) or
                                              (state.has("Refresh", player) and state.has_group("Sword", player, 1)),
                  "or")
+    else:
+        add_rule(swamp_pass_1, lambda state: (state.has("Buy Healing", player) or
+                                             (state.has("Refresh", player) and state.has_group("Sword", player, 1))) and
+                                              state.has(self.glitches_item_name, player),
+                 "or")
     swamp_pass_2 = self.get_entrance("Swamp - Far Side -> Swamp - Interior")
     swamp_pass_2.access_rule = swamp_pass_1.access_rule
     set_two_way_logic(swamp_pass_1)
@@ -226,6 +255,8 @@ def set_rules(self) -> None:
         oak_item_shop_ent = self.get_entrance("Oak - Item Shop")
         set_rule(oak_item_shop_ent, lambda state: state.has("Telepathy", player) and oak_mom_house.can_reach(state) and
                                                   swamp_interior.can_reach(state))
+        if options.statue_glitch == options.statue_glitch.option_out_of_logic:
+            add_rule(oak_item_shop_ent, lambda state: state.has(self.glitches_item_name, player), "or")
         oak_inn_ent = self.get_entrance("Oak - Inn")
         oak_inn_ent.access_rule = oak_item_shop_ent.access_rule
         multiworld.register_indirect_condition(oak_mom_house, oak_item_shop_ent)
@@ -265,6 +296,9 @@ def set_rules(self) -> None:
         set_rule(rabbit_trigger, lambda state: state.has("Telepathy", player) and zebu_front.can_reach(state) and
                                                zebu_back.can_reach(state) and leaf_elder.can_reach(state) and
                                                zebu_student.can_reach(state) and rabbit_shed.can_reach(state))
+        if options.mt_sabre_skip == options.mt_sabre_skip.option_out_of_logic or \
+            options.trigger_skip == options.trigger_skip.option_out_of_logic:
+            add_rule(rabbit_trigger, lambda state: state.has(self.glitches_item_name, player), "or")
         multiworld.register_indirect_condition(zebu_front, rabbit_trigger)
         multiworld.register_indirect_condition(zebu_back, rabbit_trigger)
         multiworld.register_indirect_condition(leaf_elder, rabbit_trigger)
@@ -282,6 +316,9 @@ def set_rules(self) -> None:
                                                   or state.has("Speed Boots", player))
         sabre_n_up_to_boss = self.get_entrance("Mt. Sabre North - Upper -> Mt. Sabre North - Pre-Boss")
         set_rule(sabre_n_up_to_boss, lambda state: state.has("Flight", player))
+        if options.trigger_skip == options.trigger_skip.option_out_of_logic:
+            add_rule(sabre_n_up_to_int, lambda state: state.has(self.glitches_item_name, player), "or")
+            add_rule(sabre_n_up_to_boss, lambda state: state.has(self.glitches_item_name, player), "or")
     sabre_n_left_jail_door = self.get_entrance("Mt. Sabre North - Upper -> Mt. Sabre North - Left Jail Cell")
     sabre_n_left_jail_door.access_rule = can_break_sabre_north_wall
     set_two_way_logic(sabre_n_left_jail_door)
@@ -294,7 +331,7 @@ def set_rules(self) -> None:
     sabre_n_right_jail_back = self.get_entrance("Mt. Sabre North - Right Jail Cell -> Mt. Sabre North - Pre-Boss")
     sabre_n_right_jail_back.access_rule = can_break_sabre_north_wall
 
-    kelbesque_1_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Kelbesque 1"], options)
+    kelbesque_1_logic = self.get_tetrarch_fight_logic(shuffle_data.boss_reqs["Kelbesque 1"])
     sabre_n_boss = self.get_entrance("Mt. Sabre North - Pre-Boss -> Mt. Sabre North - Boss Arena")
     sabre_n_boss.access_rule = kelbesque_1_logic
     sabre_n_gate = self.get_entrance("Mt. Sabre North - Boss Arena -> Mt. Sabre North - Elder's Cell")
@@ -327,6 +364,8 @@ def set_rules(self) -> None:
     if options.trigger_skip != options.trigger_skip.option_in_logic:
         waterfall_slope = self.get_entrance("Waterfall Valley - Main -> Waterfall Valley - By Prison")
         set_rule(waterfall_slope, lambda state: state.has("Flight", player))
+        if options.trigger_skip == options.trigger_skip.option_out_of_logic:
+            add_rule(waterfall_slope, lambda state: state.has(self.glitches_item_name, player), "or")
     waterfall_n_river = self.get_entrance("Waterfall Valley - Main -> Waterfall Valley - By North River")
     waterfall_n_river.access_rule = can_cross_rivers
     set_two_way_logic(waterfall_n_river)
@@ -344,6 +383,8 @@ def set_rules(self) -> None:
     if options.statue_glitch != options.statue_glitch.option_in_logic:
         statue_guards = self.get_entrance("Waterfall Cave - Before Statues -> Waterfall Cave - After Statues")
         set_rule(statue_guards, lambda state: state.has(shuffle_data.key_item_names["Flute of Lime"], player))
+        if options.statue_glitch == options.statue_glitch.option_out_of_logic:
+            add_rule(statue_guards, lambda state: state.has(self.glitches_item_name, player), "or")
     water_cave_back_wall = self.get_entrance("Waterfall Cave - After Statues -> Waterfall Cave - Back")
     water_cave_back_wall.access_rule = can_break_waterfall_cave_walls
     set_two_way_logic(water_cave_back_wall)
@@ -382,6 +423,8 @@ def set_rules(self) -> None:
     rage_river.access_rule = can_cross_rivers
     if options.rage_skip != options.rage_skip.option_in_logic:
         add_rule(rage_river, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player), "and")
+        if options.rage_skip == options.rage_skip.option_out_of_logic:
+            add_rule(rage_river, lambda state: state.has(self.glitches_item_name, player), "or")
     # need the reverse entrance because you only get the free push across if you don't have Rage's sword
     rage_river_reverse = self.get_entrance("Rage - North -> Rage - South")
     rage_river_reverse.access_rule = can_cross_rivers
@@ -406,6 +449,10 @@ def set_rules(self) -> None:
                                             teller_back.can_reach(state) or
                                             state.has("Mesia's Message", player))
         set_rule(second_guard, lambda state: state.has("Paralysis", player) or state.has("Mesia's Message", player))
+        if options.trigger_skip == options.trigger_skip.option_out_of_logic or \
+           options.statue_glitch == options.statue_glitch.option_out_of_logic:
+            add_rule(first_guard, lambda state: state.has(self.glitches_item_name, player), "or")
+            add_rule(second_guard, lambda state: state.has(self.glitches_item_name, player), "or")
         multiworld.register_indirect_condition(teller_front, first_guard)
         multiworld.register_indirect_condition(teller_back, first_guard)
 
@@ -457,11 +504,17 @@ def set_rules(self) -> None:
     if options.trigger_skip != options.trigger_skip.option_in_logic:
         flooded_cave = self.get_entrance("Angry Sea - South Water -> Angry Sea - Flooded Cave Water")
         set_rule(flooded_cave, lambda state: state.has("Active Shell Flute", player))
+        if options.trigger_skip == options.trigger_skip.option_out_of_logic:
+            add_rule(flooded_cave, lambda state: state.has(self.glitches_item_name, player), "or")
     seafalls = self.get_entrance("Angry Sea - South Water -> Angry Sea - North Water")
     set_rule(seafalls, lambda state: state.has(shuffle_data.key_item_names["Statue of Gold"], player) or
                                      state.has("Flight", player))
     if options.fake_flight == options.fake_flight.option_in_logic:
         add_rule(seafalls, lambda state: state.has("Rabbit Boots", player), "or")
+    else:
+        # fake flight can't be patched out, so it's always possible out of logic
+        add_rule(seafalls, lambda state: state.has("Rabbit Boots", player) and
+                                         state.has(self.glitches_item_name, player), "or")
     whirlpool_location = self.get_location("Behind Whirlpool")
     set_rule(whirlpool_location, lambda state: state.has(shuffle_data.key_item_names["Statue of Gold"], player))
     # I guess Glowing Lamp + Broken Statue should go here
@@ -502,7 +555,11 @@ def set_rules(self) -> None:
                                        (state.has_group("Sword", player, 1) and
                                         state.has_any(["Refresh", "Buy Healing"], player))
     else:
-        can_cross_pain = lambda state: state.has_any(["Flight", "Hazmat Suit", "Rabbit Boots", "Leather Boots"], player)
+        can_cross_pain = lambda state: state.has_any(["Flight", "Hazmat Suit", "Rabbit Boots",
+                                                      "Leather Boots"], player) or \
+                                       (state.has_group("Sword", player, 1) and
+                                        state.has_any(["Refresh", "Buy Healing"], player) and
+                                        state.has(self.glitches_item_name, player))
     vamp_2_fight = self.get_entrance("Sabera's Fortress - Front -> Sabera's Fortress - Upstairs")
     vamp_2_reward = self.get_location("Vampire 2")
     vamp_2_weapons: List[str]
@@ -516,7 +573,7 @@ def set_rules(self) -> None:
     sabera_spike_chest = self.get_location("Sabera Upstairs Right Chest")
     sabera_spike_chest.access_rule = can_cross_pain
     sabera_1_fight = self.get_entrance("Sabera's Fortress - Upstairs -> Sabera's Fortress - Post-Boss")
-    sabera_1_fight.access_rule = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Sabera 1"], options)
+    sabera_1_fight.access_rule = self.get_tetrarch_fight_logic(shuffle_data.boss_reqs["Sabera 1"])
     sabera_1_post_boss = self.get_region("Sabera's Fortress - Post-Boss")
     clark = self.get_location("Clark")
     clark.access_rule = sabera_1_post_boss.can_reach
@@ -547,6 +604,11 @@ def set_rules(self) -> None:
                                                 (state.has("Sword of Thunder", player) and
                                                  shyron_temple.can_reach(state) and
                                                  massacre_trigger.can_reach(state)))
+        multiworld.register_indirect_condition(shyron_temple, hydra_guardpost)
+        multiworld.register_indirect_condition(massacre_trigger, hydra_guardpost)
+        if options.statue_glitch == options.statue_glitch.option_out_of_logic:
+            add_rule(hydra_guardpost, lambda state: state.has(self.glitches_item_name, player), "or")
+
     hydra_upper_river = self.get_entrance("Mt. Hydra - Lower -> Mt. Hydra - Upper")
     hydra_upper_river.access_rule = can_cross_rivers
     set_two_way_logic(hydra_upper_river)
@@ -565,7 +627,7 @@ def set_rules(self) -> None:
 
     # Shyron
     mado_1_fight = self.get_entrance("Shyron Temple -> Shyron Temple - Post-Boss")
-    mado_1_fight_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Mado 1"], options)
+    mado_1_fight_logic = self.get_tetrarch_fight_logic(shuffle_data.boss_reqs["Mado 1"])
     set_rule(mado_1_fight, lambda state: state.has("Sword of Thunder", player) and
                                          massacre_trigger.can_reach(state) and
                                          mado_1_fight_logic(state))
@@ -581,10 +643,19 @@ def set_rules(self) -> None:
                                                    state.has("Buy Healing", player) or
                                                    state.has("Refresh", player)))
     else:
-        can_cross_shooters_south = barrier_logic
-    can_cross_shooters_north = can_cross_shooters_south
+        can_cross_shooters_south = lambda state: barrier_logic(state) or \
+                                                 (state.has_group("Sword", player, 1) and
+                                                  (state.has("Shield Ring", player) or
+                                                   state.has("Buy Healing", player) or
+                                                   state.has("Refresh", player)) and
+                                                  state.has(self.glitches_item_name, player))
+    can_cross_shooters_north: Callable[[CollectionState], bool] = can_cross_shooters_south
     if options.statue_gauntlet_skip == options.statue_gauntlet_skip.option_in_logic:
         can_cross_shooters_north = lambda state: state.has("Flight", player) or can_cross_shooters_south(state)
+    elif options.statue_gauntlet_skip == options.statue_gauntlet_skip.option_out_of_logic:
+        can_cross_shooters_north = lambda state: ((state.has("Flight", player) and
+                                                  state.has(self.glitches_item_name, player)) or
+                                                  can_cross_shooters_south(state))
     stxy_gauntlet = self.get_entrance("Stxy - Front -> Stxy - Downstairs")
     stxy_gauntlet.access_rule = can_cross_shooters_north
     stxy_reverse = self.get_entrance("Stxy - Downstairs -> Stxy - Front")
@@ -604,6 +675,9 @@ def set_rules(self) -> None:
         goa_item_ent = self.get_entrance("Goa - Item Shop")
         goa_inn_ent.access_rule = shyron_region.can_reach
         goa_item_ent.access_rule = shyron_region.can_reach
+        if options.statue_glitch == options.statue_glitch.option_out_of_logic:
+            add_rule(goa_inn_ent, lambda state: state.has(self.glitches_item_name, player), "or")
+            add_rule(goa_item_ent, lambda state: state.has(self.glitches_item_name, player), "or")
         multiworld.register_indirect_condition(shyron_region, goa_inn_ent)
         multiworld.register_indirect_condition(shyron_region, goa_item_ent)
     brokahana = self.get_location("Brokahana")
@@ -621,7 +695,7 @@ def set_rules(self) -> None:
     set_two_way_logic(goa_entrance_wall)
 
     # Goa Fortress - Kelbesque's Floor
-    kelbesque_2_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Kelbesque 2"], options)
+    kelbesque_2_logic = self.get_tetrarch_fight_logic(shuffle_data.boss_reqs["Kelbesque 2"])
     kelbesque_2_forward = self.get_entrance("Kelbesque's Floor - Front -> Kelbesque's Floor - Boss Arena")
     kelbesque_2_forward.access_rule = kelbesque_2_logic
     kelbesque_2_backward = self.get_entrance("Kelbesque's Floor - Back -> Kelbesque's Floor - Boss Arena")
@@ -637,7 +711,7 @@ def set_rules(self) -> None:
     set_rule(sabera_boss_wall, lambda state: can_break_wall(state, player,
                                                             shuffle_data.wall_map["Goa Fortress - Sabera Boss"]))
     set_two_way_logic(sabera_boss_wall)
-    sabera_2_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Sabera 2"], options)
+    sabera_2_logic = self.get_tetrarch_fight_logic(shuffle_data.boss_reqs["Sabera 2"])
     sabera_2_forward = self.get_entrance("Sabera's Floor - Pre-Boss -> Sabera's Floor - Boss Arena")
     sabera_2_forward.access_rule = sabera_2_logic
     sabera_2_backward = self.get_entrance("Sabera's Floor - Back -> Sabera's Floor - Boss Arena")
@@ -653,7 +727,7 @@ def set_rules(self) -> None:
     mado_left.access_rule = can_cross_pain
     mado_right = self.get_entrance("Mado's Floor - Front -> Mado's Floor - Upstairs Right")
     mado_right.access_rule = can_cross_pain
-    mado_2_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Mado 2"], options)
+    mado_2_logic = self.get_tetrarch_fight_logic(shuffle_data.boss_reqs["Mado 2"])
     mado_2_forward = self.get_entrance("Mado's Floor - Upstairs Right -> Mado's Floor - Boss Arena")
     mado_2_forward.access_rule = mado_2_logic
     mado_2_backward = self.get_entrance("Mado's Floor - Back -> Mado's Floor - Boss Arena")
@@ -672,7 +746,7 @@ def set_rules(self) -> None:
     set_two_way_logic(karmine_boss_door)
     karmine_gauntlet = self.get_entrance("Karmine's Floor - Pre-Boss Gauntlet -> Karmine's Floor - Boss Arena")
     karmine_gauntlet.access_rule = can_cross_shooters_north
-    karmine_logic = get_tetrarch_fight_logic(player, shuffle_data.boss_reqs["Karmine"], options, level=2)
+    karmine_logic = self.get_tetrarch_fight_logic(shuffle_data.boss_reqs["Karmine"], level=2)
     karmine_fight = self.get_entrance("Karmine's Floor - Boss Arena -> Karmine's Floor - Post-Boss")
     karmine_fight.access_rule = karmine_logic
     slime_kensu = self.get_location("Slimed Kensu")
@@ -713,9 +787,12 @@ def set_rules(self) -> None:
     if options.battle_magic_not_guaranteed:
         set_rule(draygon_1_fight, lambda state: state.has_group("Sword", player, 1))
     else:
-        set_rule(draygon_1_fight, lambda state: has_any_level_2_sword(state, player))
+        set_rule(draygon_1_fight, lambda state: has_any_level_2_sword(state, player) or
+                                                (state.has_group("Sword", player, 1) and
+                                                 state.has(self.glitches_item_name, player)))
     if options.guarantee_refresh:
-        add_rule(draygon_1_fight, lambda state: state.has("Refresh", player), "and")
+        add_rule(draygon_1_fight, lambda state: state.has("Refresh", player) or
+                                                state.has(self.glitches_item_name, player), "and")
 
     # Bow Passage/Crypt
     bow_statues = self.get_entrance("Bow Passage - Front -> Bow Passage - Back")
@@ -739,11 +816,14 @@ def set_rules(self) -> None:
     if options.battle_magic_not_guaranteed:
         set_rule(draygon_2_fight, lambda state: state.has_group("Sword", player, 1))
     else:
-        set_rule(draygon_2_fight, lambda state: has_any_level_3_sword(state, player))
+        set_rule(draygon_2_fight, lambda state: has_any_level_3_sword(state, player) or
+                                                (state.has_group("Sword", player, 1) and
+                                                 state.has(self.glitches_item_name, player)))
     if not options.no_bow_mode:
         add_rule(draygon_2_fight, lambda state: state.has(shuffle_data.key_item_names["Bow of Truth"], player), "and")
     if options.guarantee_refresh:
-        add_rule(draygon_2_fight, lambda state: state.has("Refresh", player), "and")
+        add_rule(draygon_2_fight, lambda state: state.has("Refresh", player) or
+                                                state.has(self.glitches_item_name, player), "and")
     if options.story_mode:
         spawn_reqs: List[str] = ["Sword of Wind", "Sword of Fire", "Sword of Water", "Sword of Thunder",
                                  "Kelbesque 1 Defeated", "Sabera 1 Defeated", "Mado 1 Defeated",

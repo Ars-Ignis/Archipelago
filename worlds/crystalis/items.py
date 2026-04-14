@@ -1,11 +1,14 @@
 import orjson
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 import pkgutil
 from BaseClasses import Item, LocationProgressType
 from .constants import *
 from .types import CrystalisItemData, convert_enum_to_item_classification, CrystalisItemCategoryEnum, \
     CrystalisLocation
 from Fill import fast_fill
+
+if TYPE_CHECKING:
+    from . import CrystalisWorld
 
 
 basic_key_names: List[str] = []
@@ -145,7 +148,10 @@ def unidentify_items(self: "CrystalisWorld") -> Dict[str, str]:
     return dict(zip(all_key_items, all_choices)) | key_item_map
 
 
-def create_item(self, name: str) -> "Item":
+def create_item(self: "CrystalisWorld", name: str) -> "Item":
+    if name == self.glitches_item_name:
+        return CrystalisItem(name, convert_enum_to_item_classification(CrystalisItemCategoryEnum.PROGRESSION),
+                             None, self.player)
     item_data: CrystalisItemData = items_data[name]
     actual_category: CrystalisItemCategoryEnum = item_data.category
     if actual_category == CrystalisItemCategoryEnum.CONDITIONAL:

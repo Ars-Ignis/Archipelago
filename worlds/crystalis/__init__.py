@@ -3,14 +3,14 @@ from dataclasses import asdict
 
 from BaseClasses import Tutorial, MultiWorld, Entrance
 from Options import OptionError
-from Utils import VersionException, tuplize_version
+from Utils import VersionException
 from .constants import *
 from .types import *
 from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
 from .regions import regions_data, create_regions, shuffle_goa, connect_entrances, entrances_data, \
     reconnect_found_entrances
 from .options import CrystalisOptions, crystalis_option_groups
-from .logic import set_rules
+from .logic import set_rules, get_tetrarch_fight_logic
 from .output import generate_output, write_spoiler_header, extend_hint_information
 from .client import CrystalisClient  # Unused, but required to register with BizHawkClient
 from worlds.AutoWorld import World, WebWorld
@@ -56,10 +56,12 @@ class CrystalisWorld(World):
     connect_entrances = connect_entrances
     write_spoiler_header = write_spoiler_header
     extend_hint_information = extend_hint_information
+    get_tetrarch_fight_logic = get_tetrarch_fight_logic
     web = CrystalisWeb()
     # Universal Tracker specific class variables
     ut_can_gen_without_yaml: bool = True
     reconnect_found_entrances = reconnect_found_entrances
+    glitches_item_name: str = "UT_GLITCHED"
 
     # member variables
     shared_icon_houses: List[Entrance]
