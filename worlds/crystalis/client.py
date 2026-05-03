@@ -55,7 +55,7 @@ class CrystalisClient(BizHawkClient):
                 self.loc_id_to_addr[location.ap_id_offset + CRYSTALIS_BASE_ID] = (byte, bit)
                 if location.name == ASINA_LOCATION_NAME:
                     self.asina_location_id = location.ap_id_offset + CRYSTALIS_BASE_ID
-                elif location.name == WHIRLPOOL_LOCATION_ID:
+                elif location.name == WHIRLPOOL_LOCATION_NAME:
                     self.whirlpool_location_id = location.ap_id_offset + CRYSTALIS_BASE_ID
 
     async def validate_rom(self, ctx: "BizHawkClientContext") -> bool:

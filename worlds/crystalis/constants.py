@@ -411,5 +411,5 @@ MAIN_LOOP_GAME: int = 1
 
 # APWorld Data
 ASINA_LOCATION_NAME: str = "Asina In Back Room"
-WHIRLPOOL_LOCATION_ID: str = "Behind Whirlpool"
+WHIRLPOOL_LOCATION_NAME: str = "Behind Whirlpool"
 ITERATIONS_TO_MATCH: int = 1
