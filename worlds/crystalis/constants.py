@@ -387,20 +387,22 @@ TOWNS: list[str] = [
 ########################################################
 
 # Addresses
-LOCATION_FLAGS_ADDR: int = 0x64A0
-ITEM_FLAGS_ADDR: int = 0x64C0
-RECEIVED_INDEX_ADDR: int = 0x657D
-START_OF_CONSUMABLE_INV_ADDR: int = 0x6440
-END_OF_CONSUMABLE_INV_ADDR: int = 0x6447
-GET_ITEM_FLAG_ADDR: int = 0x657B
 MAIN_LOOP_MODE_ADDR: int = 0x40
 GAME_MODE_ADDR: int = 0x41
 CURRENT_LOCATION_ADDR: int = 0x6C
 HP_ADDR: int = 0x3C1
 SCREEN_LOCK_ADDR: int = 0x07D7
+START_OF_SWORD_INV_ADDR: int = 0x6430
+START_OF_CONSUMABLE_INV_ADDR: int = 0x6440
+END_OF_CONSUMABLE_INV_ADDR: int = 0x6447
+LOCATION_FLAGS_ADDR: int = 0x64A0
+ITEM_FLAGS_ADDR: int = 0x64C0
+GET_ITEM_FLAG_ADDR: int = 0x657A # status byte, item ID byte, metadata byte
+RECEIVED_INDEX_ADDR: int = 0x657D
 AP_ROM_LABEL_ADDR: int = 0x25715
 
 # In-Game Data
+SWORD_OF_THUNDER_ITEM_ID: int = 0x03
 CRYSTALIS_SWORD_ITEM_ID: int = 0x04
 EXPECTED_START: List[bytes] = [bytes([0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9, 0xD9])]
 AP_ROM_LABEL: List[bytes] = [bytes([0x41, 0x52, 0x43, 0x48, 0x49, 0x50, 0x45, 0x4C, 0x41, 0x47, 0x4F])]

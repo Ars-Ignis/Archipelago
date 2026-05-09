@@ -131,7 +131,8 @@ class CrystalisClient(BizHawkClient):
                                                               (GAME_MODE_ADDR, 1, "System Bus"),
                                                               (MAIN_LOOP_MODE_ADDR, 1, "System Bus"),
                                                               (CURRENT_LOCATION_ADDR, 2, "System Bus"),
-                                                              (START_OF_CONSUMABLE_INV_ADDR, 8, "System Bus")])
+                                                              (START_OF_CONSUMABLE_INV_ADDR, 8, "System Bus"),
+                                                              (START_OF_SWORD_INV_ADDR, 4, "System Bus")])
             if read_value is not None:
                 game_mode = read_value[4][0]
                 main_loop_mode = read_value[5][0]
@@ -230,15 +231,34 @@ class CrystalisClient(BizHawkClient):
                                     item_id = self.unidentified_item_rom_ids[item_to_write.item]
                                 else:
                                     item_id = items_data_by_id[item_to_write.item].rom_id
+                                item_metadata: int = 0
+                                if item_id == SWORD_OF_THUNDER_ITEM_ID:
+                                    # manually overriding here instead of in the data files so that it doesn't get
+                                    # placed incorrectly under the Eu flag
+                                    unique = False
+                                    # need to determine warp destination
+                                    # for now that's just the thunderwarp spot from slot_data
+                                    try:
+                                        item_metadata = TOWNS.index(ctx.slot_data["shuffle_data"]["thunder_warp"])
+                                    except ValueError:
+                                        # thunder_warp not found, silently ignore the error
+                                        if CRYSTALIS_DEBUG:
+                                            # ... unless we're debugging
+                                            logging.error(f"Could not find town ID for thunder_warp: "
+                                                          f"{ctx.slot_data['shuffle_data']['thunder_warp']}")
+                                    if read_value[8][0] == CRYSTALIS_SWORD_ITEM_ID or \
+                                       read_value[8][3] == SWORD_OF_THUNDER_ITEM_ID:
+                                        # the player has already received at least one sword of thunder
+                                        # indicate in the metadata that this shouldn't add to scaling
+                                        item_metadata |= 0x10
                                 byte: int = item_id // 8
                                 bit: int = item_id % 8
                                 item_flag_byte: byte = item_flags[byte] if unique \
                                     else item_flags[byte] & (0xFF ^ (1 << bit))
-
                                 await bizhawk.guarded_write(ctx.bizhawk_ctx,
                                                             [(RECEIVED_INDEX_ADDR, [nonconsumable_index + 1],
                                                               "System Bus"),
-                                                             (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
+                                                             (GET_ITEM_FLAG_ADDR, [1, item_id, item_metadata], "System Bus"),
                                                              (ITEM_FLAGS_ADDR + byte, [item_flag_byte], "System Bus")],
                                                             [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus"),
                                                              (SCREEN_LOCK_ADDR, [0], "System Bus")])
