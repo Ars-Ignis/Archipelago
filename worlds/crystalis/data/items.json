@@ -50,22 +50,23 @@
     "category": 5,
     "notes": ""
   },
-  "Sword of Thunder": {
-    "name": "Sword of Thunder",
+  "Sword of Thunder (No Warp)": {
+    "name": "Sword of Thunder (No Warp)",
     "rom_id": 3,
     "ap_id_offset": 3,
     "unique": true,
     "losable": false,
     "prevent_loss": true,
     "community": false,
-    "default_count": 1,
+    "default_count": 0,
     "groups": [
       "Sword",
-      "Thunder"
+      "Thunder",
+      "Sword of Thunder"
     ],
     "palette": 3,
-    "category": 3,
-    "notes": ""
+    "category": 5,
+    "notes": "Only created if the thunder warp is off"
   },
   "Orb of Wind": {
     "name": "Orb of Wind",
@@ -1050,7 +1051,7 @@
     "community": false,
     "default_count": 12,
     "groups": [
-      ""
+      "Trap"
     ],
     "palette": 8,
     "category": 4,
@@ -5474,6 +5475,314 @@
     ],
     "palette": 9,
     "category": 1,
+    "notes": ""
+  },
+  "Sword of Thunder (Leaf)": {
+    "name": "Sword of Thunder (Leaf)",
+    "rom_id": 3,
+    "ap_id_offset": 324,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Brynmaer)": {
+    "name": "Sword of Thunder (Brynmaer)",
+    "rom_id": 3,
+    "ap_id_offset": 325,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Oak)": {
+    "name": "Sword of Thunder (Oak)",
+    "rom_id": 3,
+    "ap_id_offset": 326,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Nadare's)": {
+    "name": "Sword of Thunder (Nadare's)",
+    "rom_id": 3,
+    "ap_id_offset": 327,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Portoa)": {
+    "name": "Sword of Thunder (Portoa)",
+    "rom_id": 3,
+    "ap_id_offset": 328,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Amazones)": {
+    "name": "Sword of Thunder (Amazones)",
+    "rom_id": 3,
+    "ap_id_offset": 329,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Joel)": {
+    "name": "Sword of Thunder (Joel)",
+    "rom_id": 3,
+    "ap_id_offset": 330,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Zombie Town)": {
+    "name": "Sword of Thunder (Zombie Town)",
+    "rom_id": 3,
+    "ap_id_offset": 331,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Swan)": {
+    "name": "Sword of Thunder (Swan)",
+    "rom_id": 3,
+    "ap_id_offset": 332,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Shyron)": {
+    "name": "Sword of Thunder (Shyron)",
+    "rom_id": 3,
+    "ap_id_offset": 333,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Goa)": {
+    "name": "Sword of Thunder (Goa)",
+    "rom_id": 3,
+    "ap_id_offset": 334,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Sword of Thunder (Sahara)": {
+    "name": "Sword of Thunder (Sahara)",
+    "rom_id": 3,
+    "ap_id_offset": 335,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Sword",
+      "Thunder",
+      "Sword of Thunder",
+      "Trap"
+    ],
+    "palette": 3,
+    "category": 6,
+    "notes": ""
+  },
+  "Wild Warp Trap": {
+    "name": "Wild Warp Trap",
+    "rom_id": 255,
+    "ap_id_offset": 336,
+    "unique": false,
+    "losable": false,
+    "prevent_loss": false,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Trap"
+    ],
+    "palette": 8,
+    "category": 4,
+    "notes": ""
+  },
+  "Paralysis Trap": {
+    "name": "Paralysis Trap",
+    "rom_id": 255,
+    "ap_id_offset": 337,
+    "unique": false,
+    "losable": false,
+    "prevent_loss": false,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Trap"
+    ],
+    "palette": 8,
+    "category": 4,
+    "notes": ""
+  },
+  "Nuper Trap": {
+    "name": "Nuper Trap",
+    "rom_id": 255,
+    "ap_id_offset": 338,
+    "unique": false,
+    "losable": false,
+    "prevent_loss": false,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Trap"
+    ],
+    "palette": 8,
+    "category": 4,
+    "notes": ""
+  },
+  "Petrify Trap": {
+    "name": "Petrify Trap",
+    "rom_id": 255,
+    "ap_id_offset": 339,
+    "unique": false,
+    "losable": false,
+    "prevent_loss": false,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Trap"
+    ],
+    "palette": 8,
+    "category": 4,
+    "notes": ""
+  },
+  "Poison Trap": {
+    "name": "Poison Trap",
+    "rom_id": 255,
+    "ap_id_offset": 340,
+    "unique": false,
+    "losable": false,
+    "prevent_loss": false,
+    "community": false,
+    "default_count": 0,
+    "groups": [
+      "Trap"
+    ],
+    "palette": 8,
+    "category": 4,
     "notes": ""
   }
 }

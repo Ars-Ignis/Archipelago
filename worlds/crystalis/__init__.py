@@ -43,9 +43,7 @@ class CrystalisWorld(World):
     # Class variables
     game = "Crystalis"
     options_dataclass = CrystalisOptions
-    options: CrystalisOptions
     topology_present: bool = True
-    shuffle_data: CrystalisShuffleData
     set_rules = set_rules
     create_regions = create_regions
     generate_output = generate_output
@@ -58,27 +56,6 @@ class CrystalisWorld(World):
     extend_hint_information = extend_hint_information
     get_tetrarch_fight_logic = get_tetrarch_fight_logic
     web = CrystalisWeb()
-    # Universal Tracker specific class variables
-    ut_can_gen_without_yaml: bool = True
-    reconnect_found_entrances = reconnect_found_entrances
-    glitches_item_name: str = "UT_GLITCHED"
-
-    # member variables
-    shared_icon_houses: List[Entrance]
-    houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
-    tunnel_map: Dict[str, List[str]]
-    cave_entrances: List[Tuple[Entrance, Entrance]]
-    cave_exits: List[Tuple[Entrance, Entrance]]
-    goa_lower_floors: Set[str]
-    goa_upper_floors: Set[str]
-    # Universal Tracker specific member variables
-    using_ut: bool
-    in_game_id_to_entrance_name: Dict[int, str]
-    found_entrances: Set[int]
-    found_towns: Set[int]
-
-    # this will get filled out later, while creating regions
-    locations_data: List[CrystalisLocationData]
     location_name_to_id = {}
     wild_warp_id_to_region: Dict[int, str] = {}
     for region_data in regions_data.values():
@@ -96,6 +73,28 @@ class CrystalisWorld(World):
                 item_name_groups[group].add(item.name)
             else:
                 item_name_groups[group] = {item.name}
+
+    # Universal Tracker specific class variables
+    ut_can_gen_without_yaml: bool = True
+    reconnect_found_entrances = reconnect_found_entrances
+    glitches_item_name: str = "UT_GLITCHED"
+
+    # member variables
+    options: CrystalisOptions
+    shuffle_data: CrystalisShuffleData
+    shared_icon_houses: List[Entrance]
+    houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
+    tunnel_map: Dict[str, List[str]]
+    cave_entrances: List[Tuple[Entrance, Entrance]]
+    cave_exits: List[Tuple[Entrance, Entrance]]
+    goa_lower_floors: Set[str]
+    goa_upper_floors: Set[str]
+    locations_data: List[CrystalisLocationData]
+    # Universal Tracker specific member variables
+    using_ut: bool
+    in_game_id_to_entrance_name: Dict[int, str]
+    found_entrances: Set[int]
+    found_towns: Set[int]
 
     @classmethod
     def stage_generate_early(cls, multiworld: MultiWorld) -> None:

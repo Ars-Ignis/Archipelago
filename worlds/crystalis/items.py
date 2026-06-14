@@ -168,10 +168,6 @@ def create_item(self: "CrystalisWorld", name: str) -> "Item":
                                                                   not self.options.gas_mask_not_guaranteed and \
                                                                   not self.options.guarantee_refresh \
                                                                   else CrystalisItemCategoryEnum.PROGRESSION
-        elif name == "Sword of Thunder":
-            actual_category = CrystalisItemCategoryEnum.PROGUSEFUL \
-                if self.options.thunder_warp.value == self.options.thunder_warp.option_none \
-                else CrystalisItemCategoryEnum.PROGUSEFULTRAP
     return CrystalisItem(name, convert_enum_to_item_classification(actual_category), item_data.ap_id_offset +
                          CRYSTALIS_BASE_ID, self.player)
 
@@ -201,6 +197,13 @@ def create_items(self) -> None:
                 for i in range(item_data.default_count):
                     self.multiworld.itempool.append(self.create_item(item_data.name))
                     items_created += 1
+    # create the correct Sword of Thunder variant
+    sword_of_thunder: CrystalisItem
+    if self.shuffle_data.thunder_warp:
+        sword_of_thunder = create_item(f"Sword of Thunder ({self.shuffle_data.thunder_warp})")
+    else:
+        sword_of_thunder = create_item(f"Sword of Thunder (No Warp)")
+    swords.append(sword_of_thunder)
     if self.options.guarantee_starting_sword:
         fixed_sword = self.random.choice(swords)
         swords.remove(fixed_sword)
