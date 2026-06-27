@@ -3,7 +3,7 @@ from tempfile import TemporaryDirectory
 from worlds.LauncherComponents import Component, components, Type, icon_paths
 from Main import main as create_multiworld
 from Generate import main as parse_yamls, mystery_argparse
-from Utils import tuplize_version, VersionException, is_kivy_running, local_path, is_frozen
+from Utils import tuplize_version, VersionException, is_kivy_running, local_path, is_frozen, open_file
 from Launcher import get_exe, launch as launch_exe
 import pkgutil
 import tempfile
@@ -61,8 +61,9 @@ def main(*cli_args):
         baked_server_options["compatibility"] = 0
 
         # generate
-        create_multiworld(generation_args, seed, baked_server_options=baked_server_options)
-
+        multiworld = create_multiworld(generation_args, seed, baked_server_options=baked_server_options)
+        if multiworld:
+            open_file(args.outputpath)
 
 def run_cli(*args):
     if not is_kivy_running():
@@ -80,6 +81,7 @@ def run_cli(*args):
 
 
 components.append(Component("Crystalis Randomizer 2026 Tournament Seed Roller",
-                            func=run_cli, component_type=Type.TOOL, icon='crystalis'))
+                            func=run_cli, component_type=Type.TOOL, icon='crystalis',
+                            description="Press button, get tournament seed. Opens the output folder to find the result."))
 
 icon_paths['crystalis'] = "ap:worlds.crt_2026_seed_roller/icon.png"
