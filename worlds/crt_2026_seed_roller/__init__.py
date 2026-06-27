@@ -13,7 +13,6 @@ MESIA_FILE_NAME = "CRT 2026 - Exploration.yaml"
 MINIMUM_CRYSTALIS_VERSION = tuplize_version("2.0.4")
 
 def main(*cli_args):
-    print(cli_args)
     import atexit
     atexit.register(input, "Press enter to close.")
     try:
