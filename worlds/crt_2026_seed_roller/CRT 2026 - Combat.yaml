@@ -1,34 +1,5 @@
-﻿# Q. What is this file?
-# A. This file contains options which allow you to configure your multiworld experience while allowing
-#    others to play how they want as well.
-#
-# Q. How do I use it?
-# A. The options in this file are weighted. This means the higher number you assign to a value, the
-#    more chances you have for that option to be chosen. For example, an option like this:
-#
-#    map_shuffle:
-#      on: 5
-#      off: 15
-#
-#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
-#    off.
-#
-# Q. I've never seen a file like this before. What characters am I allowed to use?
-# A. This is a .yaml file. You are allowed to use most characters.
-#    To test if your yaml is valid or not, you can use this website:
-#        http://www.yamllint.com/
-#    You can also verify that your Archipelago options are valid at this site:
-#        https://archipelago.gg/check
-
-# Your name in-game, limited to 16 characters.
-#     {player} will be replaced with the player's slot number.
-#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
-#     {number} will be replaced with the counter value of the name.
-#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
-name: Simea
-
-# Used to describe your yaml. Useful if you have multiple files.
-description: Combat focused
+﻿name: Simea
+description: Crystalis Randomizer 2026 Tournament YAML - Combat Focus
 
 game: Crystalis
 requires:
@@ -37,268 +8,57 @@ requires:
     Crystalis: 2.0.4 # Version of the world required for this yaml to work as expected.
 
 Crystalis:
-  ################
-  # Game Options #
-  ################
-    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
-    # 
-    # A lower setting means more getting stuck. A higher setting means less getting stuck.
-    #
-    # You can define additional values between the minimum and maximum values.
-    # Minimum value is 0
-    # Maximum value is 99
   progression_balancing: 50
-
-    # Set rules for reachability of your items/locations.
-    # 
-    # **Full:** ensure everything can be reached and acquired.
-    # 
-    # **Minimal:** ensure what is needed to reach your goal can be acquired.
   accessibility: full
-
-  #################
-  # World Options #
-  #################
-    # Shuffles some or all area connections.
   shuffle_areas: false
-
-    # Shuffles all the house entrances, as well as a handful of other things, like the
-    # palace/fortress-type entrances at the top of several towns, and standalone houses.
   shuffle_houses: false
-
-    # Items expected by various NPCs will be shuffled: specifically, Statue of Onyx, Kirisa Plant, Love Pendant, Ivory
-    # Statue, and Fog Lamp. Rage will expect a random sword, and Tornel will expect a random bracelet.
   randomize_tradeins: false
-
-    # Item names will be generic and effects will be shuffled. This includes keys, flutes, lamps, and statues.
   unidentified_key_items: false
-
-    # Walls will require a randomized element to break. Normal rock and ice walls will indicate the required element by
-    # the color (light grey or yellow for wind, blue for fire, bright orange ("embers") for water, or dark grey ("steel")
-    # for thunder. The element to break these walls is the same throughout an area. Iron walls require a one-off random
-    # element, with no visual cue, and two walls in the same area may have different requirements.
   randomize_wall_elements: true
-
-    # The four areas of Goa fortress will appear in a random order.
   shuffle_goa: true
-
-    # Monsters and NPCs will have different colors.
   randomize_sprite_colors: false
-
-    # Wild warp will go to Mezame Shrine and 15 other random locations. These locations will be considered in-logic.
   randomize_wild_warp: false
-
-  ###################
-  # Routing Options #
-  ###################
-    # Draygon 2 won't spawn unless you have all four swords and have defeated all major bosses of the tetrarchy.
   story_mode: true
-
-    # No items are required to finish the game. An exit is added from Mezame shrine directly to the Draygon 2 fight
-    # (and the normal entrance is removed). Draygon 2 spawns automatically with no Bow of Truth.
   no_bow_mode: false
-
-    # If true, walls can be broken and bridges formed with level 1 shots.
   orbs_not_required: true
-
-    # Determines where the player is warped to when receiving the Sword of Thunder.
-    # Shuffled: The Sword of Thunder will warp you to a random town.
-    # None: The Sword of Thunder won't warp you. (Rt)
-    # <town name>: The Sword of Thunder will warp you to the chosen town.
   thunder_warp: shuffled
-
-    # By default, the randomizer changes a number of dolphin and boat interactions: (1) healing the dolphin and having
-    # the Shell Flute is no longer required before the fisherman spawns: instead, he will spawn as soon as you have the
-    # item he wants; (2) talking to Kensu in the beach cabin is no longer required for the Shell Flute to work: instead,
-    # the Shell Flute will always work, and Kensu will spawn after the Fog Lamp is turned in and will give a key item
-    # check. This flag restores the vanilla interaction where healing and shell flute are required, and Kensu no longer
-    # drops an item.
   vanilla_dolphin: false
-
-  ##################
-  # Glitch Options #
-  ##################
-    # Fake flight allows using Dolphin and Rabbit Boots to fly up the waterfalls in the Angry Sea (without calming the
-    # whirlpools). This is done by swimming up to a diagonal beach and jumping in a different direction immediately before
-    #  disembarking.  Note: Fake flight cannot be disabled. The available options are in_logic or out_of_logic.
   fake_flight: in_logic
-
-    # Statue glitch allows getting behind statues that block certain entrances: the guards in Portoa, Amazones, Oak,
-    # Goa, and Shyron, as well as the statues in the Waterfall Cave. It is done by approaching the statue from the top
-    # right and holding down and left on the controller while mashing B.
   statue_glitch: in_logic
-
-    # Entering Mt Sabre North normally requires (1) having Teleport, and (2) talking to the rabbit in Leaf after the
-    # abduction (via Telepathy). Both of these requirements can be skipped: first by flying over the river in Cordel plain
-    # rather than crossing the bridge, and then by threading the needle between the hitboxes in Mt Sabre North.
   mt_sabre_skip: in_logic
-
-    # The shooting statues in front of Goa and Stxy normally require Barrier to pass safely. With this flag, Flight can
-    # also be used by flying around the edge of the statue.
   statue_gauntlet_skip: in_logic
-
-    # Sword charge glitch allows charging one sword to the level of another sword by equipping the higher-level sword,
-    # re-entering the menu, changing to the lower-level sword without exiting the menu, creating a hard save, resetting,
-    # and then continuing.
   sword_charge_glitch: in_logic
-
-    # A wide variety of triggers and exit squares can be skipped by using an invalid item every frame while walking.
-    # This allows bypassing both Mt Sabre North entrance triggers, the Evil Spirit Island entrance trigger, triggers for
-    # guards to move, slopes, damage tiles, and seamless map transitions.
   trigger_skip: disabled
-
-    # Rage can be skipped by damage-boosting diagonally into the Lime Tree Lake screen. This provides access to the
-    # area beyond the lake if flight or bridges are available. For simplicity, the logic only assumes this is possible if
-    # there's a flyer.
   rage_skip: disabled
-
-  #####################
-  # Aesthetic Options #
-  #####################
-    # Randomizes or disables the background music.
   randomize_background_music: vanilla
-
-    # Randomizes the palettes of the background tiles.
   randomize_map_colors: false
-
-  ###################
-  # Monster Options #
-  ###################
-    # Monster and boss elemental weaknesses are shuffled.
   randomize_monster_weaknesses: true
-
-    # Every chest is now a mimic, and killing the mimic will drop the real item chest. Careful when killing the mimic,
-    # if it drops the chest out of reach you'll need to reset the room!
   oops_all_mimics: true
-
-    # Tower robots will be shuffled into the normal pool.
   shuffle_tower_robots: true
-
-  #####################
-  # Easy Mode Options #
-  #####################
-    # Mimics will be in their vanilla locations.
   dont_shuffle_mimics: false
-
-    # Normally all items and mimics are shuffled into a single pool and distributed from there. If this flag is set,
-    # unique items (specifically, anything that cannot be sold) will only be found in either (a) checks that held unique
-    # items in vanilla, or (b) boss drops. Chests containing consumables in vanilla may be safely ignored, but chests
-    # containing unique items in vanilla may still end up with non-unique items because of bosses like Vampire 2 that drop
-    # consumables. If mimics are shuffled, they will only be in consumable locations. These locations are tracked by the
-    # multiworld, so they will still count against your hint points, but they will only contain your non-unique items.
   keep_unique_items_and_consumables_separate: false
-
-    # Enemy attack power will be significantly decreased in the early game (by a factor of 3). The gap will narrow in
-    # the mid-game and eventually phase out at scaling level 40.
   decrease_enemy_damage: false
-
-    # The Leaf elder is guaranteed to give a sword. It will not be required to deal with any enemies before finding the
-    # first sword.
   guarantee_starting_sword: false
-
-    # Guarantees the Refresh spell will be available before fighting Tetrarchs.
   guarantee_refresh: false
-
-    # Less grinding will be required to "keep up" with the game difficulty.
   experience_scales_faster: false
-
-    # Skip community jokes, such as funny/misspelled item, monster, or character names. This will make it easier to
-    # look up information in guides/FAQs if necessary.
   no_community_jokes: false
-
-  #########################
-  # No Guarantees Options #
-  #########################
-    # Normally, the logic will guarantee that level 3 sword charges are available before fighting the tetrarchs (with
-    # the exception of Karmine, who only requires level 2). This disables that check.
   battle_magic_not_guaranteed: true
-
-    # Enables "tink strats", where wrong-element swords will still do a single damage per hit. Player may be required
-    # to fight monsters (including bosses) with tinks.
   tink_mode: false
-
-    # Normally, the logic will guarantee Barrier before entering Stxy, the Fortress, or fighting Karmine. This puts
-    # those locations in logic with any sword (to farm money) and one of Shield Ring, Refresh, or a place to buy Medical
-    # Herbs.
   barrier_not_guaranteed: true
-
-    # The logic will not guarantee gas mask before needing to enter the swamp, nor will leather boots (or hazmat suit)
-    # be guaranteed to cross long stretches of spikes. Gas mask is still guaranteed to kill the insect.
   gas_mask_not_guaranteed: false
-
-  #####################
-  # Hard Mode Options #
-  #####################
-    # If this is set to true, Medical Herb is not buffed to heal 80 damage, which is helpful to make up for cases where
-    # Refresh is unavailable early. Fruit of Power is not buffed to restore 56 MP.
   dont_buff_consumables: false
-
-    # Enemies in the tower spawn at max scaling level.
   max_scaling_in_tower: true
-
-    # More grinding will be required to "keep up" with the difficulty.
   experience_scales_slower: true
-
-    # Stabbing is completely ineffective. Only charged shots work.
   charge_shots_only: false
-
-    # All caves and fortresses are permanently dark.
   blackout: false
-
-    # Hardcore mode: checkpoints and saves are removed.
   permadeath: false
-
-    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
   death_link: false
-
-  ###################
-  # Vanilla Options #
-  ###################
-    # By default, we make the Dyna fight a bit more of a challenge. Side pods will fire significantly more. The safe
-    # spot has been removed. The revenge beams pass through barrier. Side pods can now be killed. This flag prevents that
-    # change.
   dont_buff_dyna: false
-
-    # Leather Boots are changed to Speed Boots, which increase player walking speed (this allows climbing up the slope
-    # to access the Tornado Bracelet chest, which is taken into consideration by the logic). Deo's pendant restores MP
-    # while moving. Rabbit boots enable sword charging up to level 2 while walking (level 3 still requires being
-    # stationary, so as to prevent wasting tons of magic). Turning this on removes all these changes.
   dont_buff_bonus_items: false
-
-    # Normally the randomizer adds a new "East Cave" to Valley of Wind, borrowed from the GBC version of the game. This
-    # cave contains two chests (one considered a key item) on the upper floor and exits to two random areas (chosen
-    # between Lime Tree Valley, Cordel Plain, Goa Valley, or Desert 2), one unblocked on the lower floor, and one down
-    # the stairs and behind a rock wall from the upper floor. This flag prevents adding that cave. If set as "Lime
-    # Passage" then a direct path will instead be added between Valley of Wind and Lime Tree Valley.
   vanilla_maps: gbc_cave
-
-    # By default, we disable shop glitch, shuffle shop contents, and tie the prices to the scaling level (item shops
-    # and inns increase by a factor of 2 every 10 scaling levels, armor shops decrease by a factor of 2 every 12 scaling
-    # levels). This flag prevents all of these changes, restoring shops to be completely vanilla.
   vanilla_shops: false
-
-    # By default, Wild Warp is nerfed to only return to Mezame Shrine. This flag restores it to work like normal. Note
-    # that this will put all wild warp locations in logic unless the flag is set as "Out Of Logic".
   vanilla_wild_warp: disabled
-
-    # By default, the blue status bar (HUD) at the bottom of the screen is reorganized a bit, including displaying
-    # enemies' names and HP. This disables those changes.
   vanilla_hud: false
-
-  ###########################
-  # Quality of Life Options #
-  ###########################
-    # Prevents adding a quality-of-life improvement to automatically equip the corresponding orb/bracelet whenever
-    # changing swords.
   dont_auto_equip_upgrades: false
-
-    # By default, we disable second controller input and instead enable some new shortcuts on controller 1: Start+A+B
-    # for wild warp, and Select+B to quickly change swords. To support this, the action of the start and select buttons is
-    # changed slightly. This flag disables this change and retains normal behavior.
   disable_controller_shortcuts: false
-
-    # Provide an audible cue when failing to break a non-iron wall. The intended way to determine which sword is
-    # required for normal cave walls is by looking at the color. This causes the level 3 sword sound of the required
-    # element to play when the wall fails to break. Note that fortress walls (iron in vanilla) do not give this hint,
-    # since there is no visual cue for them, either.
   audible_wall_cues: false
