@@ -4,7 +4,6 @@ from worlds.LauncherComponents import Component, components, Type, icon_paths
 from Main import main as create_multiworld
 from Generate import main as parse_yamls, mystery_argparse
 from Utils import tuplize_version, VersionException, is_kivy_running, local_path, is_frozen, open_file
-from Launcher import get_exe, launch as launch_exe
 import pkgutil
 import tempfile
 from settings import get_settings
@@ -69,7 +68,7 @@ def run_cli(*args):
     if not is_kivy_running():
         main(*args)
         return
-
+    from Launcher import get_exe, launch as launch_exe
     if not is_frozen():
         launcher = get_exe("Launcher")
     else:
