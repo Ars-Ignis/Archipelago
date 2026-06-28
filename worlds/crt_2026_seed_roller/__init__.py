@@ -56,7 +56,7 @@ def main(*cli_args):
         baked_server_options["release_mode"] = "disabled"
         baked_server_options["collect_mode"] = "disabled"
         baked_server_options["remaining_mode"] = "disabled"
-        baked_server_options["compatibility"] = 0
+        baked_server_options["compatibility"] = 2
 
         # generate
         multiworld = create_multiworld(generation_args, seed, baked_server_options=baked_server_options)
