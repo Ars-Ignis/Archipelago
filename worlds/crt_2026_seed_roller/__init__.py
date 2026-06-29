@@ -8,8 +8,10 @@ import pkgutil
 import tempfile
 from settings import get_settings
 
-SIMEA_FILE_NAME = "CRT 2026 - Combat.yaml"
-MESIA_FILE_NAME = "CRT 2026 - Exploration.yaml"
+COMBAT_FILE_NAME = "CRT 2026 - Combat.yaml"
+EXPLORATION_FILE_NAME = "CRT 2026 - Exploration.yaml"
+COMMENTARY_FILE_NAME = "zzzCRT 2026 - Commentary.yaml"
+
 MINIMUM_CRYSTALIS_VERSION = tuplize_version("2.0.4")
 
 def main(*cli_args):
@@ -27,14 +29,18 @@ def main(*cli_args):
     temp_dir: TemporaryDirectory = tempfile.TemporaryDirectory()
     with temp_dir as player_dir:
         # copy yamls to temporary directory
-        simea_temp_file = open(player_dir + "\\" + SIMEA_FILE_NAME, 'wb')
-        simea_yaml_contents: bytes = pkgutil.get_data(__name__, SIMEA_FILE_NAME)
-        simea_temp_file.write(simea_yaml_contents)
-        simea_temp_file.close()
-        mesia_temp_file = open(player_dir + "\\" + MESIA_FILE_NAME, 'wb')
-        mesia_yaml_contents: bytes = pkgutil.get_data(__name__, MESIA_FILE_NAME)
-        mesia_temp_file.write(mesia_yaml_contents)
-        mesia_temp_file.close()
+        combat_temp_file = open(player_dir + "\\" + COMBAT_FILE_NAME, 'wb')
+        combat_yaml_contents: bytes = pkgutil.get_data(__name__, COMBAT_FILE_NAME)
+        combat_temp_file.write(combat_yaml_contents)
+        combat_temp_file.close()
+        exploration_temp_file = open(player_dir + "\\" + EXPLORATION_FILE_NAME, 'wb')
+        exploration_yaml_contents: bytes = pkgutil.get_data(__name__, EXPLORATION_FILE_NAME)
+        exploration_temp_file.write(exploration_yaml_contents)
+        exploration_temp_file.close()
+        commentary_temp_file = open(player_dir + "\\" + COMMENTARY_FILE_NAME, 'wb')
+        commentary_yaml_contents: bytes = pkgutil.get_data(__name__, COMMENTARY_FILE_NAME)
+        commentary_temp_file.write(commentary_yaml_contents)
+        commentary_temp_file.close()
 
         # set up generation settings
         args = mystery_argparse(list(cli_args))

@@ -1,0 +1,6 @@
+name: Commentary
+description: Crystalis Randomizer 2026 Tournament YAML - Spectator slot for commentary
+
+game: Archipelago
+
+Archipelago: {}
