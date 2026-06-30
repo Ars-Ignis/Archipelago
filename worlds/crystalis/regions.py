@@ -195,9 +195,9 @@ def create_regions(self) -> None:
             shop_region.connect(buy_warp_boots_region, "Buy Warp Boots: " + shop)
     # add Thunder Warp entrance
     menu_region = local_region_cache["Menu"]
-    if self.shuffle_data.thunder_warp != "":
-        thunder_warp_region = local_region_cache[self.shuffle_data.thunder_warp]
-        menu_region.connect(thunder_warp_region, "Thunder Warp")
+    for town in TOWNS:
+        thunder_warp_region = local_region_cache[town]
+        menu_region.connect(thunder_warp_region, f"Thunder Warp to {town}")
 
     # add wild warp entrances
     if self.options.vanilla_wild_warp != self.options.vanilla_wild_warp.option_out_of_logic:

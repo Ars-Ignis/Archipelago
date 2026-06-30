@@ -10,7 +10,8 @@
     "default_count": 1,
     "groups": [
       "Sword",
-      "Wind"
+      "Wind",
+      "Wind Sword"
     ],
     "palette": 0,
     "category": 5,
@@ -27,7 +28,8 @@
     "default_count": 1,
     "groups": [
       "Sword",
-      "Fire"
+      "Fire",
+      "Fire Sword"
     ],
     "palette": 1,
     "category": 5,
@@ -44,7 +46,8 @@
     "default_count": 1,
     "groups": [
       "Sword",
-      "Water"
+      "Water",
+      "Water Sword"
     ],
     "palette": 2,
     "category": 5,
@@ -62,7 +65,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder"
+      "Thunder Sword"
     ],
     "palette": 3,
     "category": 5,
@@ -5489,7 +5492,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5508,7 +5511,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5527,7 +5530,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5546,7 +5549,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5565,7 +5568,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5584,7 +5587,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5603,7 +5606,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5622,7 +5625,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5641,7 +5644,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5660,7 +5663,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5679,7 +5682,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,
@@ -5698,7 +5701,7 @@
     "groups": [
       "Sword",
       "Thunder",
-      "Sword of Thunder",
+      "Thunder Sword",
       "Trap"
     ],
     "palette": 3,

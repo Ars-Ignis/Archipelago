@@ -1,25 +1,28 @@
 import logging
 
 from BaseClasses import MultiWorld, CollectionState, Entrance, Region
+from .constants import *
 from .options import CrystalisOptions
 from .types import CrystalisShuffleData
 from typing import Callable, List, Optional, TYPE_CHECKING
 from worlds.generic.Rules import set_rule, add_rule
 
 if TYPE_CHECKING:
-    from . import CrystalisWorld
+    from . import CrystalisWorld, TOWNS
+
 
 def has_level_1_sword(state: CollectionState, player: int, element: str) -> bool:
-    return state.has("Sword of " + element, player)
+    return state.has_group(element + " Sword", player, 1)
 
 
 def has_level_2_sword(state: CollectionState, player: int, element: str) -> bool:
-    return state.has("Sword of " + element, player) and \
+    return state.has_group(element + " Sword", player, 1) and \
            state.has_group(element + " Upgrades", player, 1)
 
 
 def has_level_3_sword(state: CollectionState, player: int, element: str) -> bool:
-    return state.has_group_unique(element, player, 3)
+    return state.has_group(element + " Sword", player, 1) and \
+           state.has_group_unique(element + " Upgrades", player, 2)
 
 
 def has_any_level_2_sword(state: CollectionState, player: int) -> bool:
@@ -51,7 +54,7 @@ def get_tetrarch_fight_logic(self: "CrystalisWorld", element: str, level: Option
     if self.options.tink_mode:
         element_logic = lambda state: state.has_group("Sword", self.player, 1)
     else:
-        element_logic = lambda state: state.has("Sword of " + element, self.player)
+        element_logic = lambda state: has_level_1_sword(state, self.player, element)
     battle_magic_logic: Callable[[CollectionState], bool]
     if not self.options.battle_magic_not_guaranteed:
         if self.options.sword_charge_glitch == self.options.sword_charge_glitch.option_in_logic or self.options.tink_mode:
@@ -85,10 +88,10 @@ def set_rules(self: "CrystalisWorld") -> None:
     else:
         if options.sword_charge_glitch == options.sword_charge_glitch.option_in_logic:
             can_break_wall = lambda state, plyr, elem: has_any_level_2_sword(state, plyr) and \
-                                                       state.has("Sword of " + elem, plyr)
+                                                       state.has_group(elem + " Sword", plyr, 1)
         elif options.sword_charge_glitch == options.sword_charge_glitch.option_out_of_logic:
             can_break_wall = lambda state, plyr, elem: ((has_any_level_2_sword(state, plyr) and
-                                                        state.has("Sword of " + elem, plyr) and
+                                                        state.has_group(elem + " Sword", plyr, 1) and
                                                         state.has(self.glitches_item_name, self.player)) or
                                                         has_level_2_sword(state, plyr, elem))
         else:
@@ -111,9 +114,9 @@ def set_rules(self: "CrystalisWorld") -> None:
             set_rule(buy_warp_boots_entrance, lambda state: state.has_group("Sword", player, 1))
 
     # Thunder Warp
-    if shuffle_data.thunder_warp != "":
-        thunder_warp = self.get_entrance("Thunder Warp")
-        set_rule(thunder_warp, lambda state: state.has("Sword of Thunder", player) and
+    for town in TOWNS:
+        thunder_warp = self.get_entrance(f"Thunder Warp to {town}")
+        set_rule(thunder_warp, lambda state, town=town: state.has(f"Sword of Thunder ({town})", player) and
                                              (state.has("Buy Warp Boots", player) or
                                               state.has("Teleport", player)))
 
@@ -268,11 +271,14 @@ def set_rules(self: "CrystalisWorld") -> None:
                                            state.can_reach_region("Oak", player))
     insect_reward = self.get_location("Giant Insect")
     elements = ["Wind", "Fire", "Water", "Thunder"]
-    insect_weapons: List[str]
+    insect_weapons: List[str]= []
     if options.tink_mode:
-        insect_weapons = ["Sword of " + x for x in elements]
+        insect_weapons = sorted(self.item_name_groups["Sword"])
     else:
-        insect_weapons = ["Sword of " + x for x in elements if x != shuffle_data.boss_reqs["Giant Insect"]]
+        for element in elements:
+            if element == shuffle_data.boss_reqs["Giant Insect"]:
+                continue
+            insect_weapons += sorted(self.item_name_groups[element + " Sword"])
     set_rule(insect_reward, lambda state: state.has(shuffle_data.key_item_names["Insect Flute"], player) and
                                           (state.has("Gas Mask", player) or state.has("Hazmat Suit", player)) and
                                           state.has_any(insect_weapons, player))
@@ -562,11 +568,14 @@ def set_rules(self: "CrystalisWorld") -> None:
                                         state.has(self.glitches_item_name, player))
     vamp_2_fight = self.get_entrance("Sabera's Fortress - Front -> Sabera's Fortress - Upstairs")
     vamp_2_reward = self.get_location("Vampire 2")
-    vamp_2_weapons: List[str]
+    vamp_2_weapons: List[str] = []
     if options.tink_mode:
-        vamp_2_weapons = ["Sword of " + x for x in elements]
+        vamp_2_weapons = sorted(self.item_name_groups["Sword"])
     else:
-        vamp_2_weapons = ["Sword of " + x for x in elements if x != shuffle_data.boss_reqs["Vampire 2"]]
+        for element in elements:
+            if element == shuffle_data.boss_reqs["Vampire 2"]:
+                continue
+            vamp_2_weapons += sorted(self.item_name_groups[element + " Sword"])
     vamp_2_logic = lambda state: state.has_any(vamp_2_weapons, player)
     vamp_2_fight.access_rule = vamp_2_logic
     vamp_2_reward.access_rule = vamp_2_logic
@@ -601,7 +610,7 @@ def set_rules(self: "CrystalisWorld") -> None:
         shyron_temple = self.get_region("Shyron Temple")
         hydra_guardpost = self.get_entrance("Mt. Hydra - Guardpost")
         set_rule(hydra_guardpost, lambda state: state.has("Change", player) or shyron_region.can_reach(state) or
-                                                (state.has("Sword of Thunder", player) and
+                                                (state.has_group("Thunder Sword", player, 1) and
                                                  shyron_temple.can_reach(state) and
                                                  massacre_trigger.can_reach(state)))
         multiworld.register_indirect_condition(shyron_temple, hydra_guardpost)
@@ -628,7 +637,7 @@ def set_rules(self: "CrystalisWorld") -> None:
     # Shyron
     mado_1_fight = self.get_entrance("Shyron Temple -> Shyron Temple - Post-Boss")
     mado_1_fight_logic = self.get_tetrarch_fight_logic(shuffle_data.boss_reqs["Mado 1"])
-    set_rule(mado_1_fight, lambda state: state.has("Sword of Thunder", player) and
+    set_rule(mado_1_fight, lambda state: state.has_group("Thunder Sword", player, 1) and
                                          massacre_trigger.can_reach(state) and
                                          mado_1_fight_logic(state))
     multiworld.register_indirect_condition(massacre_trigger, mado_1_fight)
@@ -825,11 +834,12 @@ def set_rules(self: "CrystalisWorld") -> None:
         add_rule(draygon_2_fight, lambda state: state.has("Refresh", player) or
                                                 state.has(self.glitches_item_name, player), "and")
     if options.story_mode:
-        spawn_reqs: List[str] = ["Sword of Wind", "Sword of Fire", "Sword of Water", "Sword of Thunder",
+        non_thunder_spawn_reqs: List[str] = ["Sword of Wind", "Sword of Fire", "Sword of Water",
                                  "Kelbesque 1 Defeated", "Sabera 1 Defeated", "Mado 1 Defeated",
                                  "Kelbesque 2 Defeated", "Sabera 2 Defeated", "Mado 2 Defeated",
                                  "Karmine Defeated", "Draygon 1 Defeated"]
-        add_rule(draygon_2_fight, lambda state: state.has_all(spawn_reqs, player), "and")
+        add_rule(draygon_2_fight, lambda state: state.has_all(non_thunder_spawn_reqs, player) and
+                                                state.has_group("Thunder Sword", player, 1), "and")
 
     # misc. Logic
     for location_data in self.locations_data:

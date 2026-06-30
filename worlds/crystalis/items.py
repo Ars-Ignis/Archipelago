@@ -181,7 +181,8 @@ def create_items(self) -> None:
             self.multiworld.itempool.append(self.create_item(self.shuffle_data.key_item_names[item_data.name]))
             items_created += 1
         elif "Sword" in item_data.groups:
-            swords.append(self.create_item(item_data.name))
+            if item_data.default_count > 0:
+                swords.append(self.create_item(item_data.name))
         elif self.options.dont_buff_bonus_items and item_data.name == "Hazmat Suit":
             self.multiworld.itempool.append(self.create_item("Gas Mask"))
             items_created += 1
@@ -200,9 +201,9 @@ def create_items(self) -> None:
     # create the correct Sword of Thunder variant
     sword_of_thunder: CrystalisItem
     if self.shuffle_data.thunder_warp:
-        sword_of_thunder = create_item(f"Sword of Thunder ({self.shuffle_data.thunder_warp})")
+        sword_of_thunder = self.create_item(f"Sword of Thunder ({self.shuffle_data.thunder_warp})")
     else:
-        sword_of_thunder = create_item(f"Sword of Thunder (No Warp)")
+        sword_of_thunder = self.create_item(f"Sword of Thunder (No Warp)")
     swords.append(sword_of_thunder)
     if self.options.guarantee_starting_sword:
         fixed_sword = self.random.choice(swords)
