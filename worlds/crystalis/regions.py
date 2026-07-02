@@ -214,11 +214,15 @@ def create_regions(self) -> None:
 
     # make some events
     player = self.player
-    tower_region = self.get_region("Tower")
-    dyna_defeated_location = CrystalisLocation(player, "Dyna Defeated", None, tower_region)
+    tower_mesia_region = self.get_region("Tower - Mesia")
+    crystalis_location = CrystalisLocation(player, "Mesia in Tower", None, tower_mesia_region)
+    crystalis_location.place_locked_item(CrystalisItem("Crystalis", ItemClassification.progression, None, player))
+    tower_mesia_region.locations.append(crystalis_location)
+    dyna_region = self.get_region("Tower - Dyna")
+    dyna_defeated_location = CrystalisLocation(player, "Dyna Defeated", None, dyna_region)
     dyna_defeated_location.place_locked_item(CrystalisItem("Victory!", ItemClassification.progression,
                                                            None, player))
-    tower_region.locations.append(dyna_defeated_location)
+    dyna_region.locations.append(dyna_defeated_location)
     self.multiworld.completion_condition[player] = lambda state: state.has("Victory!", player)
     buy_healing_region = self.get_region("Buy Healing")
     buy_healing_location = CrystalisLocation(player, "Buy Healing", None, buy_healing_region)

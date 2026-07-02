@@ -1301,7 +1301,7 @@
       {
         "name": "",
         "entrance_type": 0,
-        "vanilla_target": "Tower",
+        "vanilla_target": "Tower - Lower",
         "exit_key": "",
         "house_key": "",
         "related_entrances": [],
@@ -8343,15 +8343,97 @@
     "locations": [],
     "ban_wildwarp": false
   },
-  "Tower": {
-    "name": "Tower",
+  "Tower - Lower": {
+    "name": "Tower - Lower",
     "wildwarpIds": [
       88,
       89,
       90,
-      91,
-      92,
-      93,
+      91
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Tower - Upper",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrances": [],
+        "house_type": "",
+        "can_lock": false,
+        "in_game_id": -1,
+        "pseudologic": "can_fight(Tower Robots)",
+        "notes": ""
+      }
+    ],
+    "locations": [],
+    "ban_wildwarp": true
+  },
+  "Tower - Upper": {
+    "name": "Tower - Upper",
+    "wildwarpIds": [
+      92
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Tower Before Dyna",
+        "entrance_type": 15,
+        "vanilla_target": "Tower - Mesia",
+        "exit_key": "1900 door",
+        "house_key": "Mesia Tower",
+        "related_entrances": [],
+        "house_type": "",
+        "can_lock": false,
+        "in_game_id": -1,
+        "pseudologic": "",
+        "notes": ""
+      },
+      {
+        "name": "",
+        "entrance_type": 0,
+        "vanilla_target": "Tower - Dyna",
+        "exit_key": "",
+        "house_key": "",
+        "related_entrances": [],
+        "house_type": "",
+        "can_lock": false,
+        "in_game_id": -1,
+        "pseudologic": "Crystalis",
+        "notes": ""
+      }
+    ],
+    "locations": [],
+    "ban_wildwarp": true
+  },
+  "Tower - Mesia": {
+    "name": "Tower - Mesia",
+    "wildwarpIds": [
+      93
+    ],
+    "notes": "",
+    "entrances": [
+      {
+        "name": "Mesia's Tower Chamber - Exit",
+        "entrance_type": 16,
+        "vanilla_target": "Tower - Upper",
+        "exit_key": "1900 door",
+        "house_key": "Mesia Tower",
+        "related_entrances": [],
+        "house_type": "",
+        "can_lock": false,
+        "in_game_id": -1,
+        "pseudologic": "",
+        "notes": ""
+      }
+    ],
+    "locations": [],
+    "ban_wildwarp": true
+  },
+  "Tower - Dyna": {
+    "name": "Tower - Dyna",
+    "wildwarpIds": [
       94,
       95
     ],

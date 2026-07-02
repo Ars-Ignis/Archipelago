@@ -8,8 +8,7 @@ from typing import Callable, List, Optional, TYPE_CHECKING
 from worlds.generic.Rules import set_rule, add_rule
 
 if TYPE_CHECKING:
-    from . import CrystalisWorld, TOWNS
-
+    from . import CrystalisWorld
 
 def has_level_1_sword(state: CollectionState, player: int, element: str) -> bool:
     return state.has_group(element + " Sword", player, 1)
@@ -29,14 +28,16 @@ def has_any_level_2_sword(state: CollectionState, player: int) -> bool:
     return has_level_2_sword(state, player, "Wind") or \
            has_level_2_sword(state, player, "Fire") or \
            has_level_2_sword(state, player, "Water") or \
-           has_level_2_sword(state, player, "Thunder")
+           has_level_2_sword(state, player, "Thunder") or \
+           state.has("Crystalis", player)
 
 
 def has_any_level_3_sword(state: CollectionState, player: int) -> bool:
     return has_level_3_sword(state, player, "Wind") or \
            has_level_3_sword(state, player, "Fire") or \
            has_level_3_sword(state, player, "Water") or \
-           has_level_3_sword(state, player, "Thunder")
+           has_level_3_sword(state, player, "Thunder") or \
+           state.has("Crystalis", player)
 
 
 def set_two_way_logic(forward_entrance: Entrance) -> None:
@@ -821,7 +822,7 @@ def set_rules(self: "CrystalisWorld") -> None:
     crypt_right_chest.access_rule = can_cross_pain
 
     # Draygon 2 Logic
-    draygon_2_fight = self.get_entrance("Crypt - Pre-Draygon -> Tower")
+    draygon_2_fight = self.get_entrance("Crypt - Pre-Draygon -> Tower - Lower")
     if options.battle_magic_not_guaranteed:
         set_rule(draygon_2_fight, lambda state: state.has_group("Sword", player, 1))
     else:
@@ -840,6 +841,17 @@ def set_rules(self: "CrystalisWorld") -> None:
                                  "Karmine Defeated", "Draygon 1 Defeated"]
         add_rule(draygon_2_fight, lambda state: state.has_all(non_thunder_spawn_reqs, player) and
                                                 state.has_group("Thunder Sword", player, 1), "and")
+
+    # Tower Logic
+    tower_climb = self.get_entrance("Tower - Lower -> Tower - Upper")
+    set_rule(tower_climb, lambda state: has_any_level_3_sword(state, player))
+    if options.shuffle_houses or options.story_mode:
+        tower_mesia = self.get_location("Mesia in Tower")
+        set_rule(tower_mesia, lambda state:
+                state.has_all(["Sword of Wind", "Sword of Fire", "Sword of Water"], player) and
+                state.has_group("Thunder Sword", player, 1))
+    dyna_entrance = self.get_entrance("Tower - Upper -> Tower - Dyna")
+    set_rule(dyna_entrance, lambda state: state.has("Crystalis", player))
 
     # misc. Logic
     for location_data in self.locations_data:
