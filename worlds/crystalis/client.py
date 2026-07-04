@@ -1,12 +1,16 @@
+# Python Imports
 from time import time
 from typing import TYPE_CHECKING, Set
 
+# Archipelago Imports
 import worlds._bizhawk as bizhawk
 from NetUtils import ClientStatus, NetworkItem
 from Utils import async_start, VersionException, tuplize_version
 from worlds._bizhawk.client import BizHawkClient
+
+# Crystalis Imports
 from .constants import *
-from .items import items_data_by_id, items_data
+from .items import items_data, items_data_by_id
 from .regions import regions_data
 
 if TYPE_CHECKING:
@@ -32,19 +36,21 @@ class CrystalisClient(BizHawkClient):
     game = "Crystalis"
     system = "NES"
     patch_suffix = ".apcrys"
-    loc_id_to_addr: Dict[int, Tuple[int, int]] = {}
-    unidentified_item_rom_ids: Dict[int, int] = {}
-    current_location: int = 0
+
+    # Crystalis Client Class Variables
     asina_hint_collected: bool = False
-    iterations_matched: int = 0
-    prev_location_flags: bytes = bytes(0)
-    pending_death_link: bool = False
-    is_dying: bool = False
-    last_death_link: float = time()
     asina_location_id: int = -1
-    whirlpool_location_id: int = -1
-    used_entrances: Set[int] = set()
+    current_location: int = 0
+    is_dying: bool = False
+    iterations_matched: int = 0
+    last_death_link: float = time()
     last_entrance: int = -1
+    loc_id_to_addr: Dict[int, Tuple[int, int]] = {}
+    pending_death_link: bool = False
+    prev_location_flags: bytes = bytes(0)
+    unidentified_item_rom_ids: Dict[int, int] = {}
+    used_entrances: Set[int] = set()
+    whirlpool_location_id: int = -1
 
     def __init__(self):
         super().__init__()

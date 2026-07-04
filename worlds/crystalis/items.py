@@ -1,11 +1,15 @@
-import orjson
+# Python Imports
+# import orjson - handled by .constants
+# import pkgutil - handled by .constants
 from typing import Optional, TYPE_CHECKING
-import pkgutil
+
+# Archipelago Imports
 from BaseClasses import Item, LocationProgressType
-from .constants import *
-from .types import CrystalisItemData, convert_enum_to_item_classification, CrystalisItemCategoryEnum, \
-    CrystalisLocation
 from Fill import fast_fill
+
+# Crystalis Imports
+from .constants import *
+from .types import convert_enum_to_item_classification, CrystalisItemCategoryEnum, CrystalisItemData, CrystalisLocation
 
 if TYPE_CHECKING:
     from . import CrystalisWorld

@@ -1,18 +1,22 @@
+# Python Imports
+# import orjson - handled by .constants
 import os
+from typing import Iterable, Optional, Set, TextIO, TYPE_CHECKING
 import zipfile
-from typing import Any, TextIO, Iterable, Optional, Set
 
-import orjson
-
+# Archipelago Imports
 from BaseClasses import Item, Entrance, Region
-from worlds.AutoWorld import World
 from worlds.Files import APAutoPatchInterface
+
+# Crystalis Imports
 from .constants import *
 from .items import items_data
 from .options import CrystalisOptions
-from .regions import regions_data, entrances_data
-from .types import CrystalisShuffleData, CrystalisEntranceTypeEnum
+from .regions import entrances_data, regions_data
+from .types import CrystalisEntranceTypeEnum, CrystalisShuffleData
 
+if TYPE_CHECKING:
+    from . import CrystalisWorld
 
 def generate_flag_string(options: CrystalisOptions) -> str:
     flag_dict: Dict[str, List[str]] = {}
@@ -39,7 +43,7 @@ def generate_flag_string(options: CrystalisOptions) -> str:
     return flag_string
 
 
-def generate_statue_hint(world: World) -> str:
+def generate_statue_hint(world: "CrystalisWorld") -> str:
     # To mimic how hint generation works in the stand-alone randomizer,
     # this hint will look through the Kirisa Plant Cave and Fog Lamp Cave
     # locations, report the furthest away proguseful item if one exists,
@@ -58,6 +62,7 @@ def generate_statue_hint(world: World) -> str:
                                                kirisa_plant_cave_location, fog_lamp_third_location,
                                                fog_lamp_second_location, fog_lamp_first_location]
     # search for proguseful
+    # TODO: optimize to just one pass
     for proguseful_location in lime_hint_locations:
         item: Optional[Item] = proguseful_location.item
         if item is None:
@@ -200,7 +205,7 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
     return output
 
 
-def generate_output(self, output_directory: str) -> None:
+def generate_output(self: "CrystalisWorld", output_directory: str) -> None:
     if CRYSTALIS_DEBUG:
         # turn this into a test when it's time to write tests
         if self.options.keep_unique_items_and_consumables_separate:
@@ -235,7 +240,7 @@ def generate_output(self, output_directory: str) -> None:
         ap_crys.write_contents(zf)
 
 
-def write_spoiler_header(self, spoiler_handle: TextIO) -> None:
+def write_spoiler_header(self: "CrystalisWorld:", spoiler_handle: TextIO) -> None:
     if self.options.randomize_wall_elements:
         spoiler_handle.write("\nWall Elements:\n")
         for area, element in self.shuffle_data.wall_map.items():
@@ -302,7 +307,7 @@ def write_spoiler_header(self, spoiler_handle: TextIO) -> None:
         spoiler_handle.write("\n")
 
 
-def extend_hint_information(self, hint_data: Dict[int, Dict[int, str]]):
+def extend_hint_information(self: "CrystalisWorld", hint_data: Dict[int, Dict[int, str]]):
     shuffled_entrance_types: Set[CrystalisEntranceTypeEnum] = set()
     player_hint_data: Dict[int, str] = {}
     connected_region_cache: Dict[str, str] = {}

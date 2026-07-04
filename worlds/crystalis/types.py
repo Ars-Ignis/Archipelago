@@ -1,9 +1,13 @@
-import logging
+# Python Imports
 from dataclasses import dataclass
 from enum import IntEnum
+import logging
 from typing import List, Dict, Tuple
 
+# Archipelago Imports
 from BaseClasses import ItemClassification, Location
+
+# DO NOT IMPORT ANY CRYSTALIS FILES HERE; this is the base import, everything else imports this.
 
 
 class CrystalisItemCategoryEnum(IntEnum):

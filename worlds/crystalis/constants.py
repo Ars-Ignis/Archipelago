@@ -1,11 +1,17 @@
-from Utils import Version, tuplize_version
+# Python Imports
 import orjson
 import pkgutil
+from typing import Any
+
+# Archipelago Imports
+from Utils import Version, tuplize_version
+
+# Crystalis Imports
 from .types import *
 
 
 def load_world_version_from_json() -> Version:
-    manifest: dict[str, any] = orjson.loads(pkgutil.get_data(__name__, "archipelago.json").decode("utf-8-sig"))
+    manifest: dict[str, Any] = orjson.loads(pkgutil.get_data(__name__, "archipelago.json").decode("utf-8-sig"))
     version_string: str = manifest["world_version"]
     return tuplize_version(version_string)
 

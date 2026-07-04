@@ -1,11 +1,15 @@
-from Options import Choice, Toggle, PerGameCommonOptions, DeathLink, DeathLinkMixin, OptionGroup, StartInventoryPool, \
-    Visibility, PlandoConnections, OptionDict, OptionList
+# Python Imports
+from schema import And, Schema, Optional
+
+# Archipelago Imports
+from Options import Choice, DeathLink, DeathLinkMixin, OptionDict, OptionGroup, OptionList, PerGameCommonOptions, \
+    PlandoConnections, StartInventoryPool, Toggle, Visibility
+
+# Crystalis Imports
 from .constants import *
+from .items import items_data
 from .regions import entrances_data
 from .types import CrystalisEntranceTypeEnum, CrystalisItemCategoryEnum
-from .items import items_data
-from schema import And, Schema, Optional
-from typing import List
 
 
 # World Options
@@ -850,7 +854,7 @@ class PlandoKeyItemNames(OptionDict):
 
 
 # helper function for validation of PlandoShopInventories
-def validate_shop_inventory(data: List[str]) -> bool:
+def validate_shop_inventory(data: list[str]) -> bool:
     if len(data) > 4:
         return False
     for item in data:

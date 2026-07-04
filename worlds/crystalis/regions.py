@@ -1,15 +1,20 @@
-from BaseClasses import Region, Entrance, EntranceType, CollectionState
+# Python Imports
+# import orjson - handled by .constants
+# import pkgutil - handled by .constants
+from typing import Set, NamedTuple
+
+# Archipelago Imports
+from BaseClasses import Entrance, EntranceType, Region
+from entrance_rando import disconnect_entrance_for_randomization, EntranceRandomizationError, randomize_entrances
 from Options import OptionError
-from entrance_rando import randomize_entrances, EntranceRandomizationError, disconnect_entrance_for_randomization
+from worlds.generic.Rules import add_rule
+
+# Crystalis Imports
 from .constants import *
-from .types import CrystalisRegionData, CrystalisLocationData, CrystalisEntranceData, CrystalisEntranceTypeEnum, \
-    CrystalisLocation
+from .types import CrystalisEntranceData, CrystalisEntranceTypeEnum, CrystalisLocationData, CrystalisLocation, \
+    CrystalisRegionData
 from .items import CrystalisItem
 from .utils import visualize_regions
-import orjson
-from typing import Dict, List, Set, NamedTuple, Tuple, Any
-import pkgutil
-from worlds.generic.Rules import add_rule
 
 
 def load_region_data_from_json() -> Dict[str, CrystalisRegionData]:
@@ -601,45 +606,8 @@ def connect_entrances(self):
     # if we're deferring entrances, we should now disconnect all the shuffled ones and bail
     # temporarily disabled until the website patcher is updated
     if self.using_ut and self.multiworld.enforce_deferred_connections in ("on", "default"):
-        # set up the variables to connect entrances later
-        self.found_entrances_datastorage_key = "Slot_{player}_found_entrances"
-        self.found_entrances = set()
-        self.found_towns = set()
-        self.in_game_id_to_entrance_name = {}
-        for entrance_data in list(entrances_data.values()):
-            if entrance_data.in_game_id != -1:
-                self.in_game_id_to_entrance_name[entrance_data.in_game_id] = entrance_data.name
-        # a couple of entrances shift based on map settings; all the ones stored above assume vanilla or GBC cave maps
-        if self.options.vanilla_maps == self.options.vanilla_maps.option_lime_passage:
-            self.in_game_id_to_entrance_name[0x0306] = "Wind Valley - East"
-            self.in_game_id_to_entrance_name[0x4202] = "Lime Valley - West"
-        elif self.options.vanilla_maps == self.options.vanilla_maps.option_GBC_cave:
-            # Lime Valley and Desert 2 are consistent
-            if "Cordel Plains - Main" in self.shuffle_data.gbc_cave_exits:
-                # Cordel Plains gets weird because of the seamless transition across the bridge
-                del self.in_game_id_to_entrance_name[0x1405]  # unused
-                self.in_game_id_to_entrance_name[0x1406] = "Cordel Plains - South West"
-                self.in_game_id_to_entrance_name[0x1407] = "Cordel Plains - South"
-                del self.in_game_id_to_entrance_name[0x1503]  # unused
-                self.in_game_id_to_entrance_name[0x1504] = "Cordel Plains - East"
-            if "Goa Valley" in self.shuffle_data.gbc_cave_exits:
-                self.in_game_id_to_entrance_name[0x7801] = "Goa Valley - Added Cave"
-                self.in_game_id_to_entrance_name[0x7802] = "Goa Valley - Palace"
-                self.in_game_id_to_entrance_name[0x7803] = "Goa Valley - Left"
-                self.in_game_id_to_entrance_name[0x7804] = "Goa Valley - Down"
-
-        for entrance_name_a, entrance_name_b in self.shuffle_data.er_pairings.items():
-            entrance_a: Entrance = self.get_entrance(entrance_name_a)
-            entrance_a.connected_region = None
-            entrance_b: Entrance = self.get_entrance(entrance_name_b)
-            entrance_b.connected_region = None
-        if self.options.shuffle_goa:
-            for goa_entrance_name in self.shuffle_data.goa_connection_map.keys():
-                goa_entrance: Entrance = self.get_entrance(goa_entrance_name)
-                goa_entrance.connected_region = None
+        self.defer_entrances()
         # return now to skip GER
-        if CRYSTALIS_DEBUG:
-            visualize_regions(self, "Crystalis Visualized.puml")
         return
 
     # now that all the prep is done, let GER handle the rest
@@ -671,48 +639,3 @@ def connect_entrances(self):
             self.multiworld.spoiler.set_entrance(entrance, _exit, "both", self.player)
     if CRYSTALIS_DEBUG:
         visualize_regions(self, "Crystalis Visualized.puml")
-
-
-def reconnect_found_entrances(self, key: str, value: Any) -> None:
-    # temporarily disabled until the website patcher is updated
-    if value is None or key is None:
-        return
-    for in_game_id in value:
-        if in_game_id not in self.found_entrances:
-            self.found_entrances.add(in_game_id)
-            if in_game_id in self.in_game_id_to_entrance_name:
-                entrance_name_to_connect = self.in_game_id_to_entrance_name[in_game_id]
-                # if the entrance is one that was shuffled, connect it
-                if entrance_name_to_connect in self.shuffle_data.er_pairings:
-                    entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
-                    connected_entrance_name = self.shuffle_data.er_pairings[entrance_name_to_connect]
-                    connected_entrance: Entrance = self.get_entrance(connected_entrance_name)
-                    entrance_to_connect.connected_region = connected_entrance.parent_region
-                    connected_entrance.connected_region = entrance_to_connect.parent_region
-                elif entrance_name_to_connect in self.shuffle_data.goa_connection_map:
-                    entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
-                    connected_region_name: str = self.shuffle_data.goa_connection_map[entrance_name_to_connect]
-                    connected_region: Region = self.get_region(connected_region_name)
-                    entrance_to_connect.connected_region = connected_region
-                    connected_entrance: Entrance
-                    for connected_entrance in connected_region.exits:
-                        if not connected_entrance.connected_region:
-                            break
-                    else:
-                        continue
-                    connected_entrance.connected_region = entrance_to_connect.parent_region
-            # connect a warp entrance for found towns
-            screen_id: int = 0xFF00 & in_game_id
-            if screen_id in TOWNS_WITH_IDS and screen_id not in self.found_towns:
-                self.found_towns.add(screen_id)
-                town_name: str = TOWNS_WITH_IDS[screen_id]
-                town_region: Region = self.get_region(town_name)
-                menu_region: Region = self.get_region("Menu")
-                menu_region.connect(town_region, f"Teleport to {town_name}",
-                                    lambda state: state.has("Teleport", self.player) or
-                                                  state.has("Buy Warp Boots", self.player))
-    if CRYSTALIS_DEBUG:
-        visualize_regions(self, "Crystalis Visualized.puml")
-    return
-
-

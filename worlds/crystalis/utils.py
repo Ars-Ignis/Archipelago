@@ -1,8 +1,11 @@
-from BaseClasses import CollectionState
+# Python Imports
 from typing import TYPE_CHECKING
 
+# Archipelago Imports
+from BaseClasses import CollectionState
+
 if TYPE_CHECKING:
-    from .__init__ import CrystalisWorld
+    from . import CrystalisWorld
 
 
 ITEMS_TO_TEST: list[str] = [

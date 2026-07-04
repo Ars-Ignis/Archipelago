@@ -1,11 +1,14 @@
-import logging
+# Python Imports
+from typing import Callable, List, Optional, TYPE_CHECKING
 
-from BaseClasses import MultiWorld, CollectionState, Entrance, Region
+# Archipelago Imports
+from BaseClasses import CollectionState, Entrance, MultiWorld, Region
+from worlds.generic.Rules import add_rule, set_rule
+
+# Crystalis Imports
 from .constants import *
 from .options import CrystalisOptions
 from .types import CrystalisShuffleData
-from typing import Callable, List, Optional, TYPE_CHECKING
-from worlds.generic.Rules import set_rule, add_rule
 
 if TYPE_CHECKING:
     from . import CrystalisWorld

@@ -1,19 +1,22 @@
-from typing import Mapping, Any, Set
+# Python imports
+from typing import Any, Mapping, Set
 from dataclasses import asdict
 
-from BaseClasses import Tutorial, MultiWorld, Entrance
+# Archipelago imports
+from BaseClasses import Entrance, MultiWorld, Tutorial
 from Options import OptionError
-from Utils import VersionException
-from .constants import *
-from .types import *
-from .items import CrystalisItem, items_data, unidentify_items, create_item, create_items
-from .regions import regions_data, create_regions, shuffle_goa, connect_entrances, entrances_data, \
-    reconnect_found_entrances
-from .options import CrystalisOptions, crystalis_option_groups
-from .logic import set_rules, get_tetrarch_fight_logic
-from .output import generate_output, write_spoiler_header, extend_hint_information
+from worlds.AutoWorld import WebWorld, World
+
+# Crystalis imports
 from .client import CrystalisClient  # Unused, but required to register with BizHawkClient
-from worlds.AutoWorld import World, WebWorld
+from .constants import *
+from .items import create_item, create_items, CrystalisItem, items_data, unidentify_items
+from .logic import get_tetrarch_fight_logic, set_rules
+from .options import CrystalisOptions, crystalis_option_groups
+from .output import extend_hint_information, generate_output, write_spoiler_header
+from .regions import connect_entrances, create_regions, entrances_data, regions_data, shuffle_goa
+from .types import *
+from .ut_support import defer_entrances, reconnect_found_entrances, setup_from_slot_data
 
 
 class CrystalisWeb(WebWorld):
@@ -42,30 +45,56 @@ class CrystalisWorld(World):
 
     # Class variables
     game = "Crystalis"
+    item_name_groups = {}
+    item_name_to_id = {}
+    location_name_to_id = {}
     options_dataclass = CrystalisOptions
     topology_present: bool = True
-    set_rules = set_rules
-    create_regions = create_regions
-    generate_output = generate_output
-    unidentify_items = unidentify_items
-    shuffle_goa = shuffle_goa
-    create_item = create_item
-    create_items = create_items
-    connect_entrances = connect_entrances
-    write_spoiler_header = write_spoiler_header
-    extend_hint_information = extend_hint_information
-    get_tetrarch_fight_logic = get_tetrarch_fight_logic
     web = CrystalisWeb()
-    location_name_to_id = {}
     wild_warp_id_to_region: Dict[int, str] = {}
-    for region_data in regions_data.values():
-        for location_data in region_data.locations:
-            location_name_to_id[location_data.name] = location_data.ap_id_offset + CRYSTALIS_BASE_ID
-        if not region_data.ban_wildwarp:
-            for id in region_data.wildwarpIds:
-                wild_warp_id_to_region[id] = region_data.name
-    item_name_to_id = {}
-    item_name_groups = {}
+
+    # Class functions from other files
+    create_item = create_item                           # items.py
+    create_items = create_items                         # items.py
+    # TODO: move get_filler_item_name to items.py when filler weighting is implemented
+    unidentify_items = unidentify_items                 # items.py
+    get_tetrarch_fight_logic = get_tetrarch_fight_logic # logic.py, might be unnecessary if/when moving to RuleBuilder
+    set_rules = set_rules                               # logic.py
+    extend_hint_information = extend_hint_information   # output.py
+    generate_output = generate_output                   # output.py
+    write_spoiler_header = write_spoiler_header         # output.py
+    connect_entrances = connect_entrances               # regions.py
+    create_regions = create_regions                     # regions.py
+    shuffle_goa = shuffle_goa                           # regions.py
+
+    # member variables
+    cave_entrances: List[Tuple[Entrance, Entrance]]
+    cave_exits: List[Tuple[Entrance, Entrance]]
+    goa_lower_floors: Set[str]
+    goa_upper_floors: Set[str]
+    houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
+    locations_data: List[CrystalisLocationData]
+    options: CrystalisOptions
+    shared_icon_houses: List[Entrance]
+    shuffle_data: CrystalisShuffleData
+    tunnel_map: Dict[str, List[str]]
+
+    # Universal Tracker specific class variables
+    glitches_item_name: str = "UT_GLITCHED"
+    ut_can_gen_without_yaml: bool = True
+
+    # Universal Tracker specific class functions from ut_support.py
+    defer_entrances = defer_entrances
+    reconnect_found_entrances = reconnect_found_entrances
+    setup_from_slot_data = setup_from_slot_data
+
+    # Universal Tracker specific member variables
+    found_entrances: Set[int]
+    found_towns: Set[int]
+    in_game_id_to_entrance_name: Dict[int, str]
+    using_ut: bool
+
+    # populate static tables
     for item in items_data.values():
         item_name_to_id[item.name] = item.ap_id_offset + CRYSTALIS_BASE_ID
         for group in item.groups:
@@ -74,27 +103,12 @@ class CrystalisWorld(World):
             else:
                 item_name_groups[group] = {item.name}
 
-    # Universal Tracker specific class variables
-    ut_can_gen_without_yaml: bool = True
-    reconnect_found_entrances = reconnect_found_entrances
-    glitches_item_name: str = "UT_GLITCHED"
-
-    # member variables
-    options: CrystalisOptions
-    shuffle_data: CrystalisShuffleData
-    shared_icon_houses: List[Entrance]
-    houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
-    tunnel_map: Dict[str, List[str]]
-    cave_entrances: List[Tuple[Entrance, Entrance]]
-    cave_exits: List[Tuple[Entrance, Entrance]]
-    goa_lower_floors: Set[str]
-    goa_upper_floors: Set[str]
-    locations_data: List[CrystalisLocationData]
-    # Universal Tracker specific member variables
-    using_ut: bool
-    in_game_id_to_entrance_name: Dict[int, str]
-    found_entrances: Set[int]
-    found_towns: Set[int]
+    for region_data in regions_data.values():
+        for location_data in region_data.locations:
+            location_name_to_id[location_data.name] = location_data.ap_id_offset + CRYSTALIS_BASE_ID
+        if not region_data.ban_wildwarp:
+            for id in region_data.wildwarpIds:
+                wild_warp_id_to_region[id] = region_data.name
 
     @classmethod
     def stage_generate_early(cls, multiworld: MultiWorld) -> None:
@@ -186,64 +200,10 @@ class CrystalisWorld(World):
             logging.warning("Wm (Randomize maps) not implemented yet. Turning this option off.")
             self.options.randomize_maps.value = self.options.randomize_maps.option_false
 
-        if hasattr(self.multiworld, "re_gen_passthrough"):
+        if getattr(self.multiworld, "re_gen_passthrough", False):
             if "Crystalis" in self.multiworld.re_gen_passthrough:
-                self.using_ut = True
                 passthrough = self.multiworld.re_gen_passthrough["Crystalis"]
-                if "version" not in passthrough:
-                    err_string = f"Crystalis APWorld version mismatch. Multiworld generated without versioning; " \
-                                 f"local install using {self.world_version.as_simple_string()}"
-                    raise VersionException(err_string)
-                else:
-                    generator_version: Version = tuplize_version(passthrough["version"])
-                    if generator_version.major != self.world_version.major:
-                        err_string = f"Crystalis APWorld version mismatch. Multiworld generated with " \
-                                     f"{passthrough['version']}; local install using " \
-                                     f"{self.world_version.as_simple_string()}"
-                        raise VersionException(err_string)
-                self.options.randomize_maps.value = passthrough["randomize_maps"]
-                self.options.shuffle_areas.value = passthrough["shuffle_areas"]
-                self.options.shuffle_houses.value = passthrough["shuffle_houses"]
-                self.options.randomize_tradeins.value = passthrough["randomize_tradeins"]
-                self.options.unidentified_key_items.value = passthrough["unidentified_key_items"]
-                self.options.randomize_wall_elements = passthrough["randomize_wall_elements"]
-                self.options.shuffle_goa.value = passthrough["shuffle_goa"]
-                self.options.randomize_wild_warp.value = passthrough["randomize_wild_warp"]
-                self.options.story_mode.value = passthrough["story_mode"]
-                self.options.no_bow_mode.value = passthrough["no_bow_mode"]
-                self.options.orbs_not_required.value = passthrough["orbs_not_required"]
-                self.options.thunder_warp.value = passthrough["thunder_warp"]
-                self.options.vanilla_dolphin.value = passthrough["vanilla_dolphin"]
-                self.options.fake_flight.value = passthrough["fake_flight"]
-                self.options.statue_glitch.value = passthrough["statue_glitch"]
-                self.options.mt_sabre_skip.value = passthrough["mt_sabre_skip"]
-                self.options.statue_gauntlet_skip.value = passthrough["statue_gauntlet_skip"]
-                self.options.sword_charge_glitch.value = passthrough["sword_charge_glitch"]
-                self.options.trigger_skip.value = passthrough["trigger_skip"]
-                self.options.rage_skip.value = passthrough["rage_skip"]
-                self.options.randomize_monster_weaknesses.value = passthrough["randomize_monster_weaknesses"]
-                self.options.oops_all_mimics.value = passthrough["oops_all_mimics"]
-                self.options.dont_shuffle_mimics.value = passthrough["dont_shuffle_mimics"]
-                self.options.keep_unique_items_and_consumables_separate.value = \
-                    passthrough["keep_unique_items_and_consumables_separate"]
-                self.options.guarantee_refresh.value = passthrough["guarantee_refresh"]
-                self.options.battle_magic_not_guaranteed.value = passthrough["battle_magic_not_guaranteed"]
-                self.options.tink_mode.value = passthrough["tink_mode"]
-                self.options.barrier_not_guaranteed.value = passthrough["barrier_not_guaranteed"]
-                self.options.gas_mask_not_guaranteed.value = passthrough["gas_mask_not_guaranteed"]
-                self.options.charge_shots_only.value = passthrough["charge_shots_only"]
-                self.options.dont_buff_bonus_items.value = passthrough["dont_buff_bonus_items"]
-                self.options.vanilla_maps.value = passthrough["vanilla_maps"]
-                self.options.vanilla_wild_warp.value = passthrough["vanilla_wild_warp"]
-                shuffle_dict: Dict[str, Any] = passthrough["shuffle_data"]
-                self.shuffle_data = CrystalisShuffleData(shuffle_dict["wall_map"], shuffle_dict["key_item_names"],
-                                                         shuffle_dict["trade_in_map"], shuffle_dict["boss_reqs"],
-                                                         shuffle_dict["gbc_cave_exits"], shuffle_dict["thunder_warp"],
-                                                         shuffle_dict["shop_inventories"], shuffle_dict["wildwarps"],
-                                                         shuffle_dict["goa_connection_map"], shuffle_dict["er_pairings"])
-                # goa upper floors vs. goa lower floors doesn't matter for UT, so use default values
-                self.goa_lower_floors = {"Kelbesque", "Sabera"}
-                self.goa_upper_floors = {"Mado", "Karmine"}
+                self.setup_from_slot_data(passthrough)
                 return  # bail early, we don't need the rest of this lmao
 
         self.using_ut = False
