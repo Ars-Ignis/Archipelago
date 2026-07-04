@@ -346,7 +346,6 @@ class CrystalisFile(APAutoPatchInterface):
         manifest["patch_file_ending"] = ".apcrys"
         return manifest
 
-    @classmethod
     def patch(self, target: str) -> None:
         # 'patch' for this game is a misnomer, because patching is done on the Crystalis Randomizer AP website
         # However, for ease of use on the user's end, I want to attempt to load the patched ROM if they've already
@@ -357,4 +356,4 @@ class CrystalisFile(APAutoPatchInterface):
             raise FileNotFoundError(f"Crystalis: Unable to find patched ROM at path {target}. Please visit "
                                     f"https://crystalisrandomizer.com/ap with your patch file to patch the ROM, then "
                                     f"place it next to the patch file and try again.")
-
+        self.read()
