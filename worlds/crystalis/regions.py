@@ -4,7 +4,7 @@
 from typing import Set, NamedTuple
 
 # Archipelago Imports
-from BaseClasses import Entrance, EntranceType, Region
+from BaseClasses import Entrance, EntranceType, Region, MultiWorld
 from entrance_rando import disconnect_entrance_for_randomization, EntranceRandomizationError, randomize_entrances
 from Options import OptionError
 from worlds.generic.Rules import add_rule
@@ -198,7 +198,7 @@ def create_regions(self) -> None:
             shop_region.connect(buy_healing_region, "Buy Healing: " + shop)
         if "Warp Boots" in inventory:
             shop_region.connect(buy_warp_boots_region, "Buy Warp Boots: " + shop)
-    # add Thunder Warp entrance
+    # add Thunder Warp entrances
     menu_region = local_region_cache["Menu"]
     for town in TOWNS:
         thunder_warp_region = local_region_cache[town]
@@ -604,9 +604,10 @@ def connect_entrances(self):
                                                                        self.player) and windmill_reg.can_reach(state))
                     self.multiworld.register_indirect_condition(windmill_reg, entrance_to_lock)
     # if we're deferring entrances, we should now disconnect all the shuffled ones and bail
-    # temporarily disabled until the website patcher is updated
-    if self.using_ut and self.multiworld.enforce_deferred_connections in ("on", "default"):
+    if self.using_ut and (self.multiworld.enforce_deferred_connections in ("on", "default") or self.is_race):
         self.defer_entrances()
+        if self.is_race:
+            self.create_ut_race_regions()
         # return now to skip GER
         return
 

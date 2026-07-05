@@ -16,7 +16,7 @@ from .options import CrystalisOptions, crystalis_option_groups
 from .output import extend_hint_information, generate_output, write_spoiler_header
 from .regions import connect_entrances, create_regions, entrances_data, regions_data, shuffle_goa
 from .types import *
-from .ut_support import defer_entrances, reconnect_found_entrances, setup_from_slot_data
+from .ut_support import create_ut_race_regions, defer_entrances, reconnect_found_entrances, setup_from_slot_data
 
 
 class CrystalisWeb(WebWorld):
@@ -73,6 +73,7 @@ class CrystalisWorld(World):
     goa_lower_floors: Set[str]
     goa_upper_floors: Set[str]
     houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
+    is_race: bool
     locations_data: List[CrystalisLocationData]
     options: CrystalisOptions
     shared_icon_houses: List[Entrance]
@@ -84,6 +85,7 @@ class CrystalisWorld(World):
     ut_can_gen_without_yaml: bool = True
 
     # Universal Tracker specific class functions from ut_support.py
+    create_ut_race_regions = create_ut_race_regions
     defer_entrances = defer_entrances
     reconnect_found_entrances = reconnect_found_entrances
     setup_from_slot_data = setup_from_slot_data
@@ -93,6 +95,7 @@ class CrystalisWorld(World):
     found_towns: Set[int]
     in_game_id_to_entrance_name: Dict[int, str]
     using_ut: bool
+    using_ut_deferred_entrances: bool
 
     # populate static tables
     for item in items_data.values():
@@ -207,6 +210,7 @@ class CrystalisWorld(World):
                 return  # bail early, we don't need the rest of this lmao
 
         self.using_ut = False
+        self.is_race = self.multiworld.is_race
 
         # walls first
         wall_weaknesses: List[str] = []
@@ -369,6 +373,11 @@ class CrystalisWorld(World):
                                                          "dont_buff_bonus_items", "vanilla_maps", "vanilla_wild_warp",
                                                          "death_link")
         # get shuffle data for tracker purposes, UT regen, and ids for unidentified items
-        slot_data["shuffle_data"] = asdict(self.shuffle_data)
+        slot_data["is_race"] = self.is_race
+        if self.is_race:
+            # only add slot_data necessary for the client to function
+            slot_data["shuffle_data"] = {"key_item_names": self.shuffle_data.key_item_names}
+        else:
+            slot_data["shuffle_data"] = asdict(self.shuffle_data)
         slot_data["version"] = self.world_version.as_simple_string()
         return slot_data

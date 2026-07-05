@@ -1,5 +1,6 @@
 from typing import Any
 from BaseClasses import Entrance, Region
+from Options import OptionError
 from Utils import VersionException
 from .constants import *
 from .regions import entrances_data
@@ -7,6 +8,22 @@ from .utils import *
 
 if TYPE_CHECKING:
     from . import CrystalisWorld
+
+
+def create_ut_race_regions(self: "CrystalisWorld") -> None:
+    # things to cover:
+    #   - walls
+    #       - get a list of entrances representing walls
+    #       - disconnect them
+    #       - rewrite the logic - might be a separate function?
+    #   - boss weaknesses
+    #       - Bosses are entrances? disconnect them
+    #       - rewrite logic - probably need get_tetrarch_fight_logic
+    #   - key items
+    #       - create new regions for each spot a key item can be used?
+    #           -
+    #   - trade-ins
+    pass
 
 
 def defer_entrances(self: "CrystalisWorld"):
@@ -51,7 +68,6 @@ def defer_entrances(self: "CrystalisWorld"):
 
 
 def reconnect_found_entrances(self: "CrystalisWorld", key: str, value: Any) -> None:
-    # temporarily disabled until the website patcher is updated
     if value is None or key is None:
         return
     for in_game_id in value:
@@ -106,6 +122,12 @@ def setup_from_slot_data(self: "CrystalisWorld", slot_data: dict[str, Any]):
                          f"{slot_data['version']}; local install using " \
                          f"{self.world_version.as_simple_string()}"
             raise VersionException(err_string)
+    self.is_race = slot_data["is_race"]
+    self.using_ut_deferred_entrances = self.multiworld.enforce_deferred_connections in ("on", "default") or self.is_race
+    if self.is_race and self.multiworld.enforce_deferred_connections in ["off"]:
+        err_string = "Crystalis: enforce_deferred_entrances must be set to 'on' or 'default' when in race mode. " \
+                     "Please change the setting in the universal_tracker section of host.yaml and restart UT."
+        raise OptionError(err_string)
     self.options.randomize_maps.value = slot_data["randomize_maps"]
     self.options.shuffle_areas.value = slot_data["shuffle_areas"]
     self.options.shuffle_houses.value = slot_data["shuffle_houses"]
@@ -140,12 +162,13 @@ def setup_from_slot_data(self: "CrystalisWorld", slot_data: dict[str, Any]):
     self.options.dont_buff_bonus_items.value = slot_data["dont_buff_bonus_items"]
     self.options.vanilla_maps.value = slot_data["vanilla_maps"]
     self.options.vanilla_wild_warp.value = slot_data["vanilla_wild_warp"]
-    shuffle_dict: Dict[str, Any] = slot_data["shuffle_data"]
-    self.shuffle_data = CrystalisShuffleData(shuffle_dict["wall_map"], shuffle_dict["key_item_names"],
-                                             shuffle_dict["trade_in_map"], shuffle_dict["boss_reqs"],
-                                             shuffle_dict["gbc_cave_exits"], shuffle_dict["thunder_warp"],
-                                             shuffle_dict["shop_inventories"], shuffle_dict["wildwarps"],
-                                             shuffle_dict["goa_connection_map"], shuffle_dict["er_pairings"])
+    if not self.is_race: # not convinced of this, may be removed
+        shuffle_dict: Dict[str, Any] = slot_data["shuffle_data"]
+        self.shuffle_data = CrystalisShuffleData(shuffle_dict["wall_map"], shuffle_dict["key_item_names"],
+                                                 shuffle_dict["trade_in_map"], shuffle_dict["boss_reqs"],
+                                                 shuffle_dict["gbc_cave_exits"], shuffle_dict["thunder_warp"],
+                                                 shuffle_dict["shop_inventories"], shuffle_dict["wildwarps"],
+                                                 shuffle_dict["goa_connection_map"], shuffle_dict["er_pairings"])
     # goa upper floors vs. goa lower floors doesn't matter for UT, so use default values
     self.goa_lower_floors = {"Kelbesque", "Sabera"}
     self.goa_upper_floors = {"Mado", "Karmine"}
