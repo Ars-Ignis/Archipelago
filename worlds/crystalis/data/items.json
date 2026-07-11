@@ -5740,8 +5740,8 @@
     "category": 4,
     "notes": ""
   },
-  "Nuper Trap": {
-    "name": "Nuper Trap",
+  "Petrify Trap": {
+    "name": "Petrify Trap",
     "rom_id": 255,
     "ap_id_offset": 338,
     "unique": false,
@@ -5756,8 +5756,8 @@
     "category": 4,
     "notes": ""
   },
-  "Petrify Trap": {
-    "name": "Petrify Trap",
+  "Poison Trap": {
+    "name": "Poison Trap",
     "rom_id": 255,
     "ap_id_offset": 339,
     "unique": false,
@@ -5772,8 +5772,8 @@
     "category": 4,
     "notes": ""
   },
-  "Poison Trap": {
-    "name": "Poison Trap",
+  "Nuper Trap": {
+    "name": "Nuper Trap",
     "rom_id": 255,
     "ap_id_offset": 340,
     "unique": false,
