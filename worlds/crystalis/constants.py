@@ -403,7 +403,7 @@ START_OF_CONSUMABLE_INV_ADDR: int = 0x6440
 END_OF_CONSUMABLE_INV_ADDR: int = 0x6447
 LOCATION_FLAGS_ADDR: int = 0x64A0
 ITEM_FLAGS_ADDR: int = 0x64C0
-GET_ITEM_FLAG_ADDR: int = 0x657A # status byte, item ID byte, metadata byte
+GET_ITEM_FLAG_ADDR: int = 0x657A # metadata byte, status byte, item ID byte
 RECEIVED_INDEX_ADDR: int = 0x657D
 AP_ROM_LABEL_ADDR: int = 0x25715
 
@@ -416,6 +416,13 @@ GAME_MODE_DEATH: int = 3
 GAME_MODE_NORMAL: int = 8
 GAME_MODE_DYNA_DEFEATED: int = 0x1E
 MAIN_LOOP_GAME: int = 1
+TRAP_NAME_TO_METADATA_VALUE: dict[str, int] = {
+    "Wild Warp Trap": 0,
+    "Paralysis Trap": 1,
+    "Petrify Trap": 2,
+    "Poison Trap": 3,
+    "Nuper Trap": 4
+}
 
 # APWorld Data
 ASINA_LOCATION_NAME: str = "Asina In Back Room"

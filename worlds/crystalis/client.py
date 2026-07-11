@@ -133,7 +133,7 @@ class CrystalisClient(BizHawkClient):
             read_value = await bizhawk.read(ctx.bizhawk_ctx, [(LOCATION_FLAGS_ADDR, 16, "System Bus"),
                                                               (ITEM_FLAGS_ADDR, 16, "System Bus"),
                                                               (RECEIVED_INDEX_ADDR, 2, "System Bus"),
-                                                              (GET_ITEM_FLAG_ADDR, 1, "System Bus"),
+                                                              (GET_ITEM_FLAG_ADDR, 2, "System Bus"),
                                                               (GAME_MODE_ADDR, 1, "System Bus"),
                                                               (MAIN_LOOP_MODE_ADDR, 1, "System Bus"),
                                                               (CURRENT_LOCATION_ADDR, 2, "System Bus"),
@@ -191,12 +191,12 @@ class CrystalisClient(BizHawkClient):
                         self.iterations_matched = 0
                         self.prev_location_flags = location_flags
 
-                    get_item_flag: bool = read_value[3][0] != 0
+                    get_item_flag: bool = read_value[3][1] != 0
                     item_flags: bytes = read_value[1]
                     received_crystalis: bool = item_flags[0] & 16 != 0
                     if not get_item_flag and not received_crystalis and location_flags[0] & 16 != 0:
                         await bizhawk.guarded_write(ctx.bizhawk_ctx,
-                                                    [(GET_ITEM_FLAG_ADDR, [1, CRYSTALIS_SWORD_ITEM_ID], "System Bus")],
+                                                    [(GET_ITEM_FLAG_ADDR, [0, 1, CRYSTALIS_SWORD_ITEM_ID], "System Bus")],
                                                     [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus")])
                     received_indices: bytes = read_value[2]
                     nonconsumable_index: int = received_indices[0]
@@ -243,9 +243,14 @@ class CrystalisClient(BizHawkClient):
                                     # placed incorrectly under the Eu flag
                                     unique = False
                                     # need to determine warp destination
-                                    # for now that's just the thunderwarp spot from slot_data
+                                    # get and parse the sword name
                                     try:
-                                        item_metadata = TOWNS.index(ctx.slot_data["shuffle_data"]["thunder_warp"])
+                                        item_name: str = items_data_by_id[item_to_write.item].name
+                                        town_name: str = item_name.removeprefix("Sword of Thunder (").removesuffix(")")
+                                        if town_name == "No Warp":
+                                            item_metadata = 0 # the value doesn't matter since the game won't do anything with it
+                                        else:
+                                            item_metadata = TOWNS.index(town_name)
                                     except ValueError:
                                         # thunder_warp not found, silently ignore the error
                                         if CRYSTALIS_DEBUG:
@@ -259,12 +264,18 @@ class CrystalisClient(BizHawkClient):
                                         item_metadata |= 0x10
                                 byte: int = item_id // 8
                                 bit: int = item_id % 8
+                                if item_id == 0xFF:
+                                    # if we still don't have a real ID, then this is a trap that needs metadata
+                                    item_metadata = TRAP_NAME_TO_METADATA_VALUE[items_data_by_id[item_to_write.item].name]
+                                    unique = True
+                                    byte = 0
+                                    bit = 0
                                 item_flag_byte: byte = item_flags[byte] if unique \
                                     else item_flags[byte] & (0xFF ^ (1 << bit))
                                 await bizhawk.guarded_write(ctx.bizhawk_ctx,
                                                             [(RECEIVED_INDEX_ADDR, [nonconsumable_index + 1],
                                                               "System Bus"),
-                                                             (GET_ITEM_FLAG_ADDR, [1, item_id, item_metadata], "System Bus"),
+                                                             (GET_ITEM_FLAG_ADDR, [item_metadata, 1, item_id], "System Bus"),
                                                              (ITEM_FLAGS_ADDR + byte, [item_flag_byte], "System Bus")],
                                                             [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus"),
                                                              (SCREEN_LOCK_ADDR, [0], "System Bus")])
@@ -280,7 +291,7 @@ class CrystalisClient(BizHawkClient):
                                     await bizhawk.guarded_write(ctx.bizhawk_ctx,
                                                                 [(RECEIVED_INDEX_ADDR + 1, [consumable_index + 1],
                                                                   "System Bus"),
-                                                                 (GET_ITEM_FLAG_ADDR, [1, item_id], "System Bus"),
+                                                                 (GET_ITEM_FLAG_ADDR, [0, 1, item_id], "System Bus"),
                                                                  (ITEM_FLAGS_ADDR + byte, [item_flag_byte],
                                                                   "System Bus")],
                                                                 [(END_OF_CONSUMABLE_INV_ADDR, [0xFF], "System Bus"),
