@@ -432,14 +432,14 @@ def set_rules(self: "CrystalisWorld") -> None:
     rage_river = self.get_entrance("Rage - South -> Rage - North")
     rage_river.access_rule = can_cross_rivers
     if options.rage_skip != options.rage_skip.option_in_logic:
-        add_rule(rage_river, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player), "and")
+        add_rule(rage_river, lambda state: state.has_group(shuffle_data.trade_in_map["Rage"], player), "and")
         if options.rage_skip == options.rage_skip.option_out_of_logic:
             add_rule(rage_river, lambda state: state.has(self.glitches_item_name, player), "or")
     # need the reverse entrance because you only get the free push across if you don't have Rage's sword
     rage_river_reverse = self.get_entrance("Rage - North -> Rage - South")
     rage_river_reverse.access_rule = can_cross_rivers
     rage_reward = self.get_location("Rage")
-    set_rule(rage_reward, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player))
+    set_rule(rage_reward, lambda state: state.has_group(shuffle_data.trade_in_map["Rage"], player))
 
     # Portoa Castle
     teller_front = self.get_region("Fortune Teller - Front")
@@ -449,7 +449,7 @@ def set_rules(self: "CrystalisWorld") -> None:
     second_guard = self.get_entrance("Portoa Palace - Throne Room -> Portoa Palace - Gift Trigger")
     queen_gift = self.get_location("Portoa Queen")
     set_rule(queen_gift, lambda state: teller_front.can_reach(state) or teller_back.can_reach(state))
-    add_rule(queen_gift, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player) or
+    add_rule(queen_gift, lambda state: state.has_group(shuffle_data.trade_in_map["Rage"], player) or
                                        gift_trigger.can_reach(state), "and")
     add_rule(queen_gift, lambda state: state.has("Mesia's Message", player), "or")
     if options.trigger_skip != options.trigger_skip.option_in_logic and \

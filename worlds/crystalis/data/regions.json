@@ -4201,10 +4201,10 @@
     "entrances": [
       {
         "name": "Mesia - Exit",
-        "entrance_type": 6,
+        "entrance_type": 16,
         "vanilla_target": "Rage - North",
         "exit_key": "5200 edge:bottom",
-        "house_key": "",
+        "house_key": "Mesia Shrine",
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
@@ -6482,10 +6482,10 @@
       },
       {
         "name": "Rage Tree",
-        "entrance_type": 5,
+        "entrance_type": 15,
         "vanilla_target": "Mesia",
         "exit_key": "4300 cave",
-        "house_key": "",
+        "house_key": "Mesia Shrine",
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
@@ -8363,7 +8363,7 @@
         "house_type": "",
         "can_lock": false,
         "in_game_id": -1,
-        "pseudologic": "can_fight(Tower Robots)",
+        "pseudologic": "has_any_level_3",
         "notes": ""
       }
     ],
@@ -8378,11 +8378,11 @@
     "notes": "",
     "entrances": [
       {
-        "name": "Tower Before Dyna",
+        "name": "Tower Outside Dyna",
         "entrance_type": 15,
         "vanilla_target": "Tower - Mesia",
-        "exit_key": "1900 door",
-        "house_key": "Mesia Tower",
+        "exit_key": "5c02 cave",
+        "house_key": "Tower Mesia",
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
@@ -8410,16 +8410,16 @@
   "Tower - Mesia": {
     "name": "Tower - Mesia",
     "wildwarpIds": [
-      93
+      94
     ],
     "notes": "",
     "entrances": [
       {
-        "name": "Mesia's Tower Chamber - Exit",
+        "name": "Tower Mesia - Exit",
         "entrance_type": 16,
         "vanilla_target": "Tower - Upper",
-        "exit_key": "1900 door",
-        "house_key": "Mesia Tower",
+        "exit_key": "5e00 edge:bottom",
+        "house_key": "Tower Mesia",
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
@@ -8434,7 +8434,7 @@
   "Tower - Dyna": {
     "name": "Tower - Dyna",
     "wildwarpIds": [
-      94,
+      93,
       95
     ],
     "notes": "",

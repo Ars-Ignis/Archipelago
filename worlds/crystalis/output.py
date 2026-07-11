@@ -100,7 +100,8 @@ def convert_shuffle_data(shuffle_data: CrystalisShuffleData, options: CrystalisO
         if recipient != "Rage" and recipient != "Tornel":
             trade_in_map[trade] = recipient
     tornel_trade: int = ELEMENTS.index(shuffle_data.trade_in_map["Tornel"]) * 2 + 6
-    rage_trade: int = items_data[shuffle_data.trade_in_map["Rage"]].rom_id
+    rage_sword_element: str = shuffle_data.trade_in_map["Rage"].removesuffix(" Sword")
+    rage_trade: int = ELEMENTS.index(rage_sword_element)
     boss_weaknesses: Dict[str, int] = {}
     for boss, weakness in shuffle_data.boss_reqs.items():
         boss_id = BOSS_IDS[boss]
