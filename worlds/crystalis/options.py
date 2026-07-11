@@ -1,15 +1,19 @@
 # Python Imports
 from schema import And, Schema, Optional
+from typing import TYPE_CHECKING
 
 # Archipelago Imports
-from Options import Choice, DeathLink, DeathLinkMixin, OptionDict, OptionGroup, OptionList, PerGameCommonOptions, \
-    PlandoConnections, StartInventoryPool, Toggle, Visibility
+from Options import Choice, DeathLink, DeathLinkMixin, OptionCounter, OptionDict, OptionError, OptionGroup, OptionList,\
+                     PerGameCommonOptions, PlandoConnections, StartInventoryPool, Toggle, Visibility
 
 # Crystalis Imports
 from .constants import *
 from .items import items_data
 from .regions import entrances_data
 from .types import CrystalisEntranceTypeEnum, CrystalisItemCategoryEnum
+
+if TYPE_CHECKING:
+    from . import CrystalisWorld
 
 
 # World Options
@@ -886,6 +890,38 @@ class PlandoWildWarp(OptionList):
     visibility = Visibility.template | Visibility.spoiler
 
 
+class FillerWeights(OptionCounter):
+    """Allows you to customize the filler items in the game. Any consumable other than Opel Statue can be given a
+    weight, as can Mimic, Wild Warp Trap, Paralysis Trap, Petrify Trap, Poison Trap, Nuper Trap, and Sword of Thunder.
+    If the weights add up to exactly the number of spaces for filler, then the exact amount of filler items will be
+    generated. Otherwise, the filler items will be randomly created using these weights. Note: a filler Sword of Thunder
+    will always generate a random warp destination if thunder warps are enabled, and no warp otherwise. For reference,
+    there are exactly 55 items that are always created. Default settings have 103 locations, leaving 48 spots for filler.
+    Vanilla maps (or Lime Passage) will remove the two locations in GBC Cave. Vanilla dolphin will remove one location,
+    Kensu in Cabin. House Shuffle or Area Shuffle will add two locations in Mezame Shrine, but will also make Zebu
+    Student not a location anymore, for a net add of one location."""
+
+    def verify(self, world: "CrystalisWorld", player_name: str, plando_options: "PlandoOptions") -> None:
+        super(FillerWeights, self).verify(world, player_name, plando_options)
+        if sum(self.value.values()) <= 0:
+            raise OptionError("Crystalis: all filler_weights are 0; at least one must be non-zero.")
+
+    min = 0
+    valid_keys = frozenset([item.name for item in items_data.values() if "Weightable" in item.groups]
+                           + ["Sword of Thunder"])
+    visibility = Visibility.template | Visibility.spoiler
+    default = {
+        "Medical Herb": 8,
+        "Antidote": 4,
+        "Lysis Plant": 3,
+        "Fruit of Lime": 1,
+        "Fruit of Power": 5,
+        "Magic Ring": 9,
+        "Fruit of Repun": 2,
+        "Warp Boots": 3,
+        "Mimic": 13
+    }
+
 crystalis_option_groups = [
     OptionGroup('World Options', [
         RandomizeMaps,
@@ -967,7 +1003,8 @@ crystalis_option_groups = [
         PlandoTradeIns,
         PlandoKeyItemNames,
         PlandoShopInventories,
-        PlandoWildWarp
+        PlandoWildWarp,
+        FillerWeights
     ])
 ]
 
@@ -1045,3 +1082,4 @@ class CrystalisOptions(PerGameCommonOptions, DeathLinkMixin):
     key_item_name_plando: PlandoKeyItemNames
     shop_inventory_plando: PlandoShopInventories
     wild_warp_plando: PlandoWildWarp
+    filler_weights: FillerWeights

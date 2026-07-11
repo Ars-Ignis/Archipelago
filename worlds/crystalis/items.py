@@ -226,14 +226,21 @@ def create_items(self) -> None:
     locations_count = len([location for location in self.multiworld.get_locations(self.player)
                            if location.address is not None and location.item is None])
     if items_created < locations_count:
-        logging.debug(f"Crystalis: Fewer items ({items_created}) than empty locations ({locations_count}).")
-        logging.debug(f"Crystalis: creating {locations_count - items_created} extra Medical Herbs.")
-        if self.options.keep_unique_items_and_consumables_separate:
-            for i in range(locations_count - items_created):
-                non_unique_items.append(self.create_item("Medical Herb"))
+        filler_items: List[CrystalisItem] = []
+        remaining_item_count: int = locations_count - items_created
+        total_filler_weight: int = sum(self.options.filler_weights.value.values())
+        if remaining_item_count == total_filler_weight:
+            # create exact counts
+            for item_name, weight in self.options.filler_weights.value.items():
+                for i in range(weight):
+                    filler_items.append(self.create_item(item_name))
         else:
-            for i in range(locations_count - items_created):
-                self.multiworld.itempool.append(self.create_item("Medical Herb"))
+            for i in range(remaining_item_count):
+                filler_items.append(self.create_item(self.get_filler_item_name()))
+        if self.options.keep_unique_items_and_consumables_separate:
+                non_unique_items += filler_items
+        else:
+                self.multiworld.itempool += filler_items
     elif locations_count < items_created:
         raise Exception(f"Too many items ({items_created}) for the number of available locations ({locations_count}).")
 
@@ -260,3 +267,27 @@ def create_items(self) -> None:
             self.multiworld.itempool += remaining_items
             for non_unique_location in non_unique_locations:
                 non_unique_location.locked = True
+
+
+def get_filler_item_name(self: "CrystalisWorld") -> str:
+    filler_weights: dict[str, int] = self.options.filler_weights.value
+    total_filler_weight: int = sum(filler_weights.values())
+    filler_choice: int = self.random.randint(0, total_filler_weight-1)
+    accumulated_weight: int = 0
+    chosen_item_name: str = ""
+    for item_name, weight in filler_weights.items():
+        accumulated_weight += weight
+        if filler_choice < accumulated_weight:
+            chosen_item_name = item_name
+            break
+    logging.debug(f"Crystalis: exhausted filler weights without picking a filler item. total_filler_weight: "
+                  f"{total_filler_weight}, filler_choice: {filler_choice}, filler_weights: {filler_weights}")
+    if chosen_item_name == "":
+        chosen_item_name = "Medical Herb"
+    if chosen_item_name == "Sword of Thunder":
+        if self.options.thunder_warp.value == self.options.thunder_warp.option_none:
+            return "Sword of Thunder (No Warp)"
+        else:
+            town_name: str = self.random.choice(TOWNS)
+            return f"Sword of Thunder ({town_name})"
+    return chosen_item_name

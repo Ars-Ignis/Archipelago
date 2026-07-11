@@ -228,7 +228,7 @@ class CrystalisClient(BizHawkClient):
                     if not get_item_flag and self.current_location != 0:
                         if nonconsumable_index + consumable_index < len(ctx.items_received):
                             non_consumables = [item for item in ctx.items_received if
-                                               items_data_by_id[item.item].groups != ["Consumable"]]
+                                               "Consumable" in items_data_by_id[item.item].groups]
                             if nonconsumable_index < len(non_consumables):
                                 item_to_write: NetworkItem = non_consumables[nonconsumable_index]
                                 unique: bool = items_data_by_id[item_to_write.item].unique

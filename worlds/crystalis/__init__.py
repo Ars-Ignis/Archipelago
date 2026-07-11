@@ -10,7 +10,7 @@ from worlds.AutoWorld import WebWorld, World
 # Crystalis imports
 from .client import CrystalisClient  # Unused, but required to register with BizHawkClient
 from .constants import *
-from .items import create_item, create_items, CrystalisItem, items_data, unidentify_items
+from .items import create_item, create_items, CrystalisItem, get_filler_item_name, items_data, unidentify_items
 from .logic import get_tetrarch_fight_logic, set_rules
 from .options import CrystalisOptions, crystalis_option_groups
 from .output import extend_hint_information, generate_output, write_spoiler_header
@@ -56,7 +56,7 @@ class CrystalisWorld(World):
     # Class functions from other files
     create_item = create_item                           # items.py
     create_items = create_items                         # items.py
-    # TODO: move get_filler_item_name to items.py when filler weighting is implemented
+    get_filler_item_name = get_filler_item_name         # items.py
     unidentify_items = unidentify_items                 # items.py
     get_tetrarch_fight_logic = get_tetrarch_fight_logic # logic.py, might be unnecessary if/when moving to RuleBuilder
     set_rules = set_rules                               # logic.py
@@ -351,9 +351,9 @@ class CrystalisWorld(World):
         self.shuffle_data = CrystalisShuffleData(wall_map, key_item_names, trade_in_map, boss_reqs, gbc_cave_exits,
                                                  thunder_warp, shop_inventories, wildwarps, goa_connection_map,
                                                  er_pairings)
-
-    def get_filler_item_name(self) -> str:
-        return "Medical Herb"
+        if self.options.dont_shuffle_mimics:
+            if "Mimic" in self.options.filler_weights.value:
+                del self.options.filler_weights.value["Mimic"]
 
     def fill_slot_data(self) -> Mapping[str, Any]:
         # get logic relevant options for tracker purposes
