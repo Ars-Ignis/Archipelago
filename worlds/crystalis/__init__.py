@@ -374,10 +374,6 @@ class CrystalisWorld(World):
                                                          "death_link")
         # get shuffle data for tracker purposes, UT regen, and ids for unidentified items
         slot_data["is_race"] = self.is_race
-        if self.is_race:
-            # only add slot_data necessary for the client to function
-            slot_data["shuffle_data"] = {"key_item_names": self.shuffle_data.key_item_names}
-        else:
-            slot_data["shuffle_data"] = asdict(self.shuffle_data)
+        slot_data["shuffle_data"] = asdict(self.shuffle_data)
         slot_data["version"] = self.world_version.as_simple_string()
         return slot_data
