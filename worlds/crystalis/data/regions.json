@@ -17,7 +17,8 @@
         "can_lock": false,
         "in_game_id": 6912,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Amazones - Item Shop",
@@ -32,7 +33,8 @@
         "can_lock": false,
         "in_game_id": 6914,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Amazones - Inn",
@@ -47,7 +49,8 @@
         "can_lock": false,
         "in_game_id": 6913,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Amazones - Armor Shop",
@@ -60,7 +63,8 @@
         "can_lock": false,
         "in_game_id": 6915,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Amazones - Aryllis's House",
@@ -73,11 +77,13 @@
         "can_lock": false,
         "in_game_id": 6916,
         "pseudologic": "statue_skip || trigger_skip || Change || Paralysis",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Amazones Armor Shop": {
     "name": "Amazones Armor Shop",
@@ -97,11 +103,13 @@
         "can_lock": false,
         "in_game_id": 54016,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Amazones Inn": {
     "name": "Amazones Inn",
@@ -121,11 +129,13 @@
         "can_lock": false,
         "in_game_id": 53504,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Amazones Item Shop": {
     "name": "Amazones Item Shop",
@@ -145,11 +155,13 @@
         "can_lock": false,
         "in_game_id": 53760,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Angry Sea - Beach House Area": {
     "name": "Angry Sea - Beach House Area",
@@ -169,7 +181,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Angry Sea - Beach House",
@@ -182,11 +195,15 @@
         "can_lock": false,
         "in_game_id": 24583,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Shell Flute"
+    ]
   },
   "Angry Sea - Cave Area": {
     "name": "Angry Sea - Cave Area",
@@ -204,7 +221,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Angry Sea - Exposed Cave",
@@ -217,11 +235,15 @@
         "can_lock": true,
         "in_game_id": 24581,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Shell Flute"
+    ]
   },
   "Angry Sea - Flooded Cave Land": {
     "name": "Angry Sea - Flooded Cave Land",
@@ -239,7 +261,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Angry Sea - Deep Cave",
@@ -252,11 +275,15 @@
         "can_lock": true,
         "in_game_id": 26625,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Shell Flute"
+    ]
   },
   "Angry Sea - Flooded Cave Water": {
     "name": "Angry Sea - Flooded Cave Water",
@@ -276,7 +303,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -289,11 +317,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Angry Sea - North Land": {
     "name": "Angry Sea - North Land",
@@ -311,7 +341,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || (Shell Flute && can_use_shell_flute)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Angry Sea - Up",
@@ -324,11 +355,15 @@
         "can_lock": false,
         "in_game_id": 24577,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Shell Flute"
+    ]
   },
   "Angry Sea - North Water": {
     "name": "Angry Sea - North Water",
@@ -346,7 +381,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -359,11 +395,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Angry Sea - South Water": {
     "name": "Angry Sea - South Water",
@@ -381,7 +419,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -394,7 +433,8 @@
         "can_lock": true,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -407,7 +447,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -420,7 +461,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "trigger_skip || (Shell Flute && can_use_shell_flute)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -433,7 +475,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || ( (Shell Flute && can_use_shell_flute) && (Golden Statue || ghetto_flight))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -446,10 +489,14 @@
         "prevent_loss": true,
         "is_chest": false,
         "entrance_hint": "",
-        "pseudologic": "Statue of Gold"
+        "pseudologic": "Statue of Gold",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Statue of Gold"
+    ]
   },
   "Aryllis's House": {
     "name": "Aryllis's House",
@@ -470,7 +517,8 @@
         "can_lock": false,
         "in_game_id": 54272,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -483,7 +531,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Aryllis's House - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Aryllis",
@@ -494,10 +543,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Aryllis's House - Exit",
-        "pseudologic": "Change && trade_in(Aryllis)"
+        "pseudologic": "Change && trade_in(Aryllis)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Kirisa Plant"
+    ]
   },
   "Asina's Chambers": {
     "name": "Asina's Chambers",
@@ -517,7 +570,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -530,10 +584,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Portoa Waterway - Exit",
-        "pseudologic": "can_reach(Mesia)"
+        "pseudologic": "can_reach(Mesia)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Beach House": {
     "name": "Beach House",
@@ -553,7 +609,8 @@
         "can_lock": false,
         "in_game_id": 24832,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -566,10 +623,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Beach House - Exit",
-        "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman)"
+        "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Bow Passage - Back": {
     "name": "Bow Passage - Back",
@@ -587,7 +646,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Bow of Sun && Bow of Moon",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Bow Passage - Exit",
@@ -600,11 +660,16 @@
         "can_lock": false,
         "in_game_id": 40961,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Bow of Sun ",
+      " Bow of Moon"
+    ]
   },
   "Bow Passage - Front": {
     "name": "Bow Passage - Front",
@@ -624,7 +689,8 @@
         "can_lock": false,
         "in_game_id": 40960,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -637,11 +703,16 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Bow of Sun && Bow of Moon",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Bow of Sun ",
+      " Bow of Moon"
+    ]
   },
   "Brokahana's House": {
     "name": "Brokahana's House",
@@ -661,7 +732,8 @@
         "can_lock": false,
         "in_game_id": 47872,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -674,10 +746,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Brokahana's House - Exit",
-        "pseudologic": "Change && can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder"
+        "pseudologic": "Change && can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Brynmaer": {
     "name": "Brynmaer",
@@ -697,7 +771,8 @@
         "can_lock": false,
         "in_game_id": 6144,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Brynmaer - Item Shop",
@@ -710,7 +785,8 @@
         "can_lock": false,
         "in_game_id": 6149,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Brynmaer - Armor Shop",
@@ -725,7 +801,8 @@
         "can_lock": false,
         "in_game_id": 6147,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Brynmaer - Inn",
@@ -740,7 +817,8 @@
         "can_lock": false,
         "in_game_id": 6148,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Brynmaer - Pawn Shop",
@@ -753,7 +831,8 @@
         "can_lock": false,
         "in_game_id": 6146,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Brynmaer - Pub",
@@ -766,7 +845,8 @@
         "can_lock": false,
         "in_game_id": 6145,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -779,10 +859,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Brynmaer - Entrance",
-        "pseudologic": "trade_in(Akahana)"
+        "pseudologic": "trade_in(Akahana)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Statue of Onyx"
+    ]
   },
   "Brynmaer Armor Shop": {
     "name": "Brynmaer Armor Shop",
@@ -802,11 +886,13 @@
         "can_lock": false,
         "in_game_id": 51456,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Brynmaer Inn": {
     "name": "Brynmaer Inn",
@@ -826,11 +912,13 @@
         "can_lock": false,
         "in_game_id": 51200,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Brynmaer Item Shop": {
     "name": "Brynmaer Item Shop",
@@ -850,11 +938,13 @@
         "can_lock": false,
         "in_game_id": 51968,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Brynmaer Pawn Shop": {
     "name": "Brynmaer Pawn Shop",
@@ -874,11 +964,13 @@
         "can_lock": false,
         "in_game_id": 50944,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Brynmaer Pub": {
     "name": "Brynmaer Pub",
@@ -898,11 +990,13 @@
         "can_lock": false,
         "in_game_id": 50688,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Buy Healing": {
     "name": "Buy Healing",
@@ -910,7 +1004,8 @@
     "notes": "fake region",
     "entrances": [],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Buy Warp Boots": {
     "name": "Buy Warp Boots",
@@ -918,7 +1013,8 @@
     "notes": "fake region",
     "entrances": [],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Clark's Hideout": {
     "name": "Clark's Hideout",
@@ -939,7 +1035,8 @@
         "can_lock": false,
         "in_game_id": 59392,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -952,10 +1049,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Clark's Hideout - Exit",
-        "pseudologic": "can_reach(Sabera's Fortress - Upstairs) && can_fight(Sabera 1)"
+        "pseudologic": "can_reach(Sabera's Fortress - Upstairs) && can_fight(Sabera 1)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Cordel Plains - Main": {
     "name": "Cordel Plains - Main",
@@ -975,7 +1074,8 @@
         "can_lock": true,
         "in_game_id": 5120,
         "pseudologic": "Windmill Key && can_reach(Windmill)",
-        "notes": "Will not have this rule in Wa"
+        "notes": "Will not have this rule in Wa",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Cordel Plains - West",
@@ -988,7 +1088,8 @@
         "can_lock": false,
         "in_game_id": 5124,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Cordel Plains - South West",
@@ -1001,7 +1102,8 @@
         "can_lock": false,
         "in_game_id": 5125,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1014,7 +1116,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Cordel Plains - North West",
@@ -1027,7 +1130,8 @@
         "can_lock": false,
         "in_game_id": 5121,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Cordel Plains - North East",
@@ -1040,7 +1144,8 @@
         "can_lock": false,
         "in_game_id": 5378,
         "pseudologic": "Teleport || (Flight && rabbit_skip) || (trigger_skip)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Cordel Plains - East",
@@ -1053,7 +1158,8 @@
         "can_lock": false,
         "in_game_id": 5379,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Cordel Plains - Main - Added Cave",
@@ -1066,7 +1172,8 @@
         "can_lock": true,
         "in_game_id": 5376,
         "pseudologic": "TRUE",
-        "notes": "\"Only exists if Vm and V!m are both off"
+        "notes": "\"Only exists if Vm and V!m are both off",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -1079,10 +1186,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Cordel Plains - River Blocked": {
     "name": "Cordel Plains - River Blocked",
@@ -1100,7 +1209,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Cordel Plains - South",
@@ -1113,11 +1223,13 @@
         "can_lock": false,
         "in_game_id": 5126,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Crypt - Back": {
     "name": "Crypt - Back",
@@ -1135,7 +1247,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1148,11 +1261,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": "Very explicitly no reverse entrance"
+        "notes": "Very explicitly no reverse entrance",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Crypt - Front": {
     "name": "Crypt - Front",
@@ -1173,7 +1288,8 @@
         "can_lock": false,
         "in_game_id": 41216,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1186,7 +1302,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1199,11 +1316,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Crypt - Left": {
     "name": "Crypt - Left",
@@ -1223,7 +1342,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -1236,10 +1356,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Crypt - Entrance",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Crypt - Middle": {
     "name": "Crypt - Middle",
@@ -1260,7 +1382,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1273,7 +1396,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -1286,10 +1410,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Crypt - Entrance",
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Crypt - Pre-Draygon": {
     "name": "Crypt - Pre-Draygon",
@@ -1309,11 +1435,15 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Draygon 2)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": [
+      "Bow of Truth"
+    ]
   },
   "Deo Valley": {
     "name": "Deo Valley",
@@ -1333,7 +1463,8 @@
         "can_lock": true,
         "in_game_id": 38400,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Deo Valley - Down",
@@ -1346,7 +1477,8 @@
         "can_lock": false,
         "in_game_id": 38401,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -1359,10 +1491,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Deo Valley - Down",
-        "pseudologic": "Change && Telepathy"
+        "pseudologic": "Change && Telepathy",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Desert 1": {
     "name": "Desert 1",
@@ -1382,7 +1516,8 @@
         "can_lock": false,
         "in_game_id": 36864,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Desert 1 - Oasis",
@@ -1395,7 +1530,8 @@
         "can_lock": false,
         "in_game_id": 36865,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1408,11 +1544,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Desert 1 - Past Whirlpool": {
     "name": "Desert 1 - Past Whirlpool",
@@ -1430,7 +1568,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Desert 1 - Whirlpool Cave",
@@ -1443,11 +1582,13 @@
         "can_lock": false,
         "in_game_id": 36866,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Desert 2": {
     "name": "Desert 2",
@@ -1467,7 +1608,8 @@
         "can_lock": true,
         "in_game_id": 38912,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1480,7 +1622,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1493,7 +1636,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Desert 2 - Added Cave",
@@ -1506,11 +1650,13 @@
         "can_lock": true,
         "in_game_id": 38915,
         "pseudologic": "TRUE",
-        "notes": "\"Only exists if Vm and V!m are both off"
+        "notes": "\"Only exists if Vm and V!m are both off",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Desert 2 - Past Crypt Whirlpools": {
     "name": "Desert 2 - Past Crypt Whirlpools",
@@ -1528,7 +1674,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Desert 2 - Crypt Entrance",
@@ -1541,11 +1688,13 @@
         "can_lock": false,
         "in_game_id": 38913,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Desert 2 - Past Pyramid Whirlpools": {
     "name": "Desert 2 - Past Pyramid Whirlpools",
@@ -1563,7 +1712,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Desert 2 - Pyramid Entrance",
@@ -1576,11 +1726,13 @@
         "can_lock": false,
         "in_game_id": 38914,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Desert Transition Cave 1": {
     "name": "Desert Transition Cave 1",
@@ -1602,7 +1754,8 @@
         "can_lock": false,
         "in_game_id": 37376,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Desert Transition Cave 1 - Exit",
@@ -1617,11 +1770,13 @@
         "can_lock": false,
         "in_game_id": 37377,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Desert Transition Cave 2": {
     "name": "Desert Transition Cave 2",
@@ -1643,7 +1798,8 @@
         "can_lock": false,
         "in_game_id": 38144,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Desert Transition Cave 2 - Exit",
@@ -1658,11 +1814,13 @@
         "can_lock": false,
         "in_game_id": 38145,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Evans' Room": {
     "name": "Evans' Room",
@@ -1682,11 +1840,13 @@
         "can_lock": false,
         "in_game_id": 56832,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Evil Spirit Island - Across River": {
     "name": "Evil Spirit Island - Across River",
@@ -1704,7 +1864,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1717,7 +1878,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Evil Spirit Island)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Evil Spirit Island"
       }
     ],
     "locations": [
@@ -1730,10 +1892,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Evil Spirit Island - Entrance",
-        "pseudologic": "can_break_wall(Evil Spirit Island)"
+        "pseudologic": "can_break_wall(Evil Spirit Island)",
+        "associated_shuffle_data": "Evil Spirit Island"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Evil Spirit Island - Front": {
     "name": "Evil Spirit Island - Front",
@@ -1755,7 +1919,8 @@
         "can_lock": false,
         "in_game_id": 26880,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1768,11 +1933,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Evil Spirit Island - Item Stash": {
     "name": "Evil Spirit Island - Item Stash",
@@ -1792,7 +1959,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -1805,7 +1973,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Evil Spirit Island - Exit",
-        "pseudologic": "can_break_wall(Water) || Flight"
+        "pseudologic": "can_break_wall(Water) || Flight",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Evil Spirit Island River Right Mimic",
@@ -1816,10 +1985,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Evil Spirit Island - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Evil Spirit Island - Upstairs": {
     "name": "Evil Spirit Island - Upstairs",
@@ -1839,7 +2010,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1852,7 +2024,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Evil Spirit Island)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Evil Spirit Island"
       },
       {
         "name": "Evil Spirit Island - Exit",
@@ -1867,7 +2040,8 @@
         "can_lock": false,
         "in_game_id": 27138,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -1880,10 +2054,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Evil Spirit Island - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Fisherman House": {
     "name": "Fisherman House",
@@ -1903,11 +2079,15 @@
         "can_lock": false,
         "in_game_id": 54784,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Fog Lamp"
+    ]
   },
   "Fisherman House Area": {
     "name": "Fisherman House Area",
@@ -1927,7 +2107,8 @@
         "can_lock": false,
         "in_game_id": 20736,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Fisherman House Entrance",
@@ -1940,7 +2121,8 @@
         "can_lock": false,
         "in_game_id": 20737,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -1953,11 +2135,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_reach(Fisherman House) && trade_in(Fisherman) && (!vanilla_dolphin || (can_reach(Mesia) && can_reach(Portoa Waterway - Main) && can_reach(Asina's Chambers) && Shell Flute))",
-        "notes": "messy - clean up with events?"
+        "notes": "messy - clean up with events?",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Fog Lamp Cave - Behind Walls": {
     "name": "Fog Lamp Cave - Behind Walls",
@@ -1983,7 +2167,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Fog Lamp Cave"
       },
       {
         "name": "",
@@ -1996,11 +2181,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Fog Lamp Cave"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Fog Lamp Cave - Front": {
     "name": "Fog Lamp Cave - Front",
@@ -2020,7 +2207,8 @@
         "can_lock": false,
         "in_game_id": 18432,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -2033,11 +2221,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Fog Lamp Cave)",
-        "notes": "\"Don't need to model each individual room of the place"
+        "notes": "\"Don't need to model each individual room of the place",
+        "associated_shuffle_data": "Fog Lamp Cave"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Fog Lamp Cave - Items": {
     "name": "Fog Lamp Cave - Items",
@@ -2054,7 +2244,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Fog Lamp Cave - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Fog Lamp Cave Back Chest",
@@ -2065,7 +2256,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Fog Lamp Cave - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Fog Lamp Cave Middle North Mimic",
@@ -2076,7 +2268,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Fog Lamp Cave - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Fog Lamp Cave Middle Southwest Mimic",
@@ -2087,10 +2280,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Fog Lamp Cave - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Fortune Teller - Back": {
     "name": "Fortune Teller - Back",
@@ -2098,7 +2293,8 @@
     "notes": "",
     "entrances": [],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Fortune Teller - Front": {
     "name": "Fortune Teller - Front",
@@ -2118,11 +2314,13 @@
         "can_lock": false,
         "in_game_id": 55296,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "GBC Cave - Main": {
     "name": "GBC Cave - Main",
@@ -2147,7 +2345,8 @@
         "can_lock": false,
         "in_game_id": 2817,
         "pseudologic": "TRUE",
-        "notes": "Only exists if Vm and V!m are both off."
+        "notes": "Only exists if Vm and V!m are both off.",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -2160,7 +2359,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(GBC Cave)",
-        "notes": "Only exists if Vm and V!m are both off."
+        "notes": "Only exists if Vm and V!m are both off.",
+        "associated_shuffle_data": "East Cave"
       },
       {
         "name": "GBC Cave - Free Exit",
@@ -2176,7 +2376,8 @@
         "can_lock": false,
         "in_game_id": 2816,
         "pseudologic": "TRUE",
-        "notes": "Only exists if Vm and V!m are both off."
+        "notes": "Only exists if Vm and V!m are both off.",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -2189,7 +2390,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "GBC Cave Entrance",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "East Cave Northwest Mimic",
@@ -2200,10 +2402,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "GBC Cave Entrance",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "GBC Cave - Past Block": {
     "name": "GBC Cave - Past Block",
@@ -2221,7 +2425,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(GBC Cave)",
-        "notes": "Only exists if Vm and V!m are both off."
+        "notes": "Only exists if Vm and V!m are both off.",
+        "associated_shuffle_data": "East Cave"
       },
       {
         "name": "GBC Cave - Blocked Exit",
@@ -2237,11 +2442,13 @@
         "can_lock": false,
         "in_game_id": 4609,
         "pseudologic": "TRUE",
-        "notes": "Only exists if Vm and V!m are both off."
+        "notes": "Only exists if Vm and V!m are both off.",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Goa": {
     "name": "Goa",
@@ -2261,7 +2468,8 @@
         "can_lock": false,
         "in_game_id": 36352,
         "pseudologic": "TRUE",
-        "notes": "\"Not shuffled on Wh"
+        "notes": "\"Not shuffled on Wh",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa - Inn",
@@ -2276,7 +2484,8 @@
         "can_lock": false,
         "in_game_id": 36356,
         "pseudologic": "can_reach(Shyron) || statue_skip",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa - Item Shop",
@@ -2289,7 +2498,8 @@
         "can_lock": false,
         "in_game_id": 36357,
         "pseudologic": "can_reach(Shyron) || statue_skip",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa - Pub",
@@ -2302,7 +2512,8 @@
         "can_lock": false,
         "in_game_id": 36353,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa - Brokahana's House",
@@ -2317,7 +2528,8 @@
         "can_lock": false,
         "in_game_id": 36354,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa - Fortress Entrance",
@@ -2330,11 +2542,13 @@
         "can_lock": false,
         "in_game_id": 36355,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Goa Entrance - Behind Wall": {
     "name": "Goa Entrance - Behind Wall",
@@ -2352,7 +2566,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Goa Entrance Wall)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Goa Fortress - Entrance"
       },
       {
         "name": "Goa Entrance - Stairs",
@@ -2365,11 +2580,13 @@
         "can_lock": false,
         "in_game_id": 43009,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Goa Entrance - Front": {
     "name": "Goa Entrance - Front",
@@ -2389,7 +2606,8 @@
         "can_lock": false,
         "in_game_id": 43008,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -2402,11 +2620,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Goa Entrance - Massacre Trigger": {
     "name": "Goa Entrance - Massacre Trigger",
@@ -2424,7 +2644,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -2437,11 +2658,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Goa Entrance Wall)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Goa Fortress - Entrance"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Goa Exit": {
     "name": "Goa Exit",
@@ -2461,7 +2684,8 @@
         "can_lock": false,
         "in_game_id": 46848,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa Exit - Downstairs",
@@ -2474,11 +2698,13 @@
         "can_lock": false,
         "in_game_id": 46855,
         "pseudologic": "TRUE",
-        "notes": "\"Not shuffled on Wh"
+        "notes": "\"Not shuffled on Wh",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Goa Inn": {
     "name": "Goa Inn",
@@ -2498,11 +2724,13 @@
         "can_lock": false,
         "in_game_id": 48128,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Goa Item Shop": {
     "name": "Goa Item Shop",
@@ -2522,11 +2750,13 @@
         "can_lock": false,
         "in_game_id": 48640,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Goa Pub": {
     "name": "Goa Pub",
@@ -2546,11 +2776,13 @@
         "can_lock": false,
         "in_game_id": 48896,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Goa Valley": {
     "name": "Goa Valley",
@@ -2570,7 +2802,8 @@
         "can_lock": false,
         "in_game_id": 30720,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa Valley - Left",
@@ -2583,7 +2816,8 @@
         "can_lock": false,
         "in_game_id": 30722,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa Valley - Down",
@@ -2596,7 +2830,8 @@
         "can_lock": false,
         "in_game_id": 30723,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa Valley - Palace",
@@ -2609,7 +2844,8 @@
         "can_lock": false,
         "in_game_id": 30721,
         "pseudologic": "TRUE",
-        "notes": "\"Not shuffled on Wh"
+        "notes": "\"Not shuffled on Wh",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Goa Valley - Added Cave",
@@ -2622,11 +2858,13 @@
         "can_lock": true,
         "in_game_id": 30975,
         "pseudologic": "TRUE",
-        "notes": "\"Only exists if Vm and V!m are both off"
+        "notes": "\"Only exists if Vm and V!m are both off",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Guard Checkpoint - North": {
     "name": "Guard Checkpoint - North",
@@ -2644,7 +2882,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Change",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Checkpoint North Exit",
@@ -2657,11 +2896,13 @@
         "can_lock": false,
         "in_game_id": 29441,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Guard Checkpoint - South": {
     "name": "Guard Checkpoint - South",
@@ -2681,7 +2922,8 @@
         "can_lock": false,
         "in_game_id": 29440,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -2694,11 +2936,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Change",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Initial Cutscene Area": {
     "name": "Initial Cutscene Area",
@@ -2718,7 +2962,8 @@
         "can_lock": false,
         "in_game_id": 256,
         "pseudologic": "TRUE",
-        "notes": "\"\"\"Hey!! There's a guy coming out of the cave!\"\"\""
+        "notes": "\"\"\"Hey!! There's a guy coming out of the cave!\"\"\"",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Exploding Cave - Left",
@@ -2731,11 +2976,13 @@
         "can_lock": false,
         "in_game_id": 257,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Joel": {
     "name": "Joel",
@@ -2755,7 +3002,8 @@
         "can_lock": false,
         "in_game_id": 28928,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Joel - Item Shop",
@@ -2768,7 +3016,8 @@
         "can_lock": false,
         "in_game_id": 28931,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Joel - Inn",
@@ -2781,7 +3030,8 @@
         "can_lock": false,
         "in_game_id": 28932,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Joel - Elder's House",
@@ -2796,7 +3046,8 @@
         "can_lock": false,
         "in_game_id": 28930,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Joel - Shed",
@@ -2809,11 +3060,13 @@
         "can_lock": false,
         "in_game_id": 28929,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Joel Elder House": {
     "name": "Joel Elder House",
@@ -2833,11 +3086,13 @@
         "can_lock": false,
         "in_game_id": 58112,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Joel Inn": {
     "name": "Joel Inn",
@@ -2857,11 +3112,13 @@
         "can_lock": false,
         "in_game_id": 59136,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Joel Item Shop": {
     "name": "Joel Item Shop",
@@ -2881,11 +3138,13 @@
         "can_lock": false,
         "in_game_id": 58624,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Joel Shed": {
     "name": "Joel Shed",
@@ -2905,7 +3164,8 @@
         "can_lock": false,
         "in_game_id": 58368,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Joel Shed - Secret Passage",
@@ -2918,11 +3178,13 @@
         "can_lock": false,
         "in_game_id": 58369,
         "pseudologic": "Eyeglasses",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Karmine's Floor - Back": {
     "name": "Karmine's Floor - Back",
@@ -2943,7 +3205,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Karmine)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Goa Fortress - Karmine 5"
       },
       {
         "name": "Karmine's Floor - Exit",
@@ -2956,7 +3219,8 @@
         "can_lock": false,
         "in_game_id": 47616,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -2969,7 +3233,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -2982,7 +3247,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -2995,10 +3261,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "trade_in(Slime Kensu)"
+        "pseudologic": "trade_in(Slime Kensu)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Ivory Statue"
+    ]
   },
   "Karmine's Floor - Boss Arena": {
     "name": "Karmine's Floor - Boss Arena",
@@ -3016,7 +3286,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -3029,11 +3300,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Karmine)",
-        "notes": "Reverse connection unnecessary"
+        "notes": "Reverse connection unnecessary",
+        "associated_shuffle_data": "Karmine"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Karmine's Floor - Front": {
     "name": "Karmine's Floor - Front",
@@ -3057,7 +3330,8 @@
         "can_lock": false,
         "in_game_id": 45056,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -3070,11 +3344,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Karmine)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Goa Fortress - Karmine 5"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Karmine's Floor - Item Stash": {
     "name": "Karmine's Floor - Item Stash",
@@ -3091,7 +3367,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Karmine Basement Lower Left Chest",
@@ -3102,7 +3379,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Karmine Basement Upper Middle Mimic",
@@ -3113,7 +3391,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Karmine Basement Upper Right Mimic",
@@ -3124,7 +3403,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Karmine Basement Lower Right Mimic",
@@ -3135,10 +3415,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Karmine's Floor - Post-Boss": {
     "name": "Karmine's Floor - Post-Boss",
@@ -3155,7 +3437,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Karmine",
@@ -3166,10 +3449,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Karmine's Floor - Pre-Boss Gauntlet": {
     "name": "Karmine's Floor - Pre-Boss Gauntlet",
@@ -3189,7 +3474,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -3202,11 +3488,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Kelbesque's Floor - Back": {
     "name": "Kelbesque's Floor - Back",
@@ -3226,7 +3514,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Kelbesque 2)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Kelbesque 2"
       },
       {
         "name": "Kelbesque's Floor - Exit",
@@ -3239,11 +3528,13 @@
         "can_lock": false,
         "in_game_id": 43521,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Kelbesque's Floor - Boss Arena": {
     "name": "Kelbesque's Floor - Boss Arena",
@@ -3261,7 +3552,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -3274,7 +3566,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -3287,10 +3580,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Goa Entrance - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Kelbesque's Floor - Front": {
     "name": "Kelbesque's Floor - Front",
@@ -3310,7 +3605,8 @@
         "can_lock": false,
         "in_game_id": 43264,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -3323,11 +3619,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Kelbesque 2)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Kelbesque 2"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Kirisa Plant Cave - Back": {
     "name": "Kirisa Plant Cave - Back",
@@ -3345,7 +3643,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Kirisa Plant Cave"
       },
       {
         "name": "Kirisa Plant Cave - Exit",
@@ -3360,11 +3659,13 @@
         "can_lock": false,
         "in_game_id": 17921,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Kirisa Plant Cave - Front": {
     "name": "Kirisa Plant Cave - Front",
@@ -3386,7 +3687,8 @@
         "can_lock": false,
         "in_game_id": 17408,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -3399,11 +3701,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Kirisa Plant Cave"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Kirisa Plant Cave - Middle": {
     "name": "Kirisa Plant Cave - Middle",
@@ -3424,7 +3728,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Kirisa Plant Cave"
       },
       {
         "name": "",
@@ -3437,7 +3742,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Kirisa Plant Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Kirisa Plant Cave"
       }
     ],
     "locations": [
@@ -3450,10 +3756,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Kirisa Plant Cave - Entrance",
-        "pseudologic": "can_break_wall(Kirisa Plant Cave)"
+        "pseudologic": "can_break_wall(Kirisa Plant Cave)",
+        "associated_shuffle_data": "Kirisa Plant Cave"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Kirisa Plant Meadow": {
     "name": "Kirisa Plant Meadow",
@@ -3473,7 +3781,8 @@
         "can_lock": true,
         "in_game_id": 18176,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -3486,10 +3795,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Kirisa Plant Meadow - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Leaf": {
     "name": "Leaf",
@@ -3509,7 +3820,8 @@
         "can_lock": false,
         "in_game_id": 512,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Leaf - Up",
@@ -3522,7 +3834,8 @@
         "can_lock": false,
         "in_game_id": 516,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Leaf - Elder's House",
@@ -3537,7 +3850,8 @@
         "can_lock": false,
         "in_game_id": 514,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Leaf - Zebu Student's House",
@@ -3552,7 +3866,8 @@
         "can_lock": false,
         "in_game_id": 515,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Leaf - Armor Shop",
@@ -3565,7 +3880,8 @@
         "can_lock": false,
         "in_game_id": 518,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Leaf - Item Shop",
@@ -3578,7 +3894,8 @@
         "can_lock": false,
         "in_game_id": 517,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Leaf - Inn",
@@ -3593,7 +3910,8 @@
         "can_lock": false,
         "in_game_id": 519,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Leaf Shed",
@@ -3606,11 +3924,13 @@
         "can_lock": false,
         "in_game_id": 513,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Leaf Armor Shop": {
     "name": "Leaf Armor Shop",
@@ -3630,11 +3950,13 @@
         "can_lock": false,
         "in_game_id": 50176,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Leaf Elder's House": {
     "name": "Leaf Elder's House",
@@ -3654,7 +3976,8 @@
         "can_lock": false,
         "in_game_id": 49152,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -3667,10 +3990,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Leaf Elder's House - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Leaf Inn": {
     "name": "Leaf Inn",
@@ -3690,11 +4015,13 @@
         "can_lock": false,
         "in_game_id": 49664,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Leaf Item Shop": {
     "name": "Leaf Item Shop",
@@ -3714,11 +4041,13 @@
         "can_lock": false,
         "in_game_id": 49920,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Leaf Shed": {
     "name": "Leaf Shed",
@@ -3738,11 +4067,13 @@
         "can_lock": false,
         "in_game_id": 49408,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Lighthouse": {
     "name": "Lighthouse",
@@ -3762,7 +4093,8 @@
         "can_lock": false,
         "in_game_id": 25088,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -3775,10 +4107,14 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Lighthouse - Exit",
-        "pseudologic": "Alarm Flute"
+        "pseudologic": "Alarm Flute",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Alarm Flute"
+    ]
   },
   "Lighthouse Area": {
     "name": "Lighthouse Area",
@@ -3796,7 +4132,8 @@
         "can_lock": false,
         "in_game_id": 24579,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Lighthouse Entrance",
@@ -3809,11 +4146,13 @@
         "can_lock": false,
         "in_game_id": 24580,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Lighthouse Tunnel": {
     "name": "Lighthouse Tunnel",
@@ -3835,7 +4174,8 @@
         "can_lock": false,
         "in_game_id": 28673,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Lighthouse Tunnel - Exit",
@@ -3850,11 +4190,13 @@
         "can_lock": false,
         "in_game_id": 28672,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Lime Valley": {
     "name": "Lime Valley",
@@ -3874,7 +4216,8 @@
         "can_lock": false,
         "in_game_id": 16896,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Lime Valley - Up",
@@ -3887,7 +4230,8 @@
         "can_lock": false,
         "in_game_id": 16897,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Lime Valley - Added Cave",
@@ -3900,7 +4244,8 @@
         "can_lock": true,
         "in_game_id": 16898,
         "pseudologic": "TRUE",
-        "notes": "\"Only exists if Vm and V!m are both off"
+        "notes": "\"Only exists if Vm and V!m are both off",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Lime Valley - West",
@@ -3913,11 +4258,13 @@
         "can_lock": false,
         "in_game_id": 17151,
         "pseudologic": "TRUE",
-        "notes": "Only exists if V!m is on."
+        "notes": "Only exists if V!m is on.",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mado's Floor - Back": {
     "name": "Mado's Floor - Back",
@@ -3935,7 +4282,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Mado 2)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mado 2"
       },
       {
         "name": "Mado's Floor - Exit",
@@ -3948,11 +4296,13 @@
         "can_lock": false,
         "in_game_id": 47360,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mado's Floor - Boss Arena": {
     "name": "Mado's Floor - Boss Arena",
@@ -3970,7 +4320,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -3983,7 +4334,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -3996,10 +4348,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mado's Floor - Front": {
     "name": "Mado's Floor - Front",
@@ -4019,7 +4373,8 @@
         "can_lock": false,
         "in_game_id": 44288,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4032,7 +4387,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4045,7 +4401,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4058,11 +4415,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mado's Floor - Spike Items": {
     "name": "Mado's Floor - Spike Items",
@@ -4079,7 +4438,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Fortress Mado Lower Southeast Chest",
@@ -4090,10 +4450,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mado's Floor - Upstairs Left": {
     "name": "Mado's Floor - Upstairs Left",
@@ -4113,7 +4475,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -4126,7 +4489,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Fortress Mado Upper Behind Wall Chest",
@@ -4137,10 +4501,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "can_break_wall(Mado)"
+        "pseudologic": "can_break_wall(Mado)",
+        "associated_shuffle_data": "Goa Fortress - Mado 2"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mado's Floor - Upstairs Right": {
     "name": "Mado's Floor - Upstairs Right",
@@ -4161,7 +4527,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4174,7 +4541,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Mado 2)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mado 2"
       }
     ],
     "locations": [
@@ -4187,10 +4555,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Exit - Downstairs",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mesia": {
     "name": "Mesia",
@@ -4210,11 +4580,13 @@
         "can_lock": false,
         "in_game_id": 20992,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Mezame Shrine": {
     "name": "Mezame Shrine",
@@ -4234,21 +4606,11 @@
         "can_lock": false,
         "in_game_id": 0,
         "pseudologic": "TRUE",
-        "notes": "Starting region."
+        "notes": "Starting region.",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
-      {
-        "name": "Mezame Left Chest",
-        "rom_id": 73,
-        "ap_id_offset": 103,
-        "unique": false,
-        "lossy": false,
-        "prevent_loss": false,
-        "is_chest": true,
-        "entrance_hint": "",
-        "pseudologic": "TRUE"
-      },
       {
         "name": "Mezame Right Chest",
         "rom_id": 49,
@@ -4258,10 +4620,27 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
+      },
+      {
+        "name": "Mezame Left Chest",
+        "rom_id": 73,
+        "ap_id_offset": 103,
+        "unique": false,
+        "lossy": false,
+        "prevent_loss": false,
+        "is_chest": true,
+        "entrance_hint": "",
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": [
+      "Broken Statue ",
+      " Glowing Lamp"
+    ]
   },
   "Mt. Hydra - Guarded Palace": {
     "name": "Mt. Hydra - Guarded Palace",
@@ -4282,7 +4661,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Mt. Hydra - Guardpost",
@@ -4295,11 +4675,13 @@
         "can_lock": false,
         "in_game_id": 32257,
         "pseudologic": "Change || statue_skip || can_reach(Shyron) || (can_reach(Goa Entrance - Massacre Trigger) && can_reach(Shyron Temple) && Sword of Thunder))",
-        "notes": "\"Need to check trigger skip and Paralysis; entrance only shuffled in Wa"
+        "notes": "\"Need to check trigger skip and Paralysis; entrance only shuffled in Wa",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Hydra - Lower": {
     "name": "Mt. Hydra - Lower",
@@ -4320,7 +4702,8 @@
         "can_lock": false,
         "in_game_id": 31744,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4333,7 +4716,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4346,7 +4730,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -4359,10 +4744,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Hydra - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Hydra - Summit": {
     "name": "Mt. Hydra - Summit",
@@ -4382,7 +4769,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Hydra)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Hydra"
       }
     ],
     "locations": [
@@ -4395,7 +4783,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Hydra - Exit",
-        "pseudologic": "Flight"
+        "pseudologic": "Flight",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Mt Hydra Final Cave Mimic",
@@ -4406,10 +4795,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Hydra - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Hydra - Upper": {
     "name": "Mt. Hydra - Upper",
@@ -4434,7 +4825,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4447,7 +4839,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Hydra)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Hydra"
       },
       {
         "name": "Mt. Hydra - Palace",
@@ -4460,7 +4853,8 @@
         "can_lock": false,
         "in_game_id": 31746,
         "pseudologic": "Key to Stxy",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -4473,7 +4867,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Hydra - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Mt Hydra Left Right Chest",
@@ -4484,10 +4879,14 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Hydra - Exit",
-        "pseudologic": "can_break_wall(Mt. Hydra)"
+        "pseudologic": "can_break_wall(Mt. Hydra)",
+        "associated_shuffle_data": "Mt Hydra"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Key to Stxy"
+    ]
   },
   "Mt. Hydra - Wide Cave": {
     "name": "Mt. Hydra - Wide Cave",
@@ -4507,7 +4906,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Hydra)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Hydra"
       },
       {
         "name": "",
@@ -4520,11 +4920,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Hydra)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Hydra"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Boss Arena": {
     "name": "Mt. Sabre North - Boss Arena",
@@ -4542,7 +4944,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4555,7 +4958,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Prison Key",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -4568,10 +4972,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Mt. Sabre North - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Key to Prison"
+    ]
   },
   "Mt. Sabre North - Elder's Cell": {
     "name": "Mt. Sabre North - Elder's Cell",
@@ -4591,7 +4999,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Kelbesque 1)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Kelbesque 1"
       },
       {
         "name": "",
@@ -4604,7 +5013,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       },
       {
         "name": "",
@@ -4617,11 +5027,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_reach(Mt. Sabre North - Boss) && can_fight(Kelbesque 1)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Final": {
     "name": "Mt. Sabre North - Final",
@@ -4639,7 +5051,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       },
       {
         "name": "Mt. Sabre North - Exit",
@@ -4652,7 +5065,8 @@
         "can_lock": false,
         "in_game_id": 13569,
         "pseudologic": "TRUE",
-        "notes": "Reverse entrance needs Prison Key in Wa"
+        "notes": "Reverse entrance needs Prison Key in Wa",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4665,11 +5079,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_reach(Mt. Sabre North - Boss) && can_fight(Kelbesque 1)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Interior": {
     "name": "Mt. Sabre North - Interior",
@@ -4690,7 +5106,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -4703,10 +5120,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Sabre North - Entrance",
-        "pseudologic": "can_break_wall(Mt. Sabre North)"
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "associated_shuffle_data": "Mt Sabre North"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Left Jail Cell": {
     "name": "Mt. Sabre North - Left Jail Cell",
@@ -4726,7 +5145,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       },
       {
         "name": "",
@@ -4739,11 +5159,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Main": {
     "name": "Mt. Sabre North - Main",
@@ -4766,7 +5188,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4779,7 +5202,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4792,7 +5216,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Mt. Sabre North)",
-        "notes": "I'm not putting this into logic with Trigger Skip. You're welcome."
+        "notes": "I'm not putting this into logic with Trigger Skip. You're welcome.",
+        "associated_shuffle_data": "Mt Sabre North"
       },
       {
         "name": "",
@@ -4805,7 +5230,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": "Reverse entrance unnecessary - can get from interior to main via upper without breaking any walls."
+        "notes": "Reverse entrance unnecessary - can get from interior to main via upper without breaking any walls.",
+        "associated_shuffle_data": "Mt Sabre North"
       }
     ],
     "locations": [
@@ -4818,10 +5244,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Sabre North - Entrance",
-        "pseudologic": "can_break_wall(Mt. Sabre North)"
+        "pseudologic": "can_break_wall(Mt. Sabre North)",
+        "associated_shuffle_data": "Mt Sabre North"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Pre-Boss": {
     "name": "Mt. Sabre North - Pre-Boss",
@@ -4842,7 +5270,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -4855,11 +5284,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Kelbesque 1)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Kelbesque 1"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Pre-Trigger": {
     "name": "Mt. Sabre North - Pre-Trigger",
@@ -4879,7 +5310,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "rabbit_skip || trigger_skip || (Telepathy && can_reach(Leaf Shed) && can_reach(Leaf Elder House) && can_reach(Zebu's Cave - Back) && can_reach(Zebu Student's House))",
-        "notes": "TODO: investigate if talking to Zebu in Zebu's Cave is also necessary"
+        "notes": "TODO: investigate if talking to Zebu in Zebu's Cave is also necessary",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Mt. Sabre North - Entrance",
@@ -4892,11 +5324,13 @@
         "can_lock": false,
         "in_game_id": 10240,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Prison Key": {
     "name": "Mt. Sabre North - Prison Key",
@@ -4916,7 +5350,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       }
     ],
     "locations": [
@@ -4929,10 +5364,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Sabre North - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Rescue Reward": {
     "name": "Mt. Sabre North - Rescue Reward",
@@ -4949,10 +5386,12 @@
         "prevent_loss": true,
         "is_chest": false,
         "entrance_hint": "Mt. Sabre North - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Right Jail Cell": {
     "name": "Mt. Sabre North - Right Jail Cell",
@@ -4972,7 +5411,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       },
       {
         "name": "",
@@ -4985,11 +5425,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre North - Upper": {
     "name": "Mt. Sabre North - Upper",
@@ -5011,7 +5453,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": "Wheeeeee!"
+        "notes": "Wheeeeee!",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -5024,7 +5467,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Rabbit Boots || Speed Boots || trigger_skip || can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       },
       {
         "name": "",
@@ -5037,7 +5481,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       },
       {
         "name": "",
@@ -5050,7 +5495,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || trigger_skip",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -5063,11 +5509,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre North)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre North"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre West - Final": {
     "name": "Mt. Sabre West - Final",
@@ -5084,7 +5532,8 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Mt. Sabre West - Main Exit",
-        "pseudologic": "trade_in(Tornel)"
+        "pseudologic": "trade_in(Tornel)",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Mt Sabre West Near Tornel Chest",
@@ -5095,10 +5544,14 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Sabre West - Main Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": true,
+    "associated_shuffle_data": [
+      "Tornel"
+    ]
   },
   "Mt. Sabre West - Interior": {
     "name": "Mt. Sabre West - Interior",
@@ -5118,7 +5571,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre West"
       },
       {
         "name": "",
@@ -5131,7 +5585,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre West"
       }
     ],
     "locations": [
@@ -5144,10 +5599,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Sabre West - Main Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre West - Main": {
     "name": "Mt. Sabre West - Main",
@@ -5168,7 +5625,8 @@
         "can_lock": false,
         "in_game_id": 8192,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Mt. Sabre West - Cave",
@@ -5181,7 +5639,8 @@
         "can_lock": true,
         "in_game_id": 8195,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -5194,7 +5653,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Rabbit Boots || Speed Boots || trigger_skip",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -5207,7 +5667,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -5220,7 +5681,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre West"
       }
     ],
     "locations": [
@@ -5233,10 +5695,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Sabre West - Main Exit",
-        "pseudologic": "can_break_wall(Mt. Sabre West)"
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "associated_shuffle_data": "Mt Sabre West"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre West - Tornado Cave": {
     "name": "Mt. Sabre West - Tornado Cave",
@@ -5256,7 +5720,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -5269,10 +5734,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Mt. Sabre West - Main Exit",
-        "pseudologic": "can_break_wall(Mt. Sabre West)"
+        "pseudologic": "can_break_wall(Mt. Sabre West)",
+        "associated_shuffle_data": "Mt Sabre West"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Mt. Sabre West - Upper": {
     "name": "Mt. Sabre West - Upper",
@@ -5295,7 +5762,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre West"
       },
       {
         "name": "",
@@ -5308,7 +5776,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Mt. Sabre West)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mt Sabre West"
       },
       {
         "name": "",
@@ -5321,11 +5790,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Nadare's": {
     "name": "Nadare's",
@@ -5345,7 +5816,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Nadare's - Inn",
@@ -5358,7 +5830,8 @@
         "can_lock": false,
         "in_game_id": 54529,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Nadare's - Item Shop",
@@ -5371,7 +5844,8 @@
         "can_lock": false,
         "in_game_id": 54530,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Nadare's - Back Room",
@@ -5384,11 +5858,13 @@
         "can_lock": false,
         "in_game_id": 54531,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Nadare's Back Room": {
     "name": "Nadare's Back Room",
@@ -5408,11 +5884,13 @@
         "can_lock": false,
         "in_game_id": 15872,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Nadare's Inn": {
     "name": "Nadare's Inn",
@@ -5432,11 +5910,13 @@
         "can_lock": false,
         "in_game_id": 15360,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Nadare's Item Shop": {
     "name": "Nadare's Item Shop",
@@ -5456,11 +5936,13 @@
         "can_lock": false,
         "in_game_id": 15616,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Oak": {
     "name": "Oak",
@@ -5480,7 +5962,8 @@
         "can_lock": false,
         "in_game_id": 7168,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Oak - Mom House",
@@ -5493,7 +5976,8 @@
         "can_lock": false,
         "in_game_id": 7171,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Oak - Elder House",
@@ -5506,7 +5990,8 @@
         "can_lock": false,
         "in_game_id": 7170,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Oak - Item Shop",
@@ -5519,7 +6004,8 @@
         "can_lock": false,
         "in_game_id": 7169,
         "pseudologic": "statue_skip || (Telepathy && can_reach(Oak Mom House) && can_reach(Swamp - Interior))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Oak - Inn",
@@ -5532,11 +6018,13 @@
         "can_lock": false,
         "in_game_id": 7172,
         "pseudologic": "statue_skip || (Telepathy && can_reach(Oak Mom House) && can_reach(Swamp - Interior))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Oak Elder House": {
     "name": "Oak Elder House",
@@ -5556,7 +6044,8 @@
         "can_lock": false,
         "in_game_id": 52480,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -5569,10 +6058,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Oak Elder House - Exit",
-        "pseudologic": "Telepathy && can_reach(Swamp - Interior) && ((Insect Flute && can_fight(Giant Insect)) || can_reach(Oak Mom House) && can_reach(Oak))"
+        "pseudologic": "Telepathy && can_reach(Swamp - Interior) && ((Insect Flute && can_fight(Giant Insect)) || can_reach(Oak Mom House) && can_reach(Oak))",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Oak Inn": {
     "name": "Oak Inn",
@@ -5592,11 +6083,13 @@
         "can_lock": false,
         "in_game_id": 53248,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Oak Item Shop": {
     "name": "Oak Item Shop",
@@ -5616,11 +6109,13 @@
         "can_lock": false,
         "in_game_id": 52992,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Oak Mom House": {
     "name": "Oak Mom House",
@@ -5640,7 +6135,8 @@
         "can_lock": false,
         "in_game_id": 52736,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -5653,10 +6149,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Oak Mom House - Exit",
-        "pseudologic": "Telepathy && can_reach(Swamp - Interior) && can_reach(Oak)"
+        "pseudologic": "Telepathy && can_reach(Swamp - Interior) && can_reach(Oak)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Oasis Cave - Across the River": {
     "name": "Oasis Cave - Across the River",
@@ -5674,7 +6172,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -5687,7 +6186,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -5700,10 +6200,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Oasis Cave - Entrance",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Oasis Cave - By Deep Entrance": {
     "name": "Oasis Cave - By Deep Entrance",
@@ -5721,7 +6223,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Oasis Cave - Deeper Cave",
@@ -5734,11 +6237,13 @@
         "can_lock": false,
         "in_game_id": 37121,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Oasis Cave - Front": {
     "name": "Oasis Cave - Front",
@@ -5758,7 +6263,8 @@
         "can_lock": false,
         "in_game_id": 47106,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -5771,7 +6277,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -5784,7 +6291,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -5797,7 +6305,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Oasis Cave - Entrance",
-        "pseudologic": "Flight"
+        "pseudologic": "Flight",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Oasis Cave Northwest Chest",
@@ -5808,7 +6317,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Oasis Cave - Entrance",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Oasis Cave Near Entrance Chest",
@@ -5819,10 +6329,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Oasis Cave - Entrance",
-        "pseudologic": "can_break_wall(Water) || Flight"
+        "pseudologic": "can_break_wall(Water) || Flight",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Oasis Cave - Past Purple Pain": {
     "name": "Oasis Cave - Past Purple Pain",
@@ -5842,7 +6354,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Oasis Cave - Palace Entrance",
@@ -5855,11 +6368,13 @@
         "can_lock": false,
         "in_game_id": 47104,
         "pseudologic": "TRUE",
-        "notes": "\"Not shuffled on Wh"
+        "notes": "\"Not shuffled on Wh",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Portoa": {
     "name": "Portoa",
@@ -5879,7 +6394,8 @@
         "can_lock": false,
         "in_game_id": 20480,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa - Docks",
@@ -5892,7 +6408,8 @@
         "can_lock": false,
         "in_game_id": 20485,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa - Item Shop",
@@ -5905,7 +6422,8 @@
         "can_lock": false,
         "in_game_id": 20486,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa - Inn",
@@ -5918,7 +6436,8 @@
         "can_lock": false,
         "in_game_id": 20487,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa - Armor Shop",
@@ -5931,7 +6450,8 @@
         "can_lock": false,
         "in_game_id": 20484,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa - Pawn Shop",
@@ -5944,7 +6464,8 @@
         "can_lock": false,
         "in_game_id": 20483,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa - Fortune Teller",
@@ -5957,7 +6478,8 @@
         "can_lock": false,
         "in_game_id": 20482,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa - Palace",
@@ -5970,11 +6492,13 @@
         "can_lock": false,
         "in_game_id": 20481,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Portoa Armor Shop": {
     "name": "Portoa Armor Shop",
@@ -5994,11 +6518,13 @@
         "can_lock": false,
         "in_game_id": 55808,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Portoa Inn": {
     "name": "Portoa Inn",
@@ -6018,11 +6544,13 @@
         "can_lock": false,
         "in_game_id": 56320,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Portoa Item Shop": {
     "name": "Portoa Item Shop",
@@ -6042,11 +6570,13 @@
         "can_lock": false,
         "in_game_id": 56576,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Portoa Palace - Foyer": {
     "name": "Portoa Palace - Foyer",
@@ -6066,7 +6596,8 @@
         "can_lock": false,
         "in_game_id": 55040,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa Palace Left House",
@@ -6079,7 +6610,8 @@
         "can_lock": false,
         "in_game_id": 55042,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa Palace Right House",
@@ -6092,7 +6624,8 @@
         "can_lock": false,
         "in_game_id": 55043,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6105,11 +6638,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "statue_skip || trigger_skip || can_reach(Mesia) || Paralysis || can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Portoa Palace - Gift Trigger": {
     "name": "Portoa Palace - Gift Trigger",
@@ -6127,7 +6662,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa Palace Throne Room Secret",
@@ -6140,11 +6676,13 @@
         "can_lock": false,
         "in_game_id": 57089,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Portoa Palace - Throne Room": {
     "name": "Portoa Palace - Throne Room",
@@ -6164,7 +6702,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6177,7 +6716,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Paralysis || statue_skip || can_reach(Mesia) || trigger_skip",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -6190,10 +6730,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Portoa Palace - Exit",
-        "pseudologic": "can_reach(Mesia) || ((can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)) && (trade_in(Rage) || statue_skip || Paralysis || trigger_skip))"
+        "pseudologic": "can_reach(Mesia) || ((can_reach(Fortune Teller - Front) || can_reach(Fortune Teller - Back)) && (trade_in(Rage) || statue_skip || Paralysis || trigger_skip))",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Rage"
+    ]
   },
   "Portoa Pawn Shop": {
     "name": "Portoa Pawn Shop",
@@ -6213,11 +6757,13 @@
         "can_lock": false,
         "in_game_id": 55552,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Portoa Waterway - Main": {
     "name": "Portoa Waterway - Main",
@@ -6237,7 +6783,8 @@
         "can_lock": false,
         "in_game_id": 25601,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6250,7 +6797,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6263,7 +6811,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6276,7 +6825,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || (can_use_shell_flute)",
-        "notes": "can_use_shell_flute is complicated; might be worth turning into an event"
+        "notes": "can_use_shell_flute is complicated; might be worth turning into an event",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -6289,10 +6839,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Portoa Waterway - Exit",
-        "pseudologic": "can_reach(Mesia) && can_reach(Asina's Chambers) && buy_healing && (Shell Flute || !vanilla_dolphin)"
+        "pseudologic": "can_reach(Mesia) && can_reach(Asina's Chambers) && buy_healing && (Shell Flute || !vanilla_dolphin)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Portoa Waterway - Water": {
     "name": "Portoa Waterway - Water",
@@ -6312,7 +6864,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Portoa Waterway - Water -> Angry Sea - South Water",
@@ -6325,7 +6878,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -6338,10 +6892,12 @@
         "prevent_loss": true,
         "is_chest": false,
         "entrance_hint": "Portoa Waterway - Exit",
-        "pseudologic": "Shell Flute && activated_shell_flute"
+        "pseudologic": "Shell Flute && activated_shell_flute",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Power Ring Basement": {
     "name": "Power Ring Basement",
@@ -6361,7 +6917,8 @@
         "can_lock": false,
         "in_game_id": 36608,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -6374,10 +6931,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Power Ring Basement - Exit",
-        "pseudologic": "can_break_wall(Power Ring Basement)"
+        "pseudologic": "can_break_wall(Power Ring Basement)",
+        "associated_shuffle_data": "Goa Fortress Basement"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Pyramid": {
     "name": "Pyramid",
@@ -6400,7 +6959,8 @@
         "can_lock": false,
         "in_game_id": 39936,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6413,7 +6973,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Draygon 1)",
-        "notes": "Just used to group the two rewards from the Draygon fight."
+        "notes": "Just used to group the two rewards from the Draygon fight.",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -6426,10 +6987,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Pyramid - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Pyramid - Post-Draygon": {
     "name": "Pyramid - Post-Draygon",
@@ -6446,7 +7009,8 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Pyramid - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Azteca In Pyramid",
@@ -6457,10 +7021,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Pyramid - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Rage - North": {
     "name": "Rage - North",
@@ -6478,7 +7044,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Rage Tree",
@@ -6491,11 +7058,15 @@
         "can_lock": false,
         "in_game_id": 17153,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Rage"
+    ]
   },
   "Rage - South": {
     "name": "Rage - South",
@@ -6515,7 +7086,8 @@
         "can_lock": false,
         "in_game_id": 17152,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6528,7 +7100,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "(trade_in(Rage) || rage_skip*) && (Flight || can_break_wall(Water))",
-        "notes": "\"Actually forcing Rage skip into logic might be tough? Need to note entrance to Rage in output file"
+        "notes": "\"Actually forcing Rage skip into logic might be tough? Need to note entrance to Rage in output file",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -6541,10 +7114,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Rage Entrance",
-        "pseudologic": "trade_in(Rage)"
+        "pseudologic": "trade_in(Rage)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": [
+      "Rage"
+    ]
   },
   "Sabera's Floor - Across Rivers": {
     "name": "Sabera's Floor - Across Rivers",
@@ -6562,7 +7139,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6575,11 +7153,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Sabera Boss)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Goa Fortress - Sabera Boss"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sabera's Floor - Back": {
     "name": "Sabera's Floor - Back",
@@ -6597,7 +7177,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Sabera 2)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Sabera 2"
       },
       {
         "name": "Sabera's Floor - Exit",
@@ -6610,11 +7191,13 @@
         "can_lock": false,
         "in_game_id": 44033,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sabera's Floor - Boss Arena": {
     "name": "Sabera's Floor - Boss Arena",
@@ -6632,7 +7215,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6645,7 +7229,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -6658,10 +7243,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Goa Entrance - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sabera's Floor - Front": {
     "name": "Sabera's Floor - Front",
@@ -6681,7 +7268,8 @@
         "can_lock": false,
         "in_game_id": 43776,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6694,7 +7282,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6707,7 +7296,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -6720,10 +7310,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Entrance - Exit",
-        "pseudologic": "can_break_wall(Sabera Item)"
+        "pseudologic": "can_break_wall(Sabera Item)",
+        "associated_shuffle_data": "Goa Fortress - Sabera Item"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sabera's Floor - Pre-Boss": {
     "name": "Sabera's Floor - Pre-Boss",
@@ -6743,7 +7335,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Sabera Boss)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Goa Fortress - Sabera Boss"
       },
       {
         "name": "",
@@ -6756,11 +7349,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Sabera 2)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Sabera 2"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sabera's Floor - River Items": {
     "name": "Sabera's Floor - River Items",
@@ -6777,7 +7372,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Entrance - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Fortress Sabera Southeast Chest",
@@ -6788,10 +7384,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Goa Entrance - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sabera's Fortress - Front": {
     "name": "Sabera's Fortress - Front",
@@ -6812,7 +7410,8 @@
         "can_lock": false,
         "in_game_id": 27648,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6825,7 +7424,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Vampire 2)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Vampire 2"
       }
     ],
     "locations": [
@@ -6838,7 +7438,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Sabera's Fortress - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Vampire 2",
@@ -6849,10 +7450,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Sabera's Fortress - Exit",
-        "pseudologic": "can_fight(Vampire 2)"
+        "pseudologic": "can_fight(Vampire 2)",
+        "associated_shuffle_data": "Vampire 2"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sabera's Fortress - Post-Boss": {
     "name": "Sabera's Fortress - Post-Boss",
@@ -6869,10 +7472,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Sabera's Fortress - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sabera's Fortress - Upstairs": {
     "name": "Sabera's Fortress - Upstairs",
@@ -6893,7 +7498,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -6906,7 +7512,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Sabera 1)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Sabera 1"
       }
     ],
     "locations": [
@@ -6919,10 +7526,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Sabera's Fortress - Exit",
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sahara": {
     "name": "Sahara",
@@ -6942,7 +7551,8 @@
         "can_lock": false,
         "in_game_id": 37632,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Sahara - Right",
@@ -6955,7 +7565,8 @@
         "can_lock": false,
         "in_game_id": 37637,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Sahara - Item Shop",
@@ -6970,7 +7581,8 @@
         "can_lock": false,
         "in_game_id": 37634,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Sahara - Inn",
@@ -6985,7 +7597,8 @@
         "can_lock": false,
         "in_game_id": 37633,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Sahara - Pawn Shop",
@@ -6998,7 +7611,8 @@
         "can_lock": false,
         "in_game_id": 37636,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Sahara - Elder House",
@@ -7011,11 +7625,13 @@
         "can_lock": false,
         "in_game_id": 37635,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sahara Cave Transition": {
     "name": "Sahara Cave Transition",
@@ -7035,7 +7651,8 @@
         "can_lock": false,
         "in_game_id": 37888,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Sahara Cave Transition - Cave",
@@ -7048,11 +7665,13 @@
         "can_lock": true,
         "in_game_id": 37889,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sahara Elder House": {
     "name": "Sahara Elder House",
@@ -7072,11 +7691,13 @@
         "can_lock": false,
         "in_game_id": 64000,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sahara Inn": {
     "name": "Sahara Inn",
@@ -7096,11 +7717,13 @@
         "can_lock": false,
         "in_game_id": 63488,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Sahara Item Shop": {
     "name": "Sahara Item Shop",
@@ -7120,11 +7743,13 @@
         "can_lock": false,
         "in_game_id": 63744,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Sahara Pawn Shop": {
     "name": "Sahara Pawn Shop",
@@ -7144,11 +7769,13 @@
         "can_lock": false,
         "in_game_id": 64256,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Sealed Cave - Back": {
     "name": "Sealed Cave - Back",
@@ -7169,7 +7796,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Sealed Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Sealed Cave"
       },
       {
         "name": "",
@@ -7182,7 +7810,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Sealed Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Sealed Cave"
       }
     ],
     "locations": [
@@ -7195,7 +7824,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Sealed Cave Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Vampire 1",
@@ -7206,10 +7836,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Sealed Cave Exit",
-        "pseudologic": "Sword"
+        "pseudologic": "Sword",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sealed Cave - Exit": {
     "name": "Sealed Cave - Exit",
@@ -7227,7 +7859,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Sealed Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Sealed Cave"
       },
       {
         "name": "Sealed Cave Exit",
@@ -7242,11 +7875,13 @@
         "can_lock": false,
         "in_game_id": 3073,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Sealed Cave - Front": {
     "name": "Sealed Cave - Front",
@@ -7272,7 +7907,8 @@
         "can_lock": false,
         "in_game_id": 1024,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -7285,7 +7921,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Sealed Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Sealed Cave"
       }
     ],
     "locations": [
@@ -7298,7 +7935,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Sealed Cave Entrance",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Sealed Cave Big Room Northeast Chest",
@@ -7309,7 +7947,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Sealed Cave Entrance",
-        "pseudologic": "can_break_wall(Sealed Cave)"
+        "pseudologic": "can_break_wall(Sealed Cave)",
+        "associated_shuffle_data": "Sealed Cave"
       },
       {
         "name": "Sealed Cave Small Room Front Chest",
@@ -7320,7 +7959,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Sealed Cave Entrance",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Sealed Cave Big Room Southwest Chest",
@@ -7331,10 +7971,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Sealed Cave Entrance",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Servant Chambers": {
     "name": "Servant Chambers",
@@ -7354,11 +7996,13 @@
         "can_lock": false,
         "in_game_id": 57344,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Shyron": {
     "name": "Shyron",
@@ -7378,7 +8022,8 @@
         "can_lock": false,
         "in_game_id": 35840,
         "pseudologic": "TRUE",
-        "notes": "\"Not shuffled on Wh"
+        "notes": "\"Not shuffled on Wh",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Shyron - Palace Entrance",
@@ -7391,7 +8036,8 @@
         "can_lock": false,
         "in_game_id": 35841,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Shyron - Inn",
@@ -7404,7 +8050,8 @@
         "can_lock": false,
         "in_game_id": 35846,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Shyron - Item Shop",
@@ -7417,7 +8064,8 @@
         "can_lock": false,
         "in_game_id": 35845,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Shyron - Armor Shop",
@@ -7430,7 +8078,8 @@
         "can_lock": false,
         "in_game_id": 35844,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Shyron - Hospital",
@@ -7443,7 +8092,8 @@
         "can_lock": false,
         "in_game_id": 35843,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Shyron - Training Center",
@@ -7456,11 +8106,13 @@
         "can_lock": false,
         "in_game_id": 35842,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Shyron Armor Shop": {
     "name": "Shyron Armor Shop",
@@ -7480,11 +8132,13 @@
         "can_lock": false,
         "in_game_id": 62720,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Shyron Hospital": {
     "name": "Shyron Hospital",
@@ -7504,11 +8158,13 @@
         "can_lock": false,
         "in_game_id": 62464,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Shyron Inn": {
     "name": "Shyron Inn",
@@ -7528,11 +8184,13 @@
         "can_lock": false,
         "in_game_id": 63232,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Shyron Item Shop": {
     "name": "Shyron Item Shop",
@@ -7552,11 +8210,13 @@
         "can_lock": false,
         "in_game_id": 62976,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Shyron Temple": {
     "name": "Shyron Temple",
@@ -7576,7 +8236,8 @@
         "can_lock": false,
         "in_game_id": 61952,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -7589,7 +8250,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_fight(Mado 1) && can_reach(Goa Entrance - Massacre Trigger) && Sword of Thunder",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Mado 1"
       }
     ],
     "locations": [
@@ -7602,10 +8264,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Shyron Temple - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Shyron Temple - Post-Boss": {
     "name": "Shyron Temple - Post-Boss",
@@ -7622,10 +8286,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Shyron Temple - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Shyron Training Center": {
     "name": "Shyron Training Center",
@@ -7645,11 +8311,13 @@
         "can_lock": false,
         "in_game_id": 62208,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Stxy - Downstairs": {
     "name": "Stxy - Downstairs",
@@ -7669,7 +8337,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Barrier || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -7682,7 +8351,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -7695,7 +8365,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -7708,10 +8379,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Stxy - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Stxy - Front": {
     "name": "Stxy - Front",
@@ -7731,7 +8404,8 @@
         "can_lock": false,
         "in_game_id": 34816,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -7744,11 +8418,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Barrier || (Flight && gauntlet_skip) || (no_barrier && money && (Shield Ring || buy_healing || Refresh))",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Stxy - Right": {
     "name": "Stxy - Right",
@@ -7765,7 +8441,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Stxy - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Stxy Right North Mimic",
@@ -7776,7 +8453,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Stxy - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Stxy Right South Mimic",
@@ -7787,10 +8465,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Stxy - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Stxy - Upstairs": {
     "name": "Stxy - Upstairs",
@@ -7810,7 +8490,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -7823,7 +8504,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Stxy - Exit",
-        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))"
+        "pseudologic": "Flight || Hazmat Suit || Leather Boots || Rabbit Boots || (no_gas_mask && money && (Refresh || buy_healing))",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Stxy Left Lower Chest",
@@ -7834,10 +8516,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Stxy - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Swamp - Far Side": {
     "name": "Swamp - Far Side",
@@ -7855,7 +8539,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Swamp - Exit",
@@ -7868,11 +8553,13 @@
         "can_lock": false,
         "in_game_id": 6657,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Swamp - Interior": {
     "name": "Swamp - Interior",
@@ -7890,7 +8577,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -7903,7 +8591,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -7916,10 +8605,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Swamp - Entrance",
-        "pseudologic": "Insect Flute && (Gas Mask || Hazmat Suit) && can_fight(Giant Insect)"
+        "pseudologic": "Insect Flute && (Gas Mask || Hazmat Suit) && can_fight(Giant Insect)",
+        "associated_shuffle_data": "Giant Insect"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Insect Flute"
+    ]
   },
   "Swamp - Near Side": {
     "name": "Swamp - Near Side",
@@ -7939,7 +8632,8 @@
         "can_lock": false,
         "in_game_id": 6656,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -7952,11 +8646,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "gas_mask_off || Hazmat Suit || Gas Mask",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Swan": {
     "name": "Swan",
@@ -7976,7 +8672,8 @@
         "can_lock": false,
         "in_game_id": 29184,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Swan Exit",
@@ -7989,7 +8686,8 @@
         "can_lock": false,
         "in_game_id": 29187,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Swan - Dance Hall",
@@ -8002,7 +8700,8 @@
         "can_lock": false,
         "in_game_id": 29192,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Swan - Pawn Shop",
@@ -8015,7 +8714,8 @@
         "can_lock": false,
         "in_game_id": 29191,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Swan - Pub",
@@ -8028,7 +8728,8 @@
         "can_lock": false,
         "in_game_id": 29190,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Swan - Armor Shop",
@@ -8043,7 +8744,8 @@
         "can_lock": false,
         "in_game_id": 29188,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Swan - Inn",
@@ -8058,7 +8760,8 @@
         "can_lock": false,
         "in_game_id": 29189,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Swan - Item Shop",
@@ -8071,7 +8774,8 @@
         "can_lock": false,
         "in_game_id": 29185,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Swan - Shed",
@@ -8084,11 +8788,13 @@
         "can_lock": false,
         "in_game_id": 29186,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Swan Armor Shop": {
     "name": "Swan Armor Shop",
@@ -8108,11 +8814,13 @@
         "can_lock": false,
         "in_game_id": 60928,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Swan Dance Hall": {
     "name": "Swan Dance Hall",
@@ -8132,7 +8840,8 @@
         "can_lock": false,
         "in_game_id": 61696,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -8145,10 +8854,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Swan Dance Hall - Exit",
-        "pseudologic": "Paralysis && can_reach(Swan Shed) && can_reach(Swan Pub) && trade_in(Tag Kensu)"
+        "pseudologic": "Paralysis && can_reach(Swan Shed) && can_reach(Swan Pub) && trade_in(Tag Kensu)",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Love Pendant"
+    ]
   },
   "Swan Inn": {
     "name": "Swan Inn",
@@ -8168,11 +8881,13 @@
         "can_lock": false,
         "in_game_id": 60672,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Swan Item Shop": {
     "name": "Swan Item Shop",
@@ -8192,11 +8907,13 @@
         "can_lock": false,
         "in_game_id": 60160,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Swan Pawn Shop": {
     "name": "Swan Pawn Shop",
@@ -8216,11 +8933,13 @@
         "can_lock": false,
         "in_game_id": 61440,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Swan Pub": {
     "name": "Swan Pub",
@@ -8240,11 +8959,13 @@
         "can_lock": false,
         "in_game_id": 61184,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Swan Shed": {
     "name": "Swan Shed",
@@ -8264,11 +8985,13 @@
         "can_lock": false,
         "in_game_id": 60416,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Tornel's House": {
     "name": "Tornel's House",
@@ -8288,7 +9011,8 @@
         "can_lock": false,
         "in_game_id": 7680,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -8301,10 +9025,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Tornel's House - Exit",
-        "pseudologic": "(Sword && !charge_only) || (buy_warp && (can_reach(Leaf) || can_reach(Amazones) || can_reach(Sahara))"
+        "pseudologic": "(Sword && !charge_only) || (buy_warp && (can_reach(Leaf) || can_reach(Amazones) || can_reach(Sahara))",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Tornel's House Exterior": {
     "name": "Tornel's House Exterior",
@@ -8324,7 +9050,8 @@
         "can_lock": false,
         "in_game_id": 6400,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Tornel's House Entrance",
@@ -8337,11 +9064,13 @@
         "can_lock": false,
         "in_game_id": 6401,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Tower - Lower": {
     "name": "Tower - Lower",
@@ -8364,11 +9093,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "has_any_level_3",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Tower - Upper": {
     "name": "Tower - Upper",
@@ -8386,9 +9117,10 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
-        "in_game_id": -1,
+        "in_game_id": 23552,
         "pseudologic": "",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -8401,11 +9133,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Crystalis",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Tower - Mesia": {
     "name": "Tower - Mesia",
@@ -8423,13 +9157,15 @@
         "related_entrances": [],
         "house_type": "",
         "can_lock": false,
-        "in_game_id": -1,
+        "in_game_id": 24064,
         "pseudologic": "",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Tower - Dyna": {
     "name": "Tower - Dyna",
@@ -8440,7 +9176,8 @@
     "notes": "",
     "entrances": [],
     "locations": [],
-    "ban_wildwarp": true
+    "ban_wildwarp": true,
+    "associated_shuffle_data": []
   },
   "Waterfall Cave - After Statues": {
     "name": "Waterfall Cave - After Statues",
@@ -8460,7 +9197,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flute of Lime || statue_skip",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -8473,11 +9211,15 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Waterfall Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Waterfall Cave"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Flute of Lime"
+    ]
   },
   "Waterfall Cave - Back": {
     "name": "Waterfall Cave - Back",
@@ -8497,7 +9239,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Waterfall Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Waterfall Cave"
       }
     ],
     "locations": [
@@ -8510,7 +9253,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Waterfall Cave - Exit",
-        "pseudologic": "can_break_wall(Waterfall Cave)"
+        "pseudologic": "can_break_wall(Waterfall Cave)",
+        "associated_shuffle_data": "Waterfall Cave"
       },
       {
         "name": "Waterfall Cave River Left Chest",
@@ -8521,7 +9265,8 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Waterfall Cave - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Akahana Flute of Lime Tradein",
@@ -8532,10 +9277,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Waterfall Cave - Exit",
-        "pseudologic": "Flute of Lime"
+        "pseudologic": "Flute of Lime",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Flute of Lime"
+    ]
   },
   "Waterfall Cave - Before Statues": {
     "name": "Waterfall Cave - Before Statues",
@@ -8555,7 +9304,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Waterfall Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Waterfall Cave"
       },
       {
         "name": "",
@@ -8568,11 +9318,15 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flute of Lime || statue_skip",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Flute of Lime"
+    ]
   },
   "Waterfall Cave - Front": {
     "name": "Waterfall Cave - Front",
@@ -8592,7 +9346,8 @@
         "can_lock": false,
         "in_game_id": 21504,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -8605,7 +9360,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Waterfall Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Waterfall Cave"
       }
     ],
     "locations": [
@@ -8618,10 +9374,12 @@
         "prevent_loss": false,
         "is_chest": true,
         "entrance_hint": "Waterfall Cave - Exit",
-        "pseudologic": "can_break_wall(Waterfall Cave)"
+        "pseudologic": "can_break_wall(Waterfall Cave)",
+        "associated_shuffle_data": "Waterfall Cave"
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Waterfall Valley - By North River": {
     "name": "Waterfall Valley - By North River",
@@ -8639,7 +9397,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Waterfall Valley North River Cave",
@@ -8652,11 +9411,13 @@
         "can_lock": true,
         "in_game_id": 16386,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Waterfall Valley - By Prison": {
     "name": "Waterfall Valley - By Prison",
@@ -8676,7 +9437,8 @@
         "can_lock": true,
         "in_game_id": 16384,
         "pseudologic": "Prison Key",
-        "notes": "Remove Prison Key requirement for Wa"
+        "notes": "Remove Prison Key requirement for Wa",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -8689,11 +9451,15 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Key to Prison"
+    ]
   },
   "Waterfall Valley - By South River": {
     "name": "Waterfall Valley - By South River",
@@ -8711,7 +9477,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Waterfall Valley South River Cave",
@@ -8724,11 +9491,13 @@
         "can_lock": true,
         "in_game_id": 16641,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Waterfall Valley - Main": {
     "name": "Waterfall Valley - Main",
@@ -8748,7 +9517,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || trigger_skip",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Waterfall Valley North Bridge",
@@ -8761,7 +9531,8 @@
         "can_lock": false,
         "in_game_id": 16387,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Waterfall Valley Cave Behind Waterfall",
@@ -8774,7 +9545,8 @@
         "can_lock": false,
         "in_game_id": 16385,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Waterfall Valley South Passage",
@@ -8787,7 +9559,8 @@
         "can_lock": false,
         "in_game_id": 16640,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -8800,7 +9573,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -8813,11 +9587,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "Flight || can_break_wall(Water)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Wind Valley": {
     "name": "Wind Valley",
@@ -8837,7 +9613,8 @@
         "can_lock": false,
         "in_game_id": 768,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Wind Valley - North East Cave",
@@ -8850,7 +9627,8 @@
         "can_lock": true,
         "in_game_id": 769,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Wind Valley - North West Cave",
@@ -8863,7 +9641,8 @@
         "can_lock": false,
         "in_game_id": 770,
         "pseudologic": "Windmill Key && can_reach(Windmill)",
-        "notes": "\"If Wa"
+        "notes": "\"If Wa",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Wind Valley - West Cave",
@@ -8876,7 +9655,8 @@
         "can_lock": true,
         "in_game_id": 773,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Wind Valley - East Cave",
@@ -8889,7 +9669,8 @@
         "can_lock": true,
         "in_game_id": 774,
         "pseudologic": "TRUE",
-        "notes": "Only exists if Vm and V!m are both off."
+        "notes": "Only exists if Vm and V!m are both off.",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Wind Valley - East",
@@ -8902,7 +9683,8 @@
         "can_lock": false,
         "in_game_id": 1023,
         "pseudologic": "TRUE",
-        "notes": "Only exists if V!m is on."
+        "notes": "Only exists if V!m is on.",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -8915,10 +9697,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Windmill Exit",
-        "pseudologic": "can_reach(Windmill) && Windmill Key"
+        "pseudologic": "can_reach(Windmill) && Windmill Key",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Windmill": {
     "name": "Windmill",
@@ -8938,11 +9722,15 @@
         "can_lock": false,
         "in_game_id": 3840,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Windmill Key"
+    ]
   },
   "Windmill Cave": {
     "name": "Windmill Cave",
@@ -8964,7 +9752,8 @@
         "can_lock": false,
         "in_game_id": 3584,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Windmill Cave Exit",
@@ -8979,7 +9768,8 @@
         "can_lock": false,
         "in_game_id": 3585,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -8992,10 +9782,14 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Windmill Cave Entrance",
-        "pseudologic": "can_reach(Leaf Elder House) && can_reach(Zebu Student's House) && can_reach(Zebu's Cave - Front) && Alarm Flute"
+        "pseudologic": "can_reach(Leaf Elder House) && can_reach(Zebu Student's House) && can_reach(Zebu's Cave - Front) && Alarm Flute",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": [
+      "Alarm Flute"
+    ]
   },
   "Windmill Exterior": {
     "name": "Windmill Exterior",
@@ -9013,7 +9807,8 @@
         "can_lock": false,
         "in_game_id": 771,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Windmill Entrance",
@@ -9026,11 +9821,13 @@
         "can_lock": false,
         "in_game_id": 772,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Zebu Student's House": {
     "name": "Zebu Student's House",
@@ -9050,7 +9847,8 @@
         "can_lock": false,
         "in_game_id": 50432,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [
@@ -9063,10 +9861,12 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "Zebu Student's House - Exit",
-        "pseudologic": "TRUE"
+        "pseudologic": "TRUE",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Zebu's Cave - Back": {
     "name": "Zebu's Cave - Back",
@@ -9086,7 +9886,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Zebu's Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Zebu Cave"
       },
       {
         "name": "Zebu's Cave Exit",
@@ -9101,11 +9902,13 @@
         "can_lock": false,
         "in_game_id": 4353,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Zebu's Cave - Front": {
     "name": "Zebu's Cave - Front",
@@ -9127,7 +9930,8 @@
         "can_lock": false,
         "in_game_id": 4096,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "",
@@ -9140,11 +9944,13 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "can_break_wall(Zebu's Cave)",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": "Zebu Cave"
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Zombie Town": {
     "name": "Zombie Town",
@@ -9164,7 +9970,8 @@
         "can_lock": true,
         "in_game_id": 25856,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Zombie Town - Clark's Hideout",
@@ -9177,7 +9984,8 @@
         "can_lock": false,
         "in_game_id": 25858,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       },
       {
         "name": "Zombie Town - Palace Entrance",
@@ -9190,11 +9998,13 @@
         "can_lock": false,
         "in_game_id": 25857,
         "pseudologic": "TRUE",
-        "notes": ""
+        "notes": "",
+        "associated_shuffle_data": ""
       }
     ],
     "locations": [],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   },
   "Menu": {
     "name": "Menu",
@@ -9212,7 +10022,8 @@
         "can_lock": false,
         "in_game_id": -1,
         "pseudologic": "TRUE",
-        "notes": "The way to start the game."
+        "notes": "The way to start the game.",
+        "associated_shuffle_data": []
       }
     ],
     "locations": [
@@ -9225,9 +10036,11 @@
         "prevent_loss": false,
         "is_chest": false,
         "entrance_hint": "",
-        "pseudologic": "Broken Statue && Glowing Lamp"
+        "pseudologic": "Broken Statue && Glowing Lamp",
+        "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false
+    "ban_wildwarp": false,
+    "associated_shuffle_data": []
   }
 }

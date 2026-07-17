@@ -250,10 +250,10 @@ class CrystalisWorld(World):
             if "Tornel" not in trade_in_map:
                 trade_in_map["Tornel"] = self.random.choice(ELEMENTS)
             if "Rage" not in trade_in_map:
-                trade_in_map["Rage"] = self.random.choice(ELEMENTS) + " Sword"
+                trade_in_map["Rage"] = "Sword of " + self.random.choice(ELEMENTS)
         else:
             trade_in_map["Tornel"] = "Wind"
-            trade_in_map["Rage"] = "Water Sword"
+            trade_in_map["Rage"] = "Sword of Water"
         # bosses!
         boss_weaknesses: List[str] = []
         if self.options.randomize_monster_weaknesses:

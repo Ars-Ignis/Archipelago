@@ -14,16 +14,16 @@ if TYPE_CHECKING:
     from . import CrystalisWorld
 
 def has_level_1_sword(state: CollectionState, player: int, element: str) -> bool:
-    return state.has_group(element + " Sword", player, 1)
+    return state.has("Sword of " + element, player)
 
 
 def has_level_2_sword(state: CollectionState, player: int, element: str) -> bool:
-    return state.has_group(element + " Sword", player, 1) and \
-           state.has_group(element + " Upgrades", player, 1)
+    return state.has("Sword of " + element, player) and \
+           state.has_group(element + " Upgrades", player)
 
 
 def has_level_3_sword(state: CollectionState, player: int, element: str) -> bool:
-    return state.has_group(element + " Sword", player, 1) and \
+    return state.has("Sword of " + element, player) and \
            state.has_group_unique(element + " Upgrades", player, 2)
 
 
@@ -52,16 +52,16 @@ def set_two_way_logic(forward_entrance: Entrance) -> None:
     logging.warning(f"Could not find reverse entrance for {forward_entrance.name}")
 
 
-def get_tetrarch_fight_logic(self: "CrystalisWorld", element: str, level: Optional[int] = None) -> \
+def get_tetrarch_fight_logic(self: "CrystalisWorld", element: Optional[str] = None, level: Optional[int] = None) -> \
         Callable[[CollectionState], bool]:
     element_logic: Callable[[CollectionState], bool]
-    if self.options.tink_mode:
-        element_logic = lambda state: state.has_group("Sword", self.player, 1)
+    if self.options.tink_mode or element is None:
+        element_logic = lambda state: state.has_group("Sword", self.player)
     else:
         element_logic = lambda state: has_level_1_sword(state, self.player, element)
     battle_magic_logic: Callable[[CollectionState], bool]
     if not self.options.battle_magic_not_guaranteed:
-        if self.options.sword_charge_glitch == self.options.sword_charge_glitch.option_in_logic or self.options.tink_mode:
+        if self.options.sword_charge_glitch == self.options.sword_charge_glitch.option_in_logic or self.options.tink_mode or element is None:
             if level is not None and level == 2:
                 battle_magic_logic = lambda state: has_any_level_2_sword(state, self.player) or state.has(self.glitches_item_name, self.player)
             else:
@@ -92,10 +92,10 @@ def set_rules(self: "CrystalisWorld") -> None:
     else:
         if options.sword_charge_glitch == options.sword_charge_glitch.option_in_logic:
             can_break_wall = lambda state, plyr, elem: has_any_level_2_sword(state, plyr) and \
-                                                       state.has_group(elem + " Sword", plyr, 1)
+                                                       state.has("Sword of " + elem, plyr)
         elif options.sword_charge_glitch == options.sword_charge_glitch.option_out_of_logic:
             can_break_wall = lambda state, plyr, elem: ((has_any_level_2_sword(state, plyr) and
-                                                        state.has_group(elem + " Sword", plyr, 1) and
+                                                        state.has("Sword of " + elem, plyr) and
                                                         state.has(self.glitches_item_name, self.player)) or
                                                         has_level_2_sword(state, plyr, elem))
         else:
@@ -112,10 +112,10 @@ def set_rules(self: "CrystalisWorld") -> None:
             continue
         if "Medical Herb" in inventory:
             buy_healing_entrance = self.get_entrance("Buy Healing: " + shop)
-            set_rule(buy_healing_entrance, lambda state: state.has_group("Sword", player, 1))
+            set_rule(buy_healing_entrance, lambda state: state.has_group("Sword", player))
         if "Warp Boots" in inventory:
             buy_warp_boots_entrance = self.get_entrance("Buy Warp Boots: " + shop)
-            set_rule(buy_warp_boots_entrance, lambda state: state.has_group("Sword", player, 1))
+            set_rule(buy_warp_boots_entrance, lambda state: state.has_group("Sword", player))
 
     # Thunder Warp
     for town in TOWNS:
@@ -123,6 +123,9 @@ def set_rules(self: "CrystalisWorld") -> None:
         set_rule(thunder_warp, lambda state, town=town: state.has(f"Sword of Thunder ({town})", player) and
                                              (state.has("Buy Warp Boots", player) or
                                               state.has("Teleport", player)))
+    # Create event logic for when any Sword of Thunder will do
+    sword_of_thunder_event_location: Location = self.get_location("Sword of Thunder")
+    set_rule(sword_of_thunder_event_location, lambda state: state.has_group("Thunder Sword", player))
 
     # Leaf/Wind Valley/Windmill Cave
     windmill_region = self.get_region("Windmill")
@@ -162,7 +165,7 @@ def set_rules(self: "CrystalisWorld") -> None:
     sealed_cave_ne_chest = self.get_location("Sealed Cave Big Room Northeast Chest")
     sealed_cave_ne_chest.access_rule = can_break_sealed_cave_wall
     vamp_1_reward = self.get_location("Vampire 1")
-    set_rule(vamp_1_reward, lambda state: state.has_group("Sword", player, 1))
+    set_rule(vamp_1_reward, lambda state: state.has_group("Sword", player))
 
     # Cordel Plains/Brynmaer/Amazones/Stom Fight
     if not options.shuffle_areas:
@@ -209,7 +212,7 @@ def set_rules(self: "CrystalisWorld") -> None:
                                             state.can_reach_region("Amazones", player) or
                                             state.can_reach_region("Sahara", player)))
     if not options.charge_shots_only:
-        add_rule(stom_fight_loc, lambda state: state.has_group("Sword", player, 1) and
+        add_rule(stom_fight_loc, lambda state: state.has_group("Sword", player) and
                                                state.can_reach_region("Oak", player), "or")
 
     # Mt. Sabre West
@@ -245,11 +248,11 @@ def set_rules(self: "CrystalisWorld") -> None:
     set_rule(swamp_pass_1, lambda state: state.has("Hazmat Suit", player) or state.has("Gas Mask", player))
     if options.gas_mask_not_guaranteed:
         add_rule(swamp_pass_1, lambda state: state.has("Buy Healing", player) or
-                                             (state.has("Refresh", player) and state.has_group("Sword", player, 1)),
+                                             (state.has("Refresh", player) and state.has_group("Sword", player)),
                  "or")
     else:
         add_rule(swamp_pass_1, lambda state: (state.has("Buy Healing", player) or
-                                             (state.has("Refresh", player) and state.has_group("Sword", player, 1))) and
+                                             (state.has("Refresh", player) and state.has_group("Sword", player))) and
                                               state.has(self.glitches_item_name, player),
                  "or")
     swamp_pass_2 = self.get_entrance("Swamp - Far Side -> Swamp - Interior")
@@ -275,14 +278,11 @@ def set_rules(self: "CrystalisWorld") -> None:
                                            state.can_reach_region("Oak", player))
     insect_reward = self.get_location("Giant Insect")
     elements = ["Wind", "Fire", "Water", "Thunder"]
-    insect_weapons: List[str]= []
+    insect_weapons: List[str]
     if options.tink_mode:
-        insect_weapons = sorted(self.item_name_groups["Sword"])
+        insect_weapons = ["Sword of " + x for x in elements]
     else:
-        for element in elements:
-            if element == shuffle_data.boss_reqs["Giant Insect"]:
-                continue
-            insect_weapons += sorted(self.item_name_groups[element + " Sword"])
+        insect_weapons = ["Sword of " + x for x in elements if x != shuffle_data.boss_reqs["Giant Insect"]]
     set_rule(insect_reward, lambda state: state.has(shuffle_data.key_item_names["Insect Flute"], player) and
                                           (state.has("Gas Mask", player) or state.has("Hazmat Suit", player)) and
                                           state.has_any(insect_weapons, player))
@@ -432,14 +432,14 @@ def set_rules(self: "CrystalisWorld") -> None:
     rage_river = self.get_entrance("Rage - South -> Rage - North")
     rage_river.access_rule = can_cross_rivers
     if options.rage_skip != options.rage_skip.option_in_logic:
-        add_rule(rage_river, lambda state: state.has_group(shuffle_data.trade_in_map["Rage"], player), "and")
+        add_rule(rage_river, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player), "and")
         if options.rage_skip == options.rage_skip.option_out_of_logic:
             add_rule(rage_river, lambda state: state.has(self.glitches_item_name, player), "or")
     # need the reverse entrance because you only get the free push across if you don't have Rage's sword
     rage_river_reverse = self.get_entrance("Rage - North -> Rage - South")
     rage_river_reverse.access_rule = can_cross_rivers
     rage_reward = self.get_location("Rage")
-    set_rule(rage_reward, lambda state: state.has_group(shuffle_data.trade_in_map["Rage"], player))
+    set_rule(rage_reward, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player))
 
     # Portoa Castle
     teller_front = self.get_region("Fortune Teller - Front")
@@ -449,7 +449,7 @@ def set_rules(self: "CrystalisWorld") -> None:
     second_guard = self.get_entrance("Portoa Palace - Throne Room -> Portoa Palace - Gift Trigger")
     queen_gift = self.get_location("Portoa Queen")
     set_rule(queen_gift, lambda state: teller_front.can_reach(state) or teller_back.can_reach(state))
-    add_rule(queen_gift, lambda state: state.has_group(shuffle_data.trade_in_map["Rage"], player) or
+    add_rule(queen_gift, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player) or
                                        gift_trigger.can_reach(state), "and")
     add_rule(queen_gift, lambda state: state.has("Mesia's Message", player), "or")
     if options.trigger_skip != options.trigger_skip.option_in_logic and \
@@ -562,24 +562,21 @@ def set_rules(self: "CrystalisWorld") -> None:
     if options.gas_mask_not_guaranteed:
         can_cross_pain = lambda state: state.has_any(["Flight", "Hazmat Suit", "Rabbit Boots",
                                                       "Leather Boots"], player) or \
-                                       (state.has_group("Sword", player, 1) and
+                                       (state.has_group("Sword", player) and
                                         state.has_any(["Refresh", "Buy Healing"], player))
     else:
         can_cross_pain = lambda state: state.has_any(["Flight", "Hazmat Suit", "Rabbit Boots",
                                                       "Leather Boots"], player) or \
-                                       (state.has_group("Sword", player, 1) and
+                                       (state.has_group("Sword", player) and
                                         state.has_any(["Refresh", "Buy Healing"], player) and
                                         state.has(self.glitches_item_name, player))
     vamp_2_fight = self.get_entrance("Sabera's Fortress - Front -> Sabera's Fortress - Upstairs")
     vamp_2_reward = self.get_location("Vampire 2")
-    vamp_2_weapons: List[str] = []
+    vamp_2_weapons: List[str]
     if options.tink_mode:
-        vamp_2_weapons = sorted(self.item_name_groups["Sword"])
+        vamp_2_weapons = ["Sword of " + x for x in elements]
     else:
-        for element in elements:
-            if element == shuffle_data.boss_reqs["Vampire 2"]:
-                continue
-            vamp_2_weapons += sorted(self.item_name_groups[element + " Sword"])
+        vamp_2_weapons = ["Sword of " + x for x in elements if x != shuffle_data.boss_reqs["Vampire 2"]]
     vamp_2_logic = lambda state: state.has_any(vamp_2_weapons, player)
     vamp_2_fight.access_rule = vamp_2_logic
     vamp_2_reward.access_rule = vamp_2_logic
@@ -614,7 +611,7 @@ def set_rules(self: "CrystalisWorld") -> None:
         shyron_temple = self.get_region("Shyron Temple")
         hydra_guardpost = self.get_entrance("Mt. Hydra - Guardpost")
         set_rule(hydra_guardpost, lambda state: state.has("Change", player) or shyron_region.can_reach(state) or
-                                                (state.has_group("Thunder Sword", player, 1) and
+                                                (state.has("Sword of Thunder", player) and
                                                  shyron_temple.can_reach(state) and
                                                  massacre_trigger.can_reach(state)))
         multiworld.register_indirect_condition(shyron_temple, hydra_guardpost)
@@ -641,7 +638,7 @@ def set_rules(self: "CrystalisWorld") -> None:
     # Shyron
     mado_1_fight = self.get_entrance("Shyron Temple -> Shyron Temple - Post-Boss")
     mado_1_fight_logic = self.get_tetrarch_fight_logic(shuffle_data.boss_reqs["Mado 1"])
-    set_rule(mado_1_fight, lambda state: state.has_group("Thunder Sword", player, 1) and
+    set_rule(mado_1_fight, lambda state: state.has("Sword of Thunder", player) and
                                          massacre_trigger.can_reach(state) and
                                          mado_1_fight_logic(state))
     multiworld.register_indirect_condition(massacre_trigger, mado_1_fight)
@@ -651,13 +648,13 @@ def set_rules(self: "CrystalisWorld") -> None:
     can_cross_shooters_south: Callable[[CollectionState], bool]
     if options.barrier_not_guaranteed:
         can_cross_shooters_south = lambda state: barrier_logic(state) or \
-                                                 (state.has_group("Sword", player, 1) and
+                                                 (state.has_group("Sword", player) and
                                                   (state.has("Shield Ring", player) or
                                                    state.has("Buy Healing", player) or
                                                    state.has("Refresh", player)))
     else:
         can_cross_shooters_south = lambda state: barrier_logic(state) or \
-                                                 (state.has_group("Sword", player, 1) and
+                                                 (state.has_group("Sword", player) and
                                                   (state.has("Shield Ring", player) or
                                                    state.has("Buy Healing", player) or
                                                    state.has("Refresh", player)) and
@@ -745,8 +742,8 @@ def set_rules(self: "CrystalisWorld") -> None:
     mado_2_forward.access_rule = mado_2_logic
     mado_2_backward = self.get_entrance("Mado's Floor - Back -> Mado's Floor - Boss Arena")
     mado_2_backward.access_rule = mado_2_logic
-    mado_wal_item = self.get_location("Fortress Mado Upper Behind Wall Chest")
-    set_rule(mado_wal_item, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Goa Fortress - Mado 2"]))
+    mado_wall_item = self.get_location("Fortress Mado Upper Behind Wall Chest")
+    set_rule(mado_wall_item, lambda state: can_break_wall(state, player, shuffle_data.wall_map["Goa Fortress - Mado 2"]))
 
     # Goa Fortress - Karmine's Floor
     karm_wall = self.get_entrance("Karmine's Floor - Front -> Karmine's Floor - Back")
@@ -798,10 +795,10 @@ def set_rules(self: "CrystalisWorld") -> None:
     # Pyramid
     draygon_1_fight = self.get_entrance("Pyramid -> Pyramid - Post-Draygon")
     if options.battle_magic_not_guaranteed:
-        set_rule(draygon_1_fight, lambda state: state.has_group("Sword", player, 1))
+        set_rule(draygon_1_fight, lambda state: state.has_group("Sword", player))
     else:
         set_rule(draygon_1_fight, lambda state: has_any_level_2_sword(state, player) or
-                                                (state.has_group("Sword", player, 1) and
+                                                (state.has_group("Sword", player) and
                                                  state.has(self.glitches_item_name, player)))
     if options.guarantee_refresh:
         add_rule(draygon_1_fight, lambda state: state.has("Refresh", player) or
@@ -827,10 +824,10 @@ def set_rules(self: "CrystalisWorld") -> None:
     # Draygon 2 Logic
     draygon_2_fight = self.get_entrance("Crypt - Pre-Draygon -> Tower - Lower")
     if options.battle_magic_not_guaranteed:
-        set_rule(draygon_2_fight, lambda state: state.has_group("Sword", player, 1))
+        set_rule(draygon_2_fight, lambda state: state.has_group("Sword", player))
     else:
         set_rule(draygon_2_fight, lambda state: has_any_level_3_sword(state, player) or
-                                                (state.has_group("Sword", player, 1) and
+                                                (state.has_group("Sword", player) and
                                                  state.has(self.glitches_item_name, player)))
     if not options.no_bow_mode:
         add_rule(draygon_2_fight, lambda state: state.has(shuffle_data.key_item_names["Bow of Truth"], player), "and")
@@ -843,7 +840,7 @@ def set_rules(self: "CrystalisWorld") -> None:
                                  "Kelbesque 2 Defeated", "Sabera 2 Defeated", "Mado 2 Defeated",
                                  "Karmine Defeated", "Draygon 1 Defeated"]
         add_rule(draygon_2_fight, lambda state: state.has_all(non_thunder_spawn_reqs, player) and
-                                                state.has_group("Thunder Sword", player, 1), "and")
+                                                state.has("Sword of Thunder", player), "and")
 
     # Tower Logic
     tower_climb = self.get_entrance("Tower - Lower -> Tower - Upper")
@@ -851,8 +848,7 @@ def set_rules(self: "CrystalisWorld") -> None:
     if options.shuffle_houses or options.story_mode:
         tower_mesia = self.get_location("Mesia in Tower")
         set_rule(tower_mesia, lambda state:
-                state.has_all(["Sword of Wind", "Sword of Fire", "Sword of Water"], player) and
-                state.has_group("Thunder Sword", player, 1))
+                state.has_all(["Sword of Wind", "Sword of Fire", "Sword of Water", "Sword of Thunder"], player))
     dyna_entrance = self.get_entrance("Tower - Upper -> Tower - Dyna")
     set_rule(dyna_entrance, lambda state: state.has("Crystalis", player))
 
@@ -860,4 +856,8 @@ def set_rules(self: "CrystalisWorld") -> None:
     for location_data in self.locations_data:
         # technically bosses have is_chest == False, but since you need a sword to fight the boss anyway, it's redundant
         if options.oops_all_mimics and location_data.is_chest:
-            add_rule(self.get_location(location_data.name), lambda state: state.has_group("Sword", player, 1), "and")
+            add_rule(self.get_location(location_data.name), lambda state: state.has_group("Sword", player), "and")
+
+    # UT race mode tweaks
+    if self.using_ut and self.is_race:
+        self.create_ut_race_regions()

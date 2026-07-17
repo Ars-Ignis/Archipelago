@@ -1,7 +1,7 @@
 # Python Imports
 # import orjson - handled by .constants
 # import pkgutil - handled by .constants
-from typing import Set, NamedTuple
+from typing import Set, NamedTuple, TYPE_CHECKING
 
 # Archipelago Imports
 from BaseClasses import Entrance, EntranceType, Region, MultiWorld
@@ -15,6 +15,8 @@ from .types import CrystalisEntranceData, CrystalisEntranceTypeEnum, CrystalisLo
     CrystalisRegionData
 from .items import CrystalisItem
 from .utils import visualize_regions
+if TYPE_CHECKING:
+    from . import CrystalisWorld
 
 
 def load_region_data_from_json() -> Dict[str, CrystalisRegionData]:
@@ -31,7 +33,8 @@ for key, value in regions_data_json.items():
         new_loc = CrystalisLocationData(location_data["name"], location_data["rom_id"],
                                         location_data["ap_id_offset"], location_data["unique"],
                                         location_data["lossy"], location_data["prevent_loss"],
-                                        location_data["is_chest"], location_data["entrance_hint"])
+                                        location_data["is_chest"], location_data["entrance_hint"],
+                                        location_data["associated_shuffle_data"])
         region_locations_data.append(new_loc)
     new_entrance_data: List[CrystalisEntranceData] = []
     for entrance_data in value["entrances"]:
@@ -41,14 +44,16 @@ for key, value in regions_data_json.items():
         new_ent = CrystalisEntranceData(name, key, entrance_data["entrance_type"], entrance_data["vanilla_target"],
                                         entrance_data["exit_key"], entrance_data["house_key"],
                                         entrance_data["related_entrances"], entrance_data["house_type"],
-                                        entrance_data["can_lock"], entrance_data["in_game_id"])
+                                        entrance_data["can_lock"], entrance_data["in_game_id"],
+                                        entrance_data["associated_shuffle_data"])
         new_entrance_data.append(new_ent)
         entrances_data[name] = new_ent
     regions_data[key] = CrystalisRegionData(value["name"], value["wildwarpIds"], new_entrance_data,
-                                            region_locations_data, value["ban_wildwarp"])
+                                            region_locations_data, value["ban_wildwarp"],
+                                            value["associated_shuffle_data"])
 
 
-def create_regions(self) -> None:
+def create_regions(self: "CrystalisWorld") -> None:
     # first make regions and locations
     # need to cache while still creating regions before appending them to the multiworld
     local_region_cache = {}
@@ -258,6 +263,10 @@ def create_regions(self) -> None:
     activate_shell_flute_location.place_locked_item(CrystalisItem("Active Shell Flute",
                                                                   ItemClassification.progression, None, player))
     region_for_flute_activation.locations.append(activate_shell_flute_location)
+    sword_of_thunder_event_location: CrystalisLocation = CrystalisLocation(player, "Sword of Thunder", None, menu_region)
+    sword_of_thunder_event_location.place_locked_item(CrystalisItem("Sword of Thunder", ItemClassification.progression,
+                                                                    None, player))
+    menu_region.locations.append(sword_of_thunder_event_location)
 
     # Story Mode Events
     if self.options.story_mode:
@@ -353,7 +362,7 @@ def shuffle_goa(self: "CrystalisWorld") -> Dict[str, str]:
     return connection_map
 
 
-def connect_entrances(self):
+def connect_entrances(self: "CrystalisWorld"):
     if self.options.shuffle_houses:
         # a couple of house entrances share icons with each other, so manually shuffle those to make sure the entrances
         # that share an icon lead to the same place
@@ -606,8 +615,6 @@ def connect_entrances(self):
     # if we're deferring entrances, we should now disconnect all the shuffled ones and bail
     if self.using_ut and (self.multiworld.enforce_deferred_connections in ("on", "default") or self.is_race):
         self.defer_entrances()
-        if self.is_race:
-            self.create_ut_race_regions()
         # return now to skip GER
         return
 

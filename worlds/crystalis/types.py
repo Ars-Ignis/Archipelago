@@ -107,6 +107,7 @@ class CrystalisLocationData:
     prevent_loss: bool
     is_chest: bool
     entrance_hint: str
+    associated_shuffle_data: str
 
 
 @dataclass
@@ -121,6 +122,7 @@ class CrystalisEntranceData:
     house_type: str
     can_lock: bool
     in_game_id: int
+    associated_shuffle_data: str
 
 
 @dataclass
@@ -130,6 +132,7 @@ class CrystalisRegionData:
     entrances: List[CrystalisEntranceData]
     locations: List[CrystalisLocationData]
     ban_wildwarp: bool
+    associated_shuffle_data: List[str]
 
 
 @dataclass
