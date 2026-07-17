@@ -230,7 +230,7 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
         has_checked_tornel_event_location: CrystalisLocation = \
             CrystalisLocation(self.player, "Has Checked Tornel", None, has_checked_tornel_region)
         has_checked_tornel_event_item: CrystalisItem = \
-            CrystalisItem("Has Checked Tornel Upgrades", ItemClassification.progression, None, self.player)
+            CrystalisItem("Has Checked Tornel", ItemClassification.progression, None, self.player)
         has_checked_tornel_event_location.place_locked_item(has_checked_tornel_event_item)
         has_checked_tornel_region.locations.append(has_checked_tornel_event_location)
         # make the dangling entrance that will be deferred
@@ -243,6 +243,9 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
         # connect the real regions to the can check region
         for region_name in key_item_to_region_map["Tornel"]:
             self.get_region(region_name).connect(can_check_tornel_region)
+        # because Tornel normally checks a group, we need to just overwrite his rule
+        tornel_location: Location = self.get_location("Mt Sabre West Tornel")
+        set_rule(tornel_location, lambda state: state.has("Has Checked Tornel", self.player))
         # rinse and repeat for Rage
         # make can check and has checked regions for Rage
         can_check_rage_region: Region = Region("Can Check Rage", self.player, self.multiworld)
