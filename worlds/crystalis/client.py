@@ -1,4 +1,5 @@
 # Python Imports
+import copy
 from time import time
 from typing import TYPE_CHECKING, Set
 
@@ -142,7 +143,7 @@ class CrystalisClient(BizHawkClient):
             if read_value is not None:
                 game_mode = read_value[4][0]
                 main_loop_mode = read_value[5][0]
-                if main_loop_mode == MAIN_LOOP_GAME and game_mode == GAME_MODE_NORMAL:
+                if main_loop_mode == MAIN_LOOP_GAME and game_mode in [GAME_MODE_NORMAL, GAME_MODE_TRIGGER_TILE]:
                     if self.is_dying:
                         # finished this death, reset the variables
                         self.is_dying = False
@@ -154,6 +155,7 @@ class CrystalisClient(BizHawkClient):
                         return  # might as well bail now
                     location_flags = read_value[0]
                     if location_flags == self.prev_location_flags:
+                        self.iterations_matched = min(self.iterations_matched + 1, ITERATIONS_TO_MATCH)
                         if self.iterations_matched >= ITERATIONS_TO_MATCH:
                             locations_to_send: List[int] = []
                             for location_id in ctx.missing_locations:
@@ -163,17 +165,17 @@ class CrystalisClient(BizHawkClient):
                                     ctx.locations_checked.add(location_id)
 
                             if locations_to_send:
-                                await ctx.send_msgs([{
+                                async_start(ctx.send_msgs([{
                                     "cmd": "LocationChecks",
                                     "locations": list(locations_to_send)
-                                }])
+                                }]))
                                 return  # Bail now to keep this loop short
 
                             if not self.asina_hint_collected:
                                 byte, bit = self.loc_id_to_addr[self.asina_location_id]
                                 if location_flags[byte] & (1 << bit):
                                     self.asina_hint_collected = True
-                                    await ctx.send_msgs([{
+                                    async_start(ctx.send_msgs([{
                                         "cmd": "LocationScouts",
                                         "locations": [self.whirlpool_location_id],
                                         "create_as_hint": 2
@@ -184,9 +186,8 @@ class CrystalisClient(BizHawkClient):
                                             "default": True,
                                             "want_reply": False,
                                             "operations": [{"operation": "replace", "value": True}]
-                                        }])
-                        else:
-                            self.iterations_matched += 1
+                                        }]))
+
                     else:
                         self.iterations_matched = 0
                         self.prev_location_flags = location_flags
@@ -298,10 +299,11 @@ class CrystalisClient(BizHawkClient):
                                                                  (MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus"),
                                                                  (SCREEN_LOCK_ADDR, [0], "System Bus")])
                 elif game_mode == GAME_MODE_DYNA_DEFEATED and not ctx.finished_game:
-                    await ctx.send_msgs([{
+                    async_start(ctx.send_msgs([{
                         "cmd": "StatusUpdate",
                         "status": ClientStatus.CLIENT_GOAL
-                    }])
+                    }]))
+                    ctx.finished_game = True
                 elif game_mode == GAME_MODE_DEATH and main_loop_mode == MAIN_LOOP_GAME:
                     if not self.is_dying and "DeathLink" in ctx.tags:
                         self.is_dying = True
