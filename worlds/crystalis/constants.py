@@ -401,11 +401,56 @@ SCREEN_LOCK_ADDR: int = 0x07D7
 START_OF_SWORD_INV_ADDR: int = 0x6430
 START_OF_CONSUMABLE_INV_ADDR: int = 0x6440
 END_OF_CONSUMABLE_INV_ADDR: int = 0x6447
-LOCATION_FLAGS_ADDR: int = 0x64A0
+BASE_FLAGS_ADDR: int = 0x6480
 ITEM_FLAGS_ADDR: int = 0x64C0
 GET_ITEM_FLAG_ADDR: int = 0x657A # metadata byte, status byte, item ID byte
 RECEIVED_INDEX_ADDR: int = 0x657D
 AP_ROM_LABEL_ADDR: int = 0x25715
+FLAG_ADDRESSES: dict[str, list[tuple[int, int]]] = {
+    "Zebu Cave": [(0x5d, 5)],
+    "East Cave": [(0x50, 1)],
+    "Sealed Cave": [(0x5d, 3), (0x5d, 4), (0x50, 4)],
+    "Mt Sabre West": [(0x5d, 0), (0x5d, 1), (0x5c, 7), (0x5c, 6), (0x5c, 5), (0x5c, 4), (0x5c, 3)],
+    "Mt Sabre North": [(0x5c, 2), (0x5c, 1), (0x5c, 0), (0x5b, 7), (0x5b, 6), (0x5b, 5), (0x5b, 4), (0x5b, 3), (0x5b, 2), (0x5b, 1), (0x5a, 7)],
+    "Waterfall Cave": [(0x5a, 4), (0x5a, 3), (0x5a, 2), (0x5a, 1), (0x5a, 0), (0x59, 7)],
+    "Fog Lamp Cave": [(0x59, 5), (0x59, 4), (0x59, 2), (0x59, 1), (0x59, 0), (0x59, 3), (0x58, 7), (0x58, 6), (0x58, 5), (0x58, 4), (0x58, 3), (0x58, 2)],
+    "Kirisa Plant Cave": [(0x58, 1), (0x58, 0), (0x57, 7), (0x50, 6)],
+    "Evil Spirit Island": [(0x57, 1), (0x56, 7), (0x56, 6), (0x56, 5)],
+    "Mt Hydra": [(0x55, 7), (0x55, 6), (0x55, 5), (0x55, 4)],
+    "Goa Fortress - Entrance": [(0x55, 0)],
+    "Goa Fortress - Sabera Item": [(0x54, 0)],
+    "Goa Fortress - Sabera Boss": [(0x53, 6)],
+    "Goa Fortress - Mado 2": [(0x53, 5)],
+    "Goa Fortress - Karmine 5": [(0x53, 4)],
+    "Goa Fortress Basement": [(0x52, 0)],
+    "Fog Lamp": [(0x4, 1)],
+    "Key to Prison": [(0x5b, 0)],
+    "Key to Stxy": [(0x56, 0)],
+    "Windmill Key": [(0x1, 2)],
+    "Bow of Sun": [(0x1, 3)],
+    "Bow of Truth": [(0x5, 7)],
+    "Bow of Moon": [(0x1, 6)],
+    "Flute of Lime": [(0xc, 4), (0x26, 0)],
+    "Shell Flute": [(0xd, 6)],
+    "Alarm Flute": [(0x27, 1), (0x26, 2)],
+    "Love Pendant": [(0x28, 7)],
+    "Statue of Onyx": [(0x25, 1)],
+    "Kirisa Plant": [(0x27, 6)],
+    "Statue of Gold": [(0x28, 6)],
+    "Insect Flute": [(0x20, 7)],
+    "Broken Statue": [(0x27, 2)],
+    "Glowing Lamp": [(0x27, 2)],
+    "Ivory Statue": [(0x29, 0)],
+    "Giant Insect": [(0x20, 7)],
+    "Karmine": [(0x27, 5)],
+    "Kelbesque 1": [(0x21, 0)],
+    "Kelbesque 2": [(0x24, 6)],
+    "Mado 1": [(0x21, 3)],
+    "Mado 2": [(0x22, 2)],
+    "Sabera 1": [(0x27, 0)],
+    "Sabera 2": [(0x24, 3)],
+    "Vampire 2": [(0x2c, 1)]
+}
 
 # In-Game Data
 SWORD_OF_THUNDER_ITEM_ID: int = 0x03
@@ -429,3 +474,10 @@ TRAP_NAME_TO_METADATA_VALUE: dict[str, int] = {
 ASINA_LOCATION_NAME: str = "Asina In Back Room"
 WHIRLPOOL_LOCATION_NAME: str = "Behind Whirlpool"
 ITERATIONS_TO_MATCH: int = 1
+
+
+# Datastorage keys
+ASINA_HINT_KEY: str = "crystalis_asina_hint_collected_{team}_{player}"
+COMPRESSED_FLAGS_KEY: str = "crystalis_compressed_flags_{team}_{player}"
+CURRENT_LOCATION_KEY: str = "crystalis_current_location_{team}_{player}"
+FOUND_ENTRANCES_KEY: str = "crystalis_found_entrances_{team}_{player}"

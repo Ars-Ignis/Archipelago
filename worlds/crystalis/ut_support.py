@@ -269,7 +269,7 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
 
 def defer_entrances(self: "CrystalisWorld"):
     # set up the variables to connect entrances later
-    self.found_entrances_datastorage_key = "Slot_{player}_found_entrances"
+    self.found_entrances_datastorage_key = [FOUND_ENTRANCES_KEY]
     self.found_entrances = set()
     self.found_towns = set()
     self.in_game_id_to_entrance_name = {}

@@ -41,14 +41,18 @@ class CrystalisClient(BizHawkClient):
     # Crystalis Client Class Variables
     asina_hint_collected: bool = False
     asina_location_id: int = -1
+    compressed_flags: int = 0
     current_location: int = 0
+    formatted_key_cache: dict[str, str] = {}
     is_dying: bool = False
+    has_processed_current_flags: bool = False
+    is_race: bool = False
     iterations_matched: int = 0
     last_death_link: float = time()
     last_entrance: int = -1
     loc_id_to_addr: Dict[int, Tuple[int, int]] = {}
     pending_death_link: bool = False
-    prev_location_flags: bytes = bytes(0)
+    prev_base_flags: bytes = bytes(0)
     unidentified_item_rom_ids: Dict[int, int] = {}
     used_entrances: Set[int] = set()
     whirlpool_location_id: int = -1
@@ -89,6 +93,29 @@ class CrystalisClient(BizHawkClient):
         logger.info(f"Crystalis APWorld Version {CRYSTALIS_APWORLD_VERSION.as_simple_string()}")
         return True
 
+
+    async def process_flags(self, ctx: "BizHawkClientContext", flags: bytes):
+        new_compressed_flags: int = self.compressed_flags
+        for bit_index, test_bytes in enumerate(FLAG_ADDRESSES.values()):
+            success: bool = False
+            for test_byte in test_bytes:
+                byte: int = test_byte[0]
+                bit: int = test_byte[1]
+                if flags[byte] & (1 << bit):
+                    success = True
+                    break
+            if success:
+                new_compressed_flags |= (1 << bit_index)
+        if new_compressed_flags != self.compressed_flags:
+            self.compressed_flags = new_compressed_flags
+            await ctx.send_msgs([{
+                "cmd": "Set",
+                "key": self.formatted_key_cache[COMPRESSED_FLAGS_KEY],
+                "default": 0,
+                "operations": [{"operation": "or", "value": new_compressed_flags}]
+            }])
+
+
     def on_package(self, ctx: "BizHawkClientContext", cmd: str, args: dict) -> None:
         if cmd == "Connected":
             # slot_data should be set now
@@ -108,20 +135,30 @@ class CrystalisClient(BizHawkClient):
                 # want to map the new item's AP ID to the original item's in-game ID.
                 self.unidentified_item_rom_ids[items_data[new_name].ap_id_offset + CRYSTALIS_BASE_ID] = \
                     items_data[original_name].rom_id
+            self.formatted_key_cache[ASINA_HINT_KEY] = ASINA_HINT_KEY.format(player=ctx.slot, team=ctx.slot)
+            self.formatted_key_cache[COMPRESSED_FLAGS_KEY] = COMPRESSED_FLAGS_KEY.format(player=ctx.slot, team=ctx.slot)
+            self.formatted_key_cache[CURRENT_LOCATION_KEY] = CURRENT_LOCATION_KEY.format(player=ctx.slot, team=ctx.slot)
+            self.formatted_key_cache[FOUND_ENTRANCES_KEY] = FOUND_ENTRANCES_KEY.format(player=ctx.slot, team=ctx.slot)
             async_start(ctx.send_msgs([{"cmd": "Get",
-                                        "keys": [f"asina_hint_collected_{ctx.team}_{ctx.slot}",
-                                                 f"Slot_{ctx.slot}_found_entrances"]}]))
+                                        "keys": [self.formatted_key_cache[ASINA_HINT_KEY],
+                                                 self.formatted_key_cache[COMPRESSED_FLAGS_KEY],
+                                                 self.formatted_key_cache[FOUND_ENTRANCES_KEY]]}]))
             if "death_link" in ctx.slot_data.keys():
                 async_start(ctx.update_death_link(ctx.slot_data["death_link"]))
             else:
                 async_start(ctx.update_death_link(False))
+            if "is_race" in ctx.slot_data.keys():
+                self.is_race = ctx.slot_data["is_race"]
         elif cmd == "Retrieved":
-            if f"asina_hint_collected_{ctx.team}_{ctx.slot}" in args["keys"]:
-                self.asina_hint_collected = args["keys"][f"asina_hint_collected_{ctx.team}_{ctx.slot}"]
-            if f"Slot_{ctx.slot}_found_entrances" in args["keys"]:
-                print(args["keys"][f"Slot_{ctx.slot}_found_entrances"])
-                if args["keys"][f"Slot_{ctx.slot}_found_entrances"]:
-                    self.used_entrances = set(args["keys"][f"Slot_{ctx.slot}_found_entrances"])
+            if self.formatted_key_cache[ASINA_HINT_KEY] in args["keys"]:
+                if args["keys"][self.formatted_key_cache[ASINA_HINT_KEY]]:
+                    self.asina_hint_collected = args["keys"][self.formatted_key_cache[ASINA_HINT_KEY]]
+            if self.formatted_key_cache[COMPRESSED_FLAGS_KEY] in args["keys"]:
+                if args["keys"][self.formatted_key_cache[COMPRESSED_FLAGS_KEY]]:
+                    self.compressed_flags = args["keys"][self.formatted_key_cache[COMPRESSED_FLAGS_KEY]]
+            if self.formatted_key_cache[FOUND_ENTRANCES_KEY] in args["keys"]:
+                if args["keys"][self.formatted_key_cache[FOUND_ENTRANCES_KEY]]:
+                    self.used_entrances = set(args["keys"][self.formatted_key_cache[FOUND_ENTRANCES_KEY]])
         elif cmd == "Bounced":
             tags = args.get("tags", [])
             # we can skip checking "DeathLink" in ctx.tags, as otherwise we wouldn't have been sent this
@@ -131,8 +168,7 @@ class CrystalisClient(BizHawkClient):
 
     async def game_watcher(self, ctx: "BizHawkClientContext") -> None:
         try:
-            read_value = await bizhawk.read(ctx.bizhawk_ctx, [(LOCATION_FLAGS_ADDR, 16, "System Bus"),
-                                                              (ITEM_FLAGS_ADDR, 16, "System Bus"),
+            read_value = await bizhawk.read(ctx.bizhawk_ctx, [(BASE_FLAGS_ADDR, 96, "System Bus"),
                                                               (RECEIVED_INDEX_ADDR, 2, "System Bus"),
                                                               (GET_ITEM_FLAG_ADDR, 2, "System Bus"),
                                                               (GAME_MODE_ADDR, 1, "System Bus"),
@@ -141,8 +177,9 @@ class CrystalisClient(BizHawkClient):
                                                               (START_OF_CONSUMABLE_INV_ADDR, 8, "System Bus"),
                                                               (START_OF_SWORD_INV_ADDR, 4, "System Bus")])
             if read_value is not None:
-                game_mode = read_value[4][0]
-                main_loop_mode = read_value[5][0]
+                base_flags = read_value[0]
+                game_mode = read_value[3][0]
+                main_loop_mode = read_value[4][0]
                 if main_loop_mode == MAIN_LOOP_GAME and game_mode in [GAME_MODE_NORMAL, GAME_MODE_TRIGGER_TILE]:
                     if self.is_dying:
                         # finished this death, reset the variables
@@ -153,8 +190,8 @@ class CrystalisClient(BizHawkClient):
                                                     [(HP_ADDR, [0], "System Bus")],
                                                     [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus")])
                         return  # might as well bail now
-                    location_flags = read_value[0]
-                    if location_flags == self.prev_location_flags:
+                    location_flags = base_flags[0x20:0x30]
+                    if base_flags == self.prev_base_flags:
                         self.iterations_matched = min(self.iterations_matched + 1, ITERATIONS_TO_MATCH)
                         if self.iterations_matched >= ITERATIONS_TO_MATCH:
                             locations_to_send: List[int] = []
@@ -182,44 +219,49 @@ class CrystalisClient(BizHawkClient):
                                     },
                                         {
                                             "cmd": "Set",
-                                            "key": f"asina_hint_collected_{ctx.team}_{ctx.slot}",
+                                            "key": self.formatted_key_cache[ASINA_HINT_KEY],
                                             "default": True,
                                             "want_reply": False,
                                             "operations": [{"operation": "replace", "value": True}]
                                         }]))
 
+                            if self.is_race and not self.has_processed_current_flags:
+                                self.has_processed_current_flags = True
+                                async_start(self.process_flags(copy.deepcopy(base_flags)))
+
                     else:
                         self.iterations_matched = 0
-                        self.prev_location_flags = location_flags
+                        self.prev_base_flags = base_flags
+                        self.has_processed_current_flags = False
 
-                    get_item_flag: bool = read_value[3][1] != 0
-                    item_flags: bytes = read_value[1]
+                    get_item_flag: bool = read_value[2][1] != 0
+                    item_flags: bytes = base_flags[0x40:0x50]
                     received_crystalis: bool = item_flags[0] & 16 != 0
                     if not get_item_flag and not received_crystalis and location_flags[0] & 16 != 0:
                         await bizhawk.guarded_write(ctx.bizhawk_ctx,
                                                     [(GET_ITEM_FLAG_ADDR, [0, 1, CRYSTALIS_SWORD_ITEM_ID], "System Bus")],
                                                     [(MAIN_LOOP_MODE_ADDR, [MAIN_LOOP_GAME], "System Bus")])
-                    received_indices: bytes = read_value[2]
+                    received_indices: bytes = read_value[1]
                     nonconsumable_index: int = received_indices[0]
                     consumable_index: int = received_indices[1]
-                    new_location: int = read_value[6][0]
+                    new_location: int = read_value[5][0]
                     if new_location != self.current_location:
                         self.current_location = new_location
                         async_start(ctx.send_msgs([{
                             "cmd": "Set",
-                            "key": f"current_location_{ctx.team}_{ctx.slot}",
+                            "key": self.formatted_key_cache[CURRENT_LOCATION_KEY],
                             "default": 0,
                             "want_reply": False,
                             "operations": [{"operation": "replace", "value": new_location}]
                         }]), name="send current_location")
-                    new_entrance: int = (new_location << 8) + read_value[6][1]
+                    new_entrance: int = (new_location << 8) + read_value[5][1]
                     if new_entrance != self.last_entrance:
                         self.last_entrance = new_entrance
                         if new_entrance not in self.used_entrances:
                             self.used_entrances.add(new_entrance)
                             async_start(ctx.send_msgs([{
                                 "cmd": "Set",
-                                "key": f"Slot_{ctx.slot}_found_entrances",
+                                "key": self.formatted_key_cache[FOUND_ENTRANCES_KEY],
                                 "default": 0,
                                 "want_reply": False,
                                 "operations": [{"operation": "replace", "value": self.used_entrances}]
@@ -258,8 +300,8 @@ class CrystalisClient(BizHawkClient):
                                             # ... unless we're debugging
                                             logging.error(f"Could not find town ID for thunder_warp: "
                                                           f"{ctx.slot_data['shuffle_data']['thunder_warp']}")
-                                    if read_value[8][0] == CRYSTALIS_SWORD_ITEM_ID or \
-                                       read_value[8][3] == SWORD_OF_THUNDER_ITEM_ID:
+                                    if read_value[7][0] == CRYSTALIS_SWORD_ITEM_ID or \
+                                       read_value[7][3] == SWORD_OF_THUNDER_ITEM_ID:
                                         # the player has already received at least one sword of thunder
                                         # indicate in the metadata that this shouldn't add to scaling
                                         item_metadata |= 0x10
@@ -308,7 +350,7 @@ class CrystalisClient(BizHawkClient):
                     if not self.is_dying and "DeathLink" in ctx.tags:
                         self.is_dying = True
                         # check to see if we should send a death link
-                        if not (self.pending_death_link or items_data["Opel Statue"].rom_id in read_value[7]):
+                        if not (self.pending_death_link or items_data["Opel Statue"].rom_id in read_value[6]):
                             # this is not a linked death, nor are we being saved by an opel; send a death link
                             async_start(ctx.send_death())
                             self.last_death_link = ctx.last_death_link
