@@ -442,6 +442,8 @@ FLAG_ADDRESSES: dict[str, list[tuple[int, int]]] = {
     "Glowing Lamp": [(0x27, 2)],
     "Ivory Statue": [(0x29, 0)],
     "Giant Insect": [(0x20, 7)],
+    "Tornel": [(0x28, 4)],
+    "Rage": [(0x21, 1)],
     "Karmine": [(0x27, 5)],
     "Kelbesque 1": [(0x21, 0)],
     "Kelbesque 2": [(0x24, 6)],

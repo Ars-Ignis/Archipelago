@@ -91,7 +91,9 @@ class CrystalisWorld(World):
     setup_from_slot_data = setup_from_slot_data
 
     # Universal Tracker specific member variables
+    created_race_regions: set[str]
     found_entrances: Set[int]
+    found_entrances_datastorage_key: list[str]
     found_towns: Set[int]
     in_game_id_to_entrance_name: Dict[int, str]
     using_ut: bool

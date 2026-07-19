@@ -1,9 +1,14 @@
+# Python imports
 from collections import defaultdict
-from typing import Any
+import math
+
+# Archipelago imports
 from BaseClasses import Entrance, Region
 from Options import OptionError
 from Utils import VersionException
 from worlds.generic.Rules import set_rule, add_rule
+
+# Crystalis imports
 from .constants import *
 from .items import CrystalisItem, items_data
 from .logic import has_any_level_2_sword
@@ -15,6 +20,8 @@ if TYPE_CHECKING:
 
 
 def create_ut_race_regions(self: "CrystalisWorld") -> None:
+    self.found_entrances_datastorage_key.append(COMPRESSED_FLAGS_KEY)
+    self.created_race_regions = set()
     wall_to_region_map: defaultdict[str, set[str]] = defaultdict(set)
     wall_to_entrance_map: defaultdict[str, list[str]] = defaultdict(list)
     wall_to_location_map: defaultdict[str, list[str]] = defaultdict(list)
@@ -50,9 +57,9 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
             if wall == "East Cave" and self.options.vanilla_maps.value != self.options.vanilla_maps.option_GBC_cave:
                 continue
             # make wall viewing and broken regions
-            wall_viewing_region: Region = Region(f"Viewing Wall {wall}", self.player, self.multiworld)
+            wall_viewing_region: Region = Region(f"Deferred Region: {wall}", self.player, self.multiworld)
             self.multiworld.regions.append(wall_viewing_region)
-            wall_broken_region: Region = Region(f"Broken Wall {wall}", self.player, self.multiworld)
+            wall_broken_region: Region = Region(f"Event Region: {wall}", self.player, self.multiworld)
             self.multiworld.regions.append(wall_broken_region)
             # make wall broken event
             wall_broken_event_location: CrystalisLocation = \
@@ -62,7 +69,7 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
             wall_broken_event_location.place_locked_item(wall_broken_event_item)
             wall_broken_region.locations.append(wall_broken_event_location)
             # make the dangling entrance that will be deferred
-            deferred_wall_entrance: Entrance = wall_viewing_region.create_exit(f"Check Wall {wall}")
+            deferred_wall_entrance: Entrance = wall_viewing_region.create_exit(f"Check {wall} Wall")
             if self.options.orbs_not_required:
                 set_rule(deferred_wall_entrance, lambda state: state.has_group("Sword", self.player, 1))
             else:
@@ -89,14 +96,14 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
                                                          or state.has("Speed Boots", self.player), "or")
                         if self.options.trigger_skip.value == self.options.trigger_skip.option_out_of_logic:
                             add_rule(entrance, lambda state: state.has(self.glitches_item_name, self.player), "or")
-
+            self.created_race_regions.add(wall)
     #   - boss weaknesses
     if self.options.randomize_monster_weaknesses:
         for boss in BOSS_NAMES:
             # make boss viewing and boss defeated regions
-            boss_viewing_region: Region = Region(f"Viewing {boss}", self.player, self.multiworld)
+            boss_viewing_region: Region = Region(f"Deferred Region: {boss}", self.player, self.multiworld)
             self.multiworld.regions.append(boss_viewing_region)
-            boss_defeated_region: Region = Region(f"Defeated {boss}", self.player, self.multiworld)
+            boss_defeated_region: Region = Region(f"Event Region: {boss}", self.player, self.multiworld)
             self.multiworld.regions.append(boss_defeated_region)
             # make UT boss defeated event - put UT in the name to not clash with story mode events
             boss_defeated_event_location: CrystalisLocation = \
@@ -129,7 +136,7 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
             for entrance_name in boss_to_entrance_map[boss]:
                 entrance: Entrance = self.get_entrance(entrance_name)
                 set_rule(entrance, lambda state, boss=boss: state.has(f"{boss} Defeated (UT)", self.player))
-
+            self.created_race_regions.add(boss)
     #   - key items & trade-ins
     items_to_check: set[str] = set()
     keys: list[str] = [item for item in self.item_name_groups["Key"] if items_data[item].default_count > 0]
@@ -154,9 +161,9 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
         items_to_check.update(trade_ins)
     for key_item in sorted(items_to_check):
         # make a can check item and has used item regions
-        can_check_item_region: Region = Region(f"Can Check {key_item}", self.player, self.multiworld)
+        can_check_item_region: Region = Region(f"Deferred Region: {key_item}", self.player, self.multiworld)
         self.multiworld.regions.append(can_check_item_region)
-        has_used_item_region: Region = Region(f"Has Used {key_item}", self.player, self.multiworld)
+        has_used_item_region: Region = Region(f"Event Region: {key_item}", self.player, self.multiworld)
         self.multiworld.regions.append(has_used_item_region)
         # make item used event
         has_used_item_event_location: CrystalisLocation = \
@@ -219,12 +226,13 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
                 self.multiworld.register_indirect_condition(zebu_region, can_check_entrance)
         if key_item in self.shuffle_data.key_item_names:
             self.shuffle_data.key_item_names[key_item] = f"{key_item} Used"
+        self.created_race_regions.add(key_item)
     # handle the two weird trade-ins
     if self.options.randomize_tradeins:
         # make can check and has checked regions for Tornel
-        can_check_tornel_region: Region = Region("Can Check Tornel", self.player, self.multiworld)
+        can_check_tornel_region: Region = Region("Deferred Region: Tornel", self.player, self.multiworld)
         self.multiworld.regions.append(can_check_tornel_region)
-        has_checked_tornel_region: Region = Region(f"Has Checked Tornel", self.player, self.multiworld)
+        has_checked_tornel_region: Region = Region(f"Event Region: Tornel", self.player, self.multiworld)
         self.multiworld.regions.append(has_checked_tornel_region)
         # make event item for Tornel
         has_checked_tornel_event_location: CrystalisLocation = \
@@ -246,11 +254,12 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
         # because Tornel normally checks a group, we need to just overwrite his rule
         tornel_location: Location = self.get_location("Mt Sabre West Tornel")
         set_rule(tornel_location, lambda state: state.has("Has Checked Tornel", self.player))
+        self.created_race_regions.add("Tornel")
         # rinse and repeat for Rage
         # make can check and has checked regions for Rage
-        can_check_rage_region: Region = Region("Can Check Rage", self.player, self.multiworld)
+        can_check_rage_region: Region = Region("Deferred Region: Rage", self.player, self.multiworld)
         self.multiworld.regions.append(can_check_rage_region)
-        has_checked_rage_region: Region = Region(f"Has Checked Rage", self.player, self.multiworld)
+        has_checked_rage_region: Region = Region(f"Event Region: Rage", self.player, self.multiworld)
         self.multiworld.regions.append(has_checked_rage_region)
         # make event item for Rage
         has_checked_rage_event_location: CrystalisLocation = \
@@ -265,11 +274,12 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
         # connect the real regions to the can check region
         for region_name in key_item_to_region_map["Rage"]:
             self.get_region(region_name).connect(can_check_rage_region)
+        self.created_race_regions.add("Rage")
 
 
 def defer_entrances(self: "CrystalisWorld"):
     # set up the variables to connect entrances later
-    self.found_entrances_datastorage_key = [FOUND_ENTRANCES_KEY]
+    self.found_entrances_datastorage_key.append(FOUND_ENTRANCES_KEY)
     self.found_entrances = set()
     self.found_towns = set()
     self.in_game_id_to_entrance_name = {}
@@ -311,40 +321,56 @@ def defer_entrances(self: "CrystalisWorld"):
 def reconnect_found_entrances(self: "CrystalisWorld", key: str, value: Any) -> None:
     if value is None or key is None:
         return
-    for in_game_id in value:
-        if in_game_id not in self.found_entrances:
-            self.found_entrances.add(in_game_id)
-            if in_game_id in self.in_game_id_to_entrance_name:
-                entrance_name_to_connect = self.in_game_id_to_entrance_name[in_game_id]
-                # if the entrance is one that was shuffled, connect it
-                if entrance_name_to_connect in self.shuffle_data.er_pairings:
-                    entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
-                    connected_entrance_name = self.shuffle_data.er_pairings[entrance_name_to_connect]
-                    connected_entrance: Entrance = self.get_entrance(connected_entrance_name)
-                    entrance_to_connect.connected_region = connected_entrance.parent_region
-                    connected_entrance.connected_region = entrance_to_connect.parent_region
-                elif entrance_name_to_connect in self.shuffle_data.goa_connection_map:
-                    entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
-                    connected_region_name: str = self.shuffle_data.goa_connection_map[entrance_name_to_connect]
-                    connected_region: Region = self.get_region(connected_region_name)
-                    entrance_to_connect.connected_region = connected_region
-                    connected_entrance: Entrance
-                    for connected_entrance in connected_region.exits:
-                        if not connected_entrance.connected_region:
-                            break
-                    else:
-                        continue
-                    connected_entrance.connected_region = entrance_to_connect.parent_region
-            # connect a warp entrance for found towns
-            screen_id: int = 0xFF00 & in_game_id
-            if screen_id in TOWNS_WITH_IDS and screen_id not in self.found_towns:
-                self.found_towns.add(screen_id)
-                town_name: str = TOWNS_WITH_IDS[screen_id]
-                town_region: Region = self.get_region(town_name)
-                menu_region: Region = self.get_region("Menu")
-                menu_region.connect(town_region, f"Teleport to {town_name}",
-                                    lambda state: state.has("Teleport", self.player) or
-                                                  state.has("Buy Warp Boots", self.player))
+    if key.startswith(FOUND_ENTRANCES_KEY.removesuffix("{team}_{player}")):
+        for in_game_id in value:
+            if in_game_id not in self.found_entrances:
+                self.found_entrances.add(in_game_id)
+                if in_game_id in self.in_game_id_to_entrance_name:
+                    entrance_name_to_connect = self.in_game_id_to_entrance_name[in_game_id]
+                    # if the entrance is one that was shuffled, connect it
+                    if entrance_name_to_connect in self.shuffle_data.er_pairings:
+                        entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
+                        connected_entrance_name = self.shuffle_data.er_pairings[entrance_name_to_connect]
+                        connected_entrance: Entrance = self.get_entrance(connected_entrance_name)
+                        entrance_to_connect.connected_region = connected_entrance.parent_region
+                        connected_entrance.connected_region = entrance_to_connect.parent_region
+                    elif entrance_name_to_connect in self.shuffle_data.goa_connection_map:
+                        entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
+                        connected_region_name: str = self.shuffle_data.goa_connection_map[entrance_name_to_connect]
+                        connected_region: Region = self.get_region(connected_region_name)
+                        entrance_to_connect.connected_region = connected_region
+                        connected_entrance: Entrance
+                        for connected_entrance in connected_region.exits:
+                            if not connected_entrance.connected_region:
+                                break
+                        else:
+                            continue
+                        connected_entrance.connected_region = entrance_to_connect.parent_region
+                # connect a warp entrance for found towns
+                screen_id: int = 0xFF00 & in_game_id
+                if screen_id in TOWNS_WITH_IDS and screen_id not in self.found_towns:
+                    self.found_towns.add(screen_id)
+                    town_name: str = TOWNS_WITH_IDS[screen_id]
+                    town_region: Region = self.get_region(town_name)
+                    menu_region: Region = self.get_region("Menu")
+                    menu_region.connect(town_region, f"Teleport to {town_name}",
+                                        lambda state: state.has("Teleport", self.player) or
+                                                      state.has("Buy Warp Boots", self.player))
+    elif key.startswith(COMPRESSED_FLAGS_KEY.removesuffix("{team}_{player}")):
+        def bit_iterator(bits):
+            while bits:
+                bit = bits & (~bits + 1)
+                yield int(math.log2(bit))
+                bits ^= bit
+        flag_names: list[str] = list(FLAG_ADDRESSES.keys())
+        for bit_index in bit_iterator(value):
+            current_flag: str = flag_names[bit_index]
+            if current_flag in self.created_race_regions:
+                deferred_region: Region = self.get_region(f"Deferred Region: {current_flag}")
+                deferred_entrance: Entrance = deferred_region.exits[0]
+                if deferred_entrance.connected_region is None:
+                    event_region: Region = self.get_region(f"Event Region: {current_flag}")
+                    deferred_entrance.connect(event_region)
     if CRYSTALIS_DEBUG:
         visualize_regions(self, "Crystalis Visualized.puml")
     return
@@ -352,6 +378,7 @@ def reconnect_found_entrances(self: "CrystalisWorld", key: str, value: Any) -> N
 
 def setup_from_slot_data(self: "CrystalisWorld", slot_data: dict[str, Any]):
     self.using_ut = True
+    self.found_entrances_datastorage_key = []
     if "version" not in slot_data:
         err_string = f"Crystalis APWorld version mismatch. Multiworld generated without versioning; " \
                      f"local install using {self.world_version.as_simple_string()}"
