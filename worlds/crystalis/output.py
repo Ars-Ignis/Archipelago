@@ -228,7 +228,7 @@ def generate_output(self: "CrystalisWorld", output_directory: str) -> None:
     converted_data = convert_shuffle_data(self.shuffle_data, self.options)
     lime_hint = generate_statue_hint(self)
     output_dict = {
-        "seed": self.multiworld.seed_name,
+        "seed": self.crystalis_seed,
         "flag_string": flag_string,
         "shuffle_data": converted_data,
         "lime_hint": lime_hint
@@ -335,6 +335,12 @@ def extend_hint_information(self: "CrystalisWorld", hint_data: Dict[int, Dict[in
                                 break
             player_hint_data[location.address] = extended_text
     hint_data[self.player] = player_hint_data
+
+
+def modify_multidata(self: "CrystalisWorld", multidata: dict[str, any]):
+    # Put the player's unique authentication in connect_names.
+    multidata["connect_names"][self.crystalis_seed] = \
+        multidata["connect_names"][self.multiworld.player_name[self.player]]
 
 
 class CrystalisFile(APAutoPatchInterface):

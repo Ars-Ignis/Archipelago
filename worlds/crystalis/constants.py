@@ -406,6 +406,7 @@ ITEM_FLAGS_ADDR: int = 0x64C0
 GET_ITEM_FLAG_ADDR: int = 0x657A # metadata byte, status byte, item ID byte
 RECEIVED_INDEX_ADDR: int = 0x657D
 AP_ROM_LABEL_ADDR: int = 0x25715
+SEED_ROM_ADDR: int = 0x277EB
 FLAG_ADDRESSES: dict[str, list[tuple[int, int]]] = {
     "Zebu Cave": [(0x5d, 5)],
     "East Cave": [(0x50, 1)],

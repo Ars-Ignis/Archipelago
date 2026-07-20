@@ -13,7 +13,7 @@ from .constants import *
 from .items import create_item, create_items, CrystalisItem, get_filler_item_name, items_data, unidentify_items
 from .logic import get_tetrarch_fight_logic, set_rules
 from .options import CrystalisOptions, crystalis_option_groups
-from .output import extend_hint_information, generate_output, write_spoiler_header
+from .output import extend_hint_information, generate_output, modify_multidata, write_spoiler_header
 from .regions import connect_entrances, create_regions, entrances_data, regions_data, shuffle_goa
 from .types import *
 from .ut_support import create_ut_race_regions, defer_entrances, reconnect_found_entrances, \
@@ -63,6 +63,7 @@ class CrystalisWorld(World):
     set_rules = set_rules                               # logic.py
     extend_hint_information = extend_hint_information   # output.py
     generate_output = generate_output                   # output.py
+    modify_multidata = modify_multidata                 # output.py
     write_spoiler_header = write_spoiler_header         # output.py
     connect_entrances = connect_entrances               # regions.py
     create_regions = create_regions                     # regions.py
@@ -71,6 +72,7 @@ class CrystalisWorld(World):
     # member variables
     cave_entrances: List[Tuple[Entrance, Entrance]]
     cave_exits: List[Tuple[Entrance, Entrance]]
+    crystalis_seed: str
     goa_lower_floors: Set[str]
     goa_upper_floors: Set[str]
     houses_by_type: Dict[str, List[Tuple[Entrance, Entrance]]]
@@ -216,6 +218,7 @@ class CrystalisWorld(World):
 
         self.using_ut = False
         self.is_race = self.multiworld.is_race
+        self.crystalis_seed = f"{(hash(self.multiworld.seed_name + self.player_name) % 0x100000000):08X}"
 
         # walls first
         wall_weaknesses: List[str] = []

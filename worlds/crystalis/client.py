@@ -98,6 +98,14 @@ class CrystalisClient(BizHawkClient):
         return True
 
 
+    async def set_auth(self, ctx: "BizHawkClientContext") -> None:
+        auth_raw: bytes = (await bizhawk.read(ctx.bizhawk_ctx, [(SEED_ROM_ADDR, 0x10, "PRG ROM")]))[0]
+        seed_label: str = bytes([auth_raw[i] for i in range(len(auth_raw)) if i % 2 == 0]).decode("utf-8")
+        if seed_label == "SEED    ":
+            ctx.auth: str = bytes([auth_raw[i] for i in range(len(auth_raw)) if i % 2 == 1]).decode("utf-8")
+
+
+
     async def process_flags(self, ctx: "BizHawkClientContext", flags: bytes):
         new_compressed_flags: int = self.compressed_flags
         for bit_index, test_bytes in enumerate(FLAG_ADDRESSES.values()):
