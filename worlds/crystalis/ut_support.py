@@ -118,7 +118,7 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
                 set_rule(deferred_boss_entrance, lambda state: state.has_group("Sword", self.player, 1))
             elif boss == "Giant Insect":
                 set_rule(deferred_boss_entrance, \
-                         lambda state: state.has_group("Sword", self.player, 1) and
+                         lambda state: state.has_group("Sword", self.player) and
                                        state.has(self.shuffle_data.key_item_names["Insect Flute"], self.player) and
                                        (state.has("Hazmat Suit", self.player) or state.has("Gas Mask", self.player)))
             elif boss == "Karmine":
@@ -126,6 +126,11 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
                 set_rule(deferred_boss_entrance, self.get_tetrarch_fight_logic(level=2))
             else:
                 set_rule(deferred_boss_entrance, self.get_tetrarch_fight_logic())
+                if boss == "Mado 1":
+                    massacre_trigger_region: Region = self.get_region("Goa Entrance - Massacre Trigger")
+                    add_rule(deferred_boss_entrance, lambda state: state.has("Sword of Thunder", self.player) and
+                                                                   massacre_trigger_region.can_reach(state))
+                    self.multiworld.register_indirect_condition(massacre_trigger_region, deferred_boss_entrance)
             # connect the appropriate regions to the viewing region
             for region_name in sorted(boss_to_region_map[boss]):
                 self.get_region(region_name).connect(boss_viewing_region)
@@ -138,28 +143,13 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
                 set_rule(entrance, lambda state, boss=boss: state.has(f"{boss} Defeated (UT)", self.player))
             self.created_race_regions.add(boss)
     #   - key items & trade-ins
-    items_to_check: set[str] = set()
     keys: list[str] = [item for item in self.item_name_groups["Key"] if items_data[item].default_count > 0]
     bows: list[str] = [item for item in self.item_name_groups["Bow"] if items_data[item].default_count > 0]
     flutes: list[str] = [item for item in self.item_name_groups["Flute"] if items_data[item].default_count > 0]
     lamps: list[str] = [item for item in self.item_name_groups["Lamp"] if items_data[item].default_count > 0]
     statues: list[str] = [item for item in self.item_name_groups["Statue"] if items_data[item].default_count > 0]
     trade_ins: list[str] = [item for item in self.item_name_groups["Trade-in"] if items_data[item].default_count > 0]
-    if self.options.unidentified_key_items:
-        items_to_check.update(keys + bows + flutes + lamps + statues)
-        self.shuffle_data.trade_in_map["Akahana"] = "Used Statue of Onyx"
-        self.shuffle_data.trade_in_map["Fisherman"] = "Used Fog Lamp"
-        self.shuffle_data.trade_in_map["Slimed Kensu"] = "Used Ivory Statue"
-    if self.options.randomize_tradeins:
-        self.shuffle_data.trade_in_map["Akahana"] = "Used Statue of Onyx"
-        self.shuffle_data.trade_in_map["Aryllis"] = "Used Kirisa Plant"
-        self.shuffle_data.trade_in_map["Fisherman"] = "Used Fog Lamp"
-        self.shuffle_data.trade_in_map["Kensu"] = "Used Love Pendant"
-        self.shuffle_data.trade_in_map["Slimed Kensu"] = "Used Ivory Statue"
-        self.shuffle_data.trade_in_map["Tornel"] = "Has Checked Tornel"
-        self.shuffle_data.trade_in_map["Rage"] = "Has Checked Rage"
-        items_to_check.update(trade_ins)
-    for key_item in sorted(items_to_check):
+    for key_item in sorted(self.items_for_race_mode):
         # make a can check item and has used item regions
         can_check_item_region: Region = Region(f"Deferred Region: {key_item}", self.player, self.multiworld)
         self.multiworld.regions.append(can_check_item_region)
@@ -224,8 +214,6 @@ def create_ut_race_regions(self: "CrystalisWorld") -> None:
                 self.multiworld.register_indirect_condition(leaf_elder_region, can_check_entrance)
                 self.multiworld.register_indirect_condition(zebu_student_region, can_check_entrance)
                 self.multiworld.register_indirect_condition(zebu_region, can_check_entrance)
-        if key_item in self.shuffle_data.key_item_names:
-            self.shuffle_data.key_item_names[key_item] = f"{key_item} Used"
         self.created_race_regions.add(key_item)
     # handle the two weird trade-ins
     if self.options.randomize_tradeins:
@@ -314,6 +302,15 @@ def defer_entrances(self: "CrystalisWorld"):
         for goa_entrance_name in self.shuffle_data.goa_connection_map.keys():
             goa_entrance: Entrance = self.get_entrance(goa_entrance_name)
             goa_entrance.connected_region = None
+    if self.options.vanilla_maps == self.options.vanilla_maps.option_GBC_cave and not self.options.shuffle_areas:
+        for entrance_name in self.shuffle_data.gbc_cave_exits:
+            entrance: Entrance = self.get_entrance(entrance_name + " - Added Cave")
+            # the reverse exits for GBC Cave are irrelevant if area shuffle is off, and would spoil information if left
+            # alone or just disconnected, so just block them off entirely
+            set_rule(entrance, lambda state: False)
+        for gbc_cave_entrance_name in ["GBC Cave - Free Exit", "GBC Cave - Blocked Exit"]:
+            gbc_cave_entrance: Entrance = self.get_entrance(gbc_cave_entrance_name)
+            gbc_cave_entrance.connected_region = None
     if CRYSTALIS_DEBUG:
         visualize_regions(self, "Crystalis Visualized.puml")
 
@@ -346,6 +343,17 @@ def reconnect_found_entrances(self: "CrystalisWorld", key: str, value: Any) -> N
                         else:
                             continue
                         connected_entrance.connected_region = entrance_to_connect.parent_region
+                    elif entrance_name_to_connect == "GBC Cave - Free Exit":
+                        entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
+                        connected_region_name: str = self.shuffle_data.gbc_cave_exits[0]
+                        connected_region: Region = self.get_region(connected_region_name)
+                        entrance_to_connect.connected_region = connected_region
+                    elif entrance_name_to_connect == "GBC Cave - Blocked Exit":
+                        entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
+                        connected_region_name: str = self.shuffle_data.gbc_cave_exits[1]
+                        connected_region: Region = self.get_region(connected_region_name)
+                        entrance_to_connect.connected_region = connected_region
+
                 # connect a warp entrance for found towns
                 screen_id: int = 0xFF00 & in_game_id
                 if screen_id in TOWNS_WITH_IDS and screen_id not in self.found_towns:
@@ -439,3 +447,29 @@ def setup_from_slot_data(self: "CrystalisWorld", slot_data: dict[str, Any]):
     # goa upper floors vs. goa lower floors doesn't matter for UT, so use default values
     self.goa_lower_floors = {"Kelbesque", "Sabera"}
     self.goa_upper_floors = {"Mado", "Karmine"}
+
+def rename_key_items_for_race_mode(self: "CrystalisWorld") -> None:
+    self.items_for_race_mode: set[str] = set()
+    keys: list[str] = [item for item in self.item_name_groups["Key"] if items_data[item].default_count > 0]
+    bows: list[str] = [item for item in self.item_name_groups["Bow"] if items_data[item].default_count > 0]
+    flutes: list[str] = [item for item in self.item_name_groups["Flute"] if items_data[item].default_count > 0]
+    lamps: list[str] = [item for item in self.item_name_groups["Lamp"] if items_data[item].default_count > 0]
+    statues: list[str] = [item for item in self.item_name_groups["Statue"] if items_data[item].default_count > 0]
+    trade_ins: list[str] = [item for item in self.item_name_groups["Trade-in"] if
+                            items_data[item].default_count > 0]
+    if self.options.unidentified_key_items:
+        self.items_for_race_mode.update(keys + bows + flutes + lamps + statues)
+        self.shuffle_data.trade_in_map["Akahana"] = "Statue of Onyx Used"
+        self.shuffle_data.trade_in_map["Fisherman"] = "Fog Lamp Used"
+        self.shuffle_data.trade_in_map["Slimed Kensu"] = "Ivory Statue Used"
+    if self.options.randomize_tradeins:
+        self.shuffle_data.trade_in_map["Akahana"] = "Statue of Onyx Used"
+        self.shuffle_data.trade_in_map["Aryllis"] = "Kirisa Plant Used"
+        self.shuffle_data.trade_in_map["Fisherman"] = "Fog Lamp Used"
+        self.shuffle_data.trade_in_map["Kensu"] = "Love Pendant Used"
+        self.shuffle_data.trade_in_map["Slimed Kensu"] = "Ivory Statue Used"
+        self.shuffle_data.trade_in_map["Tornel"] = "Has Checked Tornel"
+        self.shuffle_data.trade_in_map["Rage"] = "Has Checked Rage"
+        self.items_for_race_mode.update(trade_ins)
+    for key_item in sorted(self.items_for_race_mode):
+        self.shuffle_data.key_item_names[key_item] = f"{key_item} Used"

@@ -176,7 +176,7 @@ def create_item(self: "CrystalisWorld", name: str) -> "Item":
                          CRYSTALIS_BASE_ID, self.player)
 
 
-def create_items(self) -> None:
+def create_items(self: "CrystalisWorld") -> None:
     non_unique_items = []
     items_created: int = 0
     swords: List[CrystalisItem] = []
@@ -267,7 +267,8 @@ def create_items(self) -> None:
             self.multiworld.itempool += remaining_items
             for non_unique_location in non_unique_locations:
                 non_unique_location.locked = True
-
+    if self.is_race and self.using_ut:
+        self.rename_key_items_for_race_mode()
 
 def get_filler_item_name(self: "CrystalisWorld") -> str:
     filler_weights: dict[str, int] = self.options.filler_weights.value

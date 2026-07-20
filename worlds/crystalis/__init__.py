@@ -16,7 +16,8 @@ from .options import CrystalisOptions, crystalis_option_groups
 from .output import extend_hint_information, generate_output, write_spoiler_header
 from .regions import connect_entrances, create_regions, entrances_data, regions_data, shuffle_goa
 from .types import *
-from .ut_support import create_ut_race_regions, defer_entrances, reconnect_found_entrances, setup_from_slot_data
+from .ut_support import create_ut_race_regions, defer_entrances, reconnect_found_entrances, \
+                        rename_key_items_for_race_mode, setup_from_slot_data
 
 
 class CrystalisWeb(WebWorld):
@@ -88,6 +89,7 @@ class CrystalisWorld(World):
     create_ut_race_regions = create_ut_race_regions
     defer_entrances = defer_entrances
     reconnect_found_entrances = reconnect_found_entrances
+    rename_key_items_for_race_mode = rename_key_items_for_race_mode
     setup_from_slot_data = setup_from_slot_data
 
     # Universal Tracker specific member variables
@@ -96,6 +98,7 @@ class CrystalisWorld(World):
     found_entrances_datastorage_key: list[str]
     found_towns: Set[int]
     in_game_id_to_entrance_name: Dict[int, str]
+    items_for_race_mode: set[str]
     using_ut: bool
     using_ut_deferred_entrances: bool
 

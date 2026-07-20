@@ -59,6 +59,10 @@ class CrystalisClient(BizHawkClient):
 
     def __init__(self):
         super().__init__()
+        self.formatted_key_cache[ASINA_HINT_KEY] = ""
+        self.formatted_key_cache[COMPRESSED_FLAGS_KEY] = ""
+        self.formatted_key_cache[CURRENT_LOCATION_KEY] = ""
+        self.formatted_key_cache[FOUND_ENTRANCES_KEY] = ""
         for region in regions_data.values():
             for location in region.locations:
                 byte: int = location.rom_id // 8
@@ -135,10 +139,10 @@ class CrystalisClient(BizHawkClient):
                 # want to map the new item's AP ID to the original item's in-game ID.
                 self.unidentified_item_rom_ids[items_data[new_name].ap_id_offset + CRYSTALIS_BASE_ID] = \
                     items_data[original_name].rom_id
-            self.formatted_key_cache[ASINA_HINT_KEY] = ASINA_HINT_KEY.format(player=ctx.slot, team=ctx.slot)
-            self.formatted_key_cache[COMPRESSED_FLAGS_KEY] = COMPRESSED_FLAGS_KEY.format(player=ctx.slot, team=ctx.slot)
-            self.formatted_key_cache[CURRENT_LOCATION_KEY] = CURRENT_LOCATION_KEY.format(player=ctx.slot, team=ctx.slot)
-            self.formatted_key_cache[FOUND_ENTRANCES_KEY] = FOUND_ENTRANCES_KEY.format(player=ctx.slot, team=ctx.slot)
+            self.formatted_key_cache[ASINA_HINT_KEY] = ASINA_HINT_KEY.format(player=ctx.slot, team=ctx.team)
+            self.formatted_key_cache[COMPRESSED_FLAGS_KEY] = COMPRESSED_FLAGS_KEY.format(player=ctx.slot, team=ctx.team)
+            self.formatted_key_cache[CURRENT_LOCATION_KEY] = CURRENT_LOCATION_KEY.format(player=ctx.slot, team=ctx.team)
+            self.formatted_key_cache[FOUND_ENTRANCES_KEY] = FOUND_ENTRANCES_KEY.format(player=ctx.slot, team=ctx.team)
             async_start(ctx.send_msgs([{"cmd": "Get",
                                         "keys": [self.formatted_key_cache[ASINA_HINT_KEY],
                                                  self.formatted_key_cache[COMPRESSED_FLAGS_KEY],
@@ -227,7 +231,7 @@ class CrystalisClient(BizHawkClient):
 
                             if self.is_race and not self.has_processed_current_flags:
                                 self.has_processed_current_flags = True
-                                async_start(self.process_flags(copy.deepcopy(base_flags)))
+                                async_start(self.process_flags(ctx, copy.deepcopy(base_flags)))
 
                     else:
                         self.iterations_matched = 0
@@ -271,7 +275,7 @@ class CrystalisClient(BizHawkClient):
                     if not get_item_flag and self.current_location != 0:
                         if nonconsumable_index + consumable_index < len(ctx.items_received):
                             non_consumables = [item for item in ctx.items_received if
-                                               "Consumable" in items_data_by_id[item.item].groups]
+                                               "Consumable" not in items_data_by_id[item.item].groups]
                             if nonconsumable_index < len(non_consumables):
                                 item_to_write: NetworkItem = non_consumables[nonconsumable_index]
                                 unique: bool = items_data_by_id[item_to_write.item].unique
@@ -324,7 +328,7 @@ class CrystalisClient(BizHawkClient):
                                                              (SCREEN_LOCK_ADDR, [0], "System Bus")])
                             else:
                                 consumables = [item for item in ctx.items_received if
-                                               items_data_by_id[item.item].groups == ["Consumable"]]
+                                               "Consumable" in items_data_by_id[item.item].groups]
                                 if consumable_index < len(consumables):
                                     item_to_write: NetworkItem = consumables[consumable_index]
                                     item_id: int = items_data_by_id[item_to_write.item].rom_id
