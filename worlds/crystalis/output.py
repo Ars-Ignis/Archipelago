@@ -1,5 +1,6 @@
 # Python Imports
 # import orjson - handled by .constants
+import base64
 import os
 from typing import Iterable, Optional, Set, TextIO, TYPE_CHECKING
 import zipfile
@@ -236,12 +237,17 @@ def generate_output(self: "CrystalisWorld", output_directory: str) -> None:
     file_path = os.path.join(output_directory, f"{self.multiworld.get_out_file_name_base(self.player)}.apcrys")
     ap_crys = CrystalisFile(file_path, player=self.player, player_name=self.multiworld.player_name[self.player])
     with zipfile.ZipFile(file_path, mode="w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
-        json_output = orjson.dumps(output_dict, option=orjson.OPT_INDENT_2)
-        zf.writestr("patch_data.json", json_output)
+        if self.is_race:
+            json_output: bytes = orjson.dumps(output_dict)
+            b64_output: bytes = base64.b64encode(json_output)
+            zf.writestr("patch_data.bin", b64_output)
+        else:
+            json_output: bytes = orjson.dumps(output_dict, option=orjson.OPT_INDENT_2)
+            zf.writestr("patch_data.json", json_output)
         ap_crys.write_contents(zf)
 
 
-def write_spoiler_header(self: "CrystalisWorld:", spoiler_handle: TextIO) -> None:
+def write_spoiler_header(self: "CrystalisWorld", spoiler_handle: TextIO) -> None:
     if self.options.randomize_wall_elements:
         spoiler_handle.write("\nWall Elements:\n")
         for area, element in self.shuffle_data.wall_map.items():
