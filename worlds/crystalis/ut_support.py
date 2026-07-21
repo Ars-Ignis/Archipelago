@@ -348,12 +348,28 @@ def reconnect_found_entrances(self: "CrystalisWorld", key: str, value: Any) -> N
                         connected_region_name: str = self.shuffle_data.gbc_cave_exits[0]
                         connected_region: Region = self.get_region(connected_region_name)
                         entrance_to_connect.connected_region = connected_region
+                        connected_entrance: Entrance = self.get_entrance(connected_region_name + " - Added Cave")
+                        connected_entrance.connected_region = entrance_to_connect.parent_region
                     elif entrance_name_to_connect == "GBC Cave - Blocked Exit":
                         entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
                         connected_region_name: str = self.shuffle_data.gbc_cave_exits[1]
                         connected_region: Region = self.get_region(connected_region_name)
                         entrance_to_connect.connected_region = connected_region
-
+                        connected_entrance: Entrance = self.get_entrance(connected_region_name + " - Added Cave")
+                        connected_entrance.connected_region = entrance_to_connect.parent_region
+                    elif entrance_name_to_connect.removesuffix(" - Added Cave") in self.shuffle_data.gbc_cave_exits:
+                        entrance_to_connect: Entrance = self.get_entrance(entrance_name_to_connect)
+                        parent_region: Region = entrance_to_connect.parent_region
+                        parent_region_name: str = parent_region.name
+                        connected_entrance_name: str = ""
+                        if parent_region_name == self.shuffle_data.gbc_cave_exits[0]:
+                            connected_entrance_name = "GBC Cave - Free Exit"
+                        elif parent_region_name == self.shuffle_data.gbc_cave_exits[1]:
+                            connected_entrance_name = "GBC Cave - Blocked Exit"
+                        if connected_entrance_name:
+                            connected_entrance: Entrance = self.get_entrance(connected_entrance_name)
+                            entrance_to_connect.connected_region = connected_entrance.parent_region
+                            connected_entrance.connected_region = entrance_to_connect.parent_region
                 # connect a warp entrance for found towns
                 screen_id: int = 0xFF00 & in_game_id
                 if screen_id in TOWNS_WITH_IDS and screen_id not in self.found_towns:
