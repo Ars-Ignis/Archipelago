@@ -21,7 +21,7 @@ def load_world_version_from_json() -> Version:
 
 
 CRYSTALIS_DEBUG: bool = True if __debug__ else False
-CRYSTALIS_BASE_ID: int = 2241000
+CRYSTALIS_BASE_ID: int = 1
 CRYSTALIS_APWORLD_VERSION: Version = load_world_version_from_json() # used in client because world_version isn't available
 
 
