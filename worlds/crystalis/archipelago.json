@@ -2,5 +2,11 @@
   "game": "Crystalis",
   "world_version": "3.0.0",
   "authors": ["CodeGorilla"],
-  "minimum_ap_version": "0.6.0"
+  "minimum_ap_version": "0.6.0",
+  "tracker": "https://github.com/Ars-Ignis/crystalis-randomizer-tracker/releases",
+  "igdb_id": 3121,
+  "license": "MIT",
+  "repo_url": "https://github.com/Ars-Ignis/Archipelago",
+  "flags": ["supports_deathlink"],
+  "ai_disclosure": "none"
 }
