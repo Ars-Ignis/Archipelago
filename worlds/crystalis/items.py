@@ -233,6 +233,12 @@ def create_items(self: "CrystalisWorld") -> None:
             # create exact counts
             for item_name, weight in self.options.filler_weights.value.items():
                 for i in range(weight):
+                    if item_name == "Sword of Thunder":
+                        if self.options.thunder_warp.value == self.options.thunder_warp.option_none:
+                            item_name = "Sword of Thunder (No Warp)"
+                        else:
+                            town_name: str = self.random.choice(TOWNS)
+                            item_name = f"Sword of Thunder ({town_name})"
                     filler_items.append(self.create_item(item_name))
         else:
             for i in range(remaining_item_count):
