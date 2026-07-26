@@ -62,3 +62,13 @@ Crystalis:
   dont_auto_equip_upgrades: false
   disable_controller_shortcuts: false
   audible_wall_cues: false
+  filler_weights:
+    Antidote: 4
+    Fruit of Lime: 1
+    Fruit of Power: 5
+    Fruit of Repun: 2
+    Lysis Plant: 3
+    Magic Ring: 9
+    Medical Herb: 8
+    Mimic: 13
+    Warp Boots: 3
