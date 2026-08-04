@@ -4612,9 +4612,9 @@
     ],
     "locations": [
       {
-        "name": "Mezame Right Chest",
-        "rom_id": 49,
-        "ap_id_offset": 104,
+        "name": "Mezame Left Chest",
+        "rom_id": 73,
+        "ap_id_offset": 103,
         "unique": false,
         "lossy": false,
         "prevent_loss": false,
@@ -4624,9 +4624,9 @@
         "associated_shuffle_data": ""
       },
       {
-        "name": "Mezame Left Chest",
-        "rom_id": 73,
-        "ap_id_offset": 103,
+        "name": "Mezame Right Chest",
+        "rom_id": 49,
+        "ap_id_offset": 104,
         "unique": false,
         "lossy": false,
         "prevent_loss": false,
@@ -5548,7 +5548,7 @@
         "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": true,
+    "ban_wildwarp": false,
     "associated_shuffle_data": [
       "Tornel"
     ]
@@ -5603,7 +5603,7 @@
         "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": true,
+    "ban_wildwarp": false,
     "associated_shuffle_data": []
   },
   "Mt. Sabre West - Main": {
@@ -5699,7 +5699,7 @@
         "associated_shuffle_data": "Mt Sabre West"
       }
     ],
-    "ban_wildwarp": true,
+    "ban_wildwarp": false,
     "associated_shuffle_data": []
   },
   "Mt. Sabre West - Tornado Cave": {
@@ -5738,7 +5738,7 @@
         "associated_shuffle_data": "Mt Sabre West"
       }
     ],
-    "ban_wildwarp": true,
+    "ban_wildwarp": false,
     "associated_shuffle_data": []
   },
   "Mt. Sabre West - Upper": {
@@ -5795,7 +5795,7 @@
       }
     ],
     "locations": [],
-    "ban_wildwarp": true,
+    "ban_wildwarp": false,
     "associated_shuffle_data": []
   },
   "Nadare's": {
@@ -8268,7 +8268,7 @@
         "associated_shuffle_data": ""
       }
     ],
-    "ban_wildwarp": false,
+    "ban_wildwarp": true,
     "associated_shuffle_data": []
   },
   "Shyron Temple - Post-Boss": {
