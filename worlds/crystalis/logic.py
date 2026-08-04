@@ -435,6 +435,19 @@ def set_rules(self: "CrystalisWorld") -> None:
         add_rule(rage_river, lambda state: state.has(shuffle_data.trade_in_map["Rage"], player), "and")
         if options.rage_skip == options.rage_skip.option_out_of_logic:
             add_rule(rage_river, lambda state: state.has(self.glitches_item_name, player), "or")
+    elif options.shuffle_areas:
+        # while the patcher will force a flier onto Rage's connected screen if that screen has enemies,
+        # not every possible connected screen has enemies, so logic needs to be adjusted accordingly
+        flier_up_regions: list[str] = [
+            "Cordel Plains - Main",
+            "Lime Valley",
+            "Desert 1"
+        ]
+        rage_entrance: Entrance = self.get_entrance("Rage Entrance")
+        add_rule(rage_river,
+                 lambda state: state.has(shuffle_data.trade_in_map["Rage"], player) or
+                               (rage_entrance.connected_region is not None and
+                                rage_entrance.connected_region.name in flier_up_regions), "and")
     # need the reverse entrance because you only get the free push across if you don't have Rage's sword
     rage_river_reverse = self.get_entrance("Rage - North -> Rage - South")
     rage_river_reverse.access_rule = can_cross_rivers
