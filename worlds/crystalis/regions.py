@@ -608,10 +608,16 @@ def connect_entrances(self: "CrystalisWorld"):
                 # check to see if the entrance can be locked
                 if entrances_data[entrance_to_lock.name].can_lock:
                     # lock it up
-                    windmill_reg = self.get_region("Windmill")
+                    windmill_reg: Region = self.get_region("Windmill")
+                    windmill_ext_region: Region = self.get_region("Windmill Exterior")
                     add_rule(entrance_to_lock, lambda state: state.has(self.shuffle_data.key_item_names["Windmill Key"],
-                                                                       self.player) and windmill_reg.can_reach(state))
+                                                                       self.player)
+                                                             and windmill_reg.can_reach(state)
+                                                             and (windmill_ext_region.can_reach(state)
+                                                                  or wind_valley_region.can_reach(state)))
                     self.multiworld.register_indirect_condition(windmill_reg, entrance_to_lock)
+                    self.multiworld.register_indirect_condition(windmill_ext_region, entrance_to_lock)
+                    self.multiworld.register_indirect_condition(wind_valley_region, entrance_to_lock)
     # if we're deferring entrances, we should now disconnect all the shuffled ones and bail
     if self.using_ut and (self.multiworld.enforce_deferred_connections in ("on", "default") or self.is_race):
         self.defer_entrances()
