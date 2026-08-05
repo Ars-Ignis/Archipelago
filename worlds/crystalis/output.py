@@ -220,7 +220,7 @@ def generate_output(self: "CrystalisWorld", output_directory: str) -> None:
                                            f"{non_unique_location.name} Item: {item.name} Player: {item.player}")
                     else:
                         item_data = items_data[item.name]
-                        if item_data.unique:
+                        if item_data.unique and not item_data.name.startswith("Sword of Thunder ("):
                             raise RuntimeError(f"Crystalis: Non-unique location has unique item: Location: "
                                                f"{non_unique_location.name} Item: {item.name}")
 
