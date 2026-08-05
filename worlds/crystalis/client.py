@@ -24,6 +24,9 @@ def cmd_deathlink(self: "BizHawkClientCommandProcessor") -> None:
     if self.ctx.game != "Crystalis":
         logger.warning(f"Somehow running a Crystalis command handler while playing a different game: {self.ctx.game}")
         return
+    elif self.ctx.slot_data and "is_race" in self.ctx.slot_data and self.ctx.slot_data["is_race"]:
+        logger.warning(f"Toggling Death Link is disabled in race mode.")
+        return
     else:
         if "DeathLink" in self.ctx.tags:
             async_start(self.ctx.update_death_link(False))
