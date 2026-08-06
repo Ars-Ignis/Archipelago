@@ -202,3 +202,4 @@ Thumbs.db
 fuzz.py
 hooks/
 /fuzz_output
+metafuzz.yaml
