@@ -469,8 +469,8 @@ def connect_entrances(self: "CrystalisWorld"):
         # need to pre-emptively handle Mt. Sabre North's Prison Exit and Wind Valley's North West Cave Entrance
         # because logic gets added to the reverse of those entrances, and we want GER to account for that
         # start with Mt. Sabre North
-        sabre_north_prison_exit = self.get_entrance("Mt. Sabre North - Exit")
-        sabre_north_prison_region = sabre_north_prison_exit.parent_region
+        sabre_north_prison_exit: Entrance = self.get_entrance("Mt. Sabre North - Exit")
+        sabre_north_prison_region: Region = sabre_north_prison_exit.parent_region
         cave_outside_exit: Entrance
         if sabre_north_prison_exit.connected_region is None:
             for sabre_north_prison_er_target in sabre_north_prison_region.entrances:
@@ -517,6 +517,39 @@ def connect_entrances(self: "CrystalisWorld"):
         windmill_locked_cave_exit = self.get_entrance("Wind Valley - North West Cave")
         windmill_locked_cave_reverse_name: str
         wind_valley_region = windmill_locked_cave_exit.parent_region
+
+        # edge case: if Sabre N. connects to the Windmill exterior, and house shuffle is off,
+        # and accessibility is full, then the Windmill locked exit cannot connect to Zebu's Cave, so remove it
+        if self.options.accessibility == self.options.accessibility.option_full and \
+           not self.options.shuffle_houses and \
+           sabre_north_prison_exit.connected_region.name == "Windmill Exterior":
+            if windmill_locked_cave_exit.connected_region is not None:
+                if windmill_locked_cave_exit.connected_region.name == "Zebu's Cave - Front" or \
+                   windmill_locked_cave_exit.connected_region.name == "Zebu's Cave - Back":
+                    raise EntranceRandomizationError("Crystalis: Mt. Sabre North - Exit connects to Windmill Exterior"
+                                                     " and Wind Valley - North West Cave connects to Zebu's Cave. This"
+                                                     " results in sealing off both Mt. Sabre North and Zebu's Cave. If "
+                                                     "you did this with plando, knock it off. :P")
+            else:
+                zebus_cave_front_entrance: Entrance = self.get_entrance("Zebu's Cave Entrance")
+                if zebus_cave_front_entrance.connected_region is None:
+                    for zebus_cave_front_er_target in zebus_cave_front_entrance.parent_region.entrances:
+                        if zebus_cave_front_er_target.name == zebus_cave_front_entrance.name:
+                            break
+                    else:
+                        raise EntranceRandomizationError("Crystalis: Couldn't find ER target for entrance Zebu's Cave "
+                                                         "Entrance")
+                    self.cave_exits.remove([zebus_cave_front_entrance, zebus_cave_front_er_target])
+                zebus_cave_back_entrance: Entrance = self.get_entrance("Zebu's Cave Exit")
+                if zebus_cave_back_entrance.connected_region is None:
+                    for zebus_cave_back_er_target in zebus_cave_back_entrance.parent_region.entrances:
+                        if zebus_cave_back_er_target.name == zebus_cave_back_entrance.name:
+                            break
+                    else:
+                        raise EntranceRandomizationError("Crystalis: Couldn't find ER target for entrance Zebu's Cave "
+                                                         "Exit")
+                    self.cave_exits.remove([zebus_cave_back_entrance, zebus_cave_back_er_target])
+
         # first make sure it isn't already connected
         if windmill_locked_cave_exit.connected_region is None:
             for windmill_locked_cave_er_target in wind_valley_region.entrances:
