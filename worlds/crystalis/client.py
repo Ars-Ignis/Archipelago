@@ -146,10 +146,27 @@ class CrystalisClient(BizHawkClient):
                                  f"{CRYSTALIS_APWORLD_VERSION.as_simple_string()}"
                     raise VersionException(err_string)
             key_item_names: Dict[str, str] = ctx.slot_data["shuffle_data"]["key_item_names"]
+            unknown_names: Dict[str, str] = {}
             for original_name, new_name in key_item_names.items():
                 # want to map the new item's AP ID to the original item's in-game ID.
-                self.unidentified_item_rom_ids[items_data[new_name].ap_id_offset + CRYSTALIS_BASE_ID] = \
-                    items_data[original_name].rom_id
+                if new_name in items_data:
+                    self.unidentified_item_rom_ids[items_data[new_name].ap_id_offset + CRYSTALIS_BASE_ID] = \
+                        items_data[original_name].rom_id
+                else:
+                    # there's a minor datapackage mismatch here, so look it up in the server datapackage
+                    unknown_names[new_name] = original_name
+            if unknown_names:
+                for item_id, item_name in ctx.item_names[self.game].items():
+                    if item_name in unknown_names:
+                        self.unidentified_item_rom_ids[item_id] = items_data[unknown_names[item_name]].rom_id
+                        items_data_by_id[item_id] = CrystalisItemData(item_name, 0xFF, item_id - CRYSTALIS_BASE_ID,
+                                                                      True, False, True, True, 0,
+                                                                      ["Trade-in", "Key Item"],
+                                                                      CrystalisItemPaletteEnum.RANDOM,
+                                                                      CrystalisItemCategoryEnum.PROGRESSION)
+                        del unknown_names[item_name]
+                        if not unknown_names:
+                            break
             self.formatted_key_cache[ASINA_HINT_KEY] = ASINA_HINT_KEY.format(player=ctx.slot, team=ctx.team)
             self.formatted_key_cache[COMPRESSED_FLAGS_KEY] = COMPRESSED_FLAGS_KEY.format(player=ctx.slot, team=ctx.team)
             self.formatted_key_cache[CURRENT_LOCATION_KEY] = CURRENT_LOCATION_KEY.format(player=ctx.slot, team=ctx.team)
