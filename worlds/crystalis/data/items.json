@@ -5899,5 +5899,59 @@
     "palette": 8,
     "category": 4,
     "notes": ""
+  },
+  "GoldenAxe Trophy": {
+    "name": "GoldenAxe Trophy",
+    "rom_id": 255,
+    "ap_id_offset": 341,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": true,
+    "default_count": 0,
+    "groups": [
+      "Trade-in",
+      "Key Item",
+      "Statue"
+    ],
+    "palette": 9,
+    "category": 1,
+    "notes": ""
+  },
+  "Turdsman Trophy": {
+    "name": "Turdsman Trophy",
+    "rom_id": 255,
+    "ap_id_offset": 342,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": true,
+    "default_count": 0,
+    "groups": [
+      "Trade-in",
+      "Key Item",
+      "Statue"
+    ],
+    "palette": 9,
+    "category": 1,
+    "notes": ""
+  },
+  "ganglyChris Trophy": {
+    "name": "ganglyChris Trophy",
+    "rom_id": 255,
+    "ap_id_offset": 343,
+    "unique": true,
+    "losable": false,
+    "prevent_loss": true,
+    "community": true,
+    "default_count": 0,
+    "groups": [
+      "Trade-in",
+      "Key Item",
+      "Statue"
+    ],
+    "palette": 9,
+    "category": 1,
+    "notes": ""
   }
 }
