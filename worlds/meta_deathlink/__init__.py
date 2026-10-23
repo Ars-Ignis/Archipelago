@@ -18,7 +18,7 @@ def main(*cli_args):
     import atexit
 
     parser = argparse.ArgumentParser(description="Generate DeathLink Meta.yaml", usage="[-h] [--skip_open_folder] [--only_player_yamls]")
-    parser.add_argument("--skip_open_folder", action="store_true")
+    parser.add_argument("--skip_open_file", action="store_true")
     parser.add_argument("--only_player_yamls", action="store_true")
     args = parser.parse_args(cli_args)
 
@@ -100,7 +100,7 @@ def main(*cli_args):
     output_path = os.path.join(settings.general_options.output_path, "meta.yaml")
     with open(output_path, "w", encoding="utf-8-sig") as f:
         f.write(output_data)
-    if not args.skip_open_folder:
+    if not args.skip_open_file:
         open_file(output_path)
 
 def run_cli(*cli_args):
