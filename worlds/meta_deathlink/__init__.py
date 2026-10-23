@@ -121,4 +121,4 @@ def run_cli(*cli_args):
 
 components.append(Component("DeathLink Meta.yaml Generator",
                             func=run_cli, component_type=Type.TOOL,
-                            description="Create a meta.yaml template that has the DeathLink options for all installed APWorlds."))
+                            description="Create a meta.yaml with all DeathLink options for all installed APWorlds."))
