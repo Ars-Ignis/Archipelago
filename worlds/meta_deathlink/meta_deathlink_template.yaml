@@ -46,8 +46,11 @@ meta_description: {{ yaml_dump("DeathLink Meta Yaml") }}
     {{ yaml_dump(option_val) }}: 50
     {%- endif -%}
 
+    {{ "\nnull: 0" | indent(4, first=False) }}
+
     {%- elif option_val is string %}
     {{ yaml_dump(option_val) }}: 50
+    {{ "\nnull: 0" | indent(4, first=False) }}
 
     {%- elif option_val is iterable and option_val is not mapping %}
     {{ option_val | list }}

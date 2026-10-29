@@ -55,14 +55,16 @@ def main(*cli_args):
     def dictify_range(option: Range, option_val: int | str):
         data = {option_val: 50}
         for sub_option in ["random", "random-low", "random-high",
-                           f"random-range-{option.range_start}-{option.range_end}"]:
+                           f"random-range-{option.range_start}-{option.range_end}",
+                           "null"]:
             if sub_option != option_val:
                 data[sub_option] = 0
         notes = {
             "random-low": "random value weighted towards lower values",
             "random-high": "random value weighted towards higher values",
             f"random-range-{option.range_start}-{option.range_end}": f"random value between "
-                                                                     f"{option.range_start} and {option.range_end}"
+                                                                     f"{option.range_start} and {option.range_end}",
+            "null": "don't apply the meta yaml to this option"
         }
         for name, number in getattr(option, "special_range_names", {}).items():
             notes[name] = f"equivalent to {number}"
