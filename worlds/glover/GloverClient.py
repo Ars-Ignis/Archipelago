@@ -465,6 +465,7 @@ class GloverContext(CommonContext):
         return False
     
     def on_package(self, cmd, args):
+        super().on_package(cmd, args)
         if cmd == "Connected":
             self.item_tracker = GloverItemTracker(self)
             self.slot_data = args.get("slot_data", None)
